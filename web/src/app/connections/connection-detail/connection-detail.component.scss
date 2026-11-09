@@ -2,14 +2,16 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  max-width: 640px;
+  max-width: 720px;
+  margin: 0 auto;
 }
 
 .hero {
   display: flex;
   align-items: center;
   gap: 16px;
-  padding: 16px;
+  padding: 24px 16px;
+  border-top: 8px solid var(--kq-primary);
 }
 
 .hero-text {
@@ -17,7 +19,7 @@
 }
 
 .hero-handle {
-  margin: 0 0 6px;
+  margin: 0 0 8px;
   font-size: 20px;
   overflow-wrap: anywhere;
 }
@@ -36,8 +38,10 @@
 }
 
 .card-title {
-  margin: 0 0 12px;
+  margin: 0 0 16px;
   font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .met-line {
@@ -53,14 +57,26 @@
   margin: 4px 0 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 8px;
 }
 
 .topic {
-  padding: 2px 8px;
-  border: 1px solid var(--app-theme--border);
-  background: var(--app-theme--tertiary-bg);
-  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 32px;
+  padding: 0 8px;
+  border: 2px solid var(--kq-border);
+  background: var(--kq-surface-2);
+  font-size: 14px;
+
+  &::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--kq-circuit);
+    border: 1px solid var(--kq-border);
+  }
 }
 
 .notes {
@@ -72,7 +88,7 @@
 .notes-privacy {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   margin: 0 0 8px;
   font-size: 13px;
 }
