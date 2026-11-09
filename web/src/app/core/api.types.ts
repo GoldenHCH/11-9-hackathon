@@ -1,5 +1,6 @@
 export type {
   IBoothNote,
+  IGuideAnswer,
   ICheckInResult,
   IClientConfig,
   IDemoScanToken,

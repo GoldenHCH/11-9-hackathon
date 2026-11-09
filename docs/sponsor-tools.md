@@ -4,7 +4,7 @@ KubeQuest is built on four sponsor tools. For each one, this file says what we u
 
 | Tool | Role in KubeQuest | Status |
 |------|-------------------|--------|
-| **Elastic** (Serverless) | The only datastore and the search/matching engine | Live. AI quizzes written through Agent Builder |
+| **Elastic** (Serverless) | The only datastore and the search/matching engine | Live. Jina embeddings + Jina reranker, a grounded Agent Builder agent, a banner Workflow |
 | **Dash0** | Traces, metrics and logs for every XP point | Live. The cluster collector exports to Dash0 |
 | **Radar** | Our Kubernetes cluster, GitOps deploys, secrets, health | Live. Checks and an AI investigation still to do |
 | **Gitar** (Sonar) | AI review on every PR, with project rules | Live. Its PR #5 findings still need fixing |
@@ -14,9 +14,9 @@ KubeQuest is built on four sponsor tools. For each one, this file says what we u
 ## Elastic: the data layer and the game's brain
 
 **What we use**
-- **Elasticsearch Serverless is the only datastore.** Six indices: `talks`, `attendees`, `locations`, `xp_events`, `intros`, `quests`. No second database.
+- **Elasticsearch Serverless is the only datastore.** Nine indices: `talks`, `attendees`, `locations`, `xp_events`, `intros`, `quests`, `handshakes`, `booth_notes`, `messages`. No second database.
 - **Jina embeddings through `semantic_text`** (`.jina-embeddings-v5-text-small`) on talk text and player profiles.
-- **Hybrid search with RRF.** `search`, `recommend_talks` and `recommend_people` combine a semantic retriever with a keyword `multi_match` through the `rrf` retriever. A search for "cheaper GPUs" finds the on-prem cluster-allocation talk even though neither word is in its title.
+- **Hybrid search with RRF, reranked by Jina.** `search`, `recommend_talks` and `recommend_people` combine a semantic retriever with a keyword `multi_match` through the `rrf` retriever. A `text_similarity_reranker` on `.jina-reranker-v3` then rescores the top 20 (about 150 ms more). If the reranker fails, the app falls back to plain RRF, then to keyword search. A search for "cheaper GPUs" finds the on-prem cluster-allocation talk even though neither word is in its title.
 - **Geo.** Every room, booth and campfire has a `geo_point`. The meet flow sorts campfires by `geo_distance` from the midpoint of both players. "Near me" filters by distance.
 - **Aggregations** for the three leaderboards, the boss room's shared health bar (correct answers counted live), room busyness (check-ins in the last 20 minutes) and the organizer's meet funnel.
 - **Real conference data.** 26 Tuesday sessions from the official KubeCon NA 2026 schedule, the Salt Palace and Hyatt venue, 6 campfires and the sponsor booths.
@@ -25,11 +25,12 @@ KubeQuest is built on four sponsor tools. For each one, this file says what we u
 
 **How it helped:** people matching, talk recommendations and "nearest campfire to both of you" are single queries. The two demo players rank each other first purely from what they typed at signup.
 
-**Agent Builder as the model layer.** Direct Elastic Inference chat calls return 403 on this project, but Agent Builder reaches Claude Sonnet. We created a `kubequest-writer` agent (no tools, small prompts). It wrote validated 3-question quizzes for all 25 talks, which are stored on each talk so the demo never waits on a model.
+**Agent Builder: a grounded agent, not a prompt proxy.** Agent `kubequest-writer` has two custom ES|QL tools over our own indices. `kubequest.upcoming_talks` does a Jina semantic `MATCH` on talks after a given time, then ES|QL `RERANK` with the Jina reranker. `kubequest.people_like` returns public profile fields only. Live in the app: **Ask the guide** on the Here page (`ask_guide` tool). The agent calls the talks tool, and the app checks every talk id it returns against the index before showing it. If the agent takes longer than 10 s, the reranked picks show first and the agent's grounded picks replace them when they arrive. The same agent wrote the validated 3-question quizzes for the talks, which are stored on each talk so the demo never waits on a model. Every model call has a per-purpose time budget, and a call that runs out of budget is aborted, not left running. The app's API key has `feature_agentBuilder.all`.
+
+**Workflows.** `kubequest-banners` (`resources/workflows/banners.yaml`) runs in Kibana. It aggregates a player's XP ledger and appends each banner reached to the profile with an idempotent script. It leaves `xp_events` to the app's `awardXp`, the only ledger writer, so the Workflow and the app can award the same banner in either order without double-awarding.
 
 **Not yet**
-- **Live AI text** (meet opening lines, profile topics) needs the Kibana `agentBuilder` privilege on the app's API key. Until it has it, those use deterministic fallbacks. Details: [`ops-ai.md`](ops-ai.md).
-- **The banner Workflow** is written (`resources/workflows/banners.yaml`) but our key can't create it (`workflowsManagement:create`). Banners are computed in the app for now. Details: [`ops-xp.md`](ops-xp.md).
+- The agent's answer takes about 15 s, so the guide shows reranked picks first. A faster model or a streaming response would close that gap.
 
 ---
 

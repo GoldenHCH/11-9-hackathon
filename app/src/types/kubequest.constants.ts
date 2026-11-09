@@ -182,6 +182,7 @@ export const toolNames = [
   'search',
   'recommend_talks',
   'recommend_people',
+  'ask_guide',
   'quest_board',
   'respond_quest',
   'make_quest',

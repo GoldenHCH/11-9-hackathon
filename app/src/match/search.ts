@@ -3,6 +3,7 @@ import type { estypes } from '@elastic/elasticsearch';
 import { appConfig } from '../config';
 import { esOptions, getEsClient } from '../es/client';
 import { esTimeouts, indexNames } from '../es/es.constants';
+import { rerankRetriever, SearchMode, searchWithFallbacks } from '../es/rerank';
 import { logger } from '../observability/logger';
 import { IWalkPoint } from '../types/internal.interfaces';
 import {
@@ -242,6 +243,20 @@ function hybridRetriever(query: string, scope: QueryContainer, size: number): es
   };
 }
 
+function rerankFieldFor(filters: ISearchFilters): string | undefined {
+  const kinds = wantedKinds(filters);
+
+  if (kinds.size !== 1) {
+    return undefined;
+  }
+
+  if (kinds.has('session')) {
+    return 'searchText';
+  }
+
+  return kinds.has('player') ? 'profileText' : undefined;
+}
+
 function haversineMeters(a: IGeoPoint, b: IGeoPoint): number {
   const radius = 6_371_000;
   const toRad = (deg: number): number => (deg * Math.PI) / 180;
@@ -403,19 +418,20 @@ export async function hybridSearch(input: ISearchInput): Promise<ISearchResponse
   const query = input.query.trim();
   const requester = await loadRequester(input);
   const scope = scopeFilter(filters, requester, now);
-  let mode: 'hybrid' | 'lexical' | 'browse' = query === '' ? 'browse' : 'hybrid';
+  let mode: SearchMode = 'browse';
   let response: estypes.SearchResponse<Record<string, unknown>>;
 
-  if (mode === 'browse') {
+  if (query === '') {
     response = await runSearch({ size, query: { bool: { filter: [scope] } }, sort: [{ start: { order: 'asc', unmapped_type: 'date' } }] });
   } else {
-    try {
-      response = await runSearch({ size, retriever: hybridRetriever(query, scope, size) });
-    } catch (error) {
-      logger.warn({ err: error }, 'hybrid search failed, falling back to lexical');
-      mode = 'lexical';
-      response = await runSearch({ size, query: { bool: { must: [lexicalQuery(query)], filter: [scope] } } });
-    }
+    const hybrid = hybridRetriever(query, scope, size);
+    const rerankField = rerankFieldFor(filters);
+    const attempts = [
+      ...(rerankField ? [{ mode: 'reranked' as const, run: () => runSearch({ size, retriever: rerankRetriever(hybrid, rerankField, query, size) }) }] : []),
+      { mode: 'hybrid' as const, run: () => runSearch({ size, retriever: hybrid }) },
+      { mode: 'lexical' as const, run: () => runSearch({ size, query: { bool: { must: [lexicalQuery(query)], filter: [scope] } } }) },
+    ];
+    ({ mode, result: response } = await searchWithFallbacks('search', attempts));
   }
 
   const results = response.hits.hits
