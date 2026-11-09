@@ -1,0 +1,295 @@
+<section class="search">
+  <header class="hero kq-block">
+    <h1 class="hero-title kq-pixel">Ask KubeQuest</h1>
+    <p class="hero-sub">Talks, people and booths in one search. Elastic hybrid search finds them, AI sums them up.</p>
+
+    <form class="search-form" role="search" (ngSubmit)="submit()">
+      <label class="kq-visually-hidden" for="search-input">Search talks, people and booths</label>
+      <mat-icon class="search-icon" aria-hidden="true">search</mat-icon>
+      <input
+        id="search-input"
+        class="search-input"
+        type="search"
+        name="q"
+        autocomplete="off"
+        enterkeyhint="search"
+        maxlength="200"
+        placeholder="Try “cheaper GPUs”"
+        [(ngModel)]="query"
+      />
+      @if (query) {
+        <button type="button" class="search-clear" aria-label="Clear search" (click)="clear()">
+          <mat-icon aria-hidden="true">close</mat-icon>
+        </button>
+      }
+      <button mat-flat-button type="submit" class="search-go" [disabled]="!query.trim() || isSearching" aria-label="Search">
+        @if (isSearching) {
+          <mat-spinner diameter="20"></mat-spinner>
+        } @else {
+          <span class="btn-content"><mat-icon aria-hidden="true">arrow_forward</mat-icon></span>
+        }
+      </button>
+    </form>
+
+    <ul class="examples" aria-label="Example searches">
+      @for (example of examples; track example) {
+        <li>
+          <button type="button" class="example-chip" (click)="useExample(example)">{{ example }}</button>
+        </li>
+      }
+    </ul>
+  </header>
+
+  @if (errorMessage) {
+    <app-alert-banner [message]="errorMessage" actionLabel="Try again" (action)="submit()"></app-alert-banner>
+  }
+
+  @if (actionError) {
+    <app-alert-banner [message]="actionError" (dismissed)="actionError = ''"></app-alert-banner>
+  }
+
+  @if (result) {
+    @if (answerState !== 'idle') {
+      <section class="answer kq-block" aria-live="polite" [attr.aria-busy]="answerState === 'loading'">
+        <h2 class="answer-title kq-pixel">
+          <mat-icon aria-hidden="true">auto_awesome</mat-icon>
+          AI answer
+        </h2>
+
+        @switch (answerState) {
+          @case ('loading') {
+            <div class="answer-loading" aria-label="Writing an answer">
+              <span class="answer-dot"></span>
+              <span class="answer-dot"></span>
+              <span class="answer-dot"></span>
+              <span class="answer-loading-text">Reading the top matches…</span>
+            </div>
+          }
+          @case ('ready') {
+            <p class="answer-text">
+              @for (segment of visibleSegments; track $index) {
+                @if (segment.citation !== undefined) {
+                  <button
+                    type="button"
+                    class="cite"
+                    [attr.aria-label]="'Source ' + segment.citation + ': ' + (citationFor(segment.citation)?.title ?? '')"
+                    (click)="goToCitation(segment.citation)"
+                  >
+                    {{ segment.citation }}
+                  </button>
+                } @else {
+                  <span>{{ segment.text }}</span>
+                }
+              }
+              @if (isRevealing) {
+                <span class="answer-caret" aria-hidden="true"></span>
+              }
+            </p>
+            @if (answer && !isRevealing) {
+              <ol class="sources" aria-label="Sources">
+                @for (citation of answer.citations; track citation.n) {
+                  <li>
+                    <button type="button" class="source" (click)="goToCitation(citation.n)">
+                      <span class="source-n kq-pixel">{{ citation.n }}</span>
+                      <span class="source-title">{{ citation.title }}</span>
+                      <span class="source-kind">{{ citation.kind }}</span>
+                    </button>
+                  </li>
+                }
+              </ol>
+              <p class="answer-note">Written by Elastic Agent Builder from the results below only.</p>
+            }
+          }
+          @default {
+            <p class="answer-text answer-text--fallback">Top matches below.</p>
+          }
+        }
+      </section>
+    }
+
+    <nav class="tabs" aria-label="Result types">
+      @for (tab of tabs; track tab.id) {
+        <button
+          type="button"
+          class="tab kq-pixel"
+          [class.tab--active]="activeTab === tab.id"
+          [attr.aria-pressed]="activeTab === tab.id"
+          (click)="setTab(tab.id)"
+        >
+          {{ tab.label }} <span class="tab-count">{{ countFor(tab.id) }}</span>
+        </button>
+      }
+    </nav>
+
+    @if (totalResults === 0) {
+      <div class="empty kq-block">
+        <p class="empty-title kq-pixel">No matches</p>
+        <p class="kq-muted">Try fewer words, or one of the examples above.</p>
+      </div>
+    }
+
+    @if (shows('talks') && result.talks.length > 0) {
+      <section class="group" aria-labelledby="talks-heading">
+        <h2 id="talks-heading" class="group-title kq-pixel"><mat-icon aria-hidden="true">event</mat-icon> Talks</h2>
+        @for (talk of result.talks; track talk.resultId) {
+          <article class="card kq-block" [id]="anchor(talk.resultId)" [class.card--flash]="flashedId === talk.resultId">
+            <div class="card-meta">
+              <span class="tag tag--{{ talk.track }} kq-pixel">{{ talk.track }}</span>
+              @if (talk.isBoss) {
+                <span class="tag tag--boss kq-pixel">Boss</span>
+              }
+              <span class="card-when">{{ when(talk.start) }} · {{ talk.room }}</span>
+            </div>
+            <h3 class="card-title">{{ talk.title }}</h3>
+            @if (talk.speakers.length > 0) {
+              <p class="card-sub">{{ talk.speakers.join(', ') }}</p>
+            }
+            <div class="snippet">
+              @if (talk.snippetSource === 'summary') {
+                <span class="snippet-label kq-pixel"><mat-icon aria-hidden="true">auto_awesome</mat-icon> AI summary from the abstract</span>
+              } @else if (talk.snippetSource === 'transcript') {
+                <span class="snippet-label snippet-label--transcript kq-pixel"><mat-icon aria-hidden="true">mic</mat-icon> From the transcript</span>
+              }
+              @if (talk.highlight) {
+                <p class="snippet-text" [class.snippet-text--hit]="talk.snippetSource === 'transcript'">{{ talk.highlight }}</p>
+              } @else {
+                <p class="snippet-text">{{ talk.snippet }}</p>
+              }
+            </div>
+            <div class="card-actions">
+              <button
+                mat-flat-button
+                type="button"
+                class="action"
+                [class.action--done]="talk.inItinerary"
+                [disabled]="planBusyIds.has(talk.id)"
+                (click)="addToPlan(talk)"
+              >
+                @if (planBusyIds.has(talk.id)) {
+                  <mat-spinner diameter="20"></mat-spinner>
+                } @else {
+                  <span class="btn-content">
+                    <mat-icon aria-hidden="true">{{ talk.inItinerary ? 'check' : 'add' }}</mat-icon>
+                    {{ talk.inItinerary ? 'In plan' : 'Add to plan' }}
+                  </span>
+                }
+              </button>
+              <a mat-stroked-button class="action" routerLink="/map" [queryParams]="mapLink(talk.building, talk.level)">
+                <span class="btn-content"><mat-icon aria-hidden="true">map</mat-icon> Map</span>
+              </a>
+              @if (talk.quizAvailable) {
+                <a mat-stroked-button class="action" [routerLink]="['/quiz', talk.id]">
+                  <span class="btn-content"><mat-icon aria-hidden="true">quiz</mat-icon> Quiz</span>
+                </a>
+              }
+            </div>
+          </article>
+        }
+      </section>
+    }
+
+    @if (shows('people') && result.people.length > 0) {
+      <section class="group" aria-labelledby="people-heading">
+        <h2 id="people-heading" class="group-title kq-pixel"><mat-icon aria-hidden="true">groups</mat-icon> People</h2>
+        @for (person of result.people; track person.resultId) {
+          @let state = connectState(person);
+          <article class="card card--person kq-block" [id]="anchor(person.resultId)" [class.card--flash]="flashedId === person.resultId">
+            <div class="person-top">
+              <app-pixel-face [seed]="person.faceSeed" [size]="48" [label]="'@' + person.handle"></app-pixel-face>
+              <div class="person-name">
+                <h3 class="card-title kq-pixel">&#64;{{ person.handle }}</h3>
+                @if (person.headline) {
+                  <p class="card-sub">{{ person.headline }}</p>
+                }
+              </div>
+              @if (person.isSpeaker) {
+                <span class="tag tag--speaker kq-pixel">Speaker</span>
+              }
+            </div>
+            <p class="why"><mat-icon aria-hidden="true">bolt</mat-icon> {{ person.why }}</p>
+            @if (person.topics.length > 0) {
+              <ul class="chips" aria-label="Topics">
+                @for (topic of person.topics; track topic) {
+                  <li class="chip" [class.chip--shared]="person.sharedTopics.includes(topic)">{{ topic }}</li>
+                }
+              </ul>
+            }
+            <div class="card-actions">
+              @switch (state) {
+                @case ('open') {
+                  <button mat-flat-button type="button" class="action action--wide" (click)="openMeet(person)">
+                    <span class="btn-content"><mat-icon aria-hidden="true">handshake</mat-icon> Open meet</span>
+                  </button>
+                }
+                @case ('waiting') {
+                  <button mat-stroked-button type="button" class="action action--wide" disabled>
+                    <span class="btn-content"><mat-icon aria-hidden="true">hourglass_top</mat-icon> Waiting</span>
+                  </button>
+                }
+                @case ('respond') {
+                  <a mat-flat-button class="action action--wide" routerLink="/people">
+                    <span class="btn-content"><mat-icon aria-hidden="true">mark_email_unread</mat-icon> They asked you</span>
+                  </a>
+                }
+                @case ('sending') {
+                  <button mat-flat-button type="button" class="action action--wide" disabled aria-label="Sending request">
+                    <mat-spinner diameter="20"></mat-spinner>
+                  </button>
+                }
+                @default {
+                  <button mat-flat-button type="button" class="action action--wide" (click)="connect(person)">
+                    <span class="btn-content"><mat-icon aria-hidden="true">person_add</mat-icon> Connect</span>
+                  </button>
+                }
+              }
+            </div>
+            @if (sentIds.has(person.publicId) && state === 'waiting') {
+              <p class="sent" role="status"><mat-icon aria-hidden="true">check_circle</mat-icon> Request sent. We'll tell you when &#64;{{ person.handle }} is in.</p>
+            }
+          </article>
+        }
+      </section>
+    }
+
+    @if (shows('booths') && result.booths.length > 0) {
+      <section class="group" aria-labelledby="booths-heading">
+        <h2 id="booths-heading" class="group-title kq-pixel"><mat-icon aria-hidden="true">storefront</mat-icon> Booths</h2>
+        @for (booth of result.booths; track booth.resultId) {
+          <article class="card card--booth kq-block" [id]="anchor(booth.resultId)" [class.card--flash]="flashedId === booth.resultId">
+            <div class="card-meta">
+              @if (booth.sponsorTier) {
+                <span class="tag tag--tier kq-pixel">{{ booth.sponsorTier }}</span>
+              }
+              <span class="card-when">{{ booth.zone ?? booth.building }} · {{ booth.level }}</span>
+            </div>
+            <h3 class="card-title">{{ boothTitle(booth) }}</h3>
+            @if (booth.askAbout) {
+              <p class="card-sub">Ask about: {{ booth.askAbout }}</p>
+            }
+            <div class="card-actions">
+              <a mat-stroked-button class="action" routerLink="/map" [queryParams]="boothMapLink">
+                <span class="btn-content"><mat-icon aria-hidden="true">map</mat-icon> Show on map</span>
+              </a>
+              <a mat-stroked-button class="action" [routerLink]="['/exhibitors', booth.locationId]">
+                <span class="btn-content"><mat-icon aria-hidden="true">info</mat-icon> Booth</span>
+              </a>
+            </div>
+          </article>
+        }
+      </section>
+    }
+
+    <p class="footnote kq-muted">
+      {{ result.mode === 'hybrid' ? 'Hybrid search: BM25 + Jina semantic, fused with RRF' : 'Keyword search' }} · {{ result.tookMs }} ms
+    </p>
+  } @else if (!isSearching && !errorMessage) {
+    <section class="intro kq-block kq-block--raised">
+      <p class="intro-title kq-pixel">Ask anything</p>
+      <ul class="intro-list">
+        <li class="intro-item"><mat-icon aria-hidden="true">event</mat-icon> Talks matched on title, abstract and an AI summary</li>
+        <li class="intro-item"><mat-icon aria-hidden="true">groups</mat-icon> People who opted in to meet, with one-tap Connect</li>
+        <li class="intro-item"><mat-icon aria-hidden="true">storefront</mat-icon> Booths you can find on the map</li>
+      </ul>
+    </section>
+  }
+</section>

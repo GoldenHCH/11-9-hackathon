@@ -41,6 +41,11 @@ export const routes: Routes = [
       import('./board/leaderboard/leaderboard.component').then((module) => module.LeaderboardComponent),
   },
   {
+    path: 'search',
+    title: 'Search · KubeQuest',
+    loadComponent: () => import('./search/search.component').then((module) => module.SearchComponent),
+  },
+  {
     path: 'map',
     title: 'Map · KubeQuest',
     loadComponent: () => import('./map/venue-map/venue-map.component').then((module) => module.VenueMapComponent),

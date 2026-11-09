@@ -42,6 +42,7 @@
 - **Community boss:** a live session whose health bar drops with every correct answer from every player, with a defeat bonus paid exactly once.
 - **Hallway meets:** people matching by hybrid search, mutual opt-in, a time slot, the nearest campfire to both players, an icebreaker, and a confirmed handshake for +XP and a gem.
 - **People and connections:** who is here now, profile links, saved connections and messages.
+- **AI search:** ask a plain question ("cheaper GPUs") and get a grounded answer with matching talks, booths and people, from Elastic hybrid search; talks carry a short summary labelled "AI summary from the abstract".
 - **Itinerary:** the conference schedule, a personal plan and "make this a quest".
 - **Venue map:** the Salt Palace and Hyatt Regency floors with pan and zoom, booth photos and a demo "simulate scan".
 - **Leaderboards, levels and banners:** Pod → Deployment → Node → Cluster → Control Plane, blocks by material, and banners for sets (Observability Nerd, Connector, Welcomer).
