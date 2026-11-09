@@ -5,7 +5,8 @@ import { logger } from '../observability/logger';
 import { gameRules } from '../types/kubequest.constants';
 import { IAttendee, IIntro, IPersonMatch } from '../types/kubequest.interfaces';
 import { worldNow } from '../world/clock';
-import { attendeeSourceExcludes, getAttendee, hitSources, profileQueryText, sharedTopics, toMatchPlayer } from './match-data';
+import { exploringQueryText, exploringRetrieverQuery, intentBoosts, intentReason, lightLimitQuery, matchSourceExcludes, playersMatchedToday } from './intent-match';
+import { getAttendee, hitSources, profileQueryText, sharedTopics, toMatchPlayer } from './match-data';
 
 export interface IRecommendPeopleOptions {
   hereOnly?: boolean;
@@ -46,7 +47,8 @@ async function excludedPartnerIds(attendeeId: string, nowMs: number): Promise<Se
   return new Set(hitSources(response.hits.hits).map((intro) => (intro.fromId === attendeeId ? intro.toId : intro.fromId)));
 }
 
-function peopleFilter(me: IAttendee, excludeIds: string[], hereOnly: boolean): estypes.QueryDslQueryContainer {
+function peopleFilter(me: IAttendee, excludeIds: string[], hereOnly: boolean, matchedToday: string[]): estypes.QueryDslQueryContainer {
+  const lightLimit = lightLimitQuery(matchedToday);
   const filter: estypes.QueryDslQueryContainer[] = [{ term: { visible: true } }, { term: { 'settings.meetingOn': true } }];
 
   if (hereOnly && me.lastLocationId) {
@@ -57,7 +59,7 @@ function peopleFilter(me: IAttendee, excludeIds: string[], hereOnly: boolean): e
   return {
     bool: {
       filter,
-      must_not: [{ ids: { values: excludeIds } }, { term: { blockedIds: me.id } }],
+      must_not: [{ ids: { values: excludeIds } }, { term: { blockedIds: me.id } }, ...(lightLimit ? [lightLimit] : [])],
     },
   };
 }
@@ -66,6 +68,7 @@ function boostQuery(me: IAttendee, queryText: string, filter: estypes.QueryDslQu
   const topics = me.profile?.topics ?? [];
   const should: estypes.QueryDslQueryContainer[] = [
     { range: { lastSeenAt: { gte: new Date(nowMs - recentlySeenMinutes * 60000).toISOString(), boost: 1.5 } } },
+    ...intentBoosts(me),
   ];
 
   if (queryText !== '') {
@@ -98,12 +101,13 @@ async function hybridPeople(
   nowMs: number,
 ): Promise<estypes.SearchHit<IAttendee>[]> {
   const client = getEsClient();
-  const queryText = profileQueryText(me);
+  const queryText = [exploringQueryText(me), profileQueryText(me)].filter((part) => part).join(' ').slice(0, 2000);
   const keyword = boostQuery(me, queryText, filter, nowMs);
+  const exploring = exploringRetrieverQuery(me, filter);
 
   if (queryText === '') {
     const response = await client.search<IAttendee>(
-      { index: indexNames.ATTENDEES, size, query: keyword, _source_excludes: attendeeSourceExcludes },
+      { index: indexNames.ATTENDEES, size, query: keyword, _source_excludes: matchSourceExcludes },
       esOptions(esTimeouts.SEARCH_MS),
     );
 
@@ -115,12 +119,13 @@ async function hybridPeople(
       {
         index: indexNames.ATTENDEES,
         size,
-        _source_excludes: attendeeSourceExcludes,
+        _source_excludes: matchSourceExcludes,
         retriever: {
           rrf: {
             retrievers: [
               { standard: { query: { bool: { filter: [filter], must: [{ semantic: { field: 'profileText', query: queryText } }] } } } },
               { standard: { query: keyword } },
+              ...(exploring ? [{ standard: { query: exploring } }] : []),
             ],
             rank_window_size: Math.max(50, size),
             rank_constant: 20,
@@ -135,7 +140,7 @@ async function hybridPeople(
     logger.warn({ err: error }, 'hybrid people search failed, falling back to keyword search');
 
     const response = await client.search<IAttendee>(
-      { index: indexNames.ATTENDEES, size, query: keyword, _source_excludes: attendeeSourceExcludes },
+      { index: indexNames.ATTENDEES, size, query: keyword, _source_excludes: matchSourceExcludes },
       esOptions(esTimeouts.SEARCH_MS),
     );
 
@@ -145,6 +150,11 @@ async function hybridPeople(
 
 function reasonFor(me: IAttendee, them: IAttendee, shared: string[], sameRoom: boolean): string {
   const parts: string[] = [];
+  const intent = intentReason(me, them);
+
+  if (intent) {
+    parts.push(intent);
+  }
 
   if (me.profile?.firstTimer && them.profile?.welcomer) {
     parts.push('Happy to welcome a first-timer');
@@ -175,9 +185,9 @@ export async function recommendPeopleFor(attendeeId: string, opts: IRecommendPeo
     return [];
   }
 
-  const partners = await excludedPartnerIds(attendeeId, nowMs);
+  const [partners, matchedToday] = await Promise.all([excludedPartnerIds(attendeeId, nowMs), playersMatchedToday(startOfTodayIso(nowMs))]);
   const excludeIds = [...new Set([attendeeId, ...(me.blockedIds ?? []), ...partners])];
-  const hits = await hybridPeople(me, peopleFilter(me, excludeIds, hereOnly), limit, nowMs);
+  const hits = await hybridPeople(me, peopleFilter(me, excludeIds, hereOnly, matchedToday), limit, nowMs);
 
   return hits.flatMap((hit) => {
     if (!hit._source) {

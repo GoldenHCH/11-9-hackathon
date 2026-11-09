@@ -10,6 +10,7 @@ import { IAttendee, IBannerProgress, ILocation, IPersonMatch, IQuest, ITalk, ITa
 import { QuestType } from '../types/kubequest.types';
 import { walkMinutes } from '../world/walk';
 import { bannerProgress } from '../xp/banners';
+import { shapeForIntent } from './intent';
 import { placeOf, questId, talkPlace, walkPointOf } from './store';
 import { addMinutes, endOfConferenceDay, minutesUntil } from './time';
 
@@ -402,7 +403,7 @@ export async function generateCandidates(context: IOfferContext): Promise<ICandi
   const results = await Promise.all(sources.map(([label, run]) => safely(label, run)));
   const quests = results.flat().filter((quest) => !context.avoidFar || (quest.walkMinutes ?? 0) < walkTimes.OTHER_BUILDING);
 
-  return quests.map((quest) => ({ quest, priority: OFFER_PRIORITY[quest.type] }));
+  return shapeForIntent(context, quests.map((quest) => ({ quest, priority: OFFER_PRIORITY[quest.type] })));
 }
 
 export function pickOffers(candidates: ICandidate[], count: number): IQuest[] {

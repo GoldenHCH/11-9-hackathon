@@ -1,5 +1,6 @@
 import express, { Request, Router } from 'express';
 import { appConfig } from '../config';
+import { isGithubOAuthConfigured } from '../profile/github-oauth';
 import { pdfToText } from '../profile/pdf-text';
 import { importLimits } from '../profile/profile.constants';
 import { ToolError } from '../tools/tool-errors';
@@ -48,6 +49,7 @@ function clientConfig(): IClientConfig {
     publicBaseUrl: appConfig.publicBaseUrl,
     conferenceTimeZone: appConfig.conferenceTimeZone,
     demoSimulateScans: appConfig.demoSimulateScans,
+    githubVerifyEnabled: isGithubOAuthConfigured(),
     ...(traceUrlTemplate ? { traceUrlTemplate } : {}),
     ...(rumEndpoint && rumAuthToken ? { rum: { endpoint: rumEndpoint, authToken: rumAuthToken } } : {}),
   };
