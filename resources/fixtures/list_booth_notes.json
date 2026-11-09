@@ -1,0 +1,34 @@
+{
+  "tool": "list_booth_notes",
+  "endpoint": "POST /api/tools/list_booth_notes",
+  "request": {
+    "attendeeId": "p_Ljp4ZfHC-VPDFwqx"
+  },
+  "status": 200,
+  "response": [
+    {
+      "id": "bn-7a3e5c1b9d2f48e6b0c4a8d2",
+      "locationId": "outpost-elastic",
+      "boothName": "Elastic",
+      "boothNumber": "196",
+      "sponsorTier": "Gold",
+      "liked": "cool",
+      "followUp": false,
+      "xpAwarded": 0,
+      "createdAt": "2026-11-09T21:19:30.410Z",
+      "updatedAt": "2026-11-09T21:19:30.410Z"
+    },
+    {
+      "id": "bn-1f0c6a2d9e8b47c3a5d1e2f3",
+      "locationId": "outpost-dash0",
+      "boothName": "Dash0",
+      "boothNumber": "134",
+      "sponsorTier": "Platinum",
+      "liked": "Jumped from a slow span to the pod logs in one click.",
+      "followUp": true,
+      "xpAwarded": 10,
+      "createdAt": "2026-11-09T21:19:28.101Z",
+      "updatedAt": "2026-11-09T21:19:28.101Z"
+    }
+  ]
+}

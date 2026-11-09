@@ -1,0 +1,85 @@
+<section class="app-page">
+  <app-screen-toolbar title="My notes" subtitle="Your takeaways from every booth">
+    <a mat-stroked-button routerLink="/recap">
+      <div class="btn-content">
+        <mat-icon>mail</mat-icon>
+        <span>Recap</span>
+      </div>
+    </a>
+  </app-screen-toolbar>
+
+  @if (savedMessage) {
+    <p class="saved" role="status">
+      <mat-icon aria-hidden="true">task_alt</mat-icon>
+      <span>{{ savedMessage }}</span>
+    </p>
+  }
+
+  <app-state-wrapper
+    [isLoading]="isLoading"
+    [errorMessage]="errorMessage"
+    [isEmpty]="!notes.length"
+    emptyIcon="storefront"
+    emptyMessage="Scan a booth’s QR code to start a note. Everything you write ends up in your recap."
+    emptyActionLabel="Find booths on the map"
+    (emptyAction)="openMap()"
+    (retry)="loadNotes()"
+  >
+    <ul class="note-list">
+      @for (note of notes; track note.id) {
+        <li class="note app-card">
+          <header class="note-header">
+            <div class="note-heading">
+              <h2 class="note-title app-pixel">{{ note.boothName }}</h2>
+              <p class="note-meta">
+                @if (note.boothNumber) {
+                  Booth {{ note.boothNumber }} ·
+                }
+                @if (note.sponsorTier) {
+                  {{ note.sponsorTier }} ·
+                }
+                @if (note.xpAwarded > 0) {
+                  +{{ note.xpAwarded }} XP
+                } @else {
+                  No XP yet
+                }
+              </p>
+            </div>
+            @if (note.followUp) {
+              <span class="note-tag">
+                <mat-icon aria-hidden="true">reply</mat-icon>
+                Follow-up
+              </span>
+            }
+          </header>
+
+          @if (editingNoteId === note.id) {
+            <app-booth-note-form
+              [note]="note"
+              [showCancel]="true"
+              (saved)="onNoteSaved($event)"
+              (cancelled)="editingNoteId = null"
+            ></app-booth-note-form>
+          } @else {
+            @if (note.liked) {
+              <p class="note-label">Liked</p>
+              <p class="note-text">{{ note.liked }}</p>
+            } @else {
+              <p class="note-text note-text--empty">No takeaways yet.</p>
+            }
+            @if (note.thoughts) {
+              <p class="note-label">Thoughts</p>
+              <p class="note-text">{{ note.thoughts }}</p>
+            }
+            <button mat-stroked-button type="button" class="note-edit" (click)="editingNoteId = note.id">
+              <div class="btn-content">
+                <mat-icon>edit</mat-icon>
+                <span>{{ note.liked ? 'Edit note' : 'Add takeaways' }}</span>
+              </div>
+            </button>
+          }
+        </li>
+      }
+    </ul>
+  </app-state-wrapper>
+</section>

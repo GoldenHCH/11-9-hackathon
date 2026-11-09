@@ -1,0 +1,16 @@
+.note-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 600px;
+}
+
+.note-reward {
+  margin: 8px 0 0;
+  color: var(--app-theme--ink-muted);
+}
+
+.note-actions {
+  display: flex;
+  gap: 8px;
+}

@@ -74,6 +74,15 @@ export function apiRoutes(): Router {
     }
   });
 
+  router.get('/api/recap/:attendeeId/email.html', async (request, response) => {
+    try {
+      const recap = await toolRegistry.recap.execute({ attendeeId: request.params.attendeeId });
+      response.type('html').set('Cache-Control', 'no-store').send(recap.emailHtml);
+    } catch (error) {
+      sendToolFailure(response, error);
+    }
+  });
+
   router.use('/api', (_request, response) => {
     sendError(response, 404, 'not_found', 'That API route does not exist.');
   });

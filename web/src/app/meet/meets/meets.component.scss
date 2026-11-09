@@ -1,0 +1,78 @@
+.code-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 16px;
+  padding: 16px;
+  margin-bottom: 24px;
+  max-width: 640px;
+  border-color: var(--app-theme--primary);
+}
+
+.code-cta-icon {
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+  color: var(--app-theme--primary);
+}
+
+.code-cta-text {
+  flex: 1;
+  min-width: 200px;
+}
+
+.code-cta-title {
+  margin: 0 0 4px;
+  font-size: 16px;
+}
+
+.code-cta-body {
+  margin: 0;
+}
+
+.meet-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 640px;
+}
+
+.meet {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.meet-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.meet-handle {
+  font-weight: 600;
+}
+
+.meet-line {
+  font-size: 14px;
+  color: var(--app-theme--ink-muted);
+}
+
+.meet-status {
+  font-size: 13px;
+  padding: 2px 8px;
+  border: 1px solid var(--app-theme--border);
+  white-space: nowrap;
+}
+
+.meet-status--met {
+  background: var(--app-theme--tertiary-bg);
+}

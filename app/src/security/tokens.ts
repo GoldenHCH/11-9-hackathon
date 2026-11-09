@@ -1,10 +1,12 @@
-import { createHmac, timingSafeEqual } from 'node:crypto';
+import { createHmac, randomBytes, timingSafeEqual } from 'node:crypto';
 import { appConfig, readQrSecret } from '../config';
 import { ToolError } from '../tools/tool-errors';
-import { ITokenCheck } from '../types/internal.interfaces';
+import { IHandshakeTokenCheck, ITokenCheck } from '../types/internal.interfaces';
 
 const PRINTED_PREFIX = 'p';
 const SCREEN_PREFIX = 's';
+const HANDSHAKE_PREFIX = 'h';
+const HANDSHAKE_NONCE_BYTES = 9;
 
 export const SCREEN_TOKEN_TTL_MS = 10 * 60 * 1000;
 
@@ -93,4 +95,42 @@ export function buildScanUrl(locationId: string, token: string): string {
   url.searchParams.set('t', token);
 
   return url.toString();
+}
+
+export function signHandshakeToken(playerId: string, expiresAt: Date): string {
+  const expiresAtSeconds = Math.floor(expiresAt.getTime() / 1000).toString(36);
+  const nonce = randomBytes(HANDSHAKE_NONCE_BYTES).toString('base64url');
+  const payload = `${HANDSHAKE_PREFIX}:${playerId}:${expiresAtSeconds}:${nonce}`;
+
+  return `${HANDSHAKE_PREFIX}.${playerId}.${expiresAtSeconds}.${nonce}.${sign(payload)}`;
+}
+
+export function verifyHandshakeToken(token: string, now: Date = new Date()): IHandshakeTokenCheck {
+  const trimmed = token.trim();
+
+  if (trimmed === '') {
+    return { valid: false, reason: 'missing_token' };
+  }
+
+  const [prefix, playerId, expiresAtSeconds, nonce, signature, ...rest] = trimmed.split('.');
+
+  if (prefix !== HANDSHAKE_PREFIX || !playerId || !expiresAtSeconds || !nonce || !signature || rest.length > 0) {
+    return { valid: false, reason: 'bad_signature' };
+  }
+
+  if (!sameSignature(sign(`${HANDSHAKE_PREFIX}:${playerId}:${expiresAtSeconds}:${nonce}`), signature)) {
+    return { valid: false, reason: 'bad_signature' };
+  }
+
+  const expiresAt = new Date(parseInt(expiresAtSeconds, 36) * 1000);
+
+  if (Number.isNaN(expiresAt.getTime()) || expiresAt.getTime() < now.getTime()) {
+    return { valid: false, reason: 'expired_token', playerId, nonce, expiresAt };
+  }
+
+  return { valid: true, playerId, nonce, expiresAt };
+}
+
+export function buildHandshakeUrl(token: string): string {
+  return new URL(`/h/${encodeURIComponent(token)}`, appConfig.publicBaseUrl).toString();
 }

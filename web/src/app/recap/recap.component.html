@@ -1,0 +1,131 @@
+<section class="app-page">
+  <app-screen-toolbar title="Your recap" subtitle="We’ll email you this after the conference" [showBack]="true"></app-screen-toolbar>
+
+  <app-state-wrapper
+    [isLoading]="isLoading"
+    [errorMessage]="errorMessage"
+    [skeletonRows]="5"
+    [isEmpty]="isEmpty"
+    emptyIcon="mail"
+    emptyMessage="Your recap fills up as you go: talks you check in to, booths you take notes at and people you meet."
+    (retry)="loadRecap()"
+  >
+    @if (recap; as summary) {
+      <ul class="totals" aria-label="Your conference in numbers">
+        <li class="total app-block">
+          <span class="total-value app-pixel">{{ summary.totals.xp }}</span>
+          <span class="total-label">XP</span>
+        </li>
+        <li class="total app-block">
+          <span class="total-value app-pixel">{{ summary.totals.people }}</span>
+          <span class="total-label">People met</span>
+        </li>
+        <li class="total app-block">
+          <span class="total-value app-pixel">{{ summary.totals.booths }}</span>
+          <span class="total-label">Booths</span>
+        </li>
+        <li class="total app-block">
+          <span class="total-value app-pixel">{{ summary.totals.talks }}</span>
+          <span class="total-label">Talks</span>
+        </li>
+      </ul>
+
+      @if (summary.nextSteps.length) {
+        <section class="section" aria-labelledby="next-steps-title">
+          <h2 id="next-steps-title" class="section-title app-pixel">Next steps</h2>
+          <ol class="next-steps">
+            @for (step of summary.nextSteps; track step) {
+              <li class="next-step">{{ step }}</li>
+            }
+          </ol>
+        </section>
+      }
+
+      @if (summary.people.length) {
+        <section class="section" aria-labelledby="people-title">
+          <h2 id="people-title" class="section-title app-pixel">People you met</h2>
+          <ul class="card-list">
+            @for (person of summary.people; track person.playerId) {
+              <li class="item app-card">
+                <app-pixel-face [seed]="person.faceSeed" [size]="40" [label]="'Face of @' + person.handle"></app-pixel-face>
+                <div class="item-text">
+                  <p class="item-title">&#64;{{ person.handle }}</p>
+                  @if (person.question) {
+                    <p class="item-line">{{ person.question }} <strong>{{ person.theirAnswer }}</strong></p>
+                  }
+                  <p class="item-next">
+                    <mat-icon aria-hidden="true">arrow_forward</mat-icon>
+                    <span>{{ person.nextStep }}</span>
+                  </p>
+                </div>
+              </li>
+            }
+          </ul>
+        </section>
+      }
+
+      @if (summary.booths.length) {
+        <section class="section" aria-labelledby="booths-title">
+          <h2 id="booths-title" class="section-title app-pixel">Booths</h2>
+          <ul class="card-list">
+            @for (booth of summary.booths; track booth.locationId) {
+              <li class="item app-card">
+                <div class="item-text">
+                  <p class="item-title">
+                    {{ booth.name }}
+                    @if (booth.boothNumber) {
+                      <span class="item-muted">· Booth {{ booth.boothNumber }}</span>
+                    }
+                  </p>
+                  <p class="item-line">{{ booth.liked }}</p>
+                  @if (booth.thoughts) {
+                    <p class="item-line item-muted">{{ booth.thoughts }}</p>
+                  }
+                  <p class="item-next">
+                    <mat-icon aria-hidden="true">arrow_forward</mat-icon>
+                    <span>{{ booth.nextStep }}</span>
+                  </p>
+                </div>
+              </li>
+            }
+          </ul>
+        </section>
+      }
+
+      @if (summary.talks.length) {
+        <section class="section" aria-labelledby="talks-title">
+          <h2 id="talks-title" class="section-title app-pixel">Talks</h2>
+          <ul class="card-list">
+            @for (talk of summary.talks; track talk.talkId) {
+              <li class="item app-card">
+                <div class="item-text">
+                  <p class="item-title">{{ talk.title }}</p>
+                  <p class="item-line item-muted">
+                    {{ talk.room }} · {{ talk.at | date: 'EEE h:mm a' }}
+                    @if (talk.quizTotal) {
+                      · Quiz {{ talk.quizCorrect }}/{{ talk.quizTotal }}
+                    }
+                  </p>
+                </div>
+              </li>
+            }
+          </ul>
+        </section>
+      }
+
+      <section class="section" aria-labelledby="email-title">
+        <h2 id="email-title" class="section-title app-pixel">The email</h2>
+        <p class="email-subject">Subject: {{ summary.emailSubject }}</p>
+        <button mat-stroked-button type="button" (click)="showEmail = !showEmail" [attr.aria-expanded]="showEmail">
+          <div class="btn-content">
+            <mat-icon>{{ showEmail ? 'expand_less' : 'mail' }}</mat-icon>
+            <span>{{ showEmail ? 'Hide the email' : 'Preview the email' }}</span>
+          </div>
+        </button>
+        @if (showEmail && emailPreview) {
+          <iframe class="email-frame" title="Preview of your recap email" sandbox="" [srcdoc]="emailPreview"></iframe>
+        }
+      </section>
+    }
+  </app-state-wrapper>
+</section>

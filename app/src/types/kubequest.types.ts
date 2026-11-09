@@ -7,6 +7,9 @@ import {
   checkInRejections,
   checkInStatuses,
   declineReasons,
+  handshakeQuestionSources,
+  handshakeRoles,
+  handshakeStatuses,
   itineraryItemKinds,
   leaderboardBoards,
   leaderboardPeriods,
@@ -81,6 +84,12 @@ export type AiPurpose = (typeof aiPurposes)[number];
 export type BannerId = (typeof bannerIds)[number];
 
 export type ToolName = (typeof toolNames)[number];
+
+export type HandshakeStatus = (typeof handshakeStatuses)[number];
+
+export type HandshakeRole = (typeof handshakeRoles)[number];
+
+export type HandshakeQuestionSource = (typeof handshakeQuestionSources)[number];
 
 export type MaterialCounts = Record<Material, number>;
 

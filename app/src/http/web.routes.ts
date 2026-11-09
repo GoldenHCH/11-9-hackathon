@@ -27,6 +27,19 @@ export function webRoutes(): Router {
     });
   });
 
+  router.get('/h/:token', (request, response) => {
+    if (hasSpaBuild()) {
+      response.sendFile(spaIndexPath());
+
+      return;
+    }
+
+    response.json({
+      hasToken: request.params.token !== '',
+      next: { method: 'POST', path: '/api/tools/start_handshake', body: { attendeeId: '<your attendee id>', token: '<the path segment after /h/>' } },
+    });
+  });
+
   router.use((request, response, next) => {
     if (request.method !== 'GET' || !request.accepts('html')) {
       next();

@@ -12,7 +12,7 @@ UI / assistant / MCP / CronJob
   -> tool run -> es/*, xp/*, security/*, match/*, quests/*, meet/*, ai/*
 ```
 
-Other routes: `GET /healthz`, `GET /readyz` (pings Elasticsearch), `GET /api/config`, `GET /api/tools` (tool list with JSON schemas), `GET /api/screen-token/:locationId` (screen_token), `GET /r/:locationId?t=` (QR landing: SPA or JSON hint).
+Other routes: `GET /healthz`, `GET /readyz` (pings Elasticsearch), `GET /api/config`, `GET /api/tools` (tool list with JSON schemas), `GET /api/screen-token/:locationId` (screen_token), `GET /r/:locationId?t=` (QR landing: SPA or JSON hint), `GET /h/:token` (handshake QR landing: SPA or JSON hint), `GET /api/recap/:attendeeId/email.html` (the recap email as HTML).
 
 ## File to lane map
 
@@ -28,7 +28,12 @@ Other routes: `GET /healthz`, `GET /readyz` (pings Elasticsearch), `GET /api/con
 | `app/src/xp/*` | check-in / XP | award (stores traceId), levels, banners |
 | `app/src/world/walk.ts` | world | walk-time estimates |
 | `app/src/match/talks.ts`, `match/people.ts` | match | `recommendTalksFor`, `recommendPeopleFor` (RRF hybrid, geo) |
-| `app/src/meet/arrivals.ts` | hallway | `recordArrival(attendeeId, locationId)` |
+| `app/src/meet/arrivals.ts` | hallway | `completeMeetByHandshake(attendeeId, partnerId)` marks an accepted meet `met`; `recordArrival` is no longer called (campfire scans are plain visits) |
+| `app/src/handshake/*` | hallway | phone-to-phone handshake: store (`handshakes` index), question choice, answer matching (`answer-match.helper.ts`, with a `node:test` file) |
+| `app/src/booth/booth-notes.ts` | check-in | booth notes (`booth_notes` index, `noteText` semantic_text written in the background), outpost XP rules |
+| `app/src/messages/messages.ts` | hallway | messages between players in a mutually accepted meet (`messages` index) |
+| `app/src/recap/*` | recap | recap data, rule-based next steps, pure email renderer (`recap-email.ts`) |
+| `app/src/ai/handshake.ts` | ai | optional phrasing of the handshake question (1.5 s budget, template fallback) |
 | `app/src/quests/complete.ts`, `quests/boss.ts` | quests | `completeQuestsFor(event)`, `recordBossAnswers(attendeeId, talkId, correct)` |
 | `app/src/ai/client.ts`, `ai/hallway.ts`, `ai/quiz.ts` | ai | inference / Agent Builder; `chatPrompt`, `generateQuiz`; models stay out of `app/src/tools/` |
 | `scripts/index-all.ts` | data | ensure indices, bulk-index `resources/*.json` (`npm run index-all` in `app/`) |
@@ -63,5 +68,14 @@ Cross-lane helpers start as stubs that throw `NotImplementedError` (HTTP 501, co
 | inventory | IAttendeeInput | IInventory | |
 | world | IWorldInput | IWorld | |
 | organizer_stats | IOrganizerStatsInput | IOrganizerStats | |
+| handshake_code | IAttendeeInput | IHandshakeCode | |
+| start_handshake | IStartHandshakeInput | IHandshake | |
+| handshake_state | IHandshakeStateInput | IHandshakeStateResult | |
+| answer_handshake | IAnswerHandshakeInput | IHandshake | yes |
+| save_booth_note | ISaveBoothNoteInput | ISaveBoothNoteResult | yes |
+| list_booth_notes | IAttendeeInput | IBoothNote[] | |
+| send_message | ISendMessageInput | IMessage | |
+| list_messages | IListMessagesInput | IMessage[] | |
+| recap | IAttendeeInput | IRecap | |
 
 Contracts live in `IToolContracts` (`app/src/types/kubequest.interfaces.ts`). The XP column marks tools whose route must set `kubequest.xp.awarded`; the owning lane sets `xpAwarded` in its `defineTool` call.

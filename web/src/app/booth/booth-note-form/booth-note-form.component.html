@@ -1,0 +1,49 @@
+<form class="note-form" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="outline">
+    <mat-label>What did you like?</mat-label>
+    <textarea
+      matInput
+      name="liked"
+      [(ngModel)]="liked"
+      rows="3"
+      [maxlength]="maximumNoteLength"
+      required
+    ></textarea>
+    <mat-hint>What stuck with you from the pitch or demo.</mat-hint>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Your thoughts (optional)</mat-label>
+    <textarea matInput name="thoughts" [(ngModel)]="thoughts" rows="3" [maxlength]="maximumNoteLength"></textarea>
+    <mat-hint>Would it fit your team? What would you ask next?</mat-hint>
+  </mat-form-field>
+
+  <mat-slide-toggle name="followUp" [(ngModel)]="followUp">I’d like a follow-up from this booth</mat-slide-toggle>
+
+  <p class="note-reward" aria-live="polite">
+    @if (note.xpAwarded > 0) {
+      You earned {{ note.xpAwarded }} XP for this note. Edits are saved to your recap.
+    } @else if (earnsXp) {
+      Saving this note earns 10 XP.
+    } @else {
+      Write at least {{ minimumNoteLength }} characters to earn 10 XP.
+    }
+  </p>
+
+  @if (saveError) {
+    <app-alert-banner [message]="saveError" (dismissed)="saveError = ''"></app-alert-banner>
+  }
+
+  <div class="note-actions">
+    <button mat-flat-button type="submit" [disabled]="!liked.trim() || isSubmitting">
+      @if (isSubmitting) {
+        <mat-spinner diameter="20"></mat-spinner>
+      } @else {
+        Save note
+      }
+    </button>
+    @if (showCancel) {
+      <button mat-button type="button" [disabled]="isSubmitting" (click)="cancelled.emit()">Cancel</button>
+    }
+  </div>
+</form>

@@ -1,0 +1,61 @@
+{
+  "tool": "send_message",
+  "endpoint": "POST /api/tools/send_message",
+  "request": {
+    "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+    "meetId": "meet-4c2b89f53c32d32090bdc992",
+    "text": "See you at the campfire in 5?"
+  },
+  "status": 200,
+  "response": {
+    "id": "4097b15f-5638-4278-944b-997129851651",
+    "meetId": "meet-4c2b89f53c32d32090bdc992",
+    "fromMe": true,
+    "text": "See you at the campfire in 5?",
+    "at": "2026-11-09T21:20:37.270Z"
+  },
+  "variants": {
+    "send_message_not_accepted": {
+      "request": {
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+        "meetId": "meet-4c2b89f53c32d32090bdc992",
+        "text": "hi"
+      },
+      "status": 409,
+      "response": {
+        "error": {
+          "code": "meet_not_accepted",
+          "message": "You can message each other once you both accept the meet."
+        }
+      }
+    },
+    "send_message_not_yours": {
+      "request": {
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+        "meetId": "meet-0000",
+        "text": "hi"
+      },
+      "status": 404,
+      "response": {
+        "error": {
+          "code": "unknown_meet",
+          "message": "That meet is not yours or no longer exists."
+        }
+      }
+    },
+    "send_message_rate_limited": {
+      "request": {
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+        "meetId": "meet-4c2b89f53c32d32090bdc992",
+        "text": "hi"
+      },
+      "status": 429,
+      "response": {
+        "error": {
+          "code": "slow_down",
+          "message": "You are sending messages fast. Take a breath and try again in a few minutes."
+        }
+      }
+    }
+  }
+}

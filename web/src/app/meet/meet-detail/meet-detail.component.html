@@ -1,0 +1,114 @@
+<section class="app-page">
+  <app-screen-toolbar [title]="meet ? '@' + meet.partner.handle : 'Meet'" [subtitle]="meet ? statusLabels[meet.status] : ''" [showBack]="true"></app-screen-toolbar>
+
+  <app-state-wrapper [isLoading]="isLoading" [errorMessage]="errorMessage" (retry)="loadMeet()">
+    @if (meet; as current) {
+      <header class="partner">
+        <app-pixel-face [seed]="current.partner.faceSeed" [size]="56" [label]="'Face of @' + current.partner.handle"></app-pixel-face>
+        <div class="partner-text">
+          <p class="partner-working">{{ current.partner.workingOn }}</p>
+          @if (current.sharedTopics.length) {
+            <ul class="topics" aria-label="Shared topics">
+              @for (topic of current.sharedTopics; track topic) {
+                <li class="topic">{{ topic }}</li>
+              }
+            </ul>
+          }
+        </div>
+      </header>
+
+      <p class="status-line" role="status">{{ current.statusLine }}</p>
+
+      @if (needsMyAnswer) {
+        <article class="ask app-block">
+          <p class="ask-text">Want to meet &#64;{{ current.partner.handle }}? Nothing about you is shared unless you both say yes.</p>
+          @if (respondError) {
+            <app-alert-banner [message]="respondError" (dismissed)="respondError = ''"></app-alert-banner>
+          }
+          <div class="ask-actions">
+            <button mat-flat-button type="button" [disabled]="isResponding" (click)="respond('accept')">
+              @if (isResponding) {
+                <mat-spinner diameter="20"></mat-spinner>
+              } @else {
+                Let’s meet
+              }
+            </button>
+            <button mat-button type="button" [disabled]="isResponding" (click)="respond('decline')">Not now</button>
+          </div>
+        </article>
+      }
+
+      @if (canChat) {
+        <!-- Plan -->
+        <article class="plan app-block">
+          <h2 class="section-title app-pixel">The plan</h2>
+          @if (current.campfire) {
+            <p class="plan-row">
+              <mat-icon aria-hidden="true">local_fire_department</mat-icon>
+              <span>
+                <strong>{{ current.campfire.name }}</strong> · {{ current.campfire.building }}, {{ current.campfire.level }}
+              </span>
+            </p>
+          }
+          @if (current.slot) {
+            <p class="plan-row">
+              <mat-icon aria-hidden="true">schedule</mat-icon>
+              <span>{{ current.slot.start | date: 'shortTime' }} – {{ current.slot.end | date: 'shortTime' }}</span>
+            </p>
+          }
+          @if (current.partnerDetails?.spotMe) {
+            <p class="plan-row">
+              <mat-icon aria-hidden="true">visibility</mat-icon>
+              <span>{{ current.partnerDetails?.spotMe }}</span>
+            </p>
+          }
+          @if (current.icebreaker) {
+            <blockquote class="icebreaker">{{ current.icebreaker }}</blockquote>
+          }
+          @if (current.status === 'accepted') {
+            <a mat-flat-button routerLink="/code" class="plan-action">
+              <div class="btn-content">
+                <mat-icon>qr_code_2</mat-icon>
+                <span>We’re together: verify</span>
+              </div>
+            </a>
+            <p class="plan-hint">One of you shows the code, the other scans it. Matching answers complete the meet.</p>
+          }
+        </article>
+
+        <!-- Messages -->
+        <section class="chat" aria-labelledby="chat-title">
+          <h2 id="chat-title" class="section-title app-pixel">Messages</h2>
+          <p class="chat-hint">Use this to plan where and when. Only the two of you can see it.</p>
+          <ol class="message-list" aria-live="polite">
+            @for (message of messages; track message.id) {
+              <li class="message" [class.message--mine]="message.fromMe">
+                <span class="app-visually-hidden">{{ message.fromMe ? 'You' : '@' + current.partner.handle }}:</span>
+                <span class="message-text">{{ message.text }}</span>
+                <span class="message-time">{{ message.at | date: 'shortTime' }}</span>
+              </li>
+            } @empty {
+              <li class="message-empty">No messages yet. Say hi and suggest a time.</li>
+            }
+          </ol>
+          <form class="composer" (ngSubmit)="sendMessage()">
+            <mat-form-field appearance="outline" class="composer-field">
+              <mat-label>Message &#64;{{ current.partner.handle }}</mat-label>
+              <input matInput name="draft" [(ngModel)]="draft" [maxlength]="messageMaxLength" autocomplete="off" />
+            </mat-form-field>
+            <button mat-flat-button type="submit" class="composer-send" [disabled]="!draft.trim() || isSending" aria-label="Send message">
+              @if (isSending) {
+                <mat-spinner diameter="20"></mat-spinner>
+              } @else {
+                <mat-icon>send</mat-icon>
+              }
+            </button>
+          </form>
+          @if (sendError) {
+            <app-alert-banner [message]="sendError" (dismissed)="sendError = ''"></app-alert-banner>
+          }
+        </section>
+      }
+    }
+  </app-state-wrapper>
+</section>

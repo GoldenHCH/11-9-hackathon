@@ -1,5 +1,5 @@
 export const environment = {
-  useFixtures: true,
+  useFixtures: false,
   fixtureDelayMs: 300,
   apiBaseUrl: '/api',
 };

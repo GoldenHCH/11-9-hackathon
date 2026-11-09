@@ -57,13 +57,13 @@ function effectiveStatus(intro: IIntro, now: number = Date.now()): MeetStatus {
   return intro.status;
 }
 
-function sharedTopicsFor(first: IAttendee, second: IAttendee): string[] {
+export function sharedTopicsFor(first: IAttendee, second: IAttendee): string[] {
   const secondTopics = new Set(second.profile.topics.map((topic) => topic.toLowerCase()));
 
   return first.profile.topics.filter((topic) => secondTopics.has(topic.toLowerCase())).slice(0, gameRules.MAX_TOPICS);
 }
 
-function toMatchPlayer(attendee: IAttendee): IMatchPlayer {
+export function toMatchPlayer(attendee: IAttendee): IMatchPlayer {
   return {
     id: attendee.id,
     handle: attendee.handle,
@@ -88,7 +88,7 @@ function statusLine(intro: IIntro, status: MeetStatus, viewerId: string, partner
         ? `Waiting to hear back. We'll tell you if @${partner.handle} is in.`
         : `@${partner.handle} works on ${partner.workingOn.trim().replace(/[.!?]+$/, '')}. Accept to meet.`;
     case 'accepted':
-      return `Meet @${partner.handle} at ${campfire?.name ?? 'the campfire'} and both scan its code.`;
+      return `Meet @${partner.handle} at ${campfire?.name ?? 'the campfire'}, then open Handshake and scan each other's phone.`;
     case 'met':
       return `You met @${partner.handle}.`;
     case 'declined':

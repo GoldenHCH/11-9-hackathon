@@ -31,6 +31,12 @@ export const sessionTypes = ['keynote', 'breakout', 'lightning', 'tutorial', 'pa
 
 export const xpEventTypes = ['check_in', 'quiz', 'handshake', 'welcome', 'outpost', 'boss', 'badge'] as const;
 
+export const handshakeStatuses = ['waiting', 'matched', 'mismatched', 'expired'] as const;
+
+export const handshakeRoles = ['asker', 'answerer'] as const;
+
+export const handshakeQuestionSources = ['shared_topic', 'booth_note', 'talk', 'working_on', 'fallback'] as const;
+
 export const questTypes = ['attend', 'quiz', 'chat', 'outpost', 'collection', 'boss'] as const;
 
 export const questStatuses = ['offered', 'accepted', 'not_now', 'declined', 'dropped', 'completed', 'expired'] as const;
@@ -76,7 +82,7 @@ export const quizSources = ['transcript', 'abstract'] as const;
 
 export const aiProviders = ['agent_builder', 'inference', 'fallback'] as const;
 
-export const aiPurposes = ['quiz', 'icebreaker', 'chat_prompt', 'match_reason', 'profile_topics', 'quest_reason'] as const;
+export const aiPurposes = ['quiz', 'icebreaker', 'chat_prompt', 'match_reason', 'profile_topics', 'quest_reason', 'handshake_question'] as const;
 
 export const bannerIds = ['observability-nerd', 'connector', 'welcomer', 'explorer', 'scout', 'speaker'] as const;
 
@@ -125,6 +131,15 @@ export const gameRules = {
   BOSS_QUESTIONS: 5,
   QUIZ_QUESTIONS: 3,
   LEADERBOARD_SIZE: 20,
+  HANDSHAKE_CODE_SECONDS: 60,
+  HANDSHAKE_ANSWER_MINUTES: 5,
+  HANDSHAKE_ASKER_ATTEMPTS: 2,
+  HANDSHAKE_XP_PER_HOUR: 6,
+  BOOTH_NOTE_MIN_CHARS: 20,
+  BOOTH_NOTE_MAX_CHARS: 1000,
+  BOOTH_XP_GAP_MINUTES: 3,
+  MESSAGE_MAX_CHARS: 500,
+  MESSAGES_PER_TEN_MINUTES: 20,
 } as const;
 
 export const walkTimes = {
@@ -163,4 +178,13 @@ export const toolNames = [
   'inventory',
   'world',
   'organizer_stats',
+  'handshake_code',
+  'start_handshake',
+  'handshake_state',
+  'answer_handshake',
+  'save_booth_note',
+  'list_booth_notes',
+  'send_message',
+  'list_messages',
+  'recap',
 ] as const;

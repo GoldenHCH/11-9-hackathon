@@ -1,0 +1,62 @@
+<section class="app-page">
+  <app-screen-toolbar title="Meet in person" subtitle="Show your code, or scan theirs" [showBack]="true"></app-screen-toolbar>
+
+  @if (errorMessage) {
+    <app-alert-banner [message]="errorMessage" actionLabel="Try again" (action)="refreshCode()" (dismissed)="errorMessage = ''"></app-alert-banner>
+  }
+
+  <div class="code-card app-block">
+    @if (qrDataUrl) {
+      <img class="code-image" [src]="qrDataUrl" alt="Your personal KubeQuest code. The other person scans it with their phone camera." />
+      <p class="code-timer" aria-live="off">
+        <mat-icon aria-hidden="true">autorenew</mat-icon>
+        <span>New code in {{ secondsLeft }}s</span>
+      </p>
+    } @else {
+      <div class="code-placeholder" aria-busy="true" aria-label="Loading your code"></div>
+    }
+  </div>
+
+  <ol class="steps">
+    <li class="step">
+      <span class="step-number app-pixel" aria-hidden="true">1</span>
+      <span>One of you shows this code. The other opens their phone camera and scans it.</span>
+    </li>
+    <li class="step">
+      <span class="step-number app-pixel" aria-hidden="true">2</span>
+      <span>You both get the same question. The scanner asks it out loud.</span>
+    </li>
+    <li class="step">
+      <span class="step-number app-pixel" aria-hidden="true">3</span>
+      <span>The person with the code types their answer. The scanner types what they heard.</span>
+    </li>
+    <li class="step">
+      <span class="step-number app-pixel" aria-hidden="true">4</span>
+      <span>If the answers line up, you both earn 50 XP and the meet goes in your recap.</span>
+    </li>
+  </ol>
+
+  <p class="waiting" aria-live="polite">
+    <mat-icon aria-hidden="true">hourglass_empty</mat-icon>
+    <span>This screen opens the question as soon as they scan.</span>
+  </p>
+
+  <form class="paste" (ngSubmit)="openPastedLink()">
+    <h2 class="paste-title app-pixel">No camera?</h2>
+    <mat-form-field appearance="outline" class="paste-field">
+      <mat-label>Paste their code link</mat-label>
+      <input matInput name="pastedLink" [(ngModel)]="pastedLink" autocomplete="off" />
+      <mat-hint>Ask them to share the link under their code.</mat-hint>
+    </mat-form-field>
+    <button mat-stroked-button type="submit" [disabled]="!pastedLink.trim()">Open</button>
+    @if (pasteError) {
+      <p class="paste-error" role="alert">{{ pasteError }}</p>
+    }
+  </form>
+
+  @if (code) {
+    <p class="share-link">
+      Your link: <span class="share-link-value">{{ code.scanUrl }}</span>
+    </p>
+  }
+</section>

@@ -1,0 +1,53 @@
+<section class="app-page">
+  <app-screen-toolbar [title]="result?.location?.name ?? 'Checking in'" [subtitle]="result?.location ? result!.location!.building + ' · ' + result!.location!.level : ''"></app-screen-toolbar>
+
+  <app-state-wrapper [isLoading]="isLoading" [errorMessage]="errorMessage" (retry)="checkIn()">
+    @if (result; as checkIn) {
+      <article
+        class="result app-block"
+        [class.result--awarded]="checkIn.status === 'awarded'"
+        [class.result--rejected]="checkIn.status === 'rejected'"
+        aria-live="polite"
+      >
+        <mat-icon class="result-icon" aria-hidden="true">
+          {{ isBooth ? 'storefront' : checkIn.status === 'rejected' ? 'info' : 'check_circle' }}
+        </mat-icon>
+        <div class="result-text">
+          @if (checkIn.xpAwarded > 0) {
+            <p class="result-xp app-pixel">+{{ checkIn.xpAwarded }} XP</p>
+          }
+          <p class="result-message">{{ checkIn.message }}</p>
+        </div>
+      </article>
+
+      @if (isBooth && checkIn.boothNote; as note) {
+        <section class="booth" aria-labelledby="booth-title">
+          <h2 id="booth-title" class="booth-title app-pixel">
+            Your takeaways
+            @if (note.boothNumber) {
+              <span class="booth-number">· Booth {{ note.boothNumber }}</span>
+            }
+          </h2>
+          <p class="booth-intro">Listen to their pitch, then jot down what stuck with you. It goes straight into your recap.</p>
+
+          @if (saveResult) {
+            <p class="saved" role="status">
+              <mat-icon aria-hidden="true">task_alt</mat-icon>
+              <span>{{ saveResult.message }}</span>
+            </p>
+          }
+
+          <app-booth-note-form [note]="note" (saved)="onNoteSaved($event)"></app-booth-note-form>
+        </section>
+      }
+
+      <div class="next-actions">
+        @if (checkIn.quizAvailable && checkIn.talkNow) {
+          <a mat-flat-button [routerLink]="['/quiz', checkIn.talkNow.id]">Take the quiz</a>
+        }
+        <a mat-stroked-button routerLink="/notes">My notes</a>
+        <a mat-stroked-button routerLink="/map">Map</a>
+      </div>
+    }
+  </app-state-wrapper>
+</section>

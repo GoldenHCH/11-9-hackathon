@@ -1,0 +1,14 @@
+{
+  "tool": "handshake_code",
+  "endpoint": "POST /api/tools/handshake_code",
+  "request": {
+    "attendeeId": "p_Ljp4ZfHC-VPDFwqx"
+  },
+  "status": 200,
+  "response": {
+    "playerId": "pl_aeea8bd684c45f90",
+    "token": "<signed-token>",
+    "scanUrl": "https://kube-quest.cnh.radarhq.io/h/<signed-token>",
+    "expiresAt": "2026-11-09T21:20:21.447Z"
+  }
+}

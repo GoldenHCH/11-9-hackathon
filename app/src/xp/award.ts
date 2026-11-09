@@ -268,6 +268,10 @@ export async function awardXpOnce(award: IAwardXpInput, onceKey: string): Promis
   return (await runAward(award, onceKey)) !== undefined;
 }
 
+export async function awardXpOnceDetailed(award: IAwardXpInput, onceKey: string): Promise<IAwardXpOutcome | undefined> {
+  return runAward(award, onceKey);
+}
+
 export async function awardXp(award: IAwardXpInput): Promise<IXpEvent> {
   const outcome = await awardXpDetailed(award);
 
