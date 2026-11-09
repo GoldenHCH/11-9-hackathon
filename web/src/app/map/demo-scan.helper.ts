@@ -1,4 +1,5 @@
 import { ILocation } from '../core/api.types';
+import { expandSearchAlias } from './venue.constants';
 import { IVendor, IVenueArea } from './venue.interfaces';
 
 export type DemoScanGroupId = 'rooms' | 'booths' | 'campfires';
@@ -28,9 +29,13 @@ export class DemoScanHelper {
   }
 
   public static groups(locations: ILocation[], query: string): IDemoScanGroup[] {
-    const needle = DemoScanHelper.normalize(query);
+    const needles = expandSearchAlias(query).map((value) => DemoScanHelper.normalize(value));
     const matches = locations
-      .filter((location) => needle === '' || DemoScanHelper.normalize(DemoScanHelper.searchText(location)).includes(needle))
+      .filter(
+        (location) =>
+          needles[0] === '' ||
+          needles.some((needle) => DemoScanHelper.normalize(DemoScanHelper.searchText(location)).includes(needle)),
+      )
       .sort((first, second) => first.name.localeCompare(second.name));
 
     return groupDisplay
