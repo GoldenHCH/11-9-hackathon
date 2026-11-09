@@ -25,7 +25,7 @@ const guideSettings = {
 } as const;
 
 const answerSchema = z.object({
-  picks: z.array(z.object({ talkId: z.string().min(1).max(160), why: z.string().min(1).max(240) })).max(6),
+  picks: z.array(z.object({ talkId: z.string().min(1).max(160), why: z.string().min(1).max(240) })).min(1).max(6),
 });
 
 const settled = new Map<string, { value: IAgentPicks; expiresAt: number }>();
@@ -110,6 +110,11 @@ function waitAtMost(ms: number): Promise<undefined> {
 
 async function groundedMatches(me: IAttendee, agentPicks: IAgentPicks, nowMs: number): Promise<{ matches: ITalkMatch[]; dropped: number }> {
   const ids = [...new Set(agentPicks.picks.map((pick) => pick.talkId))].slice(0, guideSettings.MAX_PICKS);
+
+  if (ids.length === 0) {
+    return { matches: [], dropped: 0 };
+  }
+
   const response = await getEsClient().mget<ITalk>({ index: indexNames.TALKS, ids, _source_excludes: talkSourceExcludes }, esOptions(esTimeouts.DEFAULT_MS));
   const talks = new Map<string, ITalk>();
 
@@ -148,11 +153,15 @@ async function answer(attendeeId: string, span: Span): Promise<IGuideAnswer> {
   }
 
   if (agentPicks) {
-    const { matches, dropped } = await groundedMatches(me, agentPicks, nowMs);
-    span.setAttributes({ 'kubequest.guide.tool_calls': agentPicks.toolCalls.join(','), 'kubequest.guide.dropped': dropped });
+    try {
+      const { matches, dropped } = await groundedMatches(me, agentPicks, nowMs);
+      span.setAttributes({ 'kubequest.guide.tool_calls': agentPicks.toolCalls.join(','), 'kubequest.guide.dropped': dropped });
 
-    if (matches.length > 0) {
-      return { provider: 'agent_builder', pending: false, interest, picks: matches, toolCalls: agentPicks.toolCalls, droppedPicks: dropped };
+      if (matches.length > 0) {
+        return { provider: 'agent_builder', pending: false, interest, picks: matches, toolCalls: agentPicks.toolCalls, droppedPicks: dropped };
+      }
+    } catch (error) {
+      logger.warn({ err: error, attendeeId }, 'guide grounding check failed, using reranked picks');
     }
   }
 

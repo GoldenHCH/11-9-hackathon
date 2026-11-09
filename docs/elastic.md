@@ -130,7 +130,7 @@ The live flow is the `ask_guide` tool ("Ask the guide" on the Here page). It sen
 
 ## Workflow: banners
 
-`resources/workflows/banners.yaml` is the Kibana Workflow `kubequest-banners` (API: `PUT /api/workflows/workflow/kubequest-banners` with `{ "yaml": ... }`, run with `POST /api/workflows/workflow/kubequest-banners/run` and `{ "inputs": { "attendeeId": ... } }`). It aggregates one attendee's ledger. For each banner reached it upserts the 0 XP badge event (a no-op script, so an existing event is never overwritten) and appends the banner to `attendees.banners` with the same idempotent script the app uses. On the app side, `awardDueBanners` appends the banner even when the badge event already exists. So whichever runs first, the profile ends up with the banner, and nobody gets it twice.
+`resources/workflows/banners.yaml` is the Kibana Workflow `kubequest-banners` (API: `PUT /api/workflows/workflow/kubequest-banners` with `{ "yaml": ... }`, run with `POST /api/workflows/workflow/kubequest-banners/run` and `{ "inputs": { "attendeeId": ... } }`). It aggregates one attendee's ledger, and for each banner reached it appends the banner to `attendees.banners` with the same idempotent script the app uses. It never writes to `xp_events`: `awardXp` is the only ledger writer (game-integrity rule 2). The app treats a banner that is already on the profile as earned. `awardDueBanners` also appends the banner when a badge event already exists, for example one written by an older version of this Workflow. So whichever runs first, the profile ends up with the banner, and nobody gets it twice.
 
 ## Health
 
