@@ -47,6 +47,8 @@ export function buildIndexMappings(inferenceId: string): Record<IndexName, Prope
       quiz: opaqueObject,
       searchText: semanticText(inferenceId),
       transcript: semanticText(inferenceId),
+      summary: semanticText(inferenceId),
+      summarySource: keyword,
     },
     [indexNames.ATTENDEES]: {
       id: keyword,

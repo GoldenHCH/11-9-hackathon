@@ -325,6 +325,16 @@ Everything except `query` is optional.
 
 A `campfire`, `room` or `outpost` result carries `location`, and a `player` result carries `player` (`variants.search_filtered`). The `score` is an RRF score, so use it for order only.
 
+### ask / ask_answer (Search page `/search`)
+
+`ask` `{"query":"cheaper GPUs","attendeeId"?:"p_…","filters"?:{"kinds"?:["talk","person","booth"],"track"?:"platform"}}` → `{"query","mode":"hybrid"|"lexical","tookMs","talks":[IAskTalk],"people":[IAskPerson],"booths":[IAskBooth],"topIds":["talk:…","person:pl_…","booth:…"]}`.
+
+One `retriever: rrf` request over `talks`, `attendees` and `locations`: a BM25 `multi_match` (title, speakers, abstract, headline, topics, workingOn, booth name, askAbout, description) fused with a Jina semantic `dis_max` over `searchText`, `summary`, `transcript` (boost 0.9) and `profileText`. People are only visible players with meeting on, never the requester or anyone blocked, and carry public fields only (`publicId`, `handle`, `faceSeed`, `headline`, `topics`, `sharedTopics`, a deterministic `why`). Booths are `outpost` locations. A talk's `snippet` comes from the transcript (kickoff only), else the `summary` (`summarySource: "ai_from_abstract"`, label it "AI summary from the abstract"), else the abstract; `highlight` is the best semantic chunk. `inItinerary` is present with `attendeeId`; `quizAvailable` is true once the talk started. Up to 6 per group; `topIds` are the 6 best in RRF order.
+
+`ask_answer` `{"query","resultIds":topIds}` → `{"query","answer","citations":[{"n":1,"resultId","kind","title"}],"provider":"agent_builder"|"fallback","pending":bool}`. Agent Builder (`kubequest-writer`) writes 3 to 5 sentences from those results only, with `[n]` citations. A call waits at most 8 s (`BUDGET_MS.search_answer`); if the agent is still writing it returns `"Top matches below."` with `pending: true`, so call again (the page retries twice). Answers are cached for 30 minutes.
+
+Talk summaries: `npm run seed:summaries` writes a 300 to 500 word `summary` for every talk except the kickoff with Agent Builder, grounded only in title, abstract, track and speaker names (no quotes, no speaker voice). It is idempotent, runs 4 at a time with retries, updates the live `talks` index and saves the text into `resources/sessions.json` so `index-all` keeps it.
+
 ### recommend_talks
 
 `{"attendeeId":"p_…","limit":3,"withinMinutes":720}` → `[{"talk":ITalk,"location"?:ILocation,"score":n,"reason":"…","startsInMinutes":n,"walkMinutes"?:n}]`. Today it returns `[]`, because no talk starts within 12 hours.

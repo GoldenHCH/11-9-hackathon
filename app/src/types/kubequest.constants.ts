@@ -1,4 +1,5 @@
 import { connectionToolNames } from './connections.constants';
+import { searchToolNames } from '../search/search.constants';
 
 export const materials = ['circuit', 'stone', 'glass', 'crate', 'iron', 'copper', 'lantern', 'wood', 'gold'] as const;
 
@@ -88,7 +89,7 @@ export const quizSources = ['transcript', 'abstract'] as const;
 
 export const aiProviders = ['agent_builder', 'inference', 'fallback'] as const;
 
-export const aiPurposes = ['quiz', 'icebreaker', 'chat_prompt', 'match_reason', 'profile_topics', 'quest_reason', 'handshake_question', 'profile_import'] as const;
+export const aiPurposes = ['quiz', 'icebreaker', 'chat_prompt', 'match_reason', 'profile_topics', 'quest_reason', 'handshake_question', 'profile_import', 'search_answer'] as const;
 
 export const bannerIds = ['observability-nerd', 'connector', 'welcomer', 'explorer', 'scout', 'speaker'] as const;
 
@@ -221,6 +222,7 @@ export const toolNames = [
   'add_to_itinerary',
   'remove_from_itinerary',
   ...connectionToolNames,
+  ...searchToolNames,
 ] as const;
 
 export const notificationTypes = ['new_quest', 'new_match', 'meet_offer', 'meet_accepted', 'banner'] as const;

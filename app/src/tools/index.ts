@@ -1,4 +1,5 @@
 import { connectionToolRegistry } from '../connections/connection-tools';
+import { searchToolRegistry } from '../search/search-tools';
 import { ToolName } from '../types/kubequest.types';
 import { adminOverviewTool } from './admin-overview.tool';
 import { askGuideTool } from './ask-guide.tool';
@@ -97,6 +98,7 @@ export const toolRegistry = {
   list_messages: listMessagesTool,
   recap: recapTool,
   ...connectionToolRegistry,
+  ...searchToolRegistry,
   import_profile: importProfileTool,
   list_notifications: listNotificationsTool,
   mark_notifications_read: markNotificationsReadTool,

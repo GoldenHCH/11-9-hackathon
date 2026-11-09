@@ -55,7 +55,7 @@ const lexicalFields = [
   'profile.topics',
 ];
 
-const semanticFields = ['searchText', 'profileText'];
+const semanticFields = ['searchText', 'summary', 'profileText'];
 
 const privateSourceFields = [
   'realName',
@@ -71,6 +71,7 @@ const privateSourceFields = [
   'profileText',
   'searchText',
   'transcript',
+  'summary',
   'quiz',
   'bossQuiz',
   'lastLocationId',
