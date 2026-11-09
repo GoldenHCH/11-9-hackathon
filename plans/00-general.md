@@ -1,25 +1,27 @@
 # General Plan
 
-**Team:** two people. **Golden** owns the product lane (Elastic, tools, game loop, Hallway). **Collin** owns the platform lane (cnh-starter, Argo CD, OTel Collector, Gitar, Radar log) and then the UI. Each runs their own Claude Code session on their own phase branch; the lanes never touch the same folders.
+> **Status (14:10 MST):** PR 5, "KubeQuest backend v1", replaced the Hallway design with the game in `knowledge-graph/game-design.md`: quests, outposts, boss rooms, meets at campfires with a match signal, levels, materials and banners, behind the 23 tools in `docs/api.md`. Where the brief's mechanics differ from those two documents, the game design and the API win (`AGENTS.md`). This file is updated to match; the per-phase files carry their own status notes.
 
-**Demo path (one sentence):** Judges check in from a QR on the screen → XP on the leaderboard → quiz from this morning's kickoff talk → two judges matched by Hallway, both tap "Let's meet", meet at Point A, shake hands, 50 XP and a badge → click the XP event and open its trace in Dash0 → the incident: Radar investigation → Agent0 → Gitar-reviewed fix PR → Argo CD → green.
+**Team:** two people. **Golden** owns the product lane (Elastic, tools, game loop, quests and meets). **Collin** owns the platform lane (cnh-starter, Argo CD, OTel Collector, Gitar, Radar log) and then the UI. Each runs their own Claude Code session on their own phase branch; the lanes never touch the same folders. While Collin is on the UI, the Phase 04 leftovers (Dash0 keys, RUM, Gitar auto-apply) have no owner; Golden picks them up after the Phase 02 leftovers.
+
+**Demo path (one sentence):** Judges scan the QR on the demo screen → sign up and get a first quest → quiz on this morning's kickoff talk knocks down the boss bar → two judges accept a chat quest, both phones show the same match signal, both scan the campfire → "You met", XP and a banner, the Connectors board moves → open that XP event's trace in Dash0 → the incident: Radar investigation → Agent0 → Gitar-reviewed fix PR → Argo CD → green.
 
 **Stack:** cnh-starter (Argo CD, GHCR, `team-<name>` namespace, `https://<team>.cnh.radarhq.io`) · one Node image: Express API in `app/` serving the Angular build, `/healthz` and `/readyz` on `$PORT` 8080 · OTel Collector Deployment with committed config · Elasticsearch on Elastic Cloud Serverless (Jina `semantic_text`, RRF, geo, Agent Builder, Workflows) · OpenAI as model fallback · GitHub Actions (from the starter) + Gitar · Radar Cloud + MCP · Dash0 + MCP + Agent0. **No second datastore.** Angular unless Collin picks Next.js before the first UI commit.
 
-**Architecture rule:** the tools module (`check_in`, `recommend_talks`, `recommend_people`, `whats_around_me`, `whats_next`, `propose_intro`, `respond_intro`, `quiz_for_talk`, `submit_quiz`, `leaderboard`) is the only way anything touches data. UI routes, the assistant, the MCP server and the CronJob all call it. No model inside a tool; every tool emits a span.
+**Architecture rule:** the tools module (`app/src/tools/`, the 23 tools in `docs/api.md`: `sign_up`, `get_profile`, `update_settings`, `check_in`, `screen_token`, `whats_around_me`, `whats_next`, `search`, `recommend_talks`, `recommend_people`, `quest_board`, `respond_quest`, `make_quest`, `quiz_for_talk`, `submit_quiz`, `boss_state`, `propose_meet`, `respond_meet`, `list_meets`, `leaderboard`, `inventory`, `world`, `organizer_stats`) is the only way anything touches data. UI routes, the assistant, the MCP server and the CronJob all call it. No model inside a tool; every tool emits a span.
 
 **Repo layout (cnh-starter plus ours):**
 
 ```
 app/            Express API + tools/ + ai/ + es/ + otel; serves web/dist   (starter's app/)
 web/            Angular app (built into app/public at image build)
-shared/         types only
+shared/         Phase 01 types; the backend's own types now live in app/src/types/
 scripts/        setup.sh, local-cluster.sh (starter) + ingest-talks, seed, index-all, nudge
 resources/      sessions.json, locations.json, transcripts/, attendees.seed.json, fixtures/
 deploy/         deployment.yaml, kustomization.yaml, httproute.yaml (starter) + otel-collector.yaml, collector-config.yaml, cronjob-nudge.yaml
 argocd/         application.yaml (starter)
-.gitar/review/  review instructions + repo rules
-docs/           radar-log.md, ops.md
+.gitar/         review/ instructions, rules/ (ai-disclosure, game-integrity), config/apply.md
+docs/           api.md (the UI contract), architecture.md, elastic.md, ops.md, ops-ai.md, ops-xp.md, radar-log.md
 brief/ plans/ rules/ prompts/   this kit
 ```
 
@@ -32,8 +34,8 @@ brief/ plans/ rules/ prompts/   this kit
 | 11:50–12:40 | **Phase 01:** types, five indices, ingest talks, locations, seed, tool signatures + stubs, check-in **v1 (unsigned, on purpose)**. PR → Gitar | **Phase 04:** OTel Collector + config, SDK in `app/`, JSON logs with trace ids, RUM, `docs/radar-log.md` first entry. PR → Gitar |
 | 12:40–13:00 | **Phase 02 starts:** signed tokens (v2, the Gitar security story), XP ledger, leaderboard agg, `recommend_people` hybrid + nearby | **Phase 03 starts:** signup, Here, leaderboard on fixtures |
 | 13:00–14:30 | Lunch + Kelsey panel (record if permitted). Agents keep going. Merge PRs | Same |
-| 14:30–15:30 | Intros (slot rule, `geo_distance` meeting point), Agent Builder: quiz + icebreaker, badges (Workflow or api) | Quiz, people, intro, organizer screens; wire to real tools; accessible mode pass |
-| 15:30–16:30 | Dash0 dashboard + SLO; the incident (Agent0 + Radar investigation + fix PR); assistant/MCP only if green | Keyboard-only run; mobile; QR sheet printed; redeploys gated on Radar checks, each logged |
+| 14:30–15:30 | **Phase 02 leftovers** (`phase-02-tools.md` status note): one PR for Gitar's three PR 5 findings (unauthenticated screen token, boss bonus paid twice under concurrent polls, `claimQuiz` writing XP outside `award.ts`); a working model (Elastic key with Kibana privileges, or the OpenAI fallback); `DEMO_NOW` on the deployment; "who else is here" on a booth scan | Phase 03 sections 0–5 (`phase-03-ui.md`): wiring, signup and scan, Now and boss bar, quiz, quests and meet, board and demo screen |
+| 15:30–16:30 | Dash0 keys in `app-credentials` and a trace confirmed; Dash0 dashboard + SLO; the incident (Agent0 + Radar investigation + fix PR); fix the image's `index-all` bundle; assistant/MCP only if green | Phase 03 sections 6–9: search, organizer, live tools and RUM, accessible pass; keyboard-only run; QR sheet from `scripts/print-qr-links.ts`; redeploys gated on Radar checks, each logged |
 | 16:30–17:00 | **Last mile:** audit vs. brief, README with sponsor sections + AI disclosure, screenshots | Backup screen recording, polish, trim the kickoff transcript check |
 | 17:00–17:15 | Register team (both names), submit for all five tracks. Rehearse twice on two phones | Same |
 
@@ -41,15 +43,15 @@ brief/ plans/ rules/ prompts/   this kit
 
 | # | Phase | Blocking? | Parallel with | Owner | Plan file | Status |
 |---|-------|-----------|---------------|-------|-----------|--------|
-| 00 | Repo from cnh-starter, kit copied in, hello app live through Argo CD | **Yes (platform)** | 01 | Collin | in `phase-04-ops.md` | |
-| 01 | Types, five indices, ingest talks + locations, seed, tool signatures + stubs, check-in v1 | **Yes (product)** | 00, 04 | Golden | `phase-01-data.md` | |
-| 04 | OTel Collector + config, SDK, logs↔traces, RUM, Gitar config, radar-log | No | 01 | Collin | `phase-04-ops.md` | |
-| 02 | Tools for real: signed check-in v2, XP, leaderboard, hybrid people match, Intros + geo + slot rule, Agent Builder quiz/why/icebreaker, badges | No | 03 | Golden | `phase-02-tools.md` | |
-| 03 | Angular UI on fixtures then real tools; accessible mode | No | 02 | Collin | `phase-03-ui.md` | |
-| 05 | Widen in order: organizer view + Dash0 dashboard/SLO, the incident, assistant + MCP, nudge CronJob, quests near you, crafting | No | split | both | `phase-05-widen.md` | |
-| 06 | Last mile: audit, README, screenshots, backup video, submit at 5:15 | — | — | both | — | |
+| 00 | Repo from cnh-starter, kit copied in, hello app live through Argo CD | **Yes (platform)** | 01 | Collin | in `phase-04-ops.md` | Done |
+| 01 | Types, five indices, ingest talks + locations, seed, tool signatures + stubs, check-in v1 | **Yes (product)** | 00, 04 | Golden | `phase-01-data.md` | Done (PR 3), reshaped by PR 5; `index-all` bundle still broken |
+| 04 | OTel Collector + config, SDK, logs↔traces, RUM, Gitar config, radar-log | No | 01 | Collin | `phase-04-ops.md` | Mostly done (PR 5); Dash0 keys, RUM, Gitar auto-apply, branch protection open |
+| 02 | Tools for real: signed check-in, XP with trace ids, leaderboards, hybrid people match, quests, meets at campfires, boss rooms, quiz, banners | No | 03 | Golden | `phase-02-tools.md` | Built by PR 5; leftovers in its status note. PR 9 (signed check-in) is empty after merging main, kept open |
+| 03 | Angular UI against `docs/api.md`, fixtures first then live; accessible mode | No | 02 | Collin | `phase-03-ui.md` | In progress |
+| 05 | Widen in order: organizer view + Dash0 dashboard/SLO, the incident, assistant + MCP, nudge CronJob, quests near you, crafting | No | split | both | `phase-05-widen.md` (not written yet) | Not started |
+| 06 | Last mile: audit, README, screenshots, backup video, submit at 5:15 | — | — | both | — | Not started |
 
-Phase 01 fixes the types, mappings, seed, fixtures and tool signatures; 02 and 03 depend only on those. Phase 03 builds against `resources/fixtures/` until 02 merges. Phase 04 needs only the starter's hello app; it instruments the tool boundary by name.
+Phase 01 fixed the first types, mappings, seed and fixtures; PR 5 replaced them with the backend that `docs/api.md` describes, and Phase 03 now builds against that contract and its fixtures. Phase 04 needs only the starter's hello app; it instruments the tool boundary by name.
 
 ## Requirements from the brief
 
@@ -69,8 +71,8 @@ Phase 01 fixes the types, mappings, seed, fixtures and tool signatures; 02 and 0
 
 ## Cut on purpose
 
-- **Order if behind:** crafting → quests near you → nudge CronJob → assistant + MCP → Workflow badges (compute in api) → Intro slot + meeting point (keep mutual scan) → quiz for non-seeded talks. **Never cut:** signed check-in + XP + leaderboard + GitHub profile + people match + verified handshake + collector + Gitar PRs + Argo/Radar.
-- **Smart badges, booths, live transcription:** roadmap slide.
+- **Order if behind:** crafting → quests near you → nudge CronJob → assistant + MCP → "who else is here" on a booth scan → connectors and questers boards (keep overall) → match-signal grid (keep the two words) → quiz for non-seeded talks. **Never cut:** signed check-in + XP with trace ids + leaderboard + signup with first quest + people match + boss bar + verified meet at a campfire + collector + Gitar PRs + Argo/Radar.
+- **Hardware smart badges, live transcription:** roadmap slide.
 - **Luma, LinkedIn, X:** no usable APIs today.
 - **Passwords, OAuth:** a personal link is enough for one day.
 - **Indoor routing, websockets, live schedule sync, a second datastore, a chat thread:** none moves a rubric line.
