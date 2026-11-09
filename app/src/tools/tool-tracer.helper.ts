@@ -1,8 +1,11 @@
-import { SpanStatusCode, trace } from '@opentelemetry/api';
-import type { Attributes } from '@opentelemetry/api';
+import { SpanStatusCode, metrics, trace } from '@opentelemetry/api';
+import type { Attributes, Counter } from '@opentelemetry/api';
 import type { IToolSignatures, ToolName } from '@kubequest/shared';
+import { ToolForbiddenError } from './tools.errors';
 
 export class ToolTracerHelper {
+  private static _checkInCounter?: Counter;
+
   public static run<Name extends ToolName>(
     name: Name,
     input: IToolSignatures[Name]['input'],
@@ -17,10 +20,16 @@ export class ToolTracerHelper {
         const output = await work();
 
         span.setAttributes(ToolTracerHelper._outputAttributes(name, output));
+        ToolTracerHelper._countCheckIn(name, input, output);
 
         return output;
       } catch (error) {
         const failure = error instanceof Error ? error : new Error(String(error));
+
+        if (name === 'check_in' && error instanceof ToolForbiddenError) {
+          span.setAttributes({ 'kubequest.checkin.rejected_reason': error.reason, 'kubequest.xp.awarded': 0 });
+          ToolTracerHelper._countCheckIn(name, input, undefined, error.reason);
+        }
 
         span.recordException(failure);
         span.setStatus({ code: SpanStatusCode.ERROR, message: failure.message });
@@ -69,5 +78,30 @@ export class ToolTracerHelper {
     }
 
     return attributes;
+  }
+
+  private static _countCheckIn(name: ToolName, input: unknown, output: unknown, rejectedReason?: string): void {
+    if (name !== 'check_in') {
+      return;
+    }
+
+    const locationId = (input as Record<string, unknown>).locationId;
+    const awardedXp = (output as Record<string, unknown> | undefined)?.xp;
+    const outcome = rejectedReason ? 'rejected' : typeof awardedXp === 'number' && awardedXp > 0 ? 'awarded' : 'repeat';
+    const attributes: Attributes = { 'location.id': typeof locationId === 'string' ? locationId : 'unknown', outcome };
+
+    if (rejectedReason) {
+      attributes['kubequest.checkin.rejected_reason'] = rejectedReason;
+    }
+
+    ToolTracerHelper._checkIns().add(1, attributes);
+  }
+
+  private static _checkIns(): Counter {
+    ToolTracerHelper._checkInCounter ??= metrics
+      .getMeter('kubequest')
+      .createCounter('kubequest.checkins', { description: 'QR check-ins by location and outcome' });
+
+    return ToolTracerHelper._checkInCounter;
   }
 }

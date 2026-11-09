@@ -8,8 +8,7 @@
         "Platform",
         "Security",
         "Other"
-      ],
-      "answer": 1
+      ]
     },
     {
       "q": "Which of these words comes up in the description of \"N Clusters, One kubectl: Multi-Cluster That Just Works\"?",
@@ -18,8 +17,7 @@
         "university",
         "cluster",
         "tribal"
-      ],
-      "answer": 2
+      ]
     },
     {
       "q": "Where is \"N Clusters, One kubectl: Multi-Cluster That Just Works\" being held?",
@@ -28,8 +26,7 @@
         "Salt Lake Ballroom C",
         "Regency Ballroom B",
         "Hackathon Floor"
-      ],
-      "answer": 1
+      ]
     }
   ],
   "source": "abstract"

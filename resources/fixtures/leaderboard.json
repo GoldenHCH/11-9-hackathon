@@ -42,11 +42,6 @@
     "badges": []
   },
   {
-    "handle": "marta-kowalczyk-k8s",
-    "xp": 85,
-    "badges": []
-  },
-  {
     "handle": "siddharth-b-dev",
     "xp": 85,
     "badges": []
@@ -55,5 +50,12 @@
     "handle": "choi-a90",
     "xp": 80,
     "badges": []
+  },
+  {
+    "handle": "nolan-g-dev",
+    "xp": 80,
+    "badges": [
+      "Observability Nerd"
+    ]
   }
 ]

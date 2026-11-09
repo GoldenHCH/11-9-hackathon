@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import type { IToolErrorResponse } from '@kubequest/shared';
-import { ToolInputError, UnknownToolError } from '../tools/tools.errors';
+import { ToolForbiddenError, ToolInputError, UnknownToolError } from '../tools/tools.errors';
 import { ToolRunnerService } from '../tools/tool-runner.service';
 
 export function createToolsRouter(runner: ToolRunnerService): Router {
@@ -17,6 +17,13 @@ export function createToolsRouter(runner: ToolRunnerService): Router {
       if (error instanceof UnknownToolError) {
         const body: IToolErrorResponse = { error: error.message };
         response.status(404).json(body);
+
+        return;
+      }
+
+      if (error instanceof ToolForbiddenError) {
+        const body: IToolErrorResponse = { error: error.message };
+        response.status(403).json(body);
 
         return;
       }

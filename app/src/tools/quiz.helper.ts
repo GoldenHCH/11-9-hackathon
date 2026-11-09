@@ -1,4 +1,4 @@
-import type { ILocation, IQuiz, IQuizQuestion, ISession, TalkTrack } from '@kubequest/shared';
+import type { ILocation, IPublicQuiz, IQuiz, IQuizQuestion, ISession, TalkTrack } from '@kubequest/shared';
 import { MatchingHelper } from './matching.helper';
 import type { IArrangedChoices } from './quiz.interfaces';
 import { fallbackAbstractWords, fallbackRoomNames, levelLabels, toolDefaults } from './tools.constants';
@@ -12,6 +12,14 @@ export class QuizHelper {
     ];
 
     return { talkId: session.id, questions: questions.slice(0, toolDefaults.QUIZ_QUESTIONS), source: 'abstract' };
+  }
+
+  public static withoutAnswers(quiz: IQuiz): IPublicQuiz {
+    return {
+      talkId: quiz.talkId,
+      questions: quiz.questions.map((question) => ({ q: question.q, choices: [...question.choices] })),
+      source: quiz.source,
+    };
   }
 
   public static scoreAnswers(quiz: IQuiz, answers: number[]): number {

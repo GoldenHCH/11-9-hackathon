@@ -1,6 +1,7 @@
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 import express, { Router } from 'express';
+import type { RequestHandler } from 'express';
 import type { IAppConfig } from '../config/config.interfaces';
 
 export function findWebRoot(config: IAppConfig): string | undefined {
@@ -19,10 +20,13 @@ export function createStaticRouter(config: IAppConfig): Router {
     return router;
   }
 
+  const sendIndex: RequestHandler = (_request, response) => {
+    response.set('Cache-Control', 'no-store').sendFile('index.html', { root: webRoot });
+  };
+
+  router.get('/r/:locationId', sendIndex);
   router.use(express.static(webRoot, { index: 'index.html' }));
-  router.get(/^\/(?!api\/).*/, (_request, response) => {
-    response.sendFile('index.html', { root: webRoot });
-  });
+  router.get(/^\/(?!api\/).*/, sendIndex);
 
   return router;
 }

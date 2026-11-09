@@ -3,6 +3,14 @@ export const xpRewards = {
   QUIZ_CORRECT_ANSWER: 5,
 } as const;
 
+export const checkInRules = {
+  REPEAT_WINDOW_MINUTES: 60,
+} as const;
+
+export const toolMessages = {
+  INVALID_SCAN_TOKEN: "That code isn't valid any more. Scan the one on the room's door",
+} as const;
+
 export const matchWeights = {
   SHARED_TOPIC: 1,
   WELCOMER_PAIR: 2,

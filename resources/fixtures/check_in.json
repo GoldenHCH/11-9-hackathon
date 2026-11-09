@@ -1,22 +1,36 @@
 {
   "location": {
-    "id": "salt-palace-151",
-    "name": "Room 151",
+    "id": "salt-palace-halls-a-c-halls-1-5",
+    "name": "Halls A-C, Halls 1-5",
     "kind": "room",
     "venue": "Salt Palace",
     "floor": "Level 1",
     "geo": {
-      "lat": 40.76718,
-      "lon": -111.895831
+      "lat": 40.767204,
+      "lon": -111.896092
     }
   },
   "xp": 10,
   "event": {
-    "id": "xp-1e694f5f-319a-4d1b-8f7d-f02f53ff1f0e",
+    "id": "xp-4f4e7375-b23e-4c2c-b69d-a7bbd89705ce",
     "attendeeId": "att-demo-platform",
     "type": "check_in",
     "xp": 10,
-    "locationId": "salt-palace-151",
+    "locationId": "salt-palace-halls-a-c-halls-1-5",
     "at": "2026-11-10T22:15:00.000Z"
+  },
+  "sessionNowHere": {
+    "id": "talk-1289738",
+    "title": "Solutions Showcase",
+    "abstract": "In order to facilitate networking and business relationships at the event, you may choose to visit a third party’s booth or access sponsored content. You are never required to visit third party booths or to access sponsored content. When visiting a booth or participating in sponsored activities, the third party will receive some of your registration data. This data includes your first name, last…",
+    "speakers": [],
+    "start": "2026-11-10T10:45:00-07:00",
+    "end": "2026-11-10T17:15:00-07:00",
+    "venue": "Salt Palace",
+    "level": 2,
+    "track": "other",
+    "locationId": "salt-palace-halls-a-c-halls-1-5",
+    "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1289738",
+    "hasTranscript": false
   }
 }

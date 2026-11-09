@@ -24,6 +24,24 @@ export class XpLedgerService {
     }
   }
 
+  public async recordPresence(attendeeId: string, location: ILocation, at: string): Promise<void> {
+    this._store.recordPresence(attendeeId, location, at);
+
+    if (!this._esClient.enabled) {
+      return;
+    }
+
+    try {
+      await this._esClient.updateDocument(indexNames.ATTENDEES, attendeeId, {
+        lastLocation: location.geo,
+        lastLocationId: location.id,
+        lastSeenAt: at,
+      });
+    } catch (error) {
+      console.error('xp ledger: could not write presence to Elasticsearch, kept it in memory', error);
+    }
+  }
+
   private async _mirrorToElasticsearch(event: IXpEvent, presenceAt?: ILocation): Promise<void> {
     const attendee = this._store.getAttendee(event.attendeeId);
 

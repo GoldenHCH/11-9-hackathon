@@ -5,6 +5,7 @@ import type { IContainer } from '../container.interfaces';
 import { ToolRunnerService } from '../tools/tool-runner.service';
 import type { ToolRegistry } from '../tools/tools.types';
 import { createHealthRouter } from './health.routes';
+import { createScreenTokenRouter } from './screen-token.routes';
 import { createStaticRouter } from './static.routes';
 import { createToolsRouter } from './tools.routes';
 
@@ -45,6 +46,7 @@ export function createApp(container: IContainer, registry: ToolRegistry): Expres
   app.use(express.json({ limit: '100kb' }));
   app.use(createHealthRouter(container));
   app.use('/api/tools', createToolsRouter(new ToolRunnerService(registry)));
+  app.use('/api/screen-token', createScreenTokenRouter(container.store));
   app.use('/api', (_request, response) => {
     const body: IToolErrorResponse = { error: 'We could not find that endpoint.' };
     response.status(404).json(body);

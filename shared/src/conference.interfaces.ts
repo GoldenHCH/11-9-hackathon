@@ -112,6 +112,17 @@ export interface IQuiz {
   source: QuizSource;
 }
 
+export interface IPublicQuizQuestion {
+  q: string;
+  choices: string[];
+}
+
+export interface IPublicQuiz {
+  talkId: string;
+  questions: IPublicQuizQuestion[];
+  source: QuizSource;
+}
+
 export interface IDemoPersonas {
   platformEngineerId: string;
   firstTimerId: string;

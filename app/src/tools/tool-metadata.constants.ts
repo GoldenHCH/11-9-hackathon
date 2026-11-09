@@ -6,15 +6,15 @@ const attendeeIdProperty = { type: 'string', description: 'The id of the attende
 export const toolMetadata: Record<ToolName, IToolMetadata> = {
   check_in: {
     description:
-      'Check an attendee in at a room, meeting point or booth. Awards 10 XP and records where the attendee is now.',
+      'Check an attendee in at a room, meeting point or booth with the signed token from its QR code. Awards 10 XP once per location per hour and records where the attendee is now.',
     inputSchema: {
       type: 'object',
       properties: {
         attendeeId: attendeeIdProperty,
         locationId: { type: 'string', description: 'The id of the location that was scanned.' },
-        token: { type: 'string', description: 'The token printed in the location QR code.' },
+        token: { type: 'string', description: 'The signed token from the QR code on the door or the screen.' },
       },
-      required: ['attendeeId', 'locationId'],
+      required: ['attendeeId', 'locationId', 'token'],
     },
   },
   recommend_talks: {

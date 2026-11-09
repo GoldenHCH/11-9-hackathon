@@ -1,5 +1,5 @@
 import { randomUUID } from 'node:crypto';
-import type { IQuiz, IQuizForTalkInput, ISubmitQuizInput, ISubmitQuizOutput, IXpEvent } from '@kubequest/shared';
+import type { IPublicQuiz, IQuiz, IQuizForTalkInput, ISubmitQuizInput, ISubmitQuizOutput, IXpEvent } from '@kubequest/shared';
 import { ResourceStoreService } from '../resources/resource-store.service';
 import { LookupService } from './lookup.service';
 import { QuizHelper } from './quiz.helper';
@@ -18,15 +18,13 @@ export class QuizService {
     this._ledger = ledger;
   }
 
-  public async quizForTalk(input: IQuizForTalkInput): Promise<IQuiz> {
-    const session = this._lookup.session(input.talkId);
-
-    return QuizHelper.buildQuiz(session, this._store.getSessions(), this._store.getLocations());
+  public async quizForTalk(input: IQuizForTalkInput): Promise<IPublicQuiz> {
+    return QuizHelper.withoutAnswers(this._gradedQuiz(input.talkId));
   }
 
   public async submitQuiz(input: ISubmitQuizInput): Promise<ISubmitQuizOutput> {
     const attendee = this._lookup.attendee(input.attendeeId);
-    const quiz = await this.quizForTalk({ talkId: input.talkId });
+    const quiz = this._gradedQuiz(input.talkId);
 
     if (input.answers.length !== quiz.questions.length) {
       throw new ToolInputError(`Please answer all ${quiz.questions.length} questions.`);
@@ -52,5 +50,11 @@ export class QuizService {
     }
 
     return { correct, xp };
+  }
+
+  private _gradedQuiz(talkId: string): IQuiz {
+    const session = this._lookup.session(talkId);
+
+    return QuizHelper.buildQuiz(session, this._store.getSessions(), this._store.getLocations());
   }
 }
