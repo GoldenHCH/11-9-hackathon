@@ -5,9 +5,12 @@
 .session {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  padding: 12px;
-  box-shadow: var(--kq-shadow-small);
+  gap: 8px;
+  padding: 16px;
+  box-shadow: var(--kq-shadow);
+  transition:
+    border-color 140ms ease,
+    box-shadow 140ms ease;
 }
 
 .session--planned {
@@ -27,18 +30,18 @@
 }
 
 .session-swatch {
-  width: 14px;
-  height: 14px;
+  width: 8px;
+  height: 8px;
 }
 
 .session-time {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--kq-muted);
 }
 
 .session-tag {
-  padding: 2px 6px;
-  font-size: 10px;
+  padding: 2px 8px;
+  font-size: 11px;
   border: 2px solid var(--kq-border);
 }
 
@@ -54,17 +57,18 @@
 
 .session-title {
   margin: 0;
-  font-size: 15px;
-  line-height: 1.3;
+  font-size: 16px;
+  line-height: 1.4;
   font-weight: 700;
 }
 
 .session-line {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 8px;
   margin: 0;
-  font-size: 13px;
+  font-size: 14px;
+  line-height: 1.5;
   color: var(--kq-muted);
 }
 
@@ -83,7 +87,14 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 4px;
+  margin-top: 8px;
+}
+
+.session-plan,
+.session-quest,
+.session-map {
+  min-height: 44px;
+  border-radius: 0;
 }
 
 .session-plan {
@@ -94,7 +105,13 @@
   color: var(--kq-primary) !important;
 }
 
-.session-quest {
-  flex: 1 1 auto;
+.session-quest,
+.session-map {
   white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .session {
+    transition: none;
+  }
 }

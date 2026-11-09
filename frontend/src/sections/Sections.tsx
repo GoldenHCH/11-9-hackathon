@@ -2,13 +2,13 @@ import { useEffect, useMemo, useState } from 'react';
 import { IsoFigure } from '../components/IsoFigure';
 import { MiniBlock } from '../components/Hud';
 import { PixelFace } from '../components/Iso';
-import { ACCESS, BOARD, DAY_WITH, DAY_WITHOUT, LEVEL_INFO, LOOP_STEPS, TRACE } from '../content';
+import { ACCESS, BOARD, DAY_WITH, DAY_WITHOUT, LEVEL_INFO, LOOP_STEPS, SPONSORS, TRACE } from '../content';
 import type { Block, Material } from '../engine/iso';
 import { TRACKS } from '../engine/materials';
 import { backOut, span, usePrefersReducedMotion } from '../engine/time';
 
 export const Day = () => (
-  <section className="section section--salt" id="day" aria-labelledby="day-title">
+  <section className="section section--paper" id="day" aria-labelledby="day-title">
     <div className="wrap">
       <h2 id="day-title" className="section__title pixel">
         Same conference, different day
@@ -66,13 +66,13 @@ export const Loop = () => (
   <section className="section section--paper" id="loop" aria-labelledby="loop-title">
     <div className="wrap">
       <h2 id="loop-title" className="section__title pixel">
-        How a day plays
+        How it works
       </h2>
-      <p className="section__lede">Five steps, and the middle three repeat until the closing keynote.</p>
+      <p className="section__lede">Four steps. Scan, quiz and meet repeat until the closing keynote.</p>
       <ol className="stairs">
         {LOOP_STEPS.map((step, i) => (
           <li key={step.title} className="stairs__step">
-            <IsoFigure className="stairs__fig" blocks={stair(i, step.m)} frame={stair(4, step.m)} s={22} />
+            <IsoFigure className="stairs__fig" blocks={stair(i, step.m)} frame={stair(LOOP_STEPS.length - 1, step.m)} s={22} />
             <h3>
               <span className="stairs__n pixel">{i + 1}</span> {step.title}
             </h3>
@@ -352,6 +352,27 @@ export const Access = ({ plain, onToggle }: { plain: boolean; onToggle: () => vo
   </section>
 );
 
+export const Sponsors = () => (
+  <section className="section section--night" id="built" aria-labelledby="built-title">
+    <div className="wrap">
+      <h2 id="built-title" className="section__title pixel">
+        Built with
+      </h2>
+      <p className="section__lede">Four tools carry the game, each doing one job.</p>
+      <ul className="sponsors">
+        {SPONSORS.map((sp) => (
+          <li key={sp.name} className="sponsors__card">
+            <MiniBlock m={sp.m} size={48} />
+            <h3 className="sponsors__name pixel">{sp.name}</h3>
+            <p className="sponsors__role pixel">{sp.role}</p>
+            <p className="sponsors__text">{sp.text}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+);
+
 export const Finale = () => (
   <section className="finale" aria-labelledby="finale-title">
     <div className="wrap finale__inner">
@@ -375,11 +396,20 @@ export const Finale = () => (
       </div>
     </div>
     <footer className="foot wrap">
-      <p>
+      <div className="foot__brand">
+        <img src={`${import.meta.env.BASE_URL}cube.svg`} width={24} height={24} alt="" />
+        <span className="pixel">KubeQuest</span>
+      </div>
+      <nav className="foot__links" aria-label="Footer">
+        <a href="#loop">How it works</a>
+        <a href="#plan">Plan your day</a>
+        <a href="#built">Built with</a>
+        <a href="/onboarding">Sign in</a>
+      </nav>
+      <p className="foot__note">
         Built at the WeMakeDevs Cloud Native Hackathon in Salt Lake City, November 9, 2026. Runs on Kubernetes, with
-        Elasticsearch as its only data store.
+        Elasticsearch as its only data store. Handles and faces on this page are made up.
       </p>
-      <p>Handles and faces on this page are made up.</p>
     </footer>
   </section>
 );

@@ -44,6 +44,8 @@ export class ScreenComponent implements OnInit, OnDestroy {
   public qrError = '';
   public rows: ILeaderboardRow[] = [];
   public hasBoss = true;
+  public isBoardLoaded = false;
+  public readonly skeletonRows = Array.from({ length: screenLeaderboardLimit }, (_, index) => index);
 
   public async ngOnInit(): Promise<void> {
     this.locationId = this._route.snapshot.paramMap.get('locationId') ?? '';
@@ -138,6 +140,8 @@ export class ScreenComponent implements OnInit, OnDestroy {
           ),
         )
         .subscribe((leaderboard) => {
+          this.isBoardLoaded = true;
+
           if (leaderboard) {
             this.rows = leaderboard.rows.slice(0, screenLeaderboardLimit);
           }

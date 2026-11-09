@@ -1,11 +1,10 @@
 import { Location } from '@angular/common';
 import { Component, Input, inject } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-screen-toolbar',
-  imports: [MatButtonModule, MatIconModule],
+  imports: [MatIconModule],
   templateUrl: './screen-toolbar.component.html',
   styleUrl: './screen-toolbar.component.scss',
 })

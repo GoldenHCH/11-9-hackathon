@@ -1,8 +1,8 @@
 .layout {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  max-width: 640px;
+  gap: 24px;
+  max-width: 720px;
 }
 
 .preview {
@@ -10,7 +10,7 @@
 }
 
 .preview-title {
-  margin: 0 0 12px;
+  margin: 0 0 16px;
   font-size: 14px;
 }
 
@@ -22,8 +22,8 @@
 .privacy {
   display: flex;
   align-items: center;
-  gap: 6px;
-  margin: 12px 0 0;
+  gap: 8px;
+  margin: 16px 0 0;
   font-size: 13px;
   color: var(--app-theme--ink-muted);
 }
@@ -37,7 +37,7 @@
 .field-row {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
+  gap: 16px;
 }
 
 .net-icon {
@@ -47,7 +47,7 @@
   flex-shrink: 0;
   width: 44px;
   height: 44px;
-  margin-top: 6px;
+  margin-top: 8px;
   color: #fff;
   font-size: 12px;
   border: 2px solid var(--app-theme--border);

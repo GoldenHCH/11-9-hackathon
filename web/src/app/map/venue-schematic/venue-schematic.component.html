@@ -91,6 +91,7 @@
           [class.area--selected]="isSelected(area)"
           [class.area--highlighted]="isHighlighted(area)"
           [class.area--void]="area.kind === 'void'"
+          [class.area--live]="isLive(area)"
           role="button"
           tabindex="0"
           [attr.aria-label]="ariaLabelFor(area)"
@@ -102,6 +103,9 @@
           <polygon class="area-fill" [attr.points]="pointsFor(area)" [style.fill]="fillFor(area)"></polygon>
           @if (kindDisplay[area.kind].pattern !== 'none') {
             <polygon class="area-pattern" [attr.points]="pointsFor(area)" [attr.fill]="'url(#kq-pattern-' + kindDisplay[area.kind].pattern + ')'"></polygon>
+          }
+          @if (isLive(area)) {
+            <polygon class="area-live" [attr.points]="pointsFor(area)"></polygon>
           }
           <polygon class="area-outline" [attr.points]="pointsFor(area)" [attr.stroke-width]="unit * 2"></polygon>
           @if (label.lines.length) {
@@ -119,6 +123,21 @@
                 <tspan [attr.x]="label.x" [attr.y]="label.y + lineDy(label, $index)">{{ line }}</tspan>
               }
             </text>
+            @if (tagFor(area)) {
+              <text
+                class="area-tag"
+                [class.area-tag--live]="isLive(area)"
+                [attr.x]="label.x"
+                [attr.y]="tagY(label)"
+                [attr.font-size]="tagSize(label)"
+                [attr.stroke-width]="unit * 1.5"
+                text-anchor="middle"
+                dominant-baseline="central"
+                aria-hidden="true"
+              >
+                {{ tagFor(area) }}
+              </text>
+            }
           }
         </g>
       }

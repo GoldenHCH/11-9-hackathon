@@ -38,6 +38,7 @@ const palettes = [
     `
       .face {
         display: block;
+        image-rendering: pixelated;
         border: 2px solid var(--app-theme--border);
         box-shadow: var(--app-theme--shadow-small);
       }

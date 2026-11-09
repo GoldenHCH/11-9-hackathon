@@ -1,33 +1,35 @@
 <app-screen-toolbar title="Leaderboard" subtitle="Top 20 in the block world"></app-screen-toolbar>
 
 <div class="board">
-  <div class="tabs" role="tablist" aria-label="Leaderboard">
-    @for (option of boards; track option.id) {
-      <button
-        type="button"
-        role="tab"
-        class="tab kq-pixel"
-        [class.is-active]="option.id === board"
-        [attr.aria-selected]="option.id === board"
-        (click)="selectBoard(option.id)"
-      >
-        {{ option.label }}
-      </button>
-    }
-  </div>
+  <div class="controls">
+    <div class="tabs" role="tablist" aria-label="Leaderboard">
+      @for (option of boards; track option.id) {
+        <button
+          type="button"
+          role="tab"
+          class="tab kq-pixel"
+          [class.is-active]="option.id === board"
+          [attr.aria-selected]="option.id === board"
+          (click)="selectBoard(option.id)"
+        >
+          {{ option.label }}
+        </button>
+      }
+    </div>
 
-  <div class="periods" role="group" aria-label="Time range">
-    @for (option of periods; track option.id) {
-      <button
-        type="button"
-        class="period"
-        [class.is-active]="option.id === period"
-        [attr.aria-pressed]="option.id === period"
-        (click)="selectPeriod(option.id)"
-      >
-        {{ option.label }}
-      </button>
-    }
+    <div class="periods" role="group" aria-label="Time range">
+      @for (option of periods; track option.id) {
+        <button
+          type="button"
+          class="period kq-pixel"
+          [class.is-active]="option.id === period"
+          [attr.aria-pressed]="option.id === period"
+          (click)="selectPeriod(option.id)"
+        >
+          {{ option.label }}
+        </button>
+      }
+    </div>
   </div>
 
   <app-state-wrapper
@@ -56,7 +58,9 @@
               [label]="row.player.handle + ' face'"
             ></app-pixel-face>
             <span class="podium-handle">{{ row.player.handle }}</span>
-            <span class="podium-score kq-pixel">{{ row.score }} <small>{{ scoreUnit }}</small></span>
+            <span class="podium-score kq-pixel"
+              >{{ row.score }} <small>{{ scoreUnit }}</small></span
+            >
             <span class="podium-level">{{ row.player.levelName }}</span>
             @if (row.latestTraceId) {
               <a
@@ -72,7 +76,9 @@
             }
           </div>
           <div class="podium-step kq-block">
-            <span class="podium-rank kq-pixel" [attr.aria-label]="'Rank ' + row.rank">{{ row.rank }}</span>
+            <span class="podium-rank kq-pixel" [attr.aria-label]="'Rank ' + row.rank">{{
+              row.rank
+            }}</span>
           </div>
         </li>
       }
@@ -82,7 +88,9 @@
       <ol class="rows" aria-label="Ranks 4 to 20">
         @for (row of listRows; track row.player.id) {
           <li>
-            <ng-container *ngTemplateOutlet="rowTemplate; context: { $implicit: row }"></ng-container>
+            <ng-container
+              *ngTemplateOutlet="rowTemplate; context: { $implicit: row }"
+            ></ng-container>
           </li>
         }
       </ol>
@@ -99,7 +107,11 @@
 <ng-template #rowTemplate let-row>
   <div class="row kq-block" [class.is-me]="row.isMe" [attr.data-change]="rankChange(row)">
     <span class="row-rank kq-pixel" [attr.aria-label]="'Rank ' + row.rank">{{ row.rank }}</span>
-    <app-pixel-face [seed]="faceSeed(row)" [size]="32" [label]="row.player.handle + ' face'"></app-pixel-face>
+    <app-pixel-face
+      [seed]="faceSeed(row)"
+      [size]="32"
+      [label]="row.player.handle + ' face'"
+    ></app-pixel-face>
     <div class="row-body">
       <span class="row-handle">
         {{ row.player.handle }}
@@ -116,7 +128,9 @@
         }
       </span>
     </div>
-    <span class="row-score kq-pixel">{{ row.score }}<small>{{ scoreUnit }}</small></span>
+    <span class="row-score kq-pixel"
+      >{{ row.score }}<small>{{ scoreUnit }}</small></span
+    >
     @if (row.latestTraceId) {
       <a
         class="trace-link"
