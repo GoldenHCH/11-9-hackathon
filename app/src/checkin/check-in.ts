@@ -1,5 +1,6 @@
 import { trace } from '@opentelemetry/api';
 import { appConfig } from '../config';
+import { recommendPeopleFor } from '../match/people';
 import { recordArrival } from '../meet/arrivals';
 import { logger } from '../observability/logger';
 import { kubequestMetrics } from '../observability/metrics';
@@ -15,6 +16,7 @@ import {
   ICheckInResult,
   IGeoPoint,
   ILocation,
+  IPersonMatch,
   IQuest,
   ITalk,
   IXpEvent,
@@ -38,6 +40,7 @@ const OUTPOST_XP = 10;
 const OUTPOSTS_PER_DAY = 5;
 const WRONG_BUILDING_METERS = 400;
 const EARTH_RADIUS_METERS = 6371000;
+const PEOPLE_HERE_LIMIT = 3;
 
 const tokenMessages: Record<'missing_token' | 'bad_signature' | 'expired_token', string> = {
   missing_token: "That link is missing its code. Scan the one on the room's door.",
@@ -187,6 +190,36 @@ async function sessionCheckIn(attendee: IAttendee, location: ILocation, now: Dat
   );
 }
 
+async function findPeopleHere(attendeeId: string): Promise<IPersonMatch[]> {
+  return optional('people_here', () => recommendPeopleFor(attendeeId, { hereOnly: true, limit: PEOPLE_HERE_LIMIT }), []);
+}
+
+async function scanResult(attendee: IAttendee, location: ILocation, now: Date): Promise<ICheckInResult> {
+  const recent = await findRecentCheckIn(attendee.id, location.id);
+
+  if (recent) {
+    recordOutcome(location, 'repeat', 0);
+
+    return {
+      status: 'repeat',
+      message: `You already checked in at ${location.name} this hour. No extra XP, but you're all set.`,
+      xpAwarded: 0,
+      material: recent.material,
+      location,
+      event: recent,
+      quizAvailable: recent.talkId !== undefined,
+      completedQuests: [],
+      newBanners: [],
+    };
+  }
+
+  if (location.kind === 'outpost') {
+    return outpostCheckIn(attendee, location);
+  }
+
+  return sessionCheckIn(attendee, location, now);
+}
+
 export async function runCheckIn(input: ICheckInInput): Promise<ICheckInResult> {
   const now = worldNow();
   const tokenCheck = verifyLocationToken(input.locationId, input.token, new Date());
@@ -216,33 +249,30 @@ export async function runCheckIn(input: ICheckInInput): Promise<ICheckInResult> 
     return rejected(location, 'wrong_building', `Your phone says you're in the other building. Scan the code at ${location.name} once you're there.`);
   }
 
-  await optional('record_last_location', () => recordLastLocation(attendee.id, location, now), undefined);
+  const located = await optional(
+    'record_last_location',
+    () => recordLastLocation(attendee.id, location, now).then(() => true),
+    false,
+  );
 
   if (location.kind === 'campfire') {
     return campfireCheckIn(attendee, location);
   }
 
-  const recent = await findRecentCheckIn(attendee.id, location.id);
+  const result = await scanResult(attendee, location, now);
 
-  if (recent) {
-    recordOutcome(location, 'repeat', 0);
-
-    return {
-      status: 'repeat',
-      message: `You already checked in at ${location.name} this hour. No extra XP, but you're all set.`,
-      xpAwarded: 0,
-      material: recent.material,
-      location,
-      event: recent,
-      quizAvailable: recent.talkId !== undefined,
-      completedQuests: [],
-      newBanners: [],
-    };
+  if (result.status === 'rejected') {
+    return result;
   }
 
-  if (location.kind === 'outpost') {
-    return outpostCheckIn(attendee, location);
+  if (!located || !attendee.settings?.meetingOn) {
+    trace.getActiveSpan()?.setAttribute('kubequest.checkin.people_here', 0);
+
+    return result;
   }
 
-  return sessionCheckIn(attendee, location, now);
+  const peopleHere = await findPeopleHere(attendee.id);
+  trace.getActiveSpan()?.setAttribute('kubequest.checkin.people_here', peopleHere.length);
+
+  return { ...result, peopleHere };
 }

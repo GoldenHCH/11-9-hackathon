@@ -2,7 +2,9 @@ import type { estypes } from '@elastic/elasticsearch';
 import { esOptions, getEsClient } from '../es/client';
 import { esTimeouts, indexNames } from '../es/es.constants';
 import { logger } from '../observability/logger';
+import { gameRules } from '../types/kubequest.constants';
 import { IAttendee, IIntro, IPersonMatch } from '../types/kubequest.interfaces';
+import { worldNow } from '../world/clock';
 import { attendeeSourceExcludes, getAttendee, hitSources, profileQueryText, sharedTopics, toMatchPlayer } from './match-data';
 
 export interface IRecommendPeopleOptions {
@@ -48,7 +50,8 @@ function peopleFilter(me: IAttendee, excludeIds: string[], hereOnly: boolean): e
   const filter: estypes.QueryDslQueryContainer[] = [{ term: { visible: true } }, { term: { 'settings.meetingOn': true } }];
 
   if (hereOnly && me.lastLocationId) {
-    filter.push({ term: { lastLocationId: me.lastLocationId } });
+    const hereSince = new Date(worldNow().getTime() - gameRules.BUSYNESS_WINDOW_MINUTES * 60000).toISOString();
+    filter.push({ term: { lastLocationId: me.lastLocationId } }, { range: { lastSeenAt: { gte: hereSince } } });
   }
 
   return {

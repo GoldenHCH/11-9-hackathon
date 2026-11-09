@@ -507,6 +507,7 @@ export interface ICheckInResult {
   boss?: IBossState;
   levelUp?: ILevelProgress;
   newBanners: IBannerProgress[];
+  peopleHere?: IPersonMatch[];
 }
 
 export interface ISignUpResult {
