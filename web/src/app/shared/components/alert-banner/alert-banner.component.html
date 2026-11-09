@@ -1,12 +1,19 @@
 <div class="alert" role="alert">
-  <mat-icon aria-hidden="true">error_outline</mat-icon>
+  <span class="alert-icon" aria-hidden="true">
+    <mat-icon>error_outline</mat-icon>
+  </span>
   <p class="alert-message">{{ message }}</p>
-  @if (actionLabel) {
-    <button mat-stroked-button type="button" (click)="action.emit()">{{ actionLabel }}</button>
-  }
-  @if (dismissible) {
-    <button mat-icon-button type="button" aria-label="Dismiss message" (click)="dismissed.emit()">
-      <mat-icon>close</mat-icon>
-    </button>
-  }
+  <div class="alert-actions">
+    @if (actionLabel) {
+      <button type="button" class="kq-btn kq-btn--danger kq-btn--small" (click)="action.emit()">
+        <mat-icon aria-hidden="true">refresh</mat-icon>
+        <span>{{ actionLabel }}</span>
+      </button>
+    }
+    @if (dismissible) {
+      <button type="button" class="alert-dismiss" aria-label="Dismiss message" (click)="dismissed.emit()">
+        <mat-icon aria-hidden="true">close</mat-icon>
+      </button>
+    }
+  </div>
 </div>

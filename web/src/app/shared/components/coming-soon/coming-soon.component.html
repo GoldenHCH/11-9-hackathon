@@ -1,14 +1,14 @@
 <section class="app-page">
   <app-screen-toolbar [title]="title"></app-screen-toolbar>
-  <div class="coming-soon app-block">
-    <mat-icon class="coming-soon-icon" aria-hidden="true">{{ icon }}</mat-icon>
+  <div class="coming-soon kq-block">
+    <span class="coming-soon-icon" aria-hidden="true">
+      <mat-icon>{{ icon }}</mat-icon>
+    </span>
     <p class="coming-soon-message">{{ message }}</p>
     <p class="coming-soon-note">This screen is being built. The venue map works today.</p>
-    <a mat-flat-button routerLink="/map">
-      <div class="btn-content">
-        <mat-icon>map</mat-icon>
-        <span>Open the map</span>
-      </div>
+    <a class="kq-btn kq-btn--primary" routerLink="/map">
+      <mat-icon aria-hidden="true">map</mat-icon>
+      <span>Open the map</span>
     </a>
   </div>
 </section>
