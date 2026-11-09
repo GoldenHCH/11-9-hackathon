@@ -1,6 +1,7 @@
 import { gameRules } from '../types/kubequest.constants';
 import { IAttendee, IQuest, IQuestBoard } from '../types/kubequest.interfaces';
 import { generateCandidates, IOfferContext, pickOffers } from './offers';
+import { noLocationHint } from './proximity';
 import { deleteQuests, listEvents, listQuests, loadAttendee, loadLocation, saveQuests } from './store';
 import { addMinutes, isAfter, startOfConferenceDay } from './time';
 
@@ -97,6 +98,7 @@ export async function buildBoard(attendeeId: string, now: Date = new Date(), for
     doneToday,
     maxOffers: gameRules.MAX_OFFERS,
     maxActive: gameRules.MAX_ACTIVE_QUESTS,
+    ...(attendee.lastLocationId ? {} : { nearHint: noLocationHint }),
   };
 }
 

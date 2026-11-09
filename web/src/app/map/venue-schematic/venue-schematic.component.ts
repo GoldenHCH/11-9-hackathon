@@ -14,7 +14,7 @@ import {
 } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { vendorTierFill, venueAreaKindDisplay } from '../venue.constants';
-import { IVendor, IVenueArea, IVenueLevel, IVenuePoint, IVenueRect } from '../venue.interfaces';
+import { IMapPin, IVendor, IVenueArea, IVenueLevel, IVenuePoint, IVenueRect } from '../venue.interfaces';
 
 const glyphWidthRatio = 0.78;
 const lineHeightRatio = 1.25;
@@ -72,8 +72,12 @@ export class VenueSchematicComponent implements OnChanges, AfterViewInit, OnDest
   @Input() public highlightedAreaIds: string[] = [];
   @Input() public booths: IVendor[] = [];
   @Input() public highlightedVendorId: string | null = null;
+  @Input() public pins: IMapPin[] = [];
+  @Input() public routeToPinId: string | null = null;
+  @Input() public selectedPinId: string | null = null;
   @Output() public readonly areaSelected = new EventEmitter<IVenueArea>();
   @Output() public readonly boothSelected = new EventEmitter<IVendor>();
+  @Output() public readonly pinSelected = new EventEmitter<IMapPin>();
 
   @ViewChild('viewport', { static: true }) private readonly _viewport!: ElementRef<HTMLElement>;
 
@@ -457,6 +461,43 @@ export class VenueSchematicComponent implements OnChanges, AfterViewInit, OnDest
     const y = placeAbove ? anchorY - gap - height : anchorY + gap;
 
     return { x, y, width, height };
+  }
+
+  public get levelPins(): IMapPin[] {
+    return this.pins.filter((pin) => pin.levelId === this.level.id).sort((first, second) => (first.kind === 'you' ? 1 : 0) - (second.kind === 'you' ? 1 : 0));
+  }
+
+  public get pinSize(): number {
+    return (this.unit * 22) / Math.sqrt(this.view.scale);
+  }
+
+  public get routeLine(): { x1: number; y1: number; x2: number; y2: number } | null {
+    const pins = this.levelPins;
+    const you = pins.find((pin) => pin.kind === 'you');
+    const target = pins.find((pin) => pin.id === this.routeToPinId);
+
+    return you && target ? { x1: you.point.x, y1: you.point.y, x2: target.point.x, y2: target.point.y } : null;
+  }
+
+  public pinTransform(pin: IMapPin): string {
+    return `translate(${pin.point.x} ${pin.point.y})`;
+  }
+
+  public pinAriaLabel(pin: IMapPin): string {
+    return pin.kind === 'you' ? `You are here: ${pin.title}` : `${pin.label}: ${pin.title}`;
+  }
+
+  public onPinClick(event: MouseEvent, pin: IMapPin): void {
+    event.stopPropagation();
+    this.pinSelected.emit(pin);
+  }
+
+  public onPinKeydown(event: KeyboardEvent, pin: IMapPin): void {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      event.stopPropagation();
+      this.pinSelected.emit(pin);
+    }
   }
 
   public onAreaKeydown(event: KeyboardEvent, area: IVenueArea): void {

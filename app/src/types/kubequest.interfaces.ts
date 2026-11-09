@@ -260,6 +260,8 @@ export interface IQuest {
   where?: IQuestPlace;
   when?: ITimeWindow;
   walkMinutes?: number;
+  directionHint?: string;
+  distanceLabel?: string;
   talkId?: string;
   locationId?: string;
   introId?: string;
@@ -279,6 +281,7 @@ export interface IQuestBoard {
   doneToday: IQuest[];
   maxOffers: number;
   maxActive: number;
+  nearHint?: string;
 }
 
 export interface IMatchSignal {

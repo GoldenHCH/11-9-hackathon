@@ -9,3 +9,5 @@ export type VendorTier = (typeof vendorTiers)[number];
 export type VenueAreaPattern = (typeof venueAreaKindDisplay)[VenueAreaKind]['pattern'];
 
 export type VenueMapViewMode = 'map' | 'list';
+
+export type MapPinKind = 'you' | 'quest';
