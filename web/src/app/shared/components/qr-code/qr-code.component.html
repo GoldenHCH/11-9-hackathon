@@ -1,0 +1,9 @@
+<div class="app-qr" [style.max-width.px]="size">
+  @if (imageUrl) {
+    <img class="app-qr-image" [src]="imageUrl" [alt]="alt" [attr.width]="size" [attr.height]="size" />
+  } @else if (hasFailed) {
+    <p class="app-qr-fallback">The QR code didn’t render. Use the link instead.</p>
+  } @else {
+    <div class="app-qr-placeholder" role="img" aria-label="QR code loading"></div>
+  }
+</div>

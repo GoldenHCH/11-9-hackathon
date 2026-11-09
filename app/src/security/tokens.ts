@@ -5,6 +5,9 @@ import { ITokenCheck } from '../types/internal.interfaces';
 
 const PRINTED_PREFIX = 'p';
 const SCREEN_PREFIX = 's';
+const ACCESS_PREFIX = 'k';
+const ADMIN_SCOPE = 'admin';
+const EXHIBITOR_SCOPE = 'exhibitor';
 
 export const SCREEN_TOKEN_TTL_MS = 10 * 60 * 1000;
 
@@ -83,6 +86,50 @@ export function verifyLocationToken(locationId: string, token: string, now: Date
 export function buildScanUrl(locationId: string, token: string): string {
   const url = new URL(`/r/${encodeURIComponent(locationId)}`, appConfig.publicBaseUrl);
   url.searchParams.set('t', token);
+
+  return url.toString();
+}
+
+export function signAccessKey(scope: string): string {
+  return `${ACCESS_PREFIX}.${sign(`${ACCESS_PREFIX}:${scope}`)}`;
+}
+
+export function verifyAccessKey(scope: string, key: string): boolean {
+  const trimmed = key.trim();
+
+  if (trimmed === '' || !trimmed.startsWith(`${ACCESS_PREFIX}.`)) {
+    return false;
+  }
+
+  return sameSignature(signAccessKey(scope), trimmed);
+}
+
+export function adminAccessScope(): string {
+  return ADMIN_SCOPE;
+}
+
+export function exhibitorAccessScope(outpostId: string): string {
+  return `${EXHIBITOR_SCOPE}:${outpostId}`;
+}
+
+export function adminAccessKey(): string {
+  return signAccessKey(adminAccessScope());
+}
+
+export function exhibitorAccessKey(outpostId: string): string {
+  return signAccessKey(exhibitorAccessScope(outpostId));
+}
+
+export function buildStaffUrl(outpostId: string, key: string): string {
+  const url = new URL(`/exhibitor/${encodeURIComponent(outpostId)}`, appConfig.publicBaseUrl);
+  url.searchParams.set('k', key);
+
+  return url.toString();
+}
+
+export function buildAdminUrl(key: string): string {
+  const url = new URL('/admin', appConfig.publicBaseUrl);
+  url.searchParams.set('k', key);
 
   return url.toString();
 }

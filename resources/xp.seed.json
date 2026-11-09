@@ -1143,5 +1143,3115 @@
     "correct": 3,
     "material": "copper",
     "locationId": "salt-palace-level-2-255-bc"
+  },
+  {
+    "id": "xp-booth-001",
+    "attendeeId": "att-argoimpala",
+    "traceId": "e36d3ab9455a187f74f16011272444b7",
+    "spanId": "d2b14dde36755824",
+    "at": "2026-11-09T14:30:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-kubex"
+  },
+  {
+    "id": "xp-booth-002",
+    "attendeeId": "att-ciliumferret",
+    "traceId": "9a9788ac70bd7dcae8ce729cc72c6dff",
+    "spanId": "5371ef69969aa2bd",
+    "at": "2026-11-09T14:30:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-percona"
+  },
+  {
+    "id": "xp-booth-003",
+    "attendeeId": "att-grpcegret",
+    "traceId": "548d1f39d524a8aba28ce8835a5c1f13",
+    "spanId": "9f1d77e6294284ac",
+    "at": "2026-11-09T14:30:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-truefoundry"
+  },
+  {
+    "id": "xp-booth-004",
+    "attendeeId": "att-rookquail",
+    "traceId": "3569c48e1f56711f097cf7918b902190",
+    "spanId": "521aa2f1598bac03",
+    "at": "2026-11-09T14:30:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-amazon-web-services"
+  },
+  {
+    "id": "xp-booth-005",
+    "attendeeId": "att-kubelynx",
+    "traceId": "68a5f03c4e110a1082baf2afd97271bd",
+    "spanId": "a5c57151ef28d75e",
+    "at": "2026-11-09T14:31:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-docker"
+  },
+  {
+    "id": "xp-booth-006",
+    "attendeeId": "att-tracenarwhal",
+    "traceId": "d3a5c0506641110ef623e3546dbbd963",
+    "spanId": "cd8e5001ada83dff",
+    "at": "2026-11-09T14:34:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-project-kueue-workload-aware-scheduling-sig-subproject"
+  },
+  {
+    "id": "xp-booth-007",
+    "attendeeId": "att-cronkoala",
+    "traceId": "4500976cc0bb3ea41c8150ffa50037ee",
+    "spanId": "46270da361227a42",
+    "at": "2026-11-09T14:35:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-nutanix"
+  },
+  {
+    "id": "xp-booth-008",
+    "attendeeId": "att-vectoryak",
+    "traceId": "776e093a22b18d05d661de6979079dba",
+    "spanId": "30d24e606ecb49ac",
+    "at": "2026-11-09T14:37:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-project-external-secrets"
+  },
+  {
+    "id": "xp-booth-009",
+    "attendeeId": "att-ebpfbadger",
+    "traceId": "9f1064ceb126a9f6e1e99b15b692ca4d",
+    "spanId": "9a11058a3b9509e8",
+    "at": "2026-11-09T14:38:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-traversal"
+  },
+  {
+    "id": "xp-booth-010",
+    "attendeeId": "att-meshcaribou",
+    "traceId": "99a1b9e61ed69a81d54af378483fa0cf",
+    "spanId": "4cf282ce60f247ab",
+    "at": "2026-11-09T14:38:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-datadog"
+  },
+  {
+    "id": "xp-booth-011",
+    "attendeeId": "att-fluxpanda",
+    "traceId": "6f1b453fcb51c04f6a918c2da73fc00c",
+    "spanId": "e18bc44514ad6e37",
+    "at": "2026-11-09T14:39:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-google-cloud"
+  },
+  {
+    "id": "xp-booth-012",
+    "attendeeId": "att-vitessorca",
+    "traceId": "44b2d3c64a686a48839de706ad91d398",
+    "spanId": "bb1f25a50274588f",
+    "at": "2026-11-09T14:39:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-akamas"
+  },
+  {
+    "id": "xp-booth-013",
+    "attendeeId": "att-vitesstoucan",
+    "traceId": "4dc1fd22400a93e3fde96388d96e9870",
+    "spanId": "af78dbf5b6a4cd3c",
+    "at": "2026-11-09T14:39:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-microsoft-azure"
+  },
+  {
+    "id": "xp-booth-014",
+    "attendeeId": "att-etcdcaribou",
+    "traceId": "b482e79017f2af23d9c1338da6b1007c",
+    "spanId": "c22ca8216658e22e",
+    "at": "2026-11-09T14:41:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-flox"
+  },
+  {
+    "id": "xp-booth-015",
+    "attendeeId": "att-podgibbon",
+    "traceId": "05814952fba74052388e1ba91f72e5a6",
+    "spanId": "64b3fbaa32522201",
+    "at": "2026-11-09T14:43:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-netlox"
+  },
+  {
+    "id": "xp-booth-016",
+    "attendeeId": "att-vectorgibbon",
+    "traceId": "88045cced3fcb29051b5b88294496fe4",
+    "spanId": "a5b75a5bce8d12b8",
+    "at": "2026-11-09T14:43:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-redpanda"
+  },
+  {
+    "id": "xp-booth-017",
+    "attendeeId": "att-fluxgecko",
+    "traceId": "f50491cb515fddf6ad35eef2f9d959c1",
+    "spanId": "084b80d1249a2056",
+    "at": "2026-11-09T14:44:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-iown-global-forum"
+  },
+  {
+    "id": "xp-booth-018",
+    "attendeeId": "att-grpcmoose",
+    "traceId": "30a6e122d1e3413f644f539fb408cb34",
+    "spanId": "f9fc72aff391a9d8",
+    "at": "2026-11-09T14:44:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-isovalent-at-cisco"
+  },
+  {
+    "id": "xp-booth-019",
+    "attendeeId": "att-helmraccoon",
+    "traceId": "b6489d64524f16fff55f63ab4e676bf0",
+    "spanId": "2c744eaab68f00f4",
+    "at": "2026-11-09T14:44:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-haproxy-technologies"
+  },
+  {
+    "id": "xp-booth-020",
+    "attendeeId": "att-otelegret",
+    "traceId": "b793585ba806415485214f4d292f0ad2",
+    "spanId": "b967957bdf834aad",
+    "at": "2026-11-09T14:44:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-squaredup"
+  },
+  {
+    "id": "xp-booth-021",
+    "attendeeId": "att-grpcegret",
+    "traceId": "f6c923c011ad626ecc523d18318ee8bd",
+    "spanId": "acdb0ac2cd0be0f2",
+    "at": "2026-11-09T14:45:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-flox"
+  },
+  {
+    "id": "xp-booth-022",
+    "attendeeId": "att-meshcaribou",
+    "traceId": "03bd735cf67c1037bc1e1f474a01162d",
+    "spanId": "b58120e452771ac8",
+    "at": "2026-11-09T14:45:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-yugabyte"
+  },
+  {
+    "id": "xp-booth-023",
+    "attendeeId": "att-vitesstoucan",
+    "traceId": "9d957d1ae255bcb220802760ffd96165",
+    "spanId": "d39ec9bf37a75913",
+    "at": "2026-11-09T14:45:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-vultr"
+  },
+  {
+    "id": "xp-booth-024",
+    "attendeeId": "att-llmgecko",
+    "traceId": "a3c83f7594dc01f73be6726cc4d56bb3",
+    "spanId": "33bdd8c9233bd62b",
+    "at": "2026-11-09T14:46:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-suse"
+  },
+  {
+    "id": "xp-booth-025",
+    "attendeeId": "att-argoalpaca",
+    "traceId": "fb18b7197048bef119c1236dd958822f",
+    "spanId": "d2922f54191eb577",
+    "at": "2026-11-09T14:47:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-dash0"
+  },
+  {
+    "id": "xp-booth-026",
+    "attendeeId": "att-ebpftern",
+    "traceId": "c418153a28b0b8c6410210691d50918e",
+    "spanId": "94d71bc2829b95bb",
+    "at": "2026-11-09T14:50:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-google-cloud"
+  },
+  {
+    "id": "xp-booth-027",
+    "attendeeId": "att-helmraccoon",
+    "traceId": "8ed2bb28f8ca58fae23e03324aa55c12",
+    "spanId": "65cb7329b543023a",
+    "at": "2026-11-09T14:50:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-controltheory"
+  },
+  {
+    "id": "xp-booth-028",
+    "attendeeId": "att-vectorvole",
+    "traceId": "e38d2c61bba255d7f9b4662b54ff824c",
+    "spanId": "bddb39621e8c7e72",
+    "at": "2026-11-09T14:50:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-project-kpt"
+  },
+  {
+    "id": "xp-booth-029",
+    "attendeeId": "att-ciliumjackal",
+    "traceId": "dd2006798382287487ce47ea114e4aa2",
+    "spanId": "c4b0630c4a661fd6",
+    "at": "2026-11-09T14:51:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-herodevs"
+  },
+  {
+    "id": "xp-booth-030",
+    "attendeeId": "att-podllama",
+    "traceId": "dd793f2c60687d78f629d27b7fec1658",
+    "spanId": "06f3458500c5857e",
+    "at": "2026-11-09T14:51:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-octopus-deploy"
+  },
+  {
+    "id": "xp-booth-031",
+    "attendeeId": "att-argoibex",
+    "traceId": "43580ed5c8e1271075fc914a2256ef45",
+    "spanId": "d02244344150aebb",
+    "at": "2026-11-09T14:52:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-cast-ai"
+  },
+  {
+    "id": "xp-booth-032",
+    "attendeeId": "att-etcdcaribou",
+    "traceId": "71c19a61f9f56909a90adbf1710905af",
+    "spanId": "f0e43f02c19e2036",
+    "at": "2026-11-09T14:52:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-solo-io"
+  },
+  {
+    "id": "xp-booth-033",
+    "attendeeId": "att-helmlemur",
+    "traceId": "79a33aa16aff90b930a65445dd0bb4ff",
+    "spanId": "81c546a108023f7b",
+    "at": "2026-11-09T14:52:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-amazon-web-services"
+  },
+  {
+    "id": "xp-booth-034",
+    "attendeeId": "att-argoimpala",
+    "traceId": "7b685dfdd3252a26ef59ce8c4313bf39",
+    "spanId": "4d16e7acc9d7d710",
+    "at": "2026-11-09T14:54:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-dash0"
+  },
+  {
+    "id": "xp-booth-035",
+    "attendeeId": "att-rookquail",
+    "traceId": "f1deeecce258675437cf0a824febc53e",
+    "spanId": "97affef2938382ad",
+    "at": "2026-11-09T14:54:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-dash0"
+  },
+  {
+    "id": "xp-booth-036",
+    "attendeeId": "att-otelegret",
+    "traceId": "28a3ef8d97d0b527203260f9eac53d67",
+    "spanId": "b77d1c6ae4d3361d",
+    "at": "2026-11-09T14:55:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-kubermatic"
+  },
+  {
+    "id": "xp-booth-037",
+    "attendeeId": "att-vitessorca",
+    "traceId": "7276936c12797a8aed050905de2ef4d3",
+    "spanId": "b0992c055c255b77",
+    "at": "2026-11-09T14:55:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-datadog"
+  },
+  {
+    "id": "xp-booth-038",
+    "attendeeId": "att-kservecheetah",
+    "traceId": "1aa9344d66cf9d051ab0e79ee763453c",
+    "spanId": "da3a47ef40c33bdf",
+    "at": "2026-11-09T14:56:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-project-dynamic-resource-allocation-sig-subproject"
+  },
+  {
+    "id": "xp-booth-039",
+    "attendeeId": "att-grpcorca",
+    "traceId": "9c217d8653edb3f6fd4213f97414db42",
+    "spanId": "2870dd82f84f5728",
+    "at": "2026-11-09T14:57:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-datacore"
+  },
+  {
+    "id": "xp-booth-040",
+    "attendeeId": "att-helmraccoon",
+    "traceId": "e33218034e3835140280bca8ca29e77f",
+    "spanId": "64c738b58e6d916e",
+    "at": "2026-11-09T14:57:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-canonical"
+  },
+  {
+    "id": "xp-booth-041",
+    "attendeeId": "att-rookibex",
+    "traceId": "9258a3c25ecd0e492240db6336290434",
+    "spanId": "3e052d0558215fb5",
+    "at": "2026-11-09T14:57:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-infisical"
+  },
+  {
+    "id": "xp-booth-042",
+    "attendeeId": "att-otelcheetah",
+    "traceId": "2eac1bb3efba91a64b4c68421ffea294",
+    "spanId": "69c1c5fde5979c1d",
+    "at": "2026-11-09T14:58:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-amazon-web-services"
+  },
+  {
+    "id": "xp-booth-043",
+    "attendeeId": "att-sbommanatee",
+    "traceId": "9bcd61ab1b7d569abbee36d034bc09bb",
+    "spanId": "b0cb33c1c756e56b",
+    "at": "2026-11-09T14:58:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-nvidia"
+  },
+  {
+    "id": "xp-booth-044",
+    "attendeeId": "att-etcdgibbon",
+    "traceId": "d1f2dc6bd8304e3c322aebba98ad4da7",
+    "spanId": "5fb0eab1ab88f477",
+    "at": "2026-11-09T14:59:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-veeam"
+  },
+  {
+    "id": "xp-booth-045",
+    "attendeeId": "att-helmlemur",
+    "traceId": "a5dde2bccee206e3b659166acd0479b8",
+    "spanId": "dfc5895891192040",
+    "at": "2026-11-09T14:59:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-docker"
+  },
+  {
+    "id": "xp-booth-046",
+    "attendeeId": "att-meshtapir",
+    "traceId": "d0d27129734b7ace51cf36d60096f54a",
+    "spanId": "b77a6a113e714fdc",
+    "at": "2026-11-09T15:00:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-antithesis"
+  },
+  {
+    "id": "xp-booth-047",
+    "attendeeId": "att-helmpenguin",
+    "traceId": "5b72f86e88d9ff9dd911ca5b43794759",
+    "spanId": "5bcb9f546382dd42",
+    "at": "2026-11-09T15:01:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-activestate"
+  },
+  {
+    "id": "xp-booth-048",
+    "attendeeId": "att-quotaquokka",
+    "traceId": "a72f09f665af44ee3d73b66f25021e95",
+    "spanId": "b2095ecf6ac02689",
+    "at": "2026-11-09T15:01:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-red-hat"
+  },
+  {
+    "id": "xp-booth-049",
+    "attendeeId": "att-tracenarwhal",
+    "traceId": "3e45d1eb6bd8a547e381c954d6998a9c",
+    "spanId": "97c097392336d100",
+    "at": "2026-11-09T15:01:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-apollo-graphql"
+  },
+  {
+    "id": "xp-booth-050",
+    "attendeeId": "att-nodeosprey",
+    "traceId": "86151c2006cf62c438b297a3ece9dc2e",
+    "spanId": "ac47617d06216f52",
+    "at": "2026-11-09T15:02:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-linux-foundation-education"
+  },
+  {
+    "id": "xp-booth-051",
+    "attendeeId": "att-fluxbadger",
+    "traceId": "58c92747ecdd79e0ea1c1bb1b0418912",
+    "spanId": "703ff2bcade98d2b",
+    "at": "2026-11-09T15:03:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-yugabyte"
+  },
+  {
+    "id": "xp-booth-052",
+    "attendeeId": "att-linkerdraven",
+    "traceId": "e8a9f6ca94d3b8101a262355f832bcb4",
+    "spanId": "b3faa861423cb13d",
+    "at": "2026-11-09T15:03:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-suse"
+  },
+  {
+    "id": "xp-booth-053",
+    "attendeeId": "att-vectoryak",
+    "traceId": "29b22759f63a0237a051b03ac2590e5f",
+    "spanId": "8c9dc054c179fd78",
+    "at": "2026-11-09T15:03:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-ciq"
+  },
+  {
+    "id": "xp-booth-054",
+    "attendeeId": "att-argoalpaca",
+    "traceId": "4055a69083442fdf60d3e8c477665dea",
+    "spanId": "563516f94b67e69b",
+    "at": "2026-11-09T15:04:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-project-longhorn"
+  },
+  {
+    "id": "xp-booth-055",
+    "attendeeId": "att-sigstoresloth",
+    "traceId": "b923f9caa45a8c0f738e7951bfcf0c67",
+    "spanId": "3d798715101adc48",
+    "at": "2026-11-09T15:04:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-project-bootc"
+  },
+  {
+    "id": "xp-booth-056",
+    "attendeeId": "att-fluxpanda",
+    "traceId": "f914d7c90fc44c867ce354db5d85e525",
+    "spanId": "c5f89a6f1e0fc7b3",
+    "at": "2026-11-09T15:05:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-resolve-ai"
+  },
+  {
+    "id": "xp-booth-057",
+    "attendeeId": "att-rookibex",
+    "traceId": "2d86292058ca8d9eef3d13a30004e12c",
+    "spanId": "02d477b0106aa956",
+    "at": "2026-11-09T15:05:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-scaleops"
+  },
+  {
+    "id": "xp-booth-058",
+    "attendeeId": "att-grpcmoose",
+    "traceId": "fcc64158b2b5bf01241bc304cfdbaa87",
+    "spanId": "e5e84b26d1e3e5e6",
+    "at": "2026-11-09T15:06:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-akuity"
+  },
+  {
+    "id": "xp-booth-059",
+    "attendeeId": "att-otelcheetah",
+    "traceId": "f8d27ff3f105508128b88c83e5c60a2b",
+    "spanId": "0c863207693339e5",
+    "at": "2026-11-09T15:06:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-causal-dynamics-lab"
+  },
+  {
+    "id": "xp-booth-060",
+    "attendeeId": "att-tektonpanda",
+    "traceId": "9c2c5fe42058300e8428df50eb7682e7",
+    "spanId": "685c0a673902a969",
+    "at": "2026-11-09T15:06:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-sentry"
+  },
+  {
+    "id": "xp-booth-061",
+    "attendeeId": "att-etcdcaribou",
+    "traceId": "518ad63c15d463a4b09df1539b30e14e",
+    "spanId": "85f6b4b4f206fb47",
+    "at": "2026-11-09T15:08:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-sonrai-security"
+  },
+  {
+    "id": "xp-booth-062",
+    "attendeeId": "att-meshtapir",
+    "traceId": "2c1b1c0a39bdd6757348707542396c4b",
+    "spanId": "1f6549a509798b52",
+    "at": "2026-11-09T15:08:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-docker"
+  },
+  {
+    "id": "xp-booth-063",
+    "attendeeId": "att-tektoncapybara",
+    "traceId": "c1f929c8bab7a434d76a46a4fb3cbebb",
+    "spanId": "8c298737d3c5a6cd",
+    "at": "2026-11-09T15:08:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-amazon-web-services"
+  },
+  {
+    "id": "xp-booth-064",
+    "attendeeId": "att-yamlraccoon",
+    "traceId": "3adc3f666e3b44e842c6e32e479a5ee1",
+    "spanId": "43ad520502c1b650",
+    "at": "2026-11-09T15:08:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-opensearch"
+  },
+  {
+    "id": "xp-booth-065",
+    "attendeeId": "att-argoibex",
+    "traceId": "4008e8b869e85d3592dc1c73636531f1",
+    "spanId": "d7927e79595e6cc9",
+    "at": "2026-11-09T15:09:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-f5"
+  },
+  {
+    "id": "xp-booth-066",
+    "attendeeId": "att-nodebadger",
+    "traceId": "e2a6e9e1574fb4dfe21da99213a87f63",
+    "spanId": "827dce4a4dff270f",
+    "at": "2026-11-09T15:09:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-dash0"
+  },
+  {
+    "id": "xp-booth-067",
+    "attendeeId": "att-helmraccoon",
+    "traceId": "a2c24bdc8dd0e7f04110004ca384f5c3",
+    "spanId": "cd08bba0fd1f4332",
+    "at": "2026-11-09T15:10:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-isovalent-at-cisco"
+  },
+  {
+    "id": "xp-booth-068",
+    "attendeeId": "att-rookquail",
+    "traceId": "26c0997ff6958c7c9d633c73767f0766",
+    "spanId": "815806e662ea72c0",
+    "at": "2026-11-09T15:10:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-aenix"
+  },
+  {
+    "id": "xp-booth-069",
+    "attendeeId": "att-quotaquokka",
+    "traceId": "989df68e97f0464ca804aa97d0f44250",
+    "spanId": "806049ec5b8ddf14",
+    "at": "2026-11-09T15:11:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-project-kgateway"
+  },
+  {
+    "id": "xp-booth-070",
+    "attendeeId": "att-chartocelot",
+    "traceId": "dc44725b25c7d6d24aecdae978cdaa7b",
+    "spanId": "cb753671fcfa64c4",
+    "at": "2026-11-09T15:13:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-black-duck"
+  },
+  {
+    "id": "xp-booth-071",
+    "attendeeId": "att-gpucoyote",
+    "traceId": "4cc629b74bffbb72509199acd420fe20",
+    "spanId": "5747a840c9aea58d",
+    "at": "2026-11-09T15:14:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-black-duck"
+  },
+  {
+    "id": "xp-booth-072",
+    "attendeeId": "att-jaegercoyote",
+    "traceId": "82389f8ad4152e440b8aa9475262aab8",
+    "spanId": "c1acd804cedc4b44",
+    "at": "2026-11-09T15:14:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-portworx-by-everpure"
+  },
+  {
+    "id": "xp-booth-073",
+    "attendeeId": "att-cronorca",
+    "traceId": "b55e4391a96f5372349f8a467025e9fa",
+    "spanId": "74fa96086201c0a4",
+    "at": "2026-11-09T15:15:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-haproxy-technologies"
+  },
+  {
+    "id": "xp-booth-074",
+    "attendeeId": "att-cronocelot",
+    "traceId": "dad1428a2e65f9ddf802e0ea2b2b85cf",
+    "spanId": "6ce74c1d970392bb",
+    "at": "2026-11-09T15:18:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-dash0"
+  },
+  {
+    "id": "xp-booth-075",
+    "attendeeId": "att-gpucheetah",
+    "traceId": "07136f29906721975c76e1660e0ecc9c",
+    "spanId": "edb4583218a2c54d",
+    "at": "2026-11-09T15:18:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-google-cloud"
+  },
+  {
+    "id": "xp-booth-076",
+    "attendeeId": "att-vitessmoose",
+    "traceId": "36b3a226019b67d2387742c142792452",
+    "spanId": "c779cce5c95f246b",
+    "at": "2026-11-09T15:18:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-sentry"
+  },
+  {
+    "id": "xp-booth-077",
+    "attendeeId": "att-chartquail",
+    "traceId": "473dbe9b35819f2c8a556d7152ba8d5d",
+    "spanId": "77cbdf31135fb3ff",
+    "at": "2026-11-09T15:19:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-cribl"
+  },
+  {
+    "id": "xp-booth-078",
+    "attendeeId": "att-ciliumjackal",
+    "traceId": "2aff7e6487011a7041fc5a3a09694fcf",
+    "spanId": "b7f22c8b4f00eee2",
+    "at": "2026-11-09T15:19:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-elastic"
+  },
+  {
+    "id": "xp-booth-079",
+    "attendeeId": "att-helmpelican",
+    "traceId": "dedef5f1d1947e39b71dfcb338caf156",
+    "spanId": "42278f86b37c8b90",
+    "at": "2026-11-09T15:19:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-project-flux"
+  },
+  {
+    "id": "xp-booth-080",
+    "attendeeId": "att-meshcaribou",
+    "traceId": "ba4ea435697a53e15dcf86e441d55815",
+    "spanId": "8eef430948a4a1ac",
+    "at": "2026-11-09T15:19:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-nvidia"
+  },
+  {
+    "id": "xp-booth-081",
+    "attendeeId": "att-rookibex",
+    "traceId": "7abd6e763eedcd815d322564d2227bf6",
+    "spanId": "a91246055ca5005c",
+    "at": "2026-11-09T15:19:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-maze"
+  },
+  {
+    "id": "xp-booth-082",
+    "attendeeId": "att-gpulynx",
+    "traceId": "3df6c7c626655038d6a76dd7e3c5018f",
+    "spanId": "230effbaefa545e2",
+    "at": "2026-11-09T15:20:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-oracle"
+  },
+  {
+    "id": "xp-booth-083",
+    "attendeeId": "att-podllama",
+    "traceId": "8e8766954271b638e0f98b33742cf6d0",
+    "spanId": "ad075a7ae1555337",
+    "at": "2026-11-09T15:20:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-google-cloud"
+  },
+  {
+    "id": "xp-booth-084",
+    "attendeeId": "att-nodebadger",
+    "traceId": "d87392977172a42e9f9dfbf60daa802a",
+    "spanId": "67b1e83f9f5f4a77",
+    "at": "2026-11-09T15:21:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-ibm"
+  },
+  {
+    "id": "xp-booth-085",
+    "attendeeId": "att-otelegret",
+    "traceId": "369fbe364fcb424a7e77433eb867f73c",
+    "spanId": "5656a05a2f9946b7",
+    "at": "2026-11-09T15:22:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-wiz"
+  },
+  {
+    "id": "xp-booth-086",
+    "attendeeId": "att-podpelican",
+    "traceId": "ac58f42e2a771569d6230e4627d3f8e6",
+    "spanId": "96b22c3d9feffde2",
+    "at": "2026-11-09T15:22:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-project-lima"
+  },
+  {
+    "id": "xp-booth-087",
+    "attendeeId": "att-fluxgecko",
+    "traceId": "36a766318be518031b73b6dd0fc45ee0",
+    "spanId": "acfe5c597d3df4da",
+    "at": "2026-11-09T15:23:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-controltheory"
+  },
+  {
+    "id": "xp-booth-088",
+    "attendeeId": "att-ingressibis",
+    "traceId": "6ca7cf233456a2184d3141a1b94d10bd",
+    "spanId": "2518ba3120798a94",
+    "at": "2026-11-09T15:23:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-ollygarden"
+  },
+  {
+    "id": "xp-booth-089",
+    "attendeeId": "att-ciliumzebra",
+    "traceId": "2eb79bd188c10754cb6cbf4c4ca256ed",
+    "spanId": "4759eeaeb8f831f1",
+    "at": "2026-11-09T15:24:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-fusionauth"
+  },
+  {
+    "id": "xp-booth-090",
+    "attendeeId": "att-jaegerraven",
+    "traceId": "db86b572b63f4d530431365fb5f99847",
+    "spanId": "e34754914b913f85",
+    "at": "2026-11-09T15:24:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-tailscale"
+  },
+  {
+    "id": "xp-booth-091",
+    "attendeeId": "att-helmlemur",
+    "traceId": "1027203b25c3fd5be940fb85043e57a0",
+    "spanId": "33bfeecf0435cd4e",
+    "at": "2026-11-09T15:26:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-wiz"
+  },
+  {
+    "id": "xp-booth-092",
+    "attendeeId": "att-kservemagpie",
+    "traceId": "2da3687454454262ac5e9e3b3a41cf31",
+    "spanId": "3a8bbd2efb017cc3",
+    "at": "2026-11-09T15:26:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-crusoe"
+  },
+  {
+    "id": "xp-booth-093",
+    "attendeeId": "att-helmsmith",
+    "traceId": "88ed96728892709c8e15428d117fc8e2",
+    "spanId": "f7da89dc17e7909f",
+    "at": "2026-11-09T15:27:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-docker"
+  },
+  {
+    "id": "xp-booth-094",
+    "attendeeId": "att-kedakoala",
+    "traceId": "944b7da25607867bb8219e866ab6ac09",
+    "spanId": "a9e2da2d8b13a3ac",
+    "at": "2026-11-09T15:27:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-coreweave"
+  },
+  {
+    "id": "xp-booth-095",
+    "attendeeId": "att-kubeshrew",
+    "traceId": "b5e56495f82c261a5ceeab511b543272",
+    "spanId": "a2c75db036da9d1f",
+    "at": "2026-11-09T15:27:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-project-k0s"
+  },
+  {
+    "id": "xp-booth-096",
+    "attendeeId": "att-nodebadger",
+    "traceId": "fd0ddfa34900a7969be6de12a038ba1a",
+    "spanId": "8ad82bd031a60483",
+    "at": "2026-11-09T15:27:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-project-kubeflow"
+  },
+  {
+    "id": "xp-booth-097",
+    "attendeeId": "att-tracekoala",
+    "traceId": "c52abe4a4a484c1edba3fef5d9d3218d",
+    "spanId": "fe5e929c30cb1f39",
+    "at": "2026-11-09T15:27:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-coder"
+  },
+  {
+    "id": "xp-booth-098",
+    "attendeeId": "att-rookibex",
+    "traceId": "a9bdea18b4080362e3886241ff376fb3",
+    "spanId": "c70260fb1d2ec439",
+    "at": "2026-11-09T15:30:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-sonatype"
+  },
+  {
+    "id": "xp-booth-099",
+    "attendeeId": "att-vectoryak",
+    "traceId": "a54539b8f322a2c6c5df26aa2a0ffb6c",
+    "spanId": "7d391868a9cbdff8",
+    "at": "2026-11-09T15:30:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-project-openeverest"
+  },
+  {
+    "id": "xp-booth-100",
+    "attendeeId": "att-cronocelot",
+    "traceId": "29684acce5a0db0877d35016d76d578f",
+    "spanId": "2b8bcf70bbe85e84",
+    "at": "2026-11-09T15:31:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-tigera"
+  },
+  {
+    "id": "xp-booth-101",
+    "attendeeId": "att-helmsmith",
+    "traceId": "4ba8d681b1fb4ee4ac6e989315c6b083",
+    "spanId": "e5806eb6c9750797",
+    "at": "2026-11-09T15:33:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-cast-ai"
+  },
+  {
+    "id": "xp-booth-102",
+    "attendeeId": "att-jaegernarwhal",
+    "traceId": "9b07634e77a9e1f3fc90309e19f7cfe3",
+    "spanId": "8535bce88fdd8073",
+    "at": "2026-11-09T15:33:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-spectro-cloud"
+  },
+  {
+    "id": "xp-booth-103",
+    "attendeeId": "att-policypuffin",
+    "traceId": "72f5a6049f8b9609877e364e08b1d9b2",
+    "spanId": "054548bcdaf219e8",
+    "at": "2026-11-09T15:34:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-project-opentofu"
+  },
+  {
+    "id": "xp-booth-104",
+    "attendeeId": "att-ciliumzebra",
+    "traceId": "f585f6b75572c42ca49294c24e3ce9c7",
+    "spanId": "e0576da2ff2c6e66",
+    "at": "2026-11-09T15:35:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-kodekloud"
+  },
+  {
+    "id": "xp-booth-105",
+    "attendeeId": "att-vectorgibbon",
+    "traceId": "7c57404f9dde5471054341cfbcc6868e",
+    "spanId": "42e98515090af9d1",
+    "at": "2026-11-09T15:36:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-haproxy-technologies"
+  },
+  {
+    "id": "xp-booth-106",
+    "attendeeId": "att-spiffepanda",
+    "traceId": "442a0bf61c0d11996709868603896930",
+    "spanId": "c5d885f11f6bfe3f",
+    "at": "2026-11-09T15:37:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-kong"
+  },
+  {
+    "id": "xp-booth-107",
+    "attendeeId": "att-linkerdraven",
+    "traceId": "a516d952c6a4586dd0437f1681a53362",
+    "spanId": "dd51fad1fc9adbfb",
+    "at": "2026-11-09T15:38:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-actualyze-ai"
+  },
+  {
+    "id": "xp-booth-108",
+    "attendeeId": "att-meshcaribou",
+    "traceId": "fadf6fb3a1c5d512c9ef47f46e1d62ca",
+    "spanId": "2bac18774ebcd283",
+    "at": "2026-11-09T15:38:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-elastic"
+  },
+  {
+    "id": "xp-booth-109",
+    "attendeeId": "att-nodebadger",
+    "traceId": "95993d9634f5c4d8f905b68dc47c0b5e",
+    "spanId": "d20cfa24663a663b",
+    "at": "2026-11-09T15:38:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-apollo-graphql"
+  },
+  {
+    "id": "xp-booth-110",
+    "attendeeId": "att-otelcheetah",
+    "traceId": "ceab095eb3a6ce67727eb5e3c9cce24f",
+    "spanId": "725218edcdeff018",
+    "at": "2026-11-09T15:38:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-lablup"
+  },
+  {
+    "id": "xp-booth-111",
+    "attendeeId": "att-grpcegret",
+    "traceId": "7ed2e1e003fcb2728ca83950c55ecc8a",
+    "spanId": "d18cd602cbb96479",
+    "at": "2026-11-09T15:40:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-project-radius"
+  },
+  {
+    "id": "xp-booth-112",
+    "attendeeId": "att-meshtapir",
+    "traceId": "b07353666e8b012640f4acbabf84c6d5",
+    "spanId": "fe60a289d4064702",
+    "at": "2026-11-09T15:40:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-northmark-compute-and-cloud"
+  },
+  {
+    "id": "xp-booth-113",
+    "attendeeId": "att-vitessimpala",
+    "traceId": "c26a462e6e509ee7fb6d4ed9b90c0b9a",
+    "spanId": "9563b5698f3d09d5",
+    "at": "2026-11-09T15:41:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-elastic"
+  },
+  {
+    "id": "xp-booth-114",
+    "attendeeId": "att-helmpelican",
+    "traceId": "a1a31eda76046f90d2dc266cd93bcea4",
+    "spanId": "5df5e63d9700a0eb",
+    "at": "2026-11-09T15:42:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-wiz"
+  },
+  {
+    "id": "xp-booth-115",
+    "attendeeId": "att-istioseal",
+    "traceId": "e5a33800e92714c21ed5223603a3545a",
+    "spanId": "16d2f2a01ee5e2d1",
+    "at": "2026-11-09T15:42:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-google-cloud"
+  },
+  {
+    "id": "xp-booth-116",
+    "attendeeId": "att-ebpfennec",
+    "traceId": "1b2b20409f24f4309f9086bdeaee60c8",
+    "spanId": "01e18127d1b6f833",
+    "at": "2026-11-09T15:43:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-spotify"
+  },
+  {
+    "id": "xp-booth-117",
+    "attendeeId": "att-vitessorca",
+    "traceId": "6a954b7bc2225d06a1e758aa9a6e2482",
+    "spanId": "16c26ebbbb239788",
+    "at": "2026-11-09T15:43:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-crusoe"
+  },
+  {
+    "id": "xp-booth-118",
+    "attendeeId": "att-ciliumjackal",
+    "traceId": "ae227383987add776432dd72b8bd2b67",
+    "spanId": "8242cd6122c6e497",
+    "at": "2026-11-09T15:46:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-iown-global-forum"
+  },
+  {
+    "id": "xp-booth-119",
+    "attendeeId": "att-jaegernarwhal",
+    "traceId": "1cf22d64b4c4989c56b51efc79ab076c",
+    "spanId": "6d614b6349f87c77",
+    "at": "2026-11-09T15:46:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-datadog"
+  },
+  {
+    "id": "xp-booth-120",
+    "attendeeId": "att-sbommanatee",
+    "traceId": "00500dc8d4ca3805fdb6cdbc4d12672a",
+    "spanId": "244e54c35e883782",
+    "at": "2026-11-09T15:46:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-palo-alto-networks"
+  },
+  {
+    "id": "xp-booth-121",
+    "attendeeId": "att-cronorca",
+    "traceId": "f50fb065a83f08380bdee9ebdb4de6d7",
+    "spanId": "0eae2f8f603258d8",
+    "at": "2026-11-09T15:48:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-project-kagent"
+  },
+  {
+    "id": "xp-booth-122",
+    "attendeeId": "att-grpcmoose",
+    "traceId": "2f4e030b5ddccaef770950fdcde0ea3c",
+    "spanId": "8e21d71b10a8e262",
+    "at": "2026-11-09T15:48:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-dash0"
+  },
+  {
+    "id": "xp-booth-123",
+    "attendeeId": "att-tektoncapybara",
+    "traceId": "b7db8d6e9ef3899d7b4602809ff31b83",
+    "spanId": "8f7bace927233030",
+    "at": "2026-11-09T15:48:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-isovalent-at-cisco"
+  },
+  {
+    "id": "xp-booth-124",
+    "attendeeId": "att-argoibex",
+    "traceId": "3bff8dcab362427d0a6a714c956d25d1",
+    "spanId": "ce889f8f18b69d18",
+    "at": "2026-11-09T15:49:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-heroku"
+  },
+  {
+    "id": "xp-booth-125",
+    "attendeeId": "att-falcoraccoon",
+    "traceId": "035013ed9c8f62a4cd486f42aa080407",
+    "spanId": "3ff49ba2c6b7a843",
+    "at": "2026-11-09T15:49:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-project-bootc"
+  },
+  {
+    "id": "xp-booth-126",
+    "attendeeId": "att-jaegercoyote",
+    "traceId": "1835014b11940c44587db29b7439e886",
+    "spanId": "298424b5ccbafe56",
+    "at": "2026-11-09T15:49:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-opensearch"
+  },
+  {
+    "id": "xp-booth-127",
+    "attendeeId": "att-yamlraccoon",
+    "traceId": "82ac94429a6da7ce3c19ff6466eef1b5",
+    "spanId": "975a32f08d9096f8",
+    "at": "2026-11-09T15:49:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-patapscoai"
+  },
+  {
+    "id": "xp-booth-128",
+    "attendeeId": "att-istioorca",
+    "traceId": "938a7f3e9eae38ce341b14434bde0047",
+    "spanId": "d4fef73fd70c8e90",
+    "at": "2026-11-09T15:50:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-sigi"
+  },
+  {
+    "id": "xp-booth-129",
+    "attendeeId": "att-wasmshrew",
+    "traceId": "5817b8e091edea7c743099b68d96b2c4",
+    "spanId": "391176b0483c060e",
+    "at": "2026-11-09T15:50:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-dash0"
+  },
+  {
+    "id": "xp-booth-130",
+    "attendeeId": "att-ebpfbadger",
+    "traceId": "505ebb93689c414f3cbeb7f7fddae886",
+    "spanId": "e2966419773997e5",
+    "at": "2026-11-09T15:52:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-f5"
+  },
+  {
+    "id": "xp-booth-131",
+    "attendeeId": "att-policypuffin",
+    "traceId": "3c216a1ea42d5ec1374f0bd6732af531",
+    "spanId": "be8fd7cd645f4bc3",
+    "at": "2026-11-09T15:52:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-veeam"
+  },
+  {
+    "id": "xp-booth-132",
+    "attendeeId": "att-ciliumzebra",
+    "traceId": "77c897203b2eb79155b5d67fe890230a",
+    "spanId": "1c96b2a0c5fbb28c",
+    "at": "2026-11-09T15:54:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-temporal"
+  },
+  {
+    "id": "xp-booth-133",
+    "attendeeId": "att-nodeosprey",
+    "traceId": "d61feae8d141cab48e2dbfe813ef9071",
+    "spanId": "b7d0c7ec5a6be478",
+    "at": "2026-11-09T15:54:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-traversal"
+  },
+  {
+    "id": "xp-booth-134",
+    "attendeeId": "att-vitesstoucan",
+    "traceId": "f35fd1adba9aff012767273ae2286df9",
+    "spanId": "0dd31cd88580cd2a",
+    "at": "2026-11-09T15:54:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-isovalent-at-cisco"
+  },
+  {
+    "id": "xp-booth-135",
+    "attendeeId": "att-grpcorca",
+    "traceId": "8e2b0b2e3da2ca54865c9380eefa84e5",
+    "spanId": "ac33ac3cb70971ec",
+    "at": "2026-11-09T15:56:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-spectro-cloud"
+  },
+  {
+    "id": "xp-booth-136",
+    "attendeeId": "att-tracekoala",
+    "traceId": "b60af1aebff8f1c8e332e0cc0b92a201",
+    "spanId": "e11a4a2b67ebb276",
+    "at": "2026-11-09T15:56:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-docker"
+  },
+  {
+    "id": "xp-booth-137",
+    "attendeeId": "att-vectorvole",
+    "traceId": "30d46cf1e2fcb979df0912da6153f86b",
+    "spanId": "1050262c41a62570",
+    "at": "2026-11-09T15:56:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-google-cloud"
+  },
+  {
+    "id": "xp-booth-138",
+    "attendeeId": "att-ebpftern",
+    "traceId": "ab73eb5f1fb84b56aa474f7138398930",
+    "spanId": "28a5fbd97dc32ce3",
+    "at": "2026-11-09T15:57:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-incident-io"
+  },
+  {
+    "id": "xp-booth-139",
+    "attendeeId": "att-sbommanatee",
+    "traceId": "8e291f3f5b7427d0dbcaffca206066b2",
+    "spanId": "a4ebdbf72115886e",
+    "at": "2026-11-09T15:58:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-ibm-kubecost"
+  },
+  {
+    "id": "xp-booth-140",
+    "attendeeId": "att-chartocelot",
+    "traceId": "529467213631b0ba96963eb9eb0c19a9",
+    "spanId": "d5f407c0b593577d",
+    "at": "2026-11-09T15:59:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-amazon-web-services"
+  },
+  {
+    "id": "xp-booth-141",
+    "attendeeId": "att-llmstoat",
+    "traceId": "be884ae4ac4904d96b8ba86961478545",
+    "spanId": "d7cd534f57c5844b",
+    "at": "2026-11-09T15:59:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-f5"
+  },
+  {
+    "id": "xp-booth-142",
+    "attendeeId": "att-cronocelot",
+    "traceId": "c7df0ebed14f02845d9da6add173907f",
+    "spanId": "3808bf7ad514944d",
+    "at": "2026-11-09T16:00:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-infisical"
+  },
+  {
+    "id": "xp-booth-143",
+    "attendeeId": "att-crdcrane",
+    "traceId": "74368f06a2c6de9b6730e268e3e3d4d7",
+    "spanId": "d3e20897f52396c1",
+    "at": "2026-11-09T16:03:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-infisical"
+  },
+  {
+    "id": "xp-booth-144",
+    "attendeeId": "att-ciliumferret",
+    "traceId": "8498a88f0a1505f88ffc42820886f388",
+    "spanId": "94e6c993a006d36d",
+    "at": "2026-11-09T16:04:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-project-cloud-native-community-groups-kcds"
+  },
+  {
+    "id": "xp-booth-145",
+    "attendeeId": "att-cronkoala",
+    "traceId": "77c0689e327d7fc35aa6627294bd8b21",
+    "spanId": "c94796320db19ede",
+    "at": "2026-11-09T16:04:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-obot-ai"
+  },
+  {
+    "id": "xp-booth-146",
+    "attendeeId": "att-fluxgecko",
+    "traceId": "b7aee2d274994169427883ea1d8368c4",
+    "spanId": "1468969ad7bc2ea6",
+    "at": "2026-11-09T16:04:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-amazon-web-services"
+  },
+  {
+    "id": "xp-booth-147",
+    "attendeeId": "att-jaegercoyote",
+    "traceId": "d9e7e649587a43470f55df7039045ed6",
+    "spanId": "65ffedf4e0330351",
+    "at": "2026-11-09T16:04:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-squaredup"
+  },
+  {
+    "id": "xp-booth-148",
+    "attendeeId": "att-argoshrew",
+    "traceId": "62fffdb92bf6f06dd577e488b7a865c3",
+    "spanId": "fbd8dd003b9af4b2",
+    "at": "2026-11-09T16:05:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-haproxy-technologies"
+  },
+  {
+    "id": "xp-booth-149",
+    "attendeeId": "att-tracenarwhal",
+    "traceId": "3d9102f4743f6cdeb17c9d7d7fc83026",
+    "spanId": "c4af6a650c222b97",
+    "at": "2026-11-09T16:05:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-elastic"
+  },
+  {
+    "id": "xp-booth-150",
+    "attendeeId": "att-kservecheetah",
+    "traceId": "f8924257e195580fd23accc13b29d6f5",
+    "spanId": "c8c020339045975f",
+    "at": "2026-11-09T16:08:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-nebius"
+  },
+  {
+    "id": "xp-booth-151",
+    "attendeeId": "att-llmstoat",
+    "traceId": "c3a14782b6f251edf67c09b64d69c100",
+    "spanId": "0eeab3d665283c00",
+    "at": "2026-11-09T16:10:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-datadog"
+  },
+  {
+    "id": "xp-booth-152",
+    "attendeeId": "att-gpucheetah",
+    "traceId": "0e1ea02a16aab612dd644387b3cf7d7c",
+    "spanId": "b580a104062acaae",
+    "at": "2026-11-09T16:11:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-haproxy-technologies"
+  },
+  {
+    "id": "xp-booth-153",
+    "attendeeId": "att-grpcegret",
+    "traceId": "76a8a4a01c8c38ea18afa9b0335a5d02",
+    "spanId": "e5cc02105655dae6",
+    "at": "2026-11-09T16:11:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-dash0"
+  },
+  {
+    "id": "xp-booth-154",
+    "attendeeId": "att-meshcaribou",
+    "traceId": "5bb85ce07e2fc3881e03f3dce6c93931",
+    "spanId": "3adca33dec0350a5",
+    "at": "2026-11-09T16:11:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-akamai"
+  },
+  {
+    "id": "xp-booth-155",
+    "attendeeId": "att-kubeshrew",
+    "traceId": "8ba2f75d3307db372cade15b6b98c05d",
+    "spanId": "17b2fe89a6f9fc04",
+    "at": "2026-11-09T16:12:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-haproxy-technologies"
+  },
+  {
+    "id": "xp-booth-badge-meshcaribou",
+    "attendeeId": "att-meshcaribou",
+    "type": "badge",
+    "xp": 0,
+    "banner": "scout",
+    "traceId": "51b6c11a0235909965de8c147e07488f",
+    "spanId": "8173e3506cf0a75e",
+    "at": "2026-11-09T16:12:00.000Z"
+  },
+  {
+    "id": "xp-booth-156",
+    "attendeeId": "att-argopelican",
+    "traceId": "aba09295298e72eeb67923f5f7c443ba",
+    "spanId": "54ff5f23bbe75ac1",
+    "at": "2026-11-09T16:16:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-project-open-cluster-management"
+  },
+  {
+    "id": "xp-booth-157",
+    "attendeeId": "att-cronkoala",
+    "traceId": "5079078b53141b3d305ab538499c7048",
+    "spanId": "dd4a5ee4038d2cd2",
+    "at": "2026-11-09T16:17:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-project-spiffe"
+  },
+  {
+    "id": "xp-booth-158",
+    "attendeeId": "att-spiffeegret",
+    "traceId": "4507822c509bd98d03c63cb665f55afd",
+    "spanId": "f79187c4ceb47505",
+    "at": "2026-11-09T16:17:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-haproxy-technologies"
+  },
+  {
+    "id": "xp-booth-159",
+    "attendeeId": "att-kservemarten",
+    "traceId": "255bf724452762bba26ec2b1c7659382",
+    "spanId": "dc207331f7b1bb93",
+    "at": "2026-11-09T16:19:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-haproxy-technologies"
+  },
+  {
+    "id": "xp-booth-160",
+    "attendeeId": "att-agentaxolotl",
+    "traceId": "52d3b4637cd31e5ed11a8851bc0a0c21",
+    "spanId": "f41166a93ec48d14",
+    "at": "2026-11-09T16:21:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-couchbase"
+  },
+  {
+    "id": "xp-booth-161",
+    "attendeeId": "att-podpelican",
+    "traceId": "1a2e95b13504b27794b04fefd21a220b",
+    "spanId": "8da883d3ff119929",
+    "at": "2026-11-09T16:21:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-project-oscal-compass"
+  },
+  {
+    "id": "xp-booth-162",
+    "attendeeId": "att-wasmshrew",
+    "traceId": "3e3f7bbc4adee1bea83cc316b23f0ec1",
+    "spanId": "2d3458d465ce0929",
+    "at": "2026-11-09T16:21:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-truefoundry"
+  },
+  {
+    "id": "xp-booth-163",
+    "attendeeId": "att-fluxfalcon",
+    "traceId": "547c84505d709b911a82f02350fea022",
+    "spanId": "6dcac37590bbbf92",
+    "at": "2026-11-09T16:22:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-sysdig"
+  },
+  {
+    "id": "xp-booth-164",
+    "attendeeId": "att-envoylynx",
+    "traceId": "a454fc6029a6a59f0058658c37b908bc",
+    "spanId": "7aa6a21d1cb052c9",
+    "at": "2026-11-09T16:23:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-google-cloud"
+  },
+  {
+    "id": "xp-booth-165",
+    "attendeeId": "att-gpucoyote",
+    "traceId": "390643f0af20e4b0fba7d53cac085f1e",
+    "spanId": "8d5e3556cf1040ad",
+    "at": "2026-11-09T16:24:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-project-dynamic-resource-allocation-sig-subproject"
+  },
+  {
+    "id": "xp-booth-166",
+    "attendeeId": "att-helmpelican",
+    "traceId": "fd78dfa4f29011a18f1df1e40c537081",
+    "spanId": "8bce6915480b515b",
+    "at": "2026-11-09T16:24:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-greptime"
+  },
+  {
+    "id": "xp-booth-167",
+    "attendeeId": "att-spiffeegret",
+    "traceId": "1dd31734ed7ddfe9dc2f12fb4a9e3069",
+    "spanId": "89b62aceed9f7a63",
+    "at": "2026-11-09T16:24:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-dash0"
+  },
+  {
+    "id": "xp-booth-168",
+    "attendeeId": "att-vectoryak",
+    "traceId": "eceb4d570f976a27fbd87a71413799ab",
+    "spanId": "ff92b325e38f5356",
+    "at": "2026-11-09T16:24:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-coder"
+  },
+  {
+    "id": "xp-booth-169",
+    "attendeeId": "att-vitessimpala",
+    "traceId": "321d3c1dfaf7931ede5224e2e2fa66ca",
+    "spanId": "312a7e5eec87f9ae",
+    "at": "2026-11-09T16:24:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-crash-override"
+  },
+  {
+    "id": "xp-booth-170",
+    "attendeeId": "att-argoibex",
+    "traceId": "00cb5a5fbb4110e1d86724368b603794",
+    "spanId": "1921c081fb6ac3fb",
+    "at": "2026-11-09T16:25:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-datadog"
+  },
+  {
+    "id": "xp-booth-171",
+    "attendeeId": "att-kedacapybara",
+    "traceId": "406626d0e8ab6881c7994f28585c47cc",
+    "spanId": "efc8bcb93a55b116",
+    "at": "2026-11-09T16:25:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-tigera"
+  },
+  {
+    "id": "xp-booth-172",
+    "attendeeId": "att-kservecheetah",
+    "traceId": "f1f6134649ecde5672f8a154720f1af7",
+    "spanId": "7a8ae9b351a63ea7",
+    "at": "2026-11-09T16:25:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-grepr"
+  },
+  {
+    "id": "xp-booth-173",
+    "attendeeId": "att-gpunarwhal",
+    "traceId": "291740746bc978870d7539184bcba4e9",
+    "spanId": "c4ce03bcb04378ca",
+    "at": "2026-11-09T16:26:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-plural"
+  },
+  {
+    "id": "xp-booth-174",
+    "attendeeId": "att-tektoncapybara",
+    "traceId": "e5865ef85ca03bab8c4d48b2b44d1633",
+    "spanId": "f1794e3fca6237bd",
+    "at": "2026-11-09T16:29:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-opensearch"
+  },
+  {
+    "id": "xp-booth-175",
+    "attendeeId": "att-tracekoala",
+    "traceId": "0d35df388f9fbe857916424b3b04d814",
+    "spanId": "48c50c45662fa9ed",
+    "at": "2026-11-09T16:29:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-effodio"
+  },
+  {
+    "id": "xp-booth-176",
+    "attendeeId": "att-falcoraccoon",
+    "traceId": "429b9de6ef04372098c8d3616935baf8",
+    "spanId": "e03ceb121a5098a7",
+    "at": "2026-11-09T16:30:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-harness"
+  },
+  {
+    "id": "xp-booth-177",
+    "attendeeId": "att-wasmwalrus",
+    "traceId": "36aa1df1ff3bfc67b50d785fe62a9254",
+    "spanId": "21e08980e5b5cda0",
+    "at": "2026-11-09T16:30:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-jozu"
+  },
+  {
+    "id": "xp-booth-178",
+    "attendeeId": "att-helmraccoon",
+    "traceId": "02b7d1b3db609847779d0f842d150c39",
+    "spanId": "c8d855baab1506e9",
+    "at": "2026-11-09T16:31:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-project-envoyproxy"
+  },
+  {
+    "id": "xp-booth-179",
+    "attendeeId": "att-wasmshrew",
+    "traceId": "66e2b39c73ab2ac72079d5c7be98b74b",
+    "spanId": "d2408a081062293c",
+    "at": "2026-11-09T16:32:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-ibm"
+  },
+  {
+    "id": "xp-booth-badge-helmraccoon",
+    "attendeeId": "att-helmraccoon",
+    "type": "badge",
+    "xp": 0,
+    "banner": "scout",
+    "traceId": "b8dff110bfb53cc4c3c6d0e05085bfa8",
+    "spanId": "a817501281a4f949",
+    "at": "2026-11-09T16:32:00.000Z"
+  },
+  {
+    "id": "xp-booth-180",
+    "attendeeId": "att-cronorca",
+    "traceId": "56ca481e31676f5d063ce308862f2cf7",
+    "spanId": "83bf564f2f84597a",
+    "at": "2026-11-09T16:33:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-google-cloud"
+  },
+  {
+    "id": "xp-booth-181",
+    "attendeeId": "att-meshtapir",
+    "traceId": "c1d2027f63c240c772ab78c0e54b3756",
+    "spanId": "1270164534265a34",
+    "at": "2026-11-09T16:34:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-elastic"
+  },
+  {
+    "id": "xp-booth-182",
+    "attendeeId": "att-vectorgibbon",
+    "traceId": "8f44612fbc787a5838d2384493d29917",
+    "spanId": "a5b63e7842cde487",
+    "at": "2026-11-09T16:35:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-traversal"
+  },
+  {
+    "id": "xp-booth-183",
+    "attendeeId": "att-ebpfbadger",
+    "traceId": "76cacd54a35b2d77f67b31c1b83cb539",
+    "spanId": "65d10e04cb4196be",
+    "at": "2026-11-09T16:36:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-amazon-web-services"
+  },
+  {
+    "id": "xp-booth-184",
+    "attendeeId": "att-kservemarten",
+    "traceId": "09e7e4fcfb4d34af10f34d84c7de1cf8",
+    "spanId": "db72cf8cf8f79fe3",
+    "at": "2026-11-09T16:36:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-project-hyperlight"
+  },
+  {
+    "id": "xp-booth-185",
+    "attendeeId": "att-spiffekiwi",
+    "traceId": "39f74a9cfe923ff34a0ee979b6200d9b",
+    "spanId": "82d700d59e6416d1",
+    "at": "2026-11-09T16:36:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-haproxy-technologies"
+  },
+  {
+    "id": "xp-booth-186",
+    "attendeeId": "att-tektoncapybara",
+    "traceId": "15e316e1d3b29bbfe4a41d21f1361a74",
+    "spanId": "21a67488616c64e7",
+    "at": "2026-11-09T16:36:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-haproxy-technologies"
+  },
+  {
+    "id": "xp-booth-187",
+    "attendeeId": "att-ciliumferret",
+    "traceId": "e4cdd2a192b360a03e2dbd4a4ae1d748",
+    "spanId": "a26f5b2de381992f",
+    "at": "2026-11-09T16:38:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-tintri"
+  },
+  {
+    "id": "xp-booth-188",
+    "attendeeId": "att-chartquail",
+    "traceId": "c58f8ecd2f92b37f4c6d8b21fe3b721a",
+    "spanId": "d368291940d34443",
+    "at": "2026-11-09T16:39:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-veeam"
+  },
+  {
+    "id": "xp-booth-189",
+    "attendeeId": "att-kservecheetah",
+    "traceId": "33066a442e405fb02a23207b2731af80",
+    "spanId": "f9916cf1bc8e5e51",
+    "at": "2026-11-09T16:39:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-microsoft-azure"
+  },
+  {
+    "id": "xp-booth-190",
+    "attendeeId": "att-agentaxolotl",
+    "traceId": "bfd9cecaa13245d3f62baf99483b7ac8",
+    "spanId": "9b3ee2ffb2ebf33b",
+    "at": "2026-11-09T16:40:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-temporal"
+  },
+  {
+    "id": "xp-booth-191",
+    "attendeeId": "att-ciliumzebra",
+    "traceId": "fbb0fcc2d3b3180fd8e872d446d50511",
+    "spanId": "aa53349737689723",
+    "at": "2026-11-09T16:40:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-cosmonic"
+  },
+  {
+    "id": "xp-booth-192",
+    "attendeeId": "att-jaegercoyote",
+    "traceId": "fe62fd0285771cfaafa4da17c11c723f",
+    "spanId": "a44ca0f4ec90f99f",
+    "at": "2026-11-09T16:42:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-project-cilium"
+  },
+  {
+    "id": "xp-booth-193",
+    "attendeeId": "att-kubelynx",
+    "traceId": "d8b06c637492c6cf98cf5b98ada71ff7",
+    "spanId": "573d9f9109d56a06",
+    "at": "2026-11-09T16:42:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-project-vitess"
+  },
+  {
+    "id": "xp-booth-194",
+    "attendeeId": "att-fluxpanda",
+    "traceId": "ac39612ac0a4e386aebb708eaaeb5edd",
+    "spanId": "1c492f9223f0678f",
+    "at": "2026-11-09T16:43:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-attribute-by-doit"
+  },
+  {
+    "id": "xp-booth-195",
+    "attendeeId": "att-grpcorca",
+    "traceId": "790edffc2b07b40ec8b79fd122d07543",
+    "spanId": "b9094d0f98c80bb1",
+    "at": "2026-11-09T16:43:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-google-cloud"
+  },
+  {
+    "id": "xp-booth-196",
+    "attendeeId": "att-vitessmoose",
+    "traceId": "d954ba75776bb54f30687a7c33a7e639",
+    "spanId": "bc8c7e30bf83587b",
+    "at": "2026-11-09T16:43:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-project-dapr"
+  },
+  {
+    "id": "xp-booth-197",
+    "attendeeId": "att-ebpftern",
+    "traceId": "9def6f239785bf6f2344bd6ad046b5d2",
+    "spanId": "14e9da6b85b50add",
+    "at": "2026-11-09T16:45:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-project-openeverest"
+  },
+  {
+    "id": "xp-booth-198",
+    "attendeeId": "att-grpcmoose",
+    "traceId": "31b90c0cc651360344be773b03de6a41",
+    "spanId": "93a3962fcf974fb9",
+    "at": "2026-11-09T16:45:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-tigris-data"
+  },
+  {
+    "id": "xp-booth-199",
+    "attendeeId": "att-kedakoala",
+    "traceId": "b11d098d879672d78959a310b59bd78e",
+    "spanId": "38fcb717ac64a1e0",
+    "at": "2026-11-09T16:45:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-harness"
+  },
+  {
+    "id": "xp-booth-200",
+    "attendeeId": "att-tektonpanda",
+    "traceId": "31c25fa6eb3cb676b8fdf05df5b407c4",
+    "spanId": "8b3becd374a527c3",
+    "at": "2026-11-09T16:45:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-project-rook"
+  },
+  {
+    "id": "xp-booth-201",
+    "attendeeId": "att-otelotter",
+    "traceId": "ebf0a157c08e53305df37652bcd21e7a",
+    "spanId": "3e4a5a4a3d3626a0",
+    "at": "2026-11-09T16:46:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-clickhouse"
+  },
+  {
+    "id": "xp-booth-202",
+    "attendeeId": "att-sbommanatee",
+    "traceId": "025691d6e181d0e007e22cd86b2d5394",
+    "spanId": "e05fd20e3a94138b",
+    "at": "2026-11-09T16:46:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-amazon-web-services"
+  },
+  {
+    "id": "xp-booth-203",
+    "attendeeId": "att-tracekoala",
+    "traceId": "45226555cf13af2796851fa395aad7e4",
+    "spanId": "085f70ab893fa117",
+    "at": "2026-11-09T16:46:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-percona"
+  },
+  {
+    "id": "xp-booth-204",
+    "attendeeId": "att-vitessimpala",
+    "traceId": "727cac300021052177aaa1dc95290a76",
+    "spanId": "5e981d753e7457c9",
+    "at": "2026-11-09T16:46:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-intuit"
+  },
+  {
+    "id": "xp-booth-205",
+    "attendeeId": "att-vectoryak",
+    "traceId": "62d1f29982347ff3f19f9568ea1c8cb8",
+    "spanId": "34070aafa1691b45",
+    "at": "2026-11-09T16:47:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-project-istio"
+  },
+  {
+    "id": "xp-booth-badge-vectoryak",
+    "attendeeId": "att-vectoryak",
+    "type": "badge",
+    "xp": 0,
+    "banner": "scout",
+    "traceId": "f40d1202468f7adf4fdbfb4296926ff6",
+    "spanId": "f0e26853eb85ce8d",
+    "at": "2026-11-09T16:48:00.000Z"
+  },
+  {
+    "id": "xp-booth-206",
+    "attendeeId": "att-vectorgibbon",
+    "traceId": "59bfcc3b6277d689a0dca00329fc806f",
+    "spanId": "517ab3c8d8006b7c",
+    "at": "2026-11-09T16:49:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-gravitee"
+  },
+  {
+    "id": "xp-booth-207",
+    "attendeeId": "att-argoalpaca",
+    "traceId": "5429822ff378ad4d74f76fe443fc955c",
+    "spanId": "33b7bccc229e2af2",
+    "at": "2026-11-09T16:50:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-devzero"
+  },
+  {
+    "id": "xp-booth-208",
+    "attendeeId": "att-gpucoyote",
+    "traceId": "25bea43f41a5d182c17351db447ae2e9",
+    "spanId": "56b5acb2618b76a3",
+    "at": "2026-11-09T16:52:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-portworx-by-everpure"
+  },
+  {
+    "id": "xp-booth-209",
+    "attendeeId": "att-cronorca",
+    "traceId": "f877bb6494fab0b9691259c5e16a150a",
+    "spanId": "566ce469b7d87888",
+    "at": "2026-11-09T16:53:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-project-keda"
+  },
+  {
+    "id": "xp-booth-210",
+    "attendeeId": "att-kedacapybara",
+    "traceId": "f1e931b6578ac889fd9ff9a51b3a0195",
+    "spanId": "819e633734634a25",
+    "at": "2026-11-09T16:53:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-traversal"
+  },
+  {
+    "id": "xp-booth-211",
+    "attendeeId": "att-kedaferret",
+    "traceId": "2d271aebc1560a03f333cb75d22ac974",
+    "spanId": "748697cdfcfb2d5a",
+    "at": "2026-11-09T16:53:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-haproxy-technologies"
+  },
+  {
+    "id": "xp-booth-212",
+    "attendeeId": "att-gpulynx",
+    "traceId": "a5e018d63a3099337f905cd596609c60",
+    "spanId": "eb3b746602999200",
+    "at": "2026-11-09T16:54:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-docker"
+  },
+  {
+    "id": "xp-booth-213",
+    "attendeeId": "att-grpcpelican",
+    "traceId": "25d77e18af3bf5ffcb9cffa0e8ca32e1",
+    "spanId": "38fb37eaa305223c",
+    "at": "2026-11-09T16:54:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-ascend"
+  },
+  {
+    "id": "xp-booth-214",
+    "attendeeId": "att-kubeshrew",
+    "traceId": "eafad5ed2865fd212ccaca38a3ed9276",
+    "spanId": "63dd3df50693a0a6",
+    "at": "2026-11-09T16:54:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-opensearch"
+  },
+  {
+    "id": "xp-booth-215",
+    "attendeeId": "att-tektoncapybara",
+    "traceId": "c756ac6fc888eb9e6b9bcc55000e5944",
+    "spanId": "ade03592bb5cecfb",
+    "at": "2026-11-09T16:54:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-obot-ai"
+  },
+  {
+    "id": "xp-booth-216",
+    "attendeeId": "att-argoshrew",
+    "traceId": "8454b195753e3db7ce8ed83f3b27c632",
+    "spanId": "f8f93e39b04ea5f4",
+    "at": "2026-11-09T16:55:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-omnistrate"
+  },
+  {
+    "id": "xp-booth-217",
+    "attendeeId": "att-falcoraccoon",
+    "traceId": "c1e9a40bab873920e8dbee8fd8a782be",
+    "spanId": "1cc21741306b7b78",
+    "at": "2026-11-09T16:55:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-google-cloud"
+  },
+  {
+    "id": "xp-booth-218",
+    "attendeeId": "att-fluxbadger",
+    "traceId": "090a7081379dc45e1b6a5ab3b0f45d6c",
+    "spanId": "0c5eaa3aa685a698",
+    "at": "2026-11-09T16:55:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-everbridge-xmatters"
+  },
+  {
+    "id": "xp-booth-badge-tektoncapybara",
+    "attendeeId": "att-tektoncapybara",
+    "type": "badge",
+    "xp": 0,
+    "banner": "scout",
+    "traceId": "68db56a4254b9ef4304dc0269b864acc",
+    "spanId": "419f85dca4ac7cc3",
+    "at": "2026-11-09T16:55:00.000Z"
+  },
+  {
+    "id": "xp-booth-219",
+    "attendeeId": "att-gpunarwhal",
+    "traceId": "2ebd29cfdb560216a3f0e17bc77e1bcc",
+    "spanId": "fa4969dea9bd0549",
+    "at": "2026-11-09T16:56:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-datadog"
+  },
+  {
+    "id": "xp-booth-220",
+    "attendeeId": "att-jaegernarwhal",
+    "traceId": "795ec4fd3b741b82fbd3dffb1f3e1164",
+    "spanId": "f644d44fb730c0e1",
+    "at": "2026-11-09T16:56:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-scaleops"
+  },
+  {
+    "id": "xp-booth-221",
+    "attendeeId": "att-argoimpala",
+    "traceId": "569ec55235a594acb32608a46549b70c",
+    "spanId": "4a05c517c74c9d13",
+    "at": "2026-11-09T16:57:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-akamai"
+  },
+  {
+    "id": "xp-booth-222",
+    "attendeeId": "att-helmtoucan",
+    "traceId": "5ffb639e298eacf07bcb85f0412a0ca8",
+    "spanId": "320d13f3c5a03b5d",
+    "at": "2026-11-09T16:58:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-temporal"
+  },
+  {
+    "id": "xp-booth-223",
+    "attendeeId": "att-rookibex",
+    "traceId": "5d8dbd282c1cfca6a8862e54cc5af746",
+    "spanId": "6c5ceb8eaf5cfffa",
+    "at": "2026-11-09T17:00:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-project-cartography"
+  },
+  {
+    "id": "xp-booth-224",
+    "attendeeId": "att-quietgopher",
+    "traceId": "179acc6164d20502c27b804bf82dea86",
+    "spanId": "3b26eabd5ca465bd",
+    "at": "2026-11-09T17:01:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-openobserve"
+  },
+  {
+    "id": "xp-booth-badge-rookibex",
+    "attendeeId": "att-rookibex",
+    "type": "badge",
+    "xp": 0,
+    "banner": "scout",
+    "traceId": "40211c717ce0cbb7cb621597e0a6d73e",
+    "spanId": "cc1148e3e87e18c8",
+    "at": "2026-11-09T17:01:00.000Z"
+  },
+  {
+    "id": "xp-booth-225",
+    "attendeeId": "att-llmstoat",
+    "traceId": "f2a6029d3b42185928fdab7abb194355",
+    "spanId": "911488a7b53c4c04",
+    "at": "2026-11-09T17:03:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-open-source-security-foundation-openssf"
+  },
+  {
+    "id": "xp-booth-226",
+    "attendeeId": "att-kubeshrew",
+    "traceId": "6f9d779853c7ce27e0a3cb5d436ebe52",
+    "spanId": "2499b874488c0746",
+    "at": "2026-11-09T17:04:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-actualyze-ai"
+  },
+  {
+    "id": "xp-booth-227",
+    "attendeeId": "att-otelcheetah",
+    "traceId": "32b4d97a17b1c00748e4e42020ce824d",
+    "spanId": "df8cf07cce5793d4",
+    "at": "2026-11-09T17:04:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-cvs-health"
+  },
+  {
+    "id": "xp-booth-228",
+    "attendeeId": "att-chartocelot",
+    "traceId": "8b5e81359d23dc3d63c268f7de481786",
+    "spanId": "ceab91071bf4b9a4",
+    "at": "2026-11-09T17:05:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-dataagent"
+  },
+  {
+    "id": "xp-booth-229",
+    "attendeeId": "att-podpelican",
+    "traceId": "36f589e2e748e1a2604ea0441be4885f",
+    "spanId": "b32c820932d2406c",
+    "at": "2026-11-09T17:05:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-emphere"
+  },
+  {
+    "id": "xp-booth-230",
+    "attendeeId": "att-jaegercoyote",
+    "traceId": "52575fc3eef4aad2b1263c66cb58560f",
+    "spanId": "1ae0990a804027b2",
+    "at": "2026-11-09T17:06:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-dash0"
+  },
+  {
+    "id": "xp-booth-231",
+    "attendeeId": "att-certalpaca",
+    "traceId": "8bb15048fb6dca11039aa85c3c0dc8a5",
+    "spanId": "ac19788d7bafa365",
+    "at": "2026-11-09T17:07:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-neubird"
+  },
+  {
+    "id": "xp-booth-232",
+    "attendeeId": "att-nodeosprey",
+    "traceId": "a2329d9d603a5cb6d4182155dd9f17cd",
+    "spanId": "63d8eb83cd923fa4",
+    "at": "2026-11-09T17:07:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-project-hami"
+  },
+  {
+    "id": "xp-booth-badge-jaegercoyote",
+    "attendeeId": "att-jaegercoyote",
+    "type": "badge",
+    "xp": 0,
+    "banner": "scout",
+    "traceId": "d975cc65c22ce7add91340f5cc8da9fb",
+    "spanId": "5496587d38c2379d",
+    "at": "2026-11-09T17:07:00.000Z"
+  },
+  {
+    "id": "xp-booth-233",
+    "attendeeId": "att-helmpelican",
+    "traceId": "87855b9981a911b5cd8f52b028275e85",
+    "spanId": "9ea7fdf01b473cd5",
+    "at": "2026-11-09T17:08:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-supabase"
+  },
+  {
+    "id": "xp-booth-234",
+    "attendeeId": "att-cronocelot",
+    "traceId": "45715361b6f948e78673483929fb3bf8",
+    "spanId": "692ed4a5ab3cc4ea",
+    "at": "2026-11-09T17:09:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-amazon-web-services"
+  },
+  {
+    "id": "xp-booth-235",
+    "attendeeId": "att-otelegret",
+    "traceId": "48492ad7833b9cbbaf1cb6f71a4660fd",
+    "spanId": "14ff6399f6b738a4",
+    "at": "2026-11-09T17:09:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-tigera"
+  },
+  {
+    "id": "xp-booth-236",
+    "attendeeId": "att-datadugong",
+    "traceId": "ee91869800fab136be5037ce0ef27b5b",
+    "spanId": "863d5d0fbe4f7fec",
+    "at": "2026-11-09T17:10:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-datadog"
+  },
+  {
+    "id": "xp-booth-237",
+    "attendeeId": "att-meshtapir",
+    "traceId": "63848d8a1f716c881db96c48ee2b6928",
+    "spanId": "0d294b9870017827",
+    "at": "2026-11-09T17:11:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-planetscale"
+  },
+  {
+    "id": "xp-booth-238",
+    "attendeeId": "att-falcoraccoon",
+    "traceId": "113b2bbcad8670cf60738c8c1ed9d593",
+    "spanId": "492308bfe42a6a0a",
+    "at": "2026-11-09T17:12:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-project-open-cluster-management"
+  },
+  {
+    "id": "xp-booth-239",
+    "attendeeId": "att-grpcpelican",
+    "traceId": "44073ab32acebdf2acf6b7f4984598ad",
+    "spanId": "8b47adb663b50f30",
+    "at": "2026-11-09T17:12:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-dash0"
+  },
+  {
+    "id": "xp-booth-240",
+    "attendeeId": "att-otelcheetah",
+    "traceId": "735fffc959efebe6c0483be0a9d62327",
+    "spanId": "012cf9dbc6d2adc0",
+    "at": "2026-11-09T17:12:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-elastic"
+  },
+  {
+    "id": "xp-booth-badge-meshtapir",
+    "attendeeId": "att-meshtapir",
+    "type": "badge",
+    "xp": 0,
+    "banner": "scout",
+    "traceId": "b62997730f5404a1eea5999244e2286c",
+    "spanId": "a691331171f7ce36",
+    "at": "2026-11-09T17:12:00.000Z"
+  },
+  {
+    "id": "xp-booth-241",
+    "attendeeId": "att-ciliumjackal",
+    "traceId": "8806f8083551f1ca717dbaa7d686a065",
+    "spanId": "a68e90a9729e3a77",
+    "at": "2026-11-09T17:13:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-scaleops"
+  },
+  {
+    "id": "xp-booth-242",
+    "attendeeId": "att-etcdcaribou",
+    "traceId": "2c66ac6c8461842be2536d472c8ad7ca",
+    "spanId": "e20d142c2c13f88e",
+    "at": "2026-11-09T17:13:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-cloudchipr"
+  },
+  {
+    "id": "xp-booth-badge-otelcheetah",
+    "attendeeId": "att-otelcheetah",
+    "type": "badge",
+    "xp": 0,
+    "banner": "scout",
+    "traceId": "5fa8a0b6ca4440ff47b89eda79da58fc",
+    "spanId": "22abff9478d22c14",
+    "at": "2026-11-09T17:13:00.000Z"
+  },
+  {
+    "id": "xp-booth-243",
+    "attendeeId": "att-kedaferret",
+    "traceId": "73a39a14271da8b1165581ea87bbf991",
+    "spanId": "8076845b3700b70b",
+    "at": "2026-11-09T17:14:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-dragonflydb"
+  },
+  {
+    "id": "xp-booth-244",
+    "attendeeId": "att-vitessorca",
+    "traceId": "53b86a8b99de93cfcb9cd2e96f8187e6",
+    "spanId": "56c6e0fb97839bd8",
+    "at": "2026-11-09T17:14:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-traversal"
+  },
+  {
+    "id": "xp-booth-245",
+    "attendeeId": "att-helmtoucan",
+    "traceId": "feb20dd38413391f5864e3338f499bfa",
+    "spanId": "f39b0ed6d032c8e4",
+    "at": "2026-11-09T17:15:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-ollygarden"
+  },
+  {
+    "id": "xp-booth-246",
+    "attendeeId": "att-podpelican",
+    "traceId": "2e5b4ed1d733262adf7e0a1f523c2e51",
+    "spanId": "4aeaf63c81844ef6",
+    "at": "2026-11-09T17:16:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-haproxy-technologies"
+  },
+  {
+    "id": "xp-booth-247",
+    "attendeeId": "att-ciliumzebra",
+    "traceId": "1dbff711c0509e945f04034fb32e3b99",
+    "spanId": "0ef1953fadde51a7",
+    "at": "2026-11-09T17:18:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-google-cloud"
+  },
+  {
+    "id": "xp-booth-248",
+    "attendeeId": "att-kubelynx",
+    "traceId": "c64d672698da07b7a08009e341ae5fd1",
+    "spanId": "981128332b411a49",
+    "at": "2026-11-09T17:19:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-echo"
+  },
+  {
+    "id": "xp-booth-249",
+    "attendeeId": "att-linkerdraven",
+    "traceId": "32b3f7ba1b3717229c2eafe483a6d668",
+    "spanId": "99d626c44366f19f",
+    "at": "2026-11-09T17:19:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-chainguard"
+  },
+  {
+    "id": "xp-booth-badge-ciliumzebra",
+    "attendeeId": "att-ciliumzebra",
+    "type": "badge",
+    "xp": 0,
+    "banner": "scout",
+    "traceId": "91b9c730638e0f8532d54acbcf2df60f",
+    "spanId": "9f98ba51816a7b00",
+    "at": "2026-11-09T17:19:00.000Z"
+  },
+  {
+    "id": "xp-booth-250",
+    "attendeeId": "att-ciliumjackal",
+    "traceId": "ced6407f78d11534de2f2081aa4afe19",
+    "spanId": "d667957ff1b43739",
+    "at": "2026-11-09T17:20:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-camara-project"
+  },
+  {
+    "id": "xp-booth-251",
+    "attendeeId": "att-cronkoala",
+    "traceId": "2d26b23ddaadc73a90bd47589e12a60c",
+    "spanId": "c6b399b661766c7a",
+    "at": "2026-11-09T17:20:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-talos-by-sidero-labs"
+  },
+  {
+    "id": "xp-booth-252",
+    "attendeeId": "att-gpunarwhal",
+    "traceId": "d3ffcae75638edee2988cc1e202218d7",
+    "spanId": "c8f3588343cae483",
+    "at": "2026-11-09T17:20:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-edera"
+  },
+  {
+    "id": "xp-booth-253",
+    "attendeeId": "att-nodebadger",
+    "traceId": "d1785effb9ba2b137b1ff7ee3e67265e",
+    "spanId": "571d394f81d2eb62",
+    "at": "2026-11-09T17:20:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-grafana-labs"
+  },
+  {
+    "id": "xp-booth-254",
+    "attendeeId": "att-tektonpanda",
+    "traceId": "4bc3ee480e86c150da70ff7e2a2613af",
+    "spanId": "fda1145d0c2c3e62",
+    "at": "2026-11-09T17:20:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-project-kueue-workload-aware-scheduling-sig-subproject"
+  },
+  {
+    "id": "xp-booth-255",
+    "attendeeId": "att-envoylynx",
+    "traceId": "5479199a0d198fb510001d206b3de306",
+    "spanId": "1478a9487131e2e3",
+    "at": "2026-11-09T17:21:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-project-containerd"
+  },
+  {
+    "id": "xp-booth-badge-ciliumjackal",
+    "attendeeId": "att-ciliumjackal",
+    "type": "badge",
+    "xp": 0,
+    "banner": "scout",
+    "traceId": "7811d34689f053cf2a37e693eab1f6e8",
+    "spanId": "4a8720d8ad78120c",
+    "at": "2026-11-09T17:21:00.000Z"
+  },
+  {
+    "id": "xp-booth-badge-nodebadger",
+    "attendeeId": "att-nodebadger",
+    "type": "badge",
+    "xp": 0,
+    "banner": "scout",
+    "traceId": "f06a02891954e39e3cff8dcc1ab54764",
+    "spanId": "61c2a7c2c95969f2",
+    "at": "2026-11-09T17:21:00.000Z"
+  },
+  {
+    "id": "xp-booth-256",
+    "attendeeId": "att-podgibbon",
+    "traceId": "4a0ab792d52bdc4828a61c09d18e3a50",
+    "spanId": "22d0fcbb06835727",
+    "at": "2026-11-09T17:22:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-activestate"
+  },
+  {
+    "id": "xp-booth-257",
+    "attendeeId": "att-grpcpelican",
+    "traceId": "5e7fc9263fa381ce86232493bcbdfd15",
+    "spanId": "9c1050bac844dde2",
+    "at": "2026-11-09T17:23:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-kodekloud"
+  },
+  {
+    "id": "xp-booth-258",
+    "attendeeId": "att-ebpftern",
+    "traceId": "334b7d93333db8300433996da93ced8b",
+    "spanId": "901a48dd2ac2987a",
+    "at": "2026-11-09T17:26:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-project-drasi"
+  },
+  {
+    "id": "xp-booth-259",
+    "attendeeId": "att-fluxpanda",
+    "traceId": "0abf7901395512f884ac136a91c5f1c8",
+    "spanId": "109656bb75379201",
+    "at": "2026-11-09T17:27:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-sysdig"
+  },
+  {
+    "id": "xp-booth-260",
+    "attendeeId": "att-istioseal",
+    "traceId": "6d0767e34f087e22dd734ec4863529d2",
+    "spanId": "21ce96e62ed4636c",
+    "at": "2026-11-09T17:27:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-controltheory"
+  },
+  {
+    "id": "xp-booth-261",
+    "attendeeId": "att-kubelynx",
+    "traceId": "98971e6e584bf15380476daaa59a153f",
+    "spanId": "3a488037a2c64290",
+    "at": "2026-11-09T17:27:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-villagesql"
+  },
+  {
+    "id": "xp-booth-262",
+    "attendeeId": "att-nodeosprey",
+    "traceId": "e0f1fa1655fed024ae32d6df733b8f3d",
+    "spanId": "b65cc195479efa45",
+    "at": "2026-11-09T17:27:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-project-kpt"
+  },
+  {
+    "id": "xp-booth-263",
+    "attendeeId": "att-argopelican",
+    "traceId": "0baef95e66f722b066c6908e34cb7d90",
+    "spanId": "15ed2704225e2e6c",
+    "at": "2026-11-09T17:28:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-docker"
+  },
+  {
+    "id": "xp-booth-264",
+    "attendeeId": "att-kedacapybara",
+    "traceId": "8fc22ab4954cd90c74c9abe08a377f98",
+    "spanId": "fa4682bbaee9512b",
+    "at": "2026-11-09T17:29:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-haproxy-technologies"
+  },
+  {
+    "id": "xp-booth-265",
+    "attendeeId": "att-kubeshrew",
+    "traceId": "bbf8d1c45479851cd12593e7cf8c9446",
+    "spanId": "2e5b6ca45552aade",
+    "at": "2026-11-09T17:30:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-yugabyte"
+  },
+  {
+    "id": "xp-booth-266",
+    "attendeeId": "att-tektonpanda",
+    "traceId": "058411f55d6ab231ca984282ed74c98e",
+    "spanId": "a5f75d391434b96a",
+    "at": "2026-11-09T17:30:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-sigi"
+  },
+  {
+    "id": "xp-booth-267",
+    "attendeeId": "att-ebpfbadger",
+    "traceId": "ab3a1f850082d48b98c8609b9b0419ba",
+    "spanId": "3e18ae3e814db714",
+    "at": "2026-11-09T17:31:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-aikido-security"
+  },
+  {
+    "id": "xp-booth-268",
+    "attendeeId": "att-gpulynx",
+    "traceId": "b61ecdf495f6873baf2c4ba3909b2739",
+    "spanId": "cf73d5c355cbd761",
+    "at": "2026-11-09T17:31:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-ollygarden"
+  },
+  {
+    "id": "xp-booth-badge-kubeshrew",
+    "attendeeId": "att-kubeshrew",
+    "type": "badge",
+    "xp": 0,
+    "banner": "scout",
+    "traceId": "67110bfc8d7381dc12abaa289a26abc6",
+    "spanId": "490a4a5239beeb39",
+    "at": "2026-11-09T17:31:00.000Z"
+  },
+  {
+    "id": "xp-booth-269",
+    "attendeeId": "att-istioorca",
+    "traceId": "7853c7dd1f8f143c2c6486fce9e946ca",
+    "spanId": "12e97b8a827d4cdc",
+    "at": "2026-11-09T17:32:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-dash0"
+  },
+  {
+    "id": "xp-booth-270",
+    "attendeeId": "att-podwrangler",
+    "traceId": "ca65103817b363cbd5eba74d742b1471",
+    "spanId": "45512b8479cc8ba2",
+    "at": "2026-11-09T17:32:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-datadog"
+  },
+  {
+    "id": "xp-booth-271",
+    "attendeeId": "att-chartquail",
+    "traceId": "a9cdc96e2bab702b57d3ef6fce3c0a78",
+    "spanId": "1dc3ce91a23de63c",
+    "at": "2026-11-09T17:33:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-solo-io"
+  },
+  {
+    "id": "xp-booth-272",
+    "attendeeId": "att-grpcpelican",
+    "traceId": "a055cee8d7e5e552fea15a3b35bf882c",
+    "spanId": "e6dde785a9a2e444",
+    "at": "2026-11-09T17:33:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-docker"
+  },
+  {
+    "id": "xp-booth-273",
+    "attendeeId": "att-linkerdraven",
+    "traceId": "4620410b8137cebaecf6457a43bbff0e",
+    "spanId": "6012d8b8b1b3bc00",
+    "at": "2026-11-09T17:33:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-project-tag-infrastructure"
+  },
+  {
+    "id": "xp-booth-274",
+    "attendeeId": "att-wasmshrew",
+    "traceId": "896a238458ce5b1df51e88d9442a11aa",
+    "spanId": "96af1a051f1a36dd",
+    "at": "2026-11-09T17:33:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-palo-alto-networks"
+  },
+  {
+    "id": "xp-booth-275",
+    "attendeeId": "att-jaegernarwhal",
+    "traceId": "2c5ec26d00840219c0934127649e96d3",
+    "spanId": "8f562ec459298565",
+    "at": "2026-11-09T17:34:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-anyscale"
+  },
+  {
+    "id": "xp-booth-276",
+    "attendeeId": "att-sbommanatee",
+    "traceId": "dea7a99c1c7255e92d056211f1933c0b",
+    "spanId": "c6892193bbb683d8",
+    "at": "2026-11-09T17:34:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-controltheory"
+  },
+  {
+    "id": "xp-booth-277",
+    "attendeeId": "att-grpcegret",
+    "traceId": "51c15de3ad3ad9bce18b7efc0d0d68ab",
+    "spanId": "2b8b077f918a59e7",
+    "at": "2026-11-09T17:35:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-project-confidential-containers"
+  },
+  {
+    "id": "xp-booth-badge-sbommanatee",
+    "attendeeId": "att-sbommanatee",
+    "type": "badge",
+    "xp": 0,
+    "banner": "scout",
+    "traceId": "406ab7eec098770d368db5676900cb0a",
+    "spanId": "d6aed92b86086d08",
+    "at": "2026-11-09T17:35:00.000Z"
+  },
+  {
+    "id": "xp-booth-badge-grpcegret",
+    "attendeeId": "att-grpcegret",
+    "type": "badge",
+    "xp": 0,
+    "banner": "scout",
+    "traceId": "a6a70401a426442d5ef74cd42767d25d",
+    "spanId": "8b668e02dbb13ccf",
+    "at": "2026-11-09T17:36:00.000Z"
+  },
+  {
+    "id": "xp-booth-278",
+    "attendeeId": "att-helmpenguin",
+    "traceId": "4a585847a2f21bdf00ba3fcd25b4df62",
+    "spanId": "0139d64533f33400",
+    "at": "2026-11-09T17:41:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-talos-by-sidero-labs"
+  },
+  {
+    "id": "xp-booth-279",
+    "attendeeId": "att-chartocelot",
+    "traceId": "20de1f1a70043b2d3ab961f736f781c0",
+    "spanId": "28a69eb358e1b584",
+    "at": "2026-11-09T17:43:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-datadog"
+  },
+  {
+    "id": "xp-booth-280",
+    "attendeeId": "att-kedacapybara",
+    "traceId": "df049a9c792177682a15c332a50ff613",
+    "spanId": "d4c8da185c6d2b21",
+    "at": "2026-11-09T17:43:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-project-cedar"
+  },
+  {
+    "id": "xp-booth-281",
+    "attendeeId": "att-tracekoala",
+    "traceId": "709c512599690dc8efa8f60264d27acc",
+    "spanId": "e6b7c156fb35826d",
+    "at": "2026-11-09T17:43:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-amazon-web-services"
+  },
+  {
+    "id": "xp-booth-282",
+    "attendeeId": "att-vitessorca",
+    "traceId": "6f6be280230bacd8d57dbbe5a2cf3e39",
+    "spanId": "6dac3993e1eb087e",
+    "at": "2026-11-09T17:43:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-elastic"
+  },
+  {
+    "id": "xp-booth-283",
+    "attendeeId": "att-certalpaca",
+    "traceId": "7704de066283622678b17099d517a03d",
+    "spanId": "8846ad506b8363c9",
+    "at": "2026-11-09T17:44:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-google-cloud"
+  },
+  {
+    "id": "xp-booth-badge-tracekoala",
+    "attendeeId": "att-tracekoala",
+    "type": "badge",
+    "xp": 0,
+    "banner": "scout",
+    "traceId": "5ed4c48aa1d2618584f651162e9b54b1",
+    "spanId": "92e1c6a4a34683aa",
+    "at": "2026-11-09T17:44:00.000Z"
+  },
+  {
+    "id": "xp-booth-badge-vitessorca",
+    "attendeeId": "att-vitessorca",
+    "type": "badge",
+    "xp": 0,
+    "banner": "scout",
+    "traceId": "d33f852797fc7d464be41324139a1823",
+    "spanId": "4c09101495596386",
+    "at": "2026-11-09T17:44:00.000Z"
+  },
+  {
+    "id": "xp-booth-284",
+    "attendeeId": "att-istioseal",
+    "traceId": "e804fe7fc4b15b3f3f4231ef50e6f0a2",
+    "spanId": "e65b8c24a4c0d3d3",
+    "at": "2026-11-09T17:45:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-dash0"
+  },
+  {
+    "id": "xp-booth-285",
+    "attendeeId": "att-fluxpanda",
+    "traceId": "32aba588d83672ba046dd8ba9fcfce36",
+    "spanId": "b75ebfb587b4abeb",
+    "at": "2026-11-09T17:46:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-oracle"
+  },
+  {
+    "id": "xp-booth-286",
+    "attendeeId": "att-llmstoat",
+    "traceId": "5ab66a3482f332bb35d01af1a7b07e2e",
+    "spanId": "0986a76658f0de12",
+    "at": "2026-11-09T17:46:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-edge-delta"
+  },
+  {
+    "id": "xp-booth-287",
+    "attendeeId": "att-llmgecko",
+    "traceId": "556b0a2270d76db59f4bbd20188cbe7e",
+    "spanId": "bb335c95cace946f",
+    "at": "2026-11-09T17:47:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-coreweave"
+  },
+  {
+    "id": "xp-booth-badge-fluxpanda",
+    "attendeeId": "att-fluxpanda",
+    "type": "badge",
+    "xp": 0,
+    "banner": "scout",
+    "traceId": "76bee28037bbe46666d91fc1a664184f",
+    "spanId": "95e0a05092ad55e9",
+    "at": "2026-11-09T17:47:00.000Z"
+  },
+  {
+    "id": "xp-booth-288",
+    "attendeeId": "att-gpunarwhal",
+    "traceId": "0d781195375f2411f5eca63c6dbfce53",
+    "spanId": "c8db8a3c8afe6022",
+    "at": "2026-11-09T17:49:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-infino-ai"
+  },
+  {
+    "id": "xp-booth-289",
+    "attendeeId": "att-ebpftern",
+    "traceId": "67ddf65e676f7a13f885f069c192236e",
+    "spanId": "04b124cb3812c5e4",
+    "at": "2026-11-09T17:57:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-nutanix"
+  },
+  {
+    "id": "xp-booth-290",
+    "attendeeId": "att-jaegernarwhal",
+    "traceId": "377221553667db665398c53b607b201d",
+    "spanId": "0baf67176dce5f12",
+    "at": "2026-11-09T17:57:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-vast-data"
+  },
+  {
+    "id": "xp-booth-291",
+    "attendeeId": "att-tektonpanda",
+    "traceId": "1c0b7b71387ab82fe357560159f07a08",
+    "spanId": "224fc862562801c1",
+    "at": "2026-11-09T17:58:00.000Z",
+    "type": "outpost",
+    "xp": 10,
+    "locationId": "outpost-elastic"
+  },
+  {
+    "id": "xp-booth-badge-ebpftern",
+    "attendeeId": "att-ebpftern",
+    "type": "badge",
+    "xp": 0,
+    "banner": "scout",
+    "traceId": "2a6900655404cb45c1c217ad560fa953",
+    "spanId": "152b7870bda73dab",
+    "at": "2026-11-09T17:58:00.000Z"
+  },
+  {
+    "id": "xp-booth-badge-jaegernarwhal",
+    "attendeeId": "att-jaegernarwhal",
+    "type": "badge",
+    "xp": 0,
+    "banner": "scout",
+    "traceId": "011b8d29aff5c160acf39f38688668d5",
+    "spanId": "5f7358db38ae4b09",
+    "at": "2026-11-09T17:58:00.000Z"
+  },
+  {
+    "id": "xp-booth-badge-tektonpanda",
+    "attendeeId": "att-tektonpanda",
+    "type": "badge",
+    "xp": 0,
+    "banner": "scout",
+    "traceId": "9a798792931b811d1eaf0626dadbf2c1",
+    "spanId": "d5c77a24bbfa7d5e",
+    "at": "2026-11-09T17:59:00.000Z"
   }
 ]

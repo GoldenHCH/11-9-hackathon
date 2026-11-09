@@ -1,0 +1,135 @@
+<div class="filters">
+  <mat-form-field appearance="outline" class="filter-search">
+    <mat-label>Search booths</mat-label>
+    <mat-icon matPrefix aria-hidden="true">search</mat-icon>
+    <input matInput name="boothQuery" autocomplete="off" [(ngModel)]="query" (ngModelChange)="applyFilters()" />
+  </mat-form-field>
+  <mat-form-field appearance="outline" class="filter-select">
+    <mat-label>Tier</mat-label>
+    <mat-select [(ngModel)]="tierFilter" (selectionChange)="applyFilters()">
+      <mat-option value="">All tiers</mat-option>
+      @for (tier of tiers; track tier) {
+        <mat-option [value]="tier">{{ tier }}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="outline" class="filter-select">
+    <mat-label>Type</mat-label>
+    <mat-select [(ngModel)]="typeFilter" (selectionChange)="applyFilters()">
+      <mat-option value="">All types</mat-option>
+      @for (type of types; track type) {
+        <mat-option [value]="type">{{ typeLabels[type] }}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="outline" class="filter-select">
+    <mat-label>Sort by</mat-label>
+    <mat-select [(ngModel)]="sortKey" (selectionChange)="applyFilters()">
+      @for (option of sortOptions; track option.key) {
+        <mat-option [value]="option.key">{{ option.label }}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<p class="count" aria-live="polite">Showing {{ visibleRows.length }} of {{ filteredRows.length }} matching booths ({{ rows.length }} in all)</p>
+<p class="app-visually-hidden" aria-live="polite">{{ liveMessage }}</p>
+
+<div class="table-wrap" tabindex="0" role="region" aria-label="Booth table">
+  <table class="booths">
+    <caption class="app-visually-hidden">All booths with today’s visits and staff links</caption>
+    <thead class="booths-head">
+      <tr>
+        <th scope="col" class="cell cell--head" [attr.aria-sort]="ariaSort('name')">Booth</th>
+        <th scope="col" class="cell cell--head">Number</th>
+        <th scope="col" class="cell cell--head">Tier</th>
+        <th scope="col" class="cell cell--head num" [attr.aria-sort]="ariaSort('visits')">Visits today</th>
+        <th scope="col" class="cell cell--head num" [attr.aria-sort]="ariaSort('unique')">Unique</th>
+        <th scope="col" class="cell cell--head num">Quests done</th>
+        <th scope="col" class="cell cell--head">Actions</th>
+      </tr>
+    </thead>
+    <tbody class="booths-body">
+      @for (row of visibleRows; track row.exhibitor.id) {
+        <tr class="booth-row">
+          <td data-label="Booth" class="cell">
+            <a class="booth-name" [routerLink]="['/exhibitors', row.exhibitor.id]">{{ row.exhibitor.name }}</a>
+          </td>
+          <td data-label="Number" class="cell">{{ row.exhibitor.boothNumber || '—' }}</td>
+          <td data-label="Tier" class="cell">{{ row.exhibitor.tier || typeLabels[row.exhibitor.exhibitorType] }}</td>
+          <td data-label="Visits today" class="cell num">{{ row.visitsToday }}</td>
+          <td data-label="Unique" class="cell num">{{ row.uniqueToday }}</td>
+          <td data-label="Quests done" class="cell num">{{ row.questsCompleted }}</td>
+          <td data-label="Actions" class="cell">
+            <div class="actions">
+              <button
+                mat-stroked-button
+                type="button"
+                [attr.aria-label]="'Open the booth dashboard for ' + row.exhibitor.name"
+                (click)="openDashboard(row)"
+              >
+                Dashboard
+              </button>
+              <button
+                mat-icon-button
+                type="button"
+                [attr.aria-label]="'Copy staff link for ' + row.exhibitor.name"
+                (click)="copyStaffLink(row)"
+              >
+                <mat-icon>link</mat-icon>
+              </button>
+              <button
+                mat-icon-button
+                type="button"
+                [attr.aria-label]="'Show check-in QR for ' + row.exhibitor.name"
+                [attr.aria-expanded]="openQrId === row.exhibitor.id"
+                [attr.aria-controls]="'qr-' + row.exhibitor.id"
+                (click)="toggleQr(row)"
+              >
+                <mat-icon>qr_code_2</mat-icon>
+              </button>
+            </div>
+          </td>
+        </tr>
+        @if (openQrId === row.exhibitor.id) {
+          <tr class="booth-row qr-row">
+            <td class="cell" colspan="7" [id]="'qr-' + row.exhibitor.id">
+              <div class="qr-panel app-qr-print-target">
+                <app-qr-code
+                  [value]="row.scanUrl"
+                  [alt]="'Check-in QR code for ' + row.exhibitor.name"
+                  [size]="220"
+                ></app-qr-code>
+                <div class="qr-text">
+                  <p class="qr-title app-pixel">
+                    {{ row.exhibitor.boothNumber ? 'Booth ' + row.exhibitor.boothNumber + ' · ' : '' }}{{ row.exhibitor.name }}
+                  </p>
+                  <p class="qr-url app-qr-no-print">{{ row.scanUrl }}</p>
+                  <div class="actions app-qr-no-print">
+                    <button mat-flat-button type="button" (click)="printQr()">
+                      <div class="btn-content">
+                        <mat-icon>print</mat-icon>
+                        <span>Print QR</span>
+                      </div>
+                    </button>
+                    <button mat-stroked-button type="button" (click)="toggleQr(row)">Close</button>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+        }
+      } @empty {
+        <tr class="booth-row">
+          <td colspan="7" class="cell empty">No booths match these filters.</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
+
+@if (visibleRows.length < filteredRows.length) {
+  <button mat-stroked-button type="button" class="show-more" (click)="showMore()">
+    Show more booths
+  </button>
+}

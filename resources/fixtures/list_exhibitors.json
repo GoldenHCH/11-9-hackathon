@@ -1,0 +1,2140 @@
+{
+  "tool": "list_exhibitors",
+  "endpoint": "POST /api/tools/list_exhibitors",
+  "request": {
+    "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+    "limit": 60
+  },
+  "status": 200,
+  "response": {
+    "exhibitors": [
+      {
+        "id": "outpost-amazon-web-services",
+        "name": "Amazon Web Services",
+        "exhibitorType": "sponsor",
+        "tier": "Diamond",
+        "boothNumber": "115",
+        "hall": "B",
+        "zone": "Astral Peak",
+        "topics": [
+          "platform",
+          "operations",
+          "ai"
+        ],
+        "categories": [
+          "Artificial Intelligence (AI)",
+          "Platform Engineering",
+          "Observability"
+        ],
+        "askAbout": "How EKS Auto Mode handles node upgrades for you",
+        "visitorsNow": 6,
+        "visitedByMe": true
+      },
+      {
+        "id": "outpost-scaleops",
+        "name": "ScaleOps",
+        "exhibitorType": "sponsor",
+        "tier": "Diamond",
+        "boothNumber": "123",
+        "hall": "B",
+        "zone": "Starlight Summit",
+        "topics": [
+          "platform",
+          "ai",
+          "operations"
+        ],
+        "categories": [
+          "Platform Engineering",
+          "Artificial Intelligence (AI)",
+          "Observability"
+        ],
+        "askAbout": "What they're building for platform engineering and AI",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-new-relic",
+        "name": "New Relic",
+        "exhibitorType": "sponsor",
+        "tier": "Gold",
+        "boothNumber": "159",
+        "hall": "1",
+        "zone": "Alpine Overlook",
+        "topics": [
+          "operations",
+          "platform"
+        ],
+        "categories": [
+          "Observability",
+          "Platform Engineering"
+        ],
+        "askAbout": "What they're building for observability and platform engineering",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-openobserve",
+        "name": "OpenObserve",
+        "exhibitorType": "sponsor",
+        "tier": "Gold",
+        "boothNumber": "167",
+        "hall": "1",
+        "zone": "Alpine Overlook",
+        "topics": [
+          "operations",
+          "platform"
+        ],
+        "categories": [
+          "Observability",
+          "Platform Engineering"
+        ],
+        "askAbout": "What they're building for observability and platform engineering",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-dynatrace",
+        "name": "Dynatrace",
+        "exhibitorType": "sponsor",
+        "tier": "Gold",
+        "boothNumber": "184",
+        "hall": "1",
+        "zone": "Alpine Overlook",
+        "topics": [
+          "platform",
+          "operations",
+          "ai"
+        ],
+        "categories": [
+          "Application Development + Developer Experience",
+          "Observability",
+          "Artificial Intelligence (AI)"
+        ],
+        "askAbout": "What they're building for developer experience and observability",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-project-keda",
+        "name": "KEDA",
+        "exhibitorType": "project",
+        "tier": "Project",
+        "boothNumber": "P-4B",
+        "hall": "5",
+        "zone": "Cosmic Canyon",
+        "topics": [
+          "operations",
+          "platform"
+        ],
+        "categories": [],
+        "askAbout": "How to start contributing to KEDA",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-red-hat",
+        "name": "Red Hat",
+        "exhibitorType": "sponsor",
+        "tier": "Diamond",
+        "boothNumber": "116",
+        "hall": "B",
+        "zone": "Astral Peak",
+        "topics": [
+          "ai",
+          "platform",
+          "security"
+        ],
+        "categories": [
+          "Artificial Intelligence (AI)",
+          "Certified Kubernetes Software",
+          "Security"
+        ],
+        "askAbout": "What they're building for AI and Kubernetes",
+        "visitorsNow": 5,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-microsoft-azure",
+        "name": "Microsoft Azure",
+        "exhibitorType": "sponsor",
+        "tier": "Diamond",
+        "boothNumber": "117",
+        "hall": "B",
+        "zone": "Astral Peak",
+        "topics": [
+          "platform",
+          "ai"
+        ],
+        "categories": [
+          "Application Development + Developer Experience",
+          "Artificial Intelligence (AI)",
+          "Platform Engineering"
+        ],
+        "askAbout": "What they're building for developer experience and AI",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-nutanix",
+        "name": "Nutanix",
+        "exhibitorType": "sponsor",
+        "tier": "Diamond",
+        "boothNumber": "118",
+        "hall": "A",
+        "zone": "Astral Peak",
+        "topics": [
+          "ai",
+          "platform",
+          "data"
+        ],
+        "categories": [
+          "Artificial Intelligence (AI)",
+          "Platform Engineering",
+          "Storage + Databases"
+        ],
+        "askAbout": "What they're building for AI and platform engineering",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-oracle",
+        "name": "Oracle",
+        "exhibitorType": "sponsor",
+        "tier": "Diamond",
+        "boothNumber": "120",
+        "hall": "C",
+        "zone": "Starlight Summit",
+        "topics": [
+          "ai",
+          "data",
+          "platform"
+        ],
+        "categories": [
+          "Artificial Intelligence (AI)",
+          "Storage + Databases",
+          "Certified Kubernetes Software"
+        ],
+        "askAbout": "What they're building for AI and storage and databases",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-solo-io",
+        "name": "Solo.io",
+        "exhibitorType": "sponsor",
+        "tier": "Diamond",
+        "boothNumber": "121",
+        "hall": "B",
+        "zone": "Starlight Summit",
+        "topics": [
+          "ai",
+          "platform",
+          "connectivity"
+        ],
+        "categories": [
+          "Artificial Intelligence (AI)",
+          "Platform Engineering",
+          "Networking"
+        ],
+        "askAbout": "What they're building for AI and platform engineering",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-google-cloud",
+        "name": "Google Cloud",
+        "exhibitorType": "sponsor",
+        "tier": "Diamond",
+        "boothNumber": "122",
+        "hall": "B",
+        "zone": "Starlight Summit",
+        "topics": [
+          "ai",
+          "platform"
+        ],
+        "categories": [
+          "Artificial Intelligence (AI)",
+          "Platform Engineering",
+          "Application Development + Developer Experience"
+        ],
+        "askAbout": "Serving LLM inference on GKE with GPUs and TPUs",
+        "visitorsNow": 4,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-teleport",
+        "name": "Teleport",
+        "exhibitorType": "sponsor",
+        "tier": "Platinum",
+        "boothNumber": "103",
+        "hall": "A",
+        "zone": "Astral Peak",
+        "topics": [
+          "platform",
+          "security"
+        ],
+        "categories": [
+          "Platform Engineering",
+          "Security"
+        ],
+        "askAbout": "What they're building for platform engineering and security",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-crusoe",
+        "name": "Crusoe",
+        "exhibitorType": "sponsor",
+        "tier": "Platinum",
+        "boothNumber": "104",
+        "hall": "A",
+        "zone": "Astral Peak",
+        "topics": [
+          "ai",
+          "platform"
+        ],
+        "categories": [
+          "Artificial Intelligence (AI)",
+          "Application Development + Developer Experience"
+        ],
+        "askAbout": "What they're building for AI and developer experience",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-splunk-a-cisco-company",
+        "name": "Splunk, a Cisco Company",
+        "exhibitorType": "sponsor",
+        "tier": "Platinum",
+        "boothNumber": "105",
+        "hall": "A",
+        "zone": "Astral Peak",
+        "topics": [
+          "operations",
+          "ai"
+        ],
+        "categories": [
+          "Observability",
+          "Artificial Intelligence (AI)"
+        ],
+        "askAbout": "What they're building for observability and AI",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-tintri",
+        "name": "Tintri",
+        "exhibitorType": "sponsor",
+        "tier": "Platinum",
+        "boothNumber": "106",
+        "hall": "A",
+        "zone": "Astral Peak",
+        "topics": [
+          "data",
+          "platform"
+        ],
+        "categories": [
+          "Storage + Databases",
+          "CI/CD"
+        ],
+        "askAbout": "What they're building for storage and databases and CI/CD",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-clickhouse",
+        "name": "ClickHouse",
+        "exhibitorType": "sponsor",
+        "tier": "Platinum",
+        "boothNumber": "108",
+        "hall": "B",
+        "zone": "Astral Peak",
+        "topics": [
+          "operations",
+          "data"
+        ],
+        "categories": [
+          "Observability",
+          "Storage + Databases"
+        ],
+        "askAbout": "What they're building for observability and storage and databases",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-chainguard",
+        "name": "Chainguard",
+        "exhibitorType": "sponsor",
+        "tier": "Platinum",
+        "boothNumber": "110",
+        "hall": "A",
+        "zone": "Astral Peak",
+        "topics": [
+          "security",
+          "platform"
+        ],
+        "categories": [
+          "Security",
+          "Platform Engineering"
+        ],
+        "askAbout": "What they're building for security and platform engineering",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-groundcover",
+        "name": "groundcover",
+        "exhibitorType": "sponsor",
+        "tier": "Platinum",
+        "boothNumber": "111",
+        "hall": "A",
+        "zone": "Astral Peak",
+        "topics": [
+          "operations",
+          "ai"
+        ],
+        "categories": [
+          "Observability",
+          "Artificial Intelligence (AI)"
+        ],
+        "askAbout": "What they're building for observability and AI",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-infisical",
+        "name": "Infisical",
+        "exhibitorType": "sponsor",
+        "tier": "Platinum",
+        "boothNumber": "113",
+        "hall": "A",
+        "zone": "Astral Peak",
+        "topics": [
+          "security",
+          "platform"
+        ],
+        "categories": [
+          "Security",
+          "Platform Engineering"
+        ],
+        "askAbout": "What they're building for security and platform engineering",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-cast-ai",
+        "name": "Cast AI",
+        "exhibitorType": "sponsor",
+        "tier": "Platinum",
+        "boothNumber": "119",
+        "hall": "A",
+        "zone": "Astral Peak",
+        "topics": [
+          "platform",
+          "ai"
+        ],
+        "categories": [
+          "Platform Engineering",
+          "Artificial Intelligence (AI)"
+        ],
+        "askAbout": "What they're building for platform engineering and AI",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-vmware-by-broadcom",
+        "name": "VMware by Broadcom",
+        "exhibitorType": "sponsor",
+        "tier": "Platinum",
+        "boothNumber": "129",
+        "hall": "C",
+        "zone": "Starlight Summit",
+        "topics": [
+          "ai",
+          "platform"
+        ],
+        "categories": [
+          "Artificial Intelligence (AI)",
+          "Certified Kubernetes Software"
+        ],
+        "askAbout": "What they're building for AI and Kubernetes",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-postman",
+        "name": "Postman",
+        "exhibitorType": "sponsor",
+        "tier": "Platinum",
+        "boothNumber": "130",
+        "hall": "B",
+        "zone": "Starlight Summit",
+        "topics": [
+          "platform",
+          "ai"
+        ],
+        "categories": [
+          "Application Development + Developer Experience",
+          "Artificial Intelligence (AI)"
+        ],
+        "askAbout": "What they're building for developer experience and AI",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-perfectscale-by-doit",
+        "name": "PerfectScale by DoiT",
+        "exhibitorType": "sponsor",
+        "tier": "Platinum",
+        "boothNumber": "131",
+        "hall": "B",
+        "zone": "Starlight Summit",
+        "topics": [
+          "platform"
+        ],
+        "categories": [
+          "Platform Engineering"
+        ],
+        "askAbout": "What they're building for platform engineering",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-akamai",
+        "name": "Akamai",
+        "exhibitorType": "sponsor",
+        "tier": "Platinum",
+        "boothNumber": "132",
+        "hall": "B",
+        "zone": "Starlight Summit",
+        "topics": [
+          "platform",
+          "ai"
+        ],
+        "categories": [
+          "Certified Kubernetes Software",
+          "Artificial Intelligence (AI)"
+        ],
+        "askAbout": "What they're building for Kubernetes and AI",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-nebius",
+        "name": "Nebius",
+        "exhibitorType": "sponsor",
+        "tier": "Platinum",
+        "boothNumber": "133",
+        "hall": "B",
+        "zone": "Starlight Summit",
+        "topics": [
+          "platform",
+          "ai"
+        ],
+        "categories": [
+          "Application Development + Developer Experience",
+          "Artificial Intelligence (AI)"
+        ],
+        "askAbout": "What they're building for developer experience and AI",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-dash0",
+        "name": "Dash0",
+        "exhibitorType": "sponsor",
+        "tier": "Platinum",
+        "boothNumber": "134",
+        "hall": "B",
+        "zone": "Starlight Summit",
+        "topics": [
+          "operations"
+        ],
+        "categories": [
+          "Observability",
+          "Application Development + Developer Experience"
+        ],
+        "askAbout": "OpenTelemetry-native observability and tracing a request end to end",
+        "visitorsNow": 3,
+        "visitedByMe": true
+      },
+      {
+        "id": "outpost-traversal",
+        "name": "Traversal",
+        "exhibitorType": "sponsor",
+        "tier": "Platinum",
+        "boothNumber": "138",
+        "hall": "C",
+        "zone": "Starlight Summit",
+        "topics": [
+          "platform",
+          "ai"
+        ],
+        "categories": [
+          "Application Development + Developer Experience",
+          "Artificial Intelligence (AI)"
+        ],
+        "askAbout": "What they're building for developer experience and AI",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-docker",
+        "name": "Docker",
+        "exhibitorType": "sponsor",
+        "tier": "Platinum",
+        "boothNumber": "141",
+        "hall": "C",
+        "zone": "Starlight Summit",
+        "topics": [
+          "platform",
+          "security"
+        ],
+        "categories": [
+          "Artificial Intelligence (AI)",
+          "Application Development + Developer Experience"
+        ],
+        "askAbout": "Hardened images and faster container builds",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-datadog",
+        "name": "Datadog",
+        "exhibitorType": "sponsor",
+        "tier": "Platinum",
+        "boothNumber": "152",
+        "hall": "A",
+        "zone": "Astral Peak",
+        "topics": [
+          "operations",
+          "data"
+        ],
+        "categories": [
+          "Observability",
+          "Artificial Intelligence (AI)"
+        ],
+        "askAbout": "Watching Kubernetes cost and performance together",
+        "visitorsNow": 2,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-sedai",
+        "name": "Sedai",
+        "exhibitorType": "sponsor",
+        "tier": "Platinum",
+        "boothNumber": "163",
+        "hall": "1",
+        "zone": "Alpine Overlook",
+        "topics": [
+          "ai",
+          "platform"
+        ],
+        "categories": [
+          "Artificial Intelligence (AI)",
+          "Platform Engineering"
+        ],
+        "askAbout": "What they're building for AI and platform engineering",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-ibm",
+        "name": "IBM",
+        "exhibitorType": "sponsor",
+        "tier": "Platinum",
+        "boothNumber": "172",
+        "hall": "1",
+        "zone": "Alpine Overlook",
+        "topics": [
+          "ai",
+          "operations"
+        ],
+        "categories": [
+          "Artificial Intelligence (AI)",
+          "Observability"
+        ],
+        "askAbout": "What they're building for AI and observability",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-ibm-kubecost",
+        "name": "IBM Kubecost",
+        "exhibitorType": "sponsor",
+        "tier": "Platinum",
+        "boothNumber": "182",
+        "hall": "1",
+        "zone": "Alpine Overlook",
+        "topics": [
+          "platform"
+        ],
+        "categories": [
+          "Platform Engineering"
+        ],
+        "askAbout": "What they're building for platform engineering",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-portworx-by-everpure",
+        "name": "Portworx by Everpure",
+        "exhibitorType": "sponsor",
+        "tier": "Platinum",
+        "boothNumber": "191",
+        "hall": "1",
+        "zone": "Alpine Overlook",
+        "topics": [
+          "platform",
+          "data"
+        ],
+        "categories": [
+          "Platform Engineering",
+          "Storage + Databases"
+        ],
+        "askAbout": "What they're building for platform engineering and storage and databases",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-hpe",
+        "name": "HPE",
+        "exhibitorType": "sponsor",
+        "tier": "Gold",
+        "boothNumber": "145 / 151",
+        "hall": "B",
+        "zone": "Starlight Summit",
+        "topics": [
+          "platform",
+          "ai"
+        ],
+        "categories": [
+          "Platform Engineering",
+          "Artificial Intelligence (AI)",
+          "Certified Kubernetes Software"
+        ],
+        "askAbout": "What they're building for platform engineering and AI",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-coreweave",
+        "name": "CoreWeave",
+        "exhibitorType": "sponsor",
+        "tier": "Gold",
+        "boothNumber": "147",
+        "hall": "C",
+        "zone": "Starlight Summit",
+        "topics": [
+          "ai",
+          "platform"
+        ],
+        "categories": [
+          "Artificial Intelligence (AI)",
+          "Platform Engineering"
+        ],
+        "askAbout": "What they're building for AI and platform engineering",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-tigera",
+        "name": "Tigera",
+        "exhibitorType": "sponsor",
+        "tier": "Gold",
+        "boothNumber": "150",
+        "hall": "C",
+        "zone": "Starlight Summit",
+        "topics": [
+          "platform",
+          "security"
+        ],
+        "categories": [
+          "Platform Engineering",
+          "Security"
+        ],
+        "askAbout": "What they're building for platform engineering and security",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-harness",
+        "name": "Harness",
+        "exhibitorType": "sponsor",
+        "tier": "Gold",
+        "boothNumber": "154",
+        "hall": "1",
+        "zone": "Alpine Overlook",
+        "topics": [
+          "platform"
+        ],
+        "categories": [
+          "Platform Engineering",
+          "CI/CD"
+        ],
+        "askAbout": "What they're building for platform engineering and CI/CD",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-kong",
+        "name": "Kong",
+        "exhibitorType": "sponsor",
+        "tier": "Gold",
+        "boothNumber": "155",
+        "hall": "1",
+        "zone": "Alpine Overlook",
+        "topics": [
+          "connectivity",
+          "platform"
+        ],
+        "categories": [
+          "Service Mesh",
+          "Platform Engineering"
+        ],
+        "askAbout": "What they're building for service mesh and platform engineering",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-intuit",
+        "name": "Intuit",
+        "exhibitorType": "sponsor",
+        "tier": "Gold",
+        "boothNumber": "157",
+        "hall": "1",
+        "zone": "Alpine Overlook",
+        "topics": [
+          "platform",
+          "ai"
+        ],
+        "categories": [
+          "CI/CD",
+          "Artificial Intelligence (AI)"
+        ],
+        "askAbout": "What they're building for CI/CD and AI",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-resolve-ai",
+        "name": "Resolve AI",
+        "exhibitorType": "sponsor",
+        "tier": "Gold",
+        "boothNumber": "161",
+        "hall": "1",
+        "zone": "Alpine Overlook",
+        "topics": [
+          "ai",
+          "operations"
+        ],
+        "categories": [
+          "Artificial Intelligence (AI)",
+          "Observability"
+        ],
+        "askAbout": "What they're building for AI and observability",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-vcluster",
+        "name": "vCluster",
+        "exhibitorType": "sponsor",
+        "tier": "Gold",
+        "boothNumber": "164",
+        "hall": "1",
+        "zone": "Alpine Overlook",
+        "topics": [
+          "ai",
+          "platform"
+        ],
+        "categories": [
+          "Artificial Intelligence (AI)",
+          "Platform Engineering"
+        ],
+        "askAbout": "What they're building for AI and platform engineering",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-akuity",
+        "name": "Akuity",
+        "exhibitorType": "sponsor",
+        "tier": "Gold",
+        "boothNumber": "165",
+        "hall": "1",
+        "zone": "Alpine Overlook",
+        "topics": [
+          "platform"
+        ],
+        "categories": [
+          "CI/CD",
+          "Platform Engineering"
+        ],
+        "askAbout": "What they're building for CI/CD and platform engineering",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-heroku",
+        "name": "Heroku",
+        "exhibitorType": "sponsor",
+        "tier": "Gold",
+        "boothNumber": "166",
+        "hall": "1",
+        "zone": "Alpine Overlook",
+        "topics": [
+          "platform",
+          "data"
+        ],
+        "categories": [
+          "Application Development + Developer Experience",
+          "Storage + Databases"
+        ],
+        "askAbout": "What they're building for developer experience and storage and databases",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-devzero",
+        "name": "DevZero",
+        "exhibitorType": "sponsor",
+        "tier": "Gold",
+        "boothNumber": "169",
+        "hall": "1",
+        "zone": "Alpine Overlook",
+        "topics": [
+          "platform"
+        ],
+        "categories": [
+          "Platform Engineering"
+        ],
+        "askAbout": "What they're building for platform engineering",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-temporal",
+        "name": "Temporal",
+        "exhibitorType": "sponsor",
+        "tier": "Gold",
+        "boothNumber": "171",
+        "hall": "1",
+        "zone": "Alpine Overlook",
+        "topics": [
+          "platform"
+        ],
+        "categories": [
+          "Platform Engineering",
+          "Application Development + Developer Experience"
+        ],
+        "askAbout": "What they're building for platform engineering and developer experience",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-octopus-deploy",
+        "name": "Octopus Deploy",
+        "exhibitorType": "sponsor",
+        "tier": "Gold",
+        "boothNumber": "174",
+        "hall": "1",
+        "zone": "Alpine Overlook",
+        "topics": [
+          "platform"
+        ],
+        "categories": [
+          "CI/CD",
+          "Application Development + Developer Experience"
+        ],
+        "askAbout": "What they're building for CI/CD and developer experience",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-cloudsmith",
+        "name": "Cloudsmith",
+        "exhibitorType": "sponsor",
+        "tier": "Gold",
+        "boothNumber": "175",
+        "hall": "1",
+        "zone": "Alpine Overlook",
+        "topics": [
+          "security",
+          "platform"
+        ],
+        "categories": [
+          "Security",
+          "Platform Engineering"
+        ],
+        "askAbout": "What they're building for security and platform engineering",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-zesty",
+        "name": "Zesty",
+        "exhibitorType": "sponsor",
+        "tier": "Gold",
+        "boothNumber": "178",
+        "hall": "1",
+        "zone": "Alpine Overlook",
+        "topics": [
+          "platform"
+        ],
+        "categories": [
+          "Platform Engineering",
+          "Application Development + Developer Experience"
+        ],
+        "askAbout": "What they're building for platform engineering and developer experience",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-opensearch",
+        "name": "OpenSearch",
+        "exhibitorType": "sponsor",
+        "tier": "Gold",
+        "boothNumber": "180",
+        "hall": "1",
+        "zone": "Alpine Overlook",
+        "topics": [
+          "ai",
+          "operations"
+        ],
+        "categories": [
+          "Artificial Intelligence (AI)",
+          "Observability"
+        ],
+        "askAbout": "What they're building for AI and observability",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-palo-alto-networks",
+        "name": "Palo Alto Networks",
+        "exhibitorType": "sponsor",
+        "tier": "Gold",
+        "boothNumber": "181",
+        "hall": "1",
+        "zone": "Alpine Overlook",
+        "topics": [
+          "operations"
+        ],
+        "categories": [
+          "Observability"
+        ],
+        "askAbout": "What they're building for observability",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-komodor",
+        "name": "Komodor",
+        "exhibitorType": "sponsor",
+        "tier": "Gold",
+        "boothNumber": "185",
+        "hall": "1",
+        "zone": "Alpine Overlook",
+        "topics": [
+          "ai",
+          "platform"
+        ],
+        "categories": [
+          "Artificial Intelligence (AI)",
+          "Platform Engineering"
+        ],
+        "askAbout": "What they're building for AI and platform engineering",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-vultr",
+        "name": "Vultr",
+        "exhibitorType": "sponsor",
+        "tier": "Gold",
+        "boothNumber": "186",
+        "hall": "1",
+        "zone": "Alpine Overlook",
+        "topics": [
+          "platform",
+          "ai"
+        ],
+        "categories": [
+          "Platform Engineering",
+          "Artificial Intelligence (AI)"
+        ],
+        "askAbout": "What they're building for platform engineering and AI",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-veeam",
+        "name": "Veeam",
+        "exhibitorType": "sponsor",
+        "tier": "Gold",
+        "boothNumber": "187",
+        "hall": "1",
+        "zone": "Alpine Overlook",
+        "topics": [
+          "data",
+          "platform"
+        ],
+        "categories": [
+          "Storage + Databases",
+          "Platform Engineering"
+        ],
+        "askAbout": "What they're building for storage and databases and platform engineering",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-controltheory",
+        "name": "ControlTheory",
+        "exhibitorType": "sponsor",
+        "tier": "Gold",
+        "boothNumber": "188",
+        "hall": "1",
+        "zone": "Alpine Overlook",
+        "topics": [
+          "operations",
+          "ai"
+        ],
+        "categories": [
+          "Observability",
+          "Artificial Intelligence (AI)"
+        ],
+        "askAbout": "What they're building for observability and AI",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-elastic",
+        "name": "Elastic",
+        "exhibitorType": "sponsor",
+        "tier": "Gold",
+        "boothNumber": "196",
+        "hall": "2",
+        "zone": "Honeycomb Hub",
+        "topics": [
+          "ai",
+          "data",
+          "operations"
+        ],
+        "categories": [
+          "Observability",
+          "Artificial Intelligence (AI)"
+        ],
+        "askAbout": "Hybrid search with semantic_text and Agent Builder",
+        "visitorsNow": 2,
+        "visitedByMe": true
+      },
+      {
+        "id": "outpost-linux-foundation-education",
+        "name": "Linux Foundation Education",
+        "exhibitorType": "sponsor",
+        "tier": "Silver",
+        "boothNumber": "140",
+        "hall": "B",
+        "zone": "Starlight Summit",
+        "topics": [
+          "platform"
+        ],
+        "categories": [
+          "Kubernetes Certified Service Providers + Kubernetes Training Partners"
+        ],
+        "askAbout": "What they're building for Kubernetes services and training",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-diagrid",
+        "name": "Diagrid",
+        "exhibitorType": "sponsor",
+        "tier": "Silver",
+        "boothNumber": "193",
+        "hall": "2",
+        "zone": "Honeycomb Hub",
+        "topics": [
+          "platform"
+        ],
+        "categories": [
+          "Application Development + Developer Experience"
+        ],
+        "askAbout": "What they're building for developer experience",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-signoz",
+        "name": "SigNoz",
+        "exhibitorType": "sponsor",
+        "tier": "Silver",
+        "boothNumber": "198",
+        "hall": "2",
+        "zone": "Honeycomb Hub",
+        "topics": [
+          "operations"
+        ],
+        "categories": [
+          "Observability"
+        ],
+        "askAbout": "What they're building for observability",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-redpanda",
+        "name": "Redpanda",
+        "exhibitorType": "sponsor",
+        "tier": "Silver",
+        "boothNumber": "199",
+        "hall": "2",
+        "zone": "Honeycomb Hub",
+        "topics": [
+          "operations"
+        ],
+        "categories": [
+          "Observability"
+        ],
+        "askAbout": "What they're building for observability",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      }
+    ],
+    "total": 319,
+    "facets": {
+      "types": [
+        {
+          "value": "sponsor",
+          "count": 233
+        },
+        {
+          "value": "project",
+          "count": 86
+        }
+      ],
+      "tiers": [
+        {
+          "value": "Diamond",
+          "count": 9
+        },
+        {
+          "value": "Platinum",
+          "count": 30
+        },
+        {
+          "value": "Gold",
+          "count": 32
+        },
+        {
+          "value": "Silver",
+          "count": 122
+        },
+        {
+          "value": "Start-Up",
+          "count": 33
+        },
+        {
+          "value": "End User",
+          "count": 1
+        },
+        {
+          "value": "Media Partner",
+          "count": 5
+        },
+        {
+          "value": "Exhibitor",
+          "count": 1
+        },
+        {
+          "value": "Project",
+          "count": 86
+        }
+      ],
+      "zones": [
+        {
+          "value": "Cosmic Canyon",
+          "count": 122
+        },
+        {
+          "value": "Honeycomb Hub",
+          "count": 62
+        },
+        {
+          "value": "Amber Hive",
+          "count": 61
+        },
+        {
+          "value": "Alpine Overlook",
+          "count": 32
+        },
+        {
+          "value": "Starlight Summit",
+          "count": 24
+        },
+        {
+          "value": "Astral Peak",
+          "count": 18
+        }
+      ],
+      "topics": [
+        {
+          "value": "platform",
+          "count": 138
+        },
+        {
+          "value": "ai",
+          "count": 82
+        },
+        {
+          "value": "operations",
+          "count": 50
+        },
+        {
+          "value": "security",
+          "count": 44
+        },
+        {
+          "value": "data",
+          "count": 35
+        },
+        {
+          "value": "connectivity",
+          "count": 20
+        },
+        {
+          "value": "other",
+          "count": 18
+        },
+        {
+          "value": "inclusion",
+          "count": 3
+        }
+      ]
+    },
+    "generatedAt": "2026-11-09T21:42:10.512Z"
+  },
+  "variants": {
+    "filtered": {
+      "request": {
+        "type": "sponsor",
+        "topic": "operations",
+        "limit": 60
+      },
+      "status": 200,
+      "response": {
+        "exhibitors": [
+          {
+            "id": "outpost-amazon-web-services",
+            "name": "Amazon Web Services",
+            "exhibitorType": "sponsor",
+            "tier": "Diamond",
+            "boothNumber": "115",
+            "hall": "B",
+            "zone": "Astral Peak",
+            "topics": [
+              "platform",
+              "operations",
+              "ai"
+            ],
+            "categories": [
+              "Artificial Intelligence (AI)",
+              "Platform Engineering",
+              "Observability"
+            ],
+            "askAbout": "How EKS Auto Mode handles node upgrades for you",
+            "visitorsNow": 6
+          },
+          {
+            "id": "outpost-scaleops",
+            "name": "ScaleOps",
+            "exhibitorType": "sponsor",
+            "tier": "Diamond",
+            "boothNumber": "123",
+            "hall": "B",
+            "zone": "Starlight Summit",
+            "topics": [
+              "platform",
+              "ai",
+              "operations"
+            ],
+            "categories": [
+              "Platform Engineering",
+              "Artificial Intelligence (AI)",
+              "Observability"
+            ],
+            "askAbout": "What they're building for platform engineering and AI",
+            "visitorsNow": 0
+          },
+          {
+            "id": "outpost-splunk-a-cisco-company",
+            "name": "Splunk, a Cisco Company",
+            "exhibitorType": "sponsor",
+            "tier": "Platinum",
+            "boothNumber": "105",
+            "hall": "A",
+            "zone": "Astral Peak",
+            "topics": [
+              "operations",
+              "ai"
+            ],
+            "categories": [
+              "Observability",
+              "Artificial Intelligence (AI)"
+            ],
+            "askAbout": "What they're building for observability and AI",
+            "visitorsNow": 0
+          },
+          {
+            "id": "outpost-clickhouse",
+            "name": "ClickHouse",
+            "exhibitorType": "sponsor",
+            "tier": "Platinum",
+            "boothNumber": "108",
+            "hall": "B",
+            "zone": "Astral Peak",
+            "topics": [
+              "operations",
+              "data"
+            ],
+            "categories": [
+              "Observability",
+              "Storage + Databases"
+            ],
+            "askAbout": "What they're building for observability and storage and databases",
+            "visitorsNow": 0
+          },
+          {
+            "id": "outpost-groundcover",
+            "name": "groundcover",
+            "exhibitorType": "sponsor",
+            "tier": "Platinum",
+            "boothNumber": "111",
+            "hall": "A",
+            "zone": "Astral Peak",
+            "topics": [
+              "operations",
+              "ai"
+            ],
+            "categories": [
+              "Observability",
+              "Artificial Intelligence (AI)"
+            ],
+            "askAbout": "What they're building for observability and AI",
+            "visitorsNow": 0
+          },
+          {
+            "id": "outpost-dash0",
+            "name": "Dash0",
+            "exhibitorType": "sponsor",
+            "tier": "Platinum",
+            "boothNumber": "134",
+            "hall": "B",
+            "zone": "Starlight Summit",
+            "topics": [
+              "operations"
+            ],
+            "categories": [
+              "Observability",
+              "Application Development + Developer Experience"
+            ],
+            "askAbout": "OpenTelemetry-native observability and tracing a request end to end",
+            "visitorsNow": 3
+          },
+          {
+            "id": "outpost-datadog",
+            "name": "Datadog",
+            "exhibitorType": "sponsor",
+            "tier": "Platinum",
+            "boothNumber": "152",
+            "hall": "A",
+            "zone": "Astral Peak",
+            "topics": [
+              "operations",
+              "data"
+            ],
+            "categories": [
+              "Observability",
+              "Artificial Intelligence (AI)"
+            ],
+            "askAbout": "Watching Kubernetes cost and performance together",
+            "visitorsNow": 2
+          },
+          {
+            "id": "outpost-ibm",
+            "name": "IBM",
+            "exhibitorType": "sponsor",
+            "tier": "Platinum",
+            "boothNumber": "172",
+            "hall": "1",
+            "zone": "Alpine Overlook",
+            "topics": [
+              "ai",
+              "operations"
+            ],
+            "categories": [
+              "Artificial Intelligence (AI)",
+              "Observability"
+            ],
+            "askAbout": "What they're building for AI and observability",
+            "visitorsNow": 0
+          },
+          {
+            "id": "outpost-new-relic",
+            "name": "New Relic",
+            "exhibitorType": "sponsor",
+            "tier": "Gold",
+            "boothNumber": "159",
+            "hall": "1",
+            "zone": "Alpine Overlook",
+            "topics": [
+              "operations",
+              "platform"
+            ],
+            "categories": [
+              "Observability",
+              "Platform Engineering"
+            ],
+            "askAbout": "What they're building for observability and platform engineering",
+            "visitorsNow": 0
+          },
+          {
+            "id": "outpost-resolve-ai",
+            "name": "Resolve AI",
+            "exhibitorType": "sponsor",
+            "tier": "Gold",
+            "boothNumber": "161",
+            "hall": "1",
+            "zone": "Alpine Overlook",
+            "topics": [
+              "ai",
+              "operations"
+            ],
+            "categories": [
+              "Artificial Intelligence (AI)",
+              "Observability"
+            ],
+            "askAbout": "What they're building for AI and observability",
+            "visitorsNow": 0
+          },
+          {
+            "id": "outpost-openobserve",
+            "name": "OpenObserve",
+            "exhibitorType": "sponsor",
+            "tier": "Gold",
+            "boothNumber": "167",
+            "hall": "1",
+            "zone": "Alpine Overlook",
+            "topics": [
+              "operations",
+              "platform"
+            ],
+            "categories": [
+              "Observability",
+              "Platform Engineering"
+            ],
+            "askAbout": "What they're building for observability and platform engineering",
+            "visitorsNow": 0
+          },
+          {
+            "id": "outpost-opensearch",
+            "name": "OpenSearch",
+            "exhibitorType": "sponsor",
+            "tier": "Gold",
+            "boothNumber": "180",
+            "hall": "1",
+            "zone": "Alpine Overlook",
+            "topics": [
+              "ai",
+              "operations"
+            ],
+            "categories": [
+              "Artificial Intelligence (AI)",
+              "Observability"
+            ],
+            "askAbout": "What they're building for AI and observability",
+            "visitorsNow": 0
+          },
+          {
+            "id": "outpost-palo-alto-networks",
+            "name": "Palo Alto Networks",
+            "exhibitorType": "sponsor",
+            "tier": "Gold",
+            "boothNumber": "181",
+            "hall": "1",
+            "zone": "Alpine Overlook",
+            "topics": [
+              "operations"
+            ],
+            "categories": [
+              "Observability"
+            ],
+            "askAbout": "What they're building for observability",
+            "visitorsNow": 0
+          },
+          {
+            "id": "outpost-dynatrace",
+            "name": "Dynatrace",
+            "exhibitorType": "sponsor",
+            "tier": "Gold",
+            "boothNumber": "184",
+            "hall": "1",
+            "zone": "Alpine Overlook",
+            "topics": [
+              "platform",
+              "operations",
+              "ai"
+            ],
+            "categories": [
+              "Application Development + Developer Experience",
+              "Observability",
+              "Artificial Intelligence (AI)"
+            ],
+            "askAbout": "What they're building for developer experience and observability",
+            "visitorsNow": 0
+          },
+          {
+            "id": "outpost-controltheory",
+            "name": "ControlTheory",
+            "exhibitorType": "sponsor",
+            "tier": "Gold",
+            "boothNumber": "188",
+            "hall": "1",
+            "zone": "Alpine Overlook",
+            "topics": [
+              "operations",
+              "ai"
+            ],
+            "categories": [
+              "Observability",
+              "Artificial Intelligence (AI)"
+            ],
+            "askAbout": "What they're building for observability and AI",
+            "visitorsNow": 0
+          },
+          {
+            "id": "outpost-elastic",
+            "name": "Elastic",
+            "exhibitorType": "sponsor",
+            "tier": "Gold",
+            "boothNumber": "196",
+            "hall": "2",
+            "zone": "Honeycomb Hub",
+            "topics": [
+              "ai",
+              "data",
+              "operations"
+            ],
+            "categories": [
+              "Observability",
+              "Artificial Intelligence (AI)"
+            ],
+            "askAbout": "Hybrid search with semantic_text and Agent Builder",
+            "visitorsNow": 2
+          },
+          {
+            "id": "outpost-signoz",
+            "name": "SigNoz",
+            "exhibitorType": "sponsor",
+            "tier": "Silver",
+            "boothNumber": "198",
+            "hall": "2",
+            "zone": "Honeycomb Hub",
+            "topics": [
+              "operations"
+            ],
+            "categories": [
+              "Observability"
+            ],
+            "askAbout": "What they're building for observability",
+            "visitorsNow": 0
+          },
+          {
+            "id": "outpost-redpanda",
+            "name": "Redpanda",
+            "exhibitorType": "sponsor",
+            "tier": "Silver",
+            "boothNumber": "199",
+            "hall": "2",
+            "zone": "Honeycomb Hub",
+            "topics": [
+              "operations"
+            ],
+            "categories": [
+              "Observability"
+            ],
+            "askAbout": "What they're building for observability",
+            "visitorsNow": 0
+          },
+          {
+            "id": "outpost-honeycomb",
+            "name": "Honeycomb",
+            "exhibitorType": "sponsor",
+            "tier": "Silver",
+            "boothNumber": "203",
+            "hall": "2",
+            "zone": "Honeycomb Hub",
+            "topics": [
+              "operations"
+            ],
+            "categories": [
+              "Observability"
+            ],
+            "askAbout": "What they're building for observability",
+            "visitorsNow": 0
+          },
+          {
+            "id": "outpost-cribl",
+            "name": "Cribl",
+            "exhibitorType": "sponsor",
+            "tier": "Silver",
+            "boothNumber": "205",
+            "hall": "2",
+            "zone": "Honeycomb Hub",
+            "topics": [
+              "operations"
+            ],
+            "categories": [
+              "Observability"
+            ],
+            "askAbout": "What they're building for observability",
+            "visitorsNow": 0
+          },
+          {
+            "id": "outpost-crash-override",
+            "name": "Crash Override",
+            "exhibitorType": "sponsor",
+            "tier": "Silver",
+            "boothNumber": "211",
+            "hall": "2",
+            "zone": "Honeycomb Hub",
+            "topics": [
+              "operations"
+            ],
+            "categories": [
+              "Observability"
+            ],
+            "askAbout": "What they're building for observability",
+            "visitorsNow": 0
+          },
+          {
+            "id": "outpost-grafana-labs",
+            "name": "Grafana Labs",
+            "exhibitorType": "sponsor",
+            "tier": "Silver",
+            "boothNumber": "214",
+            "hall": "2",
+            "zone": "Honeycomb Hub",
+            "topics": [
+              "operations"
+            ],
+            "categories": [
+              "Observability"
+            ],
+            "askAbout": "What they're building for observability",
+            "visitorsNow": 3
+          },
+          {
+            "id": "outpost-sentry",
+            "name": "Sentry",
+            "exhibitorType": "sponsor",
+            "tier": "Silver",
+            "boothNumber": "217",
+            "hall": "2",
+            "zone": "Honeycomb Hub",
+            "topics": [
+              "operations"
+            ],
+            "categories": [
+              "Observability"
+            ],
+            "askAbout": "What they're building for observability",
+            "visitorsNow": 0
+          },
+          {
+            "id": "outpost-better-stack",
+            "name": "Better Stack",
+            "exhibitorType": "sponsor",
+            "tier": "Silver",
+            "boothNumber": "228",
+            "hall": "2",
+            "zone": "Honeycomb Hub",
+            "topics": [
+              "operations"
+            ],
+            "categories": [
+              "Observability"
+            ],
+            "askAbout": "What they're building for observability",
+            "visitorsNow": 0
+          },
+          {
+            "id": "outpost-attribute-by-doit",
+            "name": "Attribute by DoiT",
+            "exhibitorType": "sponsor",
+            "tier": "Silver",
+            "boothNumber": "236",
+            "hall": "2",
+            "zone": "Honeycomb Hub",
+            "topics": [
+              "operations"
+            ],
+            "categories": [
+              "Observability"
+            ],
+            "askAbout": "What they're building for observability",
+            "visitorsNow": 0
+          },
+          {
+            "id": "outpost-edge-delta",
+            "name": "Edge Delta",
+            "exhibitorType": "sponsor",
+            "tier": "Silver",
+            "boothNumber": "246",
+            "hall": "2",
+            "zone": "Honeycomb Hub",
+            "topics": [
+              "operations"
+            ],
+            "categories": [
+              "Observability"
+            ],
+            "askAbout": "What they're building for observability",
+            "visitorsNow": 0
+          },
+          {
+            "id": "outpost-bindplane",
+            "name": "Bindplane",
+            "exhibitorType": "sponsor",
+            "tier": "Silver",
+            "boothNumber": "253",
+            "hall": "2",
+            "zone": "Honeycomb Hub",
+            "topics": [
+              "operations"
+            ],
+            "categories": [
+              "Observability"
+            ],
+            "askAbout": "What they're building for observability",
+            "visitorsNow": 0
+          },
+          {
+            "id": "outpost-greptime",
+            "name": "Greptime",
+            "exhibitorType": "sponsor",
+            "tier": "Silver",
+            "boothNumber": "262",
+            "hall": "3",
+            "zone": "Amber Hive",
+            "topics": [
+              "operations"
+            ],
+            "categories": [
+              "Observability"
+            ],
+            "askAbout": "What they're building for observability",
+            "visitorsNow": 0
+          },
+          {
+            "id": "outpost-sigi",
+            "name": "Sigi",
+            "exhibitorType": "sponsor",
+            "tier": "Silver",
+            "boothNumber": "266",
+            "hall": "3",
+            "zone": "Amber Hive",
+            "topics": [
+              "operations"
+            ],
+            "categories": [
+              "Observability"
+            ],
+            "askAbout": "What they're building for observability",
+            "visitorsNow": 0
+          },
+          {
+            "id": "outpost-dataagent",
+            "name": "DataAgent",
+            "exhibitorType": "sponsor",
+            "tier": "Silver",
+            "boothNumber": "268",
+            "hall": "3",
+            "zone": "Amber Hive",
+            "topics": [
+              "operations"
+            ],
+            "categories": [
+              "Observability"
+            ],
+            "askAbout": "What they're building for observability",
+            "visitorsNow": 0
+          },
+          {
+            "id": "outpost-pump",
+            "name": "Pump",
+            "exhibitorType": "sponsor",
+            "tier": "Silver",
+            "boothNumber": "287",
+            "hall": "3",
+            "zone": "Amber Hive",
+            "topics": [
+              "operations"
+            ],
+            "categories": [
+              "Observability"
+            ],
+            "askAbout": "What they're building for observability",
+            "visitorsNow": 0
+          },
+          {
+            "id": "outpost-grepr",
+            "name": "Grepr",
+            "exhibitorType": "sponsor",
+            "tier": "Silver",
+            "boothNumber": "291",
+            "hall": "3",
+            "zone": "Amber Hive",
+            "topics": [
+              "operations"
+            ],
+            "categories": [
+              "Observability"
+            ],
+            "askAbout": "What they're building for observability",
+            "visitorsNow": 0
+          },
+          {
+            "id": "outpost-squaredup",
+            "name": "SquaredUp",
+            "exhibitorType": "sponsor",
+            "tier": "Silver",
+            "boothNumber": "295",
+            "hall": "3",
+            "zone": "Amber Hive",
+            "topics": [
+              "operations"
+            ],
+            "categories": [
+              "Observability"
+            ],
+            "askAbout": "What they're building for observability",
+            "visitorsNow": 0
+          },
+          {
+            "id": "outpost-observe-by-snowflake",
+            "name": "Observe by Snowflake",
+            "exhibitorType": "sponsor",
+            "tier": "Silver",
+            "boothNumber": "300",
+            "hall": "3",
+            "zone": "Amber Hive",
+            "topics": [
+              "operations"
+            ],
+            "categories": [
+              "Observability"
+            ],
+            "askAbout": "What they're building for observability",
+            "visitorsNow": 0
+          },
+          {
+            "id": "outpost-coralogix",
+            "name": "Coralogix",
+            "exhibitorType": "sponsor",
+            "tier": "Silver",
+            "boothNumber": "316",
+            "hall": "3",
+            "zone": "Amber Hive",
+            "topics": [
+              "operations"
+            ],
+            "categories": [
+              "Observability"
+            ],
+            "askAbout": "What they're building for observability",
+            "visitorsNow": 0
+          },
+          {
+            "id": "outpost-cloudchipr",
+            "name": "Cloudchipr",
+            "exhibitorType": "sponsor",
+            "tier": "Start-Up",
+            "boothNumber": "331",
+            "hall": "4-5",
+            "zone": "Cosmic Canyon",
+            "topics": [
+              "operations"
+            ],
+            "categories": [
+              "Observability"
+            ],
+            "askAbout": "What they're building for observability",
+            "visitorsNow": 0
+          },
+          {
+            "id": "outpost-causely",
+            "name": "Causely",
+            "exhibitorType": "sponsor",
+            "tier": "Start-Up",
+            "boothNumber": "354",
+            "hall": "4-5",
+            "zone": "Cosmic Canyon",
+            "topics": [
+              "operations"
+            ],
+            "categories": [
+              "Observability"
+            ],
+            "askAbout": "What they're building for observability",
+            "visitorsNow": 0
+          },
+          {
+            "id": "outpost-ollygarden",
+            "name": "OllyGarden",
+            "exhibitorType": "sponsor",
+            "tier": "Start-Up",
+            "boothNumber": "356",
+            "hall": "4-5",
+            "zone": "Cosmic Canyon",
+            "topics": [
+              "operations"
+            ],
+            "categories": [
+              "Observability"
+            ],
+            "askAbout": "What they're building for observability",
+            "visitorsNow": 0
+          },
+          {
+            "id": "outpost-effodio",
+            "name": "Effodio",
+            "exhibitorType": "sponsor",
+            "tier": "Start-Up",
+            "boothNumber": "375",
+            "hall": "4-5",
+            "zone": "Cosmic Canyon",
+            "topics": [
+              "operations"
+            ],
+            "categories": [
+              "Observability"
+            ],
+            "askAbout": "What they're building for observability",
+            "visitorsNow": 0
+          }
+        ],
+        "total": 39,
+        "facets": {
+          "types": [
+            {
+              "value": "sponsor",
+              "count": 39
+            },
+            {
+              "value": "project",
+              "count": 11
+            }
+          ],
+          "tiers": [
+            {
+              "value": "Diamond",
+              "count": 2
+            },
+            {
+              "value": "Platinum",
+              "count": 6
+            },
+            {
+              "value": "Gold",
+              "count": 8
+            },
+            {
+              "value": "Silver",
+              "count": 19
+            },
+            {
+              "value": "Start-Up",
+              "count": 4
+            }
+          ],
+          "zones": [
+            {
+              "value": "Honeycomb Hub",
+              "count": 12
+            },
+            {
+              "value": "Alpine Overlook",
+              "count": 8
+            },
+            {
+              "value": "Amber Hive",
+              "count": 8
+            },
+            {
+              "value": "Astral Peak",
+              "count": 5
+            },
+            {
+              "value": "Cosmic Canyon",
+              "count": 4
+            },
+            {
+              "value": "Starlight Summit",
+              "count": 2
+            }
+          ],
+          "topics": [
+            {
+              "value": "platform",
+              "count": 98
+            },
+            {
+              "value": "ai",
+              "count": 73
+            },
+            {
+              "value": "operations",
+              "count": 39
+            },
+            {
+              "value": "security",
+              "count": 30
+            },
+            {
+              "value": "data",
+              "count": 28
+            },
+            {
+              "value": "other",
+              "count": 18
+            },
+            {
+              "value": "connectivity",
+              "count": 11
+            }
+          ]
+        },
+        "generatedAt": "2026-11-09T21:42:10.512Z"
+      }
+    },
+    "empty": {
+      "request": {
+        "query": "mainframe cobol batch jobs"
+      },
+      "status": 200,
+      "response": {
+        "exhibitors": [],
+        "total": 0,
+        "facets": {
+          "types": [],
+          "tiers": [],
+          "zones": [],
+          "topics": []
+        },
+        "generatedAt": "2026-11-09T21:42:10.512Z"
+      }
+    }
+  }
+}

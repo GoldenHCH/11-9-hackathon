@@ -1,0 +1,9 @@
+:host {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+.pixel-face {
+  border: 2px solid var(--app-theme--border);
+  image-rendering: pixelated;
+}

@@ -1,0 +1,34 @@
+@if (bars.length === 0) {
+  <p class="hour-empty">No visits yet today.</p>
+} @else {
+  <div class="hour-scroll" tabindex="0" role="region" aria-label="Visits by hour chart">
+    <div class="hour-chart" role="img" [attr.aria-label]="summary">
+      @for (bar of bars; track $index) {
+        <div class="hour-column" aria-hidden="true">
+          <span class="hour-value">{{ bar.visits }}</span>
+          <div class="hour-track">
+            <div class="hour-fill" [style.height.%]="bar.percent"></div>
+          </div>
+          <span class="hour-label">{{ bar.label }}</span>
+        </div>
+      }
+    </div>
+  </div>
+  <table class="app-visually-hidden">
+    <caption>Visits by hour, Mountain time</caption>
+    <thead>
+      <tr>
+        <th scope="col">Hour</th>
+        <th scope="col">Visits</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (bar of bars; track $index) {
+        <tr>
+          <th scope="row">{{ bar.label }}</th>
+          <td>{{ bar.visits }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+}

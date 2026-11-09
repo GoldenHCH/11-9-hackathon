@@ -5,6 +5,7 @@ import {
   CheckInRejection,
   CheckInStatus,
   DeclineReason,
+  ExhibitorType,
   IsoDateString,
   ItineraryItemKind,
   LeaderboardBoard,
@@ -53,6 +54,16 @@ export interface ILocation {
   askAbout?: string;
   topics?: string[];
   hasScreen?: boolean;
+  exhibitorType?: ExhibitorType;
+  categories?: string[];
+  hall?: string;
+  mapPosition?: IMapPoint;
+  schedule?: string;
+}
+
+export interface IMapPoint {
+  x: number;
+  y: number;
 }
 
 export interface ISpeaker {
@@ -553,6 +564,153 @@ export interface IOrganizerStats {
   generatedAt: IsoDateString;
 }
 
+export interface IFacetCount {
+  value: string;
+  count: number;
+}
+
+export interface IExhibitorCard {
+  id: string;
+  name: string;
+  exhibitorType: ExhibitorType;
+  tier: string;
+  boothNumber: string;
+  hall?: string;
+  zone?: string;
+  topics: Track[];
+  categories: string[];
+  askAbout?: string;
+  visitorsNow: number;
+  visitedByMe?: boolean;
+}
+
+export interface IExhibitorDetail extends IExhibitorCard {
+  building: string;
+  level: string;
+  description?: string;
+  schedule?: string;
+  mapPosition?: IMapPoint;
+}
+
+export interface IExhibitorDirectory {
+  exhibitors: IExhibitorCard[];
+  total: number;
+  facets: {
+    types: IFacetCount[];
+    tiers: IFacetCount[];
+    zones: IFacetCount[];
+    topics: IFacetCount[];
+  };
+  generatedAt: IsoDateString;
+}
+
+export interface IExhibitorTalk {
+  id: string;
+  title: string;
+  start: IsoDateString;
+  end: IsoDateString;
+  where: string;
+  speakers: string[];
+  track: Track;
+}
+
+export interface IExhibitorLive {
+  visitorsNow: number;
+  visitsToday: number;
+  uniqueVisitorsToday: number;
+}
+
+export interface IExhibitorMe {
+  visited: boolean;
+  lastVisitAt?: IsoDateString;
+  questId?: string;
+  questStatus?: QuestStatus;
+}
+
+export interface IExhibitorPage {
+  exhibitor: IExhibitorDetail;
+  live: IExhibitorLive;
+  talks: IExhibitorTalk[];
+  playersHere: IPublicPlayer[];
+  nearby: IExhibitorCard[];
+  me?: IExhibitorMe;
+  expoMapUrl: string;
+  generatedAt: IsoDateString;
+}
+
+export interface IHourCount {
+  hour: IsoDateString;
+  visits: number;
+}
+
+export interface IExhibitorVisitor {
+  player: IPublicPlayer;
+  at: IsoDateString;
+  firstTimer: boolean;
+}
+
+export interface IExhibitorVisits {
+  now: number;
+  today: number;
+  uniqueToday: number;
+  conference: number;
+  uniqueConference: number;
+  firstTimersToday: number;
+}
+
+export interface IExhibitorRank {
+  position: number;
+  of: number;
+}
+
+export interface IExhibitorDashboard {
+  exhibitor: IExhibitorDetail;
+  scanUrl: string;
+  publicPageUrl: string;
+  visits: IExhibitorVisits;
+  byHour: IHourCount[];
+  visitorTopics: IFacetCount[];
+  visitorLevels: IFacetCount[];
+  recentVisitors: IExhibitorVisitor[];
+  hereNow: IPublicPlayer[];
+  quests: Partial<Record<QuestStatus, number>>;
+  rank: IExhibitorRank | null;
+  generatedAt: IsoDateString;
+}
+
+export interface IExhibitorStatRow {
+  exhibitor: IExhibitorCard;
+  visitsToday: number;
+  uniqueToday: number;
+  questsCompleted: number;
+  staffUrl: string;
+  scanUrl: string;
+}
+
+export interface IExhibitorGroupStat {
+  value: string;
+  exhibitors: number;
+  visits: number;
+}
+
+export interface IAdminExhibitorTotals {
+  total: number;
+  sponsors: number;
+  projects: number;
+  visitedToday: number;
+  visitsToday: number;
+  uniqueVisitorsToday: number;
+}
+
+export interface IAdminOverview {
+  stats: IOrganizerStats;
+  exhibitors: IAdminExhibitorTotals;
+  byTier: IExhibitorGroupStat[];
+  byZone: IExhibitorGroupStat[];
+  table: IExhibitorStatRow[];
+  generatedAt: IsoDateString;
+}
+
 export interface IAttendeeInput {
   attendeeId: string;
 }
@@ -671,6 +829,32 @@ export interface IOrganizerStatsInput {
   since?: IsoDateString;
 }
 
+export interface IListExhibitorsInput {
+  query?: string;
+  type?: ExhibitorType;
+  tier?: string;
+  zone?: string;
+  topic?: Track;
+  attendeeId?: string;
+  limit?: number;
+  offset?: number;
+}
+
+export interface IGetExhibitorInput {
+  outpostId: string;
+  attendeeId?: string;
+}
+
+export interface IExhibitorDashboardInput {
+  outpostId: string;
+  key: string;
+}
+
+export interface IAdminOverviewInput {
+  key: string;
+  since?: IsoDateString;
+}
+
 export interface IToolContracts {
   sign_up: { input: ISignUpInput; output: ISignUpResult };
   get_profile: { input: IAttendeeInput; output: IProfile };
@@ -695,6 +879,10 @@ export interface IToolContracts {
   inventory: { input: IAttendeeInput; output: IInventory };
   world: { input: IWorldInput; output: IWorld };
   organizer_stats: { input: IOrganizerStatsInput; output: IOrganizerStats };
+  list_exhibitors: { input: IListExhibitorsInput; output: IExhibitorDirectory };
+  get_exhibitor: { input: IGetExhibitorInput; output: IExhibitorPage };
+  exhibitor_dashboard: { input: IExhibitorDashboardInput; output: IExhibitorDashboard };
+  admin_overview: { input: IAdminOverviewInput; output: IAdminOverview };
 }
 
 export interface IToolInfo {

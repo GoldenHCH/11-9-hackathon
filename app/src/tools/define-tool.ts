@@ -29,6 +29,7 @@ const spanAttributeKeys = {
   meetId: 'kubequest.intro.id',
   questId: 'kubequest.quest.id',
   partnerId: 'kubequest.partner.id',
+  outpostId: 'kubequest.outpost.id',
 } as const;
 
 function inputAttributes(input: unknown): Attributes {
@@ -81,7 +82,7 @@ export function defineTool<TName extends ToolName>(definition: IToolDefinition<T
   }
 
   function info(): IToolInfo {
-    let inputSchema: unknown = {};
+    let inputSchema: unknown;
 
     try {
       inputSchema = z.toJSONSchema(definition.input, { unrepresentable: 'any' });

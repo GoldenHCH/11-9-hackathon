@@ -1,0 +1,53 @@
+.app-qr {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.app-qr-image,
+.app-qr-placeholder {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  background: #fff;
+  border: 2px solid var(--app-theme--border);
+  image-rendering: pixelated;
+  box-sizing: border-box;
+}
+
+.app-qr-fallback {
+  margin: 0;
+  padding: 16px;
+  border: 2px dashed var(--app-theme--border);
+  color: var(--app-theme--ink-muted);
+}
+
+@media print {
+  body:has(.app-qr-print-target) * {
+    visibility: hidden;
+  }
+
+  body:has(.app-qr-print-target) .app-qr-print-target,
+  body:has(.app-qr-print-target) .app-qr-print-target * {
+    visibility: visible;
+  }
+
+  body:has(.app-qr-print-target) .app-qr-print-target {
+    position: fixed;
+    inset: 0;
+    margin: 0 auto;
+    padding: 24px;
+    max-width: 640px;
+    box-shadow: none;
+    border: none;
+    background: #fff;
+  }
+
+  body:has(.app-qr-print-target) .app-qr-print-target .app-qr {
+    max-width: 480px !important;
+  }
+
+  body:has(.app-qr-print-target) .app-qr-no-print {
+    display: none !important;
+  }
+}

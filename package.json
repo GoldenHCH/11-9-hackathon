@@ -19,7 +19,8 @@
     "typecheck": "tsc -b shared app && tsc -p scripts/tsconfig.json --noEmit",
     "lint": "eslint .",
     "index-all": "tsx scripts/index-all.ts",
-    "fixtures": "tsx scripts/build-fixtures.ts"
+    "fixtures": "tsx scripts/build-fixtures.ts",
+    "access-links": "tsx scripts/print-access-links.ts"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",

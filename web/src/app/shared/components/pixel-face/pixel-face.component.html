@@ -1,0 +1,14 @@
+<svg
+  class="pixel-face"
+  role="img"
+  [attr.aria-label]="'@' + handle"
+  [attr.width]="size"
+  [attr.height]="size"
+  viewBox="0 0 8 8"
+  shape-rendering="crispEdges"
+>
+  <rect width="8" height="8" fill="#fff"></rect>
+  @for (pixel of pixels; track $index) {
+    <rect [attr.x]="pixel.x" [attr.y]="pixel.y" width="1" height="1" [attr.fill]="color"></rect>
+  }
+</svg>

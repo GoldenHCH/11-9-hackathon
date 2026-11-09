@@ -1,9 +1,13 @@
 import { ToolName } from '../types/kubequest.types';
+import { adminOverviewTool } from './admin-overview.tool';
 import { bossStateTool } from './boss-state.tool';
 import { checkInTool } from './check-in.tool';
+import { exhibitorDashboardTool } from './exhibitor-dashboard.tool';
+import { getExhibitorTool } from './get-exhibitor.tool';
 import { getProfileTool } from './get-profile.tool';
 import { inventoryTool } from './inventory.tool';
 import { leaderboardTool } from './leaderboard.tool';
+import { listExhibitorsTool } from './list-exhibitors.tool';
 import { listMeetsTool } from './list-meets.tool';
 import { makeQuestTool } from './make-quest.tool';
 import { organizerStatsTool } from './organizer-stats.tool';
@@ -48,6 +52,10 @@ export const toolRegistry = {
   inventory: inventoryTool,
   world: worldTool,
   organizer_stats: organizerStatsTool,
+  list_exhibitors: listExhibitorsTool,
+  get_exhibitor: getExhibitorTool,
+  exhibitor_dashboard: exhibitorDashboardTool,
+  admin_overview: adminOverviewTool,
 } satisfies { [TName in ToolName]: IRegisteredTool<TName> };
 
 export function findTool(name: string): IRegisteredTool | undefined {

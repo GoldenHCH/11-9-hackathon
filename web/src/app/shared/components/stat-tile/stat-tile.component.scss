@@ -1,0 +1,43 @@
+:host {
+  display: block;
+  min-width: 0;
+}
+
+.stat-tile {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: var(--app-theme--shadow-small);
+}
+
+.stat-tile-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--app-theme--ink-muted);
+}
+
+.stat-tile-icon {
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+}
+
+.stat-tile-value {
+  margin: 0;
+  font-size: 26px;
+  line-height: 1.15;
+  color: var(--app-theme--ink);
+  overflow-wrap: anywhere;
+}
+
+.stat-tile-detail {
+  margin: 0;
+  font-size: 13px;
+  color: var(--app-theme--ink-muted);
+}

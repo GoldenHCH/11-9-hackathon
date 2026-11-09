@@ -10,6 +10,7 @@ const unindexedKeyword: estypes.MappingProperty = { type: 'keyword', index: fals
 const text: estypes.MappingProperty = { type: 'text' };
 const date: estypes.MappingProperty = { type: 'date' };
 const integer: estypes.MappingProperty = { type: 'integer' };
+const float: estypes.MappingProperty = { type: 'float' };
 const bool: estypes.MappingProperty = { type: 'boolean' };
 const geoPoint: estypes.MappingProperty = { type: 'geo_point' };
 const opaqueObject: estypes.MappingProperty = { type: 'object', enabled: false };
@@ -99,6 +100,11 @@ export function buildIndexMappings(inferenceId: string): Record<IndexName, Prope
       askAbout: text,
       topics: keyword,
       hasScreen: bool,
+      exhibitorType: keyword,
+      categories: keyword,
+      hall: keyword,
+      schedule: text,
+      mapPosition: { properties: { x: float, y: float } },
       searchText: semanticText(inferenceId),
     },
     [indexNames.XP_EVENTS]: {

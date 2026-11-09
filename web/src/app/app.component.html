@@ -4,23 +4,57 @@
   <mat-progress-bar class="loading-bar" mode="indeterminate" aria-label="Loading"></mat-progress-bar>
 }
 
+@let activeRole = activeRole$ | async;
+
 @if ((isFullScreen$ | async) === false) {
-  <header class="brand-bar">
-    <a class="brand" routerLink="/map" aria-label="KubeQuest home">
+  <header class="brand-bar" [class.brand-bar--staff]="activeRole?.role !== 'attendee'">
+    <a class="brand" [routerLink]="activeRole?.path ?? '/map'" aria-label="KubeQuest home">
       <span class="brand-cube" aria-hidden="true"></span>
       <span class="brand-name app-pixel">KubeQuest</span>
+      @if (activeRole && activeRole.role !== 'attendee') {
+        <span class="role-chip">{{ activeRole.label }}</span>
+      }
     </a>
-    <a class="brand-me" routerLink="/signup" aria-label="Your profile">
-      <mat-icon>account_circle</mat-icon>
-    </a>
+    <div class="brand-actions">
+      <button
+        mat-button
+        type="button"
+        class="role-switch"
+        [matMenuTriggerFor]="roleMenu"
+        [attr.aria-label]="'Switch view. Current view: ' + (activeRole?.label ?? 'Attendee')"
+      >
+        <span class="btn-content">
+          <mat-icon aria-hidden="true">{{ activeRole?.icon ?? 'person' }}</mat-icon>
+          <span class="role-switch-label">{{ activeRole?.label ?? 'Attendee' }}</span>
+          <mat-icon aria-hidden="true">expand_more</mat-icon>
+        </span>
+      </button>
+      @if (activeRole?.role === 'attendee') {
+        <a class="brand-me" routerLink="/signup" aria-label="Your profile">
+          <mat-icon>account_circle</mat-icon>
+        </a>
+      }
+    </div>
   </header>
+
+  <mat-menu #roleMenu="matMenu" xPosition="before">
+    @for (view of roles; track view.role) {
+      <a mat-menu-item [routerLink]="view.path" [attr.aria-current]="view.role === activeRole?.role ? 'true' : null">
+        <mat-icon aria-hidden="true">{{ view.icon }}</mat-icon>
+        <span class="role-menu-text">
+          <span class="role-menu-label">{{ view.label }}</span>
+          <span class="role-menu-description">{{ view.description }}</span>
+        </span>
+      </a>
+    }
+  </mat-menu>
 }
 
-<main id="main" class="main" tabindex="-1">
+<main id="main" class="main" [class.main--staff]="activeRole?.role !== 'attendee'" tabindex="-1">
   <router-outlet></router-outlet>
 </main>
 
-@if ((isFullScreen$ | async) === false) {
+@if ((isFullScreen$ | async) === false && activeRole?.role === 'attendee') {
   <nav class="bottom-nav" aria-label="Main">
     @for (tab of tabs; track tab.path) {
       <a
