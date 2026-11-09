@@ -13,4 +13,4 @@ resources:
 images:
   - name: app
     newName: ghcr.io/goldenhch/11-9-hackathon
-    newTag: "afc06c5"
+    newTag: "a83b67f"
