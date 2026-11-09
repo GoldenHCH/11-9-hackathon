@@ -151,6 +151,8 @@ export function buildIndexMappings(inferenceId: string): Record<IndexName, Prope
       metAt: date,
       cancelledBy: keyword,
       expiresAt: date,
+      liveState: keyword,
+      liveCard: opaqueObject,
     },
     [indexNames.QUESTS]: {
       id: keyword,

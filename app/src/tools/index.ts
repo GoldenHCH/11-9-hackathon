@@ -9,6 +9,7 @@ import { inventoryTool } from './inventory.tool';
 import { leaderboardTool } from './leaderboard.tool';
 import { listExhibitorsTool } from './list-exhibitors.tool';
 import { listMeetsTool } from './list-meets.tool';
+import { pendingMeetRequestsTool } from './pending-meet-requests.tool';
 import { makeQuestTool } from './make-quest.tool';
 import { organizerStatsTool } from './organizer-stats.tool';
 import { proposeMeetTool } from './propose-meet.tool';
@@ -72,6 +73,7 @@ export const toolRegistry = {
   propose_meet: proposeMeetTool,
   respond_meet: respondMeetTool,
   list_meets: listMeetsTool,
+  pending_meet_requests: pendingMeetRequestsTool,
   leaderboard: leaderboardTool,
   inventory: inventoryTool,
   world: worldTool,

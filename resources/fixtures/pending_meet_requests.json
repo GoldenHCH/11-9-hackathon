@@ -1,0 +1,43 @@
+{
+  "tool": "pending_meet_requests",
+  "endpoint": "POST /api/tools/pending_meet_requests",
+  "request": {
+    "attendeeId": "att-podwrangler"
+  },
+  "status": 200,
+  "response": {
+    "requests": [
+      {
+        "meetId": "meet-4d7c25c123e592d61a6e986e",
+        "requester": {
+          "publicId": "pl_4451cf61b8914498",
+          "handle": "verify93279",
+          "faceSeed": "cbd1b4ac2fe4ff69",
+          "level": 1,
+          "levelName": "Pod",
+          "headline": "Running GPU inference on Kubernetes with autoscaling"
+        },
+        "sharedTopics": [
+          "gpu",
+          "autoscaling"
+        ],
+        "why": "You both work on gpu and autoscaling.",
+        "expiresAt": "2026-11-09T20:20:43.391Z",
+        "secondsLeft": 24
+      }
+    ],
+    "serverTime": "2026-11-09T20:20:19.391Z"
+  },
+  "variants": {
+    "none": {
+      "request": {
+        "attendeeId": "att-podwrangler"
+      },
+      "status": 200,
+      "response": {
+        "requests": [],
+        "serverTime": "2026-11-09T20:21:00.000Z"
+      }
+    }
+  }
+}

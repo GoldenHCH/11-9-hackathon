@@ -77,6 +77,8 @@ There are no websockets. Poll, and stop when the tab is hidden (`document.visibi
 |---|---|---|---|
 | Boss bar (phone and screen) | `boss_state` | 3 s | `status` is `defeated` or `escaped` |
 | Meet screen, waiting for the partner | `list_meets` | 10 s | no meet is `proposed` or `accepted` |
+| Live meet popup (global, while signed in) | `pending_meet_requests` | 3 s | the tab is hidden, nobody is signed in, or a popup is open |
+| Requester waiting sheet after "Let's meet" | `list_meets` | 3 s | the meet is `accepted` (open `/intro/:id`) or `live` is `false` |
 | Handshake: own QR | `handshake_code` | every 50 s (codes live 60) | the code was scanned (`handshake_state` returns a handshake) |
 | Handshake: own QR, waiting to be scanned | `handshake_state` without `handshakeId` | 2 s | it returns a `handshake`; then poll with its id |
 | Handshake in progress | `handshake_state` with `handshakeId` | 2 s | `status` is not `waiting` |
@@ -396,11 +398,13 @@ The bar is `health / maxHealth`. Show a countdown to `deadline` while `status` i
 {"id":"meet-4d7c25c123e592d61a6e986e","status":"proposed","role":"proposer","statusLine":"Waiting to hear back. We'll tell you if @podwrangler is in.","partner":{"id":"pl_592a78e076ad8c1f","handle":"podwrangler","faceSeed":"podwrangler","level":2,"levelName":"Deployment","xp":110,"banners":["welcomer"],"topics":["…"],"workingOn":"…","firstTimer":false},"sharedTopics":[],"iAccepted":true,"partnerArrived":false,"expiresAt":"2026-11-09T20:40:13.391Z"}
 ```
 
+**A new proposal is a live request.** It opens a 30-second window (`live: true`, `expiresAt` = now + 30 s, `secondsLeft`, `statusLine: "Waiting… 30s"`) and the partner's phone shows a full-screen popup from `pending_meet_requests`. If nobody answers in 30 s it becomes a normal offer for 30 more minutes (`live: false`, `statusLine: "They'll get back to you."`, `variants.lapsed`) and the partner gets one `meet_offer` notification. The proposer never sees "declined": a decline also reads "They'll get back to you." until the offer runs out. Proposing to someone who already has a live or open offer to you accepts it.
+
 `partnerId` is the other player's public id (from `recommend_people`, `search`, a quest's `partnerId` or a leaderboard row). It fails with `409 meeting_off` if either player has meeting turned off, and `404 unknown_player` if the public id matches no one.
 
 ### respond_meet (awards XP)
 
-`{"attendeeId":"att-podwrangler","meetId":"meet-…","response":"accept","blockPartner":false}`. `response` is `accept`, `decline` or `cant_make_it`. It returns `{"meet": IMeetView, "xpAwarded": n}`. Once both players accept, the view gains the meet-screen fields:
+`{"attendeeId":"att-podwrangler","meetId":"meet-…","response":"accept","blockPartner":false}`. `response` is `accept`, `decline`, `later` or `cant_make_it`. `later` (partner only, while the offer is open) turns a live request into a normal offer for 30 minutes from now, with no popup again and no notification (`variants.later`). `decline` stays silent to the proposer. It returns `{"meet": IMeetView, "xpAwarded": n}`. Once both players accept, the view gains the meet-screen fields:
 
 ```json
 {"meet":{"id":"meet-4d7c25c123e592d61a6e986e","status":"accepted","role":"partner","statusLine":"Meet @verify93279 at Network Nook and both scan its code.","partner":{"…":"…"},"partnerDetails":{"spotMe":"Green hoodie"},
@@ -413,9 +417,19 @@ The bar is `health / maxHealth`. Show a countdown to `deadline` while `status` i
 
 `matchSignal.pattern` holds 64 block materials for an 8x8 grid; both phones show the same grid and words. `partnerDetails` can hold `realName`, `photoUrl` and `spotMe`.
 
+### pending_meet_requests (live popup)
+
+`{"attendeeId":"p_…"}` → the live requests addressed to this player that are still inside their 30-second window, newest first, at most 3. One Elasticsearch query with a 3 s timeout; poll it every 3 s (the gateway cuts requests at 15 s, so there is no SSE or long-poll).
+
+```json
+{"requests":[{"meetId":"meet-4d7c25c123e592d61a6e986e","requester":{"publicId":"pl_4451cf61b8914498","handle":"verify93279","faceSeed":"cbd1b4ac2fe4ff69","level":1,"levelName":"Pod","headline":"Running GPU inference on Kubernetes with autoscaling"},"sharedTopics":["gpu","autoscaling"],"why":"You both work on gpu and autoscaling.","expiresAt":"2026-11-09T20:20:43.391Z","secondsLeft":24}],"serverTime":"2026-11-09T20:20:19.391Z"}
+```
+
+`requester` is a public card only (no attendee id, photo, real name or "how to spot me"). Count down from `secondsLeft` on the client clock. Answer with `respond_meet` (`accept`, `later` or `decline`). This call and `list_meets` also settle requests whose window ran out: they become normal offers (see `propose_meet`) and send the `meet_offer` notification, so no timer runs on the server. Measured: about 60 ms.
+
 ### list_meets (meet screen)
 
-`{"attendeeId":"p_…"}` → an array of the meet views above, in every status. After the two players complete a handshake, the status is `met` and `statusLine` reads `"You met @podwrangler."` (`variants.list_meets_after`).
+`{"attendeeId":"p_…"}` → an array of the meet views above, in every status. Each view has `live` (true while a request is inside its 30-second window) and, while live, `secondsLeft`. After the two players complete a handshake, the status is `met` and `statusLine` reads `"You met @podwrangler."` (`variants.list_meets_after`).
 
 ### leaderboard
 
@@ -624,7 +638,7 @@ Only the two players in a meet that both accepted (`accepted` or `met`) can mess
 {"items":[{"id":"match:pl_b0f34ffaf6282124","type":"new_match","title":"You and @argoalpaca both work on gitops","body":"Both into gitops","link":"/people","createdAt":"2026-11-09T22:14:36.020Z","readAt":null},{"id":"quest:8189074aa2c4fd8e","type":"new_quest","title":"New quest: Visit Dash0","body":"It covers operations.","link":"/quests","createdAt":"2026-11-09T22:14:35.202Z","readAt":null}],"unread":2}
 ```
 
-`type` is one of `new_quest` and `new_match` (written by the `nudge` CronJob every 10 minutes), `meet_offer` (someone proposed a meet to you), `meet_accepted` (both said yes; sent to both players) and `banner` (a new banner). `link` is an in-app path to open on tap. Notifications carry only handles, public ids and public text, never another player's attendee id. They live in the `messages` index with `kind: "notification"`, under the id `notif:<attendeeId>:<id>`, written create-only so a rerun never duplicates one.
+`type` is one of `new_quest` and `new_match` (written by the `nudge` CronJob every 10 minutes), `meet_offer` (a live meet request you did not answer within 30 s became an open offer; link `/intro/:meetId`), `meet_accepted` (both said yes; sent to both players) and `banner` (a new banner). `link` is an in-app path to open on tap. Notifications carry only handles, public ids and public text, never another player's attendee id. They live in the `messages` index with `kind: "notification"`, under the id `notif:<attendeeId>:<id>`, written create-only so a rerun never duplicates one.
 
 ### mark_notifications_read
 
