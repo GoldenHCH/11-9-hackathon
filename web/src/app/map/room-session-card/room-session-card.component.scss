@@ -1,0 +1,101 @@
+:host {
+  display: block;
+  margin-top: 16px;
+}
+
+.room-sessions-title {
+  margin: 0 0 8px;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--kq-muted);
+}
+
+.room-sessions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.room-session {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  background: var(--kq-bg);
+  box-shadow: var(--kq-shadow-small);
+}
+
+.room-session--live {
+  border-color: var(--kq-danger);
+}
+
+.room-session-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.room-session-tag {
+  padding: 2px 8px;
+  font-size: 11px;
+  border: 2px solid var(--kq-border);
+  background: var(--kq-surface);
+  color: var(--kq-text);
+}
+
+.room-session-tag--live {
+  background: var(--kq-danger);
+  color: #fff;
+}
+
+.room-session-swatch {
+  width: 8px;
+  height: 8px;
+}
+
+.room-session-time {
+  font-size: 14px;
+  color: var(--kq-muted);
+}
+
+.room-session-name {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+.room-session-speakers {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--kq-muted);
+}
+
+.room-session-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.room-session-action {
+  min-height: 44px;
+  border-radius: 0;
+}
+
+.room-session-action--done:disabled {
+  color: var(--kq-primary) !important;
+}
+
+.room-sessions-error {
+  margin: 8px 0 0;
+  padding: 8px 16px;
+  border: 2px solid var(--kq-danger);
+  background: var(--kq-danger-bg);
+  font-size: 14px;
+}
