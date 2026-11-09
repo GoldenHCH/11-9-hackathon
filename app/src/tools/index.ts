@@ -40,6 +40,10 @@ import { deleteBoothPhotoTool } from './delete-booth-photo.tool';
 import { listBoothPhotosTool } from './list-booth-photos.tool';
 import { reportBoothPhotoTool } from './report-booth-photo.tool';
 import { uploadBoothPhotoTool } from './upload-booth-photo.tool';
+import { addToItineraryTool } from './add-to-itinerary.tool';
+import { getItineraryTool } from './get-itinerary.tool';
+import { listScheduleTool } from './list-schedule.tool';
+import { removeFromItineraryTool } from './remove-from-itinerary.tool';
 import { IRegisteredTool } from './define-tool';
 
 export const toolRegistry = {
@@ -84,6 +88,10 @@ export const toolRegistry = {
   import_profile: importProfileTool,
   list_notifications: listNotificationsTool,
   mark_notifications_read: markNotificationsReadTool,
+  list_schedule: listScheduleTool,
+  get_itinerary: getItineraryTool,
+  add_to_itinerary: addToItineraryTool,
+  remove_from_itinerary: removeFromItineraryTool,
 } satisfies { [TName in ToolName]: IRegisteredTool<TName> };
 
 export function findTool(name: string): IRegisteredTool | undefined {

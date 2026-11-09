@@ -7,7 +7,7 @@ export interface INavigationTab {
 
 export const navigationTabs: readonly INavigationTab[] = [
   { path: '/quests', label: 'Quests', icon: 'flag', isPrimary: false },
-  { path: '/board', label: 'Board', icon: 'leaderboard', isPrimary: false },
+  { path: '/itinerary', label: 'Itinerary', icon: 'event_note', isPrimary: false },
   { path: '/scan', label: 'Scan', icon: 'qr_code_scanner', isPrimary: true },
   { path: '/map', label: 'Map', icon: 'map', isPrimary: false },
   { path: '/profile', label: 'Profile', icon: 'person', isPrimary: false },

@@ -89,6 +89,7 @@ export function buildIndexMappings(inferenceId: string): Record<IndexName, Prope
       banners: keyword,
       blockedIds: keyword,
       createdAt: date,
+      itinerary: { properties: { talkId: keyword, addedAt: date } },
     },
     [indexNames.LOCATIONS]: {
       id: keyword,

@@ -24,6 +24,12 @@ export const routes: Routes = [
       import('./quests/quest-board/quest-board.component').then((module) => module.QuestBoardComponent),
   },
   {
+    path: 'itinerary',
+    title: 'Itinerary · KubeQuest',
+    canActivate: [meGuard],
+    loadComponent: () => import('./itinerary/itinerary.component').then((module) => module.ItineraryComponent),
+  },
+  {
     path: 'scan',
     title: 'Scan · KubeQuest',
     loadComponent: () => import('./scan/scanner/scanner.component').then((module) => module.ScannerComponent),

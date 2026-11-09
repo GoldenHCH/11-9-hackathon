@@ -205,6 +205,10 @@ export const toolNames = [
   'import_profile',
   'list_notifications',
   'mark_notifications_read',
+  'list_schedule',
+  'get_itinerary',
+  'add_to_itinerary',
+  'remove_from_itinerary',
 ] as const;
 
 export const notificationTypes = ['new_quest', 'new_match', 'meet_offer', 'meet_accepted', 'banner'] as const;
