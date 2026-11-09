@@ -12,6 +12,9 @@ import {
   ILocation,
   IMatchPlayer,
   IMeet,
+  IMeetLiveCard,
+  IMeetRequest,
+  IPendingMeetRequests,
   IProposeMeetInput,
   IRespondMeetInput,
   IRespondMeetResult,
@@ -30,10 +33,13 @@ import {
   pairKeyFor,
   replaceIntro,
   searchIntros,
+  searchLiveRequests,
 } from './meet.store';
+import { publicIdFor } from '../profile/public-id';
 import { notifyMeetAccepted, notifyMeetOffer } from '../notifications/notify';
 import { matchSignalFor } from './signal';
 
+const SECOND_MS = 1000;
 const MINUTE_MS = 60_000;
 const SLOT_MINUTES = 30;
 const DEFAULT_TOPIC = 'Kubernetes';
@@ -46,11 +52,66 @@ function addMinutes(iso: string, minutes: number): string {
   return new Date(Date.parse(iso) + minutes * MINUTE_MS).toISOString();
 }
 
+function addSeconds(iso: string, seconds: number): string {
+  return new Date(Date.parse(iso) + seconds * SECOND_MS).toISOString();
+}
+
+function secondsUntil(iso: string, now: number): number {
+  return Math.max(0, Math.ceil((Date.parse(iso) - now) / SECOND_MS));
+}
+
+export function settleLive(intro: IIntro, now: number = Date.now()): IIntro {
+  if (intro.status === 'proposed' && intro.liveState === 'live' && Date.parse(intro.expiresAt) <= now) {
+    return { ...intro, liveState: 'later', expiresAt: addMinutes(intro.expiresAt, gameRules.MEET_LATER_MINUTES) };
+  }
+
+  return intro;
+}
+
+function isLive(intro: IIntro, now: number): boolean {
+  return intro.status === 'proposed' && intro.liveState === 'live' && Date.parse(intro.expiresAt) > now;
+}
+
+function hiddenDecline(intro: IIntro, viewerId: string): IIntro {
+  if (intro.status !== 'declined' || intro.fromId !== viewerId || intro.cancelledBy === viewerId) {
+    return intro;
+  }
+
+  const laterUntil = addMinutes(addSeconds(intro.proposedAt, gameRules.MEET_LIVE_SECONDS), gameRules.MEET_LATER_MINUTES);
+
+  return { ...intro, status: 'proposed', liveState: 'later', expiresAt: laterUntil };
+}
+
+function whyLine(proposer: IAttendee, sharedTopics: string[]): string {
+  if (sharedTopics.length > 0) {
+    return `You both work on ${sharedTopics.slice(0, 2).join(' and ')}.`;
+  }
+
+  const working = proposer.workingOn.trim().replace(/[.!?]+$/, '');
+
+  return working ? `Working on ${working}.` : `@${proposer.handle} picked you to meet.`;
+}
+
+function liveCardFor(proposer: IAttendee, sharedTopics: string[]): IMeetLiveCard {
+  const publicFace = proposer.faceSeed && proposer.faceSeed !== proposer.id ? proposer.faceSeed : proposer.handle;
+
+  return {
+    handle: proposer.handle,
+    faceSeed: publicFace,
+    level: proposer.level,
+    levelName: levelDefinitionForXp(proposer.xp).name,
+    headline: proposer.headline?.trim() || proposer.workingOn.trim(),
+    why: whyLine(proposer, sharedTopics),
+  };
+}
+
 function markSpan(meetId: string, status: MeetStatus): void {
   trace.getActiveSpan()?.setAttributes({ 'kubequest.meet.id': meetId, 'kubequest.meet.status': status });
 }
 
-function effectiveStatus(intro: IIntro, now: number = Date.now()): MeetStatus {
+function effectiveStatus(source: IIntro, now: number = Date.now()): MeetStatus {
+  const intro = settleLive(source, now);
+
   if ((intro.status === 'proposed' || intro.status === 'accepted') && Date.parse(intro.expiresAt) < now) {
     return 'expired';
   }
@@ -82,9 +143,18 @@ export function toMatchPlayer(attendee: IAttendee): IMatchPlayer {
 
 function statusLine(intro: IIntro, status: MeetStatus, viewerId: string, partner: IAttendee, campfire?: ILocation): string {
   const iAccepted = intro.acceptedBy.includes(viewerId);
+  const now = Date.now();
 
   switch (status) {
     case 'proposed':
+      if (iAccepted && isLive(intro, now)) {
+        return `Waiting… ${secondsUntil(intro.expiresAt, now)}s`;
+      }
+
+      if (iAccepted && intro.liveState === 'later') {
+        return "They'll get back to you.";
+      }
+
       return iAccepted
         ? `Waiting to hear back. We'll tell you if @${partner.handle} is in.`
         : `@${partner.handle} works on ${partner.workingOn.trim().replace(/[.!?]+$/, '')}. Accept to meet.`;
@@ -101,8 +171,11 @@ function statusLine(intro: IIntro, status: MeetStatus, viewerId: string, partner
   }
 }
 
-export function viewMeet(intro: IIntro, viewerId: string, partner: IAttendee, campfire?: ILocation, xpAwarded?: number): IMeet {
-  const status = effectiveStatus(intro);
+export function viewMeet(source: IIntro, viewerId: string, partner: IAttendee, campfire?: ILocation, xpAwarded?: number): IMeet {
+  const now = Date.now();
+  const intro = hiddenDecline(settleLive(source, now), viewerId);
+  const status = effectiveStatus(intro, now);
+  const live = isLive(intro, now);
   const revealed = status === 'accepted' || status === 'met';
   const myArrival = intro.arrivals.find((arrival) => arrival.attendeeId === viewerId);
 
@@ -123,6 +196,8 @@ export function viewMeet(intro: IIntro, viewerId: string, partner: IAttendee, ca
     iArrivedAt: myArrival?.at,
     partnerArrived: revealed && intro.arrivals.some((arrival) => arrival.attendeeId !== viewerId),
     expiresAt: intro.expiresAt,
+    live,
+    ...(live ? { secondsLeft: secondsUntil(intro.expiresAt, now) } : {}),
     xpAwarded,
   };
 }
@@ -246,6 +321,7 @@ export async function proposeMeet(input: IProposeMeetInput): Promise<IMeet> {
 
     try {
       if (!stored || effectiveStatus(stored.intro) === 'expired' || stored.intro.status === 'cancelled') {
+        const sharedTopics = sharedTopicsFor(attendee, partner);
         const intro: IIntro = {
           id: meetId,
           fromId: attendee.id,
@@ -255,9 +331,11 @@ export async function proposeMeet(input: IProposeMeetInput): Promise<IMeet> {
           proposedAt,
           acceptedBy: [attendee.id],
           arrivals: [],
-          sharedTopics: sharedTopicsFor(attendee, partner),
+          sharedTopics,
           firstTimerPair: attendee.profile.firstTimer || partner.profile.firstTimer,
-          expiresAt: addMinutes(proposedAt, gameRules.MEET_OFFER_MINUTES),
+          expiresAt: addSeconds(proposedAt, gameRules.MEET_LIVE_SECONDS),
+          liveState: 'live',
+          liveCard: liveCardFor(attendee, sharedTopics),
         };
 
         if (stored) {
@@ -266,14 +344,13 @@ export async function proposeMeet(input: IProposeMeetInput): Promise<IMeet> {
           await createIntro(intro);
         }
 
-        await notifyMeetOffer(intro, attendee);
-
         markSpan(meetId, intro.status);
 
         return viewMeet(intro, attendee.id, partner);
       }
 
-      const next = stored.intro.status === 'proposed' && !stored.intro.acceptedBy.includes(attendee.id) ? await accept(stored, attendee.id) : stored.intro;
+      const current = { ...stored, intro: settleLive(stored.intro) };
+      const next = current.intro.status === 'proposed' && !current.intro.acceptedBy.includes(attendee.id) ? await accept(current, attendee.id) : current.intro;
       markSpan(meetId, effectiveStatus(next));
 
       return await viewFor(next, attendee.id);
@@ -294,7 +371,7 @@ export async function respondMeet(input: IRespondMeetInput): Promise<IRespondMee
     throw new ToolError(404, 'unknown_meet', 'That meet is not yours or no longer exists.');
   }
 
-  const intro = stored.intro;
+  const intro = settleLive(stored.intro);
   const status = effectiveStatus(intro);
   const partnerId = intro.fromId === input.attendeeId ? intro.toId : intro.fromId;
   const at = nowIso();
@@ -305,7 +382,16 @@ export async function respondMeet(input: IRespondMeetInput): Promise<IRespondMee
       throw new ToolError(409, 'meet_closed', status === 'expired' ? 'This offer ran out of time.' : 'This meet can no longer be accepted.');
     }
 
-    next = intro.acceptedBy.includes(input.attendeeId) ? intro : await accept(stored, input.attendeeId);
+    next = intro.acceptedBy.includes(input.attendeeId) ? intro : await accept({ ...stored, intro }, input.attendeeId);
+  } else if (input.response === 'later') {
+    if (status !== 'proposed' || intro.toId !== input.attendeeId) {
+      throw new ToolError(409, 'meet_closed', 'Only an open offer to you can be saved for later.');
+    }
+
+    if (intro.liveState !== 'later') {
+      next = { ...intro, liveState: 'later', expiresAt: addMinutes(at, gameRules.MEET_LATER_MINUTES) };
+      await replaceIntro(stored, next);
+    }
   } else if (input.response === 'decline') {
     if (status !== 'proposed') {
       throw new ToolError(409, 'meet_closed', 'Only an open offer can be declined.');
@@ -331,10 +417,67 @@ export async function respondMeet(input: IRespondMeetInput): Promise<IRespondMee
   return { meet: await viewFor(next, input.attendeeId, 0), xpAwarded: 0 };
 }
 
+async function lapseLive(stored: IStoredIntro, now: number): Promise<IIntro> {
+  const next = settleLive(stored.intro, now);
+
+  if (next === stored.intro) {
+    return next;
+  }
+
+  try {
+    await replaceIntro(stored, next);
+    await notifyMeetOffer(next, next.liveCard?.handle ?? 'someone');
+    trace.getActiveSpan()?.addEvent('meet.lapsed_to_later', { 'kubequest.meet.id': next.id });
+  } catch (error) {
+    if (!isConflict(error)) {
+      logger.warn({ err: error, meetId: next.id }, 'live meet lapse not saved');
+    }
+  }
+
+  return next;
+}
+
+function toRequest(intro: IIntro, now: number): IMeetRequest {
+  const card = intro.liveCard;
+
+  return {
+    meetId: intro.id,
+    requester: {
+      publicId: publicIdFor(intro.fromId),
+      handle: card?.handle ?? '',
+      faceSeed: card?.faceSeed ?? card?.handle ?? '',
+      level: card?.level ?? 1,
+      levelName: card?.levelName ?? '',
+      headline: card?.headline ?? '',
+    },
+    sharedTopics: intro.sharedTopics,
+    why: card?.why ?? '',
+    expiresAt: intro.expiresAt,
+    secondsLeft: secondsUntil(intro.expiresAt, now),
+  };
+}
+
+export async function pendingMeetRequests(attendeeId: string): Promise<IPendingMeetRequests> {
+  const now = Date.now();
+  const stored = await searchLiveRequests(attendeeId, gameRules.MEET_PENDING_MAX * 2);
+  const live = stored.filter(({ intro }) => isLive(intro, now)).map(({ intro }) => toRequest(intro, now));
+  const lapsed = stored.filter(({ intro }) => !isLive(intro, now));
+
+  if (lapsed.length > 0) {
+    await Promise.all(lapsed.map((entry) => lapseLive(entry, now)));
+  }
+
+  trace.getActiveSpan()?.setAttributes({ 'kubequest.meet.live_count': live.length, 'kubequest.meet.lapsed_count': lapsed.length });
+
+  return { requests: live.slice(0, gameRules.MEET_PENDING_MAX), serverTime: new Date(now).toISOString() };
+}
+
 export async function listMeets(attendeeId: string): Promise<IMeet[]> {
   await getAttendee(attendeeId);
+  const now = Date.now();
   const stored = await searchIntros(attendeeId);
   trace.getActiveSpan()?.setAttribute('kubequest.meet.count', stored.length);
+  const settled = await Promise.all(stored.map((entry) => lapseLive(entry, now)));
 
-  return Promise.all(stored.map(({ intro }) => viewFor(intro, attendeeId)));
+  return Promise.all(settled.map((intro) => viewFor(intro, attendeeId)));
 }

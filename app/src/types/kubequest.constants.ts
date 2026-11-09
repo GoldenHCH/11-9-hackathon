@@ -57,7 +57,9 @@ export const declineReasons = ['not_my_topic', 'too_far', 'no_time'] as const;
 
 export const meetStatuses = ['proposed', 'accepted', 'met', 'declined', 'cancelled', 'expired'] as const;
 
-export const meetResponses = ['accept', 'decline', 'cant_make_it'] as const;
+export const meetResponses = ['accept', 'decline', 'later', 'cant_make_it'] as const;
+
+export const meetLiveStates = ['live', 'later'] as const;
 
 export const meetRoles = ['proposer', 'partner'] as const;
 
@@ -127,6 +129,9 @@ export const gameRules = {
   NOT_NOW_MINUTES: 30,
   ATTEND_OFFER_WINDOW_MINUTES: 90,
   MEET_OFFER_MINUTES: 20,
+  MEET_LIVE_SECONDS: 30,
+  MEET_LATER_MINUTES: 30,
+  MEET_PENDING_MAX: 3,
   MEET_SCAN_WINDOW_MINUTES: 30,
   CHECK_IN_COOLDOWN_MINUTES: 60,
   SESSION_GRACE_MINUTES: 10,
@@ -192,6 +197,7 @@ export const toolNames = [
   'propose_meet',
   'respond_meet',
   'list_meets',
+  'pending_meet_requests',
   'leaderboard',
   'inventory',
   'world',

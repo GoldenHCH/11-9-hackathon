@@ -128,8 +128,51 @@
       "iAccepted": true,
       "partnerArrived": false,
       "expiresAt": "2026-11-09T21:20:14.452Z",
-      "xpAwarded": 0
+      "xpAwarded": 0,
+      "live": false
     },
     "xpAwarded": 0
+  },
+  "variants": {
+    "later": {
+      "request": {
+        "attendeeId": "att-podwrangler",
+        "meetId": "meet-4d7c25c123e592d61a6e986e",
+        "response": "later"
+      },
+      "status": 200,
+      "response": {
+        "meet": {
+          "id": "meet-4d7c25c123e592d61a6e986e",
+          "status": "proposed",
+          "role": "partner",
+          "statusLine": "@verify93279 works on Running GPU inference on Kubernetes with autoscaling. Accept to meet.",
+          "partner": {
+            "id": "pl_4451cf61b8914498",
+            "handle": "verify93279",
+            "faceSeed": "cbd1b4ac2fe4ff69",
+            "level": 1,
+            "levelName": "Pod",
+            "xp": 0,
+            "banners": [],
+            "topics": [
+              "gpu",
+              "autoscaling"
+            ],
+            "workingOn": "Running GPU inference on Kubernetes with autoscaling",
+            "firstTimer": true
+          },
+          "sharedTopics": [
+            "gpu",
+            "autoscaling"
+          ],
+          "iAccepted": false,
+          "partnerArrived": false,
+          "expiresAt": "2026-11-09T20:50:30.000Z",
+          "live": false
+        },
+        "xpAwarded": 0
+      }
+    }
   }
 }

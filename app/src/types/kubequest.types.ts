@@ -17,6 +17,7 @@ import {
   locationKinds,
   materials,
   meetResponses,
+  meetLiveStates,
   meetRoles,
   meetStatuses,
   notificationTypes,
@@ -62,6 +63,8 @@ export type DeclineReason = (typeof declineReasons)[number];
 export type MeetStatus = (typeof meetStatuses)[number];
 
 export type MeetResponse = (typeof meetResponses)[number];
+
+export type MeetLiveState = (typeof meetLiveStates)[number];
 
 export type MeetRole = (typeof meetRoles)[number];
 

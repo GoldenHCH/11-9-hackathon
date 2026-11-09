@@ -18,6 +18,7 @@ import {
   LocationKind,
   Material,
   MaterialCounts,
+  MeetLiveState,
   MeetResponse,
   MeetRole,
   MeetStatus,
@@ -316,6 +317,40 @@ export interface IIntro {
   metAt?: IsoDateString;
   cancelledBy?: string;
   expiresAt: IsoDateString;
+  liveState?: MeetLiveState;
+  liveCard?: IMeetLiveCard;
+}
+
+export interface IMeetLiveCard {
+  handle: string;
+  faceSeed: string;
+  level: number;
+  levelName: string;
+  headline: string;
+  why: string;
+}
+
+export interface IMeetRequester {
+  publicId: string;
+  handle: string;
+  faceSeed: string;
+  level: number;
+  levelName: string;
+  headline: string;
+}
+
+export interface IMeetRequest {
+  meetId: string;
+  requester: IMeetRequester;
+  sharedTopics: string[];
+  why: string;
+  expiresAt: IsoDateString;
+  secondsLeft: number;
+}
+
+export interface IPendingMeetRequests {
+  requests: IMeetRequest[];
+  serverTime: IsoDateString;
 }
 
 export interface IMeet {
@@ -335,6 +370,8 @@ export interface IMeet {
   iArrivedAt?: IsoDateString;
   partnerArrived: boolean;
   expiresAt: IsoDateString;
+  live: boolean;
+  secondsLeft?: number;
   xpAwarded?: number;
 }
 
@@ -1284,6 +1321,7 @@ export interface IToolContracts extends IConnectionToolContracts {
   propose_meet: { input: IProposeMeetInput; output: IMeet };
   respond_meet: { input: IRespondMeetInput; output: IRespondMeetResult };
   list_meets: { input: IAttendeeInput; output: IMeet[] };
+  pending_meet_requests: { input: IAttendeeInput; output: IPendingMeetRequests };
   leaderboard: { input: ILeaderboardInput; output: ILeaderboard };
   inventory: { input: IAttendeeInput; output: IInventory };
   world: { input: IWorldInput; output: IWorld };
