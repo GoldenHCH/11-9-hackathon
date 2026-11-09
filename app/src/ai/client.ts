@@ -196,6 +196,34 @@ async function askModel(prompt: string, span: Span): Promise<IModelAnswer | unde
   return (await askAgent(prompt, span)) ?? (await askInference(prompt, span));
 }
 
+function waitFor(ms: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function askUntilValid<T>(purpose: AiPurpose, key: string, prompt: string, validate: IJsonValidator<T>, span: Span): Promise<IAiResult<T> | undefined> {
+  for (let attempt = 1; attempt <= aiSettings.MAX_ATTEMPTS; attempt += 1) {
+    span.setAttribute('kubequest.ai.attempts', attempt);
+    const answer = await askModel(prompt, span);
+
+    if (!answer) {
+      return undefined;
+    }
+
+    const parsed = extractJson(answer.text);
+
+    if (validate(parsed)) {
+      writeCache(key, parsed, answer.provider);
+      span.setAttributes({ 'kubequest.ai.provider': answer.provider, 'kubequest.ai.cache_hit': false, 'kubequest.ai.valid': true });
+
+      return { value: parsed, provider: answer.provider, purpose, cacheHit: false };
+    }
+
+    span.addEvent('ai.invalid_output', { attempt });
+  }
+
+  return undefined;
+}
+
 export async function generateJson<T>(purpose: AiPurpose, prompt: string, validate: IJsonValidator<T>, fallback: () => T): Promise<IAiResult<T>> {
   return tracer.startActiveSpan<(span: Span) => Promise<IAiResult<T>>>(
     'ai.generate',
@@ -213,25 +241,16 @@ export async function generateJson<T>(purpose: AiPurpose, prompt: string, valida
           return { value: cached.value, provider: cached.provider, purpose, cacheHit: true };
         }
 
-        for (let attempt = 1; attempt <= aiSettings.MAX_ATTEMPTS; attempt += 1) {
-          span.setAttribute('kubequest.ai.attempts', attempt);
-          const answer = await askModel(prompt, span);
+        const answered = await Promise.race([
+          askUntilValid(purpose, key, prompt, validate, span),
+          waitFor(aiSettings.BUDGET_MS[purpose]).then(() => undefined),
+        ]);
 
-          if (!answer) {
-            break;
-          }
-
-          const parsed = extractJson(answer.text);
-
-          if (validate(parsed)) {
-            writeCache(key, parsed, answer.provider);
-            span.setAttributes({ 'kubequest.ai.provider': answer.provider, 'kubequest.ai.cache_hit': false, 'kubequest.ai.valid': true });
-
-            return { value: parsed, provider: answer.provider, purpose, cacheHit: false };
-          }
-
-          span.addEvent('ai.invalid_output', { attempt });
+        if (answered) {
+          return answered;
         }
+
+        span.setAttribute('kubequest.ai.budget_ms', aiSettings.BUDGET_MS[purpose]);
 
         const value = fallback();
         span.setAttributes({ 'kubequest.ai.provider': 'fallback', 'kubequest.ai.cache_hit': false, 'kubequest.ai.valid': validate(value) });
