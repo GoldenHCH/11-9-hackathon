@@ -14,9 +14,12 @@
       </svg>
       <span class="brand-name kq-pixel">KubeQuest</span>
     </a>
-    <a class="brand-me" routerLink="/profile" aria-label="Your profile">
-      <mat-icon>account_circle</mat-icon>
-    </a>
+    <div class="brand-actions">
+      <app-notification-bell></app-notification-bell>
+      <a class="brand-me" routerLink="/profile" aria-label="Your profile">
+        <mat-icon>account_circle</mat-icon>
+      </a>
+    </div>
   </header>
 }
 

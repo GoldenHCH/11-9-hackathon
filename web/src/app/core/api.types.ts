@@ -6,7 +6,10 @@ export type {
   IHandshakeStateResult,
   IMatchPlayer,
   IMeet,
+  IListNotificationsResult,
+  IMarkNotificationsReadResult,
   IMessage,
+  INotification,
   IProfile,
   IRecap,
   IRecapBooth,
@@ -15,4 +18,4 @@ export type {
   IRespondMeetResult,
   ISaveBoothNoteResult,
 } from '../../../../app/src/types/kubequest.interfaces';
-export type { MeetResponse, ToolName } from '../../../../app/src/types/kubequest.types';
+export type { MeetResponse, NotificationType, ToolName } from '../../../../app/src/types/kubequest.types';

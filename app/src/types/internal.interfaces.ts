@@ -1,5 +1,5 @@
 import { IBoothNote } from './kubequest.interfaces';
-import { AiProvider, AiPurpose, BannerId, CheckInRejection, HandshakeQuestionSource, HandshakeStatus, IsoDateString, Material, XpEventType } from './kubequest.types';
+import { AiProvider, AiPurpose, BannerId, CheckInRejection, HandshakeQuestionSource, HandshakeStatus, IsoDateString, Material, NotificationType, XpEventType } from './kubequest.types';
 
 export interface IAwardXpInput {
   attendeeId: string;
@@ -90,4 +90,24 @@ export interface IStoredMessage {
   toId: string;
   text: string;
   at: IsoDateString;
+}
+
+export interface IStoredNotification {
+  kind: 'notification';
+  attendeeId: string;
+  type: NotificationType;
+  title: string;
+  body: string;
+  link: string;
+  dedupeKey: string;
+  createdAt: IsoDateString;
+  readAt: IsoDateString | null;
+}
+
+export interface INotificationDraft {
+  type: NotificationType;
+  title: string;
+  body: string;
+  link: string;
+  dedupeKey: string;
 }

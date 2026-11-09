@@ -28,6 +28,8 @@ import { handshakeCodeTool } from './handshake-code.tool';
 import { handshakeStateTool } from './handshake-state.tool';
 import { listBoothNotesTool } from './list-booth-notes.tool';
 import { listMessagesTool } from './list-messages.tool';
+import { listNotificationsTool } from './list-notifications.tool';
+import { markNotificationsReadTool } from './mark-notifications-read.tool';
 import { recapTool } from './recap.tool';
 import { saveBoothNoteTool } from './save-booth-note.tool';
 import { sendMessageTool } from './send-message.tool';
@@ -68,6 +70,8 @@ export const toolRegistry = {
   send_message: sendMessageTool,
   list_messages: listMessagesTool,
   recap: recapTool,
+  list_notifications: listNotificationsTool,
+  mark_notifications_read: markNotificationsReadTool,
 } satisfies { [TName in ToolName]: IRegisteredTool<TName> };
 
 export function findTool(name: string): IRegisteredTool | undefined {

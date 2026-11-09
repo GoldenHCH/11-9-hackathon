@@ -78,6 +78,7 @@ There are no websockets. Poll, and stop when the tab is hidden (`document.visibi
 | Itinerary Now card | `whats_around_me` | 30 s, and right after every `check_in` | |
 | Quests tab | `quest_board` | on tab focus and after every `check_in` (offers refresh after a scan) | |
 | Demo screen leaderboard | `leaderboard` | 15 s | |
+| Notification bell (top bar) | `list_notifications` | 30 s | the tab is hidden or nobody is signed in |
 | Demo screen QR | `GET /api/screen-token/:locationId` | every 8 minutes (tokens live 10) | |
 
 On a 5xx, double the interval up to 60 s, then reset after a success.
@@ -98,6 +99,7 @@ On a 5xx, double the interval up to 60 s, then reset after a success.
 | Recap | `recap` (or `GET /api/recap/:attendeeId/email.html`) |
 | Profile | `get_profile`, `inventory`, `leaderboard` (3 boards), `update_settings` |
 | Another player's card | `get_profile` with `targetId` |
+| Notification bell (every screen with the top bar) | `list_notifications`, `mark_notifications_read` |
 | Boss bar | `boss_state` |
 | Demo screen `/screen/:locationId` | `GET /api/screen-token/:locationId` (QR of `scanUrl`), `boss_state` with `locationId`, `leaderboard` |
 | Organizer | `organizer_stats` |
@@ -489,6 +491,24 @@ Only the two players in a meet that both accepted (`accepted` or `met`) can mess
 ### recap
 
 `{"attendeeId":"p_…"}` → `IRecap`: `player`, `totals` (`xp`, `talks`, `people`, `booths`, `quizCorrect`), `talks` (check-ins with the best quiz score), `people` (one per handshake partner: handle, the question, their answer, shared topics, `githubLogin` only when the two also accepted a meet), `booths` (from notes), a `nextStep` on every person and booth, an overall `nextSteps` list, and `emailSubject` plus `emailHtml` (a self-contained 600 px email). Next steps are rule-based: a follow-up booth becomes "Book a follow-up with Elastic.", a person with a shared topic becomes "Follow up with @otelotter about observability.". The full mock is `fixtures/recap.json`; the rendered email is `docs/mock/recap-email.html` (regenerate with `npx tsx scripts/render-recap-mock.ts`).
+
+### list_notifications
+
+`{"attendeeId":"p_…","limit":20}` (`limit` optional, 1 to 50, default 20) → `{ items, unread }`, newest first:
+
+```json
+{"items":[{"id":"match:pl_b0f34ffaf6282124","type":"new_match","title":"You and @argoalpaca both work on gitops","body":"Both into gitops","link":"/people","createdAt":"2026-11-09T22:14:36.020Z","readAt":null},{"id":"quest:8189074aa2c4fd8e","type":"new_quest","title":"New quest: Visit Dash0","body":"It covers operations.","link":"/quests","createdAt":"2026-11-09T22:14:35.202Z","readAt":null}],"unread":2}
+```
+
+`type` is one of `new_quest` and `new_match` (written by the `nudge` CronJob every 10 minutes), `meet_offer` (someone proposed a meet to you), `meet_accepted` (both said yes; sent to both players) and `banner` (a new banner). `link` is an in-app path to open on tap. Notifications carry only handles, public ids and public text, never another player's attendee id. They live in the `messages` index with `kind: "notification"`, under the id `notif:<attendeeId>:<id>`, written create-only so a rerun never duplicates one.
+
+### mark_notifications_read
+
+`{"attendeeId":"p_…","ids":["quest:8189074aa2c4fd8e"]}` or `{"attendeeId":"p_…","all":true}` → `{"marked":1,"unread":1}`. Unknown ids are skipped. Errors: `400 invalid_input` when neither `ids` nor `all: true` is passed.
+
+### The nudge CronJob
+
+`deploy/cronjob-nudge.yaml` runs `node scripts/dist/nudge.js` every 10 minutes with the app image. For every player seen in the last 3 hours or created today it reads `quest_board` and `recommend_people` and writes up to 2 `new_quest` notifications per 30 minutes and 1 `new_match` per hour, skipping anything already sent. It prints the counts; a second run right after the first writes 0. Run it locally with `npm run build:scripts && node scripts/dist/nudge.js` (reads `.env`).
 
 ## Demo flow (curl order used for this doc)
 

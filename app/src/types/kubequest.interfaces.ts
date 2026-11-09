@@ -10,6 +10,7 @@ import {
   HandshakeStatus,
   IsoDateString,
   ItineraryItemKind,
+  NotificationType,
   LeaderboardBoard,
   LeaderboardPeriod,
   LocationKind,
@@ -782,6 +783,37 @@ export interface ISendMessageInput {
   text: string;
 }
 
+export interface INotification {
+  id: string;
+  type: NotificationType;
+  title: string;
+  body: string;
+  link: string;
+  createdAt: IsoDateString;
+  readAt: IsoDateString | null;
+}
+
+export interface IListNotificationsInput {
+  attendeeId: string;
+  limit?: number;
+}
+
+export interface IListNotificationsResult {
+  items: INotification[];
+  unread: number;
+}
+
+export interface IMarkNotificationsReadInput {
+  attendeeId: string;
+  ids?: string[];
+  all?: boolean;
+}
+
+export interface IMarkNotificationsReadResult {
+  marked: number;
+  unread: number;
+}
+
 export interface IListMessagesInput {
   attendeeId: string;
   meetId: string;
@@ -873,6 +905,8 @@ export interface IToolContracts {
   send_message: { input: ISendMessageInput; output: IMessage };
   list_messages: { input: IListMessagesInput; output: IMessage[] };
   recap: { input: IAttendeeInput; output: IRecap };
+  list_notifications: { input: IListNotificationsInput; output: IListNotificationsResult };
+  mark_notifications_read: { input: IMarkNotificationsReadInput; output: IMarkNotificationsReadResult };
 }
 
 export interface IToolInfo {
