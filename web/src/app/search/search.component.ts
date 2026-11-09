@@ -22,6 +22,7 @@ import { AlertBannerComponent } from '../shared/components/alert-banner/alert-ba
 import { PixelFaceComponent } from '../shared/components/pixel-face/pixel-face.component';
 import { searchExampleQueries, searchSettings, searchTabs } from './search.constants';
 import { SearchHelper } from './search.helper';
+import { LiveMeetService } from '../meet-live/services/live-meet.service';
 import { AnswerState, ConnectState, IAnswerSegment, SearchTab } from './search.types';
 
 interface IItineraryChange {
@@ -41,6 +42,7 @@ export class SearchComponent implements OnInit {
   private readonly _route = inject(ActivatedRoute);
   private readonly _router = inject(Router);
   private readonly _destroyRef = inject(DestroyRef);
+  private readonly _liveMeetService = inject(LiveMeetService);
 
   private _askSubscription?: Subscription;
   private _answerSubscription?: Subscription;
@@ -288,6 +290,12 @@ export class SearchComponent implements OnInit {
           this.sendingIds.delete(person.publicId);
           this.sentIds.add(person.publicId);
           this.meetsByPartner = new Map(this.meetsByPartner).set(person.publicId, meet);
+
+          if (meet.status === 'accepted') {
+            void this._router.navigate(['/intro', meet.id]);
+          } else {
+            this._liveMeetService.waitFor(meet);
+          }
         },
         error: (error: unknown) => {
           console.error('Could not send the meet request', error);
