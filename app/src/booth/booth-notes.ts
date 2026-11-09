@@ -11,7 +11,7 @@ import { ToolError } from '../tools/tool-errors';
 import { gameRules, xpRewards } from '../types/kubequest.constants';
 import { IStoredBoothNote } from '../types/internal.interfaces';
 import { IBoothNote, ILocation, ISaveBoothNoteInput, ISaveBoothNoteResult, IXpEvent } from '../types/kubequest.interfaces';
-import { awardXpDetailed } from '../xp/award';
+import { awardXpOnceDetailed } from '../xp/award';
 
 interface IVersionedNote {
   note: IStoredBoothNote;
@@ -256,7 +256,10 @@ export async function saveBoothNote(input: ISaveBoothNoteInput): Promise<ISaveBo
 
   embedInBackground(saved.note);
   const outcome = saved.decision.award
-    ? await awardXpDetailed({ attendeeId: input.attendeeId, type: 'outpost', xp: xpRewards.OUTPOST, locationId: location.id })
+    ? await awardXpOnceDetailed(
+        { attendeeId: input.attendeeId, type: 'outpost', xp: xpRewards.OUTPOST, locationId: location.id },
+        `booth-note-${input.attendeeId}-${location.id}`,
+      )
     : undefined;
   const xpAwarded = outcome?.event.xp ?? 0;
 

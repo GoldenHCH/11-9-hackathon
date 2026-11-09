@@ -18,7 +18,7 @@ JSON in this doc is trimmed: long strings end in `…` and `"…N more"` stands 
 |---|---|
 | `GET /api/config` | Boot data: `{ appVersion, publicBaseUrl, conferenceTimeZone, traceUrlTemplate?, rum? }`. Call once at start. |
 | `GET /api/tools` | Every tool with `name`, `description`, `awardsXp` and its JSON Schema `inputSchema`. |
-| `GET /api/screen-token/:locationId` | Same as the `screen_token` tool. Used by the demo screen. |
+| `GET /api/screen-token/:locationId?key=<displayKey>` | The only way to run `screen_token`. Needs the location's display key as `?key=` or the `x-screen-key` header; without it, `403 bad_screen_key`. Used by the demo screen. |
 | `GET /r/:locationId?t=<token>` | Printed and on-screen QR codes open this. With the Angular build it serves the SPA (the scan-result route); without it, it returns the JSON in `fixtures/scan_route.json`. |
 | `GET /h/<token>` | A handshake QR (from `handshake_code`) opens this. With the Angular build it serves the SPA; read the token from the path segment and call `start_handshake`. Without the build it returns a JSON hint. |
 | `GET /api/recap/:attendeeId/email.html` | The player's recap email (`recap.emailHtml`) as `text/html`. A mock of it is in `docs/mock/recap-email.html`; no email is sent. |
@@ -49,7 +49,7 @@ Every failure has the same envelope:
 | Status | Codes seen | UI behaviour |
 |---|---|---|
 | 400 | `invalid_input`, `invalid_json`, `self_handshake` | A UI bug, or (`self_handshake`) the player scanned their own code. Show the message. |
-| 403 | `bad_signature`, `expired_token`, `missing_token` (check_in, start_handshake), `no_screen` (screen_token) | On a scan, show "scan the code on the door" with the message. |
+| 403 | `bad_signature`, `expired_token`, `missing_token` (check_in, start_handshake), `no_screen`, `bad_screen_key` (screen token), `screen_only` (`POST /api/tools/screen_token`) | On a scan, show "scan the code on the door" with the message. |
 | 404 | `unknown_attendee`, `unknown_player`, `attendee_not_found`, `unknown_location`, `unknown_talk`, `talk_not_found`, `boss_not_found`, `unknown_meet`, `unknown_quest`, `unknown_outpost`, `unknown_handshake`, `unknown_tool`, `not_found` | For `unknown_attendee`, clear the stored id and go to signup (not for `unknown_player`, which is about the other player). Otherwise show the message. |
 | 409 | `handle_taken`, `meeting_off`, `no_match`, `meet_closed`, `meet_locked`, `quest_not_open`, `quest_not_active`, `quest_done`, `quest_expired`, `too_many_active`, `code_used`, `already_shook_hands`, `already_answered`, `handshake_closed`, `meet_not_accepted`, `conflict` | An expected game state. Show the message and refetch the screen's data. |
 | 429 | `slow_down` (send_message) | Show the message; let the player try again in a few minutes. |
@@ -106,7 +106,7 @@ On a 5xx, double the interval up to 60 s, then reset after a success.
 
 The screen is a full-screen page in the SPA, for example `/screen/cloud-native-hackathon`. It:
 
-1. Calls `GET /api/screen-token/cloud-native-hackathon` and draws `scanUrl` as a large QR code. It refetches every 8 minutes; the token expires after 10 (`expiresAt`), so a photo of an old code stops working.
+1. Calls `GET /api/screen-token/cloud-native-hackathon?key=<displayKey>` (passing on the `key` from its own URL) and draws `scanUrl` as a large QR code. It refetches every 8 minutes; the token expires after 10 (`expiresAt`), so a photo of an old code stops working.
 2. Polls `boss_state` with `{"locationId":"cloud-native-hackathon"}` every 3 s and draws the health bar from `health` and `maxHealth`.
 3. Polls `leaderboard` every 15 s.
 
@@ -195,7 +195,9 @@ In a session room during a session, `talkNow` is set and `quizAvailable` is `tru
 
 ### screen_token
 
-`{"locationId":"cloud-native-hackathon"}` →
+Not callable through `POST /api/tools/screen_token` (that returns `403 screen_only`) and not listed by `GET /api/tools`. Room screens call `GET /api/screen-token/:locationId` with the display key, as `?key=` or the `x-screen-key` header. The key is HMAC-SHA256(`QR_SECRET`, `"screen:" + locationId`) in base64url, compared in constant time; `npx tsx scripts/print-qr-links.ts` prints each screen's URL `/screen/<locationId>?key=<displayKey>` for organizers. A missing or wrong key returns `403 bad_screen_key`.
+
+`GET /api/screen-token/cloud-native-hackathon?key=<displayKey>` →
 
 ```json
 {"locationId":"cloud-native-hackathon","token":"<signed-token>","expiresAt":"2026-11-09T20:30:00.944Z","scanUrl":"https://kube-quest.cnh.radarhq.io/r/cloud-native-hackathon?t=<signed-token>"}

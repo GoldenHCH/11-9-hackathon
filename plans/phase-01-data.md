@@ -1,5 +1,9 @@
 # Phase 01 — Types, Elasticsearch, data, tool skeleton
 
+> **Status (14:10 MST): done, then reshaped.** Merged as PR 3 (types, mappings, talk ingest, locations with geo, seed, ten tools over the seed store, fixtures, check-in v1). PR 5, "KubeQuest backend v1", then replaced most of what this phase produced: types moved to `app/src/types/`, a `quests` index joined the five below, tools became the 23 in `docs/api.md`, and fixtures became `{ request, status, response, variants }`. The checkboxes below are left as written for the record; don't build from them. Still open from this phase:
+> 1. The image's bundled `scripts/dist/index-all.js` indexes nothing: `seed.ts` resolves `resources/` from `__dirname` (`scripts/dist` in the bundle), and its `require.main === module` guard closes the client. The live seed was loaded by a workaround Job (`docs/radar-log.md`, section 4). `intros.seed.json` is not indexed and there is no quests seed.
+> 2. `docs/elastic.md` still describes the old mapping (`profileSemantic`, five indices) and counts on `/healthz` (they moved to `/readyz`, without counts).
+
 **Goal:** five Elasticsearch indices full of real talks, seeded attendees, locations with geo points and QR tokens, and a tool module with fixed signatures and stubbed bodies that Phases 02 and 03 build against. Check-in lands in its deliberately simple v1 so Gitar has something real to catch.
 **Brief requirements covered:** Elastic core data layer; no personal data (seeded attendees); the Gitar security story's first half.
 **Depends on:** Collin's Phase 00 (repo from cnh-starter) for the push target. Start in a local folder and push the moment the repo exists.

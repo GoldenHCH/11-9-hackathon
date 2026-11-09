@@ -1,0 +1,136 @@
+import type { Material } from './iso';
+
+type Spec = { base: string; dark: string; light: string; accent: string; rows: string[] };
+
+export const MATERIALS: Record<Material, Spec> = {
+  circuit: {
+    base: '#1f9e93',
+    dark: '#157a71',
+    light: '#3cc4b7',
+    accent: '#c9fff6',
+    rows: ['........', '.aaa..a.', '.a....a.', '.a.aaaa.', '.a.a....', '...a.aa.', '.aaa..a.', '........'],
+  },
+  stone: {
+    base: '#8b91a6',
+    dark: '#6b7187',
+    light: '#a9aec0',
+    accent: '#5a5f73',
+    rows: ['ll..d...', 'l...d.ll', '....d...', 'ddddddd.', '..d....l', '..d...ll', '..d.....', 'dddddddd'],
+  },
+  glass: {
+    base: '#8fd3ef',
+    dark: '#62b3d6',
+    light: '#d4f1fc',
+    accent: '#ffffff',
+    rows: ['dddddddd', 'd.a....d', 'd..a...d', 'd...l..d', 'd....l.d', 'd......d', 'd......d', 'dddddddd'],
+  },
+  crate: {
+    base: '#c8894a',
+    dark: '#93602f',
+    light: '#e2a96b',
+    accent: '#6e4520',
+    rows: ['aaaaaaaa', 'a.....da', 'a....d.a', 'allllll.', 'a..d...a', 'a.d....a', 'ad.....a', 'aaaaaaaa'],
+  },
+  iron: {
+    base: '#b4bccb',
+    dark: '#8b94a6',
+    light: '#dfe4ec',
+    accent: '#5d6577',
+    rows: ['llllllld', 'la....ad', 'l......d', 'l......d', 'l......d', 'l......d', 'la....ad', 'dddddddd'],
+  },
+  copper: {
+    base: '#d1733d',
+    dark: '#a3532a',
+    light: '#f0a06a',
+    accent: '#3fb59a',
+    rows: ['..l.....', '.ll...a.', '.....aa.', 'd.......', 'dd..l...', '....ll..', '.a......', 'aa....dd'],
+  },
+  lantern: {
+    base: '#f6b93b',
+    dark: '#b97d17',
+    light: '#ffe48a',
+    accent: '#fff6d1',
+    rows: ['dddddddd', 'd.llll.d', 'dlaaaald', 'dlaaaald', 'dlaaaald', 'dlaaaald', 'd.llll.d', 'dddddddd'],
+  },
+  wood: {
+    base: '#9a6a3d',
+    dark: '#7a502a',
+    light: '#b5834f',
+    accent: '#5f3d1e',
+    rows: ['..d.....', '..d...l.', '..d...l.', 'dddddddd', '.....d..', '.l...d..', '.l...d..', 'dddddddd'],
+  },
+  salt: {
+    base: '#e9eef2',
+    dark: '#d5dde4',
+    light: '#f7f9fb',
+    accent: '#c8d2db',
+    rows: ['........', '.l......', '.....d..', '........', '..d.....', '......l.', '........', '...l....'],
+  },
+  path: {
+    base: '#c9d1dc',
+    dark: '#aab4c2',
+    light: '#dde3ea',
+    accent: '#9aa5b5',
+    rows: ['dddddddd', 'd...ld..', 'd....d..', 'dddddddd', '..d....d', 'l.d....d', '..d....d', 'dddddddd'],
+  },
+  wall: {
+    base: '#dfe5ee',
+    dark: '#c3ccd9',
+    light: '#f2f5f9',
+    accent: '#aeb9c9',
+    rows: ['dddddddd', '...d....', '...d....', 'dddddddd', '.......d', '.......d', '.......d', 'dddddddd'],
+  },
+  ember: {
+    base: '#ff6b3d',
+    dark: '#c9431c',
+    light: '#ffb070',
+    accent: '#ffe08a',
+    rows: ['d..d..d.', '.dl..ld.', '..laal..', '.laaaal.', '.laaaal.', '..laal..', '.dl..ld.', 'd..d..d.'],
+  },
+  qr: {
+    base: '#ffffff',
+    dark: '#16183a',
+    light: '#ffffff',
+    accent: '#16183a',
+    rows: ['ddd.d.dd', 'd.d..d.d', 'ddd.d.dd', '...dd...', 'd.dd.d.d', '.d..dd..', 'ddd.d.d.', 'd.d.dd.d'],
+  },
+  kube: {
+    base: '#326ce5',
+    dark: '#2353b8',
+    light: '#6b96f0',
+    accent: '#ffffff',
+    rows: ['llllllll', 'l......d', 'l..aa..d', 'l.a..a.d', 'l.a..a.d', 'l..aa..d', 'l......d', 'dddddddd'],
+  },
+  gem: {
+    base: '#4cb36b',
+    dark: '#2f8a4c',
+    light: '#8fe3a6',
+    accent: '#e6fff0',
+    rows: ['...ll...', '..laal..', '.la..dl.', 'la....dl', 'ld....dd', '.ld..dd.', '..dddd..', '...dd...'],
+  },
+  pine: {
+    base: '#2f8a5a',
+    dark: '#1f6542',
+    light: '#4cb36b',
+    accent: '#16183a',
+    rows: ['...l....', '..ll..d.', '.......d', 'l...d...', '....dd..', '.l......', 'll....l.', '...d....'],
+  },
+  roof: {
+    base: '#4a4f7a',
+    dark: '#383c63',
+    light: '#5f6596',
+    accent: '#ffc83d',
+    rows: ['........', '.d....d.', '........', '...l....', '........', '.d....d.', '........', '......l.'],
+  },
+};
+
+export const TRACKS: { m: Material; track: string; short: string }[] = [
+  { m: 'circuit', track: 'AI Inference + Agentic', short: 'Circuit' },
+  { m: 'stone', track: 'Platform Engineering', short: 'Stone' },
+  { m: 'glass', track: 'Operations + Performance', short: 'Glass' },
+  { m: 'crate', track: 'Data Processing + Storage', short: 'Crate' },
+  { m: 'iron', track: 'Security', short: 'Iron' },
+  { m: 'copper', track: 'Connectivity', short: 'Copper' },
+  { m: 'lantern', track: 'Inclusion + Accessibility', short: 'Lantern' },
+  { m: 'wood', track: 'Everything else', short: 'Wood' },
+];

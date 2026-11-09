@@ -6,6 +6,7 @@ import { ToolError } from '../tools/tool-errors';
 import { quizSources } from '../types/kubequest.constants';
 import { IQuizAnswerResult, IQuizQuestionWithAnswer, IQuizResult, IStoredQuiz, ITalk, IXpEvent } from '../types/kubequest.interfaces';
 import { QuizSource } from '../types/kubequest.types';
+import { claimOnce } from '../xp/award';
 
 interface ITalkDoc extends ITalk {
   quiz?: unknown;
@@ -156,19 +157,7 @@ export function quizClaimId(attendeeId: string, talkId: string): string {
 export async function claimQuiz(attendeeId: string, talkId: string, correct: number): Promise<boolean> {
   const claim: IXpEvent = { id: quizClaimId(attendeeId, talkId), attendeeId, type: 'quiz', xp: 0, talkId, correct, at: new Date().toISOString() };
 
-  try {
-    await getEsClient().index({ index: indexNames.XP_EVENTS, id: claim.id, op_type: 'create', document: claim }, esOptions(esTimeouts.WRITE_MS));
-
-    return true;
-  } catch (error) {
-    const status: unknown = typeof error === 'object' && error !== null ? Reflect.get(error, 'statusCode') : undefined;
-
-    if (status === 409) {
-      return false;
-    }
-
-    throw error;
-  }
+  return claimOnce(claim);
 }
 
 export function gradeAnswers(questions: IQuizQuestionWithAnswer[], answers: number[]): IQuizAnswerResult[] {

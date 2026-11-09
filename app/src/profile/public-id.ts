@@ -138,6 +138,7 @@ export function publicCheckIn(result: ICheckInResult): ICheckInResult {
     ...result,
     completedQuests: result.completedQuests.map(publicQuest),
     ...(result.meet ? { meet: publicMeet(result.meet) } : {}),
+    ...(result.peopleHere ? { peopleHere: result.peopleHere.map(publicPersonMatch) } : {}),
   };
 }
 

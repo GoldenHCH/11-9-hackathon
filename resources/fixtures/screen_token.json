@@ -1,6 +1,6 @@
 {
   "tool": "screen_token",
-  "endpoint": "POST /api/tools/screen_token",
+  "endpoint": "GET /api/screen-token/:locationId?key=<displayKey>",
   "request": {
     "locationId": "cloud-native-hackathon"
   },
@@ -42,6 +42,29 @@
         "error": {
           "code": "no_screen",
           "message": "151 has no screen. Scan the printed code on its door."
+        }
+      }
+    },
+    "screen_token_bad_key": {
+      "request": {
+        "locationId": "cloud-native-hackathon",
+        "key": "<wrong>"
+      },
+      "status": 403,
+      "response": {
+        "error": {
+          "code": "bad_screen_key",
+          "message": "Only room screens can mint codes."
+        }
+      }
+    },
+    "screen_token_tool_route": {
+      "endpoint": "POST /api/tools/screen_token",
+      "status": 403,
+      "response": {
+        "error": {
+          "code": "screen_only",
+          "message": "Only room screens can mint codes."
         }
       }
     }

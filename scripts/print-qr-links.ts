@@ -1,16 +1,25 @@
 import { existsSync, readFileSync } from 'node:fs';
 import path from 'node:path';
+import { appConfig } from '../app/src/config';
 import { closeEsClient, esOptions, getEsClient, isElasticConfigured } from '../app/src/es/client';
 import { esTimeouts, indexNames } from '../app/src/es/es.constants';
-import { buildScanUrl, signLocationToken } from '../app/src/security/tokens';
+import { buildScanUrl, signLocationToken, signScreenDisplayKey } from '../app/src/security/tokens';
 
 interface ILocationRow {
   id: string;
   name?: string;
   kind?: string;
+  hasScreen?: boolean;
 }
 
 const locationsFile = path.resolve(__dirname, '..', 'resources', 'locations.json');
+
+function screenUrl(locationId: string): string {
+  const url = new URL(`/screen/${encodeURIComponent(locationId)}`, appConfig.publicBaseUrl);
+  url.searchParams.set('key', signScreenDisplayKey(locationId));
+
+  return url.toString();
+}
 
 function isLocationRow(value: unknown): value is ILocationRow {
   return typeof value === 'object' && value !== null && typeof Reflect.get(value, 'id') === 'string';
@@ -32,7 +41,7 @@ async function fromElastic(): Promise<ILocationRow[]> {
   }
 
   const response = await getEsClient().search<ILocationRow>(
-    { index: indexNames.LOCATIONS, size: 1000, _source: ['id', 'name', 'kind'], query: { match_all: {} } },
+    { index: indexNames.LOCATIONS, size: 1000, _source: ['id', 'name', 'kind', 'hasScreen'], query: { match_all: {} } },
     { ...esOptions(esTimeouts.SEARCH_MS), ignore: [404] },
   );
 
@@ -52,6 +61,10 @@ async function main(): Promise<void> {
 
   for (const row of rows.sort((left, right) => left.id.localeCompare(right.id))) {
     process.stdout.write(`${row.id}\t${row.kind ?? ''}\t${row.name ?? ''}\t${buildScanUrl(row.id, signLocationToken(row.id))}\n`);
+  }
+
+  for (const row of rows.filter((candidate) => candidate.hasScreen === true)) {
+    process.stdout.write(`screen\t${row.id}\t${screenUrl(row.id)}\n`);
   }
 }
 

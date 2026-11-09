@@ -21,7 +21,7 @@ import {
   IStartHandshakeInput,
 } from '../types/kubequest.interfaces';
 import { HandshakeRole, HandshakeStatus } from '../types/kubequest.types';
-import { awardXp } from '../xp/award';
+import { awardXpOnce } from '../xp/award';
 import { answersMatch } from './answer-match.helper';
 import {
   countHandshakeXpSince,
@@ -367,10 +367,16 @@ async function awardMatch(handshake: IStoredHandshake): Promise<void> {
       continue;
     }
 
-    await awardXp({ attendeeId: player.attendeeId, type: 'handshake', xp: xpRewards.MEET, gems: 1, introId });
+    await awardXpOnce(
+      { attendeeId: player.attendeeId, type: 'handshake', xp: xpRewards.MEET, gems: 1, introId },
+      `handshake-${handshake.id}-${player.attendeeId}`,
+    );
 
     if (handshake.firstTimerPair) {
-      await awardXp({ attendeeId: player.attendeeId, type: 'welcome', xp: xpRewards.MEET_FIRST_TIMER_BONUS, introId });
+      await awardXpOnce(
+        { attendeeId: player.attendeeId, type: 'welcome', xp: xpRewards.MEET_FIRST_TIMER_BONUS, introId },
+        `welcome-${handshake.id}-${player.attendeeId}`,
+      );
     }
   }
 }

@@ -1,8 +1,17 @@
 import { Router } from 'express';
 import { appConfig } from '../config';
 import { findTool, listTools, toolRegistry } from '../tools';
+import { verifyScreenDisplayKey } from '../security/tokens';
 import { IClientConfig } from '../types/kubequest.interfaces';
 import { sendError, sendToolFailure } from './errors';
+
+const screenOnlyTools: ReadonlySet<string> = new Set(['screen_token']);
+
+function screenKeyFrom(query: unknown, header: string | undefined): string {
+  const fromQuery = typeof query === 'string' ? query : '';
+
+  return fromQuery !== '' ? fromQuery : (header ?? '');
+}
 
 function clientConfig(): IClientConfig {
   const { rumEndpoint, rumAuthToken, traceUrlTemplate } = appConfig.telemetry;
@@ -24,11 +33,17 @@ export function apiRoutes(): Router {
   });
 
   router.get('/api/tools', (_request, response) => {
-    response.json(listTools().map((tool) => tool.info()));
+    response.json(listTools().filter((tool) => !screenOnlyTools.has(tool.name)).map((tool) => tool.info()));
   });
 
   router.post('/api/tools/:name', async (request, response) => {
     const tool = findTool(request.params.name);
+
+    if (screenOnlyTools.has(request.params.name)) {
+      sendError(response, 403, 'screen_only', 'Only room screens can mint codes.');
+
+      return;
+    }
 
     if (!tool) {
       sendError(response, 404, 'unknown_tool', `There is no tool called ${request.params.name}.`);
@@ -45,6 +60,14 @@ export function apiRoutes(): Router {
 
   router.get('/api/screen-token/:locationId', async (request, response) => {
     try {
+      const key = screenKeyFrom(request.query['key'], request.get('x-screen-key'));
+
+      if (key === '' || !verifyScreenDisplayKey(request.params.locationId, key)) {
+        sendError(response, 403, 'bad_screen_key', 'Only room screens can mint codes.');
+
+        return;
+      }
+
       response.json(await toolRegistry.screen_token.execute({ locationId: request.params.locationId }));
     } catch (error) {
       sendToolFailure(response, error);

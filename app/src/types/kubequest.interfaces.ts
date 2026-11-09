@@ -512,6 +512,7 @@ export interface ICheckInResult {
   newBanners: IBannerProgress[];
   boothNote?: IBoothNote;
   noteRequired?: boolean;
+  peopleHere?: IPersonMatch[];
 }
 
 export interface ISignUpResult {
