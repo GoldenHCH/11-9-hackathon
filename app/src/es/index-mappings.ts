@@ -219,6 +219,12 @@ export function buildIndexMappings(inferenceId: string): Record<IndexName, Prope
       handle: keyword,
       attendeeId: keyword,
       createdAt: date,
+      type: keyword,
+      title: { type: 'text', index: false },
+      body: { type: 'text', index: false },
+      link: unindexedKeyword,
+      dedupeKey: keyword,
+      readAt: date,
     },
   };
 }

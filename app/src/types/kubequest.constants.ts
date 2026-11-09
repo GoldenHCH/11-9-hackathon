@@ -190,4 +190,8 @@ export const toolNames = [
   'list_messages',
   'recap',
   'import_profile',
+  'list_notifications',
+  'mark_notifications_read',
 ] as const;
+
+export const notificationTypes = ['new_quest', 'new_match', 'meet_offer', 'meet_accepted', 'banner'] as const;

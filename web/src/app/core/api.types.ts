@@ -10,7 +10,10 @@ export type {
   IMatchPlayer,
   IMeet,
   IItineraryItem,
+  IListNotificationsResult,
+  IMarkNotificationsReadResult,
   IMessage,
+  INotification,
   IPersonMatch,
   IProfile,
   IRecap,
@@ -24,4 +27,4 @@ export type {
   IWhatsNext,
   IWorld,
 } from '../../../../app/src/types/kubequest.interfaces';
-export type { MeetResponse, ToolName } from '../../../../app/src/types/kubequest.types';
+export type { MeetResponse, NotificationType, ToolName } from '../../../../app/src/types/kubequest.types';

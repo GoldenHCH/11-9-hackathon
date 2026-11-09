@@ -18,6 +18,7 @@ import {
   meetResponses,
   meetRoles,
   meetStatuses,
+  notificationTypes,
   questResponses,
   questSources,
   questStatuses,
@@ -84,6 +85,8 @@ export type AiPurpose = (typeof aiPurposes)[number];
 export type BannerId = (typeof bannerIds)[number];
 
 export type ToolName = (typeof toolNames)[number];
+
+export type NotificationType = (typeof notificationTypes)[number];
 
 export type HandshakeStatus = (typeof handshakeStatuses)[number];
 
