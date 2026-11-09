@@ -16,7 +16,7 @@ JSON in this doc is trimmed: long strings end in `…` and `"…N more"` stands 
 
 | Route | Use |
 |---|---|
-| `GET /api/config` | Boot data: `{ appVersion, publicBaseUrl, conferenceTimeZone, demoSimulateScans, traceUrlTemplate?, rum? }`. Call once at start. `demoSimulateScans` is `true` only when the server runs with `DEMO_SIMULATE_SCANS=true`; the map shows its "Demo: simulate scan" button only then. |
+| `GET /api/config` | Boot data: `{ appVersion, publicBaseUrl, conferenceTimeZone, demoSimulateScans, githubVerifyEnabled, traceUrlTemplate?, rum? }`. `githubVerifyEnabled` shows or hides the "Verify with GitHub" button. Call once at start. `demoSimulateScans` is `true` only when the server runs with `DEMO_SIMULATE_SCANS=true`; the map shows its "Demo: simulate scan" button only then. |
 | `GET /api/tools` | Every tool with `name`, `description`, `awardsXp` and its JSON Schema `inputSchema`. |
 | `GET /api/screen-token/:locationId?key=<displayKey>` | The only way to run `screen_token`. Needs the location's display key as `?key=` or the `x-screen-key` header; without it, `403 bad_screen_key`. Used by the demo screen. |
 | `GET /r/:locationId?t=<token>` | Printed and on-screen QR codes open this. With the Angular build it serves the SPA (the scan-result route); without it, it returns the JSON in `fixtures/scan_route.json`. |
@@ -25,6 +25,8 @@ JSON in this doc is trimmed: long strings end in `…` and `"…N more"` stands 
 | `GET /api/recap/:attendeeId/email.html` | The player's recap email (`recap.emailHtml`) as `text/html`. A mock of it is in `docs/mock/recap-email.html`; no email is sent. |
 | `GET /api/recap/:attendeeId.pdf` | The end-of-event recap as a PDF download (`application/pdf`, `Content-Disposition: attachment`). Same auth model as the email route: it takes the private `attendeeId`, so only link it from the player's own recap screen. Pages: a block-art cover (pixel face, handle, level, XP bar, totals, banners), People you met (one card per connection with where you met, the chat prompt, your private notes and clickable link annotations), Talks you attended (your talk notes, takeaways and quiz score), Booths you visited (your booth notes), the itinerary when the attendee has one, and next steps. Headings use the OFL Silkscreen font from `resources/fonts`. Unknown id: `404 unknown_attendee` as JSON. |
 | `POST /api/profile-import` | Multipart form: `attendeeId` plus a `file` field holding a resume or LinkedIn PDF (max 5 MB). Reads the text in memory and returns the same JSON as `import_profile`; the file is never written to disk or Elastic. `413 file_too_large`, `415 not_a_pdf`, `422 unreadable_pdf`, `429 rate_limited`. |
+| `GET /auth/github/start?attendeeId=p_…` | Only when `GET /api/config` has `githubVerifyEnabled: true` (env `GITHUB_OAUTH_CLIENT_ID` and `GITHUB_OAUTH_CLIENT_SECRET` set). Navigate the browser here (not XHR). Sets a 10-minute HttpOnly `kq_gh_state` nonce cookie and redirects to GitHub with a signed state (attendeeId, expiry, nonce, HMAC). Off: redirects to `/profile?github=off`. |
+| `GET /auth/github/callback?code=&state=` | GitHub sends the player back here. The state signature, expiry and cookie nonce must all match (CSRF), the code is exchanged server-side, and the GitHub login from `GET api.github.com/user` becomes `links.github` with `githubVerified: true`. Redirects to `/profile?github=verified`, `failed` or `cancelled`. Saving a different GitHub link with `update_links` clears `githubVerified`. |
 | `GET /healthz`, `GET /readyz` | Liveness, and readiness that pings Elasticsearch: `{"status":"ok","version":"dev","elasticsearch":"reachable"}`. |
 
 `/api/config` from this server:
@@ -78,10 +80,13 @@ There are no websockets. Poll, and stop when the tab is hidden (`document.visibi
 |---|---|---|---|
 | Boss bar (phone and screen) | `boss_state` | 3 s | `status` is `defeated` or `escaped` |
 | Meet screen, waiting for the partner | `list_meets` | 10 s | no meet is `proposed` or `accepted` |
+| Live meet popup (global, while signed in) | `pending_meet_requests` | 3 s | the tab is hidden, nobody is signed in, or a popup is open |
+| Requester waiting sheet after "Let's meet" | `list_meets` | 3 s | the meet is `accepted` (open `/intro/:id`) or `live` is `false` |
 | Handshake: own QR | `handshake_code` | every 50 s (codes live 60) | the code was scanned (`handshake_state` returns a handshake) |
 | Handshake: own QR, waiting to be scanned | `handshake_state` without `handshakeId` | 2 s | it returns a `handshake`; then poll with its id |
 | Handshake in progress | `handshake_state` with `handshakeId` | 2 s | `status` is not `waiting` |
-| Meet chat | `list_messages` with `since` (the last message's `at`) | 5 s | the chat is closed |
+| Meet chat, message thread `/messages/:meetId` | `list_messages` with `since` (the last message's `at`) | 4 s | the thread is closed or the tab is hidden |
+| Messages tab unread badge (bottom nav) | `list_conversations` | 20 s | the tab is hidden or nobody is signed in |
 | Itinerary Now card | `whats_around_me` | 30 s, and right after every `check_in` | |
 | Quests tab | `quest_board` | on tab focus and after every `check_in` (offers refresh after a scan) | |
 | Demo screen leaderboard | `leaderboard` | 15 s | |
@@ -106,6 +111,8 @@ On a 5xx, double the interval up to 60 s, then reset after a success.
 | Search | `search`, `world` (browse by building, level and room), `make_quest` ("Make this a quest") |
 | Quests | `quest_board`, `respond_quest`, `recommend_people`, `recommend_talks`, `propose_meet` |
 | Meet screen | `list_meets` (one item), `respond_meet`, `send_message`, `list_messages` (once the meet is `accepted` or `met`) |
+| Messages inbox `/messages` | `list_conversations` |
+| Message thread `/messages/:meetId` | `list_conversations` (the header card), `list_messages`, `send_message`, `mark_conversation_read` (on open and when new messages arrive) |
 | Handshake | `handshake_code` (show `scanUrl` as a QR), `handshake_state`, `start_handshake` (after scanning `/h/<token>`), `answer_handshake` |
 | Booth note (after an outpost scan, `noteRequired: true`) | `save_booth_note`, `list_booth_notes` |
 | Photo quest card, booth details on the map | `upload_booth_photo`, `list_booth_photos`, `report_booth_photo`, `delete_booth_photo` |
@@ -170,7 +177,13 @@ Errors: `400 invalid_input` for a missing name or a malformed email (`"email: In
 
 ### sign_up (awards XP)
 
-Required: `handle` (3 to 20 chars, `^[a-z0-9_.-]+$`, unless `attendeeId` is sent), `workingOn`, `firstKubeCon`, `meetingOn`. Optional: `attendeeId`, `happyToWelcome`, `topics` (up to 5), `spotMe`, `githubLogin`, `realName`, `accessibleMode`, `noWalking`, `scanLocationId`, `scanToken`, and from a confirmed `import_profile`: `headline` (≤120), `skills` (≤20), `offers` (≤8), `asks` (≤8), `summary` (≤1200). Emails, phones and links are stripped from those again on save.
+Required: `handle` (3 to 20 chars, `^[a-z0-9_.-]+$`, unless `attendeeId` is sent), `workingOn`, `firstKubeCon`, `meetingOn`. Optional: `attendeeId`, `happyToWelcome`, `topics` (up to 5), `spotMe`, `githubLogin`, `realName`, `accessibleMode`, `noWalking`, `scanLocationId`, `scanToken`, and from a confirmed `import_profile`: `headline` (≤120), `skills` (≤20), `offers` (≤8), `asks` (≤8), `summary` (≤1200), `seniority` (≤30). Emails, phones and links are stripped from those again on save. Also optional: `intent` (see below).
+
+`intent` is the "Why are you here today?" step: `{"goals":["exploring","hiring"],"exploringField":"AI inference","socialLevel":"lots"}`. `goals` (one or more) are `exploring` (Exploring a new field), `deep_dive` (Going deep on a technology I use), `hiring`, `job_seeking` (Looking for a new role), `booth` (Representing my company at a booth), `community` (Meeting the community / giving back), `talks` (Mostly here for the talks) and `sent` (My company sent me). `exploringField` is kept only with `exploring` and is cleaned like a topic (a preset label, or lowercased free text). `socialLevel` is `light` (Keep it light), `some` (Some intros) or `lots` (Introduce me to everyone); when omitted it defaults from the goals: any of `hiring`, `exploring`, `community` means `lots`, only `sent` and/or `talks` means `light`, anything else `some`. It is stored as `attendee.intent` (`exploringField` is `null` when unset), returned only in the player's own profile, and change it later with `update_settings`.
+
+What `intent` changes:
+- Quest mix (`quest_board`): `light` gives at most 1 meet (`chat`) quest a day, never in the first 2 offers, and none once the player has met someone today; `some` keeps the default mix; `lots` (and booth reps at `some`) lets up to 2 of 3 offers be meets. `talks` favours `attend` and `quiz` quests; `booth` caps `outpost` quests at 1 and favours meets; `hiring` and `job_seeking` favour meets.
+- Matching (`recommend_people`, chat quests): with `exploringField`, experienced players (`welcomer`, or not first-timers) whose topics, skills, `workingOn` or headline match the field rank first, with a reason like `@podwrangler works on AI inference every day; you're exploring it`. `hiring` boosts players whose goals include `job_seeking` (and the reverse), weighted by shared skills, topics and `seniority`, only when the other player chose that goal. A player with `socialLevel: light` is matched into at most one meet a day: once anyone proposed a meet with them today, they leave everyone else's recommendations.
 
 `topics` may be presets or the player's own (for example `"Kueue"`). Each is trimmed and whitespace-collapsed; a preset matched case-insensitively is stored with its preset label, anything else is stripped to letters, digits, spaces and `- + . # /`, must be 2 to 30 characters, is dropped if it looks like an email or URL, and is stored lowercased (`"kueue"`). Duplicates are dropped; at most 5.
 
@@ -220,7 +233,7 @@ After a confirmed meet (`variants.get_profile_partner`), `workingOn` and `topics
 {"attendeeId":"p_Ljp4ZfHC-VPDFwqx","settings":{"accessibleMode":false,"noWalking":false},"topics":["ai","gpu","autoscaling","platform"]}
 ```
 
-`settings` keys: `meetingOn`, `accessibleMode`, `noWalking`, `locationOn`, `language`, `hideFromLeaderboard`. You can also send `topics`, `workingOn`, `spotMe`, `realName` and `visible`. It returns the full own profile, like `get_profile`. Turning `meetingOn` off withdraws every open meet.
+`settings` keys: `meetingOn`, `accessibleMode`, `noWalking`, `locationOn`, `language`, `hideFromLeaderboard`. You can also send `topics`, `workingOn`, `spotMe`, `realName`, `visible` and `intent` (the same shape as in `sign_up`; it replaces the stored intent, for example `{"attendeeId":"p_…","intent":{"goals":["exploring"],"exploringField":"AI inference","socialLevel":"some"}}`). It returns the full own profile, like `get_profile`. Turning `meetingOn` off withdraws every open meet.
 
 ### check_in (awards XP)
 
@@ -415,11 +428,13 @@ The bar is `health / maxHealth`. Show a countdown to `deadline` while `status` i
 {"id":"meet-4d7c25c123e592d61a6e986e","status":"proposed","role":"proposer","statusLine":"Waiting to hear back. We'll tell you if @podwrangler is in.","partner":{"id":"pl_592a78e076ad8c1f","handle":"podwrangler","faceSeed":"podwrangler","level":2,"levelName":"Deployment","xp":110,"banners":["welcomer"],"topics":["…"],"workingOn":"…","firstTimer":false},"sharedTopics":[],"iAccepted":true,"partnerArrived":false,"expiresAt":"2026-11-09T20:40:13.391Z"}
 ```
 
+**A new proposal is a live request.** It opens a 30-second window (`live: true`, `expiresAt` = now + 30 s, `secondsLeft`, `statusLine: "Waiting… 30s"`) and the partner's phone shows a full-screen popup from `pending_meet_requests`. If nobody answers in 30 s it becomes a normal offer for 30 more minutes (`live: false`, `statusLine: "They'll get back to you."`, `variants.lapsed`) and the partner gets one `meet_offer` notification. The proposer never sees "declined": a decline also reads "They'll get back to you." until the offer runs out. Proposing to someone who already has a live or open offer to you accepts it.
+
 `partnerId` is the other player's public id (from `recommend_people`, `search`, a quest's `partnerId` or a leaderboard row). It fails with `409 meeting_off` if either player has meeting turned off, and `404 unknown_player` if the public id matches no one.
 
 ### respond_meet (awards XP)
 
-`{"attendeeId":"att-podwrangler","meetId":"meet-…","response":"accept","blockPartner":false}`. `response` is `accept`, `decline` or `cant_make_it`. It returns `{"meet": IMeetView, "xpAwarded": n}`. Once both players accept, the view gains the meet-screen fields:
+`{"attendeeId":"att-podwrangler","meetId":"meet-…","response":"accept","blockPartner":false}`. `response` is `accept`, `decline`, `later` or `cant_make_it`. `later` (partner only, while the offer is open) turns a live request into a normal offer for 30 minutes from now, with no popup again and no notification (`variants.later`). `decline` stays silent to the proposer. It returns `{"meet": IMeetView, "xpAwarded": n}`. Once both players accept, the view gains the meet-screen fields:
 
 ```json
 {"meet":{"id":"meet-4d7c25c123e592d61a6e986e","status":"accepted","role":"partner","statusLine":"Meet @verify93279 at Network Nook and both scan its code.","partner":{"…":"…"},"partnerDetails":{"spotMe":"Green hoodie"},
@@ -432,9 +447,19 @@ The bar is `health / maxHealth`. Show a countdown to `deadline` while `status` i
 
 `matchSignal.pattern` holds 64 block materials for an 8x8 grid; both phones show the same grid and words. `partnerDetails` can hold `realName`, `photoUrl` and `spotMe`.
 
+### pending_meet_requests (live popup)
+
+`{"attendeeId":"p_…"}` → the live requests addressed to this player that are still inside their 30-second window, newest first, at most 3. One Elasticsearch query with a 3 s timeout; poll it every 3 s (the gateway cuts requests at 15 s, so there is no SSE or long-poll).
+
+```json
+{"requests":[{"meetId":"meet-4d7c25c123e592d61a6e986e","requester":{"publicId":"pl_4451cf61b8914498","handle":"verify93279","faceSeed":"cbd1b4ac2fe4ff69","level":1,"levelName":"Pod","headline":"Running GPU inference on Kubernetes with autoscaling"},"sharedTopics":["gpu","autoscaling"],"why":"You both work on gpu and autoscaling.","expiresAt":"2026-11-09T20:20:43.391Z","secondsLeft":24}],"serverTime":"2026-11-09T20:20:19.391Z"}
+```
+
+`requester` is a public card only (no attendee id, photo, real name or "how to spot me"). Count down from `secondsLeft` on the client clock. Answer with `respond_meet` (`accept`, `later` or `decline`). This call and `list_meets` also settle requests whose window ran out: they become normal offers (see `propose_meet`) and send the `meet_offer` notification, so no timer runs on the server. Measured: about 60 ms.
+
 ### list_meets (meet screen)
 
-`{"attendeeId":"p_…"}` → an array of the meet views above, in every status. After the two players complete a handshake, the status is `met` and `statusLine` reads `"You met @podwrangler."` (`variants.list_meets_after`).
+`{"attendeeId":"p_…"}` → an array of the meet views above, in every status. Each view has `live` (true while a request is inside its 30-second window) and, while live, `secondsLeft`. After the two players complete a handshake, the status is `met` and `statusLine` reads `"You met @podwrangler."` (`variants.list_meets_after`).
 
 ### leaderboard
 
@@ -625,11 +650,25 @@ Sample photos for three booths (Dash0, Elastic, Docker), clearly labelled "SAMPL
 {"id":"4097b15f-5638-4278-944b-997129851651","meetId":"meet-4c2b89f53c32d32090bdc992","fromMe":true,"text":"See you at the campfire in 5?","at":"2026-11-09T21:20:37.270Z"}
 ```
 
-Only the two players in a meet that both accepted (`accepted` or `met`) can message. Plain text, trimmed, 1 to 500 characters, 20 per 10 minutes per sender. Errors: `409 meet_not_accepted`, `409 no_match` (blocked), `404 unknown_meet`, `429 slow_down`.
+Only the two players in a meet that both accepted (`accepted` or `met`) can message. Plain text only (control and bidi characters are stripped, line breaks kept, more than one blank line collapsed), trimmed, 1 to 1000 characters, at most 30 per minute per sender. Errors: `409 meet_not_accepted`, `409 no_match` (blocked), `404 unknown_meet`, `429 slow_down`.
 
 ### list_messages
 
-`{"attendeeId":"p_…","meetId":"meet-…","since":"2026-11-09T21:20:37.270Z"}` (`since` optional) → messages oldest first, each with `fromMe`. Neither player's id is ever included.
+`{"attendeeId":"p_…","meetId":"meet-…","since":"2026-11-09T21:20:37.270Z"}` (`since` optional) → messages oldest first, each with `fromMe`. Without `since` it returns the latest 200. Neither player's id is ever included. Chat messages are stored in the `messages` index with `kind: "chat"` (older ones have no `kind`); every chat query filters on that, so notifications, handle reservations, connections and read markers never show up as messages.
+
+### list_conversations
+
+`{"attendeeId":"p_…"}` → the inbox, newest activity first, plus the total `unread`:
+
+```json
+{"conversations":[{"meetId":"meet-4c2b89f53c32d32090bdc992","meetStatus":"accepted","partner":{"publicId":"pl_b0f34ffaf6282124","handle":"argoalpaca","faceSeed":"argoalpaca","levelName":"Pod"},"lastMessage":{"text":"On my way, green hoodie.","fromMe":false,"at":"2026-11-09T21:20:40.500Z"},"lastActivityAt":"2026-11-09T21:20:40.500Z","unread":1}],"unread":1}
+```
+
+One row per person the player has an `accepted` or `met` meet with (the newest meet with that person) or a saved connection with (see `list_connections`). A row from a meet carries `connectionId` too when the two are also connected; a handshake-only connection has no meet, so its row's `meetId` is the connection id (`conn-…`, `meetStatus: "met"`), and `send_message`, `list_messages` and `mark_conversation_read` accept that id in `meetId` for its two members only. Messaging stays opt-in: proposed, declined, cancelled and blocked meets never appear. `lastMessage` is `null` before anyone writes. `unread` counts the partner's messages after the player's read marker. `partner` is a public card only: never an attendee id, email or name.
+
+### mark_conversation_read
+
+`{"attendeeId":"p_…","meetId":"meet-…"}` → `{"meetId":"meet-…","readAt":"2026-11-09T21:21:02.114Z","unread":0}` (`unread` is the remaining total across all conversations, for the nav badge). Writes a read marker to the `messages` index with `kind: "read_marker"` under the id `read:<attendeeId>:<meetId>`. Errors: `404 unknown_meet` when the player is not in that meet.
 
 ### recap
 
@@ -660,6 +699,8 @@ Networks: `linkedin` (`linkedin.com/in/<slug>` or a bare slug), `github` (login 
 ```json
 {"publicId":"pl_01c88990a33676aa","handle":"johndoe","isOwner":false,"isConnection":true,"visible":true,"links":{"…":"…"},"items":[{"network":"linkedin","label":"in/john-doe-platform","url":"https://www.linkedin.com/in/john-doe-platform"},"…3 more"]}
 ```
+
+`githubVerified` is `true` when the GitHub link was confirmed through `/auth/github/callback`; the GitHub entry in `items` (here and in `list_connections`) then carries `"verified":true`, which the cards show as a small check.
 
 For anyone else (`variants.not_connected`): `{"visible":false,"links":{},"items":[],"hiddenReason":"Links are shared only with people you have met through a meet or a handshake.", …}`.
 
@@ -704,7 +745,7 @@ One note per player and talk; saving again edits it. Unknown talk: `404 unknown_
 {"items":[{"id":"match:pl_b0f34ffaf6282124","type":"new_match","title":"You and @argoalpaca both work on gitops","body":"Both into gitops","link":"/people","createdAt":"2026-11-09T22:14:36.020Z","readAt":null},{"id":"quest:8189074aa2c4fd8e","type":"new_quest","title":"New quest: Visit Dash0","body":"It covers operations.","link":"/quests","createdAt":"2026-11-09T22:14:35.202Z","readAt":null}],"unread":2}
 ```
 
-`type` is one of `new_quest` and `new_match` (written by the `nudge` CronJob every 10 minutes), `meet_offer` (someone proposed a meet to you), `meet_accepted` (both said yes; sent to both players) and `banner` (a new banner). `link` is an in-app path to open on tap. Notifications carry only handles, public ids and public text, never another player's attendee id. They live in the `messages` index with `kind: "notification"`, under the id `notif:<attendeeId>:<id>`, written create-only so a rerun never duplicates one.
+`type` is one of `new_quest` and `new_match` (written by the `nudge` CronJob every 10 minutes), `meet_offer` (a live meet request you did not answer within 30 s became an open offer; link `/intro/:meetId`), `meet_accepted` (both said yes; sent to both players) and `banner` (a new banner). `link` is an in-app path to open on tap. Notifications carry only handles, public ids and public text, never another player's attendee id. They live in the `messages` index with `kind: "notification"`, under the id `notif:<attendeeId>:<id>`, written create-only so a rerun never duplicates one.
 
 ### mark_notifications_read
 

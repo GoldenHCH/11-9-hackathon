@@ -140,6 +140,15 @@ export async function lastBoothScanAt(attendeeId: string, locationId: string): P
   return response.found ? response._source?.lastScanAt : undefined;
 }
 
+export async function boothNotePending(attendeeId: string, locationId: string): Promise<boolean> {
+  const response = await getEsClient().get<IStoredBoothNote>(
+    { index: indexNames.BOOTH_NOTES, id: boothNoteIdFor(attendeeId, locationId), _source_includes: ['xpAwarded'] },
+    { ...esOptions(esTimeouts.DEFAULT_MS), ignore: [404] },
+  );
+
+  return response.found === true && (response._source?.xpAwarded ?? 0) === 0;
+}
+
 export async function openBoothNote(attendeeId: string, location: ILocation): Promise<{ note: IBoothNote; created: boolean }> {
   const noteId = boothNoteIdFor(attendeeId, location.id);
   const existing = await getNote(noteId);

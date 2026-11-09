@@ -126,7 +126,8 @@
       "sharedTopics": [],
       "iAccepted": true,
       "partnerArrived": false,
-      "expiresAt": "2026-11-09T21:20:14.452Z"
+      "expiresAt": "2026-11-09T21:20:14.452Z",
+      "live": false
     },
     {
       "id": "meet-a08d179265d6e711506c8723",
@@ -154,7 +155,8 @@
       "sharedTopics": [],
       "iAccepted": true,
       "partnerArrived": false,
-      "expiresAt": "2026-11-09T20:40:05.092Z"
+      "expiresAt": "2026-11-09T20:40:05.092Z",
+      "live": false
     }
   ],
   "variants": {
@@ -192,7 +194,8 @@
           "sharedTopics": [],
           "iAccepted": true,
           "partnerArrived": false,
-          "expiresAt": "2026-11-09T20:40:13.391Z"
+          "expiresAt": "2026-11-09T20:40:13.391Z",
+          "live": false
         },
         {
           "id": "meet-a08d179265d6e711506c8723",
@@ -220,7 +223,8 @@
           "sharedTopics": [],
           "iAccepted": true,
           "partnerArrived": false,
-          "expiresAt": "2026-11-09T20:40:05.092Z"
+          "expiresAt": "2026-11-09T20:40:05.092Z",
+          "live": false
         }
       ]
     },
@@ -351,7 +355,8 @@
           "iAccepted": true,
           "iArrivedAt": "2026-11-09T20:20:57.119Z",
           "partnerArrived": true,
-          "expiresAt": "2026-11-09T21:20:14.452Z"
+          "expiresAt": "2026-11-09T21:20:14.452Z",
+          "live": false
         },
         {
           "id": "meet-a08d179265d6e711506c8723",
@@ -379,7 +384,8 @@
           "sharedTopics": [],
           "iAccepted": true,
           "partnerArrived": false,
-          "expiresAt": "2026-11-09T20:40:05.092Z"
+          "expiresAt": "2026-11-09T20:40:05.092Z",
+          "live": false
         }
       ]
     }

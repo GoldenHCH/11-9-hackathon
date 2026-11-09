@@ -1,6 +1,8 @@
 import { gameRules } from '../types/kubequest.constants';
 import { IAttendee, IQuest, IQuestBoard } from '../types/kubequest.interfaces';
+import { orderForIntent } from './intent';
 import { generateCandidates, IOfferContext, pickOffers } from './offers';
+import { noLocationHint } from './proximity';
 import { deleteQuests, listEvents, listQuests, loadAttendee, loadLocation, saveQuests } from './store';
 import { addMinutes, isAfter, startOfConferenceDay } from './time';
 
@@ -92,11 +94,12 @@ export async function buildBoard(attendeeId: string, now: Date = new Date(), for
   const doneToday = quests.filter((quest) => quest.status === 'completed' && isAfter(quest.completedAt, dayStart));
 
   return {
-    offers: offers.slice(0, gameRules.MAX_OFFERS),
+    offers: orderForIntent(attendee, offers).slice(0, gameRules.MAX_OFFERS),
     active,
     doneToday,
     maxOffers: gameRules.MAX_OFFERS,
     maxActive: gameRules.MAX_ACTIVE_QUESTS,
+    ...(attendee.lastLocationId ? {} : { nearHint: noLocationHint }),
   };
 }
 

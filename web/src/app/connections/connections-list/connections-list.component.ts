@@ -4,7 +4,8 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Router, RouterLink } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { IConnection } from '../../core/api.types';
+import { IConnection, ILinkItem, LinkNetwork } from '../../core/api.types';
+import { linkNetworkColors, linkNetworkOptions } from '../../links/links.constants';
 import { ApiErrorHelper } from '../../core/helpers/api-error.helper';
 import { MeService } from '../../core/services/me.service';
 import { ToolsService } from '../../core/services/tools.service';
@@ -49,6 +50,22 @@ export class ConnectionsListComponent implements OnInit {
           this.isLoading = false;
         },
       });
+  }
+
+  public hasVerifiedGithub(links: ILinkItem[]): boolean {
+    return links.some((link) => link.network === 'github' && link.verified === true);
+  }
+
+  public glyph(network: LinkNetwork): string {
+    return linkNetworkOptions.find((option) => option.network === network)?.glyph ?? '';
+  }
+
+  public networkLabel(network: LinkNetwork): string {
+    return linkNetworkOptions.find((option) => option.network === network)?.label ?? network;
+  }
+
+  public color(network: LinkNetwork): string {
+    return linkNetworkColors[network];
   }
 
   public openCode(): void {

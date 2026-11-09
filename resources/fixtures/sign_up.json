@@ -14,7 +14,13 @@
     "meetingOn": true,
     "spotMe": "Green hoodie",
     "scanLocationId": "salt-palace-level-1-150-defg",
-    "scanToken": "<signed-token>"
+    "scanToken": "<signed-token>",
+    "intent": {
+      "goals": [
+        "exploring"
+      ],
+      "exploringField": "AI inference"
+    }
   },
   "status": 200,
   "response": {
@@ -60,7 +66,14 @@
           "lon": -111.89445,
           "lat": 40.76633
         },
-        "lastLocationId": "salt-palace-level-1-150-defg"
+        "lastLocationId": "salt-palace-level-1-150-defg",
+        "intent": {
+          "goals": [
+            "exploring"
+          ],
+          "exploringField": "AI inference",
+          "socialLevel": "lots"
+        }
       },
       "level": {
         "level": 1,

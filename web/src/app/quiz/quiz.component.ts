@@ -77,6 +77,13 @@ export class QuizComponent implements OnInit, OnDestroy {
     return result.bossMessage || bossSkipFallbackMessages[result.bossDamageSkipped];
   }
 
+  public get quizSubtitle(): string {
+    const count = this.quiz?.questions.length ?? 0;
+    const questionsLabel = count ? `${count} ${count === 1 ? 'question' : 'questions'}` : 'Loading questions';
+
+    return this.quiz?.isBoss ? `Boss fight · ${questionsLabel}` : `${questionsLabel} · no timer`;
+  }
+
   public get trackLabel(): string {
     return this.talk?.track ? this.talk.track.charAt(0).toUpperCase() + this.talk.track.slice(1) : '';
   }

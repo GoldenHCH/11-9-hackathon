@@ -1,0 +1,63 @@
+<section class="app-page">
+  <app-screen-toolbar [title]="copy.TITLE" [subtitle]="copy.SUBTITLE"></app-screen-toolbar>
+
+  <app-state-wrapper
+    [isLoading]="isLoading"
+    [errorMessage]="errorMessage"
+    [isEmpty]="!conversations.length"
+    emptyIcon="forum"
+    [emptyMessage]="copy.EMPTY"
+    [emptyActionLabel]="copy.EMPTY_ACTION"
+    (emptyAction)="findPeople()"
+    (retry)="load()"
+  >
+    <mat-form-field appearance="outline" class="search" subscriptSizing="dynamic">
+      <mat-label>Search conversations</mat-label>
+      <mat-icon matPrefix aria-hidden="true">search</mat-icon>
+      <input matInput type="search" name="query" [(ngModel)]="query" autocomplete="off" />
+    </mat-form-field>
+
+    @let rows = filtered;
+    <p class="app-visually-hidden" aria-live="polite">{{ query ? rows.length + ' conversations match' : '' }}</p>
+
+    @if (rows.length) {
+      <ul class="conversation-list">
+        @for (conversation of rows; track conversation.meetId) {
+          <li>
+            <a
+              class="conversation app-card app-card--clickable"
+              [class.conversation--unread]="conversation.unread > 0"
+              [routerLink]="['/messages', conversation.meetId]"
+              [attr.aria-label]="rowLabel(conversation)"
+            >
+              <app-pixel-face [seed]="conversation.partner.faceSeed" [size]="44" [label]="'Face of @' + conversation.partner.handle"></app-pixel-face>
+              <span class="conversation-text" aria-hidden="true">
+                <span class="conversation-top">
+                  <span class="conversation-handle">&#64;{{ conversation.partner.handle }}</span>
+                  <span class="conversation-time">{{ relativeTime(conversation.lastActivityAt) }}</span>
+                </span>
+                <span class="conversation-bottom">
+                  <span class="conversation-preview">
+                    @if (conversation.lastMessage) {
+                      @if (conversation.lastMessage.fromMe) {
+                        <span class="conversation-you">You: </span>
+                      }
+                      {{ conversation.lastMessage.text }}
+                    } @else {
+                      <span class="conversation-empty">Say hi and suggest a time</span>
+                    }
+                  </span>
+                  @if (conversation.unread > 0) {
+                    <span class="conversation-badge">{{ badgeText(conversation.unread) }}</span>
+                  }
+                </span>
+              </span>
+            </a>
+          </li>
+        }
+      </ul>
+    } @else {
+      <p class="no-matches">{{ copy.NO_MATCHES }}</p>
+    }
+  </app-state-wrapper>
+</section>

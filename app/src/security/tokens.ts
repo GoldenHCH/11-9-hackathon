@@ -10,6 +10,7 @@ const ADMIN_SCOPE = 'admin';
 const EXHIBITOR_SCOPE = 'exhibitor';
 const HANDSHAKE_PREFIX = 'h';
 const HANDSHAKE_NONCE_BYTES = 9;
+const GITHUB_STATE_PREFIX = 'g';
 
 export const SCREEN_TOKEN_TTL_MS = 10 * 60 * 1000;
 
@@ -180,4 +181,32 @@ export function verifyHandshakeToken(token: string, now: Date = new Date()): IHa
 
 export function buildHandshakeUrl(token: string): string {
   return new URL(`/h/${encodeURIComponent(token)}`, appConfig.publicBaseUrl).toString();
+}
+
+export function signGithubState(attendeeId: string, nonce: string, expiresAt: Date): string {
+  const subject = Buffer.from(attendeeId, 'utf8').toString('base64url');
+  const expiresAtSeconds = Math.floor(expiresAt.getTime() / 1000).toString(36);
+  const payload = `${GITHUB_STATE_PREFIX}:${subject}:${expiresAtSeconds}:${nonce}`;
+
+  return `${GITHUB_STATE_PREFIX}.${subject}.${expiresAtSeconds}.${nonce}.${sign(payload)}`;
+}
+
+export function verifyGithubState(state: string, now: Date = new Date()): { attendeeId: string; nonce: string } | undefined {
+  const [prefix, subject, expiresAtSeconds, nonce, signature, ...rest] = state.trim().split('.');
+
+  if (prefix !== GITHUB_STATE_PREFIX || !subject || !expiresAtSeconds || !nonce || !signature || rest.length > 0) {
+    return undefined;
+  }
+
+  if (!sameSignature(sign(`${GITHUB_STATE_PREFIX}:${subject}:${expiresAtSeconds}:${nonce}`), signature)) {
+    return undefined;
+  }
+
+  const expiresAtMs = parseInt(expiresAtSeconds, 36) * 1000;
+
+  if (!Number.isFinite(expiresAtMs) || expiresAtMs < now.getTime()) {
+    return undefined;
+  }
+
+  return { attendeeId: Buffer.from(subject, 'base64url').toString('utf8'), nonce };
 }

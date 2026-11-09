@@ -64,7 +64,7 @@ export const Plan = () => {
   const day = useMemo(() => buildDay(picks), [picks]);
 
   return (
-    <section className="section section--paper" id="plan" aria-labelledby="plan-title">
+    <section className="section section--salt" id="plan" aria-labelledby="plan-title">
       <div className="wrap">
         <h2 id="plan-title" className="section__title pixel">
           Plan your day

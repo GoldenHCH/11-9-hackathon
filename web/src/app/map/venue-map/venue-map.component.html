@@ -70,6 +70,15 @@
       @if (viewMode === 'map') {
         <!-- Schematic -->
         @if (selectedLevel && selectedBuilding) {
+          <app-now-next-bar
+            [isActive]="showNowNext"
+            [isLoading]="isScheduleLoading"
+            [errorMessage]="scheduleError"
+            [liveSessions]="liveSessions"
+            (toggled)="toggleNowNext()"
+            (retry)="loadRoomSchedule()"
+            (sessionPicked)="focusSession($event)"
+          ></app-now-next-bar>
           <p class="details-hint map-help">Drag to pan, scroll or pinch to zoom, double-tap to zoom in.</p>
           <app-venue-schematic
             [level]="selectedLevel"
@@ -77,9 +86,36 @@
             [highlightedAreaIds]="highlightedAreaIds"
             [booths]="levelBooths"
             [highlightedVendorId]="highlightedVendor?.id ?? null"
+            [areaTags]="showNowNext ? nowNextTags : noTags"
+            [liveAreaIds]="showNowNext ? liveAreaIds : noAreaIds"
+            [pins]="pins"
+            [routeToPinId]="nearestQuestPinId"
+            [selectedPinId]="selectedPin?.id ?? null"
             (areaSelected)="selectArea($event)"
             (boothSelected)="selectBooth($event)"
+            (pinSelected)="selectPin($event)"
           ></app-venue-schematic>
+
+          @if (pins.length) {
+            <ul class="pin-strip" aria-label="You and your active quests">
+              @if (youPin; as you) {
+                <li>
+                  <button type="button" class="pin-chip pin-chip--you" (click)="showPin(you)">
+                    <span class="pin-chip-dot" aria-hidden="true"></span>
+                    <span>You are here · {{ you.title }}</span>
+                  </button>
+                </li>
+              }
+              @for (pin of questPins; track pin.id) {
+                <li>
+                  <button type="button" class="pin-chip" [class.pin-chip--selected]="pin.id === selectedPin?.id" (click)="showPin(pin)">
+                    <span class="pin-chip-flag kq-pixel" aria-hidden="true">{{ pin.number }}</span>
+                    <span>{{ pin.title }}</span>
+                  </button>
+                </li>
+              }
+            </ul>
+          }
 
           @if (levelBooths.length) {
             <p class="details-hint">Tap a booth, or search below. Booths are coloured by sponsor tier, as on the official map.</p>
@@ -106,6 +142,46 @@
 
         <!-- Selected booth and area -->
         <div class="details" aria-live="polite">
+          @if (selectedPin) {
+            <article class="details-card details-card--quest kq-block">
+              <div class="details-header">
+                <div class="details-icon">
+                  @if (selectedPin.kind === 'you') {
+                    <mat-icon aria-hidden="true">my_location</mat-icon>
+                  } @else {
+                    <span class="pin-chip-flag kq-pixel" aria-hidden="true">{{ selectedPin.number }}</span>
+                  }
+                </div>
+                <div class="details-heading">
+                  <h2 class="details-title kq-pixel">{{ selectedPinQuest?.title ?? selectedPin.title }}</h2>
+                  <p class="details-kind">{{ selectedPin.kind === 'you' ? 'You are here' : selectedPin.label }}</p>
+                </div>
+                <button mat-icon-button type="button" aria-label="Close quest details" (click)="clearSelectedPin()">
+                  <mat-icon>close</mat-icon>
+                </button>
+              </div>
+              @if (selectedPinQuest; as quest) {
+                @if (quest.where) {
+                  <p class="details-description">{{ quest.where.name }} · {{ quest.where.level }}, {{ quest.where.building }}</p>
+                }
+                @if (quest.walkMinutes !== undefined || quest.directionHint) {
+                  <p class="details-note">
+                    @if (quest.walkMinutes !== undefined) {{{ quest.walkMinutes }} min walk}@if (quest.walkMinutes !== undefined && quest.directionHint) { · }{{ quest.directionHint }}
+                  </p>
+                }
+                <p class="details-description">{{ quest.nextStep }}</p>
+                <p class="details-note">Reward: {{ quest.reward.label }}</p>
+                <a mat-stroked-button class="details-action" routerLink="/quests">
+                  <div class="btn-content">
+                    <mat-icon>flag</mat-icon>
+                    <span>Open quests</span>
+                  </div>
+                </a>
+              } @else if (selectedPin.kind === 'you') {
+                <p class="details-description">Your last scan. Scan another QR to move your pin and get quests near you.</p>
+              }
+            </article>
+          }
           @if (highlightedVendor) {
             <article class="details-card details-card--booth kq-block">
               <div class="details-header">
@@ -175,6 +251,9 @@
               </div>
               @if (selectedArea.description) {
                 <p class="details-description">{{ selectedArea.description }}</p>
+              }
+              @if (selectedAreaSessions; as roomSessions) {
+                <app-room-session-card [sessions]="roomSessions" [day]="scheduleDay"></app-room-session-card>
               }
               @if (selectedArea.scheduleRooms?.length) {
                 <p class="details-note">On the schedule as “{{ selectedArea.scheduleRooms!.join('”, “') }}”.</p>

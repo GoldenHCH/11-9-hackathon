@@ -58,7 +58,9 @@ export const declineReasons = ['not_my_topic', 'too_far', 'no_time'] as const;
 
 export const meetStatuses = ['proposed', 'accepted', 'met', 'declined', 'cancelled', 'expired'] as const;
 
-export const meetResponses = ['accept', 'decline', 'cant_make_it'] as const;
+export const meetResponses = ['accept', 'decline', 'later', 'cant_make_it'] as const;
+
+export const meetLiveStates = ['live', 'later'] as const;
 
 export const meetRoles = ['proposer', 'partner'] as const;
 
@@ -128,6 +130,9 @@ export const gameRules = {
   NOT_NOW_MINUTES: 30,
   ATTEND_OFFER_WINDOW_MINUTES: 90,
   MEET_OFFER_MINUTES: 20,
+  MEET_LIVE_SECONDS: 30,
+  MEET_LATER_MINUTES: 30,
+  MEET_PENDING_MAX: 3,
   MEET_SCAN_WINDOW_MINUTES: 30,
   CHECK_IN_COOLDOWN_MINUTES: 60,
   SESSION_GRACE_MINUTES: 10,
@@ -146,8 +151,8 @@ export const gameRules = {
   BOOTH_NOTE_MIN_CHARS: 20,
   BOOTH_NOTE_MAX_CHARS: 1000,
   BOOTH_XP_GAP_MINUTES: 3,
-  MESSAGE_MAX_CHARS: 500,
-  MESSAGES_PER_TEN_MINUTES: 20,
+  MESSAGE_MAX_CHARS: 1000,
+  MESSAGES_PER_MINUTE: 30,
   PHOTO_PRESENCE_MINUTES: 30,
   PHOTOS_PER_BOOTH: 3,
   PHOTOS_PER_DAY: 10,
@@ -193,6 +198,7 @@ export const toolNames = [
   'propose_meet',
   'respond_meet',
   'list_meets',
+  'pending_meet_requests',
   'leaderboard',
   'inventory',
   'world',
@@ -213,6 +219,8 @@ export const toolNames = [
   'delete_booth_photo',
   'send_message',
   'list_messages',
+  'list_conversations',
+  'mark_conversation_read',
   'recap',
   'import_profile',
   'list_notifications',

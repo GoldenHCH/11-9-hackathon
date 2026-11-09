@@ -1,0 +1,51 @@
+<fieldset class="group">
+  <legend class="group-legend">Pick one or more</legend>
+  <div class="goals">
+    @for (option of goalOptions; track option.goal) {
+      <button type="button" class="option goal" [attr.aria-pressed]="isGoalSelected(option.goal)" (click)="toggleGoal(option.goal)">
+        <mat-icon aria-hidden="true">{{ option.icon }}</mat-icon>
+        <span>{{ option.label }}</span>
+      </button>
+    }
+  </div>
+</fieldset>
+
+@if (isExploring) {
+  <fieldset class="group">
+    <legend class="group-legend">Which field are you exploring?</legend>
+    <div class="fields" role="group" aria-label="Field to explore">
+      @for (field of fieldOptions; track field) {
+        <button type="button" class="option chip" [attr.aria-pressed]="isFieldSelected(field)" (click)="pickField(field)">{{ field }}</button>
+      }
+    </div>
+    <label class="custom-label" [for]="idPrefix + '-field'">Or type it</label>
+    <input
+      class="custom-input"
+      type="text"
+      autocomplete="off"
+      placeholder="e.g. Kueue"
+      data-1p-ignore
+      data-lpignore="true"
+      data-form-type="other"
+      [id]="idPrefix + '-field'"
+      [attr.maxlength]="fieldLimits.max"
+      [value]="customField"
+      (input)="onCustomField($event)"
+    />
+  </fieldset>
+}
+
+<fieldset class="group">
+  <legend class="group-legend">How social do you want to be today?</legend>
+  <div class="social" role="radiogroup" aria-label="How social do you want to be today?">
+    @for (option of socialOptions; track option.level) {
+      <button type="button" role="radio" class="option social-option" [attr.aria-checked]="socialLevel === option.level" (click)="pickSocial(option.level)">
+        <span class="social-label kq-pixel">{{ option.label }}</span>
+        <span class="social-hint">{{ option.hint }}</span>
+      </button>
+    }
+  </div>
+  @if (!socialChosen && value.goals.length > 0) {
+    <p class="social-note">Picked from your answers. Change it any time.</p>
+  }
+</fieldset>

@@ -39,11 +39,18 @@ export const settingOptions: readonly ISettingOption[] = [
   { key: 'hideFromLeaderboard', label: 'Hide me from the leaderboard', hint: 'You still earn XP and banners.' },
 ];
 
+export const githubMessages: Record<string, string> = {
+  verified: 'GitHub verified. Your GitHub link now shows a check to people you meet.',
+  failed: 'GitHub verification did not finish. Try again from Your links.',
+  cancelled: 'GitHub verification was cancelled.',
+  off: 'GitHub verification is not switched on here.',
+};
+
 export const moreLinks = [
   { path: '/board', label: 'Leaderboard', icon: 'emoji_events' },
   { path: '/meets', label: 'My meets', icon: 'handshake' },
   { path: '/code', label: 'My handshake code', icon: 'qr_code_2' },
-  { path: '/connections', label: 'People met', icon: 'group' },
+  { path: '/connections', label: 'Connections', icon: 'group' },
   { path: '/links', label: 'My links', icon: 'link' },
   { path: '/notes', label: 'Booth notes', icon: 'edit_note' },
   { path: '/notes/talks', label: 'Talk notes', icon: 'sticky_note_2' },

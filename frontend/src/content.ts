@@ -18,11 +18,17 @@ export const DAY_WITH: { time: string; text: string; xp: string; m?: Material }[
 ];
 
 export const LOOP_STEPS: { title: string; text: string; m: Material }[] = [
-  { title: 'Join', text: 'Scan any KubeQuest code. Pick a handle, answer two questions, get a pixel face and your first quest. No password.', m: 'wood' },
-  { title: 'Check in', text: 'Scan the QR block at a room’s door. 10 XP and a block in the track’s material.', m: 'stone' },
-  { title: 'Prove you listened', text: 'Three plain-text questions from the talk you just sat through. No timer. 5 XP each.', m: 'circuit' },
-  { title: 'Meet someone', text: 'Hallway finds a player working on the same thing and picks a campfire near you both.', m: 'ember' },
-  { title: 'Level up', text: 'XP moves you from Pod to Control Plane. Sets of blocks earn banners.', m: 'kube' },
+  { title: 'Scan a room', text: 'Scan the QR block at a room’s door. 10 XP and a block in that track’s material.', m: 'stone' },
+  { title: 'Take a quest', text: 'Three plain-text questions on the talk you just sat through. No timer. 5 XP each.', m: 'circuit' },
+  { title: 'Meet someone', text: 'Hallway finds a player on the same problem, a time you’re both free and a campfire near you both.', m: 'ember' },
+  { title: 'Level up', text: 'XP moves you from Pod to Control Plane, and sets of blocks earn banners.', m: 'kube' },
+];
+
+export const SPONSORS: { name: string; role: string; text: string; m: Material }[] = [
+  { name: 'Elastic', role: 'Search and matching', text: 'Hybrid search finds your talks and the people worth meeting.', m: 'gem' },
+  { name: 'Dash0', role: 'Every point traceable', text: 'Each XP award is an OpenTelemetry trace you can open.', m: 'glass' },
+  { name: 'Radar', role: 'Runs on Kubernetes', text: 'Deployed with GitOps and watched live on its own cluster.', m: 'kube' },
+  { name: 'Gitar', role: 'Every change reviewed', text: 'No line ships to the game without a review.', m: 'iron' },
 ];
 
 export const LEVEL_INFO = [

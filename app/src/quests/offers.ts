@@ -10,6 +10,8 @@ import { IAttendee, IBannerProgress, ILocation, IPersonMatch, IQuest, ITalk, ITa
 import { QuestType } from '../types/kubequest.types';
 import { walkMinutes } from '../world/walk';
 import { bannerProgress } from '../xp/banners';
+import { shapeForIntent } from './intent';
+import { nearbyCandidates, proximityRank, questsNearPlayer } from './proximity';
 import { placeOf, questId, talkPlace, walkPointOf } from './store';
 import { addMinutes, endOfConferenceDay, minutesUntil } from './time';
 
@@ -130,7 +132,7 @@ function bossQuest(context: IOfferContext, talk: ITalk): IQuest {
   };
 }
 
-function chatQuest(context: IOfferContext, match: IPersonMatch): IQuest {
+export function chatQuest(context: IOfferContext, match: IPersonMatch): IQuest {
   const partner = match.player;
   const firstTimer = partner.firstTimer || context.attendee.profile.firstTimer;
   const xp = xpRewards.MEET + (firstTimer ? xpRewards.MEET_FIRST_TIMER_BONUS : 0);
@@ -398,11 +400,12 @@ export async function generateCandidates(context: IOfferContext): Promise<ICandi
     ['outpost', () => outpostCandidates(context)],
     ['photo', () => photoQuestCandidates(context)],
     ['collection', () => collectionCandidates(context)],
+    ['nearby', () => nearbyCandidates(context)],
   ];
   const results = await Promise.all(sources.map(([label, run]) => safely(label, run)));
-  const quests = results.flat().filter((quest) => !context.avoidFar || (quest.walkMinutes ?? 0) < walkTimes.OTHER_BUILDING);
+  const quests = (await questsNearPlayer(context, results.flat())).filter((quest) => !context.avoidFar || (quest.walkMinutes ?? 0) < walkTimes.OTHER_BUILDING);
 
-  return quests.map((quest) => ({ quest, priority: OFFER_PRIORITY[quest.type] }));
+  return shapeForIntent(context, quests.map((quest) => ({ quest, priority: OFFER_PRIORITY[quest.type] + proximityRank(quest) })));
 }
 
 export function pickOffers(candidates: ICandidate[], count: number): IQuest[] {

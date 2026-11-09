@@ -11,6 +11,7 @@ import { IMeet, IPersonMatch, IProfile, IRespondMeetResult, MeetResponse } from 
 import { ApiErrorHelper } from '../../core/helpers/api-error.helper';
 import { MeService } from '../../core/services/me.service';
 import { ToolsService } from '../../core/services/tools.service';
+import { LiveMeetService } from '../../meet-live/services/live-meet.service';
 import { AlertBannerComponent } from '../../shared/components/alert-banner/alert-banner.component';
 import { ScreenToolbarComponent } from '../../shared/components/screen-toolbar/screen-toolbar.component';
 import { StateWrapperComponent } from '../../shared/components/state-wrapper/state-wrapper.component';
@@ -37,6 +38,7 @@ export class PeopleComponent implements OnInit {
   private readonly _toolsService = inject(ToolsService);
   private readonly _meService = inject(MeService);
   private readonly _router = inject(Router);
+  private readonly _liveMeetService = inject(LiveMeetService);
   private readonly _destroyRef = inject(DestroyRef);
 
   public matches: IPersonMatch[] = [];
@@ -114,6 +116,12 @@ export class PeopleComponent implements OnInit {
         next: (meet) => {
           this.busyIds.delete(partnerId);
           this.setMeets([meet, ...this.meets.filter((existing) => existing.id !== meet.id)]);
+
+          if (meet.status === 'accepted') {
+            void this._router.navigate(['/intro', meet.id]);
+          } else {
+            this._liveMeetService.waitFor(meet);
+          }
         },
         error: (error: unknown) => {
           console.error('Could not propose a meet', error);

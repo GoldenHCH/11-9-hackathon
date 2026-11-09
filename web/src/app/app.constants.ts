@@ -3,6 +3,7 @@ export interface INavigationTab {
   label: string;
   icon: string;
   isPrimary: boolean;
+  badge?: 'messages';
 }
 
 export const navigationTabs: readonly INavigationTab[] = [
@@ -10,7 +11,7 @@ export const navigationTabs: readonly INavigationTab[] = [
   { path: '/itinerary', label: 'Itinerary', icon: 'event_note', isPrimary: false },
   { path: '/scan', label: 'Scan', icon: 'qr_code_scanner', isPrimary: true },
   { path: '/map', label: 'Map', icon: 'map', isPrimary: false },
-  { path: '/profile', label: 'Profile', icon: 'person', isPrimary: false },
+  { path: '/messages', label: 'Messages', icon: 'forum', isPrimary: false, badge: 'messages' },
 ];
 
 export const fullScreenRoutePrefixes = ['/screen/', '/onboarding', '/me/'] as const;

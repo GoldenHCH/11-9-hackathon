@@ -97,6 +97,9 @@ export function buildIndexMappings(inferenceId: string): Record<IndexName, Prope
       createdAt: date,
       links: linksMapping,
       itinerary: { properties: { talkId: keyword, addedAt: date } },
+      intent: { properties: { goals: keyword, exploringField: keyword, socialLevel: keyword } },
+      seniority: keyword,
+      githubVerified: bool,
     },
     [indexNames.LOCATIONS]: {
       id: keyword,
@@ -157,6 +160,8 @@ export function buildIndexMappings(inferenceId: string): Record<IndexName, Prope
       metAt: date,
       cancelledBy: keyword,
       expiresAt: date,
+      liveState: keyword,
+      liveCard: opaqueObject,
     },
     [indexNames.QUESTS]: {
       id: keyword,

@@ -23,6 +23,7 @@
     "access-links": "tsx scripts/print-access-links.ts",
     "seed:demo": "tsx scripts/seed-demo-login.ts",
     "seed:summaries": "tsx scripts/seed-talk-summaries.ts",
+    "seed:intents": "tsx scripts/seed-intents.ts",
     "seed:connections": "tsx scripts/seed-demo-connections.ts",
     "seed:photos": "tsx scripts/seed-booth-photos.ts",
     "reserve:handles": "tsx scripts/reserve-handles.ts",

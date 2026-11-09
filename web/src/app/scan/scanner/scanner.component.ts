@@ -1,6 +1,6 @@
 import { Component, ElementRef, NgZone, OnDestroy, OnInit, ViewChild, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
@@ -29,10 +29,12 @@ interface IBarcodeDetectorConstructor {
 const decodeIntervalMs = 125;
 const maxDecodeWidth = 640;
 const notKubeQuestMessage = 'That isn’t a KubeQuest code';
+const noCodeInImageMessage = 'No QR code found in that image. Try a sharper, closer photo.';
+const maxUploadDecodeWidth = 1600;
 
 @Component({
   selector: 'app-scanner',
-  imports: [FormsModule, MatButtonModule, MatFormFieldModule, MatIconModule, MatInputModule, AlertBannerComponent, ScreenToolbarComponent],
+  imports: [FormsModule, RouterLink, MatButtonModule, MatFormFieldModule, MatIconModule, MatInputModule, AlertBannerComponent, ScreenToolbarComponent],
   templateUrl: './scanner.component.html',
   styleUrl: './scanner.component.scss',
 })
@@ -42,6 +44,7 @@ export class ScannerComponent implements OnInit, OnDestroy {
   private readonly _meService = inject(MeService);
 
   @ViewChild('video', { static: true }) private readonly _videoRef!: ElementRef<HTMLVideoElement>;
+  @ViewChild('qrFile', { static: true }) private readonly _fileRef!: ElementRef<HTMLInputElement>;
 
   public state: ScannerState = 'starting';
   public errorMessage = '';
@@ -49,6 +52,7 @@ export class ScannerComponent implements OnInit, OnDestroy {
   public manualLink = '';
   public isTorchSupported = false;
   public isTorchOn = false;
+  public isDecodingUpload = false;
 
   private _stream: MediaStream | null = null;
   private _detector: IBarcodeDetector | null = null;
@@ -132,6 +136,39 @@ export class ScannerComponent implements OnInit, OnDestroy {
     this._handleValue(this.manualLink);
   }
 
+  public chooseImage(): void {
+    this._fileRef.nativeElement.click();
+  }
+
+  public async onImageSelected(event: Event): Promise<void> {
+    const input = event.target as HTMLInputElement;
+    const file = input.files?.[0];
+    input.value = '';
+    if (!file) {
+      return;
+    }
+
+    this.isDecodingUpload = true;
+    this.errorMessage = '';
+    this.announcement = 'Reading the QR image…';
+    try {
+      const value = await this._decodeImageFile(file);
+      if (value) {
+        this._lastRejected = '';
+        this._handleValue(value);
+        return;
+      }
+      this.errorMessage = noCodeInImageMessage;
+      this.announcement = noCodeInImageMessage;
+    } catch (error) {
+      console.error('Could not read the QR image', error);
+      this.errorMessage = noCodeInImageMessage;
+      this.announcement = noCodeInImageMessage;
+    } finally {
+      this.isDecodingUpload = false;
+    }
+  }
+
   public dismissError(): void {
     this.errorMessage = '';
   }
@@ -148,6 +185,48 @@ export class ScannerComponent implements OnInit, OnDestroy {
       console.error('BarcodeDetector unavailable, using jsQR', error);
       return null;
     }
+  }
+
+  private async _decodeImageFile(file: File): Promise<string | null> {
+    const image = await this._loadImage(file);
+    const scale = Math.min(1, maxUploadDecodeWidth / image.naturalWidth);
+    const width = Math.max(1, Math.round(image.naturalWidth * scale));
+    const height = Math.max(1, Math.round(image.naturalHeight * scale));
+    const canvas = document.createElement('canvas');
+    canvas.width = width;
+    canvas.height = height;
+    const context = canvas.getContext('2d', { willReadFrequently: true });
+    if (!context) {
+      return null;
+    }
+    context.fillStyle = '#ffffff';
+    context.fillRect(0, 0, width, height);
+    context.drawImage(image, 0, 0, width, height);
+
+    const detector = this._detector ?? (await this._createDetector());
+    if (detector) {
+      try {
+        const codes = await detector.detect(canvas);
+        if (codes[0]?.rawValue) {
+          return codes[0].rawValue;
+        }
+      } catch (error) {
+        console.error('BarcodeDetector failed on the image, using jsQR', error);
+      }
+    }
+
+    const pixels = context.getImageData(0, 0, width, height);
+    return jsQR(pixels.data, width, height, { inversionAttempts: 'attemptBoth' })?.data ?? null;
+  }
+
+  private _loadImage(file: File): Promise<HTMLImageElement> {
+    const url = URL.createObjectURL(file);
+    return new Promise<HTMLImageElement>((resolve, reject) => {
+      const image = new Image();
+      image.onload = () => resolve(image);
+      image.onerror = () => reject(new Error('The image could not be read'));
+      image.src = url;
+    }).finally(() => URL.revokeObjectURL(url));
   }
 
   private _readTorchSupport(): void {

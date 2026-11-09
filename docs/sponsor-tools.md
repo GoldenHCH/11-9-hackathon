@@ -5,7 +5,7 @@ KubeQuest is built on four sponsor tools. For each one, this file says what we u
 | Tool | Role in KubeQuest | Status |
 |------|-------------------|--------|
 | **Elastic** (Serverless) | The only datastore and the search/matching engine | Live. Jina embeddings + Jina reranker, a grounded Agent Builder agent, a banner Workflow |
-| **Dash0** | Traces, metrics and logs for every XP point | Live. The cluster collector exports to Dash0 |
+| **Dash0** | Traces, metrics and logs for every XP point | Live. The cluster collector exports to Dash0; SLO "KubeQuest API availability" created with Agent0 |
 | **Radar** | Our Kubernetes cluster, GitOps deploys, secrets, health | Live. Checks and an AI investigation still to do |
 | **Gitar** (Sonar) | AI review, CI diagnosis and auto-apply on PRs, with project rules | Live. PR CI added; auto-apply fixed a real security finding |
 

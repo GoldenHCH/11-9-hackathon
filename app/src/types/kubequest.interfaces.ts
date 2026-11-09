@@ -1,5 +1,6 @@
 import type { IConnectionToolContracts, IProfileLinks } from './connections.interfaces';
 import type { ISearchToolContracts } from '../search/search.interfaces';
+import type { IAttendeeIntent, IIntentInput } from './intent.interfaces';
 import {
   AiProvider,
   BannerId,
@@ -19,6 +20,7 @@ import {
   LocationKind,
   Material,
   MaterialCounts,
+  MeetLiveState,
   MeetResponse,
   MeetRole,
   MeetStatus,
@@ -145,6 +147,9 @@ export interface IAttendee {
   createdAt: IsoDateString;
   links?: IProfileLinks;
   itinerary?: IItineraryEntry[];
+  intent?: IAttendeeIntent;
+  seniority?: string;
+  githubVerified?: boolean;
 }
 
 export interface IPublicPlayer {
@@ -263,6 +268,8 @@ export interface IQuest {
   where?: IQuestPlace;
   when?: ITimeWindow;
   walkMinutes?: number;
+  directionHint?: string;
+  distanceLabel?: string;
   talkId?: string;
   locationId?: string;
   introId?: string;
@@ -282,6 +289,7 @@ export interface IQuestBoard {
   doneToday: IQuest[];
   maxOffers: number;
   maxActive: number;
+  nearHint?: string;
 }
 
 export interface IMatchSignal {
@@ -314,6 +322,40 @@ export interface IIntro {
   metAt?: IsoDateString;
   cancelledBy?: string;
   expiresAt: IsoDateString;
+  liveState?: MeetLiveState;
+  liveCard?: IMeetLiveCard;
+}
+
+export interface IMeetLiveCard {
+  handle: string;
+  faceSeed: string;
+  level: number;
+  levelName: string;
+  headline: string;
+  why: string;
+}
+
+export interface IMeetRequester {
+  publicId: string;
+  handle: string;
+  faceSeed: string;
+  level: number;
+  levelName: string;
+  headline: string;
+}
+
+export interface IMeetRequest {
+  meetId: string;
+  requester: IMeetRequester;
+  sharedTopics: string[];
+  why: string;
+  expiresAt: IsoDateString;
+  secondsLeft: number;
+}
+
+export interface IPendingMeetRequests {
+  requests: IMeetRequest[];
+  serverTime: IsoDateString;
 }
 
 export interface IMeet {
@@ -333,6 +375,8 @@ export interface IMeet {
   iArrivedAt?: IsoDateString;
   partnerArrived: boolean;
   expiresAt: IsoDateString;
+  live: boolean;
+  secondsLeft?: number;
   xpAwarded?: number;
 }
 
@@ -777,6 +821,8 @@ export interface ISignUpInput {
   offers?: string[];
   asks?: string[];
   summary?: string;
+  seniority?: string;
+  intent?: IIntentInput;
 }
 
 export interface IImportProfileInput {
@@ -805,6 +851,7 @@ export interface IUpdateSettingsInput {
   spotMe?: string;
   realName?: string;
   visible?: boolean;
+  intent?: IIntentInput;
 }
 
 export interface ICheckInInput {
@@ -1113,6 +1160,45 @@ export interface IListMessagesInput {
   since?: IsoDateString;
 }
 
+export interface IConversationPartner {
+  publicId: string;
+  handle: string;
+  faceSeed: string;
+  levelName: string;
+}
+
+export interface IConversationPreview {
+  text: string;
+  fromMe: boolean;
+  at: IsoDateString;
+}
+
+export interface IConversation {
+  meetId: string;
+  connectionId?: string;
+  meetStatus: MeetStatus;
+  partner: IConversationPartner;
+  lastMessage: IConversationPreview | null;
+  lastActivityAt: IsoDateString;
+  unread: number;
+}
+
+export interface IListConversationsResult {
+  conversations: IConversation[];
+  unread: number;
+}
+
+export interface IMarkConversationReadInput {
+  attendeeId: string;
+  meetId: string;
+}
+
+export interface IMarkConversationReadResult {
+  meetId: string;
+  readAt: IsoDateString;
+  unread: number;
+}
+
 export interface IRecapTalk {
   talkId: string;
   title: string;
@@ -1282,6 +1368,7 @@ export interface IToolContracts extends IConnectionToolContracts, ISearchToolCon
   propose_meet: { input: IProposeMeetInput; output: IMeet };
   respond_meet: { input: IRespondMeetInput; output: IRespondMeetResult };
   list_meets: { input: IAttendeeInput; output: IMeet[] };
+  pending_meet_requests: { input: IAttendeeInput; output: IPendingMeetRequests };
   leaderboard: { input: ILeaderboardInput; output: ILeaderboard };
   inventory: { input: IAttendeeInput; output: IInventory };
   world: { input: IWorldInput; output: IWorld };
@@ -1302,6 +1389,8 @@ export interface IToolContracts extends IConnectionToolContracts, ISearchToolCon
   delete_booth_photo: { input: IBoothPhotoActionInput; output: IDeleteBoothPhotoResult };
   send_message: { input: ISendMessageInput; output: IMessage };
   list_messages: { input: IListMessagesInput; output: IMessage[] };
+  list_conversations: { input: IAttendeeInput; output: IListConversationsResult };
+  mark_conversation_read: { input: IMarkConversationReadInput; output: IMarkConversationReadResult };
   recap: { input: IAttendeeInput; output: IRecap };
   import_profile: { input: IImportProfileInput; output: IImportedProfile };
   list_notifications: { input: IListNotificationsInput; output: IListNotificationsResult };
@@ -1332,6 +1421,7 @@ export interface IClientConfig {
   publicBaseUrl: string;
   conferenceTimeZone: string;
   demoSimulateScans: boolean;
+  githubVerifyEnabled?: boolean;
   traceUrlTemplate?: string;
   rum?: {
     endpoint: string;
