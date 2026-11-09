@@ -1,0 +1,72 @@
+{
+  "tool": "list_conversations",
+  "endpoint": "POST /api/tools/list_conversations",
+  "request": {
+    "attendeeId": "p_Ljp4ZfHC-VPDFwqx"
+  },
+  "status": 200,
+  "response": {
+    "conversations": [
+      {
+        "meetId": "meet-4c2b89f53c32d32090bdc992",
+        "meetStatus": "accepted",
+        "partner": {
+          "publicId": "pl_b0f34ffaf6282124",
+          "handle": "argoalpaca",
+          "faceSeed": "argoalpaca",
+          "levelName": "Pod"
+        },
+        "lastMessage": {
+          "text": "On my way, green hoodie.",
+          "fromMe": false,
+          "at": "2026-11-09T21:20:40.500Z"
+        },
+        "lastActivityAt": "2026-11-09T21:20:40.500Z",
+        "unread": 1
+      },
+      {
+        "meetId": "meet-9a1d7e3c5b2f408e6d1c7a90",
+        "meetStatus": "met",
+        "partner": {
+          "publicId": "pl_7c21e9a04d3b5f18",
+          "handle": "otelotter",
+          "faceSeed": "otelotter",
+          "levelName": "Node"
+        },
+        "lastMessage": {
+          "text": "Great chat about tail sampling. Sending the repo link later.",
+          "fromMe": true,
+          "at": "2026-11-09T19:02:11.031Z"
+        },
+        "lastActivityAt": "2026-11-09T19:02:11.031Z",
+        "unread": 0
+      },
+      {
+        "meetId": "meet-2e8b41c09f7d63a5b0e4c1d2",
+        "meetStatus": "accepted",
+        "partner": {
+          "publicId": "pl_3f9a0c6e21b84d57",
+          "handle": "helmheron",
+          "faceSeed": "helmheron",
+          "levelName": "Pod"
+        },
+        "lastMessage": null,
+        "lastActivityAt": "2026-11-09T18:40:00.000Z",
+        "unread": 0
+      }
+    ],
+    "unread": 1
+  },
+  "variants": {
+    "list_conversations_empty": {
+      "request": {
+        "attendeeId": "p_new-player-0001"
+      },
+      "status": 200,
+      "response": {
+        "conversations": [],
+        "unread": 0
+      }
+    }
+  }
+}

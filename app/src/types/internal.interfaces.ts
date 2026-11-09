@@ -106,12 +106,20 @@ export interface IStoredBoothPhoto {
 }
 
 export interface IStoredMessage {
+  kind?: 'chat';
   id: string;
   meetId: string;
   fromId: string;
   toId: string;
   text: string;
   at: IsoDateString;
+}
+
+export interface IStoredReadMarker {
+  kind: 'read_marker';
+  attendeeId: string;
+  meetId: string;
+  readAt: IsoDateString;
 }
 
 export interface IStoredNotification {

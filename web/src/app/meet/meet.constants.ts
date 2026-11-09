@@ -9,4 +9,4 @@ export const meetStatusLabels = {
 
 export const messagePollIntervalMs = 4000;
 
-export const messageMaxLength = 500;
+export const messageMaxLength = 1000;

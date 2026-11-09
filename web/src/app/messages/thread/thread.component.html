@@ -1,0 +1,81 @@
+<section class="app-page thread">
+  <header class="thread-header">
+    <a mat-icon-button routerLink="/messages" aria-label="Back to messages">
+      <mat-icon>arrow_back</mat-icon>
+    </a>
+    @if (conversation; as current) {
+      <app-pixel-face [seed]="current.partner.faceSeed" [size]="40" [label]="'Face of @' + current.partner.handle"></app-pixel-face>
+      <div class="thread-who">
+        <h1 class="thread-handle app-pixel">&#64;{{ current.partner.handle }}</h1>
+        <p class="thread-level">{{ current.partner.levelName }} · {{ current.meetStatus === 'met' ? 'Met' : 'Meet planned' }}</p>
+      </div>
+      <a mat-stroked-button class="thread-profile" [routerLink]="['/intro', current.meetId]" [attr.aria-label]="'View your meet with @' + current.partner.handle">
+        <span class="btn-content">
+          <mat-icon aria-hidden="true">badge</mat-icon>
+          <span>Profile</span>
+        </span>
+      </a>
+    } @else {
+      <h1 class="thread-handle app-pixel">{{ copy.TITLE }}</h1>
+    }
+  </header>
+
+  <app-state-wrapper [isLoading]="isLoading" [errorMessage]="errorMessage" (retry)="load()">
+    @if (conversation; as current) {
+      @if (showNotice) {
+        <div class="notice app-block" role="note">
+          <mat-icon aria-hidden="true">lock</mat-icon>
+          <p class="notice-text">{{ copy.PRIVACY }}</p>
+          <button mat-icon-button type="button" aria-label="Dismiss privacy note" (click)="dismissNotice()">
+            <mat-icon>close</mat-icon>
+          </button>
+        </div>
+      }
+
+      <p class="app-visually-hidden" aria-live="polite" aria-atomic="true">{{ liveMessage }}</p>
+
+      <ol #messageList class="message-list" tabindex="0" [attr.aria-label]="'Conversation with @' + current.partner.handle">
+        @for (message of messages; track message.id; let index = $index) {
+          @if (isNewDay(index)) {
+            <li class="day" aria-hidden="true">{{ message.at | date: 'EEE d MMM' }}</li>
+          }
+          <li class="message" [class.message--mine]="message.fromMe">
+            <span class="app-visually-hidden">{{ message.fromMe ? 'You' : '@' + current.partner.handle }} at {{ message.at | date: 'shortTime' }}:</span>
+            <span class="message-text">{{ message.text }}</span>
+            <span class="message-time" aria-hidden="true">{{ message.at | date: 'shortTime' }}</span>
+          </li>
+        } @empty {
+          <li class="message-empty">{{ copy.NO_MESSAGES }}</li>
+        }
+      </ol>
+
+      @if (sendError) {
+        <app-alert-banner [message]="sendError" (dismissed)="sendError = ''"></app-alert-banner>
+      }
+
+      <form class="composer" (ngSubmit)="send()">
+        <mat-form-field appearance="outline" class="composer-field" subscriptSizing="dynamic">
+          <mat-label>Message &#64;{{ current.partner.handle }}</mat-label>
+          <textarea
+            #composerInput
+            matInput
+            name="draft"
+            rows="2"
+            [(ngModel)]="draft"
+            [maxlength]="maxChars"
+            (keydown)="onComposerKeydown($event)"
+            aria-describedby="composer-hint"
+          ></textarea>
+          <mat-hint id="composer-hint">{{ copy.SEND_HINT }} · {{ draft.length }}/{{ maxChars }}</mat-hint>
+        </mat-form-field>
+        <button mat-flat-button type="submit" class="composer-send" [disabled]="!draft.trim() || isSending" aria-label="Send message">
+          @if (isSending) {
+            <mat-spinner diameter="20"></mat-spinner>
+          } @else {
+            <mat-icon>send</mat-icon>
+          }
+        </button>
+      </form>
+    }
+  </app-state-wrapper>
+</section>

@@ -32,7 +32,9 @@ import { answerHandshakeTool } from './answer-handshake.tool';
 import { handshakeCodeTool } from './handshake-code.tool';
 import { handshakeStateTool } from './handshake-state.tool';
 import { listBoothNotesTool } from './list-booth-notes.tool';
+import { listConversationsTool } from './list-conversations.tool';
 import { listMessagesTool } from './list-messages.tool';
+import { markConversationReadTool } from './mark-conversation-read.tool';
 import { listNotificationsTool } from './list-notifications.tool';
 import { markNotificationsReadTool } from './mark-notifications-read.tool';
 import { recapTool } from './recap.tool';
@@ -92,6 +94,8 @@ export const toolRegistry = {
   delete_booth_photo: deleteBoothPhotoTool,
   send_message: sendMessageTool,
   list_messages: listMessagesTool,
+  list_conversations: listConversationsTool,
+  mark_conversation_read: markConversationReadTool,
   recap: recapTool,
   import_profile: importProfileTool,
   list_notifications: listNotificationsTool,

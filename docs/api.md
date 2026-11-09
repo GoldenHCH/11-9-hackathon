@@ -80,7 +80,8 @@ There are no websockets. Poll, and stop when the tab is hidden (`document.visibi
 | Handshake: own QR | `handshake_code` | every 50 s (codes live 60) | the code was scanned (`handshake_state` returns a handshake) |
 | Handshake: own QR, waiting to be scanned | `handshake_state` without `handshakeId` | 2 s | it returns a `handshake`; then poll with its id |
 | Handshake in progress | `handshake_state` with `handshakeId` | 2 s | `status` is not `waiting` |
-| Meet chat | `list_messages` with `since` (the last message's `at`) | 5 s | the chat is closed |
+| Meet chat, message thread `/messages/:meetId` | `list_messages` with `since` (the last message's `at`) | 4 s | the thread is closed or the tab is hidden |
+| Messages tab unread badge (bottom nav) | `list_conversations` | 20 s | the tab is hidden or nobody is signed in |
 | Itinerary Now card | `whats_around_me` | 30 s, and right after every `check_in` | |
 | Quests tab | `quest_board` | on tab focus and after every `check_in` (offers refresh after a scan) | |
 | Demo screen leaderboard | `leaderboard` | 15 s | |
@@ -104,6 +105,8 @@ On a 5xx, double the interval up to 60 s, then reset after a success.
 | Search | `search`, `world` (browse by building, level and room), `make_quest` ("Make this a quest") |
 | Quests | `quest_board`, `respond_quest`, `recommend_people`, `recommend_talks`, `propose_meet` |
 | Meet screen | `list_meets` (one item), `respond_meet`, `send_message`, `list_messages` (once the meet is `accepted` or `met`) |
+| Messages inbox `/messages` | `list_conversations` |
+| Message thread `/messages/:meetId` | `list_conversations` (the header card), `list_messages`, `send_message`, `mark_conversation_read` (on open and when new messages arrive) |
 | Handshake | `handshake_code` (show `scanUrl` as a QR), `handshake_state`, `start_handshake` (after scanning `/h/<token>`), `answer_handshake` |
 | Booth note (after an outpost scan, `noteRequired: true`) | `save_booth_note`, `list_booth_notes` |
 | Photo quest card, booth details on the map | `upload_booth_photo`, `list_booth_photos`, `report_booth_photo`, `delete_booth_photo` |
@@ -606,11 +609,25 @@ Sample photos for three booths (Dash0, Elastic, Docker), clearly labelled "SAMPL
 {"id":"4097b15f-5638-4278-944b-997129851651","meetId":"meet-4c2b89f53c32d32090bdc992","fromMe":true,"text":"See you at the campfire in 5?","at":"2026-11-09T21:20:37.270Z"}
 ```
 
-Only the two players in a meet that both accepted (`accepted` or `met`) can message. Plain text, trimmed, 1 to 500 characters, 20 per 10 minutes per sender. Errors: `409 meet_not_accepted`, `409 no_match` (blocked), `404 unknown_meet`, `429 slow_down`.
+Only the two players in a meet that both accepted (`accepted` or `met`) can message. Plain text only (control and bidi characters are stripped, line breaks kept, more than one blank line collapsed), trimmed, 1 to 1000 characters, at most 30 per minute per sender. Errors: `409 meet_not_accepted`, `409 no_match` (blocked), `404 unknown_meet`, `429 slow_down`.
 
 ### list_messages
 
-`{"attendeeId":"p_…","meetId":"meet-…","since":"2026-11-09T21:20:37.270Z"}` (`since` optional) → messages oldest first, each with `fromMe`. Neither player's id is ever included.
+`{"attendeeId":"p_…","meetId":"meet-…","since":"2026-11-09T21:20:37.270Z"}` (`since` optional) → messages oldest first, each with `fromMe`. Without `since` it returns the latest 200. Neither player's id is ever included. Chat messages are stored in the `messages` index with `kind: "chat"` (older ones have no `kind`); every chat query filters on that, so notifications, handle reservations, connections and read markers never show up as messages.
+
+### list_conversations
+
+`{"attendeeId":"p_…"}` → the inbox, newest activity first, plus the total `unread`:
+
+```json
+{"conversations":[{"meetId":"meet-4c2b89f53c32d32090bdc992","meetStatus":"accepted","partner":{"publicId":"pl_b0f34ffaf6282124","handle":"argoalpaca","faceSeed":"argoalpaca","levelName":"Pod"},"lastMessage":{"text":"On my way, green hoodie.","fromMe":false,"at":"2026-11-09T21:20:40.500Z"},"lastActivityAt":"2026-11-09T21:20:40.500Z","unread":1}],"unread":1}
+```
+
+One row per person the player has an `accepted` or `met` meet with (the newest meet with that person). Messaging stays opt-in: proposed, declined, cancelled and blocked meets never appear. `lastMessage` is `null` before anyone writes. `unread` counts the partner's messages after the player's read marker. `partner` is a public card only: never an attendee id, email or name.
+
+### mark_conversation_read
+
+`{"attendeeId":"p_…","meetId":"meet-…"}` → `{"meetId":"meet-…","readAt":"2026-11-09T21:21:02.114Z","unread":0}` (`unread` is the remaining total across all conversations, for the nav badge). Writes a read marker to the `messages` index with `kind: "read_marker"` under the id `read:<attendeeId>:<meetId>`. Errors: `404 unknown_meet` when the player is not in that meet.
 
 ### recap
 
