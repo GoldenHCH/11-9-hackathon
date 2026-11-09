@@ -115,7 +115,7 @@
   align-items: flex-start;
   gap: 12px;
   width: 100%;
-  padding: 12px 16px;
+  padding: 16px;
   font: inherit;
   text-align: left;
   color: inherit;
@@ -142,8 +142,8 @@
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   color: var(--kq-primary-ink);
   background: var(--kq-primary);
   border: 2px solid var(--kq-border);
@@ -233,8 +233,8 @@
 
 .bell-empty-icon {
   font-size: 36px;
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
 }
 
 .bell-empty-text {

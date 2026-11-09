@@ -11,22 +11,31 @@
     (retry)="loadRecap()"
   >
     @if (recap; as summary) {
-      <div class="pdf-actions">
-        @if (pdfUrl) {
-          <a mat-flat-button class="pdf-download" [href]="pdfUrl" download="kubequest-recap.pdf">
+      <section class="pdf-block kq-block" aria-labelledby="pdf-title">
+        <span class="pdf-icon" aria-hidden="true">
+          <mat-icon>picture_as_pdf</mat-icon>
+        </span>
+        <div class="pdf-text">
+          <h2 id="pdf-title" class="pdf-title kq-pixel">Your KubeCon, on paper</h2>
+          <p class="pdf-line">Everyone you met, every booth note and every talk, with next steps. Yours to keep.</p>
+        </div>
+        <div class="pdf-actions">
+          @if (pdfUrl) {
+            <a mat-flat-button class="pdf-download" [href]="pdfUrl" download="kubequest-recap.pdf">
+              <div class="btn-content">
+                <mat-icon>download</mat-icon>
+                <span>Download my recap PDF</span>
+              </div>
+            </a>
+          }
+          <a mat-stroked-button routerLink="/connections">
             <div class="btn-content">
-              <mat-icon>picture_as_pdf</mat-icon>
-              <span>Download my recap PDF</span>
+              <mat-icon>group</mat-icon>
+              <span>People met</span>
             </div>
           </a>
-        }
-        <a mat-stroked-button routerLink="/connections">
-          <div class="btn-content">
-            <mat-icon>group</mat-icon>
-            <span>People met</span>
-          </div>
-        </a>
-      </div>
+        </div>
+      </section>
 
       <ul class="totals" aria-label="Your conference in numbers">
         <li class="total app-block">
