@@ -1,3 +1,10 @@
+FROM node:22-alpine AS landing
+WORKDIR /frontend
+COPY frontend/package.json frontend/package-lock.json ./
+RUN npm ci --no-audit --no-fund
+COPY frontend/ ./
+RUN npm run build
+
 FROM node:22-alpine AS build
 WORKDIR /repo
 COPY . .
@@ -8,6 +15,7 @@ RUN mkdir -p app/public resources \
          && browser_dir="$(find web/dist -maxdepth 3 -type d -name browser | head -n 1)" \
          && cp -r "$browser_dir"/. app/public/; \
        fi
+COPY --from=landing /frontend/dist ./app/public/landing
 RUN npm run build -w app && npm run build:scripts
 RUN mkdir /manifests \
     && tar cf - package.json package-lock.json shared/package.json app/package.json $(ls web/package.json 2>/dev/null) \

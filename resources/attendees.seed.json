@@ -654,5 +654,1716 @@
     "banners": [],
     "blockedIds": [],
     "createdAt": "2026-11-09T11:08:00.000Z"
+  },
+  {
+    "id": "att-backstagebeaver",
+    "handle": "backstagebeaver",
+    "faceSeed": "backstagebeaver",
+    "workingOn": "Building a Backstage portal so 300 engineers stop filing tickets for new services.",
+    "headline": "Building a Backstage portal so 300 engineers stop filing tickets for new services.",
+    "profileText": "Developer experience engineer. We are rolling out Backstage as our internal developer portal with software templates for golden paths, so a new service gets CI, dashboards and an on-call rotation in one click. I want to compare scorecards, plugin maintenance cost and how people measure whether developers actually use the portal.",
+    "profile": {
+      "topics": [
+        "internal-developer-platforms",
+        "backstage",
+        "developer-experience",
+        "golden-paths"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "hyatt-regency-level-4-regency-ballroom-cd",
+    "lastLocation": {
+      "lat": 40.76744,
+      "lon": -111.89385
+    },
+    "lastSeenAt": "2026-11-09T16:13:00.000Z",
+    "visible": true,
+    "xp": 65,
+    "level": 2,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T12:49:00.000Z"
+  },
+  {
+    "id": "att-goroutinegecko",
+    "handle": "goroutinegecko",
+    "faceSeed": "goroutinegecko",
+    "workingOn": "Writes Go CLIs and kubectl plugins for a small infra team.",
+    "headline": "Writes Go CLIs and kubectl plugins for a small infra team.",
+    "profileText": "Infrastructure developer who mostly writes Go: kubectl plugins, small controllers scaffolded with Kubebuilder, and a CLI our developers use to request namespaces. Interested in testing patterns for client-go code, fake clients versus envtest, and keeping CLIs fast.",
+    "profile": {
+      "topics": [
+        "go",
+        "cli-tools",
+        "testing",
+        "kubebuilder"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "hyatt-regency-level-2-salt-lake-ballroom-a",
+    "lastLocation": {
+      "lat": 40.76714,
+      "lon": -111.89385
+    },
+    "lastSeenAt": "2026-11-09T16:16:00.000Z",
+    "visible": true,
+    "xp": 110,
+    "level": 2,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T13:43:00.000Z"
+  },
+  {
+    "id": "att-crossplanecrab",
+    "handle": "crossplanecrab",
+    "faceSeed": "crossplanecrab",
+    "workingOn": "Replacing Terraform tickets with Crossplane compositions.",
+    "headline": "Replacing Terraform tickets with Crossplane compositions.",
+    "profileText": "Cloud engineer moving our infrastructure requests from Terraform pull requests to Crossplane compositions exposed through a self-service API. I want to talk composition functions, versioning XRDs without breaking teams, and running the same abstractions on AWS and GCP.",
+    "profile": {
+      "topics": [
+        "internal-developer-platforms",
+        "crossplane",
+        "infrastructure-as-code",
+        "multi-cloud"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "campfire-salt-lake-foyer",
+    "lastLocation": {
+      "lat": 40.76702,
+      "lon": -111.89385
+    },
+    "lastSeenAt": "2026-11-09T16:41:00.000Z",
+    "visible": true,
+    "xp": 325,
+    "level": 3,
+    "banners": [
+      "connector"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T12:40:00.000Z"
+  },
+  {
+    "id": "att-kueuekoala",
+    "handle": "kueuekoala",
+    "faceSeed": "kueuekoala",
+    "workingOn": "Moving a research lab from Slurm to Kubernetes batch with Kueue.",
+    "headline": "Moving a research lab from Slurm to Kubernetes batch with Kueue.",
+    "profileText": "Research computing engineer at a university. Our scientists live in Slurm and I am moving their batch jobs to Kubernetes with Kueue, JobSet and cohort-based quotas. Looking for people who handle preemption and fair sharing for long-running jobs without angry researchers.",
+    "profile": {
+      "topics": [
+        "kueue",
+        "batch-jobs",
+        "hpc",
+        "job-scheduling"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "hyatt-regency-level-4-regency-ballroom-a",
+    "lastLocation": {
+      "lat": 40.7672,
+      "lon": -111.89385
+    },
+    "lastSeenAt": "2026-11-09T16:13:00.000Z",
+    "visible": true,
+    "xp": 295,
+    "level": 3,
+    "banners": [
+      "connector"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T13:26:00.000Z"
+  },
+  {
+    "id": "att-tensortapir",
+    "handle": "tensortapir",
+    "faceSeed": "tensortapir",
+    "workingOn": "Serving open-weight LLMs with vLLM on a handful of H100s.",
+    "headline": "Serving open-weight LLMs with vLLM on a handful of H100s.",
+    "profileText": "ML infrastructure engineer serving open-weight language models with vLLM on Kubernetes. I care about GPU utilisation per request, batching, KV cache sizing and autoscaling on queue depth. Happy to swap benchmark numbers with anyone running inference in production.",
+    "profile": {
+      "topics": [
+        "gpus",
+        "llm-inference",
+        "vllm",
+        "model-serving"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "hyatt-regency-level-2-salt-lake-ballroom-a",
+    "lastLocation": {
+      "lat": 40.76714,
+      "lon": -111.89385
+    },
+    "lastSeenAt": "2026-11-09T16:21:00.000Z",
+    "visible": true,
+    "xp": 120,
+    "level": 2,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T11:02:00.000Z"
+  },
+  {
+    "id": "att-draslynx",
+    "handle": "draslynx",
+    "faceSeed": "draslynx",
+    "workingOn": "Trying out Dynamic Resource Allocation for accelerators and NICs.",
+    "headline": "Trying out Dynamic Resource Allocation for accelerators and NICs.",
+    "profileText": "Kubernetes contributor-in-training working on scheduling. I am testing Dynamic Resource Allocation to replace our device plugins for accelerators and SR-IOV NICs, and I want to understand how cluster allocation policies map onto ResourceClaims.",
+    "profile": {
+      "topics": [
+        "cluster-allocation",
+        "dynamic-resource-allocation",
+        "scheduling",
+        "device-plugins"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-1-151",
+    "lastLocation": {
+      "lat": 40.76645,
+      "lon": -111.89445
+    },
+    "lastSeenAt": "2026-11-09T17:14:00.000Z",
+    "visible": true,
+    "xp": 90,
+    "level": 2,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T14:59:00.000Z"
+  },
+  {
+    "id": "att-inferenceibex",
+    "handle": "inferenceibex",
+    "faceSeed": "inferenceibex",
+    "workingOn": "First KubeCon; putting our first model behind KServe.",
+    "headline": "First KubeCon; putting our first model behind KServe.",
+    "profileText": "First KubeCon. I am a backend developer who just got asked to put our first fine-tuned model behind an API. We picked KServe and I am learning about scale-to-zero, cold starts and canary rollouts for models. Any advice on what to measure first is welcome.",
+    "profile": {
+      "topics": [
+        "llm-inference",
+        "kserve",
+        "autoscaling"
+      ],
+      "firstTimer": true,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "campfire-the-meeting-point",
+    "lastLocation": {
+      "lat": 40.76657,
+      "lon": -111.89475
+    },
+    "lastSeenAt": "2026-11-09T16:39:00.000Z",
+    "visible": true,
+    "xp": 125,
+    "level": 2,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T13:02:00.000Z"
+  },
+  {
+    "id": "att-ragraccoon",
+    "handle": "ragraccoon",
+    "faceSeed": "ragraccoon",
+    "workingOn": "Building a RAG assistant over our runbooks.",
+    "headline": "Building a RAG assistant over our runbooks.",
+    "profileText": "First time here. I build a retrieval-augmented assistant that answers on-call questions from our runbooks and postmortems. Curious about hybrid search, chunking, evaluation and how to keep the index fresh when docs change daily.",
+    "profile": {
+      "topics": [
+        "rag",
+        "vector-search",
+        "ai-agents"
+      ],
+      "firstTimer": true,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-2-250-ab",
+    "lastLocation": {
+      "lat": 40.76636,
+      "lon": -111.89475
+    },
+    "lastSeenAt": "2026-11-09T17:33:00.000Z",
+    "visible": true,
+    "xp": 35,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T14:02:00.000Z"
+  },
+  {
+    "id": "att-modelmeshmoose",
+    "handle": "modelmeshmoose",
+    "faceSeed": "modelmeshmoose",
+    "workingOn": "MLOps lead; ask me about model rollouts.",
+    "headline": "MLOps lead; ask me about model rollouts.",
+    "profileText": "Fifth KubeCon and a welcomer this year. I lead MLOps for a retail company: model registry, KServe deployments, shadow traffic and rollback when a model drifts. I enjoy helping people take their first model to production without a hero weekend.",
+    "profile": {
+      "topics": [
+        "model-serving",
+        "kserve",
+        "mlops"
+      ],
+      "firstTimer": false,
+      "welcomer": true
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-1-grand-ballroom-gi",
+    "lastLocation": {
+      "lat": 40.76645,
+      "lon": -111.8943
+    },
+    "lastSeenAt": "2026-11-09T17:51:00.000Z",
+    "visible": true,
+    "xp": 295,
+    "level": 3,
+    "banners": [
+      "welcomer",
+      "connector"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T13:21:00.000Z"
+  },
+  {
+    "id": "att-rayrhino",
+    "handle": "rayrhino",
+    "faceSeed": "rayrhino",
+    "workingOn": "Runs Ray clusters for distributed training jobs.",
+    "headline": "Runs Ray clusters for distributed training jobs.",
+    "profileText": "ML platform engineer running KubeRay for distributed training and hyperparameter sweeps. Interested in gang scheduling, checkpointing to object storage and keeping preempted jobs from losing hours of work.",
+    "profile": {
+      "topics": [
+        "ray",
+        "distributed-training",
+        "mlops"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": false,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-2-251-abc",
+    "lastLocation": {
+      "lat": 40.76648,
+      "lon": -111.89475
+    },
+    "lastSeenAt": "2026-11-09T17:10:00.000Z",
+    "visible": true,
+    "xp": 55,
+    "level": 2,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T11:53:00.000Z"
+  },
+  {
+    "id": "att-falcofox",
+    "handle": "falcofox",
+    "faceSeed": "falcofox",
+    "workingOn": "Detection engineer writing Falco rules that do not page at 3am.",
+    "headline": "Detection engineer writing Falco rules that do not page at 3am.",
+    "profileText": "Security detection engineer and welcomer. I write and tune Falco rules for runtime threat detection across 40 clusters, mostly fighting false positives. Ask me about rule tuning, eBPF drivers or getting a security team and an SRE team to share alerts.",
+    "profile": {
+      "topics": [
+        "runtime-security",
+        "falco",
+        "ebpf"
+      ],
+      "firstTimer": false,
+      "welcomer": true
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "campfire-salt-lake-foyer",
+    "lastLocation": {
+      "lat": 40.76702,
+      "lon": -111.89385
+    },
+    "lastSeenAt": "2026-11-09T16:57:00.000Z",
+    "visible": true,
+    "xp": 260,
+    "level": 3,
+    "banners": [
+      "welcomer"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T11:10:00.000Z"
+  },
+  {
+    "id": "att-tetragontoucan",
+    "handle": "tetragontoucan",
+    "faceSeed": "tetragontoucan",
+    "workingOn": "First KubeCon; learning eBPF from the kernel up.",
+    "headline": "First KubeCon; learning eBPF from the kernel up.",
+    "profileText": "First KubeCon. I come from Linux kernel support and I am learning how eBPF powers tools like Tetragon for runtime enforcement. I want to understand what is safe to run in production and how teams roll out enforcement policies gradually.",
+    "profile": {
+      "topics": [
+        "ebpf",
+        "runtime-security",
+        "kernel"
+      ],
+      "firstTimer": true,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "hyatt-regency-level-4-regency-ballroom-a",
+    "lastLocation": {
+      "lat": 40.7672,
+      "lon": -111.89385
+    },
+    "lastSeenAt": "2026-11-09T16:06:00.000Z",
+    "visible": true,
+    "xp": 50,
+    "level": 2,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T12:40:00.000Z"
+  },
+  {
+    "id": "att-rbacraven",
+    "handle": "rbacraven",
+    "faceSeed": "rbacraven",
+    "workingOn": "Untangling RBAC for a cluster shared by 30 teams.",
+    "headline": "Untangling RBAC for a cluster shared by 30 teams.",
+    "profileText": "Platform security engineer untangling RBAC for a large shared cluster. I audit ClusterRoles, build least-privilege templates per team and chase down service accounts nobody owns. Interested in tooling for RBAC reviews and tenant isolation.",
+    "profile": {
+      "topics": [
+        "rbac",
+        "multi-tenancy",
+        "security"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": false,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-2-250-ab",
+    "lastLocation": {
+      "lat": 40.76636,
+      "lon": -111.89475
+    },
+    "lastSeenAt": "2026-11-09T17:14:00.000Z",
+    "visible": true,
+    "xp": 40,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T12:31:00.000Z"
+  },
+  {
+    "id": "att-spiffeseal",
+    "handle": "spiffeseal",
+    "faceSeed": "spiffeseal",
+    "workingOn": "Replacing long-lived secrets with SPIFFE identities.",
+    "headline": "Replacing long-lived secrets with SPIFFE identities.",
+    "profileText": "Identity engineer rolling out SPIFFE and SPIRE so services authenticate with short-lived identities instead of shared secrets. Keen to talk federation across clusters and clouds, and migrating legacy services.",
+    "profile": {
+      "topics": [
+        "workload-identity",
+        "spiffe",
+        "zero-trust"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": false,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "hyatt-regency-level-2-salt-lake-ballroom-b",
+    "lastLocation": {
+      "lat": 40.76726,
+      "lon": -111.89385
+    },
+    "lastSeenAt": "2026-11-09T17:53:00.000Z",
+    "visible": true,
+    "xp": 75,
+    "level": 2,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T13:29:00.000Z"
+  },
+  {
+    "id": "att-kyvernokiwi",
+    "handle": "kyvernokiwi",
+    "faceSeed": "kyvernokiwi",
+    "workingOn": "First KubeCon; turning a compliance spreadsheet into policies.",
+    "headline": "First KubeCon; turning a compliance spreadsheet into policies.",
+    "profileText": "First KubeCon. Our compliance team hands me spreadsheets of controls and I am turning them into Kyverno policies with reports auditors can read. Looking for examples of policy exceptions done well.",
+    "profile": {
+      "topics": [
+        "policy-as-code",
+        "kyverno",
+        "compliance"
+      ],
+      "firstTimer": true,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-1-hall-de",
+    "lastLocation": {
+      "lat": 40.76609,
+      "lon": -111.89475
+    },
+    "lastSeenAt": "2026-11-09T17:33:00.000Z",
+    "visible": true,
+    "xp": 200,
+    "level": 3,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T12:51:00.000Z"
+  },
+  {
+    "id": "att-prometheuspanda",
+    "handle": "prometheuspanda",
+    "faceSeed": "prometheuspanda",
+    "workingOn": "Prometheus maintainer-adjacent; loves a good recording rule.",
+    "headline": "Prometheus maintainer-adjacent; loves a good recording rule.",
+    "profileText": "Long-time Prometheus user and welcomer. I run a metrics platform ingesting a few million series with Prometheus and Thanos, and I care about cardinality budgets, recording rules and alerts that point at a cause. Always happy to help someone design their first dashboards.",
+    "profile": {
+      "topics": [
+        "prometheus",
+        "metrics",
+        "alerting"
+      ],
+      "firstTimer": false,
+      "welcomer": true
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "hyatt-regency-level-4-regency-ballroom-cd",
+    "lastLocation": {
+      "lat": 40.76744,
+      "lon": -111.89385
+    },
+    "lastSeenAt": "2026-11-09T17:40:00.000Z",
+    "visible": true,
+    "xp": 585,
+    "level": 4,
+    "banners": [
+      "welcomer",
+      "connector"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T13:02:00.000Z"
+  },
+  {
+    "id": "att-lokilemur",
+    "handle": "lokilemur",
+    "faceSeed": "lokilemur",
+    "workingOn": "First KubeCon; our log bill is bigger than our compute bill.",
+    "headline": "First KubeCon; our log bill is bigger than our compute bill.",
+    "profileText": "First KubeCon. I am a DevOps engineer at a startup where logging costs more than compute. Moving from a hosted vendor to Loki and trying to decide what to keep, sample or drop.",
+    "profile": {
+      "topics": [
+        "logging",
+        "loki",
+        "observability"
+      ],
+      "firstTimer": true,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-1-hall-de",
+    "lastLocation": {
+      "lat": 40.76609,
+      "lon": -111.89475
+    },
+    "lastSeenAt": "2026-11-09T16:11:00.000Z",
+    "visible": true,
+    "xp": 40,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T14:01:00.000Z"
+  },
+  {
+    "id": "att-jaegerjackal",
+    "handle": "jaegerjackal",
+    "faceSeed": "jaegerjackal",
+    "workingOn": "Tracing a 200-service mesh, one sampled span at a time.",
+    "headline": "Tracing a 200-service mesh, one sampled span at a time.",
+    "profileText": "SRE responsible for distributed tracing across about 200 services. We moved from Jaeger agents to collectors with tail-based sampling. Interested in sampling strategies that keep errors and slow requests without storing everything.",
+    "profile": {
+      "topics": [
+        "tracing",
+        "sampling",
+        "distributed-systems"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": false,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "campfire-community-hub",
+    "lastLocation": {
+      "lat": 40.76621,
+      "lon": -111.89475
+    },
+    "lastSeenAt": "2026-11-09T16:27:00.000Z",
+    "visible": true,
+    "xp": 55,
+    "level": 2,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T11:18:00.000Z"
+  },
+  {
+    "id": "att-profilingpelican",
+    "handle": "profilingpelican",
+    "faceSeed": "profilingpelican",
+    "workingOn": "Continuous profiling so CPU flame graphs are always on.",
+    "headline": "Continuous profiling so CPU flame graphs are always on.",
+    "profileText": "Performance engineer rolling out continuous profiling with eBPF-based agents. I like finding the one function that burns half the CPU in a cluster. Interested in profiling overhead and linking profiles to traces.",
+    "profile": {
+      "topics": [
+        "continuous-profiling",
+        "performance",
+        "ebpf"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": false,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-1-155-e",
+    "lastLocation": {
+      "lat": 40.76609,
+      "lon": -111.8943
+    },
+    "lastSeenAt": "2026-11-09T16:43:00.000Z",
+    "visible": true,
+    "xp": 20,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T13:38:00.000Z"
+  },
+  {
+    "id": "att-slosalamander",
+    "handle": "slosalamander",
+    "faceSeed": "slosalamander",
+    "workingOn": "SLO evangelist and welcomer; error budgets over gut feel.",
+    "headline": "SLO evangelist and welcomer; error budgets over gut feel.",
+    "profileText": "SRE lead and welcomer. I help product teams define SLOs and burn-rate alerts so on-call pages mean something. Happy to walk a first-timer through writing their first SLO on a napkin.",
+    "profile": {
+      "topics": [
+        "slos",
+        "sre",
+        "alerting"
+      ],
+      "firstTimer": false,
+      "welcomer": true
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-2-251-abc",
+    "lastLocation": {
+      "lat": 40.76648,
+      "lon": -111.89475
+    },
+    "lastSeenAt": "2026-11-09T17:57:00.000Z",
+    "visible": true,
+    "xp": 350,
+    "level": 3,
+    "banners": [
+      "welcomer",
+      "connector"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T13:40:00.000Z"
+  },
+  {
+    "id": "att-argoalpaca",
+    "handle": "argoalpaca",
+    "faceSeed": "argoalpaca",
+    "workingOn": "Runs Argo CD for 80 teams; welcomer at heart.",
+    "headline": "Runs Argo CD for 80 teams; welcomer at heart.",
+    "profileText": "Sixth KubeCon and a welcomer. I run a central Argo CD with ApplicationSets for about 80 teams, plus Argo Rollouts for canaries. Ask me about app-of-apps sprawl, sync waves or how to onboard a team to GitOps in an afternoon.",
+    "profile": {
+      "topics": [
+        "argo-cd",
+        "gitops",
+        "progressive-delivery"
+      ],
+      "firstTimer": false,
+      "welcomer": true
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-1-demo-theater",
+    "lastLocation": {
+      "lat": 40.76621,
+      "lon": -111.89415
+    },
+    "lastSeenAt": "2026-11-09T16:26:00.000Z",
+    "visible": true,
+    "xp": 560,
+    "level": 4,
+    "banners": [
+      "welcomer",
+      "connector"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T14:32:00.000Z"
+  },
+  {
+    "id": "att-rolloutrabbit",
+    "handle": "rolloutrabbit",
+    "faceSeed": "rolloutrabbit",
+    "workingOn": "First KubeCon; just shipped our first canary.",
+    "headline": "First KubeCon; just shipped our first canary.",
+    "profileText": "First KubeCon. Our team just shipped its first canary release with Argo Rollouts and automated analysis against Prometheus. I want to learn how others pick metrics for analysis and when to promote automatically.",
+    "profile": {
+      "topics": [
+        "argo-rollouts",
+        "canary",
+        "progressive-delivery"
+      ],
+      "firstTimer": true,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "campfire-community-hub",
+    "lastLocation": {
+      "lat": 40.76621,
+      "lon": -111.89475
+    },
+    "lastSeenAt": "2026-11-09T16:05:00.000Z",
+    "visible": true,
+    "xp": 40,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T14:49:00.000Z"
+  },
+  {
+    "id": "att-kustomizekudu",
+    "handle": "kustomizekudu",
+    "faceSeed": "kustomizekudu",
+    "workingOn": "Keeping Kustomize overlays DRY across 12 environments.",
+    "headline": "Keeping Kustomize overlays DRY across 12 environments.",
+    "profileText": "Release engineer maintaining Kustomize bases and overlays for twelve environments. Interested in components, replacements and how people stop overlays from drifting apart.",
+    "profile": {
+      "topics": [
+        "kustomize",
+        "gitops",
+        "config-management"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": false,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-2-251-abc",
+    "lastLocation": {
+      "lat": 40.76648,
+      "lon": -111.89475
+    },
+    "lastSeenAt": "2026-11-09T17:19:00.000Z",
+    "visible": true,
+    "xp": 20,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T11:24:00.000Z"
+  },
+  {
+    "id": "att-linkerdlark",
+    "handle": "linkerdlark",
+    "faceSeed": "linkerdlark",
+    "workingOn": "Linkerd user since 2.0; happy to demystify meshes.",
+    "headline": "Linkerd user since 2.0; happy to demystify meshes.",
+    "profileText": "Platform engineer and welcomer who has run Linkerd in production since 2.0. I like explaining service meshes without the hype: mTLS by default, golden metrics, retries and timeouts. Bring me your mesh questions.",
+    "profile": {
+      "topics": [
+        "linkerd",
+        "service-mesh",
+        "mtls"
+      ],
+      "firstTimer": false,
+      "welcomer": true
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-1-grand-ballroom-h",
+    "lastLocation": {
+      "lat": 40.76657,
+      "lon": -111.8943
+    },
+    "lastSeenAt": "2026-11-09T16:34:00.000Z",
+    "visible": true,
+    "xp": 270,
+    "level": 3,
+    "banners": [
+      "welcomer",
+      "connector"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T13:53:00.000Z"
+  },
+  {
+    "id": "att-envoyemu",
+    "handle": "envoyemu",
+    "faceSeed": "envoyemu",
+    "workingOn": "Writes Envoy filters and regrets nothing.",
+    "headline": "Writes Envoy filters and regrets nothing.",
+    "profileText": "Edge networking engineer working on Envoy-based gateways. I write rate limiting and auth filters and I am moving our routing config to Gateway API. Interested in multi-tenant gateways and Wasm filters.",
+    "profile": {
+      "topics": [
+        "envoy",
+        "gateway-api",
+        "rate-limiting"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": false,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-2-251-abc",
+    "lastLocation": {
+      "lat": 40.76648,
+      "lon": -111.89475
+    },
+    "lastSeenAt": "2026-11-09T16:17:00.000Z",
+    "visible": true,
+    "xp": 75,
+    "level": 2,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T11:41:00.000Z"
+  },
+  {
+    "id": "att-ciliumcicada",
+    "handle": "ciliumcicada",
+    "faceSeed": "ciliumcicada",
+    "workingOn": "First KubeCon; migrating from kube-proxy to Cilium.",
+    "headline": "First KubeCon; migrating from kube-proxy to Cilium.",
+    "profileText": "First KubeCon. I am a network engineer migrating our clusters from Calico and kube-proxy to Cilium. Learning network policies, Hubble flow logs and what breaks when you turn on kube-proxy replacement.",
+    "profile": {
+      "topics": [
+        "cilium",
+        "network-policy",
+        "networking"
+      ],
+      "firstTimer": true,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "campfire-network-nook",
+    "lastLocation": {
+      "lat": 40.76645,
+      "lon": -111.89475
+    },
+    "lastSeenAt": "2026-11-09T16:41:00.000Z",
+    "visible": true,
+    "xp": 100,
+    "level": 2,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T11:57:00.000Z"
+  },
+  {
+    "id": "att-cephchameleon",
+    "handle": "cephchameleon",
+    "faceSeed": "cephchameleon",
+    "workingOn": "Operates Rook Ceph so the database team does not have to.",
+    "headline": "Operates Rook Ceph so the database team does not have to.",
+    "profileText": "Storage engineer operating Rook Ceph clusters on bare metal. Interested in performance tuning, failure domains and upgrading Ceph without a maintenance window.",
+    "profile": {
+      "topics": [
+        "ceph",
+        "rook",
+        "storage"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": false,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "hyatt-regency-level-4-regency-ballroom-cd",
+    "lastLocation": {
+      "lat": 40.76744,
+      "lon": -111.89385
+    },
+    "lastSeenAt": "2026-11-09T16:27:00.000Z",
+    "visible": true,
+    "xp": 30,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T14:39:00.000Z"
+  },
+  {
+    "id": "att-vitessvole",
+    "handle": "vitessvole",
+    "faceSeed": "vitessvole",
+    "workingOn": "Shards MySQL with Vitess; welcomer for data folks.",
+    "headline": "Shards MySQL with Vitess; welcomer for data folks.",
+    "profileText": "Database reliability engineer and welcomer. We run a sharded MySQL fleet with Vitess on Kubernetes. I love talking resharding, online schema changes and how to make DBAs comfortable with operators.",
+    "profile": {
+      "topics": [
+        "vitess",
+        "mysql",
+        "databases"
+      ],
+      "firstTimer": false,
+      "welcomer": true
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "campfire-the-meeting-point",
+    "lastLocation": {
+      "lat": 40.76657,
+      "lon": -111.89475
+    },
+    "lastSeenAt": "2026-11-09T16:06:00.000Z",
+    "visible": true,
+    "xp": 230,
+    "level": 3,
+    "banners": [
+      "welcomer"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T12:35:00.000Z"
+  },
+  {
+    "id": "att-etcdeagle",
+    "handle": "etcdeagle",
+    "faceSeed": "etcdeagle",
+    "workingOn": "Keeps etcd healthy for a managed Kubernetes service.",
+    "headline": "Keeps etcd healthy for a managed Kubernetes service.",
+    "profileText": "Control plane engineer at a managed Kubernetes provider and a welcomer. I spend my days on etcd defragmentation, snapshots and API server load. Happy to explain what really happens when you kubectl apply.",
+    "profile": {
+      "topics": [
+        "etcd",
+        "control-plane",
+        "backups"
+      ],
+      "firstTimer": false,
+      "welcomer": true
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-1-151",
+    "lastLocation": {
+      "lat": 40.76645,
+      "lon": -111.89445
+    },
+    "lastSeenAt": "2026-11-09T17:30:00.000Z",
+    "visible": true,
+    "xp": 155,
+    "level": 2,
+    "banners": [
+      "welcomer"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T13:32:00.000Z"
+  },
+  {
+    "id": "att-velerovulture",
+    "handle": "velerovulture",
+    "faceSeed": "velerovulture",
+    "workingOn": "First KubeCon; writing our first disaster recovery plan.",
+    "headline": "First KubeCon; writing our first disaster recovery plan.",
+    "profileText": "First KubeCon. I was asked to write our disaster recovery plan for Kubernetes and I am testing Velero backups and restores across regions. Want to hear real restore stories, good and bad.",
+    "profile": {
+      "topics": [
+        "backups",
+        "disaster-recovery",
+        "velero"
+      ],
+      "firstTimer": true,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "hyatt-regency-level-2-salt-lake-ballroom-a",
+    "lastLocation": {
+      "lat": 40.76714,
+      "lon": -111.89385
+    },
+    "lastSeenAt": "2026-11-09T16:51:00.000Z",
+    "visible": true,
+    "xp": 20,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T11:34:00.000Z"
+  },
+  {
+    "id": "att-kafkakingfisher",
+    "handle": "kafkakingfisher",
+    "faceSeed": "kafkakingfisher",
+    "workingOn": "Runs Kafka on Kubernetes with Strimzi.",
+    "headline": "Runs Kafka on Kubernetes with Strimzi.",
+    "profileText": "Streaming platform engineer running Kafka on Kubernetes with Strimzi. Interested in rack awareness, tiered storage and upgrading brokers without consumer lag spikes.",
+    "profile": {
+      "topics": [
+        "kafka",
+        "strimzi",
+        "streaming"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": false,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-1-grand-ballroom-gi",
+    "lastLocation": {
+      "lat": 40.76645,
+      "lon": -111.8943
+    },
+    "lastSeenAt": "2026-11-09T16:18:00.000Z",
+    "visible": true,
+    "xp": 65,
+    "level": 2,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T12:33:00.000Z"
+  },
+  {
+    "id": "att-spotsparrow",
+    "handle": "spotsparrow",
+    "faceSeed": "spotsparrow",
+    "workingOn": "Moved 70% of our nodes to spot and lived to tell.",
+    "headline": "Moved 70% of our nodes to spot and lived to tell.",
+    "profileText": "FinOps-minded infrastructure engineer. We moved most stateless workloads onto spot instances with interruption handling and rightsized requests with VPA recommendations. Happy to share what saved money and what did not.",
+    "profile": {
+      "topics": [
+        "spot-instances",
+        "finops",
+        "rightsizing"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": false,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "hyatt-regency-level-2-salt-lake-ballroom-de",
+    "lastLocation": {
+      "lat": 40.7675,
+      "lon": -111.89385
+    },
+    "lastSeenAt": "2026-11-09T17:48:00.000Z",
+    "visible": true,
+    "xp": 70,
+    "level": 2,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T11:58:00.000Z"
+  },
+  {
+    "id": "att-karpenterkangaroo",
+    "handle": "karpenterkangaroo",
+    "faceSeed": "karpenterkangaroo",
+    "workingOn": "Karpenter tamer and welcomer; consolidation is my hobby.",
+    "headline": "Karpenter tamer and welcomer; consolidation is my hobby.",
+    "profileText": "Platform engineer and welcomer who has run Karpenter since its early days. I tune consolidation, disruption budgets and node pools to cut cost without evicting the world. Glad to help anyone planning a move from cluster-autoscaler.",
+    "profile": {
+      "topics": [
+        "karpenter",
+        "node-autoscaling",
+        "cost"
+      ],
+      "firstTimer": false,
+      "welcomer": true
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "hyatt-regency-level-2-salt-lake-ballroom-b",
+    "lastLocation": {
+      "lat": 40.76726,
+      "lon": -111.89385
+    },
+    "lastSeenAt": "2026-11-09T17:07:00.000Z",
+    "visible": true,
+    "xp": 280,
+    "level": 3,
+    "banners": [
+      "welcomer",
+      "connector"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T12:04:00.000Z"
+  },
+  {
+    "id": "att-carboncapybara",
+    "handle": "carboncapybara",
+    "faceSeed": "carboncapybara",
+    "workingOn": "First KubeCon; measuring the carbon cost of our clusters.",
+    "headline": "First KubeCon; measuring the carbon cost of our clusters.",
+    "profileText": "First KubeCon. I work on sustainability at a logistics company and I am using Kepler to estimate energy use per workload. Looking for people who report carbon alongside cost.",
+    "profile": {
+      "topics": [
+        "sustainability",
+        "kepler",
+        "green-software"
+      ],
+      "firstTimer": true,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-1-150-defg",
+    "lastLocation": {
+      "lat": 40.76633,
+      "lon": -111.89445
+    },
+    "lastSeenAt": "2026-11-09T16:51:00.000Z",
+    "visible": true,
+    "xp": 0,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T12:50:00.000Z"
+  },
+  {
+    "id": "att-edgeelk",
+    "handle": "edgeelk",
+    "faceSeed": "edgeelk",
+    "workingOn": "Runs k3s on 600 shop-floor boxes.",
+    "headline": "Runs k3s on 600 shop-floor boxes.",
+    "profileText": "Edge platform engineer running k3s on hundreds of small boxes in factories. Interested in offline-first updates, flaky networks and remote debugging when a site is down.",
+    "profile": {
+      "topics": [
+        "edge",
+        "k3s",
+        "iot"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": false,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-2-251-def",
+    "lastLocation": {
+      "lat": 40.7666,
+      "lon": -111.89475
+    },
+    "lastSeenAt": "2026-11-09T16:33:00.000Z",
+    "visible": true,
+    "xp": 40,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T12:34:00.000Z"
+  },
+  {
+    "id": "att-kubeedgeorca",
+    "handle": "kubeedgeorca",
+    "faceSeed": "kubeedgeorca",
+    "workingOn": "First KubeCon; Kubernetes at cell towers.",
+    "headline": "First KubeCon; Kubernetes at cell towers.",
+    "profileText": "First KubeCon. I work at a telco exploring KubeEdge to run workloads near cell towers. Learning about edge autonomy, device twins and how to manage thousands of tiny nodes.",
+    "profile": {
+      "topics": [
+        "kubeedge",
+        "edge",
+        "telco"
+      ],
+      "firstTimer": true,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "hyatt-regency-level-2-salt-lake-ballroom-de",
+    "lastLocation": {
+      "lat": 40.7675,
+      "lon": -111.89385
+    },
+    "lastSeenAt": "2026-11-09T16:36:00.000Z",
+    "visible": true,
+    "xp": 0,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T14:11:00.000Z"
+  },
+  {
+    "id": "att-spinsquirrel",
+    "handle": "spinsquirrel",
+    "faceSeed": "spinsquirrel",
+    "workingOn": "Ships Spin apps on SpinKube; welcomer.",
+    "headline": "Ships Spin apps on SpinKube; welcomer.",
+    "profileText": "Wasm enthusiast and welcomer. I build serverless functions with Spin and run them on Kubernetes via SpinKube. Millisecond cold starts are my party trick. Happy to help newcomers try Wasm in an afternoon.",
+    "profile": {
+      "topics": [
+        "webassembly",
+        "spin",
+        "serverless"
+      ],
+      "firstTimer": false,
+      "welcomer": true
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-2-250-ab",
+    "lastLocation": {
+      "lat": 40.76636,
+      "lon": -111.89475
+    },
+    "lastSeenAt": "2026-11-09T16:46:00.000Z",
+    "visible": true,
+    "xp": 275,
+    "level": 3,
+    "banners": [
+      "welcomer",
+      "connector"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T11:19:00.000Z"
+  },
+  {
+    "id": "att-wasmwombat",
+    "handle": "wasmwombat",
+    "faceSeed": "wasmwombat",
+    "workingOn": "First KubeCon; curious about WASI components.",
+    "headline": "First KubeCon; curious about WASI components.",
+    "profileText": "First KubeCon. I am a Rust developer curious whether WASI components can replace some of our sidecars. Here to learn and meet people building runtimes.",
+    "profile": {
+      "topics": [
+        "webassembly",
+        "wasi",
+        "runtimes"
+      ],
+      "firstTimer": true,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": false,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-1-grand-ballroom-h",
+    "lastLocation": {
+      "lat": 40.76657,
+      "lon": -111.8943
+    },
+    "lastSeenAt": "2026-11-09T17:18:00.000Z",
+    "visible": true,
+    "xp": 20,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T13:46:00.000Z"
+  },
+  {
+    "id": "att-a11yanteater",
+    "handle": "a11yanteater",
+    "faceSeed": "a11yanteater",
+    "workingOn": "Making dashboards and CLIs usable with a screen reader.",
+    "headline": "Making dashboards and CLIs usable with a screen reader.",
+    "profileText": "Accessibility engineer and welcomer. I audit internal tools, dashboards and CLIs for screen reader and keyboard use, and I push for accessible docs in open source projects. Happy to chat about inclusive tooling.",
+    "profile": {
+      "topics": [
+        "accessibility",
+        "developer-experience",
+        "documentation"
+      ],
+      "firstTimer": false,
+      "welcomer": true
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": true,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "hyatt-regency-level-4-regency-ballroom-b-d",
+    "lastLocation": {
+      "lat": 40.76732,
+      "lon": -111.89385
+    },
+    "lastSeenAt": "2026-11-09T17:31:00.000Z",
+    "visible": true,
+    "xp": 80,
+    "level": 2,
+    "banners": [
+      "welcomer"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T13:20:00.000Z"
+  },
+  {
+    "id": "att-docsdolphin",
+    "handle": "docsdolphin",
+    "faceSeed": "docsdolphin",
+    "workingOn": "CNCF docs contributor; will help you land your first PR.",
+    "headline": "CNCF docs contributor; will help you land your first PR.",
+    "profileText": "Ninth KubeCon, docs contributor and welcomer. I help new contributors land their first pull request in CNCF projects, mostly docs and tutorials. If you are new, come find me: I know which hallway the coffee is in and which SIG needs help.",
+    "profile": {
+      "topics": [
+        "documentation",
+        "contributor-experience",
+        "community"
+      ],
+      "firstTimer": false,
+      "welcomer": true
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-1-151",
+    "lastLocation": {
+      "lat": 40.76645,
+      "lon": -111.89445
+    },
+    "lastSeenAt": "2026-11-09T17:30:00.000Z",
+    "visible": true,
+    "xp": 910,
+    "level": 5,
+    "banners": [
+      "welcomer",
+      "connector"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T13:05:00.000Z"
+  },
+  {
+    "id": "att-capicormorant",
+    "handle": "capicormorant",
+    "faceSeed": "capicormorant",
+    "workingOn": "Creates clusters with Cluster API, mostly on purpose.",
+    "headline": "Creates clusters with Cluster API, mostly on purpose.",
+    "profileText": "Platform engineer and welcomer managing cluster lifecycle with Cluster API across vSphere and AWS. Ask me about upgrades, machine health checks and ClusterClass.",
+    "profile": {
+      "topics": [
+        "cluster-api",
+        "multi-cluster",
+        "lifecycle"
+      ],
+      "firstTimer": false,
+      "welcomer": true
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-1-grand-ballroom-bdf",
+    "lastLocation": {
+      "lat": 40.76633,
+      "lon": -111.8943
+    },
+    "lastSeenAt": "2026-11-09T17:15:00.000Z",
+    "visible": true,
+    "xp": 65,
+    "level": 2,
+    "banners": [
+      "welcomer"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T14:29:00.000Z"
+  },
+  {
+    "id": "att-vclustervixen",
+    "handle": "vclustervixen",
+    "faceSeed": "vclustervixen",
+    "workingOn": "First KubeCon; giving every developer a virtual cluster.",
+    "headline": "First KubeCon; giving every developer a virtual cluster.",
+    "profileText": "First KubeCon. I am testing virtual clusters so every developer gets their own control plane for preview environments. Interested in cost, isolation and cleanup.",
+    "profile": {
+      "topics": [
+        "multi-tenancy",
+        "vcluster",
+        "developer-environments"
+      ],
+      "firstTimer": true,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": false,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "hyatt-regency-level-4-regency-ballroom-b-d",
+    "lastLocation": {
+      "lat": 40.76732,
+      "lon": -111.89385
+    },
+    "lastSeenAt": "2026-11-09T16:41:00.000Z",
+    "visible": true,
+    "xp": 30,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T12:28:00.000Z"
+  },
+  {
+    "id": "att-sreseahorse",
+    "handle": "sreseahorse",
+    "faceSeed": "sreseahorse",
+    "workingOn": "First KubeCon; new on-call lead learning the ropes.",
+    "headline": "First KubeCon; new on-call lead learning the ropes.",
+    "profileText": "First KubeCon. I just became on-call lead for a small team and I want to learn how others run incident response, write blameless postmortems and keep on-call humane.",
+    "profile": {
+      "topics": [
+        "incident-response",
+        "sre",
+        "postmortems"
+      ],
+      "firstTimer": true,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-1-grand-ballroom-h",
+    "lastLocation": {
+      "lat": 40.76657,
+      "lon": -111.8943
+    },
+    "lastSeenAt": "2026-11-09T17:57:00.000Z",
+    "visible": true,
+    "xp": 230,
+    "level": 3,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T11:31:00.000Z"
+  },
+  {
+    "id": "att-helmheron",
+    "handle": "helmheron",
+    "faceSeed": "helmheron",
+    "workingOn": "Helm maintainer-in-spirit; charts in OCI registries.",
+    "headline": "Helm maintainer-in-spirit; charts in OCI registries.",
+    "profileText": "Packaging engineer and welcomer. I publish our Helm charts to OCI registries, test them with chart-testing and help teams move from copy-pasted YAML to proper charts.",
+    "profile": {
+      "topics": [
+        "helm",
+        "oci",
+        "packaging"
+      ],
+      "firstTimer": false,
+      "welcomer": true
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-1-grand-ballroom-gi",
+    "lastLocation": {
+      "lat": 40.76645,
+      "lon": -111.8943
+    },
+    "lastSeenAt": "2026-11-09T16:28:00.000Z",
+    "visible": true,
+    "xp": 125,
+    "level": 2,
+    "banners": [
+      "welcomer"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T11:10:00.000Z"
+  },
+  {
+    "id": "att-harborhedgehog",
+    "handle": "harborhedgehog",
+    "faceSeed": "harborhedgehog",
+    "workingOn": "First KubeCon; running Harbor as our internal registry.",
+    "headline": "First KubeCon; running Harbor as our internal registry.",
+    "profileText": "First KubeCon. I administer Harbor as our internal container registry: replication, vulnerability scanning and retention rules. Learning how it fits into a signed supply chain.",
+    "profile": {
+      "topics": [
+        "harbor",
+        "registries",
+        "supply-chain"
+      ],
+      "firstTimer": true,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "hyatt-regency-level-4-regency-ballroom-b-d",
+    "lastLocation": {
+      "lat": 40.76732,
+      "lon": -111.89385
+    },
+    "lastSeenAt": "2026-11-09T16:51:00.000Z",
+    "visible": true,
+    "xp": 15,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T11:29:00.000Z"
   }
 ]

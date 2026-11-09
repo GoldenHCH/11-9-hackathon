@@ -1,5 +1,5 @@
 {
-  "mapCoordinateSystem": "sponsors.json mapX/mapY are PDF points on page 1 of the Solutions Showcase map (908.5 x 691.2 pt, origin top-left). Halls A-C occupy roughly x 20-330, y 470-680; the Halls 1-5 column runs up from Hall 1 (y ~380-470) to Hall 5 (y ~10-120), x ~255-490. Kiosk positions use the same system.",
+  "mapCoordinateSystem": "sponsors.json mapX/mapY and booth_positions.json x/y are PDF points on maps/KCNA26_ExpoHallMap.pdf (1700.8 x 691.2 pt, origin top-left; the map occupies x 840-1260, y 10-600). booth_positions.json is extracted from that PDF's text layer and vector shapes. Kiosk positions (P-1A..P-18B) use the same system.",
   "orientationNote": "Inferred: both official maps draw 300 West at the top, West Temple at the bottom and 200 South on the left, so map-up is roughly west and map-right roughly north. Not stated on the maps.",
   "buildings": [
     {
@@ -9,62 +9,273 @@
         {
           "level": "1",
           "areas": [
-            { "name": "Main Entrance / 200 South Entrance", "kind": "entrance", "relativePosition": "south-west corner of the drawing, next to Badge Pick-Up and the Hyatt access", "notes": "Schedule room 'Salt Palace | 200 South Entrance (South)' hosts 'Registration + Badge Pick-Up'" },
-            { "name": "Badge Pick-Up", "kind": "registration", "relativePosition": "just inside the Main Entrance, south-west end of the Lower Concourse, south of Hall DE", "notes": "Venue map. A second registration room 'Salt Palace | Level 2 | East Registration' exists in the schedule (Coat + Bag Check session); not drawn by that name on the map" },
-            { "name": "West Temple Entrance", "kind": "entrance", "relativePosition": "bottom (east side) of the drawing, below the Grand Ballroom / North Foyer" },
-            { "name": "Access between Hyatt Regency + Salt Palace", "kind": "skybridge", "relativePosition": "Lower Concourse south-west end, next to Badge Pick-Up; the Hyatt lobby is drawn beside it", "notes": "Venue map says 'Access between Hyatt Regency + Salt Palace' and in the Hyatt lobby 'take elevator or escalators to levels 2-5'. A dashed arrow on the map runs from this access to Hyatt Level 2. Whether it is a skybridge, tunnel or ground-level link is not stated." },
-            { "name": "Lower Concourse", "kind": "foyer", "relativePosition": "runs along the south/east edge of Hall DE and Halls A-C, between Badge Pick-Up and the North Foyer", "notes": "Meal pick-up for Level 1 session rooms is near room 151 (event-resources menus page)" },
-            { "name": "Hall DE (Keynote)", "kind": "hall", "relativePosition": "south-west block, between 200 South and Halls A-C", "notes": "Schedule: 'Salt Palace | Level 1 | Hall DE'" },
-            { "name": "Halls A-C Solutions Showcase", "kind": "hall", "relativePosition": "east of Hall DE (right of it on the map); Showcase Main Entrance on its Lower Concourse side", "notes": "Hall C at the Hall DE end, then B, then A toward Hall 1. Internal hall walls not drawn" },
-            { "name": "Showcase Main Entrance", "kind": "entrance", "relativePosition": "Lower Concourse edge of Halls A-C" },
-            { "name": "Starlight Summit Zone", "kind": "zone", "relativePosition": "western/upper part of Halls A-C (Hall C and most of Hall B), green fill", "notes": "Learning Lounge sessions: schedule room 'Salt Palace | Level 1 | Solutions Showcase | Hall B | Starlight Summit Zone' (LF Education talks, KubeCrawl Trivia)" },
-            { "name": "Astral Peak Zone", "kind": "zone", "relativePosition": "eastern/lower diagonal half of Halls A-C (mostly Hall A, part of Hall B), blue-gray fill" },
-            { "name": "Learning Lounge", "kind": "theater", "relativePosition": "Hall B/C boundary, upper part of Starlight Summit, near booths 145/151" },
-            { "name": "Sponsorship + Membership Sales Lounge", "kind": "zone", "relativePosition": "lower-right corner of Hall A, near the Main Entrance arrows" },
-            { "name": "Headshots, Activation Zones, Coffee Bar, Lounge", "kind": "zone", "relativePosition": "Hall C, left edge of Starlight Summit" },
-            { "name": "Meal Pick-Up (Halls A-C)", "kind": "zone", "relativePosition": "top edge of Hall B/A" },
-            { "name": "Hall 1 / Alpine Overlook Zone", "kind": "zone", "relativePosition": "north-east of Halls A-C, first hall of the Halls 1-5 column", "notes": "Holds Platinum booths 152-191 and Gold booths 154-189" },
-            { "name": "Demo Theater", "kind": "theater", "relativePosition": "Hall 1, right (north) edge, next to the secondary entrance", "notes": "Schedule: 'Salt Palace | Level 1 | Solutions Showcase | Hall 1 | Alpine Overlook Zone | Demo Theater'" },
-            { "name": "Network Nook", "kind": "campfire", "relativePosition": "Hall 1, top-right corner, above the Demo Theater", "notes": "Schedule: '... | Hall 1 | Alpine Overlook Zone | Network Nook' (meetups)" },
-            { "name": "Workshop Zone", "kind": "zone", "relativePosition": "Hall 1 centre, among the Gold booths" },
-            { "name": "Hall 2 / Honeycomb Hub", "kind": "zone", "relativePosition": "north of Hall 1 in the Halls 1-5 column", "notes": "Silver booths 192-257 roughly; secondary entrance on its right side; meal area in centre" },
-            { "name": "Hall 3 / Amber Hive", "kind": "zone", "relativePosition": "north of Hall 2", "notes": "Amber Hive fill also extends into the lower part of Hall 4 (inferred; hall wall not drawn). Hive Zone, Relaxation Station, Coffee Bar, Sponsor Storage, Exhibitor Services Desk" },
-            { "name": "Halls 4-5 / Cosmic Canyon Zone", "kind": "zone", "relativePosition": "north end of the Halls 1-5 column", "notes": "Start-up booths 340-375, Poster Pavilion, Mixed Use Space, Game Zone, meal pick-up both sides" },
-            { "name": "Project Pavilion", "kind": "pavilion", "relativePosition": "Cosmic Canyon, right of centre; kiosks P-1..P-18 each with A/B sides; Project Pavilion Stage at its top, Project Pavilion Lounge in its middle", "notes": "Schedule: 'Salt Palace | Level 1 | Solutions Showcase | Hall 5 | Cosmic Canyon Zone | Project Pavilion'. Kiosk columns on map: P-1..5 (x 391), P-6..9 (x 405), P-10..13 (x 416), P-14..18 (x 428); rows y 156 (1,6,10,14), 147, 138, 129, 120 (5,18)" },
-            { "name": "Cloud Native Theater", "kind": "theater", "relativePosition": "top (far west) edge of Hall 5, centre", "notes": "Schedule: 'Salt Palace | Level 1 | Solutions Showcase | Halls 5 | Cosmic Canyon Zone | Cloud Native Theater'" },
-            { "name": "Corner Store + Attendee T-Shirt Pick-Up", "kind": "zone", "relativePosition": "top-left corner of Hall 5" },
-            { "name": "Poster Pavilion", "kind": "zone", "relativePosition": "bottom of Cosmic Canyon, near Hall 4 label", "notes": "'Explore the Poster Showcase' sessions use room 'Salt Palace | Level 1 | Halls A-C, Halls 1-5'" },
-            { "name": "Lower Mezzanine / secondary entrances", "kind": "entrance", "relativePosition": "east/right side of Halls 1-2 on the venue map" },
-            { "name": "Grand Ballroom (A-J)", "kind": "ballroom", "relativePosition": "south of Halls A-C across the Lower Concourse, east of the Hyatt access", "notes": "Session rooms ACE, BDF, GI, H; J = Community Hub. Layout on venue map: top row J | H | BDF, bottom row GI | ACE" },
-            { "name": "Community Hub (Grand Ballroom J)", "kind": "zone", "relativePosition": "Grand Ballroom, the end nearest Badge Pick-Up", "notes": "Venue map legend: 'Salt Palace | Level 1 | Grand Ballroom J'" },
-            { "name": "150 A-F", "kind": "meeting-room", "relativePosition": "Lower Concourse, east of the Grand Ballroom past the North Foyer", "notes": "Magenta = meeting rooms in the venue legend" },
-            { "name": "151", "kind": "meeting-room", "relativePosition": "east of 150 on the Lower Concourse", "notes": "Breakout room; schedule 'Salt Palace | Level 1 | 151'" },
-            { "name": "North Foyer / North Grand Ballroom Foyer", "kind": "foyer", "relativePosition": "between the Grand Ballroom and room 150", "notes": "Schedule 'Salt Palace | Level 1 | North Grand Ballroom Foyer' (Pet-a-Pup)" },
-            { "name": "155 A-F", "kind": "meeting-room", "relativePosition": "north end, beside Hall 1 / Alpine Overlook beyond its secondary entrance" }
+            {
+              "name": "Main Entrance / 200 South Entrance",
+              "kind": "entrance",
+              "relativePosition": "south-west corner of the drawing, next to Badge Pick-Up and the Hyatt access",
+              "notes": "Schedule room 'Salt Palace | 200 South Entrance (South)' hosts 'Registration + Badge Pick-Up'"
+            },
+            {
+              "name": "Badge Pick-Up",
+              "kind": "registration",
+              "relativePosition": "just inside the Main Entrance, south-west end of the Lower Concourse, south of Hall DE",
+              "notes": "Venue map. A second registration room 'Salt Palace | Level 2 | East Registration' exists in the schedule (Coat + Bag Check session); not drawn by that name on the map"
+            },
+            {
+              "name": "West Temple Entrance",
+              "kind": "entrance",
+              "relativePosition": "bottom (east side) of the drawing, below the Grand Ballroom / North Foyer"
+            },
+            {
+              "name": "Access between Hyatt Regency + Salt Palace",
+              "kind": "skybridge",
+              "relativePosition": "Lower Concourse south-west end, next to Badge Pick-Up; the Hyatt lobby is drawn beside it",
+              "notes": "Venue map says 'Access between Hyatt Regency + Salt Palace' and in the Hyatt lobby 'take elevator or escalators to levels 2-5'. A dashed arrow on the map runs from this access to Hyatt Level 2. Whether it is a skybridge, tunnel or ground-level link is not stated."
+            },
+            {
+              "name": "Lower Concourse",
+              "kind": "foyer",
+              "relativePosition": "runs along the south/east edge of Hall DE and Halls A-C, between Badge Pick-Up and the North Foyer",
+              "notes": "Meal pick-up for Level 1 session rooms is near room 151 (event-resources menus page)"
+            },
+            {
+              "name": "Hall DE (Keynote)",
+              "kind": "hall",
+              "relativePosition": "south-west block, between 200 South and Halls A-C",
+              "notes": "Schedule: 'Salt Palace | Level 1 | Hall DE'"
+            },
+            {
+              "name": "Halls A-C Solutions Showcase",
+              "kind": "hall",
+              "relativePosition": "east of Hall DE (right of it on the map); Showcase Main Entrance on its Lower Concourse side",
+              "notes": "Hall C at the Hall DE end, then B, then A toward Hall 1. Internal hall walls not drawn"
+            },
+            {
+              "name": "Showcase Main Entrance",
+              "kind": "entrance",
+              "relativePosition": "Lower Concourse edge of Halls A-C"
+            },
+            {
+              "name": "Starlight Summit Zone",
+              "kind": "zone",
+              "relativePosition": "western/upper part of Halls A-C (Hall C and most of Hall B), green fill",
+              "notes": "Learning Lounge sessions: schedule room 'Salt Palace | Level 1 | Solutions Showcase | Hall B | Starlight Summit Zone' (LF Education talks, KubeCrawl Trivia)"
+            },
+            {
+              "name": "Astral Peak Zone",
+              "kind": "zone",
+              "relativePosition": "eastern/lower diagonal half of Halls A-C (mostly Hall A, part of Hall B), blue-gray fill"
+            },
+            {
+              "name": "Learning Lounge",
+              "kind": "theater",
+              "relativePosition": "Hall B/C boundary, upper part of Starlight Summit, near booths 145/151"
+            },
+            {
+              "name": "Sponsorship + Membership Sales Lounge",
+              "kind": "zone",
+              "relativePosition": "lower-right corner of Hall A, near the Main Entrance arrows"
+            },
+            {
+              "name": "Headshots, Activation Zones, Coffee Bar, Lounge",
+              "kind": "zone",
+              "relativePosition": "Hall C, left edge of Starlight Summit"
+            },
+            {
+              "name": "Meal Pick-Up (Halls A-C)",
+              "kind": "zone",
+              "relativePosition": "top edge of Hall B/A"
+            },
+            {
+              "name": "Hall 1 / Alpine Overlook Zone",
+              "kind": "zone",
+              "relativePosition": "north-east of Halls A-C, first hall of the Halls 1-5 column",
+              "notes": "Holds Platinum booths 152-191 and Gold booths 154-189"
+            },
+            {
+              "name": "Demo Theater",
+              "kind": "theater",
+              "relativePosition": "Hall 1, right (north) edge, next to the secondary entrance",
+              "notes": "Schedule: 'Salt Palace | Level 1 | Solutions Showcase | Hall 1 | Alpine Overlook Zone | Demo Theater'"
+            },
+            {
+              "name": "Network Nook",
+              "kind": "campfire",
+              "relativePosition": "Hall 1, top-right corner, above the Demo Theater",
+              "notes": "Schedule: '... | Hall 1 | Alpine Overlook Zone | Network Nook' (meetups)"
+            },
+            {
+              "name": "Workshop Zone",
+              "kind": "zone",
+              "relativePosition": "Hall 1 centre, among the Gold booths"
+            },
+            {
+              "name": "Hall 2 / Honeycomb Hub",
+              "kind": "zone",
+              "relativePosition": "north of Hall 1 in the Halls 1-5 column",
+              "notes": "Silver booths 192-257 roughly; secondary entrance on its right side; meal area in centre"
+            },
+            {
+              "name": "Hall 3 / Amber Hive",
+              "kind": "zone",
+              "relativePosition": "north of Hall 2",
+              "notes": "Amber Hive fill also extends into the lower part of Hall 4 (inferred; hall wall not drawn). Hive Zone, Relaxation Station, Coffee Bar, Sponsor Storage, Exhibitor Services Desk"
+            },
+            {
+              "name": "Halls 4-5 / Cosmic Canyon Zone",
+              "kind": "zone",
+              "relativePosition": "north end of the Halls 1-5 column",
+              "notes": "Start-up booths 340-375, Poster Pavilion, Mixed Use Space, Game Zone, meal pick-up both sides"
+            },
+            {
+              "name": "Project Pavilion",
+              "kind": "pavilion",
+              "relativePosition": "Cosmic Canyon, right of centre; kiosks P-1..P-18 each with A/B sides; Project Pavilion Stage at its top, Project Pavilion Lounge in its middle",
+              "notes": "Schedule: 'Salt Palace | Level 1 | Solutions Showcase | Hall 5 | Cosmic Canyon Zone | Project Pavilion'. Kiosk columns on map: P-1..5 (x 391), P-6..9 (x 405), P-10..13 (x 416), P-14..18 (x 428); rows y 156 (1,6,10,14), 147, 138, 129, 120 (5,18)"
+            },
+            {
+              "name": "Cloud Native Theater",
+              "kind": "theater",
+              "relativePosition": "top (far west) edge of Hall 5, centre",
+              "notes": "Schedule: 'Salt Palace | Level 1 | Solutions Showcase | Halls 5 | Cosmic Canyon Zone | Cloud Native Theater'"
+            },
+            {
+              "name": "Corner Store + Attendee T-Shirt Pick-Up",
+              "kind": "zone",
+              "relativePosition": "top-left corner of Hall 5"
+            },
+            {
+              "name": "Poster Pavilion",
+              "kind": "zone",
+              "relativePosition": "bottom of Cosmic Canyon, near Hall 4 label",
+              "notes": "'Explore the Poster Showcase' sessions use room 'Salt Palace | Level 1 | Halls A-C, Halls 1-5'"
+            },
+            {
+              "name": "Lower Mezzanine / secondary entrances",
+              "kind": "entrance",
+              "relativePosition": "east/right side of Halls 1-2 on the venue map"
+            },
+            {
+              "name": "Grand Ballroom (A-J)",
+              "kind": "ballroom",
+              "relativePosition": "south of Halls A-C across the Lower Concourse, east of the Hyatt access",
+              "notes": "Session rooms ACE, BDF, GI, H; J = Community Hub. Layout on venue map: top row J | H | BDF, bottom row GI | ACE"
+            },
+            {
+              "name": "Community Hub (Grand Ballroom J)",
+              "kind": "zone",
+              "relativePosition": "Grand Ballroom, the end nearest Badge Pick-Up",
+              "notes": "Venue map legend: 'Salt Palace | Level 1 | Grand Ballroom J'"
+            },
+            {
+              "name": "150 A-F",
+              "kind": "meeting-room",
+              "relativePosition": "Lower Concourse, east of the Grand Ballroom past the North Foyer",
+              "notes": "Magenta = meeting rooms in the venue legend"
+            },
+            {
+              "name": "151",
+              "kind": "meeting-room",
+              "relativePosition": "east of 150 on the Lower Concourse",
+              "notes": "Breakout room; schedule 'Salt Palace | Level 1 | 151'"
+            },
+            {
+              "name": "North Foyer / North Grand Ballroom Foyer",
+              "kind": "foyer",
+              "relativePosition": "between the Grand Ballroom and room 150",
+              "notes": "Schedule 'Salt Palace | Level 1 | North Grand Ballroom Foyer' (Pet-a-Pup)"
+            },
+            {
+              "name": "155 A-F",
+              "kind": "meeting-room",
+              "relativePosition": "north end, beside Hall 1 / Alpine Overlook beyond its secondary entrance"
+            }
           ]
         },
         {
           "level": "2 (Mezzanine)",
           "areas": [
-            { "name": "Upper Concourse", "kind": "foyer", "relativePosition": "above the Lower Concourse, east side" },
-            { "name": "North Foyer (Level 2)", "kind": "foyer", "relativePosition": "west end of the Upper Concourse; The Meeting Point pin is here", "notes": "Re-entry with badge next to it" },
-            { "name": "The Meeting Point", "kind": "zone", "relativePosition": "Level 2 North Foyer, near the stairs and Coat + Bag Check", "notes": "Red pin on the venue map; the only instance drawn" },
-            { "name": "Coat + Bag Check (sponsored by Echo)", "kind": "zone", "relativePosition": "Upper Concourse, below 250, beside Re-entry", "notes": "Schedule calls the room 'Salt Palace | Level 2 | East Registration'" },
-            { "name": "250 A-C, 250 D-F", "kind": "meeting-room", "relativePosition": "Upper Concourse, first rooms east of the North Foyer", "notes": "Maintainer Summit (Sunday) uses 250-251" },
-            { "name": "251 A-C, 251 D-F", "kind": "meeting-room", "relativePosition": "east of 250" },
-            { "name": "252 A (Speaker Ready Room), 252 B", "kind": "meeting-room", "relativePosition": "east of 251" },
-            { "name": "253 (Speaker Lounge)", "kind": "meeting-room", "relativePosition": "below 252" },
-            { "name": "254", "kind": "meeting-room", "relativePosition": "diamond-shaped room on the curve of the Upper Concourse toward the Upper Mezzanine" },
-            { "name": "255 A, BC, D, EF", "kind": "meeting-room", "relativePosition": "north end, Level 2 above room 155" },
-            { "name": "Upper Mezzanine", "kind": "foyer", "relativePosition": "north-east corridor from 255 toward 257-260; access to Hall 4 seating/meal for Level 2 rooms", "notes": "Schedule 'Salt Palace | Level 2 | Upper Mezzanine' (Kubernetes Meet + Greet)" },
-            { "name": "257 A-B, 258, 259 (magenta = meeting rooms in the legend)", "kind": "meeting-room", "relativePosition": "off the Upper Mezzanine" },
-            { "name": "260 A-B (Quiet Rooms)", "kind": "meeting-room", "relativePosition": "end of the Upper Mezzanine" }
+            {
+              "name": "Upper Concourse",
+              "kind": "foyer",
+              "relativePosition": "above the Lower Concourse, east side"
+            },
+            {
+              "name": "North Foyer (Level 2)",
+              "kind": "foyer",
+              "relativePosition": "west end of the Upper Concourse; The Meeting Point pin is here",
+              "notes": "Re-entry with badge next to it"
+            },
+            {
+              "name": "The Meeting Point",
+              "kind": "zone",
+              "relativePosition": "Level 2 North Foyer, near the stairs and Coat + Bag Check",
+              "notes": "Red pin on the venue map; the only instance drawn"
+            },
+            {
+              "name": "Coat + Bag Check (sponsored by Echo)",
+              "kind": "zone",
+              "relativePosition": "Upper Concourse, below 250, beside Re-entry",
+              "notes": "Schedule calls the room 'Salt Palace | Level 2 | East Registration'"
+            },
+            {
+              "name": "250 A-C, 250 D-F",
+              "kind": "meeting-room",
+              "relativePosition": "Upper Concourse, first rooms east of the North Foyer",
+              "notes": "Maintainer Summit (Sunday) uses 250-251"
+            },
+            {
+              "name": "251 A-C, 251 D-F",
+              "kind": "meeting-room",
+              "relativePosition": "east of 250"
+            },
+            {
+              "name": "252 A (Speaker Ready Room), 252 B",
+              "kind": "meeting-room",
+              "relativePosition": "east of 251"
+            },
+            {
+              "name": "253 (Speaker Lounge)",
+              "kind": "meeting-room",
+              "relativePosition": "below 252"
+            },
+            {
+              "name": "254",
+              "kind": "meeting-room",
+              "relativePosition": "diamond-shaped room on the curve of the Upper Concourse toward the Upper Mezzanine"
+            },
+            {
+              "name": "255 A, BC, D, EF",
+              "kind": "meeting-room",
+              "relativePosition": "north end, Level 2 above room 155"
+            },
+            {
+              "name": "Upper Mezzanine",
+              "kind": "foyer",
+              "relativePosition": "north-east corridor from 255 toward 257-260; access to Hall 4 seating/meal for Level 2 rooms",
+              "notes": "Schedule 'Salt Palace | Level 2 | Upper Mezzanine' (Kubernetes Meet + Greet)"
+            },
+            {
+              "name": "257 A-B, 258, 259 (magenta = meeting rooms in the legend)",
+              "kind": "meeting-room",
+              "relativePosition": "off the Upper Mezzanine"
+            },
+            {
+              "name": "260 A-B (Quiet Rooms)",
+              "kind": "meeting-room",
+              "relativePosition": "end of the Upper Mezzanine"
+            }
           ]
         },
         {
           "level": "3",
           "areas": [
-            { "name": "355 A-F", "kind": "meeting-room", "relativePosition": "north-west part of the building, above 255 (only Level-3 room)", "notes": "355 D = Media Lounge" }
+            {
+              "name": "355 A-F",
+              "kind": "meeting-room",
+              "relativePosition": "north-west part of the building, above 255 (only Level-3 room)",
+              "notes": "355 D = Media Lounge"
+            }
           ]
         }
       ]
@@ -76,45 +287,113 @@
         {
           "level": "1 (Lobby)",
           "areas": [
-            { "name": "Hyatt Regency Lobby", "kind": "foyer", "relativePosition": "adjoins the Salt Palace Badge Pick-Up / Main Entrance", "notes": "Elevators or escalators to levels 2-5. Schedule room 'Hyatt Regency Lobby' (Group Fun Run/Walk)" }
+            {
+              "name": "Hyatt Regency Lobby",
+              "kind": "foyer",
+              "relativePosition": "adjoins the Salt Palace Badge Pick-Up / Main Entrance",
+              "notes": "Elevators or escalators to levels 2-5. Schedule room 'Hyatt Regency Lobby' (Group Fun Run/Walk)"
+            }
           ]
         },
         {
           "level": "2",
           "areas": [
-            { "name": "Salt Lake Ballroom A, B", "kind": "ballroom", "notes": "Magenta = meeting rooms" },
-            { "name": "Salt Lake Ballroom C, DE", "kind": "ballroom", "notes": "Breakout rooms in the schedule" },
-            { "name": "Salt Lake Foyer South / West / East", "kind": "foyer" },
-            { "name": "The Nest", "kind": "zone" },
-            { "name": "Aspen", "kind": "meeting-room" },
-            { "name": "Juniper (Microsoft Azure), Cottonwood (Oracle), Blue Spruce (Red Hat)", "kind": "meeting-room", "notes": "Sponsor meeting rooms, sponsor logos on the venue map" },
-            { "name": "Arrival from the Salt Palace", "kind": "skybridge", "relativePosition": "east side of Level 2", "notes": "Dashed arrow on the venue map ends here" }
+            {
+              "name": "Salt Lake Ballroom A, B",
+              "kind": "ballroom",
+              "notes": "Magenta = meeting rooms"
+            },
+            {
+              "name": "Salt Lake Ballroom C, DE",
+              "kind": "ballroom",
+              "notes": "Breakout rooms in the schedule"
+            },
+            {
+              "name": "Salt Lake Foyer South / West / East",
+              "kind": "foyer"
+            },
+            {
+              "name": "The Nest",
+              "kind": "zone"
+            },
+            {
+              "name": "Aspen",
+              "kind": "meeting-room"
+            },
+            {
+              "name": "Juniper (Microsoft Azure), Cottonwood (Oracle), Blue Spruce (Red Hat)",
+              "kind": "meeting-room",
+              "notes": "Sponsor meeting rooms, sponsor logos on the venue map"
+            },
+            {
+              "name": "Arrival from the Salt Palace",
+              "kind": "skybridge",
+              "relativePosition": "east side of Level 2",
+              "notes": "Dashed arrow on the venue map ends here"
+            }
           ]
         },
         {
           "level": "3",
           "areas": [
-            { "name": "Park City", "kind": "meeting-room", "notes": "Schedule 'Hyatt Regency | Level 3 | Park City' (Puppy Yoga)" },
-            { "name": "Alta (VMware by Broadcom), Snowbird (Solo.io), Solitude (Teleport), Brighton (Google Cloud), Powder Mountain (Docker), Woodward (Nutanix), Snowbasin (Isovalent), Deer Valley (logo unclear, possibly Chronosphere)", "kind": "meeting-room", "notes": "Sponsor meeting rooms per logos on the venue map; Deer Valley logo not legible at the resolution read" }
+            {
+              "name": "Park City",
+              "kind": "meeting-room",
+              "notes": "Schedule 'Hyatt Regency | Level 3 | Park City' (Puppy Yoga)"
+            },
+            {
+              "name": "Alta (VMware by Broadcom), Snowbird (Solo.io), Solitude (Teleport), Brighton (Google Cloud), Powder Mountain (Docker), Woodward (Nutanix), Snowbasin (Isovalent), Deer Valley (Chronosphere)",
+              "kind": "meeting-room",
+              "notes": "Sponsor meeting rooms per logos on the venue map"
+            }
           ]
         },
         {
           "level": "4",
           "areas": [
-            { "name": "Regency Ballroom A", "kind": "ballroom" },
-            { "name": "Regency Ballroom B", "kind": "ballroom" },
-            { "name": "Regency Ballroom CD", "kind": "ballroom", "notes": "Schedule also uses the combined 'Regency Ballroom B-D'" },
-            { "name": "Regency Foyer South / North", "kind": "foyer" },
-            { "name": "Traverse", "kind": "meeting-room" },
-            { "name": "Wasatch", "kind": "meeting-room" },
-            { "name": "Broadcast Lounge (Ambassador + Kubestronaut + Maintainer Lounge)", "kind": "zone" }
+            {
+              "name": "Regency Ballroom A",
+              "kind": "ballroom"
+            },
+            {
+              "name": "Regency Ballroom B",
+              "kind": "ballroom"
+            },
+            {
+              "name": "Regency Ballroom CD",
+              "kind": "ballroom",
+              "notes": "Schedule also uses the combined 'Regency Ballroom B-D'"
+            },
+            {
+              "name": "Regency Foyer South / North",
+              "kind": "foyer"
+            },
+            {
+              "name": "Traverse",
+              "kind": "meeting-room"
+            },
+            {
+              "name": "Wasatch",
+              "kind": "meeting-room"
+            },
+            {
+              "name": "Broadcast Lounge (Ambassador + Kubestronaut + Maintainer Lounge)",
+              "kind": "zone"
+            }
           ]
         },
         {
           "level": "5",
           "areas": [
-            { "name": "Zion (Prayer Room)", "kind": "meeting-room" },
-            { "name": "Bryce, Canyonlands, Arches, Capitol Reef", "kind": "meeting-room", "notes": "Capitol Reef is a schedule room (Peer Group Mentoring)" }
+            {
+              "name": "Zion (Prayer Room)",
+              "kind": "meeting-room"
+            },
+            {
+              "name": "Bryce, Canyonlands, Arches, Capitol Reef",
+              "kind": "meeting-room",
+              "notes": "Capitol Reef is a schedule room (Peer Group Mentoring)"
+            }
           ]
         }
       ]

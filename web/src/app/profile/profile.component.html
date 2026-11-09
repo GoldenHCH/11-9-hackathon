@@ -1,0 +1,171 @@
+<div class="kq-page profile">
+  <app-state-wrapper
+    [isLoading]="isLoading"
+    [errorMessage]="errorMessage"
+    [isEmpty]="!isLoading && !errorMessage && !profile"
+    emptyIcon="person_off"
+    emptyMessage="No player on this phone yet."
+    emptyActionLabel="Join KubeQuest"
+    [skeletonRows]="4"
+    (retry)="load()"
+    (emptyAction)="signOut()"
+  >
+    @if (profile) {
+      <section class="hero kq-block" aria-labelledby="profile-handle">
+        <app-block-face [seed]="profile.attendee.faceSeed" [size]="96" [label]="'Pixel face of @' + profile.attendee.handle"></app-block-face>
+        <div class="hero-info">
+          <h1 id="profile-handle" class="hero-handle kq-pixel">&#64;{{ profile.attendee.handle }}</h1>
+          <p class="hero-level">
+            <span class="kq-pixel hero-level-number">Lv {{ profile.level.level }}</span>
+            <span>{{ profile.level.name }}</span>
+          </p>
+          @if (profile.attendee.displayName || profile.attendee.email) {
+            <p class="hero-signed-in">
+              <mat-icon aria-hidden="true">account_circle</mat-icon>
+              <span>
+                Signed in as <strong>{{ profile.attendee.displayName || profile.attendee.handle }}</strong>
+                @if (profile.attendee.email) {
+                  <span class="hero-email">{{ profile.attendee.email }}</span>
+                }
+              </span>
+            </p>
+          }
+          @if (profile.attendee.workingOn) {
+            <p class="hero-working">{{ profile.attendee.workingOn }}</p>
+          }
+        </div>
+
+        <div class="xp">
+          <div class="xp-labels">
+            <span class="kq-pixel xp-value">{{ profile.level.xp }} XP</span>
+            @if (profile.level.nextLevelName) {
+              <span class="kq-muted xp-next">{{ xpToNext }} to {{ profile.level.nextLevelName }}</span>
+            } @else {
+              <span class="kq-muted xp-next">Top level</span>
+            }
+          </div>
+          <div
+            class="xp-bar"
+            role="progressbar"
+            aria-label="XP to the next level"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            [attr.aria-valuenow]="xpPercent"
+          >
+            <span class="xp-bar-fill" [style.width.%]="xpPercent"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section kq-block" aria-labelledby="inventory-title">
+        <div class="section-header">
+          <h2 id="inventory-title" class="section-title kq-pixel">Inventory</h2>
+          <span class="gems kq-pixel" [attr.aria-label]="(inventory?.gems ?? 0) + ' gems'">
+            <mat-icon aria-hidden="true">diamond</mat-icon>{{ inventory?.gems ?? 0 }}
+          </span>
+        </div>
+        @if (!hasBlocks) {
+          <p class="kq-muted section-empty">No blocks yet. Scan a room's QR block to collect one.</p>
+        }
+        <ul class="blocks">
+          @for (material of materials; track material.id) {
+            <li class="block-item" [class.block-item--empty]="blockCount(material.id) === 0">
+              <span [class]="'block-swatch kq-swatch kq-swatch--' + material.id" aria-hidden="true"></span>
+              <span class="block-label">{{ material.label }}</span>
+              <span class="block-count kq-pixel">{{ blockCount(material.id) }}</span>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <section class="section kq-block" aria-labelledby="banners-title">
+        <h2 id="banners-title" class="section-title kq-pixel">Banners</h2>
+        @if (inventory && inventory.banners.length > 0) {
+          <ul class="banners">
+            @for (banner of inventory.banners; track banner.id) {
+              <li class="banner" [class.banner--earned]="banner.earned">
+                <span class="banner-icon">
+                  <mat-icon aria-hidden="true">{{ bannerIcons[banner.id] || 'flag' }}</mat-icon>
+                </span>
+                <span class="banner-text">
+                  <span class="banner-name">{{ banner.name }}</span>
+                  <span class="banner-description">{{ banner.description }}</span>
+                </span>
+                <span class="banner-progress kq-pixel">
+                  @if (banner.earned) {
+                    <mat-icon aria-label="Earned">check</mat-icon>
+                  } @else {
+                    {{ banner.progress }}/{{ banner.target }}
+                  }
+                </span>
+              </li>
+            }
+          </ul>
+        } @else {
+          <p class="kq-muted section-empty">Banners show up as you play.</p>
+        }
+      </section>
+
+      <section class="section kq-block" aria-labelledby="topics-title">
+        <h2 id="topics-title" class="section-title kq-pixel">Topics</h2>
+        @if (profile.attendee.profile.topics.length > 0) {
+          <ul class="topics">
+            @for (topic of profile.attendee.profile.topics; track topic) {
+              <li class="topic">{{ topic }}</li>
+            }
+          </ul>
+        } @else {
+          <p class="kq-muted section-empty">No topics yet.</p>
+        }
+      </section>
+
+      <section class="section kq-block" aria-labelledby="settings-title">
+        <h2 id="settings-title" class="section-title kq-pixel">Settings</h2>
+        @if (settingsError) {
+          <app-alert-banner [message]="settingsError" (dismissed)="settingsError = ''"></app-alert-banner>
+        }
+        <ul class="settings">
+          @for (option of settingOptions; track option.key) {
+            <li class="setting">
+              <span class="setting-text">
+                <span class="setting-label">{{ option.label }}</span>
+                <span class="setting-hint">{{ option.hint }}</span>
+              </span>
+              <mat-slide-toggle
+                [checked]="settingValue(option.key)"
+                [disabled]="savingKey !== null"
+                [aria-label]="option.label"
+                (change)="onSettingChange(option.key, $event)"
+              ></mat-slide-toggle>
+            </li>
+          }
+        </ul>
+      </section>
+
+      @if (profile.personalLink) {
+        <app-copy-link [link]="profile.personalLink"></app-copy-link>
+      }
+
+      <nav class="section kq-block" aria-label="More">
+        <ul class="more">
+          @for (link of moreLinks; track link.path) {
+            <li>
+              <a class="more-link" [routerLink]="link.path">
+                <mat-icon aria-hidden="true">{{ link.icon }}</mat-icon>
+                <span class="more-label">{{ link.label }}</span>
+                <mat-icon aria-hidden="true" class="more-arrow">chevron_right</mat-icon>
+              </a>
+            </li>
+          }
+        </ul>
+      </nav>
+
+      <button mat-stroked-button type="button" class="sign-out" (click)="signOut()">
+        <div class="btn-content">
+          <mat-icon aria-hidden="true">logout</mat-icon>
+          <span>Sign out</span>
+        </div>
+      </button>
+    }
+  </app-state-wrapper>
+</div>

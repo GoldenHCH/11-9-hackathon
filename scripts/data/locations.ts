@@ -52,6 +52,16 @@ const sessionRoomStrings: string[] = [
   'Hyatt Regency | Level 4 | Regency Ballroom B-D',
 ];
 
+const officialRoomNames: Record<string, string> = {
+  '150 DEFG': '150 A-F',
+  '151 G': '151',
+  '155 E': '155 A-F',
+  '250 AB': '250 A-C',
+  '251 ABC': '251 A-C',
+  '251 DEF': '251 D-F',
+  '254 AB': '254',
+};
+
 const places: IPlaceSeed[] = [
   {
     id: 'cloud-native-hackathon',
@@ -76,7 +86,7 @@ const places: IPlaceSeed[] = [
     kind: 'theater',
     building: buildingNames.SALT_PALACE,
     level: 'Level 1',
-    zone: 'Project Pavilion',
+    zone: 'Hall 5, Cosmic Canyon',
     description: 'Project updates and community talks, scheduled like a room, inside the halls.',
     hasScreen: true,
   },
@@ -84,7 +94,8 @@ const places: IPlaceSeed[] = [
     name: 'The Meeting Point',
     kind: 'campfire',
     building: buildingNames.SALT_PALACE,
-    level: 'Level 1',
+    level: 'Level 2',
+    zone: 'North Foyer',
     description: "The venue's own named meeting spot. Meet your quest partner here.",
   },
   {
@@ -92,6 +103,7 @@ const places: IPlaceSeed[] = [
     kind: 'campfire',
     building: buildingNames.SALT_PALACE,
     level: 'Level 1',
+    zone: 'Grand Ballroom J',
     description: 'Open seating meant for conversation. Meet your quest partner here.',
   },
   {
@@ -99,7 +111,7 @@ const places: IPlaceSeed[] = [
     kind: 'campfire',
     building: buildingNames.SALT_PALACE,
     level: 'Level 1',
-    zone: 'Solutions Showcase',
+    zone: 'Hall 1, Alpine Overlook',
     description: 'Hosts the scheduled meetups, next to the outposts.',
   },
   {
@@ -107,7 +119,7 @@ const places: IPlaceSeed[] = [
     kind: 'campfire',
     building: buildingNames.SALT_PALACE,
     level: 'Level 1',
-    zone: 'Hall B, Starlight Summit Zone',
+    zone: 'Hall B, Starlight Summit, booth 140',
     description: 'Named in the schedule and easy to find in the showcase.',
   },
   {
@@ -264,11 +276,11 @@ function roomSeed(parsed: IParsedLocation): LocationSeed {
 
   return {
     id: roomLocationId(parsed),
-    name: parsed.room,
+    name: officialRoomNames[parsed.room] ?? parsed.room,
     kind,
     building: parsed.building,
     level: parsed.level,
-    room: parsed.room,
+    room: officialRoomNames[parsed.room] ?? parsed.room,
     description,
     hasScreen: kind === 'boss-room',
     searchText: `${parsed.room}, ${parsed.building} ${parsed.level}. ${description}`,

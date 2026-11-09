@@ -18,7 +18,7 @@ export class MeLinkComponent implements OnInit {
       this._meService.setAttendeeId(this.attendeeId);
     }
 
-    const destination = this.next.startsWith('/') && !this.next.startsWith('//') ? this.next : '/meets';
+    const destination = this.next.startsWith('/') && !this.next.startsWith('//') ? this.next : '/profile';
     void this._router.navigateByUrl(destination, { replaceUrl: true });
   }
 }

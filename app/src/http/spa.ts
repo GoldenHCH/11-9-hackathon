@@ -29,3 +29,11 @@ export function placeholderPage(): string {
     '</html>',
   ].join('');
 }
+
+export function landingIndexPath(): string {
+  return path.join(appConfig.publicDir, 'landing', 'index.html');
+}
+
+export function hasLandingBuild(): boolean {
+  return fs.existsSync(landingIndexPath());
+}

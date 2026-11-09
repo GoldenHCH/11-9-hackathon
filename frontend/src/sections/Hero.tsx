@@ -45,7 +45,7 @@ export const Hero = () => {
       <Sky t={t} shift={px} />
       <header className="topbar">
         <a className="brand" href="#top" aria-label="KubeQuest home">
-          <img src="/cube.svg" width={28} height={28} alt="" />
+          <img src={`${import.meta.env.BASE_URL}cube.svg`} width={28} height={28} alt="" />
           <span className="pixel">KubeQuest</span>
         </a>
         <nav className="topnav" aria-label="Sections">
@@ -55,7 +55,10 @@ export const Hero = () => {
           <a href="#hallway">Hallway</a>
           <a href="#levels">Levels</a>
         </nav>
-        <a className="btn btn--small" href="/signup">
+        <a className="signin" href="/onboarding">
+          Sign in
+        </a>
+        <a className="btn btn--small" href="/onboarding">
           Start playing
         </a>
       </header>
@@ -70,7 +73,7 @@ export const Hero = () => {
           problem at a campfire. Every step earns XP.
         </p>
         <div className="hero__ctas">
-          <a className="btn" href="/signup">
+          <a className="btn" href="/onboarding">
             Start playing
           </a>
           <a className="btn btn--ghost" href="#day">

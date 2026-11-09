@@ -31,6 +31,8 @@ spec:
               value: "kube-quest"
             - name: OTEL_SERVICE_NAME
               value: "kubequest-app"
+            - name: DASH0_TRACE_URL_TEMPLATE
+              value: "https://app.dash0.com/goto/traces?trace_id={traceId}&org=52cea6d2-168b-48df-be0d-4cfec3ec3b38"
             - name: ELASTIC_AGENT_ID
               value: "kubequest-writer"
             - name: OTEL_EXPORTER_OTLP_ENDPOINT

@@ -369,7 +369,7 @@ export const Finale = () => (
           Find a QR block. Scan it.
         </h2>
         <p className="section__lede">Your first 10 XP is at the nearest room door.</p>
-        <a className="btn" href="/signup">
+        <a className="btn" href="/onboarding">
           Start playing
         </a>
       </div>

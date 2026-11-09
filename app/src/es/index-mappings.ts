@@ -49,6 +49,8 @@ export function buildIndexMappings(inferenceId: string): Record<IndexName, Prope
       handle: keyword,
       faceSeed: unindexedKeyword,
       realName: unindexedKeyword,
+      displayName: unindexedKeyword,
+      email: keyword,
       githubLogin: keyword,
       avatarUrl: unindexedKeyword,
       photoUrl: unindexedKeyword,
@@ -209,6 +211,10 @@ export function buildIndexMappings(inferenceId: string): Record<IndexName, Prope
       toId: keyword,
       text: { type: 'text', index: false },
       at: date,
+      kind: keyword,
+      handle: keyword,
+      attendeeId: keyword,
+      createdAt: date,
     },
   };
 }

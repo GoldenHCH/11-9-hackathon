@@ -1,0 +1,258 @@
+<section class="quest-board app-page">
+  <p class="app-visually-hidden" aria-live="polite" aria-atomic="true">{{ liveMessage }}</p>
+
+  @if (!isSignedIn) {
+    <div class="signed-out kq-block">
+      <div class="signed-out-cubes" aria-hidden="true">
+        <span class="cube cube-grass"></span>
+        <span class="cube cube-stone"></span>
+        <span class="cube cube-gold"></span>
+      </div>
+      <h1 class="signed-out-title kq-pixel">Join KubeQuest</h1>
+      <p class="signed-out-text">Pick a handle, answer two questions and get your first quest. No password, under a minute.</p>
+      <a mat-flat-button class="cta-primary" routerLink="/onboarding">
+        <div class="btn-content">
+          <mat-icon>person_add</mat-icon>
+          <span>Start playing</span>
+        </div>
+      </a>
+    </div>
+  } @else {
+    <header class="hero">
+      <div class="hero-player">
+        @if (profile) {
+          <app-pixel-face
+            class="hero-face"
+            [seed]="profile.attendee.faceSeed"
+            [size]="56"
+            [label]="profile.attendee.handle + ' face'"
+          ></app-pixel-face>
+          <div class="hero-identity">
+            <span class="hero-handle">&#64;{{ profile.attendee.handle }}</span>
+            <span class="hero-level kq-pixel">Lv {{ profile.level.level }} · {{ profile.level.name }}</span>
+          </div>
+          <div class="hero-stats">
+            <span class="hero-stat" [attr.aria-label]="profile.inventory.totalBlocks + ' blocks'">
+              <span class="hero-stat-cube" aria-hidden="true"></span>
+              <span>{{ profile.inventory.totalBlocks }}</span>
+            </span>
+            <span class="hero-stat" [attr.aria-label]="profile.inventory.gems + ' gems'">
+              <span class="hero-stat-gem" aria-hidden="true"></span>
+              <span>{{ profile.inventory.gems }}</span>
+            </span>
+          </div>
+        } @else {
+          <div class="skeleton skeleton-face"></div>
+          <div class="hero-identity">
+            <div class="skeleton skeleton-line"></div>
+            <div class="skeleton skeleton-line skeleton-short"></div>
+          </div>
+        }
+      </div>
+
+      <div class="hero-xp">
+        <div
+          class="xp-track"
+          role="progressbar"
+          aria-label="Progress to the next level"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          [attr.aria-valuenow]="levelPercent"
+        >
+          <div class="xp-fill" [style.width.%]="levelPercent"></div>
+        </div>
+        <span class="xp-text">
+          @if (profile) {
+            <span class="kq-pixel">{{ profile.level.xp }} XP</span>
+            @if (xpToNextLevel !== null) {
+              <span class="xp-next">{{ xpToNextLevel }} to {{ profile.level.nextLevelName }}</span>
+            } @else {
+              <span class="xp-next">Max level</span>
+            }
+          }
+        </span>
+      </div>
+
+      <a mat-flat-button class="cta-scan" routerLink="/scan">
+        <div class="btn-content">
+          <mat-icon>qr_code_scanner</mat-icon>
+          <span class="kq-pixel">Scan a QR block</span>
+        </div>
+      </a>
+    </header>
+
+    <div class="board-toolbar">
+      <h1 class="board-title kq-pixel">Quests</h1>
+      <button
+        mat-stroked-button
+        class="refresh"
+        type="button"
+        [disabled]="isRefreshing || isLoading"
+        (click)="refresh()"
+        aria-label="Refresh quests"
+      >
+        @if (isRefreshing) {
+          <mat-spinner diameter="18"></mat-spinner>
+        } @else {
+          <div class="btn-content">
+            <mat-icon>refresh</mat-icon>
+            <span>Refresh</span>
+          </div>
+        }
+      </button>
+    </div>
+
+    @if (bossTarget; as boss) {
+      <app-boss-card
+        class="board-boss"
+        [talkId]="boss.talkId"
+        [locationId]="boss.locationId"
+        (unavailable)="onBossUnavailable(boss.key)"
+      ></app-boss-card>
+    }
+
+    @if (actionError) {
+      <app-alert-banner [message]="actionError" (dismissed)="actionError = ''"></app-alert-banner>
+    }
+
+    @if (errorMessage && !board) {
+      <app-alert-banner
+        [message]="errorMessage"
+        actionLabel="Try again"
+        [dismissible]="false"
+        (action)="loadBoard()"
+      ></app-alert-banner>
+    } @else if (isLoading && !board) {
+      <div class="board-skeleton" aria-busy="true" aria-label="Loading quests">
+        @for (card of skeletonCards; track card) {
+          <div class="skeleton-card">
+            <div class="skeleton skeleton-line skeleton-short"></div>
+            <div class="skeleton skeleton-line"></div>
+            <div class="skeleton skeleton-line"></div>
+            <div class="skeleton skeleton-button"></div>
+          </div>
+        }
+      </div>
+    } @else if (isBoardEmpty) {
+      <div class="board-empty kq-block">
+        <div class="signed-out-cubes" aria-hidden="true">
+          <span class="cube cube-stone"></span>
+          <span class="cube cube-glass"></span>
+        </div>
+        <p class="board-empty-text">No quests right now — scan a room to get new ones.</p>
+        <a mat-flat-button class="cta-primary" routerLink="/scan">
+          <div class="btn-content">
+            <mat-icon>qr_code_scanner</mat-icon>
+            <span>Scan a room</span>
+          </div>
+        </a>
+      </div>
+    } @else {
+      <section class="board-section" aria-labelledby="offers-heading">
+        <div class="section-head">
+          <h2 class="section-title" id="offers-heading">
+            <span class="section-cube section-cube-offers" aria-hidden="true"></span>
+            Offers
+          </h2>
+          <span class="section-note">Saying no never costs anything</span>
+        </div>
+        @if (offers.length) {
+          <div class="card-list">
+            @for (quest of offers; track quest.id) {
+              <app-quest-card
+                [quest]="quest"
+                mode="offer"
+                [isBusy]="busyQuestIds.has(quest.id)"
+                [canAccept]="canAcceptMore"
+                (respond)="onRespond($event)"
+              ></app-quest-card>
+            }
+          </div>
+        } @else {
+          <p class="section-empty">No new offers. Scan a room to get fresh ones.</p>
+        }
+      </section>
+
+      <section class="board-section" aria-labelledby="active-heading">
+        <div class="section-head">
+          <h2 class="section-title" id="active-heading">
+            <span class="section-cube section-cube-active" aria-hidden="true"></span>
+            Active
+          </h2>
+          <span class="section-count" [attr.aria-label]="active.length + ' of ' + maxActive + ' active slots used'">
+            @for (slot of skeletonCards; track slot) {
+              <span class="slot" [class.slot-filled]="slot < active.length" aria-hidden="true"></span>
+            }
+          </span>
+        </div>
+        @if (active.length) {
+          <div class="card-list">
+            @for (quest of active; track quest.id) {
+              <app-quest-card
+                [quest]="quest"
+                mode="active"
+                [isBusy]="busyQuestIds.has(quest.id)"
+                (respond)="onRespond($event)"
+              ></app-quest-card>
+            }
+          </div>
+        } @else {
+          <p class="section-empty">Nothing active. Accept an offer below to start.</p>
+        }
+      </section>
+
+      @if (doneToday.length) {
+        <section class="board-section" aria-labelledby="done-heading">
+          <div class="section-head">
+            <h2 class="section-title" id="done-heading">
+              <span class="section-cube section-cube-done" aria-hidden="true"></span>
+              Done today
+            </h2>
+            <span class="section-note kq-pixel">+{{ xpToday }} XP</span>
+          </div>
+          <div class="card-list">
+            @for (quest of doneToday; track quest.id) {
+              <app-quest-card [quest]="quest" mode="done"></app-quest-card>
+            }
+          </div>
+        </section>
+      }
+    }
+
+    @if (profile && nextBanners.length) {
+      <section class="board-section" aria-labelledby="banners-heading">
+        <div class="section-head">
+          <h2 class="section-title" id="banners-heading">
+            <span class="section-cube section-cube-banners" aria-hidden="true"></span>
+            Collection
+          </h2>
+          <span class="section-note">{{ earnedBannerCount }} banner{{ earnedBannerCount === 1 ? '' : 's' }} earned</span>
+        </div>
+        <ul class="banner-list kq-block">
+          @for (banner of nextBanners; track banner.id) {
+            <li class="banner-row">
+              <div class="banner-top">
+                <span class="banner-name">
+                  <mat-icon aria-hidden="true">flag</mat-icon>
+                  <span>{{ banner.name }}</span>
+                </span>
+                <span class="banner-count kq-pixel">{{ banner.progress }}/{{ banner.target }}</span>
+              </div>
+              <div
+                class="banner-track"
+                role="progressbar"
+                aria-valuemin="0"
+                [attr.aria-valuemax]="banner.target"
+                [attr.aria-valuenow]="banner.progress"
+                [attr.aria-label]="banner.name + ' banner progress'"
+              >
+                <div class="banner-fill" [style.width.%]="bannerPercent(banner)"></div>
+              </div>
+              <span class="banner-description">{{ banner.description }}</span>
+            </li>
+          }
+        </ul>
+      </section>
+    }
+  }
+</section>

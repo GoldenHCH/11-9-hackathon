@@ -1,0 +1,81 @@
+<section class="app-page scanner">
+  <app-screen-toolbar title="Scan" subtitle="Rooms, booths, campfires and people"></app-screen-toolbar>
+
+  <p class="scanner-live" aria-live="polite" role="status">{{ announcement }}</p>
+
+  @if (errorMessage) {
+    <app-alert-banner [message]="errorMessage" (dismissed)="dismissError()"></app-alert-banner>
+  }
+
+  <div class="viewfinder kq-block" [hidden]="!isCameraActive">
+    <video
+      #video
+      class="viewfinder-video"
+      aria-label="Camera view for scanning a KubeQuest QR code"
+      autoplay
+      muted
+      playsinline
+    ></video>
+    <div class="viewfinder-frame" aria-hidden="true">
+      <span class="corner corner--tl"></span>
+      <span class="corner corner--tr"></span>
+      <span class="corner corner--bl"></span>
+      <span class="corner corner--br"></span>
+    </div>
+    @if (state === 'starting') {
+      <p class="viewfinder-status">Starting camera…</p>
+    }
+  </div>
+
+  @if (isCameraActive) {
+    <p class="scanner-hint kq-pixel">Point at a KubeQuest QR block</p>
+    @if (isTorchSupported) {
+      <div class="scanner-actions">
+        <button mat-stroked-button type="button" [attr.aria-pressed]="isTorchOn" (click)="toggleTorch()">
+          <div class="button-content">
+            <mat-icon aria-hidden="true">{{ isTorchOn ? 'flashlight_off' : 'flashlight_on' }}</mat-icon>
+            <span>{{ isTorchOn ? 'Torch off' : 'Torch on' }}</span>
+          </div>
+        </button>
+      </div>
+    }
+  }
+
+  @if (state === 'denied' || state === 'unavailable') {
+    <article class="fallback kq-block">
+      <mat-icon class="fallback-icon" aria-hidden="true">{{ state === 'denied' ? 'no_photography' : 'videocam_off' }}</mat-icon>
+      @if (state === 'denied') {
+        <h2 class="fallback-title">Camera access is off</h2>
+        <p>To scan, allow camera access for this site:</p>
+        <ul class="fallback-steps">
+          <li>Tap the lock or settings icon next to the address bar.</li>
+          <li>Set Camera to Allow, then try again.</li>
+          <li>Or open your phone’s camera app and point it at the QR block.</li>
+        </ul>
+      } @else {
+        <h2 class="fallback-title">No camera available</h2>
+        <p>This device or browser can’t open a camera here. Use your phone’s camera app, or paste the link below.</p>
+      }
+      <div class="scanner-actions">
+        <button mat-flat-button type="button" (click)="start()">
+          <div class="button-content">
+            <mat-icon aria-hidden="true">refresh</mat-icon>
+            <span>Try again</span>
+          </div>
+        </button>
+      </div>
+    </article>
+  }
+
+  @if (state === 'done') {
+    <p class="scanner-hint kq-pixel">Opening…</p>
+  } @else {
+    <form class="manual" (ngSubmit)="submitManual()">
+      <mat-form-field appearance="outline" class="manual-field">
+        <mat-label>Or paste a KubeQuest link</mat-label>
+        <input matInput name="manualLink" type="url" inputmode="url" autocomplete="off" [(ngModel)]="manualLink" placeholder="https://kubequest.cnh.radarhq.io/r/…" />
+      </mat-form-field>
+      <button mat-stroked-button type="submit" [disabled]="!manualLink.trim()">Open</button>
+    </form>
+  }
+</section>

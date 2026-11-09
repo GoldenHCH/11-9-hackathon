@@ -58,6 +58,8 @@ const semanticFields = ['searchText', 'profileText'];
 
 const privateSourceFields = [
   'realName',
+  'displayName',
+  'email',
   'photoUrl',
   'spotMe',
   'githubLogin',

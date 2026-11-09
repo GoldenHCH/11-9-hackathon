@@ -1,16 +1,54 @@
-import { Type } from '@angular/core';
+import { Type, inject } from '@angular/core';
 import { Routes } from '@angular/router';
 import { meGuard } from './core/guards/me.guard';
+import { MeService } from './core/services/me.service';
 
 const placeholder = (): Promise<Type<unknown>> =>
   import('./shared/components/coming-soon/coming-soon.component').then((module) => module.ComingSoonComponent);
 
+const entranceRedirect = (): string => (inject(MeService).attendeeId ? '/quests' : '/onboarding');
+
 export const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'map' },
+  { path: '', pathMatch: 'full', redirectTo: entranceRedirect },
+  {
+    path: 'onboarding',
+    title: 'Join · KubeQuest',
+    loadComponent: () => import('./onboarding/onboarding.component').then((module) => module.OnboardingComponent),
+  },
+  { path: 'signup', redirectTo: 'onboarding' },
+  {
+    path: 'quests',
+    title: 'Quests · KubeQuest',
+    canActivate: [meGuard],
+    loadComponent: () =>
+      import('./quests/quest-board/quest-board.component').then((module) => module.QuestBoardComponent),
+  },
+  {
+    path: 'scan',
+    title: 'Scan · KubeQuest',
+    loadComponent: () => import('./scan/scanner/scanner.component').then((module) => module.ScannerComponent),
+  },
+  {
+    path: 'board',
+    title: 'Leaderboard · KubeQuest',
+    loadComponent: () =>
+      import('./board/leaderboard/leaderboard.component').then((module) => module.LeaderboardComponent),
+  },
   {
     path: 'map',
     title: 'Map · KubeQuest',
     loadComponent: () => import('./map/venue-map/venue-map.component').then((module) => module.VenueMapComponent),
+  },
+  {
+    path: 'profile',
+    title: 'Profile · KubeQuest',
+    canActivate: [meGuard],
+    loadComponent: () => import('./profile/profile.component').then((module) => module.ProfileComponent),
+  },
+  {
+    path: 'me/:attendeeId',
+    title: 'KubeQuest',
+    loadComponent: () => import('./me/me-link.component').then((module) => module.MeLinkComponent),
   },
   {
     path: 'meets',
@@ -62,43 +100,16 @@ export const routes: Routes = [
     loadComponent: () => import('./recap/recap.component').then((module) => module.RecapComponent),
   },
   {
-    path: 'me/:attendeeId',
-    title: 'KubeQuest',
-    loadComponent: () => import('./me/me-link.component').then((module) => module.MeLinkComponent),
-  },
-  {
     path: 'here',
     title: 'Here · KubeQuest',
     loadComponent: placeholder,
     data: { title: 'Here', icon: 'place', message: 'Scan a room’s QR block to see what’s on and who’s around.' },
   },
   {
-    path: 'quests',
-    title: 'Quests · KubeQuest',
-    loadComponent: placeholder,
-    data: { title: 'Quests', icon: 'flag', message: 'Up to three quests picked for you: a talk, an outpost, a person.' },
-  },
-  {
     path: 'people',
     title: 'People · KubeQuest',
     loadComponent: placeholder,
     data: { title: 'People', icon: 'group', message: 'Players working on what you’re working on, nearby first.' },
-  },
-  {
-    path: 'board',
-    title: 'Leaderboard · KubeQuest',
-    loadComponent: placeholder,
-    data: { title: 'Leaderboard', icon: 'leaderboard', message: 'Top players by XP. Every point opens its trace.' },
-  },
-  {
-    path: 'signup',
-    title: 'Join · KubeQuest',
-    loadComponent: placeholder,
-    data: {
-      title: 'Join KubeQuest',
-      icon: 'person_add',
-      message: 'Open your personal link to play. Sign-up with a handle and two questions is coming next.',
-    },
   },
   {
     path: 'quiz/:talkId',
@@ -118,5 +129,5 @@ export const routes: Routes = [
     loadComponent: placeholder,
     data: { title: 'Demo screen', icon: 'qr_code_2', message: 'Live QR and top 10.' },
   },
-  { path: '**', redirectTo: 'map' },
+  { path: '**', redirectTo: '' },
 ];

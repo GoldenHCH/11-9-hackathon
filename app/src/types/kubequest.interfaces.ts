@@ -104,6 +104,8 @@ export interface IAttendee {
   handle: string;
   faceSeed: string;
   realName?: string;
+  displayName?: string;
+  email?: string;
   githubLogin?: string;
   avatarUrl?: string;
   photoUrl?: string;
@@ -562,8 +564,21 @@ export interface IAttendeeInput {
   attendeeId: string;
 }
 
+export interface ISignInInput {
+  name: string;
+  email: string;
+}
+
+export interface ISignInResult {
+  attendee: IProfile;
+  personalLink: string;
+  isNew: boolean;
+  needsOnboarding: boolean;
+}
+
 export interface ISignUpInput {
-  handle: string;
+  attendeeId?: string;
+  handle?: string;
   workingOn: string;
   firstKubeCon: boolean;
   happyToWelcome?: boolean;
@@ -825,6 +840,7 @@ export interface IRecap {
 }
 
 export interface IToolContracts {
+  sign_in: { input: ISignInInput; output: ISignInResult };
   sign_up: { input: ISignUpInput; output: ISignUpResult };
   get_profile: { input: IAttendeeInput; output: IProfile };
   update_settings: { input: IUpdateSettingsInput; output: IProfile };

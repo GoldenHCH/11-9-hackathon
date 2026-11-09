@@ -1,0 +1,275 @@
+<div class="onboarding">
+  <header class="onboarding-header">
+    <svg class="onboarding-logo" viewBox="0 0 32 32" aria-hidden="true" shape-rendering="crispEdges">
+      <polygon points="16,2 30,9 16,16 2,9" fill="#8bd17c" stroke="#000" stroke-width="2" />
+      <polygon points="2,9 16,16 16,30 2,23" fill="#4f9a3a" stroke="#000" stroke-width="2" />
+      <polygon points="30,9 16,16 16,30 30,23" fill="#2f6b2b" stroke="#000" stroke-width="2" />
+    </svg>
+    <span class="onboarding-brand kq-pixel">KubeQuest</span>
+  </header>
+
+  @if (step !== 'done') {
+    <ol class="progress" aria-label="Signup progress">
+      @for (item of steps; track item; let index = $index) {
+        <li
+          class="progress-block"
+          [class.progress-block--done]="index < stepIndex"
+          [class.progress-block--current]="index === stepIndex"
+          [attr.aria-current]="index === stepIndex ? 'step' : null"
+        >
+          <span class="kq-visually-hidden">Step {{ index + 1 }} of {{ steps.length }}</span>
+        </li>
+      }
+    </ol>
+  }
+
+  <form class="card kq-block" [formGroup]="form" (ngSubmit)="step === 'meeting' ? submit() : next()">
+    @switch (step) {
+      @case ('signin') {
+        <h1 class="step-title kq-pixel">Sign in</h1>
+        <p class="step-text">Your name and email. The same email always brings back the same player.</p>
+
+        <ng-container [formGroup]="signInForm">
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name" autocomplete="name" maxlength="80" />
+            @if (signInForm.controls.name.hasError('required')) {
+              <mat-error>Enter your name</mat-error>
+            }
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Email</mat-label>
+            <input
+              matInput
+              type="email"
+              formControlName="email"
+              autocomplete="email"
+              autocapitalize="none"
+              spellcheck="false"
+              inputmode="email"
+            />
+            @if (signInForm.controls.email.hasError('required')) {
+              <mat-error>Enter your email</mat-error>
+            } @else if (signInForm.controls.email.hasError('email')) {
+              <mat-error>That email doesn't look right</mat-error>
+            }
+          </mat-form-field>
+        </ng-container>
+
+        <div class="demo">
+          <p class="demo-hint">Demo: {{ demoAccount.name }} / {{ demoAccount.email }}</p>
+          <button mat-stroked-button type="button" class="demo-button" [disabled]="isSigningIn" (click)="useDemoAccount()">
+            <div class="btn-content">
+              <mat-icon aria-hidden="true">science</mat-icon>
+              <span>Use demo account</span>
+            </div>
+          </button>
+        </div>
+      }
+
+      @case ('handle') {
+        <h1 class="step-title kq-pixel">Pick a handle</h1>
+        <p class="step-text">It's your name in the game. Your pixel face is made from it.</p>
+
+        <div class="handle-row">
+          <app-block-face [handle]="form.controls.handle.valid ? handle : ''" [size]="64" label="Your pixel face preview"></app-block-face>
+          <mat-form-field appearance="outline" class="handle-field">
+            <mat-label>Handle</mat-label>
+            <span matTextPrefix>&#64;</span>
+            <input
+              matInput
+              formControlName="handle"
+              autocomplete="username"
+              autocapitalize="none"
+              spellcheck="false"
+              maxlength="20"
+              (input)="onHandleInput()"
+            />
+            <mat-hint>3 to 20 letters, numbers, dots, dashes or underscores</mat-hint>
+            @if (form.controls.handle.hasError('required')) {
+              <mat-error>Pick a handle to play</mat-error>
+            } @else if (form.controls.handle.hasError('pattern')) {
+              <mat-error>Use 3 to 20 lowercase letters, numbers, dots, dashes or underscores</mat-error>
+            }
+          </mat-form-field>
+        </div>
+
+        @if (handleTakenMessage) {
+          <p class="field-error" role="alert">{{ handleTakenMessage }}</p>
+        }
+      }
+
+      @case ('about') {
+        <h1 class="step-title kq-pixel">About you</h1>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>What are you working on?</mat-label>
+          <textarea
+            matInput
+            formControlName="workingOn"
+            rows="3"
+            maxlength="500"
+            placeholder="Or what you hope to get out of KubeCon"
+          ></textarea>
+          <mat-hint>Optional. It picks your quests and people to meet.</mat-hint>
+        </mat-form-field>
+
+        <fieldset class="choice">
+          <legend class="choice-legend">Is this your first KubeCon?</legend>
+          <div class="choice-row">
+            <button type="button" class="choice-button" [attr.aria-pressed]="firstKubeCon === true" (click)="setFirstKubeCon(true)">
+              Yes
+            </button>
+            <button type="button" class="choice-button" [attr.aria-pressed]="firstKubeCon === false" (click)="setFirstKubeCon(false)">
+              No
+            </button>
+          </div>
+        </fieldset>
+
+        @if (firstKubeCon === false) {
+          <fieldset class="choice">
+            <legend class="choice-legend">Happy to welcome a first-timer?</legend>
+            <div class="choice-row">
+              <button type="button" class="choice-button" [attr.aria-pressed]="happyToWelcome === true" (click)="happyToWelcome = true">
+                Sure
+              </button>
+              <button type="button" class="choice-button" [attr.aria-pressed]="happyToWelcome === false" (click)="happyToWelcome = false">
+                Not today
+              </button>
+            </div>
+          </fieldset>
+        }
+      }
+
+      @case ('topics') {
+        <h1 class="step-title kq-pixel">Your topics</h1>
+        <p class="step-text">
+          Pick up to {{ maxTopics }}. Skip this and we pick them from your answer.
+          <span class="topic-count">{{ selectedTopics.length }}/{{ maxTopics }}</span>
+        </p>
+
+        <div class="topics" role="group" aria-label="Topics">
+          @for (topic of topicOptions; track topic) {
+            <button
+              type="button"
+              class="topic-chip"
+              [attr.aria-pressed]="isTopicSelected(topic)"
+              [disabled]="!isTopicSelected(topic) && selectedTopics.length >= maxTopics"
+              (click)="toggleTopic(topic)"
+            >
+              {{ topic }}
+            </button>
+          }
+        </div>
+      }
+
+      @case ('meeting') {
+        <h1 class="step-title kq-pixel">Meet people?</h1>
+        <p class="step-text">We can suggest players working on the same things and set up a meeting point. You choose.</p>
+
+        <div class="meeting-options" role="radiogroup" aria-label="Suggest people for me to meet">
+          <button
+            type="button"
+            role="radio"
+            class="meeting-option"
+            [attr.aria-checked]="meetingOn === true"
+            (click)="meetingOn = true"
+          >
+            <mat-icon aria-hidden="true">handshake</mat-icon>
+            <span class="meeting-option-title kq-pixel">Yes, suggest people</span>
+            <span class="meeting-option-text">Only someone you both agree to meet sees how to spot you.</span>
+          </button>
+          <button
+            type="button"
+            role="radio"
+            class="meeting-option"
+            [attr.aria-checked]="meetingOn === false"
+            (click)="meetingOn = false"
+          >
+            <mat-icon aria-hidden="true">do_not_disturb_on</mat-icon>
+            <span class="meeting-option-title kq-pixel">Not now</span>
+            <span class="meeting-option-text">Just talks and booths. Turn it on later in your profile.</span>
+          </button>
+        </div>
+
+        @if (meetingOn) {
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>How to spot me</mat-label>
+            <input matInput formControlName="spotMe" maxlength="140" placeholder="Green hoodie, sticker-covered laptop" />
+            <mat-hint>Optional. One line.</mat-hint>
+          </mat-form-field>
+        }
+      }
+
+      @case ('done') {
+        @if (result) {
+          <div class="done">
+            <app-block-face [seed]="result.profile.attendee.faceSeed" [size]="96" label="Your pixel face"></app-block-face>
+            <h1 class="step-title kq-pixel">Welcome, &#64;{{ result.profile.attendee.handle }}</h1>
+            <p class="done-level">
+              <span class="kq-pixel">Level {{ result.profile.level.level }}</span>
+              <span>{{ result.profile.level.name }}</span>
+            </p>
+            <p class="done-starter">
+              <span [class]="'kq-swatch kq-swatch--' + result.starterMaterial" aria-hidden="true"></span>
+              <span>Starter block: {{ result.starterMaterial }}</span>
+            </p>
+            @if (result.firstQuest) {
+              <div class="first-quest kq-block kq-block--raised">
+                <span class="first-quest-label kq-pixel">First quest</span>
+                <span class="first-quest-title">{{ result.firstQuest.title }}</span>
+              </div>
+            }
+          </div>
+          <app-copy-link [link]="result.personalLink"></app-copy-link>
+        }
+      }
+    }
+
+    @if (errorMessage) {
+      <app-alert-banner [message]="errorMessage" (dismissed)="errorMessage = ''"></app-alert-banner>
+    }
+
+    <div class="actions">
+      @if (step === 'done') {
+        <button mat-flat-button type="button" class="action-primary" (click)="continue()">
+          <div class="btn-content">
+            <span>Start playing</span>
+            <mat-icon aria-hidden="true">arrow_forward</mat-icon>
+          </div>
+        </button>
+      } @else {
+        @if (stepIndex > 1) {
+          <button mat-stroked-button type="button" class="action-secondary" [disabled]="isBusy" (click)="back()">Back</button>
+        }
+        @if (step === 'signin') {
+          <button mat-flat-button type="submit" class="action-primary" [disabled]="isSigningIn">
+            @if (isSigningIn) {
+              <mat-spinner diameter="20" aria-label="Signing in"></mat-spinner>
+            } @else {
+              Sign in
+            }
+          </button>
+        } @else if (step === 'meeting') {
+          <button
+            mat-flat-button
+            type="submit"
+            class="action-primary"
+            [disabled]="meetingOn === null || isSubmitting || form.invalid"
+          >
+            @if (isSubmitting) {
+              <mat-spinner diameter="20" aria-label="Creating your player"></mat-spinner>
+            } @else {
+              {{ signedInId ? 'Finish my player' : 'Create my player' }}
+            }
+          </button>
+        } @else {
+          <button mat-flat-button type="submit" class="action-primary" [disabled]="step === 'handle' && !isHandleValid">
+            {{ step === 'topics' && selectedTopics.length === 0 ? 'Skip' : 'Next' }}
+          </button>
+        }
+      }
+    </div>
+  </form>
+</div>
