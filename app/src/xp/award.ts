@@ -199,22 +199,44 @@ export async function claimOnce(event: IXpEvent): Promise<boolean> {
   return writeEvent(event, true);
 }
 
+async function releaseClaim(eventId: string): Promise<void> {
+  try {
+    await getEsClient().delete({ index: indexNames.XP_EVENTS, id: eventId }, { ...esOptions(esTimeouts.WRITE_MS), ignore: [404] });
+  } catch (error) {
+    logger.error({ err: error, eventId }, 'failed to release xp claim after award failure');
+  }
+}
+
+async function applyClaimed(event: IXpEvent, claimed: boolean): Promise<IAttendeeInventoryDoc> {
+  try {
+    return await applyToAttendee(event);
+  } catch (error) {
+    if (claimed) {
+      await releaseClaim(event.id);
+    }
+
+    throw error;
+  }
+}
+
 async function runAward(award: IAwardXpInput, onceKey?: string): Promise<IAwardXpOutcome | undefined> {
   return tracer.startActiveSpan(
     'xp.award',
-    { attributes: { 'kubequest.attendee.id': award.attendeeId, 'kubequest.xp.type': award.type, 'kubequest.xp.awarded': award.xp } },
+    { attributes: { 'kubequest.attendee.id': award.attendeeId, 'kubequest.xp.type': award.type } },
     async (span) => {
       try {
         const event = buildEvent({ ...award, xp: Math.max(0, Math.round(award.xp)) }, onceKey ?? randomUUID());
 
         if (onceKey !== undefined && !(await writeEvent(event, true))) {
           span.setAttribute('kubequest.xp.already_paid', true);
+          span.setAttribute('kubequest.xp.awarded', 0);
           span.setStatus({ code: SpanStatusCode.OK });
 
           return undefined;
         }
 
-        const totals = await applyToAttendee(event);
+        const totals = await applyClaimed(event, onceKey !== undefined);
+        span.setAttribute('kubequest.xp.awarded', event.xp);
 
         if (onceKey === undefined) {
           await writeEvent(event, false);
