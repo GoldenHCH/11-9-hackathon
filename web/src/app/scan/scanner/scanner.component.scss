@@ -211,6 +211,57 @@
   button {
     margin-top: 4px;
   }
+
+  .manual-open.mat-mdc-button-disabled,
+  .manual-open:disabled {
+    color: var(--kq-text) !important;
+
+    .mdc-button__label {
+      color: var(--kq-text) !important;
+    }
+  }
+}
+
+.visually-hidden-file {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.scanner-actions--row {
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.scanner-actions--stack {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+
+  .mat-mdc-outlined-button {
+    width: 100%;
+  }
+}
+
+.fallback-note,
+.my-code-hint {
+  margin: 0;
+  color: var(--kq-muted);
+  font-size: 13px;
+  text-align: center;
+}
+
+.my-code {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 440px;
+  margin: 16px auto 0;
 }
 
 .manual-title {

@@ -494,11 +494,30 @@ export class VenueSchematicComponent implements OnChanges, AfterViewInit, OnDest
     const you = pins.find((pin) => pin.kind === 'you');
     const target = pins.find((pin) => pin.id === this.routeToPinId);
 
-    return you && target ? { x1: you.point.x, y1: you.point.y, x2: target.point.x, y2: target.point.y } : null;
+    const end = target ? this.pinPoint(target) : null;
+
+    return you && end ? { x1: you.point.x, y1: you.point.y, x2: end.x, y2: end.y } : null;
   }
 
   public pinTransform(pin: IMapPin): string {
-    return `translate(${pin.point.x} ${pin.point.y})`;
+    const point = this.pinPoint(pin);
+
+    return `translate(${point.x} ${point.y})`;
+  }
+
+  public pinPoint(pin: IMapPin): { x: number; y: number } {
+    if (pin.kind === 'you') {
+      return pin.point;
+    }
+
+    const size = this.pinSize;
+    const overlaps = (other: IMapPin): boolean => Math.hypot(other.point.x - pin.point.x, other.point.y - pin.point.y) < size * 0.9;
+    const pins = this.levelPins;
+    const youShare = pins.some((other) => other.kind === 'you' && overlaps(other));
+    const earlierQuests = pins.filter((other) => other.kind === 'quest' && overlaps(other)).findIndex((other) => other.id === pin.id);
+    const slot = Math.max(0, earlierQuests) + (youShare ? 1 : 0);
+
+    return slot === 0 ? pin.point : { x: pin.point.x + size * 1.1 * slot, y: pin.point.y - size * 0.35 * slot };
   }
 
   public pinAriaLabel(pin: IMapPin): string {

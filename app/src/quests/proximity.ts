@@ -1,4 +1,5 @@
 import type { estypes } from '@elastic/elasticsearch';
+import { boothNotePending } from '../booth/booth-notes';
 import { esOptions, getEsClient } from '../es/client';
 import { esTimeouts, indexNames } from '../es/es.constants';
 import { sharedTopics, toMatchPlayer } from '../match/match-data';
@@ -25,6 +26,7 @@ export const proximityRules = {
   LATER_TALK_HOURS: 24,
 } as const;
 
+export const hereNoteHint = 'You’re here: add your note';
 export const noLocationHint = 'Scan any QR to get quests near you';
 export const skybridgeLabel = `Across the skybridge · ${walkTimes.OTHER_BUILDING} min`;
 
@@ -285,6 +287,34 @@ export async function nearbyCandidates(context: IOfferContext): Promise<IQuest[]
   return results.flat();
 }
 
+const BOOTH_QUEST_TYPES = new Set<QuestType>(['outpost', 'photo']);
+
+function boothLocationId(quest: IQuest): string | undefined {
+  return quest.locationId ?? quest.where?.locationId;
+}
+
+export async function withoutCurrentBooth(context: IOfferContext, quests: IQuest[]): Promise<IQuest[]> {
+  const hereId = context.attendee.lastLocationId;
+
+  if (!hereId || !quests.some((quest) => BOOTH_QUEST_TYPES.has(quest.type) && boothLocationId(quest) === hereId)) {
+    return quests;
+  }
+
+  const notePending = await boothNotePending(context.attendee.id, hereId).catch(() => false);
+
+  return quests.flatMap((quest) => {
+    if (!BOOTH_QUEST_TYPES.has(quest.type) || boothLocationId(quest) !== hereId) {
+      return [quest];
+    }
+
+    if (quest.type !== 'outpost' || !notePending) {
+      return [];
+    }
+
+    return [{ ...quest, directionHint: hereNoteHint, nextStep: 'Open your booth notes and add what you liked to finish this quest.' }];
+  });
+}
+
 export async function questsNearPlayer(context: IOfferContext, quests: IQuest[]): Promise<IQuest[]> {
-  return placeByProximity(context, await locateChats(context, quests));
+  return withoutCurrentBooth(context, await placeByProximity(context, await locateChats(context, quests)));
 }
