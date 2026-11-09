@@ -14,7 +14,8 @@
   "scripts": {
     "dev": "concurrently --kill-others-on-fail --names api,web --prefix-colors cyan,magenta \"npm run dev -w app\" \"npm run start -w web\"",
     "dev:api": "npm run dev -w app",
-    "build": "if [ -f web/package.json ]; then npm run build -w web; fi && npm run build -w app",
+    "build": "if [ -f web/package.json ]; then npm run build -w web; fi && npm run build -w app && npm run build:scripts",
+    "build:scripts": "esbuild scripts/index-all.ts --bundle --platform=node --target=node22 --packages=external --outfile=scripts/dist/index-all.js",
     "typecheck": "tsc -b shared app && tsc -p scripts/tsconfig.json --noEmit",
     "lint": "eslint .",
     "index-all": "tsx scripts/index-all.ts",
@@ -23,6 +24,7 @@
   "devDependencies": {
     "@eslint/js": "10.0.1",
     "concurrently": "10.0.7",
+    "esbuild": "0.28.2",
     "eslint": "10.14.0",
     "tsx": "4.23.15",
     "typescript": "5.9.3",

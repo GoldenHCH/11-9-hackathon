@@ -10,6 +10,16 @@ const batchSize = 50;
 
 async function main(): Promise<void> {
   const config = ConfigHelper.fromEnv(process.env);
+  const store = new ResourceStoreService(config.resourcesDir, config.seedNow);
+  const problems = store.findIndexingProblems();
+
+  if (problems.length > 0) {
+    console.error(`index-all: refusing to index, the seed data in ${config.resourcesDir} is incomplete:`);
+    problems.forEach((problem) => console.error(`  - ${problem}`));
+    console.error('Run the ingest and seed scripts first, or point RESOURCES_DIR at the right folder.');
+    process.exit(1);
+  }
+
   const esClient = new EsClientService({ ...config.elastic, requestTimeoutMs: esTimeouts.BULK_MS });
 
   if (!esClient.enabled) {
@@ -17,7 +27,6 @@ async function main(): Promise<void> {
     process.exit(1);
   }
 
-  const store = new ResourceStoreService(config.resourcesDir, config.seedNow);
   const ingest = new EsIngestService(esClient, store, new EsIndicesService(esClient));
 
   console.log(`index-all: reading ${config.resourcesDir}, inference endpoint ${config.elastic.inferenceId}`);

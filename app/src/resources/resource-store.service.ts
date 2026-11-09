@@ -1,7 +1,7 @@
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 import type { IAttendee, IIntro, ILocation, ISeedMeta, ISession, IXpEvent } from '@kubequest/shared';
-import { resourceFiles, transcriptsDirName } from './resource.constants';
+import { requiredForIndexing, resourceFiles, transcriptsDirName } from './resource.constants';
 import type { IResourceBundle } from './resource.interfaces';
 
 export class ResourceStoreService {
@@ -89,6 +89,24 @@ export class ResourceStoreService {
 
   public addIntro(intro: IIntro): void {
     this._load().intros.push(intro);
+  }
+
+  public findIndexingProblems(): string[] {
+    return requiredForIndexing.flatMap((fileName) => {
+      const filePath = path.join(this._resourcesDir, fileName);
+
+      if (!fs.existsSync(filePath)) {
+        return [`${fileName} is missing`];
+      }
+
+      try {
+        const content: unknown = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+
+        return Array.isArray(content) && content.length > 0 ? [] : [`${fileName} is empty`];
+      } catch {
+        return [`${fileName} is not valid JSON`];
+      }
+    });
   }
 
   public readTranscript(talkId: string): string | undefined {

@@ -51,3 +51,4 @@ node_modules/
 /web/.angular/
 *.tsbuildinfo
 /app/public/
+/scripts/dist/

@@ -1,9 +1,20 @@
+import * as fs from 'node:fs';
 import * as path from 'node:path';
 import { configDefaults } from './config.constants';
 import type { IAppConfig } from './config.interfaces';
 
 export class ConfigHelper {
   public static repoRoot(): string {
+    let directory = __dirname;
+
+    while (path.dirname(directory) !== directory) {
+      if (fs.existsSync(path.join(directory, 'app', 'package.json'))) {
+        return directory;
+      }
+
+      directory = path.dirname(directory);
+    }
+
     return path.resolve(__dirname, '..', '..', '..');
   }
 

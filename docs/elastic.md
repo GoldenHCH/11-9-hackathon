@@ -34,7 +34,17 @@ cp .env.example .env
 npm run index-all
 ```
 
-It prints the document count per index at the end. It needs only environment variables, so it also runs as a one-shot Job in the cluster.
+It prints the document count per index at the end. Before it touches Elasticsearch it checks that `sessions.json`, `locations.json`, `attendees.seed.json`, `xp-events.seed.json` and `intros.seed.json` exist and are non-empty JSON arrays; if any is missing it lists the problems and exits with code 1 instead of indexing nothing.
+
+### As a one-shot Job
+
+The app image ships a compiled copy of the script (`npm run build:scripts` bundles it to `scripts/dist/index-all.js` during the image build) and the `resources/` folder, so a Kubernetes Job can reuse the app image and run:
+
+```bash
+node scripts/dist/index-all.js
+```
+
+The container needs only environment variables: `ELASTIC_URL`, `ELASTIC_API_KEY` and, optionally, `ELASTIC_INFERENCE_ID`, for example from the `app-credentials` Secret with `envFrom`. The working directory in the image is `/repo`, where the script finds `resources/`.
 
 ## Hybrid people query
 

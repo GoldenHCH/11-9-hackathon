@@ -7,4 +7,12 @@ export const resourceFiles = {
   SEED_META: 'seed-meta.json',
 } as const;
 
+export const requiredForIndexing: readonly string[] = [
+  resourceFiles.SESSIONS,
+  resourceFiles.LOCATIONS,
+  resourceFiles.ATTENDEES,
+  resourceFiles.XP_EVENTS,
+  resourceFiles.INTROS,
+];
+
 export const transcriptsDirName = 'transcripts';
