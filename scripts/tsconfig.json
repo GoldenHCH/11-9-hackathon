@@ -2,8 +2,7 @@
   "extends": "../app/tsconfig.json",
   "compilerOptions": {
     "rootDir": "..",
-    "noEmit": true,
-    "typeRoots": ["../app/node_modules/@types", "../node_modules/@types"]
+    "noEmit": true
   },
   "include": ["*.ts", "../app/src/**/*.ts"],
   "exclude": ["build-fixtures.ts"]
