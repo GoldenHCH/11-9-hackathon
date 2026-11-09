@@ -28,4 +28,8 @@ export class ToolsService {
 
     return options.background ? request : this._loadingService.track(request);
   }
+
+  public upload<TResult>(path: string, form: FormData): Observable<TResult> {
+    return this._http.post<TResult>(`${environment.apiBaseUrl}/${path}`, form);
+  }
 }

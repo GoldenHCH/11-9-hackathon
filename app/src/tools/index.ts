@@ -33,6 +33,7 @@ import { recapTool } from './recap.tool';
 import { saveBoothNoteTool } from './save-booth-note.tool';
 import { sendMessageTool } from './send-message.tool';
 import { startHandshakeTool } from './start-handshake.tool';
+import { importProfileTool } from './import-profile.tool';
 import { IRegisteredTool } from './define-tool';
 
 export const toolRegistry = {
@@ -70,6 +71,7 @@ export const toolRegistry = {
   send_message: sendMessageTool,
   list_messages: listMessagesTool,
   recap: recapTool,
+  import_profile: importProfileTool,
 } satisfies { [TName in ToolName]: IRegisteredTool<TName> };
 
 export function findTool(name: string): IRegisteredTool | undefined {

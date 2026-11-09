@@ -57,6 +57,10 @@ export function buildIndexMappings(inferenceId: string): Record<IndexName, Prope
       spotMe: unindexedKeyword,
       workingOn: text,
       headline: text,
+      skills: keyword,
+      offers: text,
+      asks: text,
+      summary: text,
       profileText: semanticText(inferenceId),
       profile: {
         properties: {

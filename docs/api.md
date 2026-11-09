@@ -22,6 +22,7 @@ JSON in this doc is trimmed: long strings end in `…` and `"…N more"` stands 
 | `GET /r/:locationId?t=<token>` | Printed and on-screen QR codes open this. With the Angular build it serves the SPA (the scan-result route); without it, it returns the JSON in `fixtures/scan_route.json`. |
 | `GET /h/<token>` | A handshake QR (from `handshake_code`) opens this. With the Angular build it serves the SPA; read the token from the path segment and call `start_handshake`. Without the build it returns a JSON hint. |
 | `GET /api/recap/:attendeeId/email.html` | The player's recap email (`recap.emailHtml`) as `text/html`. A mock of it is in `docs/mock/recap-email.html`; no email is sent. |
+| `POST /api/profile-import` | Multipart form: `attendeeId` plus a `file` field holding a resume or LinkedIn PDF (max 5 MB). Reads the text in memory and returns the same JSON as `import_profile`; the file is never written to disk or Elastic. `413 file_too_large`, `415 not_a_pdf`, `422 unreadable_pdf`, `429 rate_limited`. |
 | `GET /healthz`, `GET /readyz` | Liveness, and readiness that pings Elasticsearch: `{"status":"ok","version":"dev","elasticsearch":"reachable"}`. |
 
 `/api/config` from this server:
@@ -146,7 +147,11 @@ Errors: `400 invalid_input` for a missing name or a malformed email (`"email: In
 
 ### sign_up (awards XP)
 
-Required: `handle` (3 to 20 chars, `^[a-z0-9_.-]+$`, unless `attendeeId` is sent), `workingOn`, `firstKubeCon`, `meetingOn`. Optional: `attendeeId`, `happyToWelcome`, `topics` (up to 5), `spotMe`, `githubLogin`, `realName`, `accessibleMode`, `noWalking`, `scanLocationId`, `scanToken`.
+Required: `handle` (3 to 20 chars, `^[a-z0-9_.-]+$`, unless `attendeeId` is sent), `workingOn`, `firstKubeCon`, `meetingOn`. Optional: `attendeeId`, `happyToWelcome`, `topics` (up to 5), `spotMe`, `githubLogin`, `realName`, `accessibleMode`, `noWalking`, `scanLocationId`, `scanToken`, and from a confirmed `import_profile`: `headline` (≤120), `skills` (≤20), `offers` (≤8), `asks` (≤8), `summary` (≤1200). Emails, phones and links are stripped from those again on save.
+
+`topics` may be presets or the player's own (for example `"Kueue"`). Each is trimmed and whitespace-collapsed; a preset matched case-insensitively is stored with its preset label, anything else is stripped to letters, digits, spaces and `- + . # /`, must be 2 to 30 characters, is dropped if it looks like an email or URL, and is stored lowercased (`"kueue"`). Duplicates are dropped; at most 5.
+
+`summary`, `skills`, `offers` and `asks` go into `profileText` (the semantic embedding used by `recommend_people`) and are returned only in the player's own profile. `get_profile` with `targetId`, `recommend_people`, `search`, meets, handshakes and the leaderboard never include them.
 
 ```json
 {"handle":"verify93279","workingOn":"Running GPU inference on Kubernetes with autoscaling","firstKubeCon":true,"happyToWelcome":false,"topics":["ai","gpu","autoscaling"],"meetingOn":true,"spotMe":"Green hoodie","scanLocationId":"salt-palace-level-1-150-defg","scanToken":"<signed-token>"}
@@ -163,6 +168,16 @@ Required: `handle` (3 to 20 chars, `^[a-z0-9_.-]+$`, unless `attendeeId` is sent
 `checkIn` is present only when `scanLocationId` was sent, and has the `check_in` shape. A taken handle returns `409 handle_taken`.
 
 With `attendeeId` (a player from `sign_in` finishing onboarding), `sign_up` updates that player's profile fields instead of creating one; `handle` is optional and changes the handle only when sent and free. The starter block is awarded once, on the first onboarding. An unknown `attendeeId` returns `404 unknown_attendee`. Without `attendeeId` and without `handle`, it returns `400 invalid_input` (`handle: handle is required to create a player`).
+
+### import_profile
+
+`{"attendeeId":"p_…","text":"<pasted resume or LinkedIn text>"}` returns a suggested profile. Nothing is saved: show it for review, let the player edit it, then send the confirmed fields to `sign_up` with `attendeeId`. For a PDF, use `POST /api/profile-import` (see Other routes); it returns the same shape.
+
+```json
+{"headline":"Platform Engineer scaling GitOps for 200+ services","role":"Senior Platform Engineer","seniority":"senior","skills":["Kubernetes","GitOps","Argo CD","Backstage","Helm"],"topics":["Platform engineering","GitOps","Observability"],"workingOn":"Building internal developer platforms on Kubernetes with Argo CD and Backstage","offers":["GitOps at scale","Backstage setup"],"asks":["Kueue batch scheduling","GPU inference with vLLM"],"summary":"Senior platform engineer leading internal developer platforms…","provider":"agent_builder"}
+```
+
+The text is capped at 12,000 characters; emails, phone numbers and URLs are removed before the model sees it, and the raw text is never returned or stored. `topics` come only from the preset list. The model has a 10 s budget (Agent Builder usually takes 10 to 15 s); past it you get `provider: "fallback"` (keyword skills and topics, the first two sentences as `summary`) in about 10.3 s. The model keeps running and its answer is cached for 30 minutes, so calling again with the same text (or re-uploading the same PDF) about 5 s later returns `provider: "agent_builder"` in under 0.1 s; the onboarding screen does that once automatically. Limit: 5 calls per player per hour (cached repeats are free), else `429 rate_limited`. Under 40 readable characters returns `400 not_enough_text`. Fixture: `resources/fixtures/import_profile.json`.
 
 ### get_profile
 
