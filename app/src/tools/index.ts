@@ -1,6 +1,7 @@
 import { connectionToolRegistry } from '../connections/connection-tools';
 import { ToolName } from '../types/kubequest.types';
 import { adminOverviewTool } from './admin-overview.tool';
+import { askGuideTool } from './ask-guide.tool';
 import { bossStateTool } from './boss-state.tool';
 import { checkInTool } from './check-in.tool';
 import { exhibitorDashboardTool } from './exhibitor-dashboard.tool';
@@ -64,6 +65,7 @@ export const toolRegistry = {
   search: searchTool,
   recommend_talks: recommendTalksTool,
   recommend_people: recommendPeopleTool,
+  ask_guide: askGuideTool,
   quest_board: questBoardTool,
   respond_quest: respondQuestTool,
   make_quest: makeQuestTool,

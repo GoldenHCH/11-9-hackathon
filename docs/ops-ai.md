@@ -2,20 +2,27 @@
 
 Code: `app/src/ai/`. Tools never call a model. They call `generateJson` or `chatPrompt` from here.
 
+**Deliberate exception: `ask_guide`.** It is the one registered tool whose whole job is a model answer: the grounded Agent Builder guide (`app/src/ai/guide.ts`). Cost and nondeterminism are bounded. At most one agent call runs per attendee and interest at a time, an answer is cached for 10 minutes, a call is capped at 30 s, and the tool answers within about 10 s with the deterministic, reranked `recommend_talks` picks when the agent is slow or fails. Talk ids the agent returns are verified against the index before they are shown. Nothing that walks the registry on a schedule should call it, and `recommend_talks` stays the deterministic tool for MCP and CronJob use.
+
 ## How a call flows
 
 1. `generateJson(purpose, prompt, validate, fallback)` opens span `ai.generate` with `kubequest.ai.purpose`, `kubequest.ai.provider`, `kubequest.ai.cache_hit`, `kubequest.ai.attempts`, `kubequest.ai.duration_ms`, and `kubequest.ai.inference_id` for the endpoint that answered.
 2. In-memory cache (sha256 of purpose + prompt, 30 min TTL, 500 entries).
-3. If `ELASTIC_AGENT_ID` is set: Kibana Agent Builder `POST {kibana}/api/agent_builder/converse` (`agent_id`, `input`), 8 s timeout. A 401, 403 or 404 trips a 5 minute agent breaker.
+3. Kibana Agent Builder `POST {kibana}/api/agent_builder/converse` with agent `ELASTIC_AGENT_ID` (default `kubequest-writer`), 15 s timeout. A 401, 403 or 404 trips a 5 minute agent breaker.
 4. Then the Elastic inference API `POST _inference/completion/{id}` for each id in `ELASTIC_COMPLETION_INFERENCE_ID` (comma-separated; default `.anthropic-claude-5-sonnet-completion,.gp-llm-v2-completion`), 8 s timeout, no client retry. A 401, 403 or 404 trips a 5 minute breaker for that id and moves to the next id. Any other error stops the chain.
 5. The answer is parsed as JSON and checked by the zod-backed validator. One retry on invalid output.
+   Each purpose has a time budget (`aiSettings.BUDGET_MS`, for example 1.5 s for a handshake question). When the budget runs out, an `AbortSignal` cancels the agent or inference request that is still running, and no later attempt starts. The span records `kubequest.ai.aborted`.
 6. Deterministic `fallback()` otherwise. With every breaker open, calls go straight to the fallback with no added latency.
 
 Each failure logs `status` and `reason` (Elasticsearch `error.type: error.reason`, or Kibana's message), and adds span event `ai.inference_error` with `inference_id`, `status`, `reason`. The key is never logged.
 
 Kibana URL: `KIBANA_URL`, or `ELASTIC_URL` with `.es.` replaced by `.kb.`.
 
-## Diagnosis on 2026-11-09 (real calls with key `kube-quest-app`)
+## Current state (checked 2026-11-09, 22:22 UTC, from a Job in the cluster)
+
+`_has_privileges` for the app's key returns `true` for `feature_agentBuilder.all`, `feature_agentBuilder.read`, `feature_workflowsManagement.all` and `feature_actions.read` on `space:default`. Converse, tool and agent management, and Workflow updates all work. No extra grant is needed. The 403s below are from the morning, before those privileges were added.
+
+## Diagnosis on 2026-11-09, morning (real calls with key `kube-quest-app`)
 
 Key role descriptor `kubequest_app`: cluster `monitor`, `monitor_inference`, `manage_inference`; indices `talks`, `attendees`, `locations`, `xp_events`, `intros`, `quests` (`all`); applications `[]`.
 
@@ -70,8 +77,8 @@ In Kibana Dev Tools, signed in as a project admin, run `POST /_security/api_key`
 Then:
 
 1. Put the new `encoded` value in `.env` as `ELASTIC_API_KEY` and in the `app-credentials` Secret (through Radar; never in git or a log).
-2. Run `ensureKubequestAgent()` from `app/src/ai/agent-builder.ts` once. It creates agent `kubequest-game-master` (expect 200; 409 means it already exists).
-3. Set `ELASTIC_AGENT_ID=kubequest-game-master` in `.env` and in the Secret, then restart `app`.
+2. Run `ensureKubequestAgent()` from `app/src/ai/agent-builder.ts` once. It creates or updates the ES|QL tools `kubequest.upcoming_talks` and `kubequest.people_like`, and agent `kubequest-writer` with those tools.
+3. `ELASTIC_AGENT_ID=kubequest-writer` is set in `deploy/deployment.yaml` (and is the default in code).
 4. Check the `ai.generate` span: `kubequest.ai.provider` should be `agent_builder` or `inference`, not `fallback`.
 
 Agent ids created: none yet (blocked by privileges).

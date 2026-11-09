@@ -1,0 +1,60 @@
+# On every pull request: build what the image builds, run the tests and render
+# the manifests, so a broken change fails here (where Gitar can diagnose it)
+# instead of in build-and-deploy after the merge.
+name: ci
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            frontend/package-lock.json
+
+      - name: Install
+        run: npm ci --no-audit --no-fund
+
+      - name: Typecheck (shared, app, scripts)
+        run: npm run typecheck
+
+      - name: Build API
+        run: npm run build -w app
+
+      - name: Build web
+        run: npm run build -w web
+
+      - name: Build scripts bundle
+        run: npm run build:scripts
+
+      - name: Build landing page
+        run: |
+          npm ci --prefix frontend --no-audit --no-fund
+          npm run build --prefix frontend
+
+      - name: Unit tests
+        run: find app/src shared scripts -name '*.test.ts' -not -path '*/node_modules/*' -print0 | xargs -0 -r npx tsx --test
+
+  manifests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Render deploy/ with kustomize
+        run: kustomize build deploy/ > /dev/null

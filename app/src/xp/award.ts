@@ -140,8 +140,8 @@ async function applyToAttendee(event: IXpEvent): Promise<IAttendeeInventoryDoc> 
   return response.get?._source ?? {};
 }
 
-async function appendBanner(attendeeId: string, banner: BannerId): Promise<void> {
-  await getEsClient().update(
+async function appendBanner(attendeeId: string, banner: BannerId): Promise<boolean> {
+  const response = await getEsClient().update(
     {
       index: indexNames.ATTENDEES,
       id: attendeeId,
@@ -150,6 +150,8 @@ async function appendBanner(attendeeId: string, banner: BannerId): Promise<void>
     },
     esOptions(esTimeouts.WRITE_MS),
   );
+
+  return response.result === 'updated';
 }
 
 async function loadAttendeeDoc(attendeeId: string): Promise<IAttendeeInventoryDoc> {
@@ -168,9 +170,9 @@ export async function awardDueBanners(attendeeId: string, known?: ILedgerSummary
   for (const banner of bannersDue(summary)) {
     const badge = buildEvent({ attendeeId, type: 'badge', xp: 0, banner }, `${attendeeId}:badge:${banner}`);
     const created = await writeEvent(badge, true);
+    const appended = await appendBanner(attendeeId, banner);
 
-    if (created) {
-      await appendBanner(attendeeId, banner);
+    if (created || appended) {
       kubequestMetrics().xpAwarded.add(0, { 'kubequest.xp.type': 'badge', 'kubequest.banner': banner });
       summary.earnedBanners[banner] = badge.at;
       awarded.push(banner);

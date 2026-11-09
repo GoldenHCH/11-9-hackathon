@@ -1,4 +1,5 @@
 import { AttendeeGoal, IAttendeeIntent } from '../types/intent.interfaces';
+import { IAttendee, IQuest } from '../types/kubequest.interfaces';
 import { QuestType } from '../types/kubequest.types';
 import type { ICandidate, IOfferContext } from './offers';
 
@@ -68,6 +69,14 @@ function lotsMix(candidates: ICandidate[]): ICandidate[] {
 
 function socialMixFor(intent: IAttendeeIntent): 'light' | 'some' | 'lots' {
   return intent.goals.includes('booth') && intent.socialLevel === 'some' ? 'lots' : intent.socialLevel;
+}
+
+export function orderForIntent(attendee: IAttendee, offers: IQuest[]): IQuest[] {
+  if (!attendee.intent || socialMixFor(attendee.intent) !== 'light') {
+    return offers;
+  }
+
+  return [...offers.filter((quest) => quest.type !== 'chat'), ...offers.filter((quest) => quest.type === 'chat')];
 }
 
 export function shapeForIntent(context: IOfferContext, candidates: ICandidate[]): ICandidate[] {

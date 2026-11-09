@@ -1,7 +1,7 @@
 import type { estypes } from '@elastic/elasticsearch';
 import { esOptions, getEsClient } from '../es/client';
 import { esTimeouts, indexNames } from '../es/es.constants';
-import { logger } from '../observability/logger';
+import { rerankRetriever, searchWithFallbacks } from '../es/rerank';
 import { IAttendee, ITalk, ITalkMatch } from '../types/kubequest.interfaces';
 import {
   checkedInTalkIds,
@@ -69,30 +69,25 @@ async function hybridTalks(
     return response.hits.hits;
   }
 
-  try {
+  const hybrid: estypes.RetrieverContainer = {
+    rrf: {
+      retrievers: [
+        { standard: { query: { bool: { filter: [filter], must: [{ semantic: { field: 'searchText', query: queryText } }] } } } },
+        { standard: { query: keywordQuery(attendee, queryText, filter) } },
+      ],
+      rank_window_size: Math.max(50, size),
+      rank_constant: 20,
+    },
+  };
+  const byRetriever = async (retriever: estypes.RetrieverContainer): Promise<estypes.SearchHit<ITalk>[]> => {
     const response = await client.search<ITalk>(
-      {
-        index: indexNames.TALKS,
-        size,
-        _source_excludes: talkSourceExcludes,
-        retriever: {
-          rrf: {
-            retrievers: [
-              { standard: { query: { bool: { filter: [filter], must: [{ semantic: { field: 'searchText', query: queryText } }] } } } },
-              { standard: { query: keywordQuery(attendee, queryText, filter) } },
-            ],
-            rank_window_size: Math.max(50, size),
-            rank_constant: 20,
-          },
-        },
-      },
+      { index: indexNames.TALKS, size, _source_excludes: talkSourceExcludes, retriever },
       esOptions(esTimeouts.SEARCH_MS),
     );
 
     return response.hits.hits;
-  } catch (error) {
-    logger.warn({ err: error }, 'hybrid talk search failed, falling back to keyword search');
-
+  };
+  const keywordOnly = async (): Promise<estypes.SearchHit<ITalk>[]> => {
     const response = await client.search<ITalk>(
       {
         index: indexNames.TALKS,
@@ -104,7 +99,14 @@ async function hybridTalks(
     );
 
     return response.hits.hits;
-  }
+  };
+  const { result } = await searchWithFallbacks('talks', [
+    { mode: 'reranked', run: () => byRetriever(rerankRetriever(hybrid, 'searchText', queryText, size)) },
+    { mode: 'hybrid', run: () => byRetriever(hybrid) },
+    { mode: 'lexical', run: keywordOnly },
+  ]);
+
+  return result;
 }
 
 function reasonFor(attendee: IAttendee, talk: ITalk, startsInMinutes: number): string {

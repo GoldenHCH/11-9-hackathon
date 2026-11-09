@@ -1,11 +1,11 @@
 import type { estypes } from '@elastic/elasticsearch';
 import { esOptions, getEsClient } from '../es/client';
 import { esTimeouts, indexNames } from '../es/es.constants';
-import { logger } from '../observability/logger';
+import { rerankRetriever, searchWithFallbacks } from '../es/rerank';
 import { gameRules } from '../types/kubequest.constants';
 import { IAttendee, IIntro, IPersonMatch } from '../types/kubequest.interfaces';
 import { worldNow } from '../world/clock';
-import { exploringQueryText, exploringRetrieverQuery, intentBoosts, intentReason, lightLimitQuery, matchSourceExcludes, playersMatchedToday } from './intent-match';
+import { exploringQueryText, exploringRerankText, exploringRetrieverQuery, intentBoosts, intentReason, intentWindow, lightLimitQuery, matchSourceExcludes, playersMatchedToday } from './intent-match';
 import { getAttendee, hitSources, profileQueryText, sharedTopics, toMatchPlayer } from './match-data';
 
 export interface IRecommendPeopleOptions {
@@ -114,38 +114,40 @@ async function hybridPeople(
     return response.hits.hits;
   }
 
-  try {
+  const hybrid: estypes.RetrieverContainer = {
+    rrf: {
+      retrievers: [
+        { standard: { query: { bool: { filter: [filter], must: [{ semantic: { field: 'profileText', query: queryText } }] } } } },
+        { standard: { query: keyword } },
+        ...(exploring ? [{ standard: { query: exploring } }] : []),
+      ],
+      rank_window_size: Math.max(50, size),
+      rank_constant: 20,
+    },
+  };
+  const byRetriever = async (retriever: estypes.RetrieverContainer): Promise<estypes.SearchHit<IAttendee>[]> => {
     const response = await client.search<IAttendee>(
-      {
-        index: indexNames.ATTENDEES,
-        size,
-        _source_excludes: matchSourceExcludes,
-        retriever: {
-          rrf: {
-            retrievers: [
-              { standard: { query: { bool: { filter: [filter], must: [{ semantic: { field: 'profileText', query: queryText } }] } } } },
-              { standard: { query: keyword } },
-              ...(exploring ? [{ standard: { query: exploring } }] : []),
-            ],
-            rank_window_size: Math.max(50, size),
-            rank_constant: 20,
-          },
-        },
-      },
+      { index: indexNames.ATTENDEES, size, _source_excludes: matchSourceExcludes, retriever },
       esOptions(esTimeouts.SEARCH_MS),
     );
 
     return response.hits.hits;
-  } catch (error) {
-    logger.warn({ err: error }, 'hybrid people search failed, falling back to keyword search');
-
+  };
+  const keywordOnly = async (): Promise<estypes.SearchHit<IAttendee>[]> => {
     const response = await client.search<IAttendee>(
       { index: indexNames.ATTENDEES, size, query: keyword, _source_excludes: matchSourceExcludes },
       esOptions(esTimeouts.SEARCH_MS),
     );
 
     return response.hits.hits;
-  }
+  };
+  const { result } = await searchWithFallbacks('people', [
+    { mode: 'reranked', run: () => byRetriever(rerankRetriever(hybrid, 'profileText', exploringRerankText(me) ?? queryText, size)) },
+    { mode: 'hybrid', run: () => byRetriever(hybrid) },
+    { mode: 'lexical', run: keywordOnly },
+  ]);
+
+  return result;
 }
 
 function reasonFor(me: IAttendee, them: IAttendee, shared: string[], sameRoom: boolean): string {
@@ -187,9 +189,8 @@ export async function recommendPeopleFor(attendeeId: string, opts: IRecommendPeo
 
   const [partners, matchedToday] = await Promise.all([excludedPartnerIds(attendeeId, nowMs), playersMatchedToday(startOfTodayIso(nowMs))]);
   const excludeIds = [...new Set([attendeeId, ...(me.blockedIds ?? []), ...partners])];
-  const hits = await hybridPeople(me, peopleFilter(me, excludeIds, hereOnly, matchedToday), limit, nowMs);
-
-  return hits.flatMap((hit) => {
+  const hits = await hybridPeople(me, peopleFilter(me, excludeIds, hereOnly, matchedToday), intentWindow(me, limit), nowMs);
+  const matches = hits.flatMap((hit) => {
     if (!hit._source) {
       return [];
     }
@@ -197,7 +198,10 @@ export async function recommendPeopleFor(attendeeId: string, opts: IRecommendPeo
     const them: IAttendee = { ...hit._source, id: hit._id ?? hit._source.id };
     const shared = sharedTopics(me.profile?.topics ?? [], them.profile?.topics ?? []);
     const sameRoom = me.lastLocationId !== undefined && them.lastLocationId === me.lastLocationId;
+    const match: IPersonMatch = { player: toMatchPlayer(them), score: hit._score ?? 0, sharedTopics: shared, reason: reasonFor(me, them, shared, sameRoom), sameRoom };
 
-    return [{ player: toMatchPlayer(them), score: hit._score ?? 0, sharedTopics: shared, reason: reasonFor(me, them, shared, sameRoom), sameRoom }];
+    return [{ match, fits: intentReason(me, them) !== undefined }];
   });
+
+  return [...matches.filter((entry) => entry.fits), ...matches.filter((entry) => !entry.fits)].slice(0, limit).map((entry) => entry.match);
 }

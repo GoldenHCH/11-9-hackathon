@@ -103,6 +103,7 @@ On a 5xx, double the interval up to 60 s, then reset after a success.
 | Scan result (`/r/:locationId?t=`) | `check_in` if an id is stored, otherwise signup with the scan attached. Then `quiz_for_talk` when `quizAvailable` is true |
 | Itinerary: Now | `whats_around_me`, `boss_state` (boss rooms), `quiz_for_talk`, `submit_quiz` |
 | Itinerary: Next | `whats_next` |
+| Here: Ask the guide | `ask_guide` (call again after a few seconds while `pending` is `true`) |
 | Itinerary tab `/itinerary` | `list_schedule` (What's on), `get_itinerary` (My plan), `add_to_itinerary`, `remove_from_itinerary`, `make_quest` |
 | Search | `search`, `world` (browse by building, level and room), `make_quest` ("Make this a quest") |
 | Quests | `quest_board`, `respond_quest`, `recommend_people`, `recommend_talks`, `propose_meet` |
@@ -335,6 +336,10 @@ A `campfire`, `room` or `outpost` result carries `location`, and a `player` resu
 ### recommend_talks
 
 `{"attendeeId":"p_…","limit":3,"withinMinutes":720}` → `[{"talk":ITalk,"location"?:ILocation,"score":n,"reason":"…","startsInMinutes":n,"walkMinutes"?:n}]`. Today it returns `[]`, because no talk starts within 12 hours.
+
+### ask_guide
+
+`{"attendeeId":"p_…"}` → `{"provider":"agent_builder"|"fallback","pending":bool,"interest":"…","picks":[ITalkMatch],"toolCalls":["kubequest.upcoming_talks"],"droppedPicks":n}`. The Elastic Agent Builder agent `kubequest-writer` picks up to 3 talks with its ES|QL tool (Jina semantic match plus Jina rerank). Each pick's `reason` is the agent's one-line why, and every talk id is checked against the index. While the agent is still working (over 10 s), `provider` is `fallback`, `picks` are the reranked `recommend_talks`, and `pending` is `true`. Call again a few seconds later to get the agent's picks (cached for 10 minutes).
 
 ### recommend_people
 

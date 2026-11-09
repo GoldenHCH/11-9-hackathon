@@ -10,6 +10,7 @@ const EXPLORING_BOOST = 8;
 const ROLE_BOOST = 6;
 const MIN_TEXT_KEYWORD = 3;
 const MIN_WILDCARD_KEYWORD = 5;
+const INTENT_WINDOW = 12;
 
 export const matchSourceExcludes = attendeeSourceExcludes.filter((field) => field !== 'intent' && field !== 'skills' && field !== 'seniority');
 
@@ -62,6 +63,18 @@ export function exploringQueryText(me: IAttendee): string | undefined {
   const field = exploringFieldOf(me);
 
   return field ? `Works on ${field} every day.` : undefined;
+}
+
+export function intentWindow(me: IAttendee, limit: number): number {
+  const targeted = exploringFieldOf(me) !== undefined || goalsOf(me).some((goal) => counterpartGoal(goal) !== undefined);
+
+  return targeted ? Math.max(limit * 3, INTENT_WINDOW) : limit;
+}
+
+export function exploringRerankText(me: IAttendee): string | undefined {
+  const field = exploringFieldOf(me);
+
+  return field ? `An experienced practitioner who works on ${field} every day: ${fieldKeywords(field).join(', ')}.` : undefined;
 }
 
 function counterpartGoal(goal: AttendeeGoal): AttendeeGoal | undefined {
