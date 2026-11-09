@@ -6,7 +6,9 @@ export type {
   IHandshakeStateResult,
   IMatchPlayer,
   IMeet,
+  IItineraryItem,
   IMessage,
+  IPersonMatch,
   IProfile,
   IRecap,
   IRecapBooth,
@@ -14,5 +16,8 @@ export type {
   IRecapTalk,
   IRespondMeetResult,
   ISaveBoothNoteResult,
+  ITalk,
+  IWhatsAroundMe,
+  IWhatsNext,
 } from '../../../../app/src/types/kubequest.interfaces';
 export type { MeetResponse, ToolName } from '../../../../app/src/types/kubequest.types';

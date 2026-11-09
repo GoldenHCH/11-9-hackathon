@@ -1,0 +1,80 @@
+<article class="person kq-block" [class.person--compact]="compact" [attr.aria-label]="'@' + match.player.handle">
+  <div class="person-top">
+    <app-pixel-face
+      [seed]="match.player.faceSeed"
+      [size]="compact ? 40 : 52"
+      [label]="'Face of @' + match.player.handle"
+    ></app-pixel-face>
+    <div class="person-name">
+      <span class="person-handle kq-pixel">&#64;{{ match.player.handle }}</span>
+      <span class="person-level">Lv {{ match.player.level }} · {{ match.player.levelName }}</span>
+    </div>
+    @if (match.player.firstTimer) {
+      <span class="person-tag person-tag--first">First-timer</span>
+    } @else if (isWelcomer) {
+      <span class="person-tag person-tag--welcomer">Welcomer</span>
+    }
+  </div>
+
+  @if (match.player.workingOn) {
+    <p class="person-headline">{{ match.player.workingOn }}</p>
+  }
+
+  @if (match.sharedTopics.length) {
+    <ul class="person-chips" aria-label="Topics you share">
+      @for (topic of match.sharedTopics; track topic) {
+        <li class="person-chip">{{ topic }}</li>
+      }
+    </ul>
+  }
+
+  @if (!compact) {
+    <p class="person-where">
+      <mat-icon class="person-where-icon" aria-hidden="true">{{ match.sameRoom ? 'place' : 'explore' }}</mat-icon>
+      <span>{{ whereLine }}</span>
+    </p>
+  }
+
+  @if (match.reason) {
+    <p class="person-why">
+      <span class="person-why-label">Why</span>
+      <span>{{ match.reason }}</span>
+    </p>
+  }
+
+  <div class="person-actions">
+    @switch (action) {
+      @case ('open') {
+        <a mat-flat-button [routerLink]="['/intro', meet?.id]">
+          <div class="btn-content">
+            <mat-icon>{{ actionIcons[action] }}</mat-icon>
+            <span>{{ actionLabels[action] }}</span>
+          </div>
+        </a>
+      }
+      @case ('waiting') {
+        <button mat-stroked-button type="button" disabled>
+          <div class="btn-content">
+            <mat-icon>{{ actionIcons[action] }}</mat-icon>
+            <span>{{ actionLabels[action] }}</span>
+          </div>
+        </button>
+      }
+      @case ('closed') {
+        <span class="person-closed">{{ actionLabels[action] }}</span>
+      }
+      @default {
+        <button mat-flat-button type="button" [disabled]="isBusy" (click)="onAction()">
+          @if (isBusy) {
+            <mat-spinner diameter="20"></mat-spinner>
+          } @else {
+            <div class="btn-content">
+              <mat-icon>{{ actionIcons[action] }}</mat-icon>
+              <span>{{ actionLabels[action] }}</span>
+            </div>
+          }
+        </button>
+      }
+    }
+  </div>
+</article>
