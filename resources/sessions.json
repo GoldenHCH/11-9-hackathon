@@ -328,6 +328,50 @@
     "geo": {
       "lat": 40.7665,
       "lon": -111.8945
+    },
+    "quiz": {
+      "createdAt": "2026-11-09T20:53:48.334Z",
+      "questions": [
+        {
+          "answerIndex": 1,
+          "id": "q1",
+          "choices": [
+            "Introducing new Kubernetes features for 2027",
+            "Welcome, community news, and the state of cloud native",
+            "Deep dive into container security best practices",
+            "Hands-on workshop for Kubernetes operators"
+          ],
+          "explanation": "The abstract clearly states this is the opening keynote covering welcome, community news, and the state of cloud native from the CNCF and Linux Foundation.",
+          "prompt": "What is the primary focus of this opening keynote session?"
+        },
+        {
+          "answerIndex": 2,
+          "id": "q2",
+          "choices": [
+            "Docker and VMware",
+            "Google and Microsoft",
+            "CNCF and the Linux Foundation",
+            "AWS and Red Hat"
+          ],
+          "explanation": "The abstract specifies that the state of cloud native is presented by the CNCF and the Linux Foundation.",
+          "prompt": "Which organizations are presenting the state of cloud native in this keynote?"
+        },
+        {
+          "answerIndex": 3,
+          "id": "q3",
+          "choices": [
+            "Three speakers",
+            "Four speakers",
+            "Five speakers",
+            "Six speakers"
+          ],
+          "explanation": "The speaker list includes exactly six people: Jonathan Bryce, Chris Aniszczyk, Robert Nishihara, Rita Zhang, Kevin Cochrane, and Bassam Tabbara.",
+          "prompt": "How many speakers are listed for this opening keynote?"
+        }
+      ],
+      "source": "abstract",
+      "talkId": "kc26-tue-keynote-welcome",
+      "generatedBy": "agent_builder"
     }
   },
   {
@@ -375,6 +419,50 @@
     "geo": {
       "lat": 40.7665,
       "lon": -111.8945
+    },
+    "quiz": {
+      "createdAt": "2026-11-09T20:53:33.310Z",
+      "questions": [
+        {
+          "answerIndex": 1,
+          "id": "q1",
+          "choices": [
+            "Building machine learning models for Kubernetes",
+            "Open layers that agentic AI systems need underneath them",
+            "Migrating legacy applications to cloud native platforms",
+            "Security best practices for AI workloads"
+          ],
+          "explanation": "The abstract states this is a keynote on 'the open layers that agentic AI systems need underneath them.'",
+          "prompt": "What is the main focus of this keynote?"
+        },
+        {
+          "answerIndex": 2,
+          "id": "q2",
+          "choices": [
+            "Replace agents entirely with containers",
+            "Monitor agent performance metrics",
+            "Become the substrate that agents run on",
+            "Generate training data for agent models"
+          ],
+          "explanation": "The abstract mentions 'how Kubernetes and cloud native projects can become the substrate that agents run on.'",
+          "prompt": "According to the talk, what role can Kubernetes play for agents?"
+        },
+        {
+          "answerIndex": 2,
+          "id": "q3",
+          "choices": [
+            "Security",
+            "Observability",
+            "AI",
+            "Networking"
+          ],
+          "explanation": "The track is listed as 'ai' in the session information.",
+          "prompt": "Which track does this session belong to?"
+        }
+      ],
+      "source": "abstract",
+      "talkId": "kc26-tue-keynote-agent-substrate",
+      "generatedBy": "agent_builder"
     }
   },
   {
@@ -410,6 +498,50 @@
     "geo": {
       "lat": 40.7665,
       "lon": -111.8945
+    },
+    "quiz": {
+      "createdAt": "2026-11-09T20:54:00.062Z",
+      "questions": [
+        {
+          "answerIndex": 1,
+          "id": "q1",
+          "choices": [
+            "Supervised learning",
+            "Reinforcement learning",
+            "Unsupervised learning",
+            "Transfer learning"
+          ],
+          "explanation": "The talk title and abstract explicitly state it covers reinforcement learning workloads on Kubernetes.",
+          "prompt": "What type of machine learning workload does this talk focus on?"
+        },
+        {
+          "answerIndex": 2,
+          "id": "q2",
+          "choices": [
+            "TensorFlow Serving",
+            "Kubeflow",
+            "OpenRL",
+            "Ray"
+          ],
+          "explanation": "The talk specifically discusses using OpenRL to run reinforcement learning on Kubernetes.",
+          "prompt": "Which framework is used in this talk for running ML workloads on Kubernetes?"
+        },
+        {
+          "answerIndex": 1,
+          "id": "q3",
+          "choices": [
+            "Data ingestion and model serving",
+            "Rollout pods and training loops",
+            "Feature engineering and hyperparameter tuning",
+            "Model validation and deployment pipelines"
+          ],
+          "explanation": "The abstract explicitly mentions 'from rollout pods to training loops' as components covered in the talk.",
+          "prompt": "What are two components of reinforcement learning workflows mentioned in this talk?"
+        }
+      ],
+      "source": "abstract",
+      "talkId": "kc26-tue-keynote-openrl",
+      "generatedBy": "agent_builder"
     }
   },
   {
@@ -441,6 +573,50 @@
     "geo": {
       "lat": 40.7665,
       "lon": -111.8945
+    },
+    "quiz": {
+      "createdAt": "2026-11-09T20:53:33.310Z",
+      "questions": [
+        {
+          "answerIndex": 0,
+          "id": "q1",
+          "choices": [
+            "Workload identity for AI agents",
+            "Network security for Kubernetes pods",
+            "Container image scanning techniques",
+            "AI model training optimization"
+          ],
+          "explanation": "The abstract states this is a keynote on workload identity for AI agents.",
+          "prompt": "What is the main focus of this keynote?"
+        },
+        {
+          "answerIndex": 1,
+          "id": "q2",
+          "choices": [
+            "Application Development",
+            "Security",
+            "Observability",
+            "Platform Engineering"
+          ],
+          "explanation": "The track is listed as security.",
+          "prompt": "Which track does this talk belong to?"
+        },
+        {
+          "answerIndex": 2,
+          "id": "q3",
+          "choices": [
+            "How to deploy them faster",
+            "How much memory they consume",
+            "Which agent is acting and with what permissions",
+            "When to update their dependencies"
+          ],
+          "explanation": "The abstract explains the talk covers how a cluster knows which agent is acting, on whose behalf, and with what permissions.",
+          "prompt": "What question does the talk address about AI agents in clusters?"
+        }
+      ],
+      "source": "abstract",
+      "talkId": "kc26-tue-keynote-identity-crisis",
+      "generatedBy": "agent_builder"
     }
   },
   {
@@ -472,6 +648,50 @@
     "geo": {
       "lat": 40.7665,
       "lon": -111.8945
+    },
+    "quiz": {
+      "createdAt": "2026-11-09T20:53:33.360Z",
+      "questions": [
+        {
+          "answerIndex": 1,
+          "id": "q1",
+          "choices": [
+            "Migrating legacy applications to Kubernetes",
+            "Physical AI, robots, edge devices, and Kubernetes orchestration",
+            "Container security best practices",
+            "Kubernetes networking optimization"
+          ],
+          "explanation": "The abstract clearly states this is a keynote on physical AI, robots and edge devices, and what Kubernetes must become to orchestrate workloads that move things in the real world.",
+          "prompt": "What is the main focus of this keynote?"
+        },
+        {
+          "answerIndex": 1,
+          "id": "q2",
+          "choices": [
+            "Managing cloud-native databases",
+            "Orchestrating workloads that move things in the real world",
+            "Improving developer experience for CI/CD",
+            "Scaling microservices architectures"
+          ],
+          "explanation": "The abstract explains the talk covers what Kubernetes must become to orchestrate workloads that move things in the real world, connecting to physical AI and robotics.",
+          "prompt": "What does the talk explore about Kubernetes' future role?"
+        },
+        {
+          "answerIndex": 2,
+          "id": "q3",
+          "choices": [
+            "Kelsey Hightower",
+            "Brendan Burns",
+            "Abhilash Somasamudramath",
+            "Tim Hockin"
+          ],
+          "explanation": "The speaker listed for this talk is Abhilash Somasamudramath.",
+          "prompt": "Who is the speaker for this session?"
+        }
+      ],
+      "source": "abstract",
+      "talkId": "kc26-tue-keynote-physical-ai",
+      "generatedBy": "agent_builder"
     }
   },
   {
@@ -509,6 +729,50 @@
     "geo": {
       "lat": 40.7665,
       "lon": -111.8945
+    },
+    "quiz": {
+      "createdAt": "2026-11-09T20:53:48.401Z",
+      "questions": [
+        {
+          "answerIndex": 1,
+          "id": "q1",
+          "choices": [
+            "Migrating Kubernetes workloads to the cloud",
+            "Maximizing cluster allocation in on-premises environments",
+            "Reducing the number of nodes in a cluster",
+            "Implementing multi-cloud Kubernetes strategies"
+          ],
+          "explanation": "The talk focuses on maximizing cluster allocation in on-premises Kubernetes clusters, as stated in the title.",
+          "prompt": "What is the primary goal discussed in this talk?"
+        },
+        {
+          "answerIndex": 2,
+          "id": "q2",
+          "choices": [
+            "Horizontal pod autoscaling only",
+            "Third-party orchestration tools",
+            "Custom scheduler plugins",
+            "Manual resource allocation"
+          ],
+          "explanation": "The abstract explains that The Trade Desk uses custom scheduler plugins to scale workloads and push allocation up.",
+          "prompt": "What technique does The Trade Desk use to scale workloads on their clusters?"
+        },
+        {
+          "answerIndex": 0,
+          "id": "q3",
+          "choices": [
+            "Avoiding starvation of critical services",
+            "Reducing network latency",
+            "Improving container image sizes",
+            "Simplifying RBAC policies"
+          ],
+          "explanation": "The abstract mentions pushing allocation up without starving critical services, indicating this is a key challenge addressed.",
+          "prompt": "What challenge does this approach address while increasing allocation?"
+        }
+      ],
+      "source": "abstract",
+      "talkId": "kc26-tue-saturated-by-design",
+      "generatedBy": "agent_builder"
     }
   },
   {
@@ -540,6 +804,50 @@
     "geo": {
       "lat": 40.7665,
       "lon": -111.8945
+    },
+    "quiz": {
+      "createdAt": "2026-11-09T20:53:58.231Z",
+      "questions": [
+        {
+          "answerIndex": 0,
+          "id": "q1",
+          "choices": [
+            "A student-run security operations center",
+            "A commercial data center",
+            "A government monitoring station",
+            "A university research lab"
+          ],
+          "explanation": "The talk focuses on building a student-run security operations center (SOC) to protect rural Colorado organizations.",
+          "prompt": "What type of facility is being built in this project?"
+        },
+        {
+          "answerIndex": 2,
+          "id": "q2",
+          "choices": [
+            "A single-node Docker deployment",
+            "A serverless cloud architecture",
+            "A multi-cluster Kubernetes platform",
+            "A traditional virtual machine setup"
+          ],
+          "explanation": "The abstract specifically mentions the SOC is built on a multi-cluster Kubernetes platform.",
+          "prompt": "What infrastructure platform is the SOC built on?"
+        },
+        {
+          "answerIndex": 1,
+          "id": "q3",
+          "choices": [
+            "Proprietary enterprise security software",
+            "Open source tools",
+            "Government-provided tools",
+            "Custom-built closed-source applications"
+          ],
+          "explanation": "The talk describes using open source tools to protect rural Colorado organizations.",
+          "prompt": "What types of tools are used to protect the organizations?"
+        }
+      ],
+      "source": "abstract",
+      "talkId": "kc26-tue-student-soc",
+      "generatedBy": "agent_builder"
     }
   },
   {
@@ -575,6 +883,50 @@
     "geo": {
       "lat": 40.7665,
       "lon": -111.8945
+    },
+    "quiz": {
+      "createdAt": "2026-11-09T20:53:58.340Z",
+      "questions": [
+        {
+          "answerIndex": 1,
+          "id": "q1",
+          "choices": [
+            "Building custom AI models from scratch",
+            "Applying AI to common platform team questions",
+            "Training developers in machine learning theory",
+            "Migrating legacy systems to cloud platforms"
+          ],
+          "explanation": "The talk focuses on applying AI to the common questions platform teams answer every day.",
+          "prompt": "What is the primary focus of this talk?"
+        },
+        {
+          "answerIndex": 2,
+          "id": "q2",
+          "choices": [
+            "Platform Engineering",
+            "Security",
+            "AI",
+            "Observability"
+          ],
+          "explanation": "The talk is listed under the AI track.",
+          "prompt": "What track does this talk belong to at KubeCon NA 2026?"
+        },
+        {
+          "answerIndex": 2,
+          "id": "q3",
+          "choices": [
+            "Advanced machine learning certification",
+            "Previous experience training neural networks",
+            "No AI background needed",
+            "PhD in computer science"
+          ],
+          "explanation": "The abstract explicitly states that no AI background is needed.",
+          "prompt": "What background do attendees need to benefit from this talk?"
+        }
+      ],
+      "source": "abstract",
+      "talkId": "kc26-tue-ask-your-platform",
+      "generatedBy": "agent_builder"
     }
   },
   {
@@ -606,6 +958,50 @@
     "geo": {
       "lat": 40.7665,
       "lon": -111.8945
+    },
+    "quiz": {
+      "createdAt": "2026-11-09T20:53:48.333Z",
+      "questions": [
+        {
+          "answerIndex": 1,
+          "id": "q1",
+          "choices": [
+            "Building a platform from scratch with new tools",
+            "Productizing existing fragmented tooling into a platform",
+            "Migrating all workloads to a third-party platform",
+            "Eliminating internal tooling in favor of manual processes"
+          ],
+          "explanation": "The talk focuses on turning fragmented existing tooling into a productized internal developer platform instead of starting from scratch.",
+          "prompt": "What is the main approach discussed in this talk?"
+        },
+        {
+          "answerIndex": 2,
+          "id": "q2",
+          "choices": [
+            "You need to hire a platform team immediately",
+            "You should avoid building platforms altogether",
+            "You probably already have a platform",
+            "You must purchase enterprise platform software"
+          ],
+          "explanation": "The title 'So You Want to Build a Platform? You Probably Already Have One' suggests that organizations likely already have the foundation of a platform in their existing tooling.",
+          "prompt": "According to the title, what does the speaker suggest about your current state?"
+        },
+        {
+          "answerIndex": 1,
+          "id": "q3",
+          "choices": [
+            "External customer-facing platform",
+            "Internal developer platform",
+            "Cloud infrastructure platform",
+            "Data analytics platform"
+          ],
+          "explanation": "The abstract specifically mentions turning existing tooling into a productized internal developer platform.",
+          "prompt": "What kind of platform is the focus of this talk?"
+        }
+      ],
+      "source": "abstract",
+      "talkId": "kc26-tue-already-have-a-platform",
+      "generatedBy": "agent_builder"
     }
   },
   {
@@ -653,6 +1049,50 @@
     "geo": {
       "lat": 40.7665,
       "lon": -111.8945
+    },
+    "quiz": {
+      "createdAt": "2026-11-09T20:53:33.359Z",
+      "questions": [
+        {
+          "answerIndex": 1,
+          "id": "q1",
+          "choices": [
+            "Building AI models for container orchestration",
+            "Running large-scale data platforms on Kubernetes",
+            "Migrating legacy databases to the cloud",
+            "Optimizing Kubernetes for edge computing"
+          ],
+          "explanation": "The abstract explicitly states this is a panel on running large-scale data platforms on Kubernetes.",
+          "prompt": "What is the main focus of this KubeCon panel discussion?"
+        },
+        {
+          "answerIndex": 1,
+          "id": "q2",
+          "choices": [
+            "They are automating initial platform setup",
+            "They are changing day-2 operations",
+            "They are replacing human data engineers",
+            "They are securing data pipelines"
+          ],
+          "explanation": "The abstract mentions that AI agents are changing day-2 operations for data teams.",
+          "prompt": "According to the talk description, how are AI agents impacting data teams?"
+        },
+        {
+          "answerIndex": 2,
+          "id": "q3",
+          "choices": [
+            "Three speakers",
+            "Four speakers",
+            "Five speakers",
+            "Six speakers"
+          ],
+          "explanation": "Five speakers are listed: Vara Bonthu, Ying Xiong, Rainie Li, Damon Cortesi, and Padma Aradhyula.",
+          "prompt": "How many speakers are presenting this panel?"
+        }
+      ],
+      "source": "abstract",
+      "talkId": "kc26-tue-data-platform-panel",
+      "generatedBy": "agent_builder"
     }
   },
   {
@@ -684,6 +1124,50 @@
     "geo": {
       "lat": 40.7665,
       "lon": -111.8945
+    },
+    "quiz": {
+      "createdAt": "2026-11-09T20:53:33.309Z",
+      "questions": [
+        {
+          "answerIndex": 1,
+          "id": "q1",
+          "choices": [
+            "Kafka",
+            "NATS",
+            "RabbitMQ",
+            "Redis Streams"
+          ],
+          "explanation": "The abstract states that NATS is used for messaging in the multi-agent AI system architecture.",
+          "prompt": "According to the talk, what technology is used for messaging between agents?"
+        },
+        {
+          "answerIndex": 1,
+          "id": "q2",
+          "choices": [
+            "As Docker containers",
+            "As Kubernetes custom resources",
+            "As serverless functions",
+            "As microservices"
+          ],
+          "explanation": "The talk models AI agents as Kubernetes custom resources, allowing them to be managed through Kubernetes APIs.",
+          "prompt": "How are AI agents represented in this cloud native infrastructure approach?"
+        },
+        {
+          "answerIndex": 2,
+          "id": "q3",
+          "choices": [
+            "Jaeger",
+            "Zipkin",
+            "OpenTelemetry",
+            "Prometheus"
+          ],
+          "explanation": "OpenTelemetry is specifically mentioned in the abstract as the technology used for tracing agent conversations.",
+          "prompt": "What tool is mentioned for tracing agent conversations?"
+        }
+      ],
+      "source": "abstract",
+      "talkId": "kc26-tue-agent-needs-a-platform",
+      "generatedBy": "agent_builder"
     }
   },
   {
@@ -719,6 +1203,50 @@
     "geo": {
       "lat": 40.7665,
       "lon": -111.8945
+    },
+    "quiz": {
+      "createdAt": "2026-11-09T20:54:13.281Z",
+      "questions": [
+        {
+          "answerIndex": 0,
+          "id": "q1",
+          "choices": [
+            "Benchmarking Gateway API controllers under realistic conditions",
+            "How to install Kubernetes gateways in production",
+            "The history of the Gateway API specification",
+            "Security vulnerabilities in gateway implementations"
+          ],
+          "explanation": "The abstract states the talk covers benchmarks of Gateway API controllers under production-like route churn and load.",
+          "prompt": "What is this talk primarily about?"
+        },
+        {
+          "answerIndex": 1,
+          "id": "q2",
+          "choices": [
+            "Laboratory-controlled synthetic tests",
+            "Production-like route churn and load",
+            "Maximum theoretical throughput scenarios",
+            "Minimal load with static configurations"
+          ],
+          "explanation": "The abstract specifically mentions testing under 'production-like route churn and load' conditions.",
+          "prompt": "According to the talk description, what type of conditions are the controllers tested under?"
+        },
+        {
+          "answerIndex": 2,
+          "id": "q3",
+          "choices": [
+            "Designing custom gateway controllers",
+            "Migrating from Ingress to Gateway API",
+            "Choosing a Gateway API controller",
+            "Optimizing network bandwidth costs"
+          ],
+          "explanation": "The abstract states the talk covers 'what the results mean when choosing one,' referring to choosing a Gateway API controller.",
+          "prompt": "What practical outcome does this talk aim to help with?"
+        }
+      ],
+      "source": "abstract",
+      "talkId": "kc26-tue-gateway-high-and-dry",
+      "generatedBy": "agent_builder"
     }
   },
   {
@@ -754,6 +1282,50 @@
     "geo": {
       "lat": 40.7683,
       "lon": -111.8962
+    },
+    "quiz": {
+      "createdAt": "2026-11-09T20:53:48.400Z",
+      "questions": [
+        {
+          "answerIndex": 1,
+          "id": "q1",
+          "choices": [
+            "Building AI security tools",
+            "AI-driven vulnerability reports and their impact on maintainers",
+            "Best practices for patching vulnerabilities",
+            "How to become an open source maintainer"
+          ],
+          "explanation": "The abstract states the talk covers offensive and defensive perspectives on the flood of AI-driven vulnerability reports and what it does to open source maintainers.",
+          "prompt": "What is the main topic of this talk?"
+        },
+        {
+          "answerIndex": 0,
+          "id": "q2",
+          "choices": [
+            "Fabian Kammel and John Kjell",
+            "John Smith and Jane Doe",
+            "Fabian Johnson and Karl Miller",
+            "David Chen and Sarah Martinez"
+          ],
+          "explanation": "The speakers listed are Fabian Kammel and John Kjell.",
+          "prompt": "Who are the speakers for this session?"
+        },
+        {
+          "answerIndex": 2,
+          "id": "q3",
+          "choices": [
+            "AI & Machine Learning",
+            "Open Source",
+            "Security",
+            "DevOps"
+          ],
+          "explanation": "The talk is part of the security track at KubeCon NA 2026.",
+          "prompt": "Which track does this talk belong to?"
+        }
+      ],
+      "source": "abstract",
+      "talkId": "kc26-tue-vulnerability-tsunami",
+      "generatedBy": "agent_builder"
     }
   },
   {
@@ -789,6 +1361,50 @@
     "geo": {
       "lat": 40.7683,
       "lon": -111.8962
+    },
+    "quiz": {
+      "createdAt": "2026-11-09T20:54:08.392Z",
+      "questions": [
+        {
+          "answerIndex": 1,
+          "id": "q1",
+          "choices": [
+            "Three clouds",
+            "Five clouds",
+            "Seven clouds",
+            "Two clouds"
+          ],
+          "explanation": "The talk title explicitly states 'Five Clouds,' referring to the number of cloud platforms their portable GPU configuration approach supports.",
+          "prompt": "How many cloud platforms does this talk's GPU configuration approach support?"
+        },
+        {
+          "answerIndex": 2,
+          "id": "q2",
+          "choices": [
+            "Docker Compose",
+            "Terraform modules",
+            "Helm bundles",
+            "Ansible playbooks"
+          ],
+          "explanation": "The abstract mentions generating portable GPU Helm bundles for multiple clouds, making Helm the configuration bundling technology discussed.",
+          "prompt": "What technology is used to bundle the GPU configurations in this talk?"
+        },
+        {
+          "answerIndex": 2,
+          "id": "q3",
+          "choices": [
+            "Automatic rollback of failed deployments",
+            "Real-time performance monitoring",
+            "Queryable information about configurations and locations",
+            "Cost optimization recommendations"
+          ],
+          "explanation": "The abstract describes a queryable audit layer that shows what was configured where, providing visibility into which configurations were deployed to which locations.",
+          "prompt": "What feature does the audit layer in this approach provide?"
+        }
+      ],
+      "source": "abstract",
+      "talkId": "kc26-tue-portable-gpu-config",
+      "generatedBy": "agent_builder"
     }
   },
   {
@@ -820,6 +1436,50 @@
     "geo": {
       "lat": 40.7683,
       "lon": -111.8962
+    },
+    "quiz": {
+      "createdAt": "2026-11-09T20:54:09.825Z",
+      "questions": [
+        {
+          "answerIndex": 0,
+          "id": "q1",
+          "choices": [
+            "Tuning pod-level autoscaling for HTTP applications",
+            "Configuring network policies for microservices",
+            "Implementing CI/CD pipelines in Kubernetes",
+            "Setting up service mesh routing rules"
+          ],
+          "explanation": "The abstract describes this as a hands-on tutorial specifically focused on tuning pod-level autoscaling for an HTTP app.",
+          "prompt": "What is the primary focus of this tutorial session?"
+        },
+        {
+          "answerIndex": 1,
+          "id": "q2",
+          "choices": [
+            "Live coding demonstration only",
+            "Benchmark rounds with load testing",
+            "Panel discussion with Q&A",
+            "Case study presentation"
+          ],
+          "explanation": "The abstract states the tutorial is structured in benchmark rounds where participants see which settings hold up under load.",
+          "prompt": "What format does this session use to deliver its content?"
+        },
+        {
+          "answerIndex": 2,
+          "id": "q3",
+          "choices": [
+            "Database query performance",
+            "Container image size optimization",
+            "Which autoscaling settings hold up under load",
+            "Pod security policy configurations"
+          ],
+          "explanation": "The abstract indicates participants will see which autoscaling settings actually hold up under load, making this the key evaluation focus.",
+          "prompt": "What will participants learn to evaluate in this session?"
+        }
+      ],
+      "source": "abstract",
+      "talkId": "kc26-tue-autoscaling-reality-check",
+      "generatedBy": "agent_builder"
     }
   },
   {
@@ -851,6 +1511,50 @@
     "geo": {
       "lat": 40.7665,
       "lon": -111.8945
+    },
+    "quiz": {
+      "createdAt": "2026-11-09T20:53:48.332Z",
+      "questions": [
+        {
+          "answerIndex": 1,
+          "id": "q1",
+          "choices": [
+            "CREATE and UPDATE operations",
+            "LIST and WATCH operations",
+            "DELETE and PATCH operations",
+            "GET and POST operations"
+          ],
+          "explanation": "The abstract specifically mentions offloading LIST and WATCH traffic from the Kubernetes API server using in-cluster read replicas.",
+          "prompt": "What type of traffic does this talk focus on offloading from the Kubernetes API server?"
+        },
+        {
+          "answerIndex": 1,
+          "id": "q2",
+          "choices": [
+            "Scaling the API server horizontally",
+            "Using in-cluster read replicas",
+            "Rate limiting controller requests",
+            "Caching responses in etcd"
+          ],
+          "explanation": "The abstract describes using in-cluster read replicas as the method to offload traffic and protect the control plane from busy controllers.",
+          "prompt": "What solution does the speaker propose to reduce load on the control plane?"
+        },
+        {
+          "answerIndex": 2,
+          "id": "q3",
+          "choices": [
+            "Pods failing to schedule in large clusters",
+            "Network latency between nodes",
+            "Busy controllers hurting the control plane",
+            "Storage performance bottlenecks"
+          ],
+          "explanation": "The abstract concludes by stating the goal is to stop busy controllers from hurting the control plane in busy clusters.",
+          "prompt": "What is the primary problem this talk addresses?"
+        }
+      ],
+      "source": "abstract",
+      "talkId": "kc26-tue-surviving-the-churn",
+      "generatedBy": "agent_builder"
     }
   },
   {
@@ -886,6 +1590,50 @@
     "geo": {
       "lat": 40.7665,
       "lon": -111.8945
+    },
+    "quiz": {
+      "createdAt": "2026-11-09T20:54:08.388Z",
+      "questions": [
+        {
+          "answerIndex": 1,
+          "id": "q1",
+          "choices": [
+            "Load-balanced routing",
+            "Cache-aware routing",
+            "Geographic routing",
+            "Random routing"
+          ],
+          "explanation": "The talk title and abstract specify that the speakers operated cache-aware inference routing for large language models at a telecom.",
+          "prompt": "What type of inference routing did the speakers operate for a year?"
+        },
+        {
+          "answerIndex": 2,
+          "id": "q2",
+          "choices": [
+            "Healthcare",
+            "Finance",
+            "Telecom",
+            "Retail"
+          ],
+          "explanation": "The abstract states the production lessons came from running cache-aware inference routing at a telecom.",
+          "prompt": "What industry did the speakers work in while running LLM inference?"
+        },
+        {
+          "answerIndex": 2,
+          "id": "q3",
+          "choices": [
+            "Six months",
+            "Two years",
+            "One year",
+            "Three months"
+          ],
+          "explanation": "Both the title and abstract mention 'a year' as the duration of operating the cache-aware LLM inference system.",
+          "prompt": "How long did the speakers operate their LLM inference system in production?"
+        }
+      ],
+      "source": "abstract",
+      "talkId": "kc26-tue-cache-aware-inference",
+      "generatedBy": "agent_builder"
     }
   },
   {
@@ -917,6 +1665,50 @@
     "geo": {
       "lat": 40.7665,
       "lon": -111.8945
+    },
+    "quiz": {
+      "createdAt": "2026-11-09T20:53:58.342Z",
+      "questions": [
+        {
+          "answerIndex": 1,
+          "id": "q1",
+          "choices": [
+            "Flux",
+            "Testkube",
+            "GitOps",
+            "Kubernetes"
+          ],
+          "explanation": "The abstract states that testing is done with Testkube, which is wired into Flux GitOps.",
+          "prompt": "What tool does the speaker use to test CNCF add-ons inside the cluster?"
+        },
+        {
+          "answerIndex": 1,
+          "id": "q2",
+          "choices": [
+            "To speed up deployment pipelines",
+            "To verify platform upgrades before they break production",
+            "To reduce cluster resource usage",
+            "To automate code reviews"
+          ],
+          "explanation": "The abstract clearly states the goal is verifying platform upgrades before they break production.",
+          "prompt": "What is the main purpose of the testing approach described in this talk?"
+        },
+        {
+          "answerIndex": 2,
+          "id": "q3",
+          "choices": [
+            "ArgoCD",
+            "Jenkins",
+            "Flux",
+            "Spinnaker"
+          ],
+          "explanation": "The abstract mentions that Testkube is wired into Flux GitOps for the testing workflow.",
+          "prompt": "Which GitOps tool is integrated with the testing workflow?"
+        }
+      ],
+      "source": "abstract",
+      "talkId": "kc26-tue-testing-cncf-stack",
+      "generatedBy": "agent_builder"
     }
   },
   {
@@ -952,6 +1744,50 @@
     "geo": {
       "lat": 40.7665,
       "lon": -111.8945
+    },
+    "quiz": {
+      "createdAt": "2026-11-09T20:54:09.866Z",
+      "questions": [
+        {
+          "answerIndex": 0,
+          "id": "q1",
+          "choices": [
+            "Enforcing image attestation policies at admission time",
+            "Building container images with CEL",
+            "Configuring Kyverno network policies",
+            "Creating signed container registries"
+          ],
+          "explanation": "The abstract states the talk is about 'Enforcing image attestation policies at admission time with Kyverno and CEL'.",
+          "prompt": "What is the primary focus of this talk?"
+        },
+        {
+          "answerIndex": 1,
+          "id": "q2",
+          "choices": [
+            "Kubernetes and Docker",
+            "Kyverno and CEL",
+            "Sigstore and Notary",
+            "OPA and Rego"
+          ],
+          "explanation": "The title and abstract clearly mention Kyverno and CEL as the technologies used together for attestation-driven admission.",
+          "prompt": "Which two technologies are combined in this talk?"
+        },
+        {
+          "answerIndex": 2,
+          "id": "q3",
+          "choices": [
+            "Automatic rollback capabilities",
+            "Real-time alerts",
+            "An auditable evidence trail",
+            "Performance metrics"
+          ],
+          "explanation": "The abstract states the approach leaves 'an auditable evidence trail for every decision'.",
+          "prompt": "What does the solution provide for every admission decision?"
+        }
+      ],
+      "source": "abstract",
+      "talkId": "kc26-tue-signed-sealed-denied",
+      "generatedBy": "agent_builder"
     }
   },
   {
@@ -983,6 +1819,50 @@
     "geo": {
       "lat": 40.7665,
       "lon": -111.8945
+    },
+    "quiz": {
+      "createdAt": "2026-11-09T20:53:33.309Z",
+      "questions": [
+        {
+          "answerIndex": 0,
+          "id": "q1",
+          "choices": [
+            "Konnectivity's gRPC link",
+            "The Kubernetes API server",
+            "Cloud object storage",
+            "The container runtime"
+          ],
+          "explanation": "The abstract states the talk is about replacing Konnectivity's gRPC link with cloud object storage.",
+          "prompt": "What component does this talk propose replacing?"
+        },
+        {
+          "answerIndex": 1,
+          "id": "q2",
+          "choices": [
+            "Multi-cloud clusters",
+            "VPCs with zero egress",
+            "On-premises data centers",
+            "Edge computing locations"
+          ],
+          "explanation": "The abstract explains the solution allows Kubernetes nodes to run in VPCs with zero egress, meaning no outbound network traffic.",
+          "prompt": "What type of environment does this solution enable Kubernetes nodes to run in?"
+        },
+        {
+          "answerIndex": 2,
+          "id": "q3",
+          "choices": [
+            "WebSocket tunnels",
+            "Message queues",
+            "Cloud object storage",
+            "Peer-to-peer networking"
+          ],
+          "explanation": "The abstract indicates cloud object storage is used to replace the traditional gRPC link for communication.",
+          "prompt": "What does this talk use as a replacement communication mechanism?"
+        }
+      ],
+      "source": "abstract",
+      "talkId": "kc26-tue-air-gapped-nodes",
+      "generatedBy": "agent_builder"
     }
   },
   {
@@ -1014,6 +1894,50 @@
     "geo": {
       "lat": 40.7683,
       "lon": -111.8962
+    },
+    "quiz": {
+      "createdAt": "2026-11-09T20:54:13.334Z",
+      "questions": [
+        {
+          "answerIndex": 0,
+          "id": "q1",
+          "choices": [
+            "Intent-driven",
+            "Cloud-native",
+            "AI-powered",
+            "Kubernetes-based"
+          ],
+          "explanation": "The title explicitly states that IDPs must become intent-driven as platform engineering moves beyond the AI hype cycle.",
+          "prompt": "According to the talk title, what must Internal Developer Platforms become?"
+        },
+        {
+          "answerIndex": 1,
+          "id": "q2",
+          "choices": [
+            "Only human developers",
+            "Both humans and AI agents",
+            "Only AI agents",
+            "Platform engineers exclusively"
+          ],
+          "explanation": "The abstract describes evolving IDPs toward intent-driven capabilities that serve both humans and AI agents, not just one or the other.",
+          "prompt": "Who does the talk say intent-driven IDPs should serve?"
+        },
+        {
+          "answerIndex": 1,
+          "id": "q3",
+          "choices": [
+            "Implementing AI agents in production",
+            "Evolving internal developer platforms",
+            "Migrating to Kubernetes",
+            "Reducing platform engineering costs"
+          ],
+          "explanation": "The abstract centers on evolving internal developer platforms toward intent-driven capabilities, which is the core theme of the presentation.",
+          "prompt": "What is the main focus of this talk's topic?"
+        }
+      ],
+      "source": "abstract",
+      "talkId": "kc26-tue-intent-driven-idps",
+      "generatedBy": "agent_builder"
     }
   },
   {
@@ -1049,6 +1973,50 @@
     "geo": {
       "lat": 40.7665,
       "lon": -111.8945
+    },
+    "quiz": {
+      "createdAt": "2026-11-09T20:53:59.959Z",
+      "questions": [
+        {
+          "answerIndex": 1,
+          "id": "q1",
+          "choices": [
+            "Training LLMs from scratch",
+            "Running production LLMs on Kubernetes",
+            "Deploying container registries",
+            "Building custom AI chips"
+          ],
+          "explanation": "The title clearly states this talk is about 'Running Production LLMs on Kubernetes with KServe,' going beyond just model serving.",
+          "prompt": "What is the primary focus of this talk?"
+        },
+        {
+          "answerIndex": 2,
+          "id": "q2",
+          "choices": [
+            "Kubeflow",
+            "MLflow",
+            "KServe",
+            "TensorFlow Serving"
+          ],
+          "explanation": "Both the title and abstract explicitly mention KServe as the platform used for handling production LLM workloads.",
+          "prompt": "Which tool is used in this talk for managing LLM workloads?"
+        },
+        {
+          "answerIndex": 1,
+          "id": "q3",
+          "choices": [
+            "Compiling, debugging and testing",
+            "Scheduling, routing and autoscaling",
+            "Encrypting, backing up and archiving",
+            "Monitoring, logging and alerting"
+          ],
+          "explanation": "The abstract specifically lists 'scheduling, routing and autoscaling' as the key operations covered for LLM workloads in production.",
+          "prompt": "Which operations are covered for large language model workloads in this talk?"
+        }
+      ],
+      "source": "abstract",
+      "talkId": "kc26-tue-kserve-production-llms",
+      "generatedBy": "agent_builder"
     }
   },
   {
@@ -1086,6 +2054,50 @@
     "geo": {
       "lat": 40.7665,
       "lon": -111.8945
+    },
+    "quiz": {
+      "createdAt": "2026-11-09T20:54:18.487Z",
+      "questions": [
+        {
+          "answerIndex": 1,
+          "id": "q1",
+          "choices": [
+            "16 million spans per hour",
+            "16 billion spans per hour",
+            "1.6 billion spans per hour",
+            "160 billion spans per hour"
+          ],
+          "explanation": "The talk focuses on Nubank's pipeline that processes 16 billion spans per hour.",
+          "prompt": "What is the scale of Nubank's tracing pipeline in spans per hour?"
+        },
+        {
+          "answerIndex": 2,
+          "id": "q2",
+          "choices": [
+            "Jaeger Collector",
+            "Zipkin Server",
+            "OpenTelemetry Collector",
+            "Prometheus Exporter"
+          ],
+          "explanation": "The abstract states the pipeline is built on the OpenTelemetry Collector.",
+          "prompt": "What technology does Nubank use to build their tracing pipeline?"
+        },
+        {
+          "answerIndex": 2,
+          "id": "q3",
+          "choices": [
+            "Application Development",
+            "Security",
+            "Operations",
+            "Networking"
+          ],
+          "explanation": "The talk is part of the operations track at the conference.",
+          "prompt": "What track does this talk belong to at KubeCon NA 2026?"
+        }
+      ],
+      "source": "abstract",
+      "talkId": "kc26-tue-tracing-at-scale",
+      "generatedBy": "agent_builder"
     }
   },
   {
@@ -1117,6 +2129,50 @@
     "geo": {
       "lat": 40.7665,
       "lon": -111.8945
+    },
+    "quiz": {
+      "createdAt": "2026-11-09T20:53:48.334Z",
+      "questions": [
+        {
+          "answerIndex": 0,
+          "id": "q1",
+          "choices": [
+            "Confused-deputy flaws",
+            "SQL injection attacks",
+            "Cross-site scripting",
+            "Buffer overflow errors"
+          ],
+          "explanation": "The abstract specifically mentions confused-deputy flaws in Kubernetes operators as the main security issue discussed.",
+          "prompt": "What type of vulnerability does this talk focus on?"
+        },
+        {
+          "answerIndex": 2,
+          "id": "q2",
+          "choices": [
+            "Pod-level access only",
+            "Node administrator access",
+            "Cloud admin access",
+            "Read-only cluster access"
+          ],
+          "explanation": "The abstract states that namespace users can escalate 'all the way to cloud admin' through these vulnerabilities.",
+          "prompt": "What level of privilege escalation can these operator flaws enable?"
+        },
+        {
+          "answerIndex": 2,
+          "id": "q3",
+          "choices": [
+            "Justin Martinez",
+            "Jennifer O'Leary",
+            "Justin O'Leary",
+            "John O'Brien"
+          ],
+          "explanation": "Justin O'Leary is listed as the speaker for this security track talk.",
+          "prompt": "Who is the speaker for this talk?"
+        }
+      ],
+      "source": "abstract",
+      "talkId": "kc26-tue-operator-confused-deputy",
+      "generatedBy": "agent_builder"
     }
   },
   {
@@ -1152,6 +2208,50 @@
     "geo": {
       "lat": 40.7683,
       "lon": -111.8962
+    },
+    "quiz": {
+      "createdAt": "2026-11-09T20:53:58.341Z",
+      "questions": [
+        {
+          "answerIndex": 1,
+          "id": "q1",
+          "choices": [
+            "gRPC streaming",
+            "Arrow Flight",
+            "HTTP/2",
+            "Kafka streams"
+          ],
+          "explanation": "The talk specifically mentions using Arrow Flight to move columnar data to GPUs, lakehouse tables, and serving systems.",
+          "prompt": "What protocol does this talk focus on for moving columnar data?"
+        },
+        {
+          "answerIndex": 1,
+          "id": "q2",
+          "choices": [
+            "Faster GPU processing",
+            "Moving data once instead of copying for each destination",
+            "Lower storage costs",
+            "Better compression ratios"
+          ],
+          "explanation": "The abstract emphasizes moving columnar data once over Arrow Flight instead of copying it for each destination (training, lakehouse, serving).",
+          "prompt": "What is the key advantage of the approach discussed in this talk?"
+        },
+        {
+          "answerIndex": 3,
+          "id": "q3",
+          "choices": [
+            "GPUs for training",
+            "Lakehouse tables",
+            "Serving systems",
+            "Edge devices"
+          ],
+          "explanation": "The talk mentions GPUs (for training), lakehouse tables, and serving systems as destinations, but does not mention edge devices.",
+          "prompt": "Which of these is NOT mentioned as a destination for the data in this talk?"
+        }
+      ],
+      "source": "abstract",
+      "talkId": "kc26-tue-feeding-the-gpu",
+      "generatedBy": "agent_builder"
     }
   }
 ]
