@@ -5837,7 +5837,7 @@
       },
       {
         "exhibitor": {
-          "id": "outpost-codevisionaryra-networks",
+          "id": "outpost-ascendra-networks",
           "name": "Ascendra Networks",
           "exhibitorType": "sponsor",
           "tier": "Start-Up",
@@ -5856,8 +5856,8 @@
         "visitsToday": 0,
         "uniqueToday": 0,
         "questsCompleted": 0,
-        "staffUrl": "https://kube-quest.cnh.radarhq.io/exhibitor/outpost-codevisionaryra-networks?k=<staff-key>",
-        "scanUrl": "https://kube-quest.cnh.radarhq.io/r/outpost-codevisionaryra-networks?t=<signed-token>"
+        "staffUrl": "https://kube-quest.cnh.radarhq.io/exhibitor/outpost-ascendra-networks?k=<staff-key>",
+        "scanUrl": "https://kube-quest.cnh.radarhq.io/r/outpost-ascendra-networks?t=<signed-token>"
       },
       {
         "exhibitor": {
