@@ -44,3 +44,11 @@ yarn-error.log*
 *.pem
 *.key
 node_modules/
+
+# KubeQuest build output
+/shared/dist/
+/web/dist/
+/web/.angular/
+*.tsbuildinfo
+/app/public/
+/scripts/dist/

@@ -1,0 +1,420 @@
+[
+  {
+    "id": "hyatt-regency-capitol-reef",
+    "name": "Capitol Reef",
+    "kind": "room",
+    "venue": "Hyatt Regency",
+    "floor": "Level 5",
+    "geo": {
+      "lat": 40.761695,
+      "lon": -111.890516
+    }
+  },
+  {
+    "id": "hyatt-regency-regency-ballroom-a",
+    "name": "Regency Ballroom A",
+    "kind": "room",
+    "venue": "Hyatt Regency",
+    "floor": "Level 4",
+    "geo": {
+      "lat": 40.761844,
+      "lon": -111.890872
+    }
+  },
+  {
+    "id": "hyatt-regency-regency-ballroom-b",
+    "name": "Regency Ballroom B",
+    "kind": "room",
+    "venue": "Hyatt Regency",
+    "floor": "Level 4",
+    "geo": {
+      "lat": 40.761798,
+      "lon": -111.890853
+    }
+  },
+  {
+    "id": "hyatt-regency-regency-ballroom-b-d",
+    "name": "Regency Ballroom B-D",
+    "kind": "room",
+    "venue": "Hyatt Regency",
+    "floor": "Level 4",
+    "geo": {
+      "lat": 40.761779,
+      "lon": -111.890805
+    }
+  },
+  {
+    "id": "hyatt-regency-regency-ballroom-cd",
+    "name": "Regency Ballroom CD",
+    "kind": "room",
+    "venue": "Hyatt Regency",
+    "floor": "Level 4",
+    "geo": {
+      "lat": 40.761904,
+      "lon": -111.890713
+    }
+  },
+  {
+    "id": "hyatt-regency-salt-lake-ballroom-c",
+    "name": "Salt Lake Ballroom C",
+    "kind": "room",
+    "venue": "Hyatt Regency",
+    "floor": "Level 2",
+    "geo": {
+      "lat": 40.762037,
+      "lon": -111.890419
+    }
+  },
+  {
+    "id": "hyatt-regency-salt-lake-ballroom-de",
+    "name": "Salt Lake Ballroom DE",
+    "kind": "room",
+    "venue": "Hyatt Regency",
+    "floor": "Level 2",
+    "geo": {
+      "lat": 40.761964,
+      "lon": -111.890692
+    }
+  },
+  {
+    "id": "off-site-off-site-location",
+    "name": "Off-Site Location",
+    "kind": "room",
+    "venue": "Off-Site",
+    "floor": "Ground",
+    "geo": {
+      "lat": 40.753493,
+      "lon": -111.874512
+    }
+  },
+  {
+    "id": "salt-palace-151",
+    "name": "Room 151",
+    "kind": "room",
+    "venue": "Salt Palace",
+    "floor": "Level 1",
+    "geo": {
+      "lat": 40.76718,
+      "lon": -111.895831
+    }
+  },
+  {
+    "id": "salt-palace-250-a-c",
+    "name": "Room 250 A-C",
+    "kind": "room",
+    "venue": "Salt Palace",
+    "floor": "Level 2",
+    "geo": {
+      "lat": 40.767466,
+      "lon": -111.895514
+    }
+  },
+  {
+    "id": "salt-palace-250-d-f",
+    "name": "Room 250 D-F",
+    "kind": "room",
+    "venue": "Salt Palace",
+    "floor": "Level 2",
+    "geo": {
+      "lat": 40.767656,
+      "lon": -111.896
+    }
+  },
+  {
+    "id": "salt-palace-251-a-c",
+    "name": "Room 251 A-C",
+    "kind": "room",
+    "venue": "Salt Palace",
+    "floor": "Level 2",
+    "geo": {
+      "lat": 40.767147,
+      "lon": -111.895733
+    }
+  },
+  {
+    "id": "salt-palace-251-d-f",
+    "name": "Room 251 D-F",
+    "kind": "room",
+    "venue": "Salt Palace",
+    "floor": "Level 2",
+    "geo": {
+      "lat": 40.767252,
+      "lon": -111.896225
+    }
+  },
+  {
+    "id": "salt-palace-254",
+    "name": "Room 254",
+    "kind": "room",
+    "venue": "Salt Palace",
+    "floor": "Level 2",
+    "geo": {
+      "lat": 40.767608,
+      "lon": -111.895909
+    }
+  },
+  {
+    "id": "salt-palace-255-a",
+    "name": "Room 255 A",
+    "kind": "room",
+    "venue": "Salt Palace",
+    "floor": "Level 2",
+    "geo": {
+      "lat": 40.767505,
+      "lon": -111.895944
+    }
+  },
+  {
+    "id": "salt-palace-255-bc",
+    "name": "Room 255 BC",
+    "kind": "room",
+    "venue": "Salt Palace",
+    "floor": "Level 2",
+    "geo": {
+      "lat": 40.767526,
+      "lon": -111.895549
+    }
+  },
+  {
+    "id": "salt-palace-255-d",
+    "name": "Room 255 D",
+    "kind": "room",
+    "venue": "Salt Palace",
+    "floor": "Level 2",
+    "geo": {
+      "lat": 40.767146,
+      "lon": -111.8958
+    }
+  },
+  {
+    "id": "salt-palace-255-ef",
+    "name": "Room 255 EF",
+    "kind": "room",
+    "venue": "Salt Palace",
+    "floor": "Level 2",
+    "geo": {
+      "lat": 40.767265,
+      "lon": -111.896084
+    }
+  },
+  {
+    "id": "salt-palace-grand-ballroom-ace",
+    "name": "Grand Ballroom ACE",
+    "kind": "room",
+    "venue": "Salt Palace",
+    "floor": "Level 1",
+    "geo": {
+      "lat": 40.767373,
+      "lon": -111.896042
+    }
+  },
+  {
+    "id": "salt-palace-grand-ballroom-bdf",
+    "name": "Grand Ballroom BDF",
+    "kind": "room",
+    "venue": "Salt Palace",
+    "floor": "Level 1",
+    "geo": {
+      "lat": 40.767053,
+      "lon": -111.896159
+    }
+  },
+  {
+    "id": "salt-palace-grand-ballroom-gi",
+    "name": "Grand Ballroom GI",
+    "kind": "room",
+    "venue": "Salt Palace",
+    "floor": "Level 1",
+    "geo": {
+      "lat": 40.767202,
+      "lon": -111.896212
+    }
+  },
+  {
+    "id": "salt-palace-grand-ballroom-h",
+    "name": "Grand Ballroom H",
+    "kind": "room",
+    "venue": "Salt Palace",
+    "floor": "Level 1",
+    "geo": {
+      "lat": 40.767477,
+      "lon": -111.896336
+    }
+  },
+  {
+    "id": "salt-palace-grand-ballroom-j",
+    "name": "Grand Ballroom J",
+    "kind": "room",
+    "venue": "Salt Palace",
+    "floor": "Level 1",
+    "geo": {
+      "lat": 40.767468,
+      "lon": -111.896201
+    }
+  },
+  {
+    "id": "salt-palace-hall-de",
+    "name": "Hall DE",
+    "kind": "room",
+    "venue": "Salt Palace",
+    "floor": "Level 1",
+    "geo": {
+      "lat": 40.767335,
+      "lon": -111.89598
+    }
+  },
+  {
+    "id": "salt-palace-halls-a-c-halls-1-5",
+    "name": "Halls A-C, Halls 1-5",
+    "kind": "room",
+    "venue": "Salt Palace",
+    "floor": "Level 1",
+    "geo": {
+      "lat": 40.767204,
+      "lon": -111.896092
+    }
+  },
+  {
+    "id": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "name": "Solutions Showcase · Hall 1 · Alpine Overlook Zone · Demo Theater",
+    "kind": "room",
+    "venue": "Salt Palace",
+    "floor": "Level 1",
+    "geo": {
+      "lat": 40.76754,
+      "lon": -111.896033
+    }
+  },
+  {
+    "id": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-network-nook",
+    "name": "Solutions Showcase · Hall 1 · Alpine Overlook Zone · Network Nook",
+    "kind": "room",
+    "venue": "Salt Palace",
+    "floor": "Level 1",
+    "geo": {
+      "lat": 40.767172,
+      "lon": -111.896224
+    }
+  },
+  {
+    "id": "salt-palace-solutions-showcase-hall-5-cosmic-canyon-zone-project-pavilion",
+    "name": "Solutions Showcase · Hall 5 · Cosmic Canyon Zone · Project Pavilion",
+    "kind": "room",
+    "venue": "Salt Palace",
+    "floor": "Level 1",
+    "geo": {
+      "lat": 40.767382,
+      "lon": -111.895729
+    }
+  },
+  {
+    "id": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "name": "Solutions Showcase · Hall B · Starlight Summit Zone",
+    "kind": "room",
+    "venue": "Salt Palace",
+    "floor": "Level 1",
+    "geo": {
+      "lat": 40.767409,
+      "lon": -111.896175
+    }
+  },
+  {
+    "id": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "name": "Solutions Showcase · Halls 5 · Cosmic Canyon Zone · Cloud Native Theater",
+    "kind": "room",
+    "venue": "Salt Palace",
+    "floor": "Level 1",
+    "geo": {
+      "lat": 40.767501,
+      "lon": -111.895962
+    }
+  },
+  {
+    "id": "the-shop-workspace-hackathon-floor",
+    "name": "Hackathon Floor",
+    "kind": "room",
+    "venue": "The Shop Workspace",
+    "floor": "Level 1",
+    "geo": {
+      "lat": 40.77804,
+      "lon": -111.904379
+    }
+  },
+  {
+    "id": "mp-salt-palace-coffee",
+    "name": "Salt Palace Coffee Bar",
+    "kind": "meeting-point",
+    "venue": "Salt Palace",
+    "floor": "Level 1",
+    "geo": {
+      "lat": 40.767165,
+      "lon": -111.896119
+    }
+  },
+  {
+    "id": "mp-hyatt-l4-foyer",
+    "name": "Hyatt Regency Level 4 Foyer",
+    "kind": "meeting-point",
+    "venue": "Hyatt Regency",
+    "floor": "Level 4",
+    "geo": {
+      "lat": 40.76191,
+      "lon": -111.890663
+    }
+  },
+  {
+    "id": "mp-hackathon-venue",
+    "name": "The Shop Workspace",
+    "kind": "meeting-point",
+    "venue": "The Shop Workspace",
+    "floor": "Level 1",
+    "geo": {
+      "lat": 40.77808,
+      "lon": -111.904303
+    }
+  },
+  {
+    "id": "mp-network-nook",
+    "name": "Network Nook",
+    "kind": "meeting-point",
+    "venue": "Salt Palace",
+    "floor": "Level 1",
+    "geo": {
+      "lat": 40.767525,
+      "lon": -111.895644
+    }
+  },
+  {
+    "id": "booth-elastic",
+    "name": "Elastic Booth",
+    "kind": "booth",
+    "venue": "Salt Palace",
+    "floor": "Level 1",
+    "geo": {
+      "lat": 40.767408,
+      "lon": -111.895348
+    }
+  },
+  {
+    "id": "booth-dash0",
+    "name": "Dash0 Booth",
+    "kind": "booth",
+    "venue": "Salt Palace",
+    "floor": "Level 1",
+    "geo": {
+      "lat": 40.767255,
+      "lon": -111.89517
+    }
+  },
+  {
+    "id": "booth-radar",
+    "name": "Radar Booth",
+    "kind": "booth",
+    "venue": "Salt Palace",
+    "floor": "Level 1",
+    "geo": {
+      "lat": 40.767102,
+      "lon": -111.895265
+    }
+  }
+]

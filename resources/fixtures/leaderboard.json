@@ -1,0 +1,59 @@
+[
+  {
+    "handle": "minh-phan",
+    "xp": 260,
+    "badges": [
+      "Connector",
+      "Welcomer"
+    ]
+  },
+  {
+    "handle": "carvalho-m18",
+    "xp": 215,
+    "badges": [
+      "Connector"
+    ]
+  },
+  {
+    "handle": "meiling-gao",
+    "xp": 190,
+    "badges": [
+      "Welcomer"
+    ]
+  },
+  {
+    "handle": "khoa-ngo",
+    "xp": 170,
+    "badges": []
+  },
+  {
+    "handle": "builds-thiago32",
+    "xp": 110,
+    "badges": []
+  },
+  {
+    "handle": "zofia-k-sre",
+    "xp": 105,
+    "badges": []
+  },
+  {
+    "handle": "codes-camille84",
+    "xp": 85,
+    "badges": []
+  },
+  {
+    "handle": "marta-kowalczyk-k8s",
+    "xp": 85,
+    "badges": []
+  },
+  {
+    "handle": "siddharth-b-dev",
+    "xp": 85,
+    "badges": []
+  },
+  {
+    "handle": "choi-a90",
+    "xp": 80,
+    "badges": []
+  }
+]

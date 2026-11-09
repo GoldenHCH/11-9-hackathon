@@ -1,0 +1,166 @@
+@use '@angular/material' as mat;
+@use 'breakpoints' as bp;
+
+:root {
+  --app-theme--primary: #1e40af;
+  --app-theme--tertiary: #166534;
+  --app-theme--tertiary-bg: #e8f5e9;
+  --app-theme--accent: #b45309;
+  --app-theme--accent-bg: #fff7ed;
+  --app-theme--error: #d32f2f;
+  --app-theme--error-dark: #ba1a1a;
+  --app-theme--error-bg: #ffebee;
+  --app-theme--surface: #f6f8fc;
+  --app-theme--border: #d5dbe7;
+  --app-theme--text: #1b1f2a;
+  --app-theme--text-secondary: #4b5565;
+  --app-theme--focus-ring: #1e40af;
+}
+
+html {
+  height: 100%;
+  @include mat.theme(
+    (
+      color: (
+        primary: mat.$blue-palette,
+        tertiary: mat.$green-palette,
+      ),
+      typography: Roboto,
+      density: 0,
+    )
+  );
+}
+
+html {
+  --mat-sys-primary: var(--app-theme--primary);
+  --mat-sys-on-primary: #fff;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background-color: var(--app-theme--surface);
+  color: var(--app-theme--text);
+  color-scheme: light;
+  font: var(--mat-sys-body-large);
+}
+
+a:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--app-theme--focus-ring);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.app-card {
+  --mat-card-outlined-container-shape: 12px;
+  --mat-card-outlined-container-color: #fff;
+  --mat-card-outlined-outline-color: var(--app-theme--border);
+
+  &--clickable {
+    cursor: pointer;
+    transition:
+      border-color 150ms ease,
+      box-shadow 150ms ease,
+      transform 150ms ease;
+
+    &:hover {
+      --mat-card-outlined-outline-color: var(--app-theme--primary);
+      box-shadow: 0 4px 12px rgb(27 31 42 / 12%);
+      transform: translateY(-2px);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+
+      &:hover {
+        transform: none;
+      }
+    }
+  }
+}
+
+.app-card-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 600px;
+}
+
+.app-card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.app-card-icon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--app-theme--primary);
+  color: #fff;
+}
+
+.app-card-content {
+  flex: 1;
+  min-width: 0;
+
+  h4 {
+    margin: 0;
+    font: var(--mat-sys-title-medium);
+    font-weight: 600;
+  }
+
+  p {
+    margin: 4px 0 0;
+    color: var(--app-theme--text-secondary);
+  }
+}
+
+.app-card-arrow {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: var(--app-theme--text-secondary);
+}
+
+.app-page-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px 16px;
+  margin-bottom: 24px;
+}
+
+.app-page-header-left {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.app-page-title {
+  margin: 0;
+  font: var(--mat-sys-headline-medium);
+  font-weight: 600;
+
+  @include bp.mobile {
+    font: var(--mat-sys-headline-small);
+    font-weight: 600;
+  }
+}
+
+.app-page-subtitle {
+  margin: 4px 0 0;
+  color: var(--app-theme--text-secondary);
+}
+
+.app-page-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}

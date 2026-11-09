@@ -1,0 +1,22 @@
+{
+  "location": {
+    "id": "salt-palace-151",
+    "name": "Room 151",
+    "kind": "room",
+    "venue": "Salt Palace",
+    "floor": "Level 1",
+    "geo": {
+      "lat": 40.76718,
+      "lon": -111.895831
+    }
+  },
+  "xp": 10,
+  "event": {
+    "id": "xp-1e694f5f-319a-4d1b-8f7d-f02f53ff1f0e",
+    "attendeeId": "att-demo-platform",
+    "type": "check_in",
+    "xp": 10,
+    "locationId": "salt-palace-151",
+    "at": "2026-11-10T22:15:00.000Z"
+  }
+}

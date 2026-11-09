@@ -1,0 +1,19 @@
+<a class="skip-link" href="#main" (click)="skipToContent($event)">Skip to content</a>
+
+<header class="app-header">
+  <mat-toolbar class="app-toolbar">
+    <a class="app-brand" routerLink="/" aria-label="KubeQuest home">
+      <mat-icon class="app-brand-icon">explore</mat-icon>
+      <span class="app-brand-name">KubeQuest</span>
+    </a>
+  </mat-toolbar>
+  <div class="app-loading-bar">
+    @if (isLoading$ | async) {
+      <mat-progress-bar mode="indeterminate" aria-label="Loading"></mat-progress-bar>
+    }
+  </div>
+</header>
+
+<main id="main" class="app-main" tabindex="-1" #mainContent>
+  <router-outlet />
+</main>

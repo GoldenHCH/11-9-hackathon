@@ -1,0 +1,130 @@
+[
+  {
+    "attendee": {
+      "id": "att-demo-frontend",
+      "handle": "diego-alvarez-ui",
+      "name": "Diego Alvarez",
+      "headline": "Frontend developer at an online retailer",
+      "firstTimer": true,
+      "welcomer": false,
+      "xp": 20,
+      "badges": []
+    },
+    "score": 7.5,
+    "reasons": [
+      "Both into kubernetes-upgrades",
+      "Both into platform-engineering",
+      "Both into gitops",
+      "First time here, a good person to welcome",
+      "In the same room right now"
+    ],
+    "sharedTopics": [
+      "kubernetes-upgrades",
+      "platform-engineering",
+      "gitops",
+      "developer-experience"
+    ],
+    "isHere": true,
+    "locationId": "salt-palace-151",
+    "distanceMeters": 0
+  },
+  {
+    "attendee": {
+      "id": "att-051",
+      "handle": "hannah-b-infra",
+      "name": "Hannah Barrow",
+      "headline": "Junior performance engineer at a managed Kubernetes provider",
+      "firstTimer": true,
+      "welcomer": false,
+      "xp": 10,
+      "badges": []
+    },
+    "score": 4.5,
+    "reasons": [
+      "Both into multi-cluster",
+      "First time here, a good person to welcome",
+      "In the same room right now"
+    ],
+    "sharedTopics": [
+      "multi-cluster"
+    ],
+    "isHere": true,
+    "locationId": "salt-palace-151",
+    "distanceMeters": 0
+  },
+  {
+    "attendee": {
+      "id": "att-083",
+      "handle": "segun-b-k8s",
+      "name": "Segun Boateng",
+      "headline": "Computer science undergraduate and platform team intern",
+      "firstTimer": true,
+      "welcomer": false,
+      "xp": 60,
+      "badges": []
+    },
+    "score": 4,
+    "reasons": [
+      "Both into platform-engineering",
+      "Both into developer-experience",
+      "First time here, a good person to welcome"
+    ],
+    "sharedTopics": [
+      "platform-engineering",
+      "developer-experience"
+    ],
+    "isHere": false,
+    "locationId": "hyatt-regency-regency-ballroom-a",
+    "distanceMeters": 726
+  },
+  {
+    "attendee": {
+      "id": "att-109",
+      "handle": "nasser-k92",
+      "name": "Karim Nasser",
+      "headline": "Platform engineer at a managed Kubernetes provider",
+      "firstTimer": true,
+      "welcomer": false,
+      "xp": 55,
+      "badges": []
+    },
+    "score": 4,
+    "reasons": [
+      "Both into platform-engineering",
+      "Both into gitops",
+      "First time here, a good person to welcome"
+    ],
+    "sharedTopics": [
+      "platform-engineering",
+      "gitops"
+    ],
+    "isHere": false,
+    "locationId": "salt-palace-251-a-c",
+    "distanceMeters": 9
+  },
+  {
+    "attendee": {
+      "id": "att-141",
+      "handle": "henriquep19",
+      "name": "Henrique Peixoto",
+      "headline": "Infrastructure engineer at a game studio",
+      "firstTimer": true,
+      "welcomer": false,
+      "xp": 20,
+      "badges": []
+    },
+    "score": 4,
+    "reasons": [
+      "Both into kubernetes-upgrades",
+      "Both into platform-engineering",
+      "First time here, a good person to welcome"
+    ],
+    "sharedTopics": [
+      "kubernetes-upgrades",
+      "platform-engineering"
+    ],
+    "isHere": false,
+    "locationId": "salt-palace-250-d-f",
+    "distanceMeters": 55
+  }
+]

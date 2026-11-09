@@ -1,0 +1,7 @@
+{
+  "seedNow": "2026-11-10T15:15:00-07:00",
+  "demoPersonas": {
+    "platformEngineerId": "att-demo-platform",
+    "firstTimerId": "att-demo-frontend"
+  }
+}

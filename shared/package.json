@@ -1,0 +1,8 @@
+{
+  "name": "@kubequest/shared",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Types shared by the KubeQuest api, web app and scripts. Types only, no runtime code.",
+  "main": "src/index.ts",
+  "types": "src/index.ts"
+}

@@ -1,0 +1,21 @@
+{
+  "session": {
+    "id": "talk-1247848",
+    "title": "N Clusters, One kubectl: Multi-Cluster That Just Works",
+    "abstract": "Multi-cluster Kubernetes solves a real platform problem. It also breaks every developer workflow that used to work. Adopt mulit-cluster frameworks for fleet resilience, and overnight kubectl stops behaving: kubectl get pods sees one cluster, kubectl scale gets reverted because the hub template is the source of truth, and finding a single pod takes a four-command discovery dance. We built a thin…",
+    "speakers": [
+      "Anne Lau",
+      "Scott Brimhall"
+    ],
+    "start": "2026-11-10T15:40:00-07:00",
+    "end": "2026-11-10T16:10:00-07:00",
+    "venue": "Hyatt Regency",
+    "level": 2,
+    "track": "platform",
+    "locationId": "hyatt-regency-salt-lake-ballroom-c",
+    "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1247848",
+    "hasTranscript": false
+  },
+  "startsInMinutes": 25,
+  "walkMinutes": 13
+}
