@@ -9,6 +9,7 @@ import type {
 } from '../shared/src/index';
 import { computeBadges } from './lib/badges.helper';
 import { haversineMeters } from './lib/geo.helper';
+import { isLogisticsTitle } from './lib/session-classification.helper';
 import { topMatches } from './lib/matching.helper';
 import { readJsonFile, resourcePath } from './lib/resource-files.helper';
 import { toEpochMs } from './lib/time.helper';
@@ -56,7 +57,7 @@ function isStringArray(value: unknown): value is string[] {
 }
 
 function validateSessions(sessions: ISession[], locationsById: Map<string, ILocation>): void {
-  check(sessions.length >= 300, `sessions: expected at least 300, found ${sessions.length}`);
+  check(sessions.length >= 280, `sessions: expected at least 280, found ${sessions.length}`);
   const ids = new Set<string>();
   let previousStart = 0;
   for (const session of sessions) {
@@ -64,6 +65,7 @@ function validateSessions(sessions: ISession[], locationsById: Map<string, ILoca
     check(isText(session.id) && !ids.has(session.id), `${label}: id missing or duplicated`);
     ids.add(session.id);
     check(isText(session.title), `${label}: title missing`);
+    check(!isLogisticsTitle(session.title), `${label}: logistics entry "${session.title}" must not be in sessions`);
     check(typeof session.abstract === 'string', `${label}: abstract must be a string`);
     check(isStringArray(session.speakers), `${label}: speakers must be a string array`);
     check(isIsoTimestamp(session.start) && isIsoTimestamp(session.end), `${label}: start/end must be ISO with offset`);

@@ -9,7 +9,7 @@ import {
 } from './lib/kickoff-talks.constants';
 import { parseLocationName } from './lib/location-parse.helper';
 import { resourcePath, scriptDataPath, writeJsonFile } from './lib/resource-files.helper';
-import { classifyLevel, classifyTrack } from './lib/session-classification.helper';
+import { classifyLevel, classifyTrack, isLogisticsTitle } from './lib/session-classification.helper';
 import { slugify } from './lib/slug.helper';
 import { htmlToPlainText } from './lib/text.helper';
 import { toEpochMs, withDenverOffset } from './lib/time.helper';
@@ -128,9 +128,9 @@ async function main(): Promise<void> {
   }
 
   const roomSources = new Map<string, IRoomSource>();
-  const scheduleSessions = subEvents
-    .filter((event) => event.name && event.startDate && event.endDate && event.url)
-    .map((event) => mapEventToSession(event, roomSources));
+  const completeEvents = subEvents.filter((event) => event.name && event.startDate && event.endDate && event.url);
+  const programmeEvents = completeEvents.filter((event) => !isLogisticsTitle(htmlToPlainText(event.name)));
+  const scheduleSessions = programmeEvents.map((event) => mapEventToSession(event, roomSources));
   const allSessions = [...scheduleSessions, ...buildKickoffSessions(roomSources)].sort((first, second) => {
     const byStart = toEpochMs(first.start) - toEpochMs(second.start);
 
@@ -152,7 +152,9 @@ async function main(): Promise<void> {
   for (const session of allSessions) {
     trackCounts[session.track] = (trackCounts[session.track] ?? 0) + 1;
   }
-  console.log(`sessions: ${allSessions.length} (${scheduleSessions.length} from the schedule, ${kickoffTalks.length} kickoff)`);
+  console.log(
+    `sessions: ${allSessions.length} (${scheduleSessions.length} from the schedule, ${kickoffTalks.length} kickoff); dropped ${completeEvents.length - programmeEvents.length} logistics entries`,
+  );
   console.log(`rooms: ${sortedRooms.length}`);
   console.log(`tracks: ${JSON.stringify(trackCounts)}`);
 }

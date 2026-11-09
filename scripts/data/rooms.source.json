@@ -6,18 +6,6 @@
     "floor": "Level 5"
   },
   {
-    "locationId": "hyatt-regency-lobby",
-    "name": "Lobby",
-    "venue": "Hyatt Regency",
-    "floor": "Level 1"
-  },
-  {
-    "locationId": "hyatt-regency-park-city",
-    "name": "Park City",
-    "venue": "Hyatt Regency",
-    "floor": "Level 3"
-  },
-  {
     "locationId": "hyatt-regency-regency-ballroom-a",
     "name": "Regency Ballroom A",
     "venue": "Hyatt Regency",
@@ -62,12 +50,6 @@
   {
     "locationId": "salt-palace-151",
     "name": "Room 151",
-    "venue": "Salt Palace",
-    "floor": "Level 1"
-  },
-  {
-    "locationId": "salt-palace-200-south-entrance-south",
-    "name": "Room 200 South Entrance (South)",
     "venue": "Salt Palace",
     "floor": "Level 1"
   },
@@ -126,12 +108,6 @@
     "floor": "Level 2"
   },
   {
-    "locationId": "salt-palace-east-registration",
-    "name": "East Registration",
-    "venue": "Salt Palace",
-    "floor": "Level 2"
-  },
-  {
     "locationId": "salt-palace-grand-ballroom-ace",
     "name": "Grand Ballroom ACE",
     "venue": "Salt Palace",
@@ -170,12 +146,6 @@
   {
     "locationId": "salt-palace-halls-a-c-halls-1-5",
     "name": "Halls A-C, Halls 1-5",
-    "venue": "Salt Palace",
-    "floor": "Level 1"
-  },
-  {
-    "locationId": "salt-palace-north-grand-ballroom-foyer",
-    "name": "North Grand Ballroom Foyer",
     "venue": "Salt Palace",
     "floor": "Level 1"
   },

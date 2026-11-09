@@ -1,4 +1,5 @@
 import type { ISession, TalkLevel, TalkTrack } from '../../shared/src/index';
+import { logisticsTitlePatterns } from './logistics.constants';
 import { levelOnePatterns, levelThreePatterns, nonSessionTitlePatterns, trackRules } from './session-classification.constants';
 
 export function classifyTrack(title: string): TalkTrack {
@@ -21,6 +22,10 @@ export function classifyLevel(title: string, abstract: string): TalkLevel {
   }
 
   return 2;
+}
+
+export function isLogisticsTitle(title: string): boolean {
+  return logisticsTitlePatterns.some((pattern) => pattern.test(title));
 }
 
 export function isAttendableSession(session: ISession): boolean {

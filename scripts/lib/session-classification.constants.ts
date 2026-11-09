@@ -205,13 +205,6 @@ export const levelThreePatterns: RegExp[] = [
 ];
 
 export const nonSessionTitlePatterns: RegExp[] = [
-  /^registration/i,
-  /coat \+ bag check/i,
-  /coffee break/i,
-  /^.{0,3}\s*lunch/i,
-  /pet-a-pup/i,
-  /fun run/i,
-  /puppy yoga/i,
   /poster showcase/i,
   /^solutions showcase$/i,
   /project pavilion kiosks/i,
