@@ -1,0 +1,44 @@
+@if (boss) {
+  <section
+    class="boss-bar"
+    [class.is-large]="isLarge"
+    [class.is-defeated]="isDefeated"
+    [class.is-over]="!isLive && !isDefeated"
+    aria-label="Boss fight"
+  >
+    <div class="boss-head">
+      <span class="boss-cube" aria-hidden="true">
+        <mat-icon>{{ isDefeated ? 'emoji_events' : 'local_fire_department' }}</mat-icon>
+      </span>
+      <div class="boss-head-text">
+        <span class="boss-kicker kq-pixel">Boss · {{ statusLabel }}</span>
+        <span class="boss-title">{{ boss.title }}</span>
+      </div>
+    </div>
+
+    <div class="boss-health">
+      <div
+        class="boss-health-track"
+        role="progressbar"
+        aria-label="Boss health"
+        aria-valuemin="0"
+        [attr.aria-valuemax]="boss.maxHealth"
+        [attr.aria-valuenow]="boss.health"
+        [attr.aria-valuetext]="boss.health + ' of ' + boss.maxHealth + ' health left'"
+      >
+        <div class="boss-health-fill" [style.width.%]="healthPercent"></div>
+      </div>
+      <span class="boss-health-text kq-pixel">{{ boss.health }}/{{ boss.maxHealth }} HP</span>
+    </div>
+
+    <div class="boss-foot" aria-live="polite">
+      @if (isDefeated) {
+        <span class="boss-win kq-pixel">Boss defeated! +{{ boss.bonusXp }} XP bonus</span>
+      } @else if (isLive) {
+        <span class="boss-meta">{{ boss.participants }} fighting · beat it by {{ boss.deadline | date: 'h:mm a' }}</span>
+      } @else {
+        <span class="boss-meta">The boss got away this time.</span>
+      }
+    </div>
+  </section>
+}

@@ -1,0 +1,104 @@
+.here {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 640px;
+}
+
+.room {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px;
+  border-color: var(--kq-primary);
+}
+
+.room-label,
+.slot-label {
+  font-size: 11px;
+  color: var(--kq-muted);
+  text-transform: uppercase;
+}
+
+.room-name {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.room-place {
+  margin: 0;
+  color: var(--kq-muted);
+  font-size: 14px;
+}
+
+.room-count {
+  margin: 4px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.room-count-icon {
+  color: var(--kq-primary);
+}
+
+.slot {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 14px;
+}
+
+.slot--next {
+  border-color: var(--kq-accent);
+}
+
+.slot-title {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+.slot-meta {
+  margin: 0;
+  font-size: 14px;
+  color: var(--kq-muted);
+}
+
+.slot-actions {
+  margin-top: 6px;
+}
+
+.material-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  padding: 3px 8px;
+  background: var(--kq-surface-2);
+  border: 1px solid var(--kq-border-soft);
+  text-transform: capitalize;
+}
+
+.people-here {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.people-here-title {
+  margin: 8px 0 0;
+  font-size: 15px;
+}
+
+.people-here-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}

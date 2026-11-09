@@ -1,0 +1,111 @@
+<section class="app-page">
+  <app-screen-toolbar title="Here" subtitle="What’s on where you are">
+    <button mat-stroked-button type="button" (click)="goToScan()">
+      <div class="btn-content">
+        <mat-icon>qr_code_scanner</mat-icon>
+        <span>Scan</span>
+      </div>
+    </button>
+  </app-screen-toolbar>
+
+  @if (actionError) {
+    <app-alert-banner [message]="actionError" (dismissed)="actionError = ''"></app-alert-banner>
+  }
+
+  <app-state-wrapper
+    [isLoading]="isLoading"
+    [errorMessage]="errorMessage"
+    [isEmpty]="!around?.location"
+    emptyIcon="qr_code_2"
+    emptyMessage="Scan a room’s QR to start."
+    emptyActionLabel="Scan"
+    (emptyAction)="goToScan()"
+    (retry)="load()"
+  >
+    @if (around?.location; as location) {
+      <div class="here">
+        <article class="room kq-block">
+          <span class="room-label kq-pixel">You’re in</span>
+          <h2 class="room-name kq-pixel">{{ location.name }}</h2>
+          <p class="room-place">{{ location.building }} · {{ location.level }}@if (location.zone) { · {{ location.zone }}}</p>
+          <p class="room-count">
+            <mat-icon class="room-count-icon" aria-hidden="true">groups</mat-icon>
+            <span>{{ around?.playersHere ?? 0 }} {{ around?.playersHere === 1 ? 'player' : 'players' }} here</span>
+          </p>
+        </article>
+
+        <article class="slot kq-block">
+          <span class="slot-label kq-pixel">Now here</span>
+          @if (around?.now; as talk) {
+            <h3 class="slot-title">{{ talk.title }}</h3>
+            @if (talk.speakers.length) {
+              <p class="slot-meta">{{ talk.speakers.join(', ') }}</p>
+            }
+            <p class="slot-meta">{{ talk.start | date: 'shortTime' }} – {{ talk.end | date: 'shortTime' }}</p>
+            <span class="material-chip">
+              <span [class]="'kq-swatch kq-swatch--' + talk.material" aria-hidden="true"></span>
+              <span>{{ talk.track }} · {{ talk.material }}</span>
+            </span>
+            @if (around?.quizAvailable) {
+              <div class="slot-actions">
+                <a mat-flat-button [routerLink]="['/quiz', talk.id]">
+                  <div class="btn-content">
+                    <mat-icon>quiz</mat-icon>
+                    <span>Take the quiz</span>
+                  </div>
+                </a>
+              </div>
+            }
+          } @else {
+            <p class="slot-meta">Nothing running in this room right now.</p>
+          }
+        </article>
+
+        @if (around?.next; as talk) {
+          <article class="slot kq-block">
+            <span class="slot-label kq-pixel">Next here</span>
+            <h3 class="slot-title">{{ talk.title }}</h3>
+            <p class="slot-meta">{{ talk.start | date: 'EEE shortTime' }}@if (talk.speakers.length) { · {{ talk.speakers[0] }}}</p>
+            <span class="material-chip">
+              <span [class]="'kq-swatch kq-swatch--' + talk.material" aria-hidden="true"></span>
+              <span>{{ talk.track }} · {{ talk.material }}</span>
+            </span>
+          </article>
+        }
+
+        @if (nextTalk) {
+          <article class="slot slot--next kq-block">
+            <span class="slot-label kq-pixel">Your next talk</span>
+            <h3 class="slot-title">{{ nextTalk.title }}</h3>
+            <p class="slot-meta">
+              Starts in {{ startsInMinutes }} min@if (nextTalk.walkMinutes !== undefined) { · {{ nextTalk.walkMinutes }} min walk}
+            </p>
+            @if (nextTalk.place) {
+              <p class="slot-meta">{{ nextTalk.place.name }} · {{ nextTalk.place.building }} {{ nextTalk.place.level }}</p>
+            }
+          </article>
+        }
+
+        @if (peopleHere.length) {
+          <section class="people-here" aria-labelledby="people-here-title">
+            <h2 id="people-here-title" class="people-here-title kq-pixel">People to meet here</h2>
+            <ul class="people-here-list">
+              @for (match of peopleHere; track match.player.id) {
+                <li>
+                  <app-person-card
+                    [match]="match"
+                    [meet]="meetsByPartner.get(match.player.id)"
+                    [isBusy]="busyIds.has(match.player.id)"
+                    [compact]="true"
+                    (propose)="propose($event)"
+                    (accept)="accept($event)"
+                  ></app-person-card>
+                </li>
+              }
+            </ul>
+          </section>
+        }
+      </div>
+    }
+  </app-state-wrapper>
+</section>

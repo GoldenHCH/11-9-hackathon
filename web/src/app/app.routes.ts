@@ -102,20 +102,20 @@ export const routes: Routes = [
   {
     path: 'here',
     title: 'Here · KubeQuest',
-    loadComponent: placeholder,
-    data: { title: 'Here', icon: 'place', message: 'Scan a room’s QR block to see what’s on and who’s around.' },
+    canActivate: [meGuard],
+    loadComponent: () => import('./here/here.component').then((module) => module.HereComponent),
   },
   {
     path: 'people',
     title: 'People · KubeQuest',
-    loadComponent: placeholder,
-    data: { title: 'People', icon: 'group', message: 'Players working on what you’re working on, nearby first.' },
+    canActivate: [meGuard],
+    loadComponent: () => import('./people/people/people.component').then((module) => module.PeopleComponent),
   },
   {
     path: 'quiz/:talkId',
     title: 'Quiz · KubeQuest',
-    loadComponent: placeholder,
-    data: { title: 'Quiz', icon: 'quiz', message: 'Three questions, plain text, no timer.' },
+    canActivate: [meGuard],
+    loadComponent: () => import('./quiz/quiz.component').then((module) => module.QuizComponent),
   },
   {
     path: 'exhibitors',
@@ -151,8 +151,7 @@ export const routes: Routes = [
   {
     path: 'screen/:locationId',
     title: 'KubeQuest',
-    loadComponent: placeholder,
-    data: { title: 'Demo screen', icon: 'qr_code_2', message: 'Live QR and top 10.' },
+    loadComponent: () => import('./screen/screen.component').then((module) => module.ScreenComponent),
   },
   { path: '**', redirectTo: '' },
 ];

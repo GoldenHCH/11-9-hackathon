@@ -22,13 +22,20 @@
     "fixtures": "tsx scripts/build-fixtures.ts",
     "access-links": "tsx scripts/print-access-links.ts",
     "seed:demo": "tsx scripts/seed-demo-login.ts",
-    "reserve:handles": "tsx scripts/reserve-handles.ts"
+    "reserve:handles": "tsx scripts/reserve-handles.ts",
+    "qr:sheet": "tsx scripts/print-qr-sheet.ts"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
+    "@types/pngjs": "6.0.5",
+    "@types/qrcode": "1.5.6",
     "concurrently": "10.0.7",
     "esbuild": "0.28.2",
     "eslint": "10.14.0",
+    "jsqr": "1.4.0",
+    "pdf-lib": "1.17.1",
+    "pngjs": "7.0.0",
+    "qrcode": "1.5.4",
     "tsx": "4.23.15",
     "typescript": "5.9.3",
     "typescript-eslint": "8.72.2"
