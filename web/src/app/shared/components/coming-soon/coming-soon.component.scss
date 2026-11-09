@@ -2,24 +2,35 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
-  padding: 32px 16px;
+  gap: 16px;
+  padding: 32px 24px;
   text-align: center;
 }
 
 .coming-soon-icon {
-  width: 48px;
-  height: 48px;
-  font-size: 48px;
-  color: var(--app-theme--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  color: var(--kq-accent-ink);
+  background: var(--kq-accent);
+  border: 2px solid var(--kq-border);
+  box-shadow: var(--kq-shadow), inset -4px -4px 0 rgb(0 0 0 / 22%), inset 4px 4px 0 rgb(255 255 255 / 30%);
+
+  .mat-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 32px;
+  }
 }
 
 .coming-soon-message {
   margin: 0;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .coming-soon-note {
   margin: 0;
-  color: var(--app-theme--ink-muted);
+  color: var(--kq-muted);
 }

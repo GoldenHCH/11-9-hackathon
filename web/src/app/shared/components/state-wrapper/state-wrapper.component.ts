@@ -1,11 +1,10 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { AlertBannerComponent } from '../alert-banner/alert-banner.component';
 
 @Component({
   selector: 'app-state-wrapper',
-  imports: [MatButtonModule, MatIconModule, AlertBannerComponent],
+  imports: [MatIconModule, AlertBannerComponent],
   templateUrl: './state-wrapper.component.html',
   styleUrl: './state-wrapper.component.scss',
 })

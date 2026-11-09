@@ -1,10 +1,9 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-alert-banner',
-  imports: [MatButtonModule, MatIconModule],
+  imports: [MatIconModule],
   templateUrl: './alert-banner.component.html',
   styleUrl: './alert-banner.component.scss',
 })

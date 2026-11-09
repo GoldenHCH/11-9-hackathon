@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding: 14px;
+  padding: 16px;
   color: #ffffff;
   background: #2a1a1a;
   border: 2px solid var(--kq-border);
@@ -24,7 +24,7 @@
 .boss-head {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .boss-cube {
@@ -71,7 +71,7 @@
 .boss-health {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .boss-health-track {
@@ -85,7 +85,7 @@
   height: 100%;
   background: var(--kq-danger);
   background-image: repeating-linear-gradient(90deg, transparent 0 12px, rgb(0 0 0 / 30%) 12px 14px);
-  transition: width 400ms steps(6);
+  transition: width 400ms var(--kq-ease);
 }
 
 .boss-health-text {
