@@ -1,6 +1,6 @@
 version: "1"
 name: kubequest-banners
-description: Mirror of the KubeQuest banner rules. Reads the XP ledger for one attendee and writes a 0 XP badge event for each banner reached. The app computes banners in code as the source of truth; badge event ids are deterministic so the two never double-award.
+description: Mirror of the KubeQuest banner rules. Reads the XP ledger for one attendee, and for each banner reached writes a 0 XP badge event (upsert that never overwrites) and appends the banner to attendees.banners. The app computes banners in code as the source of truth; badge event ids are deterministic and both writes are idempotent, so the two can run in any order without double-awarding or leaving the profile behind.
 enabled: true
 tags:
   - kubequest
@@ -42,15 +42,29 @@ steps:
       - name: badge_observability_nerd
         type: elasticsearch.request
         with:
-          method: PUT
-          path: "/xp_events/_create/{{ inputs.attendeeId }}:badge:observability-nerd"
+          method: POST
+          path: "/xp_events/_update/{{ inputs.attendeeId }}:badge:observability-nerd"
           body:
-            id: "{{ inputs.attendeeId }}:badge:observability-nerd"
-            attendeeId: "{{ inputs.attendeeId }}"
-            type: badge
-            xp: 0
-            banner: observability-nerd
-            at: "{{ execution.startedAt | date: '%s' }}000"
+            script:
+              source: "ctx.op = 'noop'"
+            upsert:
+              id: "{{ inputs.attendeeId }}:badge:observability-nerd"
+              attendeeId: "{{ inputs.attendeeId }}"
+              type: badge
+              xp: 0
+              banner: observability-nerd
+              at: "{{ execution.startedAt | date: '%s' }}000"
+      - name: banner_observability_nerd
+        type: elasticsearch.request
+        with:
+          method: POST
+          path: "/attendees/_update/{{ inputs.attendeeId }}?retry_on_conflict=3"
+          body:
+            script:
+              lang: painless
+              source: "if (ctx._source.banners == null) { ctx._source.banners = new ArrayList(); } if (ctx._source.banners.contains(params.banner)) { ctx.op = 'noop'; } else { ctx._source.banners.add(params.banner); }"
+              params:
+                banner: observability-nerd
   - name: connector
     type: if
     condition: "steps.ledger.output.aggregations.handshakes.doc_count >= 3"
@@ -58,15 +72,29 @@ steps:
       - name: badge_connector
         type: elasticsearch.request
         with:
-          method: PUT
-          path: "/xp_events/_create/{{ inputs.attendeeId }}:badge:connector"
+          method: POST
+          path: "/xp_events/_update/{{ inputs.attendeeId }}:badge:connector"
           body:
-            id: "{{ inputs.attendeeId }}:badge:connector"
-            attendeeId: "{{ inputs.attendeeId }}"
-            type: badge
-            xp: 0
-            banner: connector
-            at: "{{ execution.startedAt | date: '%s' }}000"
+            script:
+              source: "ctx.op = 'noop'"
+            upsert:
+              id: "{{ inputs.attendeeId }}:badge:connector"
+              attendeeId: "{{ inputs.attendeeId }}"
+              type: badge
+              xp: 0
+              banner: connector
+              at: "{{ execution.startedAt | date: '%s' }}000"
+      - name: banner_connector
+        type: elasticsearch.request
+        with:
+          method: POST
+          path: "/attendees/_update/{{ inputs.attendeeId }}?retry_on_conflict=3"
+          body:
+            script:
+              lang: painless
+              source: "if (ctx._source.banners == null) { ctx._source.banners = new ArrayList(); } if (ctx._source.banners.contains(params.banner)) { ctx.op = 'noop'; } else { ctx._source.banners.add(params.banner); }"
+              params:
+                banner: connector
   - name: welcomer
     type: if
     condition: "steps.ledger.output.aggregations.welcomes.doc_count >= 2"
@@ -74,12 +102,26 @@ steps:
       - name: badge_welcomer
         type: elasticsearch.request
         with:
-          method: PUT
-          path: "/xp_events/_create/{{ inputs.attendeeId }}:badge:welcomer"
+          method: POST
+          path: "/xp_events/_update/{{ inputs.attendeeId }}:badge:welcomer"
           body:
-            id: "{{ inputs.attendeeId }}:badge:welcomer"
-            attendeeId: "{{ inputs.attendeeId }}"
-            type: badge
-            xp: 0
-            banner: welcomer
-            at: "{{ execution.startedAt | date: '%s' }}000"
+            script:
+              source: "ctx.op = 'noop'"
+            upsert:
+              id: "{{ inputs.attendeeId }}:badge:welcomer"
+              attendeeId: "{{ inputs.attendeeId }}"
+              type: badge
+              xp: 0
+              banner: welcomer
+              at: "{{ execution.startedAt | date: '%s' }}000"
+      - name: banner_welcomer
+        type: elasticsearch.request
+        with:
+          method: POST
+          path: "/attendees/_update/{{ inputs.attendeeId }}?retry_on_conflict=3"
+          body:
+            script:
+              lang: painless
+              source: "if (ctx._source.banners == null) { ctx._source.banners = new ArrayList(); } if (ctx._source.banners.contains(params.banner)) { ctx.op = 'noop'; } else { ctx._source.banners.add(params.banner); }"
+              params:
+                banner: welcomer

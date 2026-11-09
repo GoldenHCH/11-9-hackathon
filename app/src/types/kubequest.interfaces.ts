@@ -453,6 +453,15 @@ export interface ITalkMatch {
   walkMinutes?: number;
 }
 
+export interface IGuideAnswer {
+  provider: AiProvider;
+  pending: boolean;
+  interest: string;
+  picks: ITalkMatch[];
+  toolCalls: string[];
+  droppedPicks: number;
+}
+
 export interface IPersonMatch {
   player: IMatchPlayer;
   score: number;
@@ -851,6 +860,7 @@ export interface IToolContracts {
   search: { input: ISearchInput; output: ISearchResponse };
   recommend_talks: { input: IRecommendTalksInput; output: ITalkMatch[] };
   recommend_people: { input: IRecommendPeopleInput; output: IPersonMatch[] };
+  ask_guide: { input: IAttendeeInput; output: IGuideAnswer };
   quest_board: { input: IAttendeeInput; output: IQuestBoard };
   respond_quest: { input: IRespondQuestInput; output: IRespondQuestResult };
   make_quest: { input: IMakeQuestInput; output: IQuest };

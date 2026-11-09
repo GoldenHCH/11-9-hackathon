@@ -1,4 +1,5 @@
 import { ToolName } from '../types/kubequest.types';
+import { askGuideTool } from './ask-guide.tool';
 import { bossStateTool } from './boss-state.tool';
 import { checkInTool } from './check-in.tool';
 import { getProfileTool } from './get-profile.tool';
@@ -46,6 +47,7 @@ export const toolRegistry = {
   search: searchTool,
   recommend_talks: recommendTalksTool,
   recommend_people: recommendPeopleTool,
+  ask_guide: askGuideTool,
   quest_board: questBoardTool,
   respond_quest: respondQuestTool,
   make_quest: makeQuestTool,

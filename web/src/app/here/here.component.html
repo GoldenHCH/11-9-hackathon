@@ -108,4 +108,42 @@
       </div>
     }
   </app-state-wrapper>
+
+  <article class="slot guide kq-block" aria-live="polite">
+    <span class="slot-label kq-pixel">Ask the guide</span>
+    <p class="slot-meta">Elastic Agent Builder picks your next talks from the live schedule.</p>
+    @if (guideError) {
+      <p class="slot-meta">{{ guideError }}</p>
+    }
+    @if (guide; as answer) {
+      <ul class="guide-picks">
+        @for (pick of answer.picks; track pick.talk.id) {
+          <li class="guide-pick">
+            <h3 class="slot-title">{{ pick.talk.title }}</h3>
+            <p class="slot-meta">
+              {{ pick.talk.start | date: 'EEE shortTime' }} · {{ pick.talk.room }}@if (pick.walkMinutes !== undefined) { · {{ pick.walkMinutes }} min walk}
+            </p>
+            <p class="guide-why">{{ pick.reason }}</p>
+          </li>
+        }
+      </ul>
+      <p class="guide-source">
+        @if (answer.provider === 'agent_builder') {
+          Agent Builder, grounded by {{ answer.toolCalls.join(', ') || 'kubequest tools' }}
+        } @else if (answer.pending) {
+          The agent is still thinking. Showing Jina-reranked picks for now.
+        } @else {
+          Jina-reranked picks
+        }
+      </p>
+    }
+    <div class="slot-actions">
+      <button mat-flat-button type="button" (click)="askGuide()" [disabled]="isAsking">
+        <div class="btn-content">
+          <mat-icon>auto_awesome</mat-icon>
+          <span>{{ isAsking ? 'Asking…' : guide ? 'Ask again' : 'What should I see next?' }}</span>
+        </div>
+      </button>
+    </div>
+  </article>
 </section>

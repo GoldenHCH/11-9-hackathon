@@ -1,7 +1,7 @@
 import type { estypes } from '@elastic/elasticsearch';
 import { esOptions, getEsClient } from '../es/client';
 import { esTimeouts, indexNames } from '../es/es.constants';
-import { logger } from '../observability/logger';
+import { rerankRetriever, searchWithFallbacks } from '../es/rerank';
 import { gameRules } from '../types/kubequest.constants';
 import { IAttendee, IIntro, IPersonMatch } from '../types/kubequest.interfaces';
 import { worldNow } from '../world/clock';
@@ -110,37 +110,39 @@ async function hybridPeople(
     return response.hits.hits;
   }
 
-  try {
+  const hybrid: estypes.RetrieverContainer = {
+    rrf: {
+      retrievers: [
+        { standard: { query: { bool: { filter: [filter], must: [{ semantic: { field: 'profileText', query: queryText } }] } } } },
+        { standard: { query: keyword } },
+      ],
+      rank_window_size: Math.max(50, size),
+      rank_constant: 20,
+    },
+  };
+  const byRetriever = async (retriever: estypes.RetrieverContainer): Promise<estypes.SearchHit<IAttendee>[]> => {
     const response = await client.search<IAttendee>(
-      {
-        index: indexNames.ATTENDEES,
-        size,
-        _source_excludes: attendeeSourceExcludes,
-        retriever: {
-          rrf: {
-            retrievers: [
-              { standard: { query: { bool: { filter: [filter], must: [{ semantic: { field: 'profileText', query: queryText } }] } } } },
-              { standard: { query: keyword } },
-            ],
-            rank_window_size: Math.max(50, size),
-            rank_constant: 20,
-          },
-        },
-      },
+      { index: indexNames.ATTENDEES, size, _source_excludes: attendeeSourceExcludes, retriever },
       esOptions(esTimeouts.SEARCH_MS),
     );
 
     return response.hits.hits;
-  } catch (error) {
-    logger.warn({ err: error }, 'hybrid people search failed, falling back to keyword search');
-
+  };
+  const keywordOnly = async (): Promise<estypes.SearchHit<IAttendee>[]> => {
     const response = await client.search<IAttendee>(
       { index: indexNames.ATTENDEES, size, query: keyword, _source_excludes: attendeeSourceExcludes },
       esOptions(esTimeouts.SEARCH_MS),
     );
 
     return response.hits.hits;
-  }
+  };
+  const { result } = await searchWithFallbacks('people', [
+    { mode: 'reranked', run: () => byRetriever(rerankRetriever(hybrid, 'profileText', queryText, size)) },
+    { mode: 'hybrid', run: () => byRetriever(hybrid) },
+    { mode: 'lexical', run: keywordOnly },
+  ]);
+
+  return result;
 }
 
 function reasonFor(me: IAttendee, them: IAttendee, shared: string[], sameRoom: boolean): string {

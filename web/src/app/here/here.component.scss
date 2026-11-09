@@ -102,3 +102,26 @@
   flex-direction: column;
   gap: 12px;
 }
+
+.guide {
+  margin-top: 16px;
+}
+
+.guide-picks {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.guide-why {
+  margin: 4px 0 0;
+}
+
+.guide-source {
+  margin: 12px 0 0;
+  font-size: 0.8rem;
+  color: var(--kq-muted);
+}
