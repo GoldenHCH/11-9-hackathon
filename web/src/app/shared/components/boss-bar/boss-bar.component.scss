@@ -1,0 +1,145 @@
+:host {
+  display: block;
+}
+
+.boss-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 14px;
+  color: #ffffff;
+  background: #2a1a1a;
+  border: 2px solid var(--kq-border);
+  box-shadow: var(--kq-shadow);
+
+  &.is-over {
+    background: #2e2e2e;
+  }
+
+  &.is-defeated {
+    background: #1f2a12;
+  }
+}
+
+.boss-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.boss-cube {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 40px;
+  height: 40px;
+  background: var(--kq-danger);
+  border: 2px solid #000000;
+  box-shadow: inset -5px -5px 0 rgb(0 0 0 / 28%), inset 5px 5px 0 rgb(255 255 255 / 25%);
+
+  .mat-icon {
+    color: var(--kq-gold);
+  }
+}
+
+.is-defeated .boss-cube {
+  background: var(--kq-primary);
+}
+
+.boss-head-text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.boss-kicker {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--kq-gold);
+}
+
+.boss-title {
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.boss-health {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.boss-health-track {
+  flex: 1;
+  height: 20px;
+  background: #000000;
+  border: 2px solid #ffffff;
+}
+
+.boss-health-fill {
+  height: 100%;
+  background: var(--kq-danger);
+  background-image: repeating-linear-gradient(90deg, transparent 0 12px, rgb(0 0 0 / 30%) 12px 14px);
+  transition: width 400ms steps(6);
+}
+
+.boss-health-text {
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.boss-meta {
+  font-size: 13px;
+  color: rgb(255 255 255 / 80%);
+}
+
+.boss-win {
+  font-size: 16px;
+  color: var(--kq-gold);
+}
+
+.is-large {
+  gap: 16px;
+  padding: 20px;
+
+  .boss-cube {
+    flex-basis: 56px;
+    height: 56px;
+  }
+
+  .boss-kicker {
+    font-size: 16px;
+  }
+
+  .boss-title {
+    font-size: 24px;
+  }
+
+  .boss-health-track {
+    height: 36px;
+    border-width: 3px;
+  }
+
+  .boss-health-text {
+    font-size: 22px;
+  }
+
+  .boss-meta {
+    font-size: 20px;
+  }
+
+  .boss-win {
+    font-size: 26px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .boss-health-fill {
+    transition: none;
+  }
+}
