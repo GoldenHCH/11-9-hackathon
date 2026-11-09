@@ -1,0 +1,89 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 640px;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+}
+
+.hero-text {
+  min-width: 0;
+}
+
+.hero-handle {
+  margin: 0 0 6px;
+  font-size: 20px;
+  overflow-wrap: anywhere;
+}
+
+.hero-line {
+  margin: 0 0 2px;
+}
+
+.hero-muted,
+.muted {
+  color: var(--app-theme--ink-muted);
+}
+
+.card {
+  padding: 16px;
+}
+
+.card-title {
+  margin: 0 0 12px;
+  font-size: 14px;
+}
+
+.met-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 0 0 8px;
+}
+
+.topics {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.topic {
+  padding: 2px 8px;
+  border: 1px solid var(--app-theme--border);
+  background: var(--app-theme--tertiary-bg);
+  font-size: 13px;
+}
+
+.notes {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.notes-privacy {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 8px;
+  font-size: 13px;
+}
+
+.notes-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.saved {
+  color: var(--app-theme--tertiary);
+  font-weight: 600;
+}

@@ -1,5 +1,6 @@
 import express, { Express, NextFunction, Request, Response } from 'express';
 import { apiRoutes } from './http/api.routes';
+import { authRoutes } from './http/auth.routes';
 import { sendError } from './http/errors';
 import { healthRoutes } from './http/health.routes';
 import { webRoutes } from './http/web.routes';
@@ -55,6 +56,7 @@ export function createApp(): Express {
   app.use(malformedBodyHandler);
   app.use(healthRoutes());
   app.use(apiRoutes());
+  app.use(authRoutes());
   app.use(webRoutes());
   app.use((_request, response) => {
     sendError(response, 404, 'not_found', 'Nothing lives at this address.');

@@ -297,3 +297,28 @@
 .sign-out {
   align-self: flex-start;
 }
+
+.intent-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.intent-summary {
+  margin: 0;
+  font-size: 14px;
+}
+
+.intent-social {
+  margin: 0;
+  font-size: 13px;
+}
+
+.github-outcome {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 12px 16px;
+  font-size: 14px;
+}

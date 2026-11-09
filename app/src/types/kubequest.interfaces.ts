@@ -1,3 +1,4 @@
+import type { IConnectionToolContracts, IProfileLinks } from './connections.interfaces';
 import type { IAttendeeIntent, IIntentInput } from './intent.interfaces';
 import {
   AiProvider,
@@ -142,6 +143,7 @@ export interface IAttendee {
   banners: BannerId[];
   blockedIds: string[];
   createdAt: IsoDateString;
+  links?: IProfileLinks;
   itinerary?: IItineraryEntry[];
   intent?: IAttendeeIntent;
   seniority?: string;
@@ -1254,7 +1256,7 @@ export interface IItineraryChangeResult {
   maxItems: number;
 }
 
-export interface IToolContracts {
+export interface IToolContracts extends IConnectionToolContracts {
   sign_in: { input: ISignInInput; output: ISignInResult };
   sign_up: { input: ISignUpInput; output: ISignUpResult };
   get_profile: { input: IAttendeeInput; output: IProfile };

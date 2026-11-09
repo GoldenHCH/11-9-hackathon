@@ -1,6 +1,6 @@
 import { OnboardingStep } from './onboarding.types';
 
-export const onboardingSteps: readonly OnboardingStep[] = ['signin', 'import', 'handle', 'about', 'topics', 'meeting'];
+export const onboardingSteps: readonly OnboardingStep[] = ['signin', 'import', 'goals', 'handle', 'about', 'topics', 'meeting', 'links'];
 
 export const maxTopics = 5;
 

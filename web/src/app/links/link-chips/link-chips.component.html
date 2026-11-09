@@ -1,0 +1,18 @@
+<ul class="chips" aria-label="Links">
+  @for (item of items; track item.network) {
+    <li>
+      <a class="chip" [href]="item.url" target="_blank" rel="noopener noreferrer" [attr.aria-label]="networkLabel(item.network) + ': ' + item.label">
+        <span class="chip-icon app-pixel" [style.background]="color(item.network)" aria-hidden="true">{{ glyph(item.network) }}</span>
+        <span class="chip-text">
+          <span class="chip-network">
+            {{ networkLabel(item.network) }}
+            @if (item.verified) {
+              <mat-icon class="chip-verified" aria-label="Verified">verified</mat-icon>
+            }
+          </span>
+          <span class="chip-label">{{ item.label }}</span>
+        </span>
+      </a>
+    </li>
+  }
+</ul>

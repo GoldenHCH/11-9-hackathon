@@ -15,6 +15,9 @@ const bool: estypes.MappingProperty = { type: 'boolean' };
 const geoPoint: estypes.MappingProperty = { type: 'geo_point' };
 const opaqueObject: estypes.MappingProperty = { type: 'object', enabled: false };
 const timeWindow: estypes.MappingProperty = { properties: { start: date, end: date } };
+const linksMapping: estypes.MappingProperty = {
+  properties: { linkedin: unindexedKeyword, github: unindexedKeyword, x: unindexedKeyword, bluesky: unindexedKeyword, mastodon: unindexedKeyword, website: unindexedKeyword },
+};
 
 function semanticText(inferenceId: string): estypes.MappingProperty {
   return { type: 'semantic_text', inference_id: inferenceId };
@@ -90,6 +93,7 @@ export function buildIndexMappings(inferenceId: string): Record<IndexName, Prope
       banners: keyword,
       blockedIds: keyword,
       createdAt: date,
+      links: linksMapping,
       itinerary: { properties: { talkId: keyword, addedAt: date } },
       intent: { properties: { goals: keyword, exploringField: keyword, socialLevel: keyword } },
       seniority: keyword,
@@ -217,6 +221,11 @@ export function buildIndexMappings(inferenceId: string): Record<IndexName, Prope
       createdAt: date,
       updatedAt: date,
       noteText: semanticText(inferenceId),
+      talkId: keyword,
+      talkTitle: text,
+      speakers: keyword,
+      note: text,
+      takeaways: text,
       lastScanAt: date,
       kind: keyword,
       publicId: keyword,
@@ -243,6 +252,11 @@ export function buildIndexMappings(inferenceId: string): Record<IndexName, Prope
       handle: keyword,
       attendeeId: keyword,
       createdAt: date,
+      memberIds: keyword,
+      connectionId: keyword,
+      metAt: date,
+      updatedAt: date,
+      detail: opaqueObject,
       type: keyword,
       title: { type: 'text', index: false },
       body: { type: 'text', index: false },

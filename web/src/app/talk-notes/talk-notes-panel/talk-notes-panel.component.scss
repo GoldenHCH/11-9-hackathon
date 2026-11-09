@@ -1,0 +1,59 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.panel-title {
+  margin: 0;
+  font-size: 14px;
+}
+
+.panel-privacy {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  color: var(--app-theme--ink-muted);
+}
+
+.takeaways-label {
+  margin: 8px 0 0;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.takeaway-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.takeaway-field {
+  flex: 1;
+  min-width: 0;
+}
+
+.add {
+  align-self: flex-start;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.saved {
+  color: var(--app-theme--tertiary);
+  font-weight: 600;
+}

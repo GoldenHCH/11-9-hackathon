@@ -3,16 +3,20 @@ import { Component, OnInit, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSlideToggleChange, MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { Router, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { firstValueFrom, forkJoin } from 'rxjs';
 import { ApiErrorHelper } from '../core/helpers/api-error.helper';
 import { MeService } from '../core/services/me.service';
 import { ToolsService } from '../core/services/tools.service';
+import { IntentPickerComponent } from '../intent/intent-picker/intent-picker.component';
+import { goalOptions, socialOptions } from '../intent/intent.constants';
+import { IntentHelper } from '../intent/intent.helper';
+import { IIntentInput } from '../intent/intent.types';
 import { AlertBannerComponent } from '../shared/components/alert-banner/alert-banner.component';
 import { StateWrapperComponent } from '../shared/components/state-wrapper/state-wrapper.component';
 import { CopyLinkComponent } from './copy-link/copy-link.component';
 import { BlockFaceComponent } from './face/block-face.component';
-import { bannerIcons, materialInfo, moreLinks, settingOptions } from './profile.constants';
+import { bannerIcons, githubMessages, materialInfo, moreLinks, settingOptions } from './profile.constants';
 import { IInventory, IProfile, IUpdateSettingsInput, ProfileSettingKey } from './profile.types';
 import { AccessibilityService } from './services/accessibility.service';
 
@@ -27,6 +31,7 @@ import { AccessibilityService } from './services/accessibility.service';
     StateWrapperComponent,
     BlockFaceComponent,
     CopyLinkComponent,
+    IntentPickerComponent,
   ],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.scss',
@@ -36,8 +41,10 @@ export class ProfileComponent implements OnInit {
   private readonly _meService = inject(MeService);
   private readonly _accessibilityService = inject(AccessibilityService);
   private readonly _router = inject(Router);
+  private readonly _route = inject(ActivatedRoute);
 
   public readonly materials = materialInfo;
+  public readonly githubMessages = githubMessages;
   public readonly bannerIcons = bannerIcons;
   public readonly settingOptions = settingOptions;
   public readonly moreLinks = moreLinks;
@@ -48,6 +55,30 @@ export class ProfileComponent implements OnInit {
   public errorMessage = '';
   public settingsError = '';
   public savingKey: ProfileSettingKey | null = null;
+  public isEditingIntent = false;
+  public isSavingIntent = false;
+  public intentError = '';
+  public intentDraft: IIntentInput = { goals: [] };
+  public githubOutcome = '';
+
+  public get intentSummary(): string {
+    const intent = this.profile?.attendee.intent;
+
+    if (!intent || intent.goals.length === 0) {
+      return '';
+    }
+
+    const goals = goalOptions.filter((option) => intent.goals.includes(option.goal)).map((option) => option.label);
+    const exploring = intent.exploringField ? ` (${intent.exploringField})` : '';
+
+    return goals.join(', ') + exploring;
+  }
+
+  public get socialLabel(): string {
+    const level = this.profile?.attendee.intent?.socialLevel ?? 'some';
+
+    return socialOptions.find((option) => option.level === level)?.label ?? '';
+  }
 
   public get xpPercent(): number {
     return Math.round(Math.min(1, Math.max(0, this.profile?.level.progress ?? 0)) * 100);
@@ -64,7 +95,40 @@ export class ProfileComponent implements OnInit {
   }
 
   public ngOnInit(): void {
+    this.githubOutcome = this._route.snapshot.queryParamMap.get('github') ?? '';
     void this.load();
+  }
+
+  public editIntent(): void {
+    this.intentDraft = IntentHelper.toInput(this.profile?.attendee.intent);
+    this.intentError = '';
+    this.isEditingIntent = true;
+  }
+
+  public cancelIntent(): void {
+    this.isEditingIntent = false;
+    this.intentError = '';
+  }
+
+  public async saveIntent(): Promise<void> {
+    const attendeeId = this._meService.attendeeId;
+
+    if (!attendeeId || this.isSavingIntent) {
+      return;
+    }
+
+    this.isSavingIntent = true;
+    this.intentError = '';
+
+    try {
+      const input: IUpdateSettingsInput = { attendeeId, intent: IntentHelper.forSaving(this.intentDraft) };
+      this.profile = await firstValueFrom(this._toolsService.call<IProfile>('update_settings', input, { background: true }));
+      this.isEditingIntent = false;
+    } catch (error) {
+      this.intentError = ApiErrorHelper.message(error);
+    } finally {
+      this.isSavingIntent = false;
+    }
   }
 
   public async load(): Promise<void> {

@@ -11,6 +11,12 @@
     (emptyAction)="signOut()"
   >
     @if (profile) {
+      @if (githubMessages[githubOutcome]) {
+        <p class="github-outcome kq-block" role="status">
+          <mat-icon aria-hidden="true">{{ githubOutcome === 'verified' ? 'verified' : 'info' }}</mat-icon>
+          <span>{{ githubMessages[githubOutcome] }}</span>
+        </p>
+      }
       <section class="hero kq-block" aria-labelledby="profile-handle">
         <app-block-face [seed]="profile.attendee.faceSeed" [size]="96" [label]="'Pixel face of @' + profile.attendee.handle"></app-block-face>
         <div class="hero-info">
@@ -116,6 +122,30 @@
           </ul>
         } @else {
           <p class="kq-muted section-empty">No topics yet.</p>
+        }
+      </section>
+
+      <section class="section kq-block" aria-labelledby="intent-title">
+        <div class="section-header">
+          <h2 id="intent-title" class="section-title kq-pixel">Why you're here</h2>
+          @if (!isEditingIntent) {
+            <button mat-stroked-button type="button" (click)="editIntent()">Edit</button>
+          }
+        </div>
+        @if (intentError) {
+          <app-alert-banner [message]="intentError" (dismissed)="intentError = ''"></app-alert-banner>
+        }
+        @if (isEditingIntent) {
+          <app-intent-picker idPrefix="kq-profile-intent" [value]="intentDraft" [socialChosen]="true" (valueChange)="intentDraft = $event"></app-intent-picker>
+          <div class="intent-actions">
+            <button mat-stroked-button type="button" [disabled]="isSavingIntent" (click)="cancelIntent()">Cancel</button>
+            <button mat-flat-button type="button" [disabled]="isSavingIntent" (click)="saveIntent()">Save</button>
+          </div>
+        } @else if (intentSummary) {
+          <p class="intent-summary">{{ intentSummary }}</p>
+          <p class="kq-muted intent-social">{{ socialLabel }}. Only you see this.</p>
+        } @else {
+          <p class="kq-muted section-empty">Tell us why you're here and your quests and matches fit your day.</p>
         }
       </section>
 
