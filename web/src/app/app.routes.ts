@@ -114,8 +114,8 @@ export const routes: Routes = [
   {
     path: 'quiz/:talkId',
     title: 'Quiz · KubeQuest',
-    loadComponent: placeholder,
-    data: { title: 'Quiz', icon: 'quiz', message: 'Three questions, plain text, no timer.' },
+    canActivate: [meGuard],
+    loadComponent: () => import('./quiz/quiz.component').then((module) => module.QuizComponent),
   },
   {
     path: 'organizer',
@@ -126,8 +126,7 @@ export const routes: Routes = [
   {
     path: 'screen/:locationId',
     title: 'KubeQuest',
-    loadComponent: placeholder,
-    data: { title: 'Demo screen', icon: 'qr_code_2', message: 'Live QR and top 10.' },
+    loadComponent: () => import('./screen/screen.component').then((module) => module.ScreenComponent),
   },
   { path: '**', redirectTo: '' },
 ];

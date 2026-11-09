@@ -1,0 +1,59 @@
+<div class="screen">
+  <section class="screen-left" aria-label="Join">
+    <h1 class="screen-title kq-pixel">Scan to join KubeQuest</h1>
+    <p class="screen-room">{{ roomName }}</p>
+
+    <div class="qr-frame">
+      @if (isKeyMissing) {
+        <div class="qr-message" role="alert">
+          <mat-icon aria-hidden="true">key_off</mat-icon>
+          <span class="kq-pixel">Screen key missing</span>
+        </div>
+      } @else if (qrDataUrl) {
+        <img class="qr" [src]="qrDataUrl" alt="QR code to join KubeQuest in this room" />
+      } @else if (qrError) {
+        <div class="qr-message" role="alert">
+          <mat-icon aria-hidden="true">error</mat-icon>
+          <span>{{ qrError }}</span>
+        </div>
+      } @else {
+        <div class="qr-message" aria-busy="true">
+          <span class="kq-pixel">Loading code…</span>
+        </div>
+      }
+    </div>
+
+    <p class="screen-hint">Point your phone camera at the code. No app to install.</p>
+  </section>
+
+  <section class="screen-right" aria-label="Live">
+    @if (hasBoss) {
+      <app-boss-bar
+        [locationId]="locationId"
+        [pollMs]="bossPollMs"
+        [keepPolling]="true"
+        [isLarge]="true"
+        (unavailable)="onBossUnavailable()"
+      ></app-boss-bar>
+    }
+
+    <div class="board">
+      <h2 class="board-title kq-pixel">Top 10 today</h2>
+      @if (rows.length) {
+        <ol class="board-rows">
+          @for (row of rows; track row.player.id) {
+            <li class="board-row" [class.is-top]="row.rank <= 3">
+              <span class="board-rank kq-pixel">{{ row.rank }}</span>
+              <app-pixel-face [seed]="faceSeed(row)" [size]="32" [label]="row.player.handle + ' face'"></app-pixel-face>
+              <span class="board-handle">{{ row.player.handle }}</span>
+              <span class="board-level">{{ row.player.levelName }}</span>
+              <span class="board-score kq-pixel">{{ row.score }} XP</span>
+            </li>
+          }
+        </ol>
+      } @else {
+        <p class="board-empty">Be the first on the board: scan the code.</p>
+      }
+    </div>
+  </section>
+</div>
