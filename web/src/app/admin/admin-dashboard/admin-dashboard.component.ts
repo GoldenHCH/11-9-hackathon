@@ -78,7 +78,6 @@ export class AdminDashboardComponent implements OnInit {
     const queryKey = this._route.snapshot.queryParamMap.get(staffKeyQueryParam);
 
     if (queryKey) {
-      this._accessKeyService.setAdminKey(queryKey);
       void this._router.navigate([], {
         relativeTo: this._route,
         queryParams: { [staffKeyQueryParam]: null },
@@ -111,7 +110,12 @@ export class AdminDashboardComponent implements OnInit {
       return;
     }
 
-    this._accessKeyService.setAdminKey(link.key);
+    if (link.outpostId) {
+      void this._router.navigate(['/exhibitor', link.outpostId], { queryParams: { [staffKeyQueryParam]: link.key } });
+
+      return;
+    }
+
     this._key = link.key;
     this.showGate = false;
     this.gateMessage = '';
@@ -120,7 +124,11 @@ export class AdminDashboardComponent implements OnInit {
 
   public forgetKey(): void {
     this._stopPolling();
-    this._accessKeyService.clearAdminKey();
+
+    if (this._key !== null && this._key === this._accessKeyService.adminKey) {
+      this._accessKeyService.clearAdminKey();
+    }
+
     this._key = null;
     this.overview = null;
     this.showGate = true;
@@ -177,6 +185,10 @@ export class AdminDashboardComponent implements OnInit {
   }
 
   private _apply(overview: IAdminOverview): void {
+    if (this._key && this._key !== this._accessKeyService.adminKey) {
+      this._accessKeyService.setAdminKey(this._key);
+    }
+
     const stats = overview.stats;
     const booths = overview.exhibitors;
 
