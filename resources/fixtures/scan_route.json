@@ -1,0 +1,26 @@
+{
+  "tool": "scan_route",
+  "endpoint": "GET /r/:locationId?t=",
+  "status": 200,
+  "response": {
+    "locationId": "salt-palace-level-1-150-defg",
+    "hasToken": true,
+    "next": {
+      "method": "POST",
+      "path": "/api/tools/check_in",
+      "body": {
+        "attendeeId": "<your attendee id>",
+        "locationId": "salt-palace-level-1-150-defg",
+        "token": "<signed-token>"
+      }
+    },
+    "signUpFirst": {
+      "method": "POST",
+      "path": "/api/tools/sign_up",
+      "bodyIncludes": {
+        "scanLocationId": "salt-palace-level-1-150-defg",
+        "scanToken": "<signed-token>"
+      }
+    }
+  }
+}

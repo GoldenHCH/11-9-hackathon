@@ -1,0 +1,432 @@
+[
+ {
+  "project": "Argo",
+  "kiosk": "P-18A",
+  "schedule": "Tuesday - Thursday Full Showcase Hours"
+ },
+ {
+  "project": "Armada",
+  "kiosk": "P-6A",
+  "schedule": "Wednesday 10:15 AM – 1:25 PM"
+ },
+ {
+  "project": "Backstage",
+  "kiosk": "P-3B",
+  "schedule": "Tuesday 3:00 PM – 7:30 PM, Wednesday 1:55 PM – 5:00 PM, Thursday 12:25 PM – 2:00 PM"
+ },
+ {
+  "project": "bootc",
+  "kiosk": "P-10B",
+  "schedule": "Wednesday 10:15 AM – 1:25 PM"
+ },
+ {
+  "project": "Cadence",
+  "kiosk": "P-15B",
+  "schedule": "Tuesday 3:00 PM – 7:30 PM"
+ },
+ {
+  "project": "Cartography",
+  "kiosk": "P-14B",
+  "schedule": "Thursday 10:15 AM - 2:00 PM"
+ },
+ {
+  "project": "Cedar",
+  "kiosk": "P-14B",
+  "schedule": "Tuesday 3:00 PM – 7:30 PM"
+ },
+ {
+  "project": "Cilium",
+  "kiosk": "P-9A",
+  "schedule": "Tuesday 3:00 PM – 7:30 PM, Wednesday 1:55 PM – 5:00 PM, Thursday 12:25 PM – 2:00 PM"
+ },
+ {
+  "project": "Cloud Native Buildpacks",
+  "kiosk": "P-2A",
+  "schedule": "Tuesday 3:00 PM – 7:30 PM, Wednesday 1:55 PM – 5:00 PM, Thursday 12:25 PM – 2:00 PM"
+ },
+ {
+  "project": "Cloud Native Community Groups/KCDs",
+  "kiosk": "P-17A",
+  "schedule": "Tuesday - Thursday Full Showcase Hours"
+ },
+ {
+  "project": "Confidential Containers",
+  "kiosk": "P-18B",
+  "schedule": "Tuesday 3:00 PM – 7:30 PM, Wednesday 1:55 PM – 5:00 PM, Thursday 12:25 PM – 2:00 PM"
+ },
+ {
+  "project": "containerd",
+  "kiosk": "P-8A",
+  "schedule": "Wednesday 10:15 AM – 1:25 PM"
+ },
+ {
+  "project": "Crossplane",
+  "kiosk": "P-7A",
+  "schedule": "Tuesday - Thursday Full Showcase Hours"
+ },
+ {
+  "project": "Dapr",
+  "kiosk": "P-18B",
+  "schedule": "Tuesday 10:30 AM – 2:30 PM, Wednesday 10:15 AM – 1:25 PM, Thursday 10:15 AM – 11:55 AM"
+ },
+ {
+  "project": "Drasi",
+  "kiosk": "P-2A",
+  "schedule": "Wednesday 10:15 AM – 1:25 PM, Thursday 10:15 AM – 11:55 AM"
+ },
+ {
+  "project": "Dynamic Resource Allocation (SIG Subproject)",
+  "kiosk": "P-6A",
+  "schedule": "Tuesday 10:30 AM – 2:30 PM"
+ },
+ {
+  "project": "Envoyproxy",
+  "kiosk": "P-7B",
+  "schedule": "Tuesday - Thursday Full Showcase Hours"
+ },
+ {
+  "project": "external-secrets",
+  "kiosk": "P-4B",
+  "schedule": "Wednesday 10:15 AM – 5:00 PM"
+ },
+ {
+  "project": "Falco",
+  "kiosk": "P-11A",
+  "schedule": "Tuesday 10:30 AM – 2:30 PM, Wednesday 10:15 AM – 1:25 PM, Thursday 10:15 AM – 11:55 AM"
+ },
+ {
+  "project": "Flatcar Container Linux",
+  "kiosk": "P-8A",
+  "schedule": "Tuesday 3:00 PM – 7:30 PM, Wednesday 1:55 PM – 5:00 PM, Thursday 12:25 PM – 2:00 PM"
+ },
+ {
+  "project": "Fluent Bit",
+  "kiosk": "P-12A",
+  "schedule": "Tuesday - Thursday Full Showcase Hours"
+ },
+ {
+  "project": "Flux",
+  "kiosk": "P-2B",
+  "schedule": "Tuesday - Thursday Full Showcase Hours"
+ },
+ {
+  "project": "Gateway API (SIG Subproject)",
+  "kiosk": "P-5B",
+  "schedule": "Wednesday 10:15 AM – 1:25 PM"
+ },
+ {
+  "project": "HAMi",
+  "kiosk": "P-9B",
+  "schedule": "Tuesday 3:00 PM – 7:30 PM, Wednesday 1:55 PM – 5:00 PM, Thursday 12:25 PM – 2:00 PM"
+ },
+ {
+  "project": "Harbor",
+  "kiosk": "P-13B",
+  "schedule": "Tuesday 3:00 PM – 7:30 PM, Wednesday 1:55 PM – 5:00 PM, Thursday 12:25 PM – 2:00 PM"
+ },
+ {
+  "project": "Headlamp (SIG)",
+  "kiosk": "P-5B",
+  "schedule": "Tuesday 3:00 PM – 7:30 PM"
+ },
+ {
+  "project": "Helm",
+  "kiosk": "P-1A",
+  "schedule": "Tuesday 10:30 AM – 2:30 PM, Wednesday 10:15 AM – 1:25 PM, Thursday 10:15 AM – 11:55 AM"
+ },
+ {
+  "project": "Hive Commons",
+  "kiosk": "P-10B",
+  "schedule": "Thursday 10:15 AM - 2:00 PM"
+ },
+ {
+  "project": "Hyperlight",
+  "kiosk": "P-9A",
+  "schedule": "Wednesday 10:15 AM – 1:25 PM"
+ },
+ {
+  "project": "Inspektor Gadget",
+  "kiosk": "P-15A",
+  "schedule": "Wednesday 10:15 AM – 1:25 PM"
+ },
+ {
+  "project": "Istio",
+  "kiosk": "P-6B",
+  "schedule": "Tuesday - Thursday Full Showcase Hours"
+ },
+ {
+  "project": "Jaeger",
+  "kiosk": "P-11B",
+  "schedule": "Tuesday 3:00 PM – 7:30 PM, Wednesday 1:55 PM – 5:00 PM, Thursday 12:25 PM – 2:00 PM"
+ },
+ {
+  "project": "k0s",
+  "kiosk": "P-4B",
+  "schedule": "Tuesday 10:30 AM – 2:30 PM"
+ },
+ {
+  "project": "K3s",
+  "kiosk": "P-8A",
+  "schedule": "Tuesday 10:30 AM – 2:30 PM"
+ },
+ {
+  "project": "k8gb",
+  "kiosk": "P-8B",
+  "schedule": "Tuesday 3:00 PM – 7:30 PM, Wednesday 1:55 PM – 5:00 PM, Thursday 12:25 PM – 2:00 PM"
+ },
+ {
+  "project": "kagent",
+  "kiosk": "P-8B",
+  "schedule": "Tuesday 10:30 AM – 2:30 PM Thursday 10:15 AM – 11:55 AM"
+ },
+ {
+  "project": "KAI Scheduler",
+  "kiosk": "P-9A",
+  "schedule": "Tuesday 10:30 AM – 2:30 PM"
+ },
+ {
+  "project": "Kairos",
+  "kiosk": "P-15B",
+  "schedule": "Tuesday 10:30 AM – 2:30 PM"
+ },
+ {
+  "project": "Karmada",
+  "kiosk": "P-3B",
+  "schedule": "Tuesday 10:30 AM – 2:30 PM, Wednesday 10:15 AM – 1:25 PM, Thursday 10:15 AM – 11:55 AM"
+ },
+ {
+  "project": "KEDA",
+  "kiosk": "P-4B",
+  "schedule": "Tuesday 3:00 PM – 7:30 PM, Wednesday 1:55 PM – 5:00 PM, Thursday 12:25 PM – 2:00 PM"
+ },
+ {
+  "project": "kgateway",
+  "kiosk": "P-17B",
+  "schedule": "Wednesday 10:15 AM – 5:00 PM"
+ },
+ {
+  "project": "KitOps",
+  "kiosk": "P-15A",
+  "schedule": "Tuesday 10:30 AM – 2:30 PM"
+ },
+ {
+  "project": "kpt",
+  "kiosk": "P-15B",
+  "schedule": "Wednesday 10:15 AM – 1:25 PM"
+ },
+ {
+  "project": "Krkn",
+  "kiosk": "P-14B",
+  "schedule": "Tuesday 10:30 AM – 2:30 PM"
+ },
+ {
+  "project": "KServe",
+  "kiosk": "P-9B",
+  "schedule": "Tuesday 10:30 AM – 2:30 PM, Wednesday 10:15 AM – 1:25 PM, Thursday 10:15 AM – 11:55 AM"
+ },
+ {
+  "project": "kube-burner",
+  "kiosk": "P-2A",
+  "schedule": "Tuesday 10:30 AM – 2:30 PM"
+ },
+ {
+  "project": "kubeflow",
+  "kiosk": "P-11A",
+  "schedule": "Tuesday 3:00 PM – 7:30 PM, Wednesday 1:55 PM – 5:00 PM, Thursday 12:25 PM – 2:00 PM"
+ },
+ {
+  "project": "Kubescape",
+  "kiosk": "P-14A",
+  "schedule": "Tuesday 3:00 PM – 7:30 PM, Wednesday 1:55 PM – 5:00 PM, Thursday 12:25 PM – 2:00 PM"
+ },
+ {
+  "project": "Kubevela",
+  "kiosk": "P-3A",
+  "schedule": "Tuesday 3:00 PM – 7:30 PM, Wednesday 1:55 PM – 5:00 PM, Thursday 12:25 PM – 2:00 PM"
+ },
+ {
+  "project": "KubeVirt",
+  "kiosk": "P-10A",
+  "schedule": "Tuesday 3:00 PM – 7:30 PM, Wednesday 1:55 PM – 5:00 PM, Thursday 12:25 PM – 2:00 PM"
+ },
+ {
+  "project": "Kueue / Workload Aware Scheduling (SIG Subproject)",
+  "kiosk": "P-5A",
+  "schedule": "Tuesday - Thursday Full Showcase Hours"
+ },
+ {
+  "project": "Kyverno",
+  "kiosk": "P-12B",
+  "schedule": "Tuesday - Thursday Full Showcase Hours"
+ },
+ {
+  "project": "Lima",
+  "kiosk": "P-9A",
+  "schedule": "Thursday 10:15 AM – 11:55 AM"
+ },
+ {
+  "project": "Linkerd",
+  "kiosk": "P-4A",
+  "schedule": "Tuesday - Thursday Full Showcase Hours"
+ },
+ {
+  "project": "LitmusChaos",
+  "kiosk": "P-14A",
+  "schedule": "Tuesday 10:30 AM – 2:30 PM, Wednesday 10:15 AM – 1:25 PM, Thursday 10:15 AM – 11:55 AM"
+ },
+ {
+  "project": "Longhorn",
+  "kiosk": "P-10A",
+  "schedule": "Tuesday 10:30 AM – 2:30 PM, Wednesday 10:15 AM – 1:25 PM, Thursday 10:15 AM – 11:55 AM"
+ },
+ {
+  "project": "Meshery",
+  "kiosk": "P-14B",
+  "schedule": "Wednesday 10:15 AM – 1:25 PM"
+ },
+ {
+  "project": "Metal3.io",
+  "kiosk": "P-13B",
+  "schedule": "Tuesday 10:30 AM – 2:30 PM, Wednesday 10:15 AM – 1:25 PM, Thursday 10:15 AM – 11:55 AM"
+ },
+ {
+  "project": "Microcks",
+  "kiosk": "P-4B",
+  "schedule": "Thursday 10:15 AM - 11:55 AM"
+ },
+ {
+  "project": "Open Cluster Management",
+  "kiosk": "P-8A",
+  "schedule": "Thursday 10:15 AM - 11:55 AM"
+ },
+ {
+  "project": "Open Policy Agent",
+  "kiosk": "P-11B",
+  "schedule": "Tuesday 10:30 AM – 2:30 PM, Wednesday 10:15 AM – 1:25 PM, Thursday 10:15 AM – 11:55 AM"
+ },
+ {
+  "project": "OpenChoreo",
+  "kiosk": "P-1B",
+  "schedule": "Tuesday 10:30 AM – 2:30 PM Thursday 10:15 AM – 11:55 AM"
+ },
+ {
+  "project": "OpenCost",
+  "kiosk": "P-17B",
+  "schedule": "Tuesday 10:30 AM – 2:30 PM"
+ },
+ {
+  "project": "OpenEverest",
+  "kiosk": "P-15B",
+  "schedule": "Wednesday 1:55 PM – 5:00 PM"
+ },
+ {
+  "project": "OpenFeature",
+  "kiosk": "P-15A",
+  "schedule": "Tuesday 3:00 PM – 7:30 PM, Wednesday 1:55 PM – 5:00 PM, Thursday 12:25 PM – 2:00 PM"
+ },
+ {
+  "project": "OpenTelemetry",
+  "kiosk": "P-16A",
+  "schedule": "Tuesday 10:30 AM – 2:30 PM, Wednesday 10:15 AM – 1:25 PM, Thursday 10:15 AM – 11:55 AM"
+ },
+ {
+  "project": "OpenTofu",
+  "kiosk": "P-6A",
+  "schedule": "Wednesday 1:55 PM – 5:00 PM"
+ },
+ {
+  "project": "ORAS",
+  "kiosk": "P-6A",
+  "schedule": "Tuesday 3:00 PM – 7:30 PM"
+ },
+ {
+  "project": "OSCAL Compass",
+  "kiosk": "P-14B",
+  "schedule": "Wednesday 1:55 PM – 5:00 PM"
+ },
+ {
+  "project": "OVN-Kubernetes",
+  "kiosk": "P-10B",
+  "schedule": "Tuesday 10:30 AM – 2:30 PM"
+ },
+ {
+  "project": "Perses",
+  "kiosk": "P-10B",
+  "schedule": "Tuesday 3:00 PM – 7:30 PM"
+ },
+ {
+  "project": "Podman Container Tools",
+  "kiosk": "P-10B",
+  "schedule": "Wednesday 1:55 PM – 5:00 PM"
+ },
+ {
+  "project": "Project Capsule",
+  "kiosk": "P-6A",
+  "schedule": "Thursday 10:15 AM – 2:00 PM"
+ },
+ {
+  "project": "Radius",
+  "kiosk": "P-1B",
+  "schedule": "Wednesday 10:15 AM – 1:25 PM"
+ },
+ {
+  "project": "Rook",
+  "kiosk": "P-3A",
+  "schedule": "Tuesday 10:30 AM – 2:30 PM, Wednesday 10:15 AM – 1:25 PM, Thursday 10:15 AM – 11:55 AM"
+ },
+ {
+  "project": "Score",
+  "kiosk": "P-17B",
+  "schedule": "Thursday 10:15 AM - 2:00 PM"
+ },
+ {
+  "project": "SIG-etcd",
+  "kiosk": "P-5B",
+  "schedule": "Tuesday 10:30 AM – 2:30 PM, Wednesday 1:55 PM – 5:00 PM, Thursday 10:15 AM – 2:00 PM"
+ },
+ {
+  "project": "SPIFFE",
+  "kiosk": "P-13A",
+  "schedule": "Tuesday - Thursday Full Showcase Hours"
+ },
+ {
+  "project": "Spin",
+  "kiosk": "P-15B",
+  "schedule": "Thursday 10:15 AM - 2:00 PM"
+ },
+ {
+  "project": "TAG Developer Experience",
+  "kiosk": "P-16A",
+  "schedule": "Tuesday 3:00 PM – 7:30 PM, Wednesday 1:55 PM – 5:00 PM, Thursday 12:25 PM – 2:00 PM"
+ },
+ {
+  "project": "TAG Infrastructure",
+  "kiosk": "P-15A",
+  "schedule": "Thursday 10:15 AM – 11:55 AM"
+ },
+ {
+  "project": "TAG Operational Resilience",
+  "kiosk": "P-17B",
+  "schedule": "Tuesday 3:00 PM – 7:30 PM"
+ },
+ {
+  "project": "Technical Community Group",
+  "kiosk": "P-16B",
+  "schedule": "Tuesday - Thursday Full Showcase Hours"
+ },
+ {
+  "project": "Tekton Pipelines",
+  "kiosk": "P-1B",
+  "schedule": "Tuesday 3:00 PM – 7:30 PM, Wednesday 1:55 PM – 5:00 PM, Thursday 12:25 PM – 2:00 PM"
+ },
+ {
+  "project": "Velero",
+  "kiosk": "P-8B",
+  "schedule": "Wednesday 10:15 AM – 1:25 PM"
+ },
+ {
+  "project": "Vitess",
+  "kiosk": "P-1A",
+  "schedule": "Tuesday 3:00 PM – 7:30 PM, Wednesday 1:55 PM – 5:00 PM, Thursday 12:25 PM – 2:00 PM"
+ }
+]

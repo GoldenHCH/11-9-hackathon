@@ -1,0 +1,85 @@
+version: "1"
+name: kubequest-banners
+description: Mirror of the KubeQuest banner rules. Reads the XP ledger for one attendee and writes a 0 XP badge event for each banner reached. The app computes banners in code as the source of truth; badge event ids are deterministic so the two never double-award.
+enabled: true
+tags:
+  - kubequest
+  - banners
+triggers:
+  - type: manual
+inputs:
+  - name: attendeeId
+    type: string
+    required: true
+steps:
+  - name: ledger
+    type: elasticsearch.request
+    with:
+      method: POST
+      path: /xp_events/_search
+      body:
+        size: 0
+        query:
+          term:
+            attendeeId: "{{ inputs.attendeeId }}"
+        aggs:
+          glass:
+            filter:
+              term:
+                material: glass
+          handshakes:
+            filter:
+              term:
+                type: handshake
+          welcomes:
+            filter:
+              term:
+                type: welcome
+  - name: observability_nerd
+    type: if
+    condition: "steps.ledger.output.aggregations.glass.doc_count >= 3"
+    steps:
+      - name: badge_observability_nerd
+        type: elasticsearch.request
+        with:
+          method: PUT
+          path: "/xp_events/_create/{{ inputs.attendeeId }}:badge:observability-nerd"
+          body:
+            id: "{{ inputs.attendeeId }}:badge:observability-nerd"
+            attendeeId: "{{ inputs.attendeeId }}"
+            type: badge
+            xp: 0
+            banner: observability-nerd
+            at: "{{ execution.startedAt }}"
+  - name: connector
+    type: if
+    condition: "steps.ledger.output.aggregations.handshakes.doc_count >= 3"
+    steps:
+      - name: badge_connector
+        type: elasticsearch.request
+        with:
+          method: PUT
+          path: "/xp_events/_create/{{ inputs.attendeeId }}:badge:connector"
+          body:
+            id: "{{ inputs.attendeeId }}:badge:connector"
+            attendeeId: "{{ inputs.attendeeId }}"
+            type: badge
+            xp: 0
+            banner: connector
+            at: "{{ execution.startedAt }}"
+  - name: welcomer
+    type: if
+    condition: "steps.ledger.output.aggregations.welcomes.doc_count >= 2"
+    steps:
+      - name: badge_welcomer
+        type: elasticsearch.request
+        with:
+          method: PUT
+          path: "/xp_events/_create/{{ inputs.attendeeId }}:badge:welcomer"
+          body:
+            id: "{{ inputs.attendeeId }}:badge:welcomer"
+            attendeeId: "{{ inputs.attendeeId }}"
+            type: badge
+            xp: 0
+            banner: welcomer
+            at: "{{ execution.startedAt }}"

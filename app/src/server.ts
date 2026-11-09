@@ -1,40 +1,28 @@
-import { container } from './container';
-import { createApp } from './http/create-app';
-import { toolRegistry } from './tools';
+import { shutdownTelemetry } from './otel';
+import { createApp } from './app';
+import { appConfig } from './config';
+import { closeEsClient, isElasticConfigured } from './es/client';
+import { ensureIndices } from './es/indices';
+import { logger } from './observability/logger';
 
-const retryDelaysMs = [0, 5000, 15000, 30000, 60000];
+const app = createApp();
 
-async function ensureIndicesWithRetry(): Promise<void> {
-  if (!container.esClient.enabled) {
-    console.log('elasticsearch: ELASTIC_URL or ELASTIC_API_KEY is not set, running without it');
+const server = app.listen(appConfig.port, () => {
+  logger.info({ port: appConfig.port, version: appConfig.appVersion, elasticsearch: isElasticConfigured() }, 'kubequest api listening');
+});
 
-    return;
-  }
-
-  for (const delayMs of retryDelaysMs) {
-    await new Promise((resolve) => setTimeout(resolve, delayMs));
-
-    try {
-      const created = await container.esIndices.ensureIndices();
-
-      console.log(`elasticsearch: indices ready${created.length > 0 ? `, created ${created.join(', ')}` : ''}`);
-
-      return;
-    } catch (error) {
-      console.error('elasticsearch: ensureIndices failed', error instanceof Error ? error.message : error);
-    }
-  }
+if (appConfig.ensureIndicesOnStart && isElasticConfigured()) {
+  ensureIndices().catch((error: unknown) => {
+    logger.error({ err: error }, 'could not sync elasticsearch indices');
+  });
 }
 
-const app = createApp(container, toolRegistry);
-const server = app.listen(container.config.port, () => {
-  console.log(`listening on :${container.config.port}, version ${container.config.version}`);
-});
+function shutdown(signal: string): void {
+  logger.info({ signal }, 'shutting down');
+  server.close(() => {
+    Promise.allSettled([closeEsClient(), shutdownTelemetry()]).finally(() => process.exit(0));
+  });
+}
 
-void ensureIndicesWithRetry();
-
-process.on('SIGTERM', () => {
-  server.close(() => process.exit(0));
-  server.closeIdleConnections();
-  setTimeout(() => process.exit(0), 10000).unref();
-});
+process.on('SIGTERM', () => shutdown('SIGTERM'));
+process.on('SIGINT', () => shutdown('SIGINT'));

@@ -1,57 +1,53 @@
-import '../app/src/config/load-env';
-import { ConfigHelper } from '../app/src/config/config.helper';
-import { EsClientService } from '../app/src/es/es-client.service';
-import { EsIndicesService } from '../app/src/es/es-indices.service';
-import { EsIngestService } from '../app/src/es/es-ingest.service';
-import { esTimeouts } from '../app/src/es/es.constants';
-import { ResourceStoreService } from '../app/src/resources/resource-store.service';
+import path from 'node:path';
+import { closeEsClient } from '../app/src/es/client';
+import { indexNames } from '../app/src/es/es.constants';
+import { ensureIndices } from '../app/src/es/indices';
+import { IndexName } from '../app/src/es/index-mappings';
+import { bulkIndex, IBulkResult, ISeedFile, loadLocations, prepareTalks, readSeedFile, SeedDocument, seedPlayers } from './seed';
 
-const batchSize = 50;
+async function indexFile(index: IndexName, loaded: ISeedFile, documents: SeedDocument[], looked: string[]): Promise<number> {
+  if (!loaded.file) {
+    console.log(`${index}: no seed file in resources/ (looked for ${looked.join(', ')})`);
+    return 0;
+  }
+
+  const result: IBulkResult = await bulkIndex(index, documents);
+  console.log(`${index}: indexed ${result.indexed}, failed ${result.failed} from ${path.basename(loaded.file)}`);
+
+  return result.failed;
+}
 
 async function main(): Promise<void> {
-  const config = ConfigHelper.fromEnv(process.env);
-  const store = new ResourceStoreService(config.resourcesDir, config.seedNow);
-  const problems = store.findIndexingProblems();
+  const syncResults = await ensureIndices();
 
-  if (problems.length > 0) {
-    console.error(`index-all: refusing to index, the seed data in ${config.resourcesDir} is incomplete:`);
-    problems.forEach((problem) => console.error(`  - ${problem}`));
-    console.error('Run the ingest and seed scripts first, or point RESOURCES_DIR at the right folder.');
-    process.exit(1);
+  for (const result of syncResults) {
+    console.log(`index ${result.index}: ${result.action}${result.error ? ` (${result.error})` : ''}`);
   }
 
-  const esClient = new EsClientService({ ...config.elastic, requestTimeoutMs: esTimeouts.BULK_MS });
+  let totalFailed = 0;
 
-  if (!esClient.enabled) {
-    console.error('index-all: set ELASTIC_URL and ELASTIC_API_KEY (in .env or the environment) first.');
-    process.exit(1);
-  }
+  const locations = loadLocations();
+  totalFailed += await indexFile(indexNames.LOCATIONS, locations, locations.documents, ['locations.json']);
 
-  const ingest = new EsIngestService(esClient, store, new EsIndicesService(esClient));
+  const talkNames = ['sessions.json', 'talks.json'];
+  const talks = readSeedFile(talkNames);
+  totalFailed += await indexFile(indexNames.TALKS, talks, prepareTalks(talks.documents, locations.documents), talkNames);
 
-  console.log(`index-all: reading ${config.resourcesDir}, inference endpoint ${config.elastic.inferenceId}`);
+  const players = await seedPlayers(locations.documents);
+  totalFailed += players.attendees.failed + players.xpEvents.failed;
 
-  const summaries = await ingest.indexAll(batchSize, (index, done, total) => {
-    console.log(`  ${index}: ${done}/${total}`);
-  });
+  const questNames = ['quests.seed.json', 'quests.json'];
+  const quests = readSeedFile(questNames);
+  totalFailed += await indexFile(indexNames.QUESTS, quests, quests.documents, questNames);
 
-  console.log('\nindex      sent  indexed  failed  in index');
+  await closeEsClient();
 
-  for (const summary of summaries) {
-    console.log(
-      `${summary.index.padEnd(10)} ${String(summary.sent).padStart(4)}  ${String(summary.indexed).padStart(7)}  ${String(summary.failed).padStart(6)}  ${String(summary.total).padStart(8)}`,
-    );
-  }
-
-  const failed = summaries.filter((summary) => summary.failed > 0);
-
-  if (failed.length > 0) {
-    failed.forEach((summary) => console.error(`${summary.index}: first error: ${summary.firstError}`));
-    process.exit(1);
+  if (totalFailed > 0) {
+    process.exitCode = 1;
   }
 }
 
-main().catch((error) => {
-  console.error('index-all failed:', error instanceof Error ? error.message : error);
+main().catch((error: unknown) => {
+  console.error(error instanceof Error ? error.message : error);
   process.exit(1);
 });

@@ -1,33 +1,44 @@
 import { Router } from 'express';
-import type { IHealthResponse } from '@kubequest/shared';
-import type { IContainer } from '../container.interfaces';
+import { appConfig } from '../config';
+import { isElasticConfigured, pingElastic } from '../es/client';
 
-export function createHealthRouter(container: IContainer): Router {
+const readinessCacheMs = 5000;
+
+let lastReadiness: { checkedAt: number; elasticsearch: boolean } | undefined;
+
+async function elasticReachable(): Promise<boolean> {
+  const now = Date.now();
+
+  if (lastReadiness && now - lastReadiness.checkedAt < readinessCacheMs) {
+    return lastReadiness.elasticsearch;
+  }
+
+  const elasticsearch = await pingElastic();
+  lastReadiness = { checkedAt: now, elasticsearch };
+
+  return elasticsearch;
+}
+
+export function healthRoutes(): Router {
   const router = Router();
 
-  router.get('/readyz', (_request, response) => {
-    response.status(200).type('text/plain').send('ok\n');
+  router.get('/healthz', (_request, response) => {
+    response.json({ status: 'ok', version: appConfig.appVersion });
   });
 
-  router.get('/healthz', async (_request, response) => {
-    try {
-      response.status(200).json(await container.esHealth.getHealth());
-    } catch (error) {
-      console.error('healthz: could not build the health report', error);
+  router.get('/readyz', async (_request, response) => {
+    if (!isElasticConfigured()) {
+      response.json({ status: 'ok', version: appConfig.appVersion, elasticsearch: 'not_configured' });
 
-      const fallback: IHealthResponse = {
-        status: 'degraded',
-        version: container.config.version,
-        elasticsearch: {
-          configured: container.esClient.enabled,
-          reachable: false,
-          inferenceId: container.esClient.inferenceId,
-          counts: {},
-        },
-      };
-
-      response.status(200).json(fallback);
+      return;
     }
+
+    const reachable = await elasticReachable();
+    response.status(reachable ? 200 : 503).json({
+      status: reachable ? 'ok' : 'unavailable',
+      version: appConfig.appVersion,
+      elasticsearch: reachable ? 'reachable' : 'unreachable',
+    });
   });
 
   return router;

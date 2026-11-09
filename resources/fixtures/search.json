@@ -1,0 +1,331 @@
+{
+  "tool": "search",
+  "endpoint": "POST /api/tools/search",
+  "request": {
+    "query": "cheaper GPUs",
+    "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+    "limit": 5
+  },
+  "status": 200,
+  "response": {
+    "query": "cheaper GPUs",
+    "results": [
+      {
+        "kind": "session",
+        "id": "kc26-tue-portable-gpu-config",
+        "title": "One Recipe, Five Clouds, One Query: Portable GPU Configuration",
+        "subtitle": "Christopher Haar, Yuan Chen · Salt Lake Ballroom C · 18:30",
+        "score": 0.0952381,
+        "talk": {
+          "id": "kc26-tue-portable-gpu-config",
+          "title": "One Recipe, Five Clouds, One Query: Portable GPU Configuration",
+          "abstract": "Generating portable GPU Helm bundles for multiple clouds, with a queryable audit layer that shows what was configured where.",
+          "sessionType": "breakout",
+          "track": "platform",
+          "material": "stone",
+          "speakers": [
+            "Christopher Haar",
+            "Yuan Chen"
+          ],
+          "speakerDetails": [
+            {
+              "name": "Christopher Haar"
+            },
+            {
+              "name": "Yuan Chen"
+            }
+          ],
+          "start": "2026-11-10T11:30:00-07:00",
+          "end": "2026-11-10T12:00:00-07:00",
+          "locationId": "hyatt-regency-level-2-salt-lake-ballroom-c",
+          "building": "Hyatt Regency",
+          "level": "Level 2",
+          "room": "Salt Lake Ballroom C",
+          "isBoss": false,
+          "hasTranscript": false,
+          "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+          "sample": false,
+          "geo": {
+            "lat": 40.7683,
+            "lon": -111.8962
+          }
+        },
+        "startsInMinutes": 1330,
+        "distanceMeters": 253,
+        "walkMinutes": 8
+      },
+      {
+        "kind": "player",
+        "id": "pl_5f917ee1a2a89af1",
+        "title": "quietgopher",
+        "subtitle": "Platform engineer, first KubeCon, figuring out how to share a small GPU pool fairly across teams.",
+        "score": 0.085454546,
+        "player": {
+          "id": "pl_5f917ee1a2a89af1",
+          "handle": "quietgopher",
+          "faceSeed": "quietgopher",
+          "level": 1,
+          "levelName": "Pod",
+          "xp": 10,
+          "banners": [],
+          "topics": [
+            "platform-engineering",
+            "gpus",
+            "gpu-sharing",
+            "internal-developer-platforms",
+            "go"
+          ],
+          "workingOn": "Platform engineer, first KubeCon, figuring out how to share a small GPU pool fairly across teams.",
+          "firstTimer": true
+        },
+        "distanceMeters": 13
+      },
+      {
+        "kind": "player",
+        "id": "pl_592a78e076ad8c1f",
+        "title": "podwrangler",
+        "subtitle": "Runs GPU cluster allocation for ML teams; happy to help first-timers find their feet.",
+        "score": 0.0819398,
+        "player": {
+          "id": "pl_592a78e076ad8c1f",
+          "handle": "podwrangler",
+          "faceSeed": "podwrangler",
+          "level": 2,
+          "levelName": "Deployment",
+          "xp": 110,
+          "banners": [
+            "welcomer"
+          ],
+          "topics": [
+            "gpus",
+            "gpu-sharing",
+            "cluster-allocation",
+            "platform-engineering",
+            "kueue"
+          ],
+          "workingOn": "Runs GPU cluster allocation for ML teams; happy to help first-timers find their feet.",
+          "firstTimer": false
+        },
+        "distanceMeters": 0
+      },
+      {
+        "kind": "session",
+        "id": "kc26-tue-feeding-the-gpu",
+        "title": "Feeding the GPU: Streaming Data into Training, Lakehouse, and Serving",
+        "subtitle": "Dheeraj Kapur, Deepak Choudhary · Regency Ballroom CD · 21:50",
+        "score": 0.08166666,
+        "talk": {
+          "id": "kc26-tue-feeding-the-gpu",
+          "title": "Feeding the GPU: Streaming Data into Training, Lakehouse, and Serving",
+          "abstract": "Moving columnar data once over Arrow Flight to GPUs, lakehouse tables and serving systems instead of copying it for each.",
+          "sessionType": "breakout",
+          "track": "data",
+          "material": "crate",
+          "speakers": [
+            "Dheeraj Kapur",
+            "Deepak Choudhary"
+          ],
+          "speakerDetails": [
+            {
+              "name": "Dheeraj Kapur"
+            },
+            {
+              "name": "Deepak Choudhary"
+            }
+          ],
+          "start": "2026-11-10T14:50:00-07:00",
+          "end": "2026-11-10T15:20:00-07:00",
+          "locationId": "hyatt-regency-level-4-regency-ballroom-cd",
+          "building": "Hyatt Regency",
+          "level": "Level 4",
+          "room": "Regency Ballroom CD",
+          "isBoss": false,
+          "hasTranscript": false,
+          "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+          "sample": false,
+          "geo": {
+            "lat": 40.7683,
+            "lon": -111.8962
+          }
+        },
+        "startsInMinutes": 1530,
+        "distanceMeters": 253,
+        "walkMinutes": 8
+      },
+      {
+        "kind": "outpost",
+        "id": "outpost-google-cloud",
+        "title": "Google Cloud",
+        "subtitle": "Google Cloud booth in the Solutions Showcase.",
+        "score": 0.0787037,
+        "location": {
+          "id": "outpost-google-cloud",
+          "name": "Google Cloud",
+          "kind": "outpost",
+          "building": "Salt Palace",
+          "level": "Level 1",
+          "room": "Google Cloud",
+          "zone": "Solutions Showcase",
+          "description": "Google Cloud booth in the Solutions Showcase.",
+          "boothNumber": "122",
+          "sponsorTier": "Diamond",
+          "askAbout": "Serving LLM inference on GKE with GPUs and TPUs",
+          "topics": [
+            "ai",
+            "platform"
+          ],
+          "hasScreen": false,
+          "geo": {
+            "lat": 40.76609,
+            "lon": -111.89445
+          }
+        },
+        "distanceMeters": 40,
+        "walkMinutes": 2
+      }
+    ]
+  },
+  "variants": {
+    "search_filtered": {
+      "request": {
+        "query": "meet people",
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+        "filters": {
+          "kinds": [
+            "campfire",
+            "player"
+          ]
+        },
+        "limit": 5
+      },
+      "status": 200,
+      "response": {
+        "query": "meet people",
+        "results": [
+          {
+            "kind": "campfire",
+            "id": "campfire-the-meeting-point",
+            "title": "The Meeting Point",
+            "subtitle": "The venue's own named meeting spot. Meet your quest partner here.",
+            "score": 0.09307359,
+            "location": {
+              "id": "campfire-the-meeting-point",
+              "name": "The Meeting Point",
+              "kind": "campfire",
+              "building": "Salt Palace",
+              "level": "Level 1",
+              "room": "The Meeting Point",
+              "description": "The venue's own named meeting spot. Meet your quest partner here.",
+              "hasScreen": false,
+              "geo": {
+                "lat": 40.76657,
+                "lon": -111.89475
+              }
+            },
+            "distanceMeters": 29,
+            "walkMinutes": 2
+          },
+          {
+            "kind": "campfire",
+            "id": "campfire-community-hub",
+            "title": "Community Hub",
+            "subtitle": "Open seating meant for conversation. Meet your quest partner here.",
+            "score": 0.09109731,
+            "location": {
+              "id": "campfire-community-hub",
+              "name": "Community Hub",
+              "kind": "campfire",
+              "building": "Salt Palace",
+              "level": "Level 1",
+              "room": "Community Hub",
+              "description": "Open seating meant for conversation. Meet your quest partner here.",
+              "hasScreen": false,
+              "geo": {
+                "lat": 40.76621,
+                "lon": -111.89475
+              }
+            },
+            "distanceMeters": 37,
+            "walkMinutes": 2
+          },
+          {
+            "kind": "player",
+            "id": "pl_592a78e076ad8c1f",
+            "title": "podwrangler",
+            "subtitle": "Runs GPU cluster allocation for ML teams; happy to help first-timers find their feet.",
+            "score": 0.07919255,
+            "player": {
+              "id": "pl_592a78e076ad8c1f",
+              "handle": "podwrangler",
+              "faceSeed": "podwrangler",
+              "level": 2,
+              "levelName": "Deployment",
+              "xp": 110,
+              "banners": [
+                "welcomer"
+              ],
+              "topics": [
+                "gpus",
+                "gpu-sharing",
+                "cluster-allocation",
+                "platform-engineering",
+                "kueue"
+              ],
+              "workingOn": "Runs GPU cluster allocation for ML teams; happy to help first-timers find their feet.",
+              "firstTimer": false
+            },
+            "distanceMeters": 0
+          },
+          {
+            "kind": "campfire",
+            "id": "campfire-network-nook",
+            "title": "Network Nook",
+            "subtitle": "Hosts the scheduled meetups, next to the outposts.",
+            "score": 0.045454547,
+            "location": {
+              "id": "campfire-network-nook",
+              "name": "Network Nook",
+              "kind": "campfire",
+              "building": "Salt Palace",
+              "level": "Level 1",
+              "room": "Network Nook",
+              "zone": "Solutions Showcase",
+              "description": "Hosts the scheduled meetups, next to the outposts.",
+              "hasScreen": false,
+              "geo": {
+                "lat": 40.76645,
+                "lon": -111.89475
+              }
+            },
+            "distanceMeters": 25,
+            "walkMinutes": 2
+          },
+          {
+            "kind": "campfire",
+            "id": "campfire-learning-lounge",
+            "title": "Learning Lounge",
+            "subtitle": "Named in the schedule and easy to find in the showcase.",
+            "score": 0.041666668,
+            "location": {
+              "id": "campfire-learning-lounge",
+              "name": "Learning Lounge",
+              "kind": "campfire",
+              "building": "Salt Palace",
+              "level": "Level 1",
+              "room": "Learning Lounge",
+              "zone": "Hall B, Starlight Summit Zone",
+              "description": "Named in the schedule and easy to find in the showcase.",
+              "hasScreen": false,
+              "geo": {
+                "lat": 40.76633,
+                "lon": -111.89475
+              }
+            },
+            "distanceMeters": 29,
+            "walkMinutes": 2
+          }
+        ]
+      }
+    }
+  }
+}

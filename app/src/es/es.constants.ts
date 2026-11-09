@@ -4,19 +4,14 @@ export const indexNames = {
   LOCATIONS: 'locations',
   XP_EVENTS: 'xp_events',
   INTROS: 'intros',
+  QUESTS: 'quests',
 } as const;
-
-export const allIndexNames = [
-  indexNames.TALKS,
-  indexNames.ATTENDEES,
-  indexNames.LOCATIONS,
-  indexNames.XP_EVENTS,
-  indexNames.INTROS,
-] as const;
 
 export const esTimeouts = {
-  HEALTH_MS: 1000,
-  BULK_MS: 120000,
+  DEFAULT_MS: 5000,
+  SEARCH_MS: 8000,
+  WRITE_MS: 5000,
+  HEALTH_MS: 2000,
+  ADMIN_MS: 15000,
+  INFERENCE_MS: 20000,
 } as const;
-
-export const healthCacheMs = 10000;

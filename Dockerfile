@@ -25,4 +25,4 @@ COPY --from=build /repo/app/public ./app/public
 COPY --from=build /repo/resources ./resources
 USER 1000
 EXPOSE 8080
-CMD ["node", "app/dist/server.js"]
+CMD ["node", "--require", "./app/dist/otel.js", "app/dist/server.js"]

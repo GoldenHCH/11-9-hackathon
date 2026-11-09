@@ -1,8 +1,9 @@
 {
-  "extends": "../tsconfig.base.json",
+  "extends": "../app/tsconfig.json",
   "compilerOptions": {
+    "rootDir": "..",
     "noEmit": true,
-    "types": ["node"]
+    "typeRoots": ["../app/node_modules/@types"]
   },
-  "include": ["./*.ts", "./lib/**/*.ts", "../app/src/**/*.ts", "../shared/src/**/*.ts"]
+  "include": ["*.ts", "../app/src/**/*.ts"]
 }

@@ -1,0 +1,217 @@
+{
+  "tool": "sign_up",
+  "endpoint": "POST /api/tools/sign_up",
+  "request": {
+    "handle": "verify93279",
+    "workingOn": "Running GPU inference on Kubernetes with autoscaling",
+    "firstKubeCon": true,
+    "happyToWelcome": false,
+    "topics": [
+      "ai",
+      "gpu",
+      "autoscaling"
+    ],
+    "meetingOn": true,
+    "spotMe": "Green hoodie",
+    "scanLocationId": "salt-palace-level-1-150-defg",
+    "scanToken": "<signed-token>"
+  },
+  "status": 200,
+  "response": {
+    "profile": {
+      "attendee": {
+        "id": "p_Ljp4ZfHC-VPDFwqx",
+        "handle": "verify93279",
+        "faceSeed": "cbd1b4ac2fe4ff69",
+        "spotMe": "Green hoodie",
+        "workingOn": "Running GPU inference on Kubernetes with autoscaling",
+        "profileText": "verify93279 is at their first KubeCon. Working on: Running GPU inference on Kubernetes with autoscaling. Interested in ai, gpu, autoscaling.",
+        "profile": {
+          "topics": [
+            "ai",
+            "gpu",
+            "autoscaling"
+          ],
+          "firstTimer": true,
+          "welcomer": false
+        },
+        "settings": {
+          "accessibleMode": false,
+          "noWalking": false,
+          "locationOn": true,
+          "language": "en",
+          "hideFromLeaderboard": false,
+          "meetingOn": true
+        },
+        "visible": true,
+        "xp": 0,
+        "level": 1,
+        "banners": [],
+        "blockedIds": [],
+        "createdAt": "2026-11-09T20:19:53.421Z",
+        "inventory": {
+          "gems": 0,
+          "blocks": {
+            "wood": 1
+          }
+        },
+        "lastSeenAt": "2026-11-09T20:19:55.026Z",
+        "lastLocation": {
+          "lon": -111.89445,
+          "lat": 40.76633
+        },
+        "lastLocationId": "salt-palace-level-1-150-defg"
+      },
+      "level": {
+        "level": 1,
+        "name": "Pod",
+        "xp": 0,
+        "levelMinXp": 0,
+        "nextLevelXp": 50,
+        "nextLevelName": "Deployment",
+        "progress": 0
+      },
+      "inventory": {
+        "blocks": {
+          "circuit": 0,
+          "stone": 0,
+          "glass": 0,
+          "crate": 0,
+          "iron": 0,
+          "copper": 0,
+          "lantern": 0,
+          "wood": 1,
+          "gold": 0
+        },
+        "totalBlocks": 1,
+        "gems": 0,
+        "banners": [
+          {
+            "id": "observability-nerd",
+            "name": "Observability Nerd",
+            "description": "Collect 3 glass blocks from Operations + Performance talks",
+            "progress": 0,
+            "target": 3,
+            "earned": false
+          },
+          {
+            "id": "connector",
+            "name": "Connector",
+            "description": "Complete 3 meets",
+            "progress": 0,
+            "target": 3,
+            "earned": false
+          },
+          {
+            "id": "welcomer",
+            "name": "Welcomer",
+            "description": "Complete 2 meets with first-timers",
+            "progress": 0,
+            "target": 2,
+            "earned": false
+          },
+          {
+            "id": "explorer",
+            "name": "Explorer",
+            "description": "Check in at both buildings",
+            "progress": 0,
+            "target": 2,
+            "earned": false
+          },
+          {
+            "id": "scout",
+            "name": "Scout",
+            "description": "Visit 5 outposts in a day",
+            "progress": 0,
+            "target": 5,
+            "earned": false
+          },
+          {
+            "id": "speaker",
+            "name": "Speaker",
+            "description": "Speaking at KubeCon",
+            "progress": 0,
+            "target": 1,
+            "earned": false
+          }
+        ],
+        "xp": 0,
+        "level": {
+          "level": 1,
+          "name": "Pod",
+          "xp": 0,
+          "levelMinXp": 0,
+          "nextLevelXp": 50,
+          "nextLevelName": "Deployment",
+          "progress": 0
+        },
+        "nextLevelXp": 50
+      },
+      "personalLink": "https://kube-quest.cnh.radarhq.io/me/p_Ljp4ZfHC-VPDFwqx",
+      "publicId": "pl_4451cf61b8914498"
+    },
+    "personalLink": "https://kube-quest.cnh.radarhq.io/me/p_Ljp4ZfHC-VPDFwqx",
+    "starterMaterial": "wood",
+    "xpAwarded": 0,
+    "firstQuest": {
+      "id": "q_09012f7849878be86dedf78a",
+      "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+      "type": "chat",
+      "status": "offered",
+      "source": "board",
+      "offeredAt": "2026-11-09T20:19:56.010Z",
+      "title": "Meet @quietgopher",
+      "reason": "Working on Platform engineer, first KubeCon, figuring out how to share a small GPU pool fai. In the same room right now",
+      "nextStep": "Accept, then meet at the campfire. Ask @quietgopher about Platform engineer, first KubeCon, figuring out how to share a small GPU pool fairly across teams..",
+      "reward": {
+        "xp": 75,
+        "gems": 1,
+        "label": "75 XP + 1 gem each"
+      },
+      "walkMinutes": 0,
+      "partnerId": "pl_5f917ee1a2a89af1",
+      "expiresAt": "2026-11-09T20:39:56.010Z"
+    },
+    "checkIn": {
+      "status": "rejected",
+      "message": "Nothing is running in 150 DEFG right now. Scan again while a session is on to earn XP.",
+      "xpAwarded": 0,
+      "rejectedReason": "outside_session",
+      "location": {
+        "id": "salt-palace-level-1-150-defg",
+        "name": "150 DEFG",
+        "kind": "room",
+        "building": "Salt Palace",
+        "level": "Level 1",
+        "room": "150 DEFG",
+        "description": "Session room. Check in during a session, then take its quiz.",
+        "hasScreen": false,
+        "searchText": "150 DEFG, Salt Palace Level 1. Session room. Check in during a session, then take its quiz.",
+        "geo": {
+          "lat": 40.76633,
+          "lon": -111.89445
+        }
+      },
+      "quizAvailable": false,
+      "completedQuests": [],
+      "newBanners": []
+    }
+  },
+  "variants": {
+    "sign_up_duplicate": {
+      "request": {
+        "handle": "verify93279",
+        "workingOn": "x",
+        "firstKubeCon": true,
+        "meetingOn": false
+      },
+      "status": 409,
+      "response": {
+        "error": {
+          "code": "handle_taken",
+          "message": "The handle \"verify93279\" is taken. Try another one."
+        }
+      }
+    }
+  }
+}

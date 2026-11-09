@@ -1,0 +1,37 @@
+{
+  "tool": "errors",
+  "endpoint": "POST /api/tools/:name",
+  "request": {
+    "attendeeId": "p_Ljp4ZfHC-VPDFwqx"
+  },
+  "status": 400,
+  "response": {
+    "error": {
+      "code": "invalid_input",
+      "message": "That request is missing something: locationId: Invalid input: expected string, received undefined; token: Invalid input: expected string, received undefined"
+    }
+  },
+  "variants": {
+    "error_unknown_attendee": {
+      "request": {
+        "attendeeId": "att-does-not-exist"
+      },
+      "status": 404,
+      "response": {
+        "error": {
+          "code": "unknown_attendee",
+          "message": "We could not find that player. Open your personal link or sign up again."
+        }
+      }
+    },
+    "error_unknown_tool": {
+      "status": 404,
+      "response": {
+        "error": {
+          "code": "unknown_tool",
+          "message": "There is no tool called nope."
+        }
+      }
+    }
+  }
+}

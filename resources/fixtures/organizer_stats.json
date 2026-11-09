@@ -1,0 +1,85 @@
+{
+  "tool": "organizer_stats",
+  "endpoint": "POST /api/tools/organizer_stats",
+  "request": {},
+  "status": 200,
+  "response": {
+    "players": 20,
+    "checkInsToday": 31,
+    "xpToday": 1820,
+    "xpByType": {
+      "check_in": 310,
+      "quiz": 335,
+      "outpost": 220,
+      "handshake": 900,
+      "badge": 0,
+      "welcome": 50,
+      "boss": 5
+    },
+    "meets": {
+      "accepted": 2,
+      "proposed": 4,
+      "met": 0
+    },
+    "quests": {
+      "offered": 12,
+      "accepted": 2,
+      "declined": 1
+    },
+    "busiestRooms": [
+      {
+        "location": {
+          "id": "salt-palace-level-1-150-defg",
+          "name": "150 DEFG",
+          "kind": "room",
+          "building": "Salt Palace",
+          "level": "Level 1",
+          "room": "150 DEFG",
+          "description": "Session room. Check in during a session, then take its quiz.",
+          "hasScreen": false,
+          "geo": {
+            "lat": 40.76633,
+            "lon": -111.89445
+          }
+        },
+        "count": 1
+      },
+      {
+        "location": {
+          "id": "salt-palace-level-1-151",
+          "name": "151",
+          "kind": "room",
+          "building": "Salt Palace",
+          "level": "Level 1",
+          "room": "151",
+          "description": "Session room. Check in during a session, then take its quiz.",
+          "hasScreen": false,
+          "geo": {
+            "lat": 40.76645,
+            "lon": -111.89445
+          }
+        },
+        "count": 1
+      },
+      {
+        "location": {
+          "id": "salt-palace-level-1-151-g",
+          "name": "151 G",
+          "kind": "room",
+          "building": "Salt Palace",
+          "level": "Level 1",
+          "room": "151 G",
+          "description": "Session room. Check in during a session, then take its quiz.",
+          "hasScreen": false,
+          "geo": {
+            "lat": 40.76657,
+            "lon": -111.89445
+          }
+        },
+        "count": 1
+      }
+    ],
+    "bosses": [],
+    "generatedAt": "2026-11-09T20:20:16.769Z"
+  }
+}

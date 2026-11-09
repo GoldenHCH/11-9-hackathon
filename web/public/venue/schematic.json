@@ -1,0 +1,6267 @@
+{
+  "event": "KubeCon + CloudNativeCon North America 2026 · Salt Lake City",
+  "updatedAt": "2026-11-09",
+  "disclaimer": "Schematic, not to scale. Booth numbers, tiers and booth positions on the showcase floor come from the official sponsor directory and Solutions Showcase map. Room positions on the level views are arranged by hand from the official venue map labels, so use the official map and on-site signs for wayfinding.",
+  "sources": [
+    {
+      "label": "Official venue map (PDF)",
+      "url": "https://events.linuxfoundation.org/wp-content/uploads/2026/10/KCNA26-VenueMap-118x96-3.pdf"
+    },
+    {
+      "label": "Solutions Showcase map (PDF)",
+      "url": "https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf"
+    },
+    {
+      "label": "Sponsor directory",
+      "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/"
+    },
+    {
+      "label": "Project Pavilion kiosks",
+      "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/features-add-ons/project-engagement/"
+    },
+    {
+      "label": "Schedule (Sessionize)",
+      "url": "https://kubecon-cloudnativecon-north-america-2026.sessionize.com/"
+    }
+  ],
+  "buildings": [
+    {
+      "id": "salt-palace",
+      "name": "Salt Palace Convention Center",
+      "shortName": "Salt Palace",
+      "levels": [
+        {
+          "id": "sp-showcase",
+          "label": "Showcase floor",
+          "width": 520,
+          "height": 700,
+          "boothSize": 11,
+          "areas": [
+            {
+              "id": "sp-sc-halls-ac-c",
+              "name": "Hall C · Starlight Summit",
+              "kind": "showcase",
+              "shape": {
+                "x": 30,
+                "y": 488,
+                "width": 104,
+                "height": 172
+              },
+              "inferred": true,
+              "shortLabel": "Hall C",
+              "zone": "Starlight Summit",
+              "description": "Diamond and Platinum booths. Headshots, activation zones, a coffee bar and a lounge sit at the far edge."
+            },
+            {
+              "id": "sp-sc-halls-ac-b",
+              "name": "Hall B · Starlight Summit / Astral Peak",
+              "kind": "showcase",
+              "shape": {
+                "x": 134,
+                "y": 488,
+                "width": 82,
+                "height": 172
+              },
+              "inferred": true,
+              "shortLabel": "Hall B",
+              "zone": "Starlight Summit",
+              "description": "Diamond and Platinum booths, plus the Learning Lounge (LF Education talks, KubeCrawl Trivia).",
+              "scheduleRooms": [
+                "Salt Palace | Level 1 | Solutions Showcase | Hall B | Starlight Summit Zone"
+              ]
+            },
+            {
+              "id": "sp-sc-halls-ac-a",
+              "name": "Hall A · Astral Peak",
+              "kind": "showcase",
+              "shape": {
+                "x": 216,
+                "y": 488,
+                "width": 120,
+                "height": 172
+              },
+              "inferred": true,
+              "shortLabel": "Hall A",
+              "zone": "Astral Peak",
+              "description": "Diamond and Platinum booths. Showcase main entrance and the Sponsorship + Membership Sales Lounge."
+            },
+            {
+              "id": "sp-sc-learning-lounge",
+              "name": "Learning Lounge",
+              "kind": "theater",
+              "shape": {
+                "x": 140,
+                "y": 488,
+                "width": 64,
+                "height": 22
+              },
+              "inferred": true,
+              "shortLabel": "Lounge",
+              "description": "LF Education talks and KubeCrawl Trivia.",
+              "scheduleRooms": [
+                "Salt Palace | Level 1 | Solutions Showcase | Hall B | Starlight Summit Zone"
+              ]
+            },
+            {
+              "id": "sp-sc-hall-1",
+              "name": "Hall 1 · Alpine Overlook",
+              "kind": "showcase",
+              "shape": {
+                "x": 336,
+                "y": 422,
+                "width": 100,
+                "height": 108
+              },
+              "inferred": true,
+              "shortLabel": "Hall 1",
+              "zone": "Alpine Overlook",
+              "description": "Gold and Platinum booths 144–191 and the Workshop Zone."
+            },
+            {
+              "id": "sp-sc-demo-theater",
+              "name": "Demo Theater",
+              "kind": "theater",
+              "shape": {
+                "x": 438,
+                "y": 476,
+                "width": 50,
+                "height": 50
+              },
+              "inferred": true,
+              "shortLabel": "Demo",
+              "description": "Sponsor demos all day.",
+              "scheduleRooms": [
+                "Salt Palace | Level 1 | Solutions Showcase | Hall 1 | Alpine Overlook Zone | Demo Theater"
+              ]
+            },
+            {
+              "id": "sp-sc-network-nook",
+              "name": "Network Nook",
+              "kind": "campfire",
+              "shape": {
+                "x": 438,
+                "y": 424,
+                "width": 50,
+                "height": 48
+              },
+              "inferred": true,
+              "shortLabel": "Nook",
+              "description": "Scheduled meetups, next to the booths. A KubeQuest campfire.",
+              "scheduleRooms": [
+                "Salt Palace | Level 1 | Solutions Showcase | Hall 1 | Alpine Overlook Zone | Network Nook"
+              ]
+            },
+            {
+              "id": "sp-sc-hall-2",
+              "name": "Hall 2 · Honeycomb Hub",
+              "kind": "showcase",
+              "shape": {
+                "x": 336,
+                "y": 306,
+                "width": 100,
+                "height": 114
+              },
+              "inferred": true,
+              "shortLabel": "Hall 2",
+              "zone": "Honeycomb Hub",
+              "description": "Silver booths 192–257. Meal area in the middle."
+            },
+            {
+              "id": "sp-sc-hall-3",
+              "name": "Hall 3 · Amber Hive",
+              "kind": "showcase",
+              "shape": {
+                "x": 336,
+                "y": 208,
+                "width": 100,
+                "height": 96
+              },
+              "inferred": true,
+              "shortLabel": "Hall 3",
+              "zone": "Amber Hive",
+              "description": "Silver booths 258–327, the Hive Zone, a relaxation station and a coffee bar."
+            },
+            {
+              "id": "sp-sc-halls-4-5",
+              "name": "Halls 4–5 · Cosmic Canyon",
+              "kind": "showcase",
+              "shape": {
+                "x": 336,
+                "y": 10,
+                "width": 152,
+                "height": 196
+              },
+              "inferred": true,
+              "shortLabel": "Halls 4–5",
+              "zone": "Cosmic Canyon",
+              "description": "Start-up booths 330–375, the Poster Pavilion, a game zone and meal pick-up.",
+              "scheduleRooms": [
+                "Salt Palace | Level 1 | Halls A-C, Halls 1-5"
+              ]
+            },
+            {
+              "id": "sp-sc-project-pavilion",
+              "name": "Project Pavilion",
+              "kind": "pavilion",
+              "shape": {
+                "x": 432,
+                "y": 16,
+                "width": 52,
+                "height": 150
+              },
+              "inferred": true,
+              "shortLabel": "Projects",
+              "description": "CNCF project kiosks P-1 to P-18 (A and B sides), with a stage and a lounge. Maintainers rotate by shift.",
+              "scheduleRooms": [
+                "Salt Palace | Level 1 | Solutions Showcase | Hall 5 | Cosmic Canyon Zone | Project Pavilion"
+              ]
+            },
+            {
+              "id": "sp-sc-cloud-native-theater",
+              "name": "Cloud Native Theater",
+              "kind": "theater",
+              "shape": {
+                "x": 340,
+                "y": 14,
+                "width": 88,
+                "height": 30
+              },
+              "inferred": true,
+              "shortLabel": "CN Theater",
+              "description": "Talks inside the showcase.",
+              "scheduleRooms": [
+                "Salt Palace | Level 1 | Solutions Showcase | Halls 5 | Cosmic Canyon Zone | Cloud Native Theater"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sp-l1",
+          "label": "Level 1",
+          "width": 1000,
+          "height": 470,
+          "areas": [
+            {
+              "id": "sp-l1-halls-1-5",
+              "name": "Halls 1–5 · Solutions Showcase",
+              "kind": "showcase",
+              "shape": {
+                "x": 560,
+                "y": 20,
+                "width": 250,
+                "height": 220
+              },
+              "inferred": true,
+              "shortLabel": "Halls 1–5",
+              "description": "Gold, Silver and Start-up booths, the Demo Theater, Network Nook, Project Pavilion and Cloud Native Theater. Open \"Showcase floor\" for every booth.",
+              "connectsTo": "sp-showcase"
+            },
+            {
+              "id": "sp-l1-155",
+              "name": "155 A-F",
+              "kind": "meeting-room",
+              "shape": {
+                "x": 820,
+                "y": 20,
+                "width": 160,
+                "height": 220
+              },
+              "inferred": true,
+              "description": "Meeting rooms past the Hall 1 secondary entrance."
+            },
+            {
+              "id": "sp-l1-halls-a-c",
+              "name": "Halls A–C · Solutions Showcase",
+              "kind": "showcase",
+              "shape": {
+                "x": 220,
+                "y": 20,
+                "width": 330,
+                "height": 220
+              },
+              "inferred": true,
+              "shortLabel": "Halls A–C",
+              "description": "Diamond and Platinum booths and the Learning Lounge. Showcase main entrance on the concourse side.",
+              "connectsTo": "sp-showcase"
+            },
+            {
+              "id": "sp-l1-hall-de",
+              "name": "Hall DE · Keynotes",
+              "kind": "hall",
+              "shape": {
+                "x": 20,
+                "y": 20,
+                "width": 190,
+                "height": 220
+              },
+              "inferred": true,
+              "shortLabel": "Hall DE",
+              "description": "Keynotes and the largest sessions. A KubeQuest boss room during keynotes.",
+              "scheduleRooms": [
+                "Salt Palace | Level 1 | Hall DE"
+              ]
+            },
+            {
+              "id": "sp-l1-lower-concourse",
+              "name": "Lower Concourse",
+              "kind": "foyer",
+              "shape": {
+                "x": 20,
+                "y": 248,
+                "width": 960,
+                "height": 36
+              },
+              "inferred": true,
+              "description": "Runs along Hall DE and Halls A–C. Lunch for Level 1 rooms is picked up near room 151."
+            },
+            {
+              "id": "sp-l1-badge-pickup",
+              "name": "Badge Pick-Up",
+              "kind": "registration",
+              "shape": {
+                "x": 20,
+                "y": 292,
+                "width": 110,
+                "height": 70
+              },
+              "inferred": true,
+              "shortLabel": "Badges",
+              "description": "Registration and badge pick-up just inside the main entrance.",
+              "scheduleRooms": [
+                "Salt Palace | 200 South Entrance (South)"
+              ]
+            },
+            {
+              "id": "sp-l1-main-entrance",
+              "name": "Main Entrance (200 South)",
+              "kind": "entrance",
+              "shape": {
+                "x": 20,
+                "y": 370,
+                "width": 110,
+                "height": 80
+              },
+              "inferred": true,
+              "shortLabel": "Main entrance"
+            },
+            {
+              "id": "sp-l1-hyatt-access",
+              "name": "Access to Hyatt Regency",
+              "kind": "skybridge",
+              "shape": {
+                "x": 138,
+                "y": 292,
+                "width": 92,
+                "height": 158
+              },
+              "inferred": true,
+              "shortLabel": "To Hyatt",
+              "description": "The venue map labels this \"Access between Hyatt Regency + Salt Palace\" and points to Hyatt Level 2.",
+              "connectsTo": "hy-l2"
+            },
+            {
+              "id": "sp-l1-gb-j",
+              "name": "Community Hub (Grand Ballroom J)",
+              "kind": "campfire",
+              "shape": {
+                "x": 240,
+                "y": 292,
+                "width": 101,
+                "height": 70
+              },
+              "inferred": true,
+              "shortLabel": "Hub · J",
+              "description": "Open seating meant for conversation. A KubeQuest campfire.",
+              "scheduleRooms": [
+                "Salt Palace | Level 1 | Grand Ballroom J"
+              ]
+            },
+            {
+              "id": "sp-l1-gb-h",
+              "name": "Grand Ballroom H",
+              "kind": "ballroom",
+              "shape": {
+                "x": 349,
+                "y": 292,
+                "width": 101,
+                "height": 70
+              },
+              "inferred": true,
+              "shortLabel": "GB H",
+              "scheduleRooms": [
+                "Salt Palace | Level 1 | Grand Ballroom H"
+              ]
+            },
+            {
+              "id": "sp-l1-gb-bdf",
+              "name": "Grand Ballroom BDF",
+              "kind": "ballroom",
+              "shape": {
+                "x": 458,
+                "y": 292,
+                "width": 142,
+                "height": 70
+              },
+              "inferred": true,
+              "shortLabel": "GB BDF",
+              "scheduleRooms": [
+                "Salt Palace | Level 1 | Grand Ballroom BDF"
+              ]
+            },
+            {
+              "id": "sp-l1-gb-gi",
+              "name": "Grand Ballroom GI",
+              "kind": "ballroom",
+              "shape": {
+                "x": 240,
+                "y": 370,
+                "width": 176,
+                "height": 80
+              },
+              "inferred": true,
+              "shortLabel": "GB GI",
+              "scheduleRooms": [
+                "Salt Palace | Level 1 | Grand Ballroom GI"
+              ]
+            },
+            {
+              "id": "sp-l1-gb-ace",
+              "name": "Grand Ballroom ACE",
+              "kind": "ballroom",
+              "shape": {
+                "x": 424,
+                "y": 370,
+                "width": 176,
+                "height": 80
+              },
+              "inferred": true,
+              "shortLabel": "GB ACE",
+              "scheduleRooms": [
+                "Salt Palace | Level 1 | Grand Ballroom ACE"
+              ]
+            },
+            {
+              "id": "sp-l1-north-foyer",
+              "name": "North Grand Ballroom Foyer",
+              "kind": "foyer",
+              "shape": {
+                "x": 608,
+                "y": 292,
+                "width": 90,
+                "height": 158
+              },
+              "inferred": true,
+              "shortLabel": "N Foyer",
+              "scheduleRooms": [
+                "Salt Palace | Level 1 | North Grand Ballroom Foyer"
+              ]
+            },
+            {
+              "id": "sp-l1-150",
+              "name": "150 A-F",
+              "kind": "meeting-room",
+              "shape": {
+                "x": 706,
+                "y": 292,
+                "width": 130,
+                "height": 90
+              },
+              "inferred": true
+            },
+            {
+              "id": "sp-l1-151",
+              "name": "151",
+              "kind": "meeting-room",
+              "shape": {
+                "x": 844,
+                "y": 292,
+                "width": 136,
+                "height": 90
+              },
+              "inferred": true,
+              "scheduleRooms": [
+                "Salt Palace | Level 1 | 151 "
+              ]
+            },
+            {
+              "id": "sp-l1-west-temple",
+              "name": "West Temple Entrance",
+              "kind": "entrance",
+              "shape": {
+                "x": 706,
+                "y": 390,
+                "width": 274,
+                "height": 60
+              },
+              "inferred": true,
+              "shortLabel": "West Temple entrance"
+            }
+          ]
+        },
+        {
+          "id": "sp-l2",
+          "label": "Level 2",
+          "width": 1000,
+          "height": 520,
+          "areas": [
+            {
+              "id": "sp-l2-250-ac",
+              "name": "250 A-C",
+              "kind": "meeting-room",
+              "shape": {
+                "x": 20,
+                "y": 20,
+                "width": 92,
+                "height": 150
+              },
+              "inferred": true,
+              "scheduleRooms": [
+                "Salt Palace | Level 2 | 250 A-C"
+              ]
+            },
+            {
+              "id": "sp-l2-250-df",
+              "name": "250 D-F",
+              "kind": "meeting-room",
+              "shape": {
+                "x": 120,
+                "y": 20,
+                "width": 92,
+                "height": 150
+              },
+              "inferred": true,
+              "scheduleRooms": [
+                "Salt Palace | Level 2 | 250 D-F"
+              ]
+            },
+            {
+              "id": "sp-l2-251-ac",
+              "name": "251 A-C",
+              "kind": "meeting-room",
+              "shape": {
+                "x": 220,
+                "y": 20,
+                "width": 92,
+                "height": 150
+              },
+              "inferred": true,
+              "scheduleRooms": [
+                "Salt Palace | Level 2 | 251 A-C"
+              ]
+            },
+            {
+              "id": "sp-l2-251-df",
+              "name": "251 D-F",
+              "kind": "meeting-room",
+              "shape": {
+                "x": 320,
+                "y": 20,
+                "width": 92,
+                "height": 150
+              },
+              "inferred": true,
+              "scheduleRooms": [
+                "Salt Palace | Level 2 | 251 D-F"
+              ]
+            },
+            {
+              "id": "sp-l2-252a",
+              "name": "252 A · Speaker Ready Room",
+              "kind": "service",
+              "shape": {
+                "x": 420,
+                "y": 20,
+                "width": 92,
+                "height": 150
+              },
+              "inferred": true,
+              "shortLabel": "252 A"
+            },
+            {
+              "id": "sp-l2-252b",
+              "name": "252 B",
+              "kind": "meeting-room",
+              "shape": {
+                "x": 520,
+                "y": 20,
+                "width": 92,
+                "height": 150
+              },
+              "inferred": true
+            },
+            {
+              "id": "sp-l2-253",
+              "name": "253 · Speaker Lounge",
+              "kind": "service",
+              "shape": {
+                "x": 620,
+                "y": 20,
+                "width": 92,
+                "height": 150
+              },
+              "inferred": true,
+              "shortLabel": "253"
+            },
+            {
+              "id": "sp-l2-254",
+              "name": "254",
+              "kind": "meeting-room",
+              "shape": {
+                "x": 720,
+                "y": 20,
+                "width": 92,
+                "height": 150
+              },
+              "inferred": true,
+              "scheduleRooms": [
+                "Salt Palace | Level 2 | 254"
+              ]
+            },
+            {
+              "id": "sp-l2-upper-concourse",
+              "name": "Upper Concourse",
+              "kind": "foyer",
+              "shape": {
+                "x": 20,
+                "y": 180,
+                "width": 790,
+                "height": 50
+              },
+              "inferred": true,
+              "scheduleRooms": [
+                "Salt Palace | Level 2 | Upper Mezzanine"
+              ],
+              "description": "Also called the Upper Mezzanine."
+            },
+            {
+              "id": "sp-l2-255a",
+              "name": "255 A",
+              "kind": "meeting-room",
+              "shape": {
+                "x": 20,
+                "y": 240,
+                "width": 83,
+                "height": 150
+              },
+              "inferred": true,
+              "scheduleRooms": [
+                "Salt Palace | Level 2 | 255 A"
+              ]
+            },
+            {
+              "id": "sp-l2-255bc",
+              "name": "255 BC",
+              "kind": "meeting-room",
+              "shape": {
+                "x": 111,
+                "y": 240,
+                "width": 117,
+                "height": 150
+              },
+              "inferred": true,
+              "scheduleRooms": [
+                "Salt Palace | Level 2 | 255 BC"
+              ]
+            },
+            {
+              "id": "sp-l2-255d",
+              "name": "255 D",
+              "kind": "meeting-room",
+              "shape": {
+                "x": 236,
+                "y": 240,
+                "width": 83,
+                "height": 150
+              },
+              "inferred": true,
+              "scheduleRooms": [
+                "Salt Palace | Level 2 | 255 D"
+              ]
+            },
+            {
+              "id": "sp-l2-255ef",
+              "name": "255 EF",
+              "kind": "meeting-room",
+              "shape": {
+                "x": 327,
+                "y": 240,
+                "width": 117,
+                "height": 150
+              },
+              "inferred": true,
+              "scheduleRooms": [
+                "Salt Palace | Level 2 | 255 EF"
+              ]
+            },
+            {
+              "id": "sp-l2-257",
+              "name": "257 A-B",
+              "kind": "meeting-room",
+              "shape": {
+                "x": 452,
+                "y": 240,
+                "width": 83,
+                "height": 150
+              },
+              "inferred": true
+            },
+            {
+              "id": "sp-l2-258",
+              "name": "258",
+              "kind": "meeting-room",
+              "shape": {
+                "x": 543,
+                "y": 240,
+                "width": 83,
+                "height": 150
+              },
+              "inferred": true
+            },
+            {
+              "id": "sp-l2-259",
+              "name": "259",
+              "kind": "meeting-room",
+              "shape": {
+                "x": 634,
+                "y": 240,
+                "width": 83,
+                "height": 150
+              },
+              "inferred": true
+            },
+            {
+              "id": "sp-l2-260",
+              "name": "260 A-B · Quiet Rooms",
+              "kind": "service",
+              "shape": {
+                "x": 725,
+                "y": 240,
+                "width": 83,
+                "height": 150
+              },
+              "inferred": true,
+              "shortLabel": "260 Quiet"
+            },
+            {
+              "id": "sp-l2-north-foyer",
+              "name": "North Foyer (Level 2)",
+              "kind": "foyer",
+              "shape": {
+                "x": 820,
+                "y": 20,
+                "width": 160,
+                "height": 370
+              },
+              "inferred": true,
+              "shortLabel": "North Foyer"
+            },
+            {
+              "id": "sp-l2-meeting-point",
+              "name": "The Meeting Point",
+              "kind": "campfire",
+              "shape": {
+                "x": 832,
+                "y": 40,
+                "width": 136,
+                "height": 120
+              },
+              "inferred": true,
+              "shortLabel": "Meeting Point",
+              "description": "The venue’s own named meeting spot, marked with a pin on the official map. A KubeQuest campfire."
+            },
+            {
+              "id": "sp-l2-coat-check",
+              "name": "Coat + Bag Check · East Registration",
+              "kind": "registration",
+              "shape": {
+                "x": 832,
+                "y": 180,
+                "width": 136,
+                "height": 110
+              },
+              "inferred": true,
+              "shortLabel": "Coat check",
+              "scheduleRooms": [
+                "Salt Palace | Level 2 | East Registration"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sp-l3",
+          "label": "Level 3",
+          "width": 1000,
+          "height": 260,
+          "areas": [
+            {
+              "id": "sp-l3-355ac",
+              "name": "355 A-C",
+              "kind": "meeting-room",
+              "shape": {
+                "x": 20,
+                "y": 20,
+                "width": 429,
+                "height": 200
+              },
+              "inferred": true
+            },
+            {
+              "id": "sp-l3-355d",
+              "name": "355 D · Media Lounge",
+              "kind": "service",
+              "shape": {
+                "x": 457,
+                "y": 20,
+                "width": 215,
+                "height": 200
+              },
+              "inferred": true,
+              "shortLabel": "Media 355 D"
+            },
+            {
+              "id": "sp-l3-355ef",
+              "name": "355 E-F",
+              "kind": "meeting-room",
+              "shape": {
+                "x": 680,
+                "y": 20,
+                "width": 300,
+                "height": 200
+              },
+              "inferred": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hyatt-regency",
+      "name": "Hyatt Regency Salt Lake City",
+      "shortName": "Hyatt Regency",
+      "levels": [
+        {
+          "id": "hy-l1",
+          "label": "Lobby",
+          "width": 1000,
+          "height": 300,
+          "areas": [
+            {
+              "id": "hy-l1-lobby",
+              "name": "Hyatt Regency Lobby",
+              "kind": "foyer",
+              "shape": {
+                "x": 20,
+                "y": 20,
+                "width": 640,
+                "height": 260
+              },
+              "inferred": true,
+              "description": "Take the elevators or escalators to levels 2–5.",
+              "scheduleRooms": [
+                "Hyatt Regency Lobby"
+              ]
+            },
+            {
+              "id": "hy-l1-salt-palace",
+              "name": "Access to Salt Palace",
+              "kind": "skybridge",
+              "shape": {
+                "x": 680,
+                "y": 20,
+                "width": 300,
+                "height": 260
+              },
+              "inferred": true,
+              "shortLabel": "To Salt Palace",
+              "connectsTo": "sp-l1"
+            }
+          ]
+        },
+        {
+          "id": "hy-l2",
+          "label": "Level 2",
+          "width": 1000,
+          "height": 560,
+          "areas": [
+            {
+              "id": "hy-l2-slb-a",
+              "name": "Salt Lake Ballroom A",
+              "kind": "ballroom",
+              "shape": {
+                "x": 20,
+                "y": 20,
+                "width": 164,
+                "height": 220
+              },
+              "inferred": true,
+              "shortLabel": "SLB A"
+            },
+            {
+              "id": "hy-l2-slb-b",
+              "name": "Salt Lake Ballroom B",
+              "kind": "ballroom",
+              "shape": {
+                "x": 192,
+                "y": 20,
+                "width": 164,
+                "height": 220
+              },
+              "inferred": true,
+              "shortLabel": "SLB B"
+            },
+            {
+              "id": "hy-l2-slb-c",
+              "name": "Salt Lake Ballroom C",
+              "kind": "ballroom",
+              "shape": {
+                "x": 364,
+                "y": 20,
+                "width": 164,
+                "height": 220
+              },
+              "inferred": true,
+              "shortLabel": "SLB C",
+              "scheduleRooms": [
+                "Hyatt Regency | Level 2 | Salt Lake Ballroom C"
+              ]
+            },
+            {
+              "id": "hy-l2-slb-de",
+              "name": "Salt Lake Ballroom DE",
+              "kind": "ballroom",
+              "shape": {
+                "x": 536,
+                "y": 20,
+                "width": 245,
+                "height": 220
+              },
+              "inferred": true,
+              "shortLabel": "SLB DE",
+              "scheduleRooms": [
+                "Hyatt Regency | Level 2 | Salt Lake Ballroom DE"
+              ]
+            },
+            {
+              "id": "hy-l2-salt-lake-foyer",
+              "name": "Salt Lake Foyer",
+              "kind": "campfire",
+              "shape": {
+                "x": 20,
+                "y": 250,
+                "width": 760,
+                "height": 60
+              },
+              "inferred": true,
+              "description": "Outside the Salt Lake Ballrooms (south, west and east sides). A KubeQuest campfire."
+            },
+            {
+              "id": "hy-l2-nest",
+              "name": "The Nest",
+              "kind": "service",
+              "shape": {
+                "x": 20,
+                "y": 320,
+                "width": 146,
+                "height": 200
+              },
+              "inferred": true
+            },
+            {
+              "id": "hy-l2-aspen",
+              "name": "Aspen",
+              "kind": "meeting-room",
+              "shape": {
+                "x": 174,
+                "y": 320,
+                "width": 146,
+                "height": 200
+              },
+              "inferred": true
+            },
+            {
+              "id": "hy-l2-juniper",
+              "name": "Juniper · Microsoft Azure",
+              "kind": "meeting-room",
+              "shape": {
+                "x": 328,
+                "y": 320,
+                "width": 146,
+                "height": 200
+              },
+              "inferred": true,
+              "shortLabel": "Juniper",
+              "description": "Sponsor meeting room: Microsoft Azure. Ask at their booth for a slot."
+            },
+            {
+              "id": "hy-l2-cottonwood",
+              "name": "Cottonwood · Oracle",
+              "kind": "meeting-room",
+              "shape": {
+                "x": 482,
+                "y": 320,
+                "width": 146,
+                "height": 200
+              },
+              "inferred": true,
+              "shortLabel": "Cottonwood",
+              "description": "Sponsor meeting room: Oracle. Ask at their booth for a slot."
+            },
+            {
+              "id": "hy-l2-blue-spruce",
+              "name": "Blue Spruce · Red Hat",
+              "kind": "meeting-room",
+              "shape": {
+                "x": 636,
+                "y": 320,
+                "width": 146,
+                "height": 200
+              },
+              "inferred": true,
+              "shortLabel": "Blue Spruce",
+              "description": "Sponsor meeting room: Red Hat. Ask at their booth for a slot."
+            },
+            {
+              "id": "hy-l2-salt-palace",
+              "name": "Arrival from Salt Palace",
+              "kind": "skybridge",
+              "shape": {
+                "x": 790,
+                "y": 20,
+                "width": 190,
+                "height": 500
+              },
+              "inferred": true,
+              "shortLabel": "From Salt Palace",
+              "connectsTo": "sp-l1"
+            }
+          ]
+        },
+        {
+          "id": "hy-l3",
+          "label": "Level 3",
+          "width": 1000,
+          "height": 480,
+          "areas": [
+            {
+              "id": "hy-l3-park-city",
+              "name": "Park City",
+              "kind": "meeting-room",
+              "shape": {
+                "x": 20,
+                "y": 20,
+                "width": 300,
+                "height": 440
+              },
+              "inferred": true,
+              "scheduleRooms": [
+                "Hyatt Regency | Level 3 | Park City"
+              ]
+            },
+            {
+              "id": "hy-l3-alta",
+              "name": "Alta · VMware by Broadcom",
+              "kind": "meeting-room",
+              "shape": {
+                "x": 330,
+                "y": 20,
+                "width": 157,
+                "height": 210
+              },
+              "inferred": true,
+              "shortLabel": "Alta",
+              "description": "Sponsor meeting room: VMware by Broadcom. Ask at their booth for a slot."
+            },
+            {
+              "id": "hy-l3-snowbird",
+              "name": "Snowbird · Solo.io",
+              "kind": "meeting-room",
+              "shape": {
+                "x": 495,
+                "y": 20,
+                "width": 157,
+                "height": 210
+              },
+              "inferred": true,
+              "shortLabel": "Snowbird",
+              "description": "Sponsor meeting room: Solo.io. Ask at their booth for a slot."
+            },
+            {
+              "id": "hy-l3-solitude",
+              "name": "Solitude · Teleport",
+              "kind": "meeting-room",
+              "shape": {
+                "x": 660,
+                "y": 20,
+                "width": 157,
+                "height": 210
+              },
+              "inferred": true,
+              "shortLabel": "Solitude",
+              "description": "Sponsor meeting room: Teleport. Ask at their booth for a slot."
+            },
+            {
+              "id": "hy-l3-brighton",
+              "name": "Brighton · Google Cloud",
+              "kind": "meeting-room",
+              "shape": {
+                "x": 825,
+                "y": 20,
+                "width": 157,
+                "height": 210
+              },
+              "inferred": true,
+              "shortLabel": "Brighton",
+              "description": "Sponsor meeting room: Google Cloud. Ask at their booth for a slot."
+            },
+            {
+              "id": "hy-l3-powder-mountain",
+              "name": "Powder Mountain · Docker",
+              "kind": "meeting-room",
+              "shape": {
+                "x": 330,
+                "y": 250,
+                "width": 157,
+                "height": 210
+              },
+              "inferred": true,
+              "shortLabel": "Powder Mountain",
+              "description": "Sponsor meeting room: Docker. Ask at their booth for a slot."
+            },
+            {
+              "id": "hy-l3-woodward",
+              "name": "Woodward · Nutanix",
+              "kind": "meeting-room",
+              "shape": {
+                "x": 495,
+                "y": 250,
+                "width": 157,
+                "height": 210
+              },
+              "inferred": true,
+              "shortLabel": "Woodward",
+              "description": "Sponsor meeting room: Nutanix. Ask at their booth for a slot."
+            },
+            {
+              "id": "hy-l3-snowbasin",
+              "name": "Snowbasin · Isovalent",
+              "kind": "meeting-room",
+              "shape": {
+                "x": 660,
+                "y": 250,
+                "width": 157,
+                "height": 210
+              },
+              "inferred": true,
+              "shortLabel": "Snowbasin",
+              "description": "Sponsor meeting room: Isovalent. Ask at their booth for a slot."
+            },
+            {
+              "id": "hy-l3-deer-valley",
+              "name": "Deer Valley",
+              "kind": "meeting-room",
+              "shape": {
+                "x": 825,
+                "y": 250,
+                "width": 157,
+                "height": 210
+              },
+              "inferred": true,
+              "description": "Sponsor meeting room; the sponsor logo on the map is not legible."
+            }
+          ]
+        },
+        {
+          "id": "hy-l4",
+          "label": "Level 4",
+          "width": 1000,
+          "height": 520,
+          "areas": [
+            {
+              "id": "hy-l4-rb-a",
+              "name": "Regency Ballroom A",
+              "kind": "ballroom",
+              "shape": {
+                "x": 20,
+                "y": 20,
+                "width": 262,
+                "height": 240
+              },
+              "inferred": true,
+              "shortLabel": "Regency A",
+              "scheduleRooms": [
+                "Hyatt Regency | Level 4 | Regency Ballroom A"
+              ]
+            },
+            {
+              "id": "hy-l4-rb-b",
+              "name": "Regency Ballroom B",
+              "kind": "ballroom",
+              "shape": {
+                "x": 290,
+                "y": 20,
+                "width": 262,
+                "height": 240
+              },
+              "inferred": true,
+              "shortLabel": "Regency B",
+              "description": "Joined with CD as \"Regency Ballroom B-D\" for lightning talks and larger sessions.",
+              "scheduleRooms": [
+                "Hyatt Regency | Level 4 | Regency Ballroom B",
+                "Hyatt Regency | Level 4 | Regency Ballroom B-D"
+              ]
+            },
+            {
+              "id": "hy-l4-rb-cd",
+              "name": "Regency Ballroom CD",
+              "kind": "ballroom",
+              "shape": {
+                "x": 560,
+                "y": 20,
+                "width": 420,
+                "height": 240
+              },
+              "inferred": true,
+              "shortLabel": "Regency CD",
+              "description": "Joined with B as \"Regency Ballroom B-D\" for lightning talks and larger sessions.",
+              "scheduleRooms": [
+                "Hyatt Regency | Level 4 | Regency Ballroom CD",
+                "Hyatt Regency | Level 4 | Regency Ballroom B-D"
+              ]
+            },
+            {
+              "id": "hy-l4-regency-foyer",
+              "name": "Regency Foyer",
+              "kind": "campfire",
+              "shape": {
+                "x": 20,
+                "y": 270,
+                "width": 960,
+                "height": 60
+              },
+              "inferred": true,
+              "description": "Outside the Regency Ballrooms, where the lightning talks run. A KubeQuest campfire."
+            },
+            {
+              "id": "hy-l4-traverse",
+              "name": "Traverse",
+              "kind": "meeting-room",
+              "shape": {
+                "x": 20,
+                "y": 340,
+                "width": 248,
+                "height": 160
+              },
+              "inferred": true
+            },
+            {
+              "id": "hy-l4-wasatch",
+              "name": "Wasatch",
+              "kind": "meeting-room",
+              "shape": {
+                "x": 276,
+                "y": 340,
+                "width": 248,
+                "height": 160
+              },
+              "inferred": true
+            },
+            {
+              "id": "hy-l4-broadcast",
+              "name": "Broadcast Lounge",
+              "kind": "service",
+              "shape": {
+                "x": 532,
+                "y": 340,
+                "width": 447,
+                "height": 160
+              },
+              "inferred": true,
+              "description": "Ambassador, Kubestronaut and Maintainer Lounge."
+            }
+          ]
+        },
+        {
+          "id": "hy-l5",
+          "label": "Level 5",
+          "width": 1000,
+          "height": 260,
+          "areas": [
+            {
+              "id": "hy-l5-zion",
+              "name": "Zion · Prayer Room",
+              "kind": "service",
+              "shape": {
+                "x": 20,
+                "y": 20,
+                "width": 186,
+                "height": 220
+              },
+              "inferred": true,
+              "shortLabel": "Zion (prayer)"
+            },
+            {
+              "id": "hy-l5-bryce",
+              "name": "Bryce",
+              "kind": "meeting-room",
+              "shape": {
+                "x": 214,
+                "y": 20,
+                "width": 186,
+                "height": 220
+              },
+              "inferred": true
+            },
+            {
+              "id": "hy-l5-canyonlands",
+              "name": "Canyonlands",
+              "kind": "meeting-room",
+              "shape": {
+                "x": 408,
+                "y": 20,
+                "width": 186,
+                "height": 220
+              },
+              "inferred": true
+            },
+            {
+              "id": "hy-l5-arches",
+              "name": "Arches",
+              "kind": "meeting-room",
+              "shape": {
+                "x": 602,
+                "y": 20,
+                "width": 186,
+                "height": 220
+              },
+              "inferred": true
+            },
+            {
+              "id": "hy-l5-capitol-reef",
+              "name": "Capitol Reef",
+              "kind": "meeting-room",
+              "shape": {
+                "x": 796,
+                "y": 20,
+                "width": 186,
+                "height": 220
+              },
+              "inferred": true,
+              "scheduleRooms": [
+                "Hyatt Regency | Level 5 | Capitol Reef"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "vendors": [
+    {
+      "id": "f5-100",
+      "name": "F5",
+      "kind": "sponsor",
+      "tier": "Platinum",
+      "booth": "100",
+      "areaId": "sp-sc-halls-ac-a",
+      "zone": "Astral Peak",
+      "categories": [
+        "Artificial Intelligence (AI)",
+        "Security"
+      ],
+      "position": {
+        "x": 248.2,
+        "y": 627.3
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "teleport-103",
+      "name": "Teleport",
+      "kind": "sponsor",
+      "tier": "Platinum",
+      "booth": "103",
+      "areaId": "sp-sc-halls-ac-a",
+      "zone": "Astral Peak",
+      "categories": [
+        "Platform Engineering",
+        "Security"
+      ],
+      "position": {
+        "x": 217.4,
+        "y": 627.5
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "crusoe-104",
+      "name": "Crusoe",
+      "kind": "sponsor",
+      "tier": "Platinum",
+      "booth": "104",
+      "areaId": "sp-sc-halls-ac-a",
+      "zone": "Astral Peak",
+      "categories": [
+        "Artificial Intelligence (AI)",
+        "Application Development + Developer Experience"
+      ],
+      "position": {
+        "x": 232.8,
+        "y": 612
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "splunk-a-cisco-company-105",
+      "name": "Splunk, a Cisco Company",
+      "kind": "sponsor",
+      "tier": "Platinum",
+      "booth": "105",
+      "areaId": "sp-sc-halls-ac-a",
+      "zone": "Astral Peak",
+      "categories": [
+        "Observability",
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 273.2,
+        "y": 571.5
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "tintri-106",
+      "name": "Tintri",
+      "kind": "sponsor",
+      "tier": "Platinum",
+      "booth": "106",
+      "areaId": "sp-sc-halls-ac-a",
+      "zone": "Astral Peak",
+      "categories": [
+        "Storage + Databases",
+        "CI/CD"
+      ],
+      "position": {
+        "x": 288.7,
+        "y": 556.1
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "suse-107",
+      "name": "SUSE",
+      "kind": "sponsor",
+      "tier": "Platinum",
+      "booth": "107",
+      "areaId": "sp-sc-halls-ac-b",
+      "zone": "Astral Peak",
+      "categories": [
+        "Artificial Intelligence (AI)",
+        "Edge + IoT + Telco"
+      ],
+      "position": {
+        "x": 188.8,
+        "y": 625.2
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "clickhouse-108",
+      "name": "ClickHouse",
+      "kind": "sponsor",
+      "tier": "Platinum",
+      "booth": "108",
+      "areaId": "sp-sc-halls-ac-b",
+      "zone": "Astral Peak",
+      "categories": [
+        "Observability",
+        "Storage + Databases"
+      ],
+      "position": {
+        "x": 204.1,
+        "y": 609.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "port-109",
+      "name": "Port",
+      "kind": "sponsor",
+      "tier": "Platinum",
+      "booth": "109",
+      "areaId": "sp-sc-halls-ac-a",
+      "zone": "Astral Peak",
+      "categories": [],
+      "position": {
+        "x": 219.6,
+        "y": 594.3
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "chainguard-110",
+      "name": "Chainguard",
+      "kind": "sponsor",
+      "tier": "Platinum",
+      "booth": "110",
+      "areaId": "sp-sc-halls-ac-a",
+      "zone": "Astral Peak",
+      "categories": [
+        "Security",
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 235.1,
+        "y": 578.9
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "groundcover-111",
+      "name": "groundcover",
+      "kind": "sponsor",
+      "tier": "Platinum",
+      "booth": "111",
+      "areaId": "sp-sc-halls-ac-a",
+      "zone": "Astral Peak",
+      "categories": [
+        "Observability",
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 250.6,
+        "y": 563.5
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "isovalent-at-cisco-112",
+      "name": "Isovalent at Cisco",
+      "kind": "sponsor",
+      "tier": "Platinum",
+      "booth": "112",
+      "areaId": "sp-sc-halls-ac-a",
+      "zone": "Astral Peak",
+      "categories": [
+        "Networking",
+        "Security"
+      ],
+      "position": {
+        "x": 265.9,
+        "y": 548
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "infisical-113",
+      "name": "Infisical",
+      "kind": "sponsor",
+      "tier": "Platinum",
+      "booth": "113",
+      "areaId": "sp-sc-halls-ac-a",
+      "zone": "Astral Peak",
+      "categories": [
+        "Security",
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 281.4,
+        "y": 532.6
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "amazon-web-services-115",
+      "name": "Amazon Web Services",
+      "kind": "sponsor",
+      "tier": "Diamond",
+      "booth": "115",
+      "areaId": "sp-sc-halls-ac-b",
+      "zone": "Astral Peak",
+      "categories": [
+        "Artificial Intelligence (AI)",
+        "Platform Engineering",
+        "Observability"
+      ],
+      "position": {
+        "x": 158,
+        "y": 625.2
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "red-hat-116",
+      "name": "Red Hat",
+      "kind": "sponsor",
+      "tier": "Diamond",
+      "booth": "116",
+      "areaId": "sp-sc-halls-ac-b",
+      "zone": "Astral Peak",
+      "categories": [
+        "Artificial Intelligence (AI)",
+        "Certified Kubernetes Software",
+        "Security"
+      ],
+      "position": {
+        "x": 178.8,
+        "y": 604.3
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "microsoft-azure-117",
+      "name": "Microsoft Azure",
+      "kind": "sponsor",
+      "tier": "Diamond",
+      "booth": "117",
+      "areaId": "sp-sc-halls-ac-b",
+      "zone": "Astral Peak",
+      "categories": [
+        "Application Development + Developer Experience",
+        "Artificial Intelligence (AI)",
+        "Platform Engineeringvultr"
+      ],
+      "position": {
+        "x": 206.4,
+        "y": 576.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "nutanix-118",
+      "name": "Nutanix",
+      "kind": "sponsor",
+      "tier": "Diamond",
+      "booth": "118",
+      "areaId": "sp-sc-halls-ac-a",
+      "zone": "Astral Peak",
+      "categories": [
+        "Artificial Intelligence (AI)",
+        "Platform Engineering",
+        "Storage + Databases"
+      ],
+      "position": {
+        "x": 227.3,
+        "y": 555.8
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "cast-ai-119",
+      "name": "Cast AI",
+      "kind": "sponsor",
+      "tier": "Platinum",
+      "booth": "119",
+      "areaId": "sp-sc-halls-ac-a",
+      "zone": "Astral Peak",
+      "categories": [
+        "Platform Engineering",
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 246.9,
+        "y": 536.3
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "oracle-120",
+      "name": "Oracle",
+      "kind": "sponsor",
+      "tier": "Diamond",
+      "booth": "120",
+      "areaId": "sp-sc-halls-ac-c",
+      "zone": "Starlight Summit",
+      "categories": [
+        "Artificial Intelligence (AI)",
+        "Storage + Databases",
+        "Certified Kubernetes Software"
+      ],
+      "position": {
+        "x": 113.9,
+        "y": 632.8
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "solo-io-121",
+      "name": "Solo.io",
+      "kind": "sponsor",
+      "tier": "Diamond",
+      "booth": "121",
+      "areaId": "sp-sc-halls-ac-b",
+      "zone": "Starlight Summit",
+      "categories": [
+        "Artificial Intelligence (AI)",
+        "Platform Engineering",
+        "Networking"
+      ],
+      "position": {
+        "x": 134.8,
+        "y": 612
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "google-cloud-122",
+      "name": "Google Cloud",
+      "kind": "sponsor",
+      "tier": "Diamond",
+      "booth": "122",
+      "areaId": "sp-sc-halls-ac-b",
+      "zone": "Starlight Summit",
+      "categories": [
+        "Artificial Intelligence (AI)",
+        "Platform Engineering",
+        "Application Development + Developer Experience"
+      ],
+      "position": {
+        "x": 155.6,
+        "y": 591
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "scaleops-123",
+      "name": "ScaleOps",
+      "kind": "sponsor",
+      "tier": "Diamond",
+      "booth": "123",
+      "areaId": "sp-sc-halls-ac-b",
+      "zone": "Starlight Summit",
+      "categories": [
+        "Platform Engineering",
+        "Artificial Intelligence (AI)",
+        "Observability"
+      ],
+      "position": {
+        "x": 176.5,
+        "y": 570.2
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "haproxy-technologies-124",
+      "name": "HAProxy Technologies",
+      "kind": "sponsor",
+      "tier": "Diamond",
+      "booth": "124",
+      "areaId": "sp-sc-halls-ac-b",
+      "zone": "Starlight Summit",
+      "categories": [
+        "Networking",
+        "Security",
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 197.4,
+        "y": 549.3
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "spectro-cloud-125",
+      "name": "Spectro Cloud",
+      "kind": "sponsor",
+      "tier": "Platinum",
+      "booth": "125",
+      "areaId": "sp-sc-halls-ac-a",
+      "zone": "Starlight Summit",
+      "categories": [
+        "Artificial Intelligence (AI)",
+        "Edge + IoT + Telco"
+      ],
+      "position": {
+        "x": 214.3,
+        "y": 532.4
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "talos-by-sidero-labs-126",
+      "name": "Talos by Sidero Labs",
+      "kind": "sponsor",
+      "tier": "Platinum",
+      "booth": "126",
+      "areaId": "sp-sc-halls-ac-a",
+      "zone": "Starlight Summit",
+      "categories": [
+        "Artificial Intelligence (AI)",
+        "Security"
+      ],
+      "position": {
+        "x": 228.9,
+        "y": 517.9
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "canonical-128",
+      "name": "Canonical",
+      "kind": "sponsor",
+      "tier": "Platinum",
+      "booth": "128",
+      "areaId": "sp-sc-halls-ac-c",
+      "zone": "Starlight Summit",
+      "categories": [
+        "Artificial Intelligence (AI)",
+        "Security"
+      ],
+      "position": {
+        "x": 100.7,
+        "y": 615.1
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "vmware-by-broadcom-129",
+      "name": "VMware by Broadcom",
+      "kind": "sponsor",
+      "tier": "Platinum",
+      "booth": "129",
+      "areaId": "sp-sc-halls-ac-c",
+      "zone": "Starlight Summit",
+      "categories": [
+        "Artificial Intelligence (AI)",
+        "Certified Kubernetes Software"
+      ],
+      "position": {
+        "x": 117.1,
+        "y": 598.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "postman-130",
+      "name": "Postman",
+      "kind": "sponsor",
+      "tier": "Platinum",
+      "booth": "130",
+      "areaId": "sp-sc-halls-ac-b",
+      "zone": "Starlight Summit",
+      "categories": [
+        "Application Development + Developer Experience",
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 135.2,
+        "y": 580.5
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "perfectscale-by-doit-131",
+      "name": "PerfectScale by DoiT",
+      "kind": "sponsor",
+      "tier": "Platinum",
+      "booth": "131",
+      "areaId": "sp-sc-halls-ac-b",
+      "zone": "Starlight Summit",
+      "categories": [
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 149.8,
+        "y": 566
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "akamai-132",
+      "name": "Akamai",
+      "kind": "sponsor",
+      "tier": "Platinum",
+      "booth": "132",
+      "areaId": "sp-sc-halls-ac-b",
+      "zone": "Starlight Summit",
+      "categories": [
+        "Certified Kubernetes Software",
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 166,
+        "y": 549.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "nebius-133",
+      "name": "Nebius",
+      "kind": "sponsor",
+      "tier": "Platinum",
+      "booth": "133",
+      "areaId": "sp-sc-halls-ac-b",
+      "zone": "Starlight Summit",
+      "categories": [
+        "Application Development + Developer Experience",
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 183,
+        "y": 533.5
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "dash0-134",
+      "name": "Dash0",
+      "kind": "sponsor",
+      "tier": "Platinum",
+      "booth": "134",
+      "areaId": "sp-sc-halls-ac-b",
+      "zone": "Starlight Summit",
+      "categories": [
+        "Observability",
+        "Application Development + Developer Experience"
+      ],
+      "position": {
+        "x": 198.8,
+        "y": 517
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "traversal-138",
+      "name": "Traversal",
+      "kind": "sponsor",
+      "tier": "Platinum",
+      "booth": "138",
+      "areaId": "sp-sc-halls-ac-c",
+      "zone": "Starlight Summit",
+      "categories": [
+        "Application Development + Developer Experience",
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 108.9,
+        "y": 576.2
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "linux-foundation-education-140",
+      "name": "Linux Foundation Education",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "140",
+      "areaId": "sp-sc-halls-ac-b",
+      "zone": "Starlight Summit",
+      "categories": [
+        "Kubernetes Certified Service Providers + Kubernetes Training Partners"
+      ],
+      "position": {
+        "x": 151.5,
+        "y": 535.2
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "docker-141",
+      "name": "Docker",
+      "kind": "sponsor",
+      "tier": "Platinum",
+      "booth": "141",
+      "areaId": "sp-sc-halls-ac-c",
+      "zone": "Starlight Summit",
+      "categories": [
+        "Artificial Intelligence (AI)",
+        "Application Development + Developer Experience"
+      ],
+      "position": {
+        "x": 60.7,
+        "y": 593.2
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "echo-144",
+      "name": "Echo",
+      "kind": "sponsor",
+      "tier": "Gold",
+      "booth": "144",
+      "areaId": "sp-sc-halls-ac-b",
+      "zone": "Starlight Summit",
+      "categories": [],
+      "position": {
+        "x": 134,
+        "y": 522.3
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "hpe-145",
+      "name": "HPE",
+      "kind": "sponsor",
+      "tier": "Gold",
+      "booth": "145",
+      "areaId": "sp-sc-halls-ac-b",
+      "zone": "Starlight Summit",
+      "categories": [
+        "Platform Engineering",
+        "Artificial Intelligence (AI)",
+        "Certified Kubernetes Software"
+      ],
+      "position": {
+        "x": 138.7,
+        "y": 517.6
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "hpe-151",
+      "name": "HPE",
+      "kind": "sponsor",
+      "tier": "Gold",
+      "booth": "151",
+      "areaId": "sp-sc-halls-ac-b",
+      "zone": "Starlight Summit",
+      "categories": [
+        "Platform Engineering",
+        "Artificial Intelligence (AI)",
+        "Certified Kubernetes Software"
+      ],
+      "position": {
+        "x": 113.7,
+        "y": 513.5
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "thecube-146",
+      "name": "theCube",
+      "kind": "sponsor",
+      "tier": "Other",
+      "booth": "146",
+      "areaId": "sp-sc-halls-ac-c",
+      "zone": "Starlight Summit",
+      "categories": [],
+      "position": {
+        "x": 63.2,
+        "y": 563.5
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "coreweave-147",
+      "name": "CoreWeave",
+      "kind": "sponsor",
+      "tier": "Gold",
+      "booth": "147",
+      "areaId": "sp-sc-halls-ac-c",
+      "zone": "Starlight Summit",
+      "categories": [
+        "Artificial Intelligence (AI)",
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 81.9,
+        "y": 545.4
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "tfir-148",
+      "name": "TFiR",
+      "kind": "sponsor",
+      "tier": "Other",
+      "booth": "148",
+      "areaId": "sp-sc-halls-ac-c",
+      "zone": "Starlight Summit",
+      "categories": [],
+      "position": {
+        "x": 93.1,
+        "y": 534
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "couchbase-149",
+      "name": "Couchbase",
+      "kind": "sponsor",
+      "tier": "Gold",
+      "booth": "149",
+      "areaId": "sp-sc-halls-ac-c",
+      "zone": "Starlight Summit",
+      "categories": [
+        "Artificial Intelligence (AI)",
+        "Storage + Databases"
+      ],
+      "position": {
+        "x": 97.7,
+        "y": 529.4
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "tigera-150",
+      "name": "Tigera",
+      "kind": "sponsor",
+      "tier": "Gold",
+      "booth": "150",
+      "areaId": "sp-sc-halls-ac-c",
+      "zone": "Starlight Summit",
+      "categories": [
+        "Platform Engineering",
+        "Security"
+      ],
+      "position": {
+        "x": 109,
+        "y": 518.2
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "datadog-152",
+      "name": "Datadog",
+      "kind": "sponsor",
+      "tier": "Platinum",
+      "booth": "152",
+      "areaId": "sp-sc-halls-ac-a",
+      "zone": "Astral Peak",
+      "categories": [
+        "Observability",
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 321.8,
+        "y": 516.2
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "yugabyte-153",
+      "name": "Yugabyte",
+      "kind": "sponsor",
+      "tier": "Platinum",
+      "booth": "153",
+      "areaId": "sp-sc-hall-1",
+      "zone": "Alpine Overlook",
+      "categories": [
+        "Storage + Databases",
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 344.2,
+        "y": 516.1
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "harness-154",
+      "name": "Harness",
+      "kind": "sponsor",
+      "tier": "Gold",
+      "booth": "154",
+      "areaId": "sp-sc-hall-1",
+      "zone": "Alpine Overlook",
+      "categories": [
+        "Platform Engineering",
+        "CI/CD"
+      ],
+      "position": {
+        "x": 365,
+        "y": 519.2
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "kong-155",
+      "name": "Kong",
+      "kind": "sponsor",
+      "tier": "Gold",
+      "booth": "155",
+      "areaId": "sp-sc-hall-1",
+      "zone": "Alpine Overlook",
+      "categories": [
+        "Service Mesh",
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 365,
+        "y": 512.9
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "the-new-stack-156",
+      "name": "The New Stack",
+      "kind": "sponsor",
+      "tier": "Other",
+      "booth": "156",
+      "areaId": "sp-sc-hall-1",
+      "zone": "Alpine Overlook",
+      "categories": [],
+      "position": {
+        "x": 384.3,
+        "y": 519.2
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "intuit-157",
+      "name": "Intuit",
+      "kind": "sponsor",
+      "tier": "Gold",
+      "booth": "157",
+      "areaId": "sp-sc-hall-1",
+      "zone": "Alpine Overlook",
+      "categories": [
+        "CI/CD",
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 384.3,
+        "y": 512.9
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "new-relic-159",
+      "name": "New Relic",
+      "kind": "sponsor",
+      "tier": "Gold",
+      "booth": "159",
+      "areaId": "sp-sc-hall-1",
+      "zone": "Alpine Overlook",
+      "categories": [
+        "Observability",
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 403.6,
+        "y": 512.9
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "gravitee-160",
+      "name": "Gravitee",
+      "kind": "sponsor",
+      "tier": "Gold",
+      "booth": "160",
+      "areaId": "sp-sc-hall-1",
+      "zone": "Alpine Overlook",
+      "categories": [],
+      "position": {
+        "x": 403.6,
+        "y": 519.2
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "resolve-ai-161",
+      "name": "Resolve AI",
+      "kind": "sponsor",
+      "tier": "Gold",
+      "booth": "161",
+      "areaId": "sp-sc-hall-1",
+      "zone": "Alpine Overlook",
+      "categories": [
+        "Artificial Intelligence (AI)",
+        "Observability"
+      ],
+      "position": {
+        "x": 422.8,
+        "y": 512.9
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "sedai-163",
+      "name": "Sedai",
+      "kind": "sponsor",
+      "tier": "Platinum",
+      "booth": "163",
+      "areaId": "sp-sc-hall-1",
+      "zone": "Alpine Overlook",
+      "categories": [
+        "Artificial Intelligence (AI)",
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 344.1,
+        "y": 494.8
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "vcluster-164",
+      "name": "vCluster",
+      "kind": "sponsor",
+      "tier": "Gold",
+      "booth": "164",
+      "areaId": "sp-sc-hall-1",
+      "zone": "Alpine Overlook",
+      "categories": [
+        "Artificial Intelligence (AI)",
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 365,
+        "y": 493.6
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "akuity-165",
+      "name": "Akuity",
+      "kind": "sponsor",
+      "tier": "Gold",
+      "booth": "165",
+      "areaId": "sp-sc-hall-1",
+      "zone": "Alpine Overlook",
+      "categories": [
+        "CI/CD",
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 365,
+        "y": 487.2
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "heroku-166",
+      "name": "Heroku",
+      "kind": "sponsor",
+      "tier": "Gold",
+      "booth": "166",
+      "areaId": "sp-sc-hall-1",
+      "zone": "Alpine Overlook",
+      "categories": [
+        "Application Development + Developer Experience",
+        "Storage + Databases"
+      ],
+      "position": {
+        "x": 384.6,
+        "y": 493.5
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "openobserve-167",
+      "name": "OpenObserve",
+      "kind": "sponsor",
+      "tier": "Gold",
+      "booth": "167",
+      "areaId": "sp-sc-hall-1",
+      "zone": "Alpine Overlook",
+      "categories": [
+        "Observability",
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 384.6,
+        "y": 487.1
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "sysdig-168",
+      "name": "Sysdig",
+      "kind": "sponsor",
+      "tier": "Gold",
+      "booth": "168",
+      "areaId": "sp-sc-hall-1",
+      "zone": "Alpine Overlook",
+      "categories": [
+        "Artificial Intelligence (AI)",
+        "Security"
+      ],
+      "position": {
+        "x": 403.6,
+        "y": 493.6
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "devzero-169",
+      "name": "DevZero",
+      "kind": "sponsor",
+      "tier": "Gold",
+      "booth": "169",
+      "areaId": "sp-sc-hall-1",
+      "zone": "Alpine Overlook",
+      "categories": [
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 403.6,
+        "y": 487.2
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "nvidia-170",
+      "name": "NVIDIA",
+      "kind": "sponsor",
+      "tier": "Gold",
+      "booth": "170",
+      "areaId": "sp-sc-hall-1",
+      "zone": "Alpine Overlook",
+      "categories": [
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 422.8,
+        "y": 493.6
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "temporal-171",
+      "name": "Temporal",
+      "kind": "sponsor",
+      "tier": "Gold",
+      "booth": "171",
+      "areaId": "sp-sc-hall-1",
+      "zone": "Alpine Overlook",
+      "categories": [
+        "Platform Engineering",
+        "Application Development + Developer Experience"
+      ],
+      "position": {
+        "x": 422.8,
+        "y": 487.2
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "ibm-172",
+      "name": "IBM",
+      "kind": "sponsor",
+      "tier": "Platinum",
+      "booth": "172",
+      "areaId": "sp-sc-hall-1",
+      "zone": "Alpine Overlook",
+      "categories": [
+        "Artificial Intelligence (AI)",
+        "Observability"
+      ],
+      "position": {
+        "x": 344.1,
+        "y": 472.3
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "octopus-deploy-174",
+      "name": "Octopus Deploy",
+      "kind": "sponsor",
+      "tier": "Gold",
+      "booth": "174",
+      "areaId": "sp-sc-hall-1",
+      "zone": "Alpine Overlook",
+      "categories": [
+        "CI/CD",
+        "Application Development + Developer Experience"
+      ],
+      "position": {
+        "x": 365,
+        "y": 464.6
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "cloudsmith-175",
+      "name": "Cloudsmith",
+      "kind": "sponsor",
+      "tier": "Gold",
+      "booth": "175",
+      "areaId": "sp-sc-hall-1",
+      "zone": "Alpine Overlook",
+      "categories": [
+        "Security",
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 365,
+        "y": 458.3
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "zesty-178",
+      "name": "Zesty",
+      "kind": "sponsor",
+      "tier": "Gold",
+      "booth": "178",
+      "areaId": "sp-sc-hall-1",
+      "zone": "Alpine Overlook",
+      "categories": [
+        "Platform Engineering",
+        "Application Development + Developer Experience"
+      ],
+      "position": {
+        "x": 403.6,
+        "y": 464.6
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "wiz-179",
+      "name": "Wiz",
+      "kind": "sponsor",
+      "tier": "Gold",
+      "booth": "179",
+      "areaId": "sp-sc-hall-1",
+      "zone": "Alpine Overlook",
+      "categories": [
+        "Security"
+      ],
+      "position": {
+        "x": 403.6,
+        "y": 458.3
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "opensearch-180",
+      "name": "OpenSearch",
+      "kind": "sponsor",
+      "tier": "Gold",
+      "booth": "180",
+      "areaId": "sp-sc-hall-1",
+      "zone": "Alpine Overlook",
+      "categories": [
+        "Artificial Intelligence (AI)",
+        "Observability"
+      ],
+      "position": {
+        "x": 422.8,
+        "y": 464.6
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "palo-alto-networks-181",
+      "name": "Palo Alto Networks",
+      "kind": "sponsor",
+      "tier": "Gold",
+      "booth": "181",
+      "areaId": "sp-sc-hall-1",
+      "zone": "Alpine Overlook",
+      "categories": [
+        "Observability"
+      ],
+      "position": {
+        "x": 422.8,
+        "y": 458.3
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "ibm-kubecost-182",
+      "name": "IBM Kubecost",
+      "kind": "sponsor",
+      "tier": "Platinum",
+      "booth": "182",
+      "areaId": "sp-sc-hall-1",
+      "zone": "Alpine Overlook",
+      "categories": [
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 344.1,
+        "y": 450.9
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "dynatrace-184",
+      "name": "Dynatrace",
+      "kind": "sponsor",
+      "tier": "Gold",
+      "booth": "184",
+      "areaId": "sp-sc-hall-1",
+      "zone": "Alpine Overlook",
+      "categories": [
+        "Application Development + Developer Experience",
+        "Observability",
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 384.2,
+        "y": 442.2
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "komodor-185",
+      "name": "Komodor",
+      "kind": "sponsor",
+      "tier": "Gold",
+      "booth": "185",
+      "areaId": "sp-sc-hall-1",
+      "zone": "Alpine Overlook",
+      "categories": [
+        "Artificial Intelligence (AI)",
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 384.2,
+        "y": 435.8
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "vultr-186",
+      "name": "Vultr",
+      "kind": "sponsor",
+      "tier": "Gold",
+      "booth": "186",
+      "areaId": "sp-sc-hall-1",
+      "zone": "Alpine Overlook",
+      "categories": [
+        "Platform Engineering",
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 403.6,
+        "y": 442.2
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "veeam-187",
+      "name": "Veeam",
+      "kind": "sponsor",
+      "tier": "Gold",
+      "booth": "187",
+      "areaId": "sp-sc-hall-1",
+      "zone": "Alpine Overlook",
+      "categories": [
+        "Storage + Databases",
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 403.6,
+        "y": 435.8
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "controltheory-188",
+      "name": "ControlTheory",
+      "kind": "sponsor",
+      "tier": "Gold",
+      "booth": "188",
+      "areaId": "sp-sc-hall-1",
+      "zone": "Alpine Overlook",
+      "categories": [
+        "Observability",
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 422.8,
+        "y": 442.2
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "tailscale-189",
+      "name": "Tailscale",
+      "kind": "sponsor",
+      "tier": "Gold",
+      "booth": "189",
+      "areaId": "sp-sc-hall-1",
+      "zone": "Alpine Overlook",
+      "categories": [
+        "Networking",
+        "Security"
+      ],
+      "position": {
+        "x": 422.8,
+        "y": 435.8
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "portworx-by-everpure-191",
+      "name": "Portworx by Everpure",
+      "kind": "sponsor",
+      "tier": "Platinum",
+      "booth": "191",
+      "areaId": "sp-sc-hall-1",
+      "zone": "Alpine Overlook",
+      "categories": [
+        "Platform Engineering",
+        "Storage + Databases"
+      ],
+      "position": {
+        "x": 344.2,
+        "y": 429.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "plural-192",
+      "name": "Plural",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "192",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 381.7,
+        "y": 419.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "diagrid-193",
+      "name": "Diagrid",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "193",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Application Development + Developer Experience"
+      ],
+      "position": {
+        "x": 381.7,
+        "y": 413.3
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "replicated-194",
+      "name": "Replicated",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "194",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [],
+      "position": {
+        "x": 386.9,
+        "y": 419.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "coder-195",
+      "name": "Coder",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "195",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 386.9,
+        "y": 413.3
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "elastic-196",
+      "name": "Elastic",
+      "kind": "sponsor",
+      "tier": "Gold",
+      "booth": "196",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Observability",
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 403.6,
+        "y": 419.8
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "techstrong-197",
+      "name": "Techstrong",
+      "kind": "sponsor",
+      "tier": "Other",
+      "booth": "197",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [],
+      "position": {
+        "x": 403.6,
+        "y": 413.4
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "signoz-198",
+      "name": "SigNoz",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "198",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Observability"
+      ],
+      "position": {
+        "x": 343.2,
+        "y": 397.2
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "redpanda-199",
+      "name": "Redpanda",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "199",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Observability"
+      ],
+      "position": {
+        "x": 343.2,
+        "y": 390.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "pulumi-200",
+      "name": "Pulumi",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "200",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 348.3,
+        "y": 397.2
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "pagerduty-201",
+      "name": "PagerDuty",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "201",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 348.3,
+        "y": 390.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "spacelift-202",
+      "name": "Spacelift",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "202",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "CI/CD"
+      ],
+      "position": {
+        "x": 362.5,
+        "y": 397.2
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "honeycomb-203",
+      "name": "Honeycomb",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "203",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Observability"
+      ],
+      "position": {
+        "x": 362.5,
+        "y": 390.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "firefly-204",
+      "name": "Firefly",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "204",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 367.6,
+        "y": 397.2
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "cribl-205",
+      "name": "Cribl",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "205",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Observability"
+      ],
+      "position": {
+        "x": 367.6,
+        "y": 390.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "kubex-206",
+      "name": "Kubex",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "206",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 381.7,
+        "y": 397.3
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "stormforge-by-cloudbolt-207",
+      "name": "StormForge by CloudBolt",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "207",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 381.7,
+        "y": 390.8
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "sonatype-208",
+      "name": "Sonatype",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "208",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Application Development + Developer Experience"
+      ],
+      "position": {
+        "x": 386.9,
+        "y": 397.3
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "dragonflydb-209",
+      "name": "DragonflyDB",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "209",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Storage + Databases"
+      ],
+      "position": {
+        "x": 386.9,
+        "y": 390.8
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "mezmo-210",
+      "name": "Mezmo",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "210",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [],
+      "position": {
+        "x": 401.3,
+        "y": 396.8
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "crash-override-211",
+      "name": "Crash Override",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "211",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Observability"
+      ],
+      "position": {
+        "x": 401.3,
+        "y": 390.5
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "sonrai-security-212",
+      "name": "Sonrai Security",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "212",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Security"
+      ],
+      "position": {
+        "x": 406.4,
+        "y": 396.8
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "arpio-213",
+      "name": "Arpio",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "213",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 406.4,
+        "y": 390.5
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "grafana-labs-214",
+      "name": "Grafana Labs",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "214",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Observability"
+      ],
+      "position": {
+        "x": 343.2,
+        "y": 374.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "akamas-215",
+      "name": "Akamas",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "215",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 343.2,
+        "y": 368.3
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "lablup-216",
+      "name": "Lablup",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "216",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 348.3,
+        "y": 374.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "sentry-217",
+      "name": "Sentry",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "217",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Observability"
+      ],
+      "position": {
+        "x": 348.3,
+        "y": 368.3
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "victoriametrics-218",
+      "name": "VictoriaMetrics",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "218",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [],
+      "position": {
+        "x": 362.5,
+        "y": 374.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "framework-219",
+      "name": "Framework",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "219",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Application Development + Developer Experience"
+      ],
+      "position": {
+        "x": 362.5,
+        "y": 368.3
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "akeyless-security-220",
+      "name": "Akeyless Security",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "220",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Security"
+      ],
+      "position": {
+        "x": 367.6,
+        "y": 374.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "tigris-data-221",
+      "name": "Tigris Data",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "221",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Storage + Databases"
+      ],
+      "position": {
+        "x": 367.6,
+        "y": 368.3
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "cosmonic-224",
+      "name": "Cosmonic",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "224",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 343.2,
+        "y": 342.6
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "hashicorp-an-ibm-company-225",
+      "name": "HashiCorp, an IBM Company",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "225",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Security"
+      ],
+      "position": {
+        "x": 343.2,
+        "y": 336.2
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "edera-226",
+      "name": "Edera",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "226",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 348.3,
+        "y": 342.6
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "supabase-227",
+      "name": "Supabase",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "227",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Storage + Databases"
+      ],
+      "position": {
+        "x": 348.3,
+        "y": 336.2
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "better-stack-228",
+      "name": "Better Stack",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "228",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Observability"
+      ],
+      "position": {
+        "x": 363.1,
+        "y": 342.6
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "kubermatic-229",
+      "name": "Kubermatic",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "229",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Kubernetes Certified Service Providers + Kubernetes Training Partners"
+      ],
+      "position": {
+        "x": 363.1,
+        "y": 336.2
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "zededa-230",
+      "name": "ZEDEDA",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "230",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Edge + IoT + Telco"
+      ],
+      "position": {
+        "x": 368.2,
+        "y": 342.6
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "vast-data-231",
+      "name": "VAST Data",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "231",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Storage + Databases"
+      ],
+      "position": {
+        "x": 368.2,
+        "y": 336.2
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "mirantis-232",
+      "name": "Mirantis",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "232",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 383,
+        "y": 342.6
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "flox-233",
+      "name": "Flox",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "233",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 383,
+        "y": 336.2
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "cockroach-labs-234",
+      "name": "Cockroach Labs",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "234",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Storage + Databases"
+      ],
+      "position": {
+        "x": 388.2,
+        "y": 342.6
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "incident-io-235",
+      "name": "Incident.io",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "235",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 388.2,
+        "y": 336.2
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "attribute-by-doit-236",
+      "name": "Attribute by DoiT",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "236",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Observability"
+      ],
+      "position": {
+        "x": 402.9,
+        "y": 342.6
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "xata-237",
+      "name": "Xata",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "237",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Storage + Databases"
+      ],
+      "position": {
+        "x": 402.9,
+        "y": 336.2
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "rafay-systems-238",
+      "name": "Rafay Systems",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "238",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 408.1,
+        "y": 342.6
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "decimal-ai-239",
+      "name": "Decimal AI",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "239",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 408.1,
+        "y": 336.2
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "percona-242",
+      "name": "Percona",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "242",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Kubernetes Certified Service Providers + Kubernetes Training Partners"
+      ],
+      "position": {
+        "x": 343.2,
+        "y": 320.1
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "adaptive6-243",
+      "name": "Adaptive6",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "243",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 343.2,
+        "y": 313.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "antithesis-244",
+      "name": "Antithesis",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "244",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Application Development + Developer Experience"
+      ],
+      "position": {
+        "x": 348.3,
+        "y": 320.1
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "herodevs-245",
+      "name": "HeroDevs",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "245",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Security"
+      ],
+      "position": {
+        "x": 348.3,
+        "y": 313.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "edge-delta-246",
+      "name": "Edge Delta",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "246",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Observability"
+      ],
+      "position": {
+        "x": 363.1,
+        "y": 320.1
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "fastly-247",
+      "name": "Fastly",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "247",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [],
+      "position": {
+        "x": 363.1,
+        "y": 313.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "ciroos-248",
+      "name": "Ciroos",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "248",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 368.2,
+        "y": 320.1
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "everbridge-xmatters-249",
+      "name": "Everbridge xMatters",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "249",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 368.2,
+        "y": 313.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "portainer-250",
+      "name": "Portainer",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "250",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 383.2,
+        "y": 320.1
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "digital-ai-251",
+      "name": "Digital.ai",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "251",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "CI/CD"
+      ],
+      "position": {
+        "x": 383.2,
+        "y": 313.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "fusionauth-252",
+      "name": "FusionAuth",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "252",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Security"
+      ],
+      "position": {
+        "x": 388.2,
+        "y": 320.1
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "bindplane-253",
+      "name": "Bindplane",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "253",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Observability"
+      ],
+      "position": {
+        "x": 388.2,
+        "y": 313.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "livekit-254",
+      "name": "LiveKit",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "254",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Application Development + Developer Experience"
+      ],
+      "position": {
+        "x": 402.9,
+        "y": 320.1
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "macstadium-255",
+      "name": "MacStadium",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "255",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "CI/CD"
+      ],
+      "position": {
+        "x": 402.9,
+        "y": 313.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "twingate-256",
+      "name": "Twingate",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "256",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Networking"
+      ],
+      "position": {
+        "x": 408.1,
+        "y": 320.1
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "black-duck-257",
+      "name": "Black Duck",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "257",
+      "areaId": "sp-sc-hall-2",
+      "zone": "Honeycomb Hub",
+      "categories": [
+        "Application Development + Developer Experience"
+      ],
+      "position": {
+        "x": 408.1,
+        "y": 313.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "upbound-258",
+      "name": "Upbound",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "258",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 343.2,
+        "y": 297.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "planetscale-259",
+      "name": "PlanetScale",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "259",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Storage + Databases"
+      ],
+      "position": {
+        "x": 343.2,
+        "y": 291.3
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "jozu-260",
+      "name": "Jozu",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "260",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 348.3,
+        "y": 297.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "greptime-262",
+      "name": "Greptime",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "262",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Observability"
+      ],
+      "position": {
+        "x": 383,
+        "y": 297.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "prosperops-263",
+      "name": "ProsperOps",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "263",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 383,
+        "y": 291.3
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "vates-264",
+      "name": "VATES",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "264",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [],
+      "position": {
+        "x": 388.2,
+        "y": 297.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "gremlin-265",
+      "name": "Gremlin",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "265",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 388.2,
+        "y": 291.3
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "sigi-266",
+      "name": "Sigi",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "266",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Observability"
+      ],
+      "position": {
+        "x": 402.9,
+        "y": 297.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "apollo-graphql-267",
+      "name": "Apollo GraphQL",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "267",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 402.9,
+        "y": 291.3
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "dataagent-268",
+      "name": "DataAgent",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "268",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Observability"
+      ],
+      "position": {
+        "x": 408.1,
+        "y": 297.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "cloudbees-269",
+      "name": "CloudBees",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "269",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "CI/CD"
+      ],
+      "position": {
+        "x": 408.1,
+        "y": 291.3
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "blacksmith-272",
+      "name": "Blacksmith",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "272",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "CI/CD"
+      ],
+      "position": {
+        "x": 343.2,
+        "y": 275.1
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "aikido-security-273",
+      "name": "Aikido Security",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "273",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Security"
+      ],
+      "position": {
+        "x": 343.2,
+        "y": 268.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "robusta-dev-274",
+      "name": "Robusta.dev",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "274",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 348.3,
+        "y": 275.1
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "iown-global-forum-275",
+      "name": "IOWN Global Forum",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "275",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 348.3,
+        "y": 268.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "klique-276",
+      "name": "Klique",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "276",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 363.1,
+        "y": 275.1
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "activestate-277",
+      "name": "ActiveState",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "277",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Security"
+      ],
+      "position": {
+        "x": 363.1,
+        "y": 268.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "nirmata-278",
+      "name": "Nirmata",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "278",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 368.2,
+        "y": 275.1
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "momentic-279",
+      "name": "Momentic",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "279",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Application Development + Developer Experience"
+      ],
+      "position": {
+        "x": 368.2,
+        "y": 268.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "enterprisedb-280",
+      "name": "EnterpriseDB",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "280",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Storage + Databases"
+      ],
+      "position": {
+        "x": 383,
+        "y": 275.1
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "syntasso-281",
+      "name": "Syntasso",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "281",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 383,
+        "y": 268.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "neubird-282",
+      "name": "NeuBird",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "282",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 388.2,
+        "y": 275.1
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "stackgen-283",
+      "name": "StackGen",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "283",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 388.2,
+        "y": 268.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "northmark-compute-and-cloud-286",
+      "name": "NorthMark Compute and Cloud",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "286",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 423.5,
+        "y": 275.1
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "pump-287",
+      "name": "Pump",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "287",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Observability"
+      ],
+      "position": {
+        "x": 423.5,
+        "y": 268.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "qualcomm-288",
+      "name": "Qualcomm",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "288",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 428.7,
+        "y": 275.1
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "datacore-289",
+      "name": "DataCore",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "289",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Storage + Databases"
+      ],
+      "position": {
+        "x": 428.7,
+        "y": 268.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "traefik-labs-290",
+      "name": "Traefik Labs",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "290",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Networking"
+      ],
+      "position": {
+        "x": 343.2,
+        "y": 252.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "grepr-291",
+      "name": "Grepr",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "291",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Observability"
+      ],
+      "position": {
+        "x": 343.2,
+        "y": 246.3
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "runpod-292",
+      "name": "Runpod",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "292",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 348.3,
+        "y": 252.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "spotify-293",
+      "name": "Spotify",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "293",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Application Development + Developer Experience"
+      ],
+      "position": {
+        "x": 348.3,
+        "y": 246.3
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "varnish-software-294",
+      "name": "Varnish Software",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "294",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 363.1,
+        "y": 252.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "squaredup-295",
+      "name": "SquaredUp",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "295",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Observability"
+      ],
+      "position": {
+        "x": 363.1,
+        "y": 246.3
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "kodekloud-296",
+      "name": "KodeKloud",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "296",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Kubernetes Certified Service Providers + Kubernetes Training Partners"
+      ],
+      "position": {
+        "x": 368.2,
+        "y": 252.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "netlox-297",
+      "name": "NetLOX",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "297",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 368.2,
+        "y": 246.3
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "truefoundry-298",
+      "name": "TrueFoundry",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "298",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 383,
+        "y": 252.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "faros-299",
+      "name": "Faros",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "299",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 383,
+        "y": 246.3
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "observe-by-snowflake-300",
+      "name": "Observe by Snowflake",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "300",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Observability"
+      ],
+      "position": {
+        "x": 388.2,
+        "y": 252.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "linbit-301",
+      "name": "LINBIT",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "301",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Storage + Databases"
+      ],
+      "position": {
+        "x": 388.2,
+        "y": 246.3
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "myota-304",
+      "name": "Myota",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "304",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Security"
+      ],
+      "position": {
+        "x": 423.5,
+        "y": 252.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "aenix-305",
+      "name": "AEnix",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "305",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 423.5,
+        "y": 246.3
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "new-orleans-cvb-306",
+      "name": "New Orleans CVB",
+      "kind": "sponsor",
+      "tier": "Other",
+      "booth": "306",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [],
+      "position": {
+        "x": 428.7,
+        "y": 252.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "north-307",
+      "name": "North",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "307",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 428.7,
+        "y": 246.3
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "rapidfort-310",
+      "name": "RapidFort",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "310",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Security"
+      ],
+      "position": {
+        "x": 343.2,
+        "y": 223.1
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "endor-labs-311",
+      "name": "Endor Labs",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "311",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Security"
+      ],
+      "position": {
+        "x": 343.2,
+        "y": 216.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "uber-312",
+      "name": "Uber",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "312",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 348.3,
+        "y": 223.1
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "open-source-security-foundation-openssf-313",
+      "name": "Open Source Security Foundation (OpenSSF)",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "313",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Security"
+      ],
+      "position": {
+        "x": 348.3,
+        "y": 216.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "databricks-314",
+      "name": "Databricks",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "314",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Storage + Databases"
+      ],
+      "position": {
+        "x": 363.1,
+        "y": 223.1
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "ravendb-315",
+      "name": "RavenDB",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "315",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Storage + Databases"
+      ],
+      "position": {
+        "x": 363.1,
+        "y": 216.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "coralogix-316",
+      "name": "Coralogix",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "316",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Observability"
+      ],
+      "position": {
+        "x": 368.2,
+        "y": 223.1
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "anyscale-317",
+      "name": "Anyscale",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "317",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 368.2,
+        "y": 216.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "latitude-sh-318",
+      "name": "Latitude.sh",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "318",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 383,
+        "y": 223.1
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "jetbrains-319",
+      "name": "JetBrains",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "319",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "CI/CD"
+      ],
+      "position": {
+        "x": 383,
+        "y": 216.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "depot-320",
+      "name": "Depot",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "320",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Application Development + Developer Experience"
+      ],
+      "position": {
+        "x": 388.2,
+        "y": 223.1
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "camara-project-321",
+      "name": "CAMARA Project",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "321",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Edge + IoT + Telco"
+      ],
+      "position": {
+        "x": 388.2,
+        "y": 216.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "stacklet-322",
+      "name": "Stacklet",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "322",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 402.9,
+        "y": 223.1
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "obot-ai-323",
+      "name": "Obot AI",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "323",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Security"
+      ],
+      "position": {
+        "x": 402.9,
+        "y": 216.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "pganalyze-324",
+      "name": "pganalyze",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "324",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Storage + Databases"
+      ],
+      "position": {
+        "x": 408.1,
+        "y": 223.1
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "orca-security-325",
+      "name": "Orca Security",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "325",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Security"
+      ],
+      "position": {
+        "x": 408.1,
+        "y": 216.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "ciq-326",
+      "name": "CIQ",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "326",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 423.5,
+        "y": 223.1
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "empirik-327",
+      "name": "empirik",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "327",
+      "areaId": "sp-sc-hall-3",
+      "zone": "Amber Hive",
+      "categories": [
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 423.5,
+        "y": 216.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "kubedb-330",
+      "name": "KubeDB",
+      "kind": "sponsor",
+      "tier": "Start-Up",
+      "booth": "330",
+      "areaId": "sp-sc-halls-4-5",
+      "zone": "Cosmic Canyon",
+      "categories": [
+        "Storage + Databases"
+      ],
+      "position": {
+        "x": 342.6,
+        "y": 201.4
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "cloudchipr-331",
+      "name": "Cloudchipr",
+      "kind": "sponsor",
+      "tier": "Start-Up",
+      "booth": "331",
+      "areaId": "sp-sc-halls-4-5",
+      "zone": "Cosmic Canyon",
+      "categories": [
+        "Observability"
+      ],
+      "position": {
+        "x": 342.6,
+        "y": 196.2
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "stackguardian-332",
+      "name": "StackGuardian",
+      "kind": "sponsor",
+      "tier": "Start-Up",
+      "booth": "332",
+      "areaId": "sp-sc-halls-4-5",
+      "zone": "Cosmic Canyon",
+      "categories": [
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 346.4,
+        "y": 201.4
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "maze-333",
+      "name": "Maze",
+      "kind": "sponsor",
+      "tier": "Start-Up",
+      "booth": "333",
+      "areaId": "sp-sc-halls-4-5",
+      "zone": "Cosmic Canyon",
+      "categories": [
+        "Security"
+      ],
+      "position": {
+        "x": 346.4,
+        "y": 196.2
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "aiven-336",
+      "name": "Aiven",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "336",
+      "areaId": "sp-sc-halls-4-5",
+      "zone": "Cosmic Canyon",
+      "categories": [
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 423.5,
+        "y": 200.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "cloud-native-studios-337",
+      "name": "Cloud Native Studios",
+      "kind": "sponsor",
+      "tier": "Other",
+      "booth": "337",
+      "areaId": "sp-sc-halls-4-5",
+      "zone": "Cosmic Canyon",
+      "categories": [],
+      "position": {
+        "x": 423.5,
+        "y": 194.3
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "cloud-native-studios-338",
+      "name": "Cloud Native Studios",
+      "kind": "sponsor",
+      "tier": "Other",
+      "booth": "338",
+      "areaId": "sp-sc-halls-4-5",
+      "zone": "Cosmic Canyon",
+      "categories": [],
+      "position": {
+        "x": 428.7,
+        "y": 200.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "cloud-native-studios-339",
+      "name": "Cloud Native Studios",
+      "kind": "sponsor",
+      "tier": "Other",
+      "booth": "339",
+      "areaId": "sp-sc-halls-4-5",
+      "zone": "Cosmic Canyon",
+      "categories": [],
+      "position": {
+        "x": 428.7,
+        "y": 194.3
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "rootly-ai-340",
+      "name": "Rootly AI",
+      "kind": "sponsor",
+      "tier": "Start-Up",
+      "booth": "340",
+      "areaId": "sp-sc-halls-4-5",
+      "zone": "Cosmic Canyon",
+      "categories": [
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 342.6,
+        "y": 182.1
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "plakar-341",
+      "name": "Plakar",
+      "kind": "sponsor",
+      "tier": "Start-Up",
+      "booth": "341",
+      "areaId": "sp-sc-halls-4-5",
+      "zone": "Cosmic Canyon",
+      "categories": [
+        "Storage + Databases"
+      ],
+      "position": {
+        "x": 342.6,
+        "y": 176.9
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "omnistrate-342",
+      "name": "Omnistrate",
+      "kind": "sponsor",
+      "tier": "Start-Up",
+      "booth": "342",
+      "areaId": "sp-sc-halls-4-5",
+      "zone": "Cosmic Canyon",
+      "categories": [
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 346.4,
+        "y": 182.1
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "tensormesh-343",
+      "name": "Tensormesh",
+      "kind": "sponsor",
+      "tier": "Start-Up",
+      "booth": "343",
+      "areaId": "sp-sc-halls-4-5",
+      "zone": "Cosmic Canyon",
+      "categories": [
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 346.4,
+        "y": 176.9
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "stacklok-346",
+      "name": "Stacklok",
+      "kind": "sponsor",
+      "tier": "Start-Up",
+      "booth": "346",
+      "areaId": "sp-sc-halls-4-5",
+      "zone": "Cosmic Canyon",
+      "categories": [
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 383.6,
+        "y": 182.1
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "amutable-347",
+      "name": "Amutable",
+      "kind": "sponsor",
+      "tier": "Start-Up",
+      "booth": "347",
+      "areaId": "sp-sc-halls-4-5",
+      "zone": "Cosmic Canyon",
+      "categories": [],
+      "position": {
+        "x": 383.6,
+        "y": 176.9
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "mirrord-by-metalbear-352",
+      "name": "mirrord by MetalBear",
+      "kind": "sponsor",
+      "tier": "Start-Up",
+      "booth": "352",
+      "areaId": "sp-sc-halls-4-5",
+      "zone": "Cosmic Canyon",
+      "categories": [
+        "Application Development + Developer Experience"
+      ],
+      "position": {
+        "x": 342.6,
+        "y": 162.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "fluidcloud-353",
+      "name": "FluidCloud",
+      "kind": "sponsor",
+      "tier": "Start-Up",
+      "booth": "353",
+      "areaId": "sp-sc-halls-4-5",
+      "zone": "Cosmic Canyon",
+      "categories": [
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 342.6,
+        "y": 157.6
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "causely-354",
+      "name": "Causely",
+      "kind": "sponsor",
+      "tier": "Start-Up",
+      "booth": "354",
+      "areaId": "sp-sc-halls-4-5",
+      "zone": "Cosmic Canyon",
+      "categories": [
+        "Observability"
+      ],
+      "position": {
+        "x": 346.4,
+        "y": 162.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "ascendra-networks-355",
+      "name": "Ascendra Networks",
+      "kind": "sponsor",
+      "tier": "Start-Up",
+      "booth": "355",
+      "areaId": "sp-sc-halls-4-5",
+      "zone": "Cosmic Canyon",
+      "categories": [
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 346.4,
+        "y": 157.6
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "ollygarden-356",
+      "name": "OllyGarden",
+      "kind": "sponsor",
+      "tier": "Start-Up",
+      "booth": "356",
+      "areaId": "sp-sc-halls-4-5",
+      "zone": "Cosmic Canyon",
+      "categories": [
+        "Observability"
+      ],
+      "position": {
+        "x": 363.1,
+        "y": 162.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "emphere-357",
+      "name": "Emphere",
+      "kind": "sponsor",
+      "tier": "Start-Up",
+      "booth": "357",
+      "areaId": "sp-sc-halls-4-5",
+      "zone": "Cosmic Canyon",
+      "categories": [
+        "Security"
+      ],
+      "position": {
+        "x": 363.1,
+        "y": 157.6
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "kedify-358",
+      "name": "Kedify",
+      "kind": "sponsor",
+      "tier": "Start-Up",
+      "booth": "358",
+      "areaId": "sp-sc-halls-4-5",
+      "zone": "Cosmic Canyon",
+      "categories": [
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 367,
+        "y": 162.7
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "cvs-health-359",
+      "name": "CVS Health",
+      "kind": "sponsor",
+      "tier": "End User",
+      "booth": "359",
+      "areaId": "sp-sc-halls-4-5",
+      "zone": "Cosmic Canyon",
+      "categories": [
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 367,
+        "y": 157.6
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "infros-360",
+      "name": "InfrOS",
+      "kind": "sponsor",
+      "tier": "Start-Up",
+      "booth": "360",
+      "areaId": "sp-sc-halls-4-5",
+      "zone": "Cosmic Canyon",
+      "categories": [
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 342.6,
+        "y": 143.5
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "archestra-ai-361",
+      "name": "Archestra AI",
+      "kind": "sponsor",
+      "tier": "Start-Up",
+      "booth": "361",
+      "areaId": "sp-sc-halls-4-5",
+      "zone": "Cosmic Canyon",
+      "categories": [],
+      "position": {
+        "x": 342.6,
+        "y": 138.4
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "ascend-362",
+      "name": "Ascend",
+      "kind": "sponsor",
+      "tier": "Start-Up",
+      "booth": "362",
+      "areaId": "sp-sc-halls-4-5",
+      "zone": "Cosmic Canyon",
+      "categories": [
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 346.4,
+        "y": 143.5
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "testkube-363",
+      "name": "Testkube",
+      "kind": "sponsor",
+      "tier": "Start-Up",
+      "booth": "363",
+      "areaId": "sp-sc-halls-4-5",
+      "zone": "Cosmic Canyon",
+      "categories": [
+        "CI/CD"
+      ],
+      "position": {
+        "x": 346.4,
+        "y": 138.4
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "actualyze-ai-364",
+      "name": "Actualyze AI",
+      "kind": "sponsor",
+      "tier": "Start-Up",
+      "booth": "364",
+      "areaId": "sp-sc-halls-4-5",
+      "zone": "Cosmic Canyon",
+      "categories": [
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 363.1,
+        "y": 143.5
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "radar-365",
+      "name": "Radar",
+      "kind": "sponsor",
+      "tier": "Start-Up",
+      "booth": "365",
+      "areaId": "sp-sc-halls-4-5",
+      "zone": "Cosmic Canyon",
+      "categories": [
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 363.1,
+        "y": 138.4
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "pgedge-366",
+      "name": "pgEdge",
+      "kind": "sponsor",
+      "tier": "Start-Up",
+      "booth": "366",
+      "areaId": "sp-sc-halls-4-5",
+      "zone": "Cosmic Canyon",
+      "categories": [],
+      "position": {
+        "x": 367,
+        "y": 143.5
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "villagesql-367",
+      "name": "VillageSQL",
+      "kind": "sponsor",
+      "tier": "Start-Up",
+      "booth": "367",
+      "areaId": "sp-sc-halls-4-5",
+      "zone": "Cosmic Canyon",
+      "categories": [
+        "Storage + Databases"
+      ],
+      "position": {
+        "x": 367,
+        "y": 138.4
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "infino-ai-368",
+      "name": "Infino AI",
+      "kind": "sponsor",
+      "tier": "Start-Up",
+      "booth": "368",
+      "areaId": "sp-sc-halls-4-5",
+      "zone": "Cosmic Canyon",
+      "categories": [
+        "Storage + Databases"
+      ],
+      "position": {
+        "x": 342.6,
+        "y": 124.2
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "aranya-369",
+      "name": "Aranya",
+      "kind": "sponsor",
+      "tier": "Start-Up",
+      "booth": "369",
+      "areaId": "sp-sc-halls-4-5",
+      "zone": "Cosmic Canyon",
+      "categories": [
+        "Platform Engineering"
+      ],
+      "position": {
+        "x": 342.6,
+        "y": 119.1
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "vijil-370",
+      "name": "Vijil",
+      "kind": "sponsor",
+      "tier": "Start-Up",
+      "booth": "370",
+      "areaId": "sp-sc-halls-4-5",
+      "zone": "Cosmic Canyon",
+      "categories": [
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 346.4,
+        "y": 124.2
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "paper-compute-company-371",
+      "name": "Paper Compute Company",
+      "kind": "sponsor",
+      "tier": "Start-Up",
+      "booth": "371",
+      "areaId": "sp-sc-halls-4-5",
+      "zone": "Cosmic Canyon",
+      "categories": [
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 346.4,
+        "y": 119.1
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "causal-dynamics-lab-372",
+      "name": "Causal Dynamics Lab",
+      "kind": "sponsor",
+      "tier": "Start-Up",
+      "booth": "372",
+      "areaId": "sp-sc-halls-4-5",
+      "zone": "Cosmic Canyon",
+      "categories": [
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 342.6,
+        "y": 104.9
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "patapscoai-373",
+      "name": "PatapscoAI",
+      "kind": "sponsor",
+      "tier": "Start-Up",
+      "booth": "373",
+      "areaId": "sp-sc-halls-4-5",
+      "zone": "Cosmic Canyon",
+      "categories": [
+        "Artificial Intelligence (AI)"
+      ],
+      "position": {
+        "x": 342.6,
+        "y": 99.8
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "mydecisive-374",
+      "name": "MyDecisive",
+      "kind": "sponsor",
+      "tier": "Start-Up",
+      "booth": "374",
+      "areaId": "sp-sc-halls-4-5",
+      "zone": "Cosmic Canyon",
+      "categories": [],
+      "position": {
+        "x": 346.4,
+        "y": 104.9
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "effodio-375",
+      "name": "Effodio",
+      "kind": "sponsor",
+      "tier": "Start-Up",
+      "booth": "375",
+      "areaId": "sp-sc-halls-4-5",
+      "zone": "Cosmic Canyon",
+      "categories": [
+        "Observability"
+      ],
+      "position": {
+        "x": 346.4,
+        "y": 99.8
+      },
+      "levelId": "sp-showcase"
+    },
+    {
+      "id": "project-argo-p-18a",
+      "name": "Argo",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-18A",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday - Thursday Full Showcase Hours"
+    },
+    {
+      "id": "project-armada-p-6a",
+      "name": "Armada",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-6A",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Wednesday 10:15 AM – 1:25 PM"
+    },
+    {
+      "id": "project-backstage-p-3b",
+      "name": "Backstage",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-3B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 3:00 PM – 7:30 PM, Wednesday 1:55 PM – 5:00 PM, Thursday 12:25 PM – 2:00 PM"
+    },
+    {
+      "id": "project-bootc-p-10b",
+      "name": "bootc",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-10B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Wednesday 10:15 AM – 1:25 PM"
+    },
+    {
+      "id": "project-cadence-p-15b",
+      "name": "Cadence",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-15B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 3:00 PM – 7:30 PM"
+    },
+    {
+      "id": "project-cartography-p-14b",
+      "name": "Cartography",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-14B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Thursday 10:15 AM - 2:00 PM"
+    },
+    {
+      "id": "project-cedar-p-14b",
+      "name": "Cedar",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-14B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 3:00 PM – 7:30 PM"
+    },
+    {
+      "id": "project-cilium-p-9a",
+      "name": "Cilium",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-9A",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 3:00 PM – 7:30 PM, Wednesday 1:55 PM – 5:00 PM, Thursday 12:25 PM – 2:00 PM"
+    },
+    {
+      "id": "project-cloud-native-buildpacks-p-2a",
+      "name": "Cloud Native Buildpacks",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-2A",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 3:00 PM – 7:30 PM, Wednesday 1:55 PM – 5:00 PM, Thursday 12:25 PM – 2:00 PM"
+    },
+    {
+      "id": "project-cloud-native-community-groups-kcds-p-17a",
+      "name": "Cloud Native Community Groups/KCDs",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-17A",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday - Thursday Full Showcase Hours"
+    },
+    {
+      "id": "project-confidential-containers-p-18b",
+      "name": "Confidential Containers",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-18B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 3:00 PM – 7:30 PM, Wednesday 1:55 PM – 5:00 PM, Thursday 12:25 PM – 2:00 PM"
+    },
+    {
+      "id": "project-containerd-p-8a",
+      "name": "containerd",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-8A",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Wednesday 10:15 AM – 1:25 PM"
+    },
+    {
+      "id": "project-crossplane-p-7a",
+      "name": "Crossplane",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-7A",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday - Thursday Full Showcase Hours"
+    },
+    {
+      "id": "project-dapr-p-18b",
+      "name": "Dapr",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-18B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 10:30 AM – 2:30 PM, Wednesday 10:15 AM – 1:25 PM, Thursday 10:15 AM – 11:55 AM"
+    },
+    {
+      "id": "project-drasi-p-2a",
+      "name": "Drasi",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-2A",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Wednesday 10:15 AM – 1:25 PM, Thursday 10:15 AM – 11:55 AM"
+    },
+    {
+      "id": "project-dynamic-resource-allocation-sig-subproject-p-6a",
+      "name": "Dynamic Resource Allocation (SIG Subproject)",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-6A",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 10:30 AM – 2:30 PM"
+    },
+    {
+      "id": "project-envoyproxy-p-7b",
+      "name": "Envoyproxy",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-7B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday - Thursday Full Showcase Hours"
+    },
+    {
+      "id": "project-external-secrets-p-4b",
+      "name": "external-secrets",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-4B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Wednesday 10:15 AM – 5:00 PM"
+    },
+    {
+      "id": "project-falco-p-11a",
+      "name": "Falco",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-11A",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 10:30 AM – 2:30 PM, Wednesday 10:15 AM – 1:25 PM, Thursday 10:15 AM – 11:55 AM"
+    },
+    {
+      "id": "project-flatcar-container-linux-p-8a",
+      "name": "Flatcar Container Linux",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-8A",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 3:00 PM – 7:30 PM, Wednesday 1:55 PM – 5:00 PM, Thursday 12:25 PM – 2:00 PM"
+    },
+    {
+      "id": "project-fluent-bit-p-12a",
+      "name": "Fluent Bit",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-12A",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday - Thursday Full Showcase Hours"
+    },
+    {
+      "id": "project-flux-p-2b",
+      "name": "Flux",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-2B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday - Thursday Full Showcase Hours"
+    },
+    {
+      "id": "project-gateway-api-sig-subproject-p-5b",
+      "name": "Gateway API (SIG Subproject)",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-5B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Wednesday 10:15 AM – 1:25 PM"
+    },
+    {
+      "id": "project-hami-p-9b",
+      "name": "HAMi",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-9B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 3:00 PM – 7:30 PM, Wednesday 1:55 PM – 5:00 PM, Thursday 12:25 PM – 2:00 PM"
+    },
+    {
+      "id": "project-harbor-p-13b",
+      "name": "Harbor",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-13B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 3:00 PM – 7:30 PM, Wednesday 1:55 PM – 5:00 PM, Thursday 12:25 PM – 2:00 PM"
+    },
+    {
+      "id": "project-headlamp-sig-p-5b",
+      "name": "Headlamp (SIG)",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-5B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 3:00 PM – 7:30 PM"
+    },
+    {
+      "id": "project-helm-p-1a",
+      "name": "Helm",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-1A",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 10:30 AM – 2:30 PM, Wednesday 10:15 AM – 1:25 PM, Thursday 10:15 AM – 11:55 AM"
+    },
+    {
+      "id": "project-hive-commons-p-10b",
+      "name": "Hive Commons",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-10B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Thursday 10:15 AM - 2:00 PM"
+    },
+    {
+      "id": "project-hyperlight-p-9a",
+      "name": "Hyperlight",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-9A",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Wednesday 10:15 AM – 1:25 PM"
+    },
+    {
+      "id": "project-inspektor-gadget-p-15a",
+      "name": "Inspektor Gadget",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-15A",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Wednesday 10:15 AM – 1:25 PM"
+    },
+    {
+      "id": "project-istio-p-6b",
+      "name": "Istio",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-6B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday - Thursday Full Showcase Hours"
+    },
+    {
+      "id": "project-jaeger-p-11b",
+      "name": "Jaeger",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-11B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 3:00 PM – 7:30 PM, Wednesday 1:55 PM – 5:00 PM, Thursday 12:25 PM – 2:00 PM"
+    },
+    {
+      "id": "project-k0s-p-4b",
+      "name": "k0s",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-4B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 10:30 AM – 2:30 PM"
+    },
+    {
+      "id": "project-k3s-p-8a",
+      "name": "K3s",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-8A",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 10:30 AM – 2:30 PM"
+    },
+    {
+      "id": "project-k8gb-p-8b",
+      "name": "k8gb",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-8B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 3:00 PM – 7:30 PM, Wednesday 1:55 PM – 5:00 PM, Thursday 12:25 PM – 2:00 PM"
+    },
+    {
+      "id": "project-kagent-p-8b",
+      "name": "kagent",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-8B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 10:30 AM – 2:30 PM Thursday 10:15 AM – 11:55 AM"
+    },
+    {
+      "id": "project-kai-scheduler-p-9a",
+      "name": "KAI Scheduler",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-9A",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 10:30 AM – 2:30 PM"
+    },
+    {
+      "id": "project-kairos-p-15b",
+      "name": "Kairos",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-15B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 10:30 AM – 2:30 PM"
+    },
+    {
+      "id": "project-karmada-p-3b",
+      "name": "Karmada",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-3B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 10:30 AM – 2:30 PM, Wednesday 10:15 AM – 1:25 PM, Thursday 10:15 AM – 11:55 AM"
+    },
+    {
+      "id": "project-keda-p-4b",
+      "name": "KEDA",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-4B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 3:00 PM – 7:30 PM, Wednesday 1:55 PM – 5:00 PM, Thursday 12:25 PM – 2:00 PM"
+    },
+    {
+      "id": "project-kgateway-p-17b",
+      "name": "kgateway",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-17B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Wednesday 10:15 AM – 5:00 PM"
+    },
+    {
+      "id": "project-kitops-p-15a",
+      "name": "KitOps",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-15A",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 10:30 AM – 2:30 PM"
+    },
+    {
+      "id": "project-kpt-p-15b",
+      "name": "kpt",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-15B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Wednesday 10:15 AM – 1:25 PM"
+    },
+    {
+      "id": "project-krkn-p-14b",
+      "name": "Krkn",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-14B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 10:30 AM – 2:30 PM"
+    },
+    {
+      "id": "project-kserve-p-9b",
+      "name": "KServe",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-9B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 10:30 AM – 2:30 PM, Wednesday 10:15 AM – 1:25 PM, Thursday 10:15 AM – 11:55 AM"
+    },
+    {
+      "id": "project-kube-burner-p-2a",
+      "name": "kube-burner",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-2A",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 10:30 AM – 2:30 PM"
+    },
+    {
+      "id": "project-kubeflow-p-11a",
+      "name": "kubeflow",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-11A",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 3:00 PM – 7:30 PM, Wednesday 1:55 PM – 5:00 PM, Thursday 12:25 PM – 2:00 PM"
+    },
+    {
+      "id": "project-kubescape-p-14a",
+      "name": "Kubescape",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-14A",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 3:00 PM – 7:30 PM, Wednesday 1:55 PM – 5:00 PM, Thursday 12:25 PM – 2:00 PM"
+    },
+    {
+      "id": "project-kubevela-p-3a",
+      "name": "Kubevela",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-3A",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 3:00 PM – 7:30 PM, Wednesday 1:55 PM – 5:00 PM, Thursday 12:25 PM – 2:00 PM"
+    },
+    {
+      "id": "project-kubevirt-p-10a",
+      "name": "KubeVirt",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-10A",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 3:00 PM – 7:30 PM, Wednesday 1:55 PM – 5:00 PM, Thursday 12:25 PM – 2:00 PM"
+    },
+    {
+      "id": "project-kueue-workload-aware-scheduling-sig-subproject-p-5a",
+      "name": "Kueue / Workload Aware Scheduling (SIG Subproject)",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-5A",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday - Thursday Full Showcase Hours"
+    },
+    {
+      "id": "project-kyverno-p-12b",
+      "name": "Kyverno",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-12B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday - Thursday Full Showcase Hours"
+    },
+    {
+      "id": "project-lima-p-9a",
+      "name": "Lima",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-9A",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Thursday 10:15 AM – 11:55 AM"
+    },
+    {
+      "id": "project-linkerd-p-4a",
+      "name": "Linkerd",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-4A",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday - Thursday Full Showcase Hours"
+    },
+    {
+      "id": "project-litmuschaos-p-14a",
+      "name": "LitmusChaos",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-14A",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 10:30 AM – 2:30 PM, Wednesday 10:15 AM – 1:25 PM, Thursday 10:15 AM – 11:55 AM"
+    },
+    {
+      "id": "project-longhorn-p-10a",
+      "name": "Longhorn",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-10A",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 10:30 AM – 2:30 PM, Wednesday 10:15 AM – 1:25 PM, Thursday 10:15 AM – 11:55 AM"
+    },
+    {
+      "id": "project-meshery-p-14b",
+      "name": "Meshery",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-14B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Wednesday 10:15 AM – 1:25 PM"
+    },
+    {
+      "id": "project-metal3-io-p-13b",
+      "name": "Metal3.io",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-13B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 10:30 AM – 2:30 PM, Wednesday 10:15 AM – 1:25 PM, Thursday 10:15 AM – 11:55 AM"
+    },
+    {
+      "id": "project-microcks-p-4b",
+      "name": "Microcks",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-4B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Thursday 10:15 AM - 11:55 AM"
+    },
+    {
+      "id": "project-open-cluster-management-p-8a",
+      "name": "Open Cluster Management",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-8A",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Thursday 10:15 AM - 11:55 AM"
+    },
+    {
+      "id": "project-open-policy-agent-p-11b",
+      "name": "Open Policy Agent",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-11B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 10:30 AM – 2:30 PM, Wednesday 10:15 AM – 1:25 PM, Thursday 10:15 AM – 11:55 AM"
+    },
+    {
+      "id": "project-openchoreo-p-1b",
+      "name": "OpenChoreo",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-1B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 10:30 AM – 2:30 PM Thursday 10:15 AM – 11:55 AM"
+    },
+    {
+      "id": "project-opencost-p-17b",
+      "name": "OpenCost",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-17B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 10:30 AM – 2:30 PM"
+    },
+    {
+      "id": "project-openeverest-p-15b",
+      "name": "OpenEverest",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-15B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Wednesday 1:55 PM – 5:00 PM"
+    },
+    {
+      "id": "project-openfeature-p-15a",
+      "name": "OpenFeature",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-15A",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 3:00 PM – 7:30 PM, Wednesday 1:55 PM – 5:00 PM, Thursday 12:25 PM – 2:00 PM"
+    },
+    {
+      "id": "project-opentelemetry-p-16a",
+      "name": "OpenTelemetry",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-16A",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 10:30 AM – 2:30 PM, Wednesday 10:15 AM – 1:25 PM, Thursday 10:15 AM – 11:55 AM"
+    },
+    {
+      "id": "project-opentofu-p-6a",
+      "name": "OpenTofu",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-6A",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Wednesday 1:55 PM – 5:00 PM"
+    },
+    {
+      "id": "project-oras-p-6a",
+      "name": "ORAS",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-6A",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 3:00 PM – 7:30 PM"
+    },
+    {
+      "id": "project-oscal-compass-p-14b",
+      "name": "OSCAL Compass",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-14B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Wednesday 1:55 PM – 5:00 PM"
+    },
+    {
+      "id": "project-ovn-kubernetes-p-10b",
+      "name": "OVN-Kubernetes",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-10B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 10:30 AM – 2:30 PM"
+    },
+    {
+      "id": "project-perses-p-10b",
+      "name": "Perses",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-10B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 3:00 PM – 7:30 PM"
+    },
+    {
+      "id": "project-podman-container-tools-p-10b",
+      "name": "Podman Container Tools",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-10B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Wednesday 1:55 PM – 5:00 PM"
+    },
+    {
+      "id": "project-project-capsule-p-6a",
+      "name": "Project Capsule",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-6A",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Thursday 10:15 AM – 2:00 PM"
+    },
+    {
+      "id": "project-radius-p-1b",
+      "name": "Radius",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-1B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Wednesday 10:15 AM – 1:25 PM"
+    },
+    {
+      "id": "project-rook-p-3a",
+      "name": "Rook",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-3A",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 10:30 AM – 2:30 PM, Wednesday 10:15 AM – 1:25 PM, Thursday 10:15 AM – 11:55 AM"
+    },
+    {
+      "id": "project-score-p-17b",
+      "name": "Score",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-17B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Thursday 10:15 AM - 2:00 PM"
+    },
+    {
+      "id": "project-sig-etcd-p-5b",
+      "name": "SIG-etcd",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-5B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 10:30 AM – 2:30 PM, Wednesday 1:55 PM – 5:00 PM, Thursday 10:15 AM – 2:00 PM"
+    },
+    {
+      "id": "project-spiffe-p-13a",
+      "name": "SPIFFE",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-13A",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday - Thursday Full Showcase Hours"
+    },
+    {
+      "id": "project-spin-p-15b",
+      "name": "Spin",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-15B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Thursday 10:15 AM - 2:00 PM"
+    },
+    {
+      "id": "project-tag-developer-experience-p-16a",
+      "name": "TAG Developer Experience",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-16A",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 3:00 PM – 7:30 PM, Wednesday 1:55 PM – 5:00 PM, Thursday 12:25 PM – 2:00 PM"
+    },
+    {
+      "id": "project-tag-infrastructure-p-15a",
+      "name": "TAG Infrastructure",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-15A",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Thursday 10:15 AM – 11:55 AM"
+    },
+    {
+      "id": "project-tag-operational-resilience-p-17b",
+      "name": "TAG Operational Resilience",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-17B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 3:00 PM – 7:30 PM"
+    },
+    {
+      "id": "project-technical-community-group-p-16b",
+      "name": "Technical Community Group",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-16B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday - Thursday Full Showcase Hours"
+    },
+    {
+      "id": "project-tekton-pipelines-p-1b",
+      "name": "Tekton Pipelines",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-1B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 3:00 PM – 7:30 PM, Wednesday 1:55 PM – 5:00 PM, Thursday 12:25 PM – 2:00 PM"
+    },
+    {
+      "id": "project-velero-p-8b",
+      "name": "Velero",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-8B",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Wednesday 10:15 AM – 1:25 PM"
+    },
+    {
+      "id": "project-vitess-p-1a",
+      "name": "Vitess",
+      "kind": "project",
+      "tier": "Project",
+      "booth": "P-1A",
+      "areaId": "sp-sc-project-pavilion",
+      "zone": "Cosmic Canyon",
+      "schedule": "Tuesday 3:00 PM – 7:30 PM, Wednesday 1:55 PM – 5:00 PM, Thursday 12:25 PM – 2:00 PM"
+    }
+  ]
+}

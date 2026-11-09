@@ -1,130 +1,86 @@
-[
-  {
-    "attendee": {
-      "id": "att-demo-frontend",
-      "handle": "diego-alvarez-ui",
-      "name": "Diego Alvarez",
-      "headline": "Frontend developer at an online retailer",
-      "firstTimer": true,
-      "welcomer": false,
-      "xp": 20,
-      "badges": []
-    },
-    "score": 7.5,
-    "reasons": [
-      "Both into kubernetes-upgrades",
-      "Both into platform-engineering",
-      "Both into gitops",
-      "First time here, a good person to welcome",
-      "In the same room right now"
-    ],
-    "sharedTopics": [
-      "kubernetes-upgrades",
-      "platform-engineering",
-      "gitops",
-      "developer-experience"
-    ],
-    "isHere": true,
-    "locationId": "salt-palace-151",
-    "distanceMeters": 0
+{
+  "tool": "recommend_people",
+  "endpoint": "POST /api/tools/recommend_people",
+  "request": {
+    "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+    "limit": 3
   },
-  {
-    "attendee": {
-      "id": "att-051",
-      "handle": "hannah-b-infra",
-      "name": "Hannah Barrow",
-      "headline": "Junior performance engineer at a managed Kubernetes provider",
-      "firstTimer": true,
-      "welcomer": false,
-      "xp": 10,
-      "badges": []
+  "status": 200,
+  "response": [
+    {
+      "player": {
+        "id": "pl_592a78e076ad8c1f",
+        "handle": "podwrangler",
+        "faceSeed": "podwrangler",
+        "level": 2,
+        "levelName": "Deployment",
+        "xp": 110,
+        "banners": [
+          "welcomer"
+        ],
+        "topics": [
+          "gpus",
+          "gpu-sharing",
+          "cluster-allocation",
+          "platform-engineering",
+          "kueue"
+        ],
+        "workingOn": "Runs GPU cluster allocation for ML teams; happy to help first-timers find their feet.",
+        "firstTimer": false
+      },
+      "score": 0.09307359,
+      "sharedTopics": [],
+      "reason": "Happy to welcome a first-timer. Working on Runs GPU cluster allocation for ML teams; happy to help first-timers find their . In the same room right now",
+      "sameRoom": true
     },
-    "score": 4.5,
-    "reasons": [
-      "Both into multi-cluster",
-      "First time here, a good person to welcome",
-      "In the same room right now"
-    ],
-    "sharedTopics": [
-      "multi-cluster"
-    ],
-    "isHere": true,
-    "locationId": "salt-palace-151",
-    "distanceMeters": 0
-  },
-  {
-    "attendee": {
-      "id": "att-083",
-      "handle": "segun-b-k8s",
-      "name": "Segun Boateng",
-      "headline": "Computer science undergraduate and platform team intern",
-      "firstTimer": true,
-      "welcomer": false,
-      "xp": 60,
-      "badges": []
+    {
+      "player": {
+        "id": "pl_35d0cb4d4cbe5bda",
+        "handle": "kedakestrel",
+        "faceSeed": "kedakestrel",
+        "level": 2,
+        "levelName": "Deployment",
+        "xp": 100,
+        "banners": [],
+        "topics": [
+          "autoscaling",
+          "keda",
+          "serverless",
+          "cost"
+        ],
+        "workingOn": "Event-driven autoscaling enthusiast.",
+        "firstTimer": false
+      },
+      "score": 0.08928572,
+      "sharedTopics": [
+        "autoscaling"
+      ],
+      "reason": "Both into autoscaling",
+      "sameRoom": false
     },
-    "score": 4,
-    "reasons": [
-      "Both into platform-engineering",
-      "Both into developer-experience",
-      "First time here, a good person to welcome"
-    ],
-    "sharedTopics": [
-      "platform-engineering",
-      "developer-experience"
-    ],
-    "isHere": false,
-    "locationId": "hyatt-regency-regency-ballroom-a",
-    "distanceMeters": 726
-  },
-  {
-    "attendee": {
-      "id": "att-109",
-      "handle": "nasser-k92",
-      "name": "Karim Nasser",
-      "headline": "Platform engineer at a managed Kubernetes provider",
-      "firstTimer": true,
-      "welcomer": false,
-      "xp": 55,
-      "badges": []
-    },
-    "score": 4,
-    "reasons": [
-      "Both into platform-engineering",
-      "Both into gitops",
-      "First time here, a good person to welcome"
-    ],
-    "sharedTopics": [
-      "platform-engineering",
-      "gitops"
-    ],
-    "isHere": false,
-    "locationId": "salt-palace-251-a-c",
-    "distanceMeters": 9
-  },
-  {
-    "attendee": {
-      "id": "att-141",
-      "handle": "henriquep19",
-      "name": "Henrique Peixoto",
-      "headline": "Infrastructure engineer at a game studio",
-      "firstTimer": true,
-      "welcomer": false,
-      "xp": 20,
-      "badges": []
-    },
-    "score": 4,
-    "reasons": [
-      "Both into kubernetes-upgrades",
-      "Both into platform-engineering",
-      "First time here, a good person to welcome"
-    ],
-    "sharedTopics": [
-      "kubernetes-upgrades",
-      "platform-engineering"
-    ],
-    "isHere": false,
-    "locationId": "salt-palace-250-d-f",
-    "distanceMeters": 55
-  }
-]
+    {
+      "player": {
+        "id": "pl_5f917ee1a2a89af1",
+        "handle": "quietgopher",
+        "faceSeed": "quietgopher",
+        "level": 1,
+        "levelName": "Pod",
+        "xp": 10,
+        "banners": [],
+        "topics": [
+          "platform-engineering",
+          "gpus",
+          "gpu-sharing",
+          "internal-developer-platforms",
+          "go"
+        ],
+        "workingOn": "Platform engineer, first KubeCon, figuring out how to share a small GPU pool fairly across teams.",
+        "firstTimer": true
+      },
+      "score": 0.08893281,
+      "sharedTopics": [],
+      "reason": "Working on Platform engineer, first KubeCon, figuring out how to share a small GPU pool fai",
+      "sameRoom": false
+    }
+  ]
+}

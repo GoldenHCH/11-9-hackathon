@@ -1,0 +1,211 @@
+{
+  "tool": "quest_board",
+  "endpoint": "POST /api/tools/quest_board",
+  "request": {
+    "attendeeId": "p_Ljp4ZfHC-VPDFwqx"
+  },
+  "status": 200,
+  "response": {
+    "offers": [
+      {
+        "id": "q_09012f7849878be86dedf78a",
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+        "type": "chat",
+        "status": "offered",
+        "source": "board",
+        "offeredAt": "2026-11-09T20:19:56.010Z",
+        "title": "Meet @quietgopher",
+        "reason": "Working on Platform engineer, first KubeCon, figuring out how to share a small GPU pool fai",
+        "nextStep": "Accept, then meet at the campfire. Ask @quietgopher about Platform engineer, first KubeCon, figuring out how to share a small GPU pool fairly across teams..",
+        "reward": {
+          "xp": 75,
+          "gems": 1,
+          "label": "75 XP + 1 gem each"
+        },
+        "partnerId": "pl_5f917ee1a2a89af1",
+        "expiresAt": "2026-11-09T20:40:03.877Z"
+      },
+      {
+        "id": "q_515b7434bbba1f5bc63432e3",
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+        "type": "outpost",
+        "status": "offered",
+        "source": "board",
+        "offeredAt": "2026-11-09T20:19:56.010Z",
+        "title": "Visit Google Cloud",
+        "reason": "It covers ai and platform.",
+        "nextStep": "Find Google Cloud at booth 122 and scan the QR block on its table. Ask them about Serving LLM inference on GKE with GPUs and TPUs.",
+        "reward": {
+          "xp": 10,
+          "label": "10 XP"
+        },
+        "where": {
+          "locationId": "outpost-google-cloud",
+          "name": "Google Cloud",
+          "kind": "outpost",
+          "building": "Salt Palace",
+          "level": "Level 1"
+        },
+        "walkMinutes": 2,
+        "locationId": "outpost-google-cloud",
+        "expiresAt": "2026-11-10T06:59:59.000Z"
+      },
+      {
+        "id": "q_e66e5eb65ac5319a50610ada",
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+        "type": "collection",
+        "status": "offered",
+        "source": "board",
+        "offeredAt": "2026-11-09T20:19:56.010Z",
+        "title": "Banner: Observability Nerd",
+        "reason": "You are 0 of 3 of the way there.",
+        "nextStep": "Collect 3 glass blocks from Operations + Performance talks",
+        "reward": {
+          "xp": 0,
+          "banner": "observability-nerd",
+          "label": "The Observability Nerd banner"
+        },
+        "progress": {
+          "current": 0,
+          "target": 3
+        }
+      }
+    ],
+    "active": [],
+    "doneToday": [],
+    "maxOffers": 3,
+    "maxActive": 3
+  },
+  "variants": {
+    "quest_board_after": {
+      "request": {
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx"
+      },
+      "status": 200,
+      "response": {
+        "offers": [
+          {
+            "id": "q_c6f2915f379499d37d37647d",
+            "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+            "type": "chat",
+            "status": "offered",
+            "source": "board",
+            "offeredAt": "2026-11-09T20:21:04.517Z",
+            "title": "Meet @kedakestrel",
+            "reason": "Both into autoscaling",
+            "nextStep": "Accept, then meet at the campfire. Ask @kedakestrel about autoscaling.",
+            "reward": {
+              "xp": 75,
+              "gems": 1,
+              "label": "75 XP + 1 gem each"
+            },
+            "partnerId": "pl_35d0cb4d4cbe5bda",
+            "expiresAt": "2026-11-09T20:41:04.517Z"
+          },
+          {
+            "id": "q_38fb85eb221f01a1d65a0731",
+            "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+            "type": "outpost",
+            "status": "offered",
+            "source": "board",
+            "offeredAt": "2026-11-09T20:21:04.517Z",
+            "title": "Visit Amazon Web Services",
+            "reason": "It covers platform and operations.",
+            "nextStep": "Find Amazon Web Services at booth 115 and scan the QR block on its table. Ask them about How EKS Auto Mode handles node upgrades for you.",
+            "reward": {
+              "xp": 10,
+              "label": "10 XP"
+            },
+            "where": {
+              "locationId": "outpost-amazon-web-services",
+              "name": "Amazon Web Services",
+              "kind": "outpost",
+              "building": "Salt Palace",
+              "level": "Level 1"
+            },
+            "walkMinutes": 2,
+            "locationId": "outpost-amazon-web-services",
+            "expiresAt": "2026-11-10T06:59:59.000Z"
+          },
+          {
+            "id": "q_df66d194fe37df414862b2dc",
+            "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+            "type": "collection",
+            "status": "offered",
+            "source": "board",
+            "offeredAt": "2026-11-09T20:21:04.517Z",
+            "title": "Banner: Welcomer",
+            "reason": "You are 1 of 2 of the way there.",
+            "nextStep": "Complete 2 meets with first-timers",
+            "reward": {
+              "xp": 0,
+              "banner": "welcomer",
+              "label": "The Welcomer banner"
+            },
+            "progress": {
+              "current": 1,
+              "target": 2
+            }
+          }
+        ],
+        "active": [
+          {
+            "id": "q_6630052209652399c296173c",
+            "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+            "type": "attend",
+            "status": "accepted",
+            "source": "player",
+            "offeredAt": "2026-11-09T20:20:08.447Z",
+            "title": "Attend \"Pods in the Wild: Reinforcement Learning on Kubernetes with OpenRL\"",
+            "reason": "You picked this session yourself.",
+            "nextStep": "Head to Hall DE; it starts in 1245 min. Scan the room's QR during the session.",
+            "reward": {
+              "xp": 10,
+              "material": "circuit",
+              "label": "10 XP + 1 Circuit block"
+            },
+            "where": {
+              "locationId": "salt-palace-level-1-hall-de",
+              "name": "Hall DE",
+              "kind": "boss-room",
+              "building": "Salt Palace",
+              "level": "Level 1"
+            },
+            "when": {
+              "start": "2026-11-10T10:05:00-07:00",
+              "end": "2026-11-10T10:13:00-07:00"
+            },
+            "walkMinutes": 2,
+            "talkId": "kc26-tue-keynote-openrl",
+            "locationId": "salt-palace-level-1-hall-de",
+            "expiresAt": "2026-11-10T10:13:00-07:00",
+            "respondedAt": "2026-11-09T20:20:08.447Z"
+          },
+          {
+            "id": "q_09012f7849878be86dedf78a",
+            "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+            "type": "chat",
+            "status": "accepted",
+            "source": "board",
+            "offeredAt": "2026-11-09T20:19:56.010Z",
+            "title": "Meet @quietgopher",
+            "reason": "Working on Platform engineer, first KubeCon, figuring out how to share a small GPU pool fai",
+            "nextStep": "Waiting to hear back. We'll tell you if @quietgopher is in.",
+            "reward": {
+              "xp": 75,
+              "gems": 1,
+              "label": "75 XP + 1 gem each"
+            },
+            "partnerId": "pl_5f917ee1a2a89af1",
+            "expiresAt": "2026-11-09T20:40:05.092Z",
+            "respondedAt": "2026-11-09T20:20:04.865Z",
+            "introId": "meet-a08d179265d6e711506c8723"
+          }
+        ],
+        "doneToday": [],
+        "maxOffers": 3,
+        "maxActive": 3
+      }
+    }
+  }
+}

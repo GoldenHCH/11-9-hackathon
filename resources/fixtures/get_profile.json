@@ -1,0 +1,398 @@
+{
+  "tool": "get_profile",
+  "endpoint": "POST /api/tools/get_profile",
+  "request": {
+    "attendeeId": "p_Ljp4ZfHC-VPDFwqx"
+  },
+  "status": 200,
+  "response": {
+    "attendee": {
+      "id": "p_Ljp4ZfHC-VPDFwqx",
+      "handle": "verify93279",
+      "faceSeed": "cbd1b4ac2fe4ff69",
+      "spotMe": "Green hoodie",
+      "workingOn": "Running GPU inference on Kubernetes with autoscaling",
+      "profileText": "verify93279 is at their first KubeCon. Working on: Running GPU inference on Kubernetes with autoscaling. Interested in ai, gpu, autoscaling.",
+      "profile": {
+        "topics": [
+          "ai",
+          "gpu",
+          "autoscaling"
+        ],
+        "firstTimer": true,
+        "welcomer": false
+      },
+      "settings": {
+        "accessibleMode": false,
+        "noWalking": false,
+        "locationOn": true,
+        "language": "en",
+        "hideFromLeaderboard": false,
+        "meetingOn": true
+      },
+      "visible": true,
+      "xp": 0,
+      "level": 1,
+      "banners": [],
+      "blockedIds": [],
+      "createdAt": "2026-11-09T20:19:53.421Z",
+      "inventory": {
+        "gems": 0,
+        "blocks": {
+          "wood": 1
+        }
+      },
+      "lastSeenAt": "2026-11-09T20:19:55.026Z",
+      "lastLocation": {
+        "lon": -111.89445,
+        "lat": 40.76633
+      },
+      "lastLocationId": "salt-palace-level-1-150-defg"
+    },
+    "level": {
+      "level": 1,
+      "name": "Pod",
+      "xp": 0,
+      "levelMinXp": 0,
+      "nextLevelXp": 50,
+      "nextLevelName": "Deployment",
+      "progress": 0
+    },
+    "inventory": {
+      "blocks": {
+        "circuit": 0,
+        "stone": 0,
+        "glass": 0,
+        "crate": 0,
+        "iron": 0,
+        "copper": 0,
+        "lantern": 0,
+        "wood": 1,
+        "gold": 0
+      },
+      "totalBlocks": 1,
+      "gems": 0,
+      "banners": [
+        {
+          "id": "observability-nerd",
+          "name": "Observability Nerd",
+          "description": "Collect 3 glass blocks from Operations + Performance talks",
+          "progress": 0,
+          "target": 3,
+          "earned": false
+        },
+        {
+          "id": "connector",
+          "name": "Connector",
+          "description": "Complete 3 meets",
+          "progress": 0,
+          "target": 3,
+          "earned": false
+        },
+        {
+          "id": "welcomer",
+          "name": "Welcomer",
+          "description": "Complete 2 meets with first-timers",
+          "progress": 0,
+          "target": 2,
+          "earned": false
+        },
+        {
+          "id": "explorer",
+          "name": "Explorer",
+          "description": "Check in at both buildings",
+          "progress": 0,
+          "target": 2,
+          "earned": false
+        },
+        {
+          "id": "scout",
+          "name": "Scout",
+          "description": "Visit 5 outposts in a day",
+          "progress": 0,
+          "target": 5,
+          "earned": false
+        },
+        {
+          "id": "speaker",
+          "name": "Speaker",
+          "description": "Speaking at KubeCon",
+          "progress": 0,
+          "target": 1,
+          "earned": false
+        }
+      ],
+      "xp": 0,
+      "level": {
+        "level": 1,
+        "name": "Pod",
+        "xp": 0,
+        "levelMinXp": 0,
+        "nextLevelXp": 50,
+        "nextLevelName": "Deployment",
+        "progress": 0
+      },
+      "nextLevelXp": 50
+    },
+    "personalLink": "https://kube-quest.cnh.radarhq.io/me/p_Ljp4ZfHC-VPDFwqx",
+    "publicId": "pl_4451cf61b8914498"
+  },
+  "variants": {
+    "get_profile_other": {
+      "request": {
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+        "targetId": "pl_592a78e076ad8c1f"
+      },
+      "status": 200,
+      "response": {
+        "attendee": {
+          "id": "pl_592a78e076ad8c1f",
+          "handle": "podwrangler",
+          "faceSeed": "podwrangler",
+          "workingOn": "",
+          "profileText": "",
+          "profile": {
+            "topics": [],
+            "firstTimer": false,
+            "welcomer": false
+          },
+          "settings": {
+            "accessibleMode": false,
+            "noWalking": false,
+            "locationOn": true,
+            "language": "en",
+            "hideFromLeaderboard": false,
+            "meetingOn": false
+          },
+          "visible": true,
+          "xp": 110,
+          "level": 2,
+          "banners": [
+            "welcomer"
+          ],
+          "blockedIds": [],
+          "createdAt": "2026-11-09T15:11:18.482Z"
+        },
+        "level": {
+          "level": 2,
+          "name": "Deployment",
+          "xp": 110,
+          "levelMinXp": 50,
+          "nextLevelXp": 200,
+          "nextLevelName": "Node",
+          "progress": 0.4
+        },
+        "inventory": {
+          "blocks": {
+            "circuit": 0,
+            "stone": 1,
+            "glass": 1,
+            "crate": 1,
+            "iron": 0,
+            "copper": 1,
+            "lantern": 1,
+            "wood": 1,
+            "gold": 0
+          },
+          "totalBlocks": 6,
+          "gems": 1,
+          "banners": [
+            {
+              "id": "observability-nerd",
+              "name": "Observability Nerd",
+              "description": "Collect 3 glass blocks from Operations + Performance talks",
+              "progress": 1,
+              "target": 3,
+              "earned": false
+            },
+            {
+              "id": "connector",
+              "name": "Connector",
+              "description": "Complete 3 meets",
+              "progress": 1,
+              "target": 3,
+              "earned": false
+            },
+            {
+              "id": "welcomer",
+              "name": "Welcomer",
+              "description": "Complete 2 meets with first-timers",
+              "progress": 0,
+              "target": 2,
+              "earned": true,
+              "earnedAt": "2026-11-09T20:12:18.482Z"
+            },
+            {
+              "id": "explorer",
+              "name": "Explorer",
+              "description": "Check in at both buildings",
+              "progress": 0,
+              "target": 2,
+              "earned": false
+            },
+            {
+              "id": "scout",
+              "name": "Scout",
+              "description": "Visit 5 outposts in a day",
+              "progress": 2,
+              "target": 5,
+              "earned": false
+            },
+            {
+              "id": "speaker",
+              "name": "Speaker",
+              "description": "Speaking at KubeCon",
+              "progress": 0,
+              "target": 1,
+              "earned": false
+            }
+          ],
+          "xp": 110,
+          "level": {
+            "level": 2,
+            "name": "Deployment",
+            "xp": 110,
+            "levelMinXp": 50,
+            "nextLevelXp": 200,
+            "nextLevelName": "Node",
+            "progress": 0.4
+          },
+          "nextLevelXp": 200
+        },
+        "personalLink": "",
+        "publicId": "pl_592a78e076ad8c1f"
+      }
+    },
+    "get_profile_partner": {
+      "request": {
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+        "targetId": "pl_592a78e076ad8c1f"
+      },
+      "status": 200,
+      "response": {
+        "attendee": {
+          "id": "pl_592a78e076ad8c1f",
+          "handle": "podwrangler",
+          "faceSeed": "podwrangler",
+          "workingOn": "Runs GPU cluster allocation for ML teams; happy to help first-timers find their feet.",
+          "profileText": "",
+          "profile": {
+            "topics": [
+              "gpus",
+              "gpu-sharing",
+              "cluster-allocation",
+              "platform-engineering",
+              "kueue"
+            ],
+            "firstTimer": false,
+            "welcomer": true
+          },
+          "settings": {
+            "accessibleMode": false,
+            "noWalking": false,
+            "locationOn": true,
+            "language": "en",
+            "hideFromLeaderboard": false,
+            "meetingOn": false
+          },
+          "visible": true,
+          "xp": 260,
+          "level": 3,
+          "banners": [
+            "welcomer"
+          ],
+          "blockedIds": [],
+          "createdAt": "2026-11-09T15:11:18.482Z"
+        },
+        "level": {
+          "level": 3,
+          "name": "Node",
+          "xp": 260,
+          "levelMinXp": 200,
+          "nextLevelXp": 450,
+          "nextLevelName": "Cluster",
+          "progress": 0.24
+        },
+        "inventory": {
+          "blocks": {
+            "circuit": 0,
+            "stone": 1,
+            "glass": 1,
+            "crate": 1,
+            "iron": 0,
+            "copper": 1,
+            "lantern": 1,
+            "wood": 1,
+            "gold": 0
+          },
+          "totalBlocks": 6,
+          "gems": 3,
+          "banners": [
+            {
+              "id": "observability-nerd",
+              "name": "Observability Nerd",
+              "description": "Collect 3 glass blocks from Operations + Performance talks",
+              "progress": 1,
+              "target": 3,
+              "earned": false
+            },
+            {
+              "id": "connector",
+              "name": "Connector",
+              "description": "Complete 3 meets",
+              "progress": 3,
+              "target": 3,
+              "earned": false
+            },
+            {
+              "id": "welcomer",
+              "name": "Welcomer",
+              "description": "Complete 2 meets with first-timers",
+              "progress": 2,
+              "target": 2,
+              "earned": true,
+              "earnedAt": "2026-11-09T20:12:18.482Z"
+            },
+            {
+              "id": "explorer",
+              "name": "Explorer",
+              "description": "Check in at both buildings",
+              "progress": 0,
+              "target": 2,
+              "earned": false
+            },
+            {
+              "id": "scout",
+              "name": "Scout",
+              "description": "Visit 5 outposts in a day",
+              "progress": 2,
+              "target": 5,
+              "earned": false
+            },
+            {
+              "id": "speaker",
+              "name": "Speaker",
+              "description": "Speaking at KubeCon",
+              "progress": 0,
+              "target": 1,
+              "earned": false
+            }
+          ],
+          "xp": 260,
+          "level": {
+            "level": 3,
+            "name": "Node",
+            "xp": 260,
+            "levelMinXp": 200,
+            "nextLevelXp": 450,
+            "nextLevelName": "Cluster",
+            "progress": 0.24
+          },
+          "nextLevelXp": 450
+        },
+        "personalLink": "",
+        "publicId": "pl_592a78e076ad8c1f"
+      }
+    }
+  }
+}

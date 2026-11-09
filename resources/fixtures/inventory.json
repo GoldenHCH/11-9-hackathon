@@ -1,0 +1,168 @@
+{
+  "tool": "inventory",
+  "endpoint": "POST /api/tools/inventory",
+  "request": {
+    "attendeeId": "p_Ljp4ZfHC-VPDFwqx"
+  },
+  "status": 200,
+  "response": {
+    "blocks": {
+      "circuit": 0,
+      "stone": 0,
+      "glass": 0,
+      "crate": 0,
+      "iron": 0,
+      "copper": 0,
+      "lantern": 0,
+      "wood": 1,
+      "gold": 0
+    },
+    "totalBlocks": 1,
+    "gems": 0,
+    "banners": [
+      {
+        "id": "observability-nerd",
+        "name": "Observability Nerd",
+        "description": "Collect 3 glass blocks from Operations + Performance talks",
+        "progress": 0,
+        "target": 3,
+        "earned": false
+      },
+      {
+        "id": "connector",
+        "name": "Connector",
+        "description": "Complete 3 meets",
+        "progress": 0,
+        "target": 3,
+        "earned": false
+      },
+      {
+        "id": "welcomer",
+        "name": "Welcomer",
+        "description": "Complete 2 meets with first-timers",
+        "progress": 0,
+        "target": 2,
+        "earned": false
+      },
+      {
+        "id": "explorer",
+        "name": "Explorer",
+        "description": "Check in at both buildings",
+        "progress": 0,
+        "target": 2,
+        "earned": false
+      },
+      {
+        "id": "scout",
+        "name": "Scout",
+        "description": "Visit 5 outposts in a day",
+        "progress": 0,
+        "target": 5,
+        "earned": false
+      },
+      {
+        "id": "speaker",
+        "name": "Speaker",
+        "description": "Speaking at KubeCon",
+        "progress": 0,
+        "target": 1,
+        "earned": false
+      }
+    ],
+    "xp": 10,
+    "level": {
+      "level": 1,
+      "name": "Pod",
+      "xp": 10,
+      "levelMinXp": 0,
+      "nextLevelXp": 50,
+      "nextLevelName": "Deployment",
+      "progress": 0.2
+    },
+    "nextLevelXp": 50
+  },
+  "variants": {
+    "inventory_after": {
+      "request": {
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx"
+      },
+      "status": 200,
+      "response": {
+        "blocks": {
+          "circuit": 0,
+          "stone": 0,
+          "glass": 0,
+          "crate": 0,
+          "iron": 0,
+          "copper": 0,
+          "lantern": 0,
+          "wood": 1,
+          "gold": 0
+        },
+        "totalBlocks": 1,
+        "gems": 1,
+        "banners": [
+          {
+            "id": "observability-nerd",
+            "name": "Observability Nerd",
+            "description": "Collect 3 glass blocks from Operations + Performance talks",
+            "progress": 0,
+            "target": 3,
+            "earned": false
+          },
+          {
+            "id": "connector",
+            "name": "Connector",
+            "description": "Complete 3 meets",
+            "progress": 1,
+            "target": 3,
+            "earned": false
+          },
+          {
+            "id": "welcomer",
+            "name": "Welcomer",
+            "description": "Complete 2 meets with first-timers",
+            "progress": 1,
+            "target": 2,
+            "earned": false
+          },
+          {
+            "id": "explorer",
+            "name": "Explorer",
+            "description": "Check in at both buildings",
+            "progress": 0,
+            "target": 2,
+            "earned": false
+          },
+          {
+            "id": "scout",
+            "name": "Scout",
+            "description": "Visit 5 outposts in a day",
+            "progress": 1,
+            "target": 5,
+            "earned": false
+          },
+          {
+            "id": "speaker",
+            "name": "Speaker",
+            "description": "Speaking at KubeCon",
+            "progress": 0,
+            "target": 1,
+            "earned": false
+          }
+        ],
+        "xp": 95,
+        "level": {
+          "level": 2,
+          "name": "Deployment",
+          "xp": 95,
+          "levelMinXp": 50,
+          "nextLevelXp": 200,
+          "nextLevelName": "Node",
+          "progress": 0.3
+        },
+        "nextLevelXp": 200
+      }
+    }
+  }
+}

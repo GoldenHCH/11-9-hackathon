@@ -9,13 +9,9 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrl: './alert-banner.component.scss',
 })
 export class AlertBannerComponent {
-  @Input({ required: true }) public message!: string;
-
-  @Input() public dismissible = false;
-
+  @Input({ required: true }) public message = '';
+  @Input() public actionLabel = '';
+  @Input() public dismissible = true;
+  @Output() public readonly action = new EventEmitter<void>();
   @Output() public readonly dismissed = new EventEmitter<void>();
-
-  public onDismiss(): void {
-    this.dismissed.emit();
-  }
 }
