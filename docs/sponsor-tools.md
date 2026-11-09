@@ -4,8 +4,8 @@ KubeQuest is built on four sponsor tools. For each one, this file says what we u
 
 | Tool | Role in KubeQuest | Status |
 |------|-------------------|--------|
-| **Elastic** (Serverless) | The only datastore and the search/matching engine | Live. Model calls blocked (see below) |
-| **Dash0** | Traces, metrics and logs for every XP point | Instrumented and deployed. No data arriving until the token is added |
+| **Elastic** (Serverless) | The only datastore and the search/matching engine | Live. AI quizzes written through Agent Builder |
+| **Dash0** | Traces, metrics and logs for every XP point | Live. The cluster collector exports to Dash0 |
 | **Radar** | Our Kubernetes cluster, GitOps deploys, secrets, health | Live. Checks and an AI investigation still to do |
 | **Gitar** (Sonar) | AI review on every PR, with project rules | Live. Its PR #5 findings still need fixing |
 
@@ -47,8 +47,9 @@ KubeQuest is built on four sponsor tools. For each one, this file says what we u
 
 **How it helped:** the trace on each XP event already answers "why did this player get 50 XP?" from the data, before Dash0 is even connected.
 
+**Status:** live. The Dash0 token, endpoint and dataset are in `app-credentials`. The collector restarted cleanly, and spans from the cluster (HTTP, Elasticsearch, `tool.*`) show in Dash0's trace explorer.
+
 **Not yet**
-- **No data reaches Dash0.** The collector is deployed and healthy, but every export is rejected because `DASH0_AUTH_TOKEN` (and `DASH0_ENDPOINT`) aren't in `app-credentials`. Add them, then restart the collector.
 - **Real-user monitoring** in the browser (UI work), a Dash0 dashboard and SLO (check-in p95 < 500 ms), and using Agent0 or the Dash0 MCP to find and fix something real.
 
 ---
