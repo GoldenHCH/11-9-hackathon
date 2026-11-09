@@ -656,56 +656,18 @@
     "createdAt": "2026-11-09T11:08:00.000Z"
   },
   {
-    "id": "att-gpulynx",
-    "handle": "gpulynx",
-    "faceSeed": "gpulynx",
-    "workingOn": "Release engineer at an automotive supplier, picking block storage for a new on-prem cluster.",
-    "headline": "Release engineer at an automotive supplier, picking block storage for a new on-prem cluster.",
-    "profileText": "Release engineer at an automotive supplier, picking block storage for a new on-prem cluster. At the showcase I want to see real demos, not slides. If you maintain a CNCF project, I want to hear how you got started.",
+    "id": "att-backstagebeaver",
+    "handle": "backstagebeaver",
+    "faceSeed": "backstagebeaver",
+    "workingOn": "Building a Backstage portal so 300 engineers stop filing tickets for new services.",
+    "headline": "Building a Backstage portal so 300 engineers stop filing tickets for new services.",
+    "profileText": "Developer experience engineer. We are rolling out Backstage as our internal developer portal with software templates for golden paths, so a new service gets CI, dashboards and an on-call rotation in one click. I want to compare scorecards, plugin maintenance cost and how people measure whether developers actually use the portal.",
     "profile": {
       "topics": [
-        "storage",
-        "rook",
-        "ceph"
-      ],
-      "firstTimer": true,
-      "welcomer": false
-    },
-    "settings": {
-      "meetingOn": false,
-      "accessibleMode": false,
-      "noWalking": false,
-      "locationOn": true,
-      "language": "en",
-      "hideFromLeaderboard": false
-    },
-    "lastLocationId": "outpost-ollygarden",
-    "lastLocation": {
-      "lat": 40.766781,
-      "lon": -111.894251
-    },
-    "lastSeenAt": "2026-11-09T17:31:00.000Z",
-    "visible": true,
-    "xp": 30,
-    "level": 1,
-    "banners": [],
-    "blockedIds": [],
-    "createdAt": "2026-11-09T13:56:00.000Z"
-  },
-  {
-    "id": "att-helmtoucan",
-    "handle": "helmtoucan",
-    "faceSeed": "helmtoucan",
-    "workingOn": "Site reliability engineer at a travel site, giving AI agents safe access to cluster tools over MCP.",
-    "headline": "Site reliability engineer at a travel site, giving AI agents safe access to cluster tools over MCP.",
-    "profileText": "Site reliability engineer at a travel site, giving AI agents safe access to cluster tools over MCP. I keep a list of booths my team asked me to check out. I am trying to keep my notes short enough to actually read later.",
-    "profile": {
-      "topics": [
-        "ai-agents",
-        "mcp",
-        "security",
-        "platform-engineering",
-        "internal-developer-platforms"
+        "internal-developer-platforms",
+        "backstage",
+        "developer-experience",
+        "golden-paths"
       ],
       "firstTimer": false,
       "welcomer": false
@@ -718,31 +680,1821 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-ollygarden",
+    "lastLocationId": "hyatt-regency-level-4-regency-ballroom-cd",
     "lastLocation": {
-      "lat": 40.766781,
-      "lon": -111.894251
+      "lat": 40.76744,
+      "lon": -111.89385
     },
-    "lastSeenAt": "2026-11-09T17:15:00.000Z",
+    "lastSeenAt": "2026-11-09T16:13:00.000Z",
+    "visible": true,
+    "xp": 65,
+    "level": 2,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T12:49:00.000Z"
+  },
+  {
+    "id": "att-goroutinegecko",
+    "handle": "goroutinegecko",
+    "faceSeed": "goroutinegecko",
+    "workingOn": "Writes Go CLIs and kubectl plugins for a small infra team.",
+    "headline": "Writes Go CLIs and kubectl plugins for a small infra team.",
+    "profileText": "Infrastructure developer who mostly writes Go: kubectl plugins, small controllers scaffolded with Kubebuilder, and a CLI our developers use to request namespaces. Interested in testing patterns for client-go code, fake clients versus envtest, and keeping CLIs fast.",
+    "profile": {
+      "topics": [
+        "go",
+        "cli-tools",
+        "testing",
+        "kubebuilder"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "hyatt-regency-level-2-salt-lake-ballroom-a",
+    "lastLocation": {
+      "lat": 40.76714,
+      "lon": -111.89385
+    },
+    "lastSeenAt": "2026-11-09T16:16:00.000Z",
+    "visible": true,
+    "xp": 110,
+    "level": 2,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T13:43:00.000Z"
+  },
+  {
+    "id": "att-crossplanecrab",
+    "handle": "crossplanecrab",
+    "faceSeed": "crossplanecrab",
+    "workingOn": "Replacing Terraform tickets with Crossplane compositions.",
+    "headline": "Replacing Terraform tickets with Crossplane compositions.",
+    "profileText": "Cloud engineer moving our infrastructure requests from Terraform pull requests to Crossplane compositions exposed through a self-service API. I want to talk composition functions, versioning XRDs without breaking teams, and running the same abstractions on AWS and GCP.",
+    "profile": {
+      "topics": [
+        "internal-developer-platforms",
+        "crossplane",
+        "infrastructure-as-code",
+        "multi-cloud"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "campfire-salt-lake-foyer",
+    "lastLocation": {
+      "lat": 40.76702,
+      "lon": -111.89385
+    },
+    "lastSeenAt": "2026-11-09T16:41:00.000Z",
+    "visible": true,
+    "xp": 325,
+    "level": 3,
+    "banners": [
+      "connector"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T12:40:00.000Z"
+  },
+  {
+    "id": "att-kueuekoala",
+    "handle": "kueuekoala",
+    "faceSeed": "kueuekoala",
+    "workingOn": "Moving a research lab from Slurm to Kubernetes batch with Kueue.",
+    "headline": "Moving a research lab from Slurm to Kubernetes batch with Kueue.",
+    "profileText": "Research computing engineer at a university. Our scientists live in Slurm and I am moving their batch jobs to Kubernetes with Kueue, JobSet and cohort-based quotas. Looking for people who handle preemption and fair sharing for long-running jobs without angry researchers.",
+    "profile": {
+      "topics": [
+        "kueue",
+        "batch-jobs",
+        "hpc",
+        "job-scheduling"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "hyatt-regency-level-4-regency-ballroom-a",
+    "lastLocation": {
+      "lat": 40.7672,
+      "lon": -111.89385
+    },
+    "lastSeenAt": "2026-11-09T16:13:00.000Z",
+    "visible": true,
+    "xp": 295,
+    "level": 3,
+    "banners": [
+      "connector"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T13:26:00.000Z"
+  },
+  {
+    "id": "att-tensortapir",
+    "handle": "tensortapir",
+    "faceSeed": "tensortapir",
+    "workingOn": "Serving open-weight LLMs with vLLM on a handful of H100s.",
+    "headline": "Serving open-weight LLMs with vLLM on a handful of H100s.",
+    "profileText": "ML infrastructure engineer serving open-weight language models with vLLM on Kubernetes. I care about GPU utilisation per request, batching, KV cache sizing and autoscaling on queue depth. Happy to swap benchmark numbers with anyone running inference in production.",
+    "profile": {
+      "topics": [
+        "gpus",
+        "llm-inference",
+        "vllm",
+        "model-serving"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "hyatt-regency-level-2-salt-lake-ballroom-a",
+    "lastLocation": {
+      "lat": 40.76714,
+      "lon": -111.89385
+    },
+    "lastSeenAt": "2026-11-09T16:21:00.000Z",
+    "visible": true,
+    "xp": 120,
+    "level": 2,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T11:02:00.000Z"
+  },
+  {
+    "id": "att-draslynx",
+    "handle": "draslynx",
+    "faceSeed": "draslynx",
+    "workingOn": "Trying out Dynamic Resource Allocation for accelerators and NICs.",
+    "headline": "Trying out Dynamic Resource Allocation for accelerators and NICs.",
+    "profileText": "Kubernetes contributor-in-training working on scheduling. I am testing Dynamic Resource Allocation to replace our device plugins for accelerators and SR-IOV NICs, and I want to understand how cluster allocation policies map onto ResourceClaims.",
+    "profile": {
+      "topics": [
+        "cluster-allocation",
+        "dynamic-resource-allocation",
+        "scheduling",
+        "device-plugins"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-1-151",
+    "lastLocation": {
+      "lat": 40.76645,
+      "lon": -111.89445
+    },
+    "lastSeenAt": "2026-11-09T17:14:00.000Z",
+    "visible": true,
+    "xp": 90,
+    "level": 2,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T14:59:00.000Z"
+  },
+  {
+    "id": "att-inferenceibex",
+    "handle": "inferenceibex",
+    "faceSeed": "inferenceibex",
+    "workingOn": "First KubeCon; putting our first model behind KServe.",
+    "headline": "First KubeCon; putting our first model behind KServe.",
+    "profileText": "First KubeCon. I am a backend developer who just got asked to put our first fine-tuned model behind an API. We picked KServe and I am learning about scale-to-zero, cold starts and canary rollouts for models. Any advice on what to measure first is welcome.",
+    "profile": {
+      "topics": [
+        "llm-inference",
+        "kserve",
+        "autoscaling"
+      ],
+      "firstTimer": true,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "campfire-the-meeting-point",
+    "lastLocation": {
+      "lat": 40.76657,
+      "lon": -111.89475
+    },
+    "lastSeenAt": "2026-11-09T16:39:00.000Z",
+    "visible": true,
+    "xp": 125,
+    "level": 2,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T13:02:00.000Z"
+  },
+  {
+    "id": "att-ragraccoon",
+    "handle": "ragraccoon",
+    "faceSeed": "ragraccoon",
+    "workingOn": "Building a RAG assistant over our runbooks.",
+    "headline": "Building a RAG assistant over our runbooks.",
+    "profileText": "First time here. I build a retrieval-augmented assistant that answers on-call questions from our runbooks and postmortems. Curious about hybrid search, chunking, evaluation and how to keep the index fresh when docs change daily.",
+    "profile": {
+      "topics": [
+        "rag",
+        "vector-search",
+        "ai-agents"
+      ],
+      "firstTimer": true,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-2-250-ab",
+    "lastLocation": {
+      "lat": 40.76636,
+      "lon": -111.89475
+    },
+    "lastSeenAt": "2026-11-09T17:33:00.000Z",
+    "visible": true,
+    "xp": 35,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T14:02:00.000Z"
+  },
+  {
+    "id": "att-modelmeshmoose",
+    "handle": "modelmeshmoose",
+    "faceSeed": "modelmeshmoose",
+    "workingOn": "MLOps lead; ask me about model rollouts.",
+    "headline": "MLOps lead; ask me about model rollouts.",
+    "profileText": "Fifth KubeCon and a welcomer this year. I lead MLOps for a retail company: model registry, KServe deployments, shadow traffic and rollback when a model drifts. I enjoy helping people take their first model to production without a hero weekend.",
+    "profile": {
+      "topics": [
+        "model-serving",
+        "kserve",
+        "mlops"
+      ],
+      "firstTimer": false,
+      "welcomer": true
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-1-grand-ballroom-gi",
+    "lastLocation": {
+      "lat": 40.76645,
+      "lon": -111.8943
+    },
+    "lastSeenAt": "2026-11-09T17:51:00.000Z",
+    "visible": true,
+    "xp": 295,
+    "level": 3,
+    "banners": [
+      "welcomer",
+      "connector"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T13:21:00.000Z"
+  },
+  {
+    "id": "att-rayrhino",
+    "handle": "rayrhino",
+    "faceSeed": "rayrhino",
+    "workingOn": "Runs Ray clusters for distributed training jobs.",
+    "headline": "Runs Ray clusters for distributed training jobs.",
+    "profileText": "ML platform engineer running KubeRay for distributed training and hyperparameter sweeps. Interested in gang scheduling, checkpointing to object storage and keeping preempted jobs from losing hours of work.",
+    "profile": {
+      "topics": [
+        "ray",
+        "distributed-training",
+        "mlops"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": false,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-2-251-abc",
+    "lastLocation": {
+      "lat": 40.76648,
+      "lon": -111.89475
+    },
+    "lastSeenAt": "2026-11-09T17:10:00.000Z",
+    "visible": true,
+    "xp": 55,
+    "level": 2,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T11:53:00.000Z"
+  },
+  {
+    "id": "att-falcofox",
+    "handle": "falcofox",
+    "faceSeed": "falcofox",
+    "workingOn": "Detection engineer writing Falco rules that do not page at 3am.",
+    "headline": "Detection engineer writing Falco rules that do not page at 3am.",
+    "profileText": "Security detection engineer and welcomer. I write and tune Falco rules for runtime threat detection across 40 clusters, mostly fighting false positives. Ask me about rule tuning, eBPF drivers or getting a security team and an SRE team to share alerts.",
+    "profile": {
+      "topics": [
+        "runtime-security",
+        "falco",
+        "ebpf"
+      ],
+      "firstTimer": false,
+      "welcomer": true
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "campfire-salt-lake-foyer",
+    "lastLocation": {
+      "lat": 40.76702,
+      "lon": -111.89385
+    },
+    "lastSeenAt": "2026-11-09T16:57:00.000Z",
+    "visible": true,
+    "xp": 260,
+    "level": 3,
+    "banners": [
+      "welcomer"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T11:10:00.000Z"
+  },
+  {
+    "id": "att-tetragontoucan",
+    "handle": "tetragontoucan",
+    "faceSeed": "tetragontoucan",
+    "workingOn": "First KubeCon; learning eBPF from the kernel up.",
+    "headline": "First KubeCon; learning eBPF from the kernel up.",
+    "profileText": "First KubeCon. I come from Linux kernel support and I am learning how eBPF powers tools like Tetragon for runtime enforcement. I want to understand what is safe to run in production and how teams roll out enforcement policies gradually.",
+    "profile": {
+      "topics": [
+        "ebpf",
+        "runtime-security",
+        "kernel"
+      ],
+      "firstTimer": true,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "hyatt-regency-level-4-regency-ballroom-a",
+    "lastLocation": {
+      "lat": 40.7672,
+      "lon": -111.89385
+    },
+    "lastSeenAt": "2026-11-09T16:06:00.000Z",
+    "visible": true,
+    "xp": 50,
+    "level": 2,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T12:40:00.000Z"
+  },
+  {
+    "id": "att-rbacraven",
+    "handle": "rbacraven",
+    "faceSeed": "rbacraven",
+    "workingOn": "Untangling RBAC for a cluster shared by 30 teams.",
+    "headline": "Untangling RBAC for a cluster shared by 30 teams.",
+    "profileText": "Platform security engineer untangling RBAC for a large shared cluster. I audit ClusterRoles, build least-privilege templates per team and chase down service accounts nobody owns. Interested in tooling for RBAC reviews and tenant isolation.",
+    "profile": {
+      "topics": [
+        "rbac",
+        "multi-tenancy",
+        "security"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": false,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-2-250-ab",
+    "lastLocation": {
+      "lat": 40.76636,
+      "lon": -111.89475
+    },
+    "lastSeenAt": "2026-11-09T17:14:00.000Z",
+    "visible": true,
+    "xp": 40,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T12:31:00.000Z"
+  },
+  {
+    "id": "att-spiffeseal",
+    "handle": "spiffeseal",
+    "faceSeed": "spiffeseal",
+    "workingOn": "Replacing long-lived secrets with SPIFFE identities.",
+    "headline": "Replacing long-lived secrets with SPIFFE identities.",
+    "profileText": "Identity engineer rolling out SPIFFE and SPIRE so services authenticate with short-lived identities instead of shared secrets. Keen to talk federation across clusters and clouds, and migrating legacy services.",
+    "profile": {
+      "topics": [
+        "workload-identity",
+        "spiffe",
+        "zero-trust"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": false,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "hyatt-regency-level-2-salt-lake-ballroom-b",
+    "lastLocation": {
+      "lat": 40.76726,
+      "lon": -111.89385
+    },
+    "lastSeenAt": "2026-11-09T17:53:00.000Z",
+    "visible": true,
+    "xp": 75,
+    "level": 2,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T13:29:00.000Z"
+  },
+  {
+    "id": "att-kyvernokiwi",
+    "handle": "kyvernokiwi",
+    "faceSeed": "kyvernokiwi",
+    "workingOn": "First KubeCon; turning a compliance spreadsheet into policies.",
+    "headline": "First KubeCon; turning a compliance spreadsheet into policies.",
+    "profileText": "First KubeCon. Our compliance team hands me spreadsheets of controls and I am turning them into Kyverno policies with reports auditors can read. Looking for examples of policy exceptions done well.",
+    "profile": {
+      "topics": [
+        "policy-as-code",
+        "kyverno",
+        "compliance"
+      ],
+      "firstTimer": true,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-1-hall-de",
+    "lastLocation": {
+      "lat": 40.76609,
+      "lon": -111.89475
+    },
+    "lastSeenAt": "2026-11-09T17:33:00.000Z",
+    "visible": true,
+    "xp": 200,
+    "level": 3,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T12:51:00.000Z"
+  },
+  {
+    "id": "att-prometheuspanda",
+    "handle": "prometheuspanda",
+    "faceSeed": "prometheuspanda",
+    "workingOn": "Prometheus maintainer-adjacent; loves a good recording rule.",
+    "headline": "Prometheus maintainer-adjacent; loves a good recording rule.",
+    "profileText": "Long-time Prometheus user and welcomer. I run a metrics platform ingesting a few million series with Prometheus and Thanos, and I care about cardinality budgets, recording rules and alerts that point at a cause. Always happy to help someone design their first dashboards.",
+    "profile": {
+      "topics": [
+        "prometheus",
+        "metrics",
+        "alerting"
+      ],
+      "firstTimer": false,
+      "welcomer": true
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "hyatt-regency-level-4-regency-ballroom-cd",
+    "lastLocation": {
+      "lat": 40.76744,
+      "lon": -111.89385
+    },
+    "lastSeenAt": "2026-11-09T17:40:00.000Z",
+    "visible": true,
+    "xp": 585,
+    "level": 4,
+    "banners": [
+      "welcomer",
+      "connector"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T13:02:00.000Z"
+  },
+  {
+    "id": "att-lokilemur",
+    "handle": "lokilemur",
+    "faceSeed": "lokilemur",
+    "workingOn": "First KubeCon; our log bill is bigger than our compute bill.",
+    "headline": "First KubeCon; our log bill is bigger than our compute bill.",
+    "profileText": "First KubeCon. I am a DevOps engineer at a startup where logging costs more than compute. Moving from a hosted vendor to Loki and trying to decide what to keep, sample or drop.",
+    "profile": {
+      "topics": [
+        "logging",
+        "loki",
+        "observability"
+      ],
+      "firstTimer": true,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-1-hall-de",
+    "lastLocation": {
+      "lat": 40.76609,
+      "lon": -111.89475
+    },
+    "lastSeenAt": "2026-11-09T16:11:00.000Z",
+    "visible": true,
+    "xp": 40,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T14:01:00.000Z"
+  },
+  {
+    "id": "att-jaegerjackal",
+    "handle": "jaegerjackal",
+    "faceSeed": "jaegerjackal",
+    "workingOn": "Tracing a 200-service mesh, one sampled span at a time.",
+    "headline": "Tracing a 200-service mesh, one sampled span at a time.",
+    "profileText": "SRE responsible for distributed tracing across about 200 services. We moved from Jaeger agents to collectors with tail-based sampling. Interested in sampling strategies that keep errors and slow requests without storing everything.",
+    "profile": {
+      "topics": [
+        "tracing",
+        "sampling",
+        "distributed-systems"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": false,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "campfire-community-hub",
+    "lastLocation": {
+      "lat": 40.76621,
+      "lon": -111.89475
+    },
+    "lastSeenAt": "2026-11-09T16:27:00.000Z",
+    "visible": true,
+    "xp": 55,
+    "level": 2,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T11:18:00.000Z"
+  },
+  {
+    "id": "att-profilingpelican",
+    "handle": "profilingpelican",
+    "faceSeed": "profilingpelican",
+    "workingOn": "Continuous profiling so CPU flame graphs are always on.",
+    "headline": "Continuous profiling so CPU flame graphs are always on.",
+    "profileText": "Performance engineer rolling out continuous profiling with eBPF-based agents. I like finding the one function that burns half the CPU in a cluster. Interested in profiling overhead and linking profiles to traces.",
+    "profile": {
+      "topics": [
+        "continuous-profiling",
+        "performance",
+        "ebpf"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": false,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-1-155-e",
+    "lastLocation": {
+      "lat": 40.76609,
+      "lon": -111.8943
+    },
+    "lastSeenAt": "2026-11-09T16:43:00.000Z",
     "visible": true,
     "xp": 20,
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T13:51:00.000Z"
+    "createdAt": "2026-11-09T13:38:00.000Z"
   },
   {
-    "id": "att-spiffeegret",
-    "handle": "spiffeegret",
-    "faceSeed": "spiffeegret",
-    "workingOn": "Platform engineer at a logistics company, connecting clusters across three regions.",
-    "headline": "Platform engineer at a logistics company, connecting clusters across three regions.",
-    "profileText": "Platform engineer at a logistics company, connecting clusters across three regions. Happy to swap notes with anyone fighting the same problem. I am trying to keep my notes short enough to actually read later.",
+    "id": "att-slosalamander",
+    "handle": "slosalamander",
+    "faceSeed": "slosalamander",
+    "workingOn": "SLO evangelist and welcomer; error budgets over gut feel.",
+    "headline": "SLO evangelist and welcomer; error budgets over gut feel.",
+    "profileText": "SRE lead and welcomer. I help product teams define SLOs and burn-rate alerts so on-call pages mean something. Happy to walk a first-timer through writing their first SLO on a napkin.",
     "profile": {
       "topics": [
+        "slos",
+        "sre",
+        "alerting"
+      ],
+      "firstTimer": false,
+      "welcomer": true
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-2-251-abc",
+    "lastLocation": {
+      "lat": 40.76648,
+      "lon": -111.89475
+    },
+    "lastSeenAt": "2026-11-09T17:57:00.000Z",
+    "visible": true,
+    "xp": 350,
+    "level": 3,
+    "banners": [
+      "welcomer",
+      "connector"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T13:40:00.000Z"
+  },
+  {
+    "id": "att-argoalpaca",
+    "handle": "argoalpaca",
+    "faceSeed": "argoalpaca",
+    "workingOn": "Runs Argo CD for 80 teams; welcomer at heart.",
+    "headline": "Runs Argo CD for 80 teams; welcomer at heart.",
+    "profileText": "Sixth KubeCon and a welcomer. I run a central Argo CD with ApplicationSets for about 80 teams, plus Argo Rollouts for canaries. Ask me about app-of-apps sprawl, sync waves or how to onboard a team to GitOps in an afternoon.",
+    "profile": {
+      "topics": [
+        "argo-cd",
+        "gitops",
+        "progressive-delivery"
+      ],
+      "firstTimer": false,
+      "welcomer": true
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-1-demo-theater",
+    "lastLocation": {
+      "lat": 40.76621,
+      "lon": -111.89415
+    },
+    "lastSeenAt": "2026-11-09T16:26:00.000Z",
+    "visible": true,
+    "xp": 560,
+    "level": 4,
+    "banners": [
+      "welcomer",
+      "connector"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T14:32:00.000Z"
+  },
+  {
+    "id": "att-rolloutrabbit",
+    "handle": "rolloutrabbit",
+    "faceSeed": "rolloutrabbit",
+    "workingOn": "First KubeCon; just shipped our first canary.",
+    "headline": "First KubeCon; just shipped our first canary.",
+    "profileText": "First KubeCon. Our team just shipped its first canary release with Argo Rollouts and automated analysis against Prometheus. I want to learn how others pick metrics for analysis and when to promote automatically.",
+    "profile": {
+      "topics": [
+        "argo-rollouts",
+        "canary",
+        "progressive-delivery"
+      ],
+      "firstTimer": true,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "campfire-community-hub",
+    "lastLocation": {
+      "lat": 40.76621,
+      "lon": -111.89475
+    },
+    "lastSeenAt": "2026-11-09T16:05:00.000Z",
+    "visible": true,
+    "xp": 40,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T14:49:00.000Z"
+  },
+  {
+    "id": "att-kustomizekudu",
+    "handle": "kustomizekudu",
+    "faceSeed": "kustomizekudu",
+    "workingOn": "Keeping Kustomize overlays DRY across 12 environments.",
+    "headline": "Keeping Kustomize overlays DRY across 12 environments.",
+    "profileText": "Release engineer maintaining Kustomize bases and overlays for twelve environments. Interested in components, replacements and how people stop overlays from drifting apart.",
+    "profile": {
+      "topics": [
+        "kustomize",
+        "gitops",
+        "config-management"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": false,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-2-251-abc",
+    "lastLocation": {
+      "lat": 40.76648,
+      "lon": -111.89475
+    },
+    "lastSeenAt": "2026-11-09T17:19:00.000Z",
+    "visible": true,
+    "xp": 20,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T11:24:00.000Z"
+  },
+  {
+    "id": "att-linkerdlark",
+    "handle": "linkerdlark",
+    "faceSeed": "linkerdlark",
+    "workingOn": "Linkerd user since 2.0; happy to demystify meshes.",
+    "headline": "Linkerd user since 2.0; happy to demystify meshes.",
+    "profileText": "Platform engineer and welcomer who has run Linkerd in production since 2.0. I like explaining service meshes without the hype: mTLS by default, golden metrics, retries and timeouts. Bring me your mesh questions.",
+    "profile": {
+      "topics": [
+        "linkerd",
+        "service-mesh",
+        "mtls"
+      ],
+      "firstTimer": false,
+      "welcomer": true
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-1-grand-ballroom-h",
+    "lastLocation": {
+      "lat": 40.76657,
+      "lon": -111.8943
+    },
+    "lastSeenAt": "2026-11-09T16:34:00.000Z",
+    "visible": true,
+    "xp": 270,
+    "level": 3,
+    "banners": [
+      "welcomer",
+      "connector"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T13:53:00.000Z"
+  },
+  {
+    "id": "att-envoyemu",
+    "handle": "envoyemu",
+    "faceSeed": "envoyemu",
+    "workingOn": "Writes Envoy filters and regrets nothing.",
+    "headline": "Writes Envoy filters and regrets nothing.",
+    "profileText": "Edge networking engineer working on Envoy-based gateways. I write rate limiting and auth filters and I am moving our routing config to Gateway API. Interested in multi-tenant gateways and Wasm filters.",
+    "profile": {
+      "topics": [
+        "envoy",
+        "gateway-api",
+        "rate-limiting"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": false,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-2-251-abc",
+    "lastLocation": {
+      "lat": 40.76648,
+      "lon": -111.89475
+    },
+    "lastSeenAt": "2026-11-09T16:17:00.000Z",
+    "visible": true,
+    "xp": 75,
+    "level": 2,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T11:41:00.000Z"
+  },
+  {
+    "id": "att-ciliumcicada",
+    "handle": "ciliumcicada",
+    "faceSeed": "ciliumcicada",
+    "workingOn": "First KubeCon; migrating from kube-proxy to Cilium.",
+    "headline": "First KubeCon; migrating from kube-proxy to Cilium.",
+    "profileText": "First KubeCon. I am a network engineer migrating our clusters from Calico and kube-proxy to Cilium. Learning network policies, Hubble flow logs and what breaks when you turn on kube-proxy replacement.",
+    "profile": {
+      "topics": [
+        "cilium",
+        "network-policy",
+        "networking"
+      ],
+      "firstTimer": true,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "campfire-network-nook",
+    "lastLocation": {
+      "lat": 40.76645,
+      "lon": -111.89475
+    },
+    "lastSeenAt": "2026-11-09T16:41:00.000Z",
+    "visible": true,
+    "xp": 100,
+    "level": 2,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T11:57:00.000Z"
+  },
+  {
+    "id": "att-cephchameleon",
+    "handle": "cephchameleon",
+    "faceSeed": "cephchameleon",
+    "workingOn": "Operates Rook Ceph so the database team does not have to.",
+    "headline": "Operates Rook Ceph so the database team does not have to.",
+    "profileText": "Storage engineer operating Rook Ceph clusters on bare metal. Interested in performance tuning, failure domains and upgrading Ceph without a maintenance window.",
+    "profile": {
+      "topics": [
+        "ceph",
+        "rook",
+        "storage"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": false,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "hyatt-regency-level-4-regency-ballroom-cd",
+    "lastLocation": {
+      "lat": 40.76744,
+      "lon": -111.89385
+    },
+    "lastSeenAt": "2026-11-09T16:27:00.000Z",
+    "visible": true,
+    "xp": 30,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T14:39:00.000Z"
+  },
+  {
+    "id": "att-vitessvole",
+    "handle": "vitessvole",
+    "faceSeed": "vitessvole",
+    "workingOn": "Shards MySQL with Vitess; welcomer for data folks.",
+    "headline": "Shards MySQL with Vitess; welcomer for data folks.",
+    "profileText": "Database reliability engineer and welcomer. We run a sharded MySQL fleet with Vitess on Kubernetes. I love talking resharding, online schema changes and how to make DBAs comfortable with operators.",
+    "profile": {
+      "topics": [
+        "vitess",
+        "mysql",
+        "databases"
+      ],
+      "firstTimer": false,
+      "welcomer": true
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "campfire-the-meeting-point",
+    "lastLocation": {
+      "lat": 40.76657,
+      "lon": -111.89475
+    },
+    "lastSeenAt": "2026-11-09T16:06:00.000Z",
+    "visible": true,
+    "xp": 230,
+    "level": 3,
+    "banners": [
+      "welcomer"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T12:35:00.000Z"
+  },
+  {
+    "id": "att-etcdeagle",
+    "handle": "etcdeagle",
+    "faceSeed": "etcdeagle",
+    "workingOn": "Keeps etcd healthy for a managed Kubernetes service.",
+    "headline": "Keeps etcd healthy for a managed Kubernetes service.",
+    "profileText": "Control plane engineer at a managed Kubernetes provider and a welcomer. I spend my days on etcd defragmentation, snapshots and API server load. Happy to explain what really happens when you kubectl apply.",
+    "profile": {
+      "topics": [
+        "etcd",
+        "control-plane",
+        "backups"
+      ],
+      "firstTimer": false,
+      "welcomer": true
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-1-151",
+    "lastLocation": {
+      "lat": 40.76645,
+      "lon": -111.89445
+    },
+    "lastSeenAt": "2026-11-09T17:30:00.000Z",
+    "visible": true,
+    "xp": 155,
+    "level": 2,
+    "banners": [
+      "welcomer"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T13:32:00.000Z"
+  },
+  {
+    "id": "att-velerovulture",
+    "handle": "velerovulture",
+    "faceSeed": "velerovulture",
+    "workingOn": "First KubeCon; writing our first disaster recovery plan.",
+    "headline": "First KubeCon; writing our first disaster recovery plan.",
+    "profileText": "First KubeCon. I was asked to write our disaster recovery plan for Kubernetes and I am testing Velero backups and restores across regions. Want to hear real restore stories, good and bad.",
+    "profile": {
+      "topics": [
+        "backups",
+        "disaster-recovery",
+        "velero"
+      ],
+      "firstTimer": true,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "hyatt-regency-level-2-salt-lake-ballroom-a",
+    "lastLocation": {
+      "lat": 40.76714,
+      "lon": -111.89385
+    },
+    "lastSeenAt": "2026-11-09T16:51:00.000Z",
+    "visible": true,
+    "xp": 20,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T11:34:00.000Z"
+  },
+  {
+    "id": "att-kafkakingfisher",
+    "handle": "kafkakingfisher",
+    "faceSeed": "kafkakingfisher",
+    "workingOn": "Runs Kafka on Kubernetes with Strimzi.",
+    "headline": "Runs Kafka on Kubernetes with Strimzi.",
+    "profileText": "Streaming platform engineer running Kafka on Kubernetes with Strimzi. Interested in rack awareness, tiered storage and upgrading brokers without consumer lag spikes.",
+    "profile": {
+      "topics": [
+        "kafka",
+        "strimzi",
+        "streaming"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": false,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-1-grand-ballroom-gi",
+    "lastLocation": {
+      "lat": 40.76645,
+      "lon": -111.8943
+    },
+    "lastSeenAt": "2026-11-09T16:18:00.000Z",
+    "visible": true,
+    "xp": 65,
+    "level": 2,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T12:33:00.000Z"
+  },
+  {
+    "id": "att-spotsparrow",
+    "handle": "spotsparrow",
+    "faceSeed": "spotsparrow",
+    "workingOn": "Moved 70% of our nodes to spot and lived to tell.",
+    "headline": "Moved 70% of our nodes to spot and lived to tell.",
+    "profileText": "FinOps-minded infrastructure engineer. We moved most stateless workloads onto spot instances with interruption handling and rightsized requests with VPA recommendations. Happy to share what saved money and what did not.",
+    "profile": {
+      "topics": [
+        "spot-instances",
+        "finops",
+        "rightsizing"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": false,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "hyatt-regency-level-2-salt-lake-ballroom-de",
+    "lastLocation": {
+      "lat": 40.7675,
+      "lon": -111.89385
+    },
+    "lastSeenAt": "2026-11-09T17:48:00.000Z",
+    "visible": true,
+    "xp": 70,
+    "level": 2,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T11:58:00.000Z"
+  },
+  {
+    "id": "att-karpenterkangaroo",
+    "handle": "karpenterkangaroo",
+    "faceSeed": "karpenterkangaroo",
+    "workingOn": "Karpenter tamer and welcomer; consolidation is my hobby.",
+    "headline": "Karpenter tamer and welcomer; consolidation is my hobby.",
+    "profileText": "Platform engineer and welcomer who has run Karpenter since its early days. I tune consolidation, disruption budgets and node pools to cut cost without evicting the world. Glad to help anyone planning a move from cluster-autoscaler.",
+    "profile": {
+      "topics": [
+        "karpenter",
+        "node-autoscaling",
+        "cost"
+      ],
+      "firstTimer": false,
+      "welcomer": true
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "hyatt-regency-level-2-salt-lake-ballroom-b",
+    "lastLocation": {
+      "lat": 40.76726,
+      "lon": -111.89385
+    },
+    "lastSeenAt": "2026-11-09T17:07:00.000Z",
+    "visible": true,
+    "xp": 280,
+    "level": 3,
+    "banners": [
+      "welcomer",
+      "connector"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T12:04:00.000Z"
+  },
+  {
+    "id": "att-carboncapybara",
+    "handle": "carboncapybara",
+    "faceSeed": "carboncapybara",
+    "workingOn": "First KubeCon; measuring the carbon cost of our clusters.",
+    "headline": "First KubeCon; measuring the carbon cost of our clusters.",
+    "profileText": "First KubeCon. I work on sustainability at a logistics company and I am using Kepler to estimate energy use per workload. Looking for people who report carbon alongside cost.",
+    "profile": {
+      "topics": [
+        "sustainability",
+        "kepler",
+        "green-software"
+      ],
+      "firstTimer": true,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-1-150-defg",
+    "lastLocation": {
+      "lat": 40.76633,
+      "lon": -111.89445
+    },
+    "lastSeenAt": "2026-11-09T16:51:00.000Z",
+    "visible": true,
+    "xp": 0,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T12:50:00.000Z"
+  },
+  {
+    "id": "att-edgeelk",
+    "handle": "edgeelk",
+    "faceSeed": "edgeelk",
+    "workingOn": "Runs k3s on 600 shop-floor boxes.",
+    "headline": "Runs k3s on 600 shop-floor boxes.",
+    "profileText": "Edge platform engineer running k3s on hundreds of small boxes in factories. Interested in offline-first updates, flaky networks and remote debugging when a site is down.",
+    "profile": {
+      "topics": [
+        "edge",
+        "k3s",
+        "iot"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": false,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-2-251-def",
+    "lastLocation": {
+      "lat": 40.7666,
+      "lon": -111.89475
+    },
+    "lastSeenAt": "2026-11-09T16:33:00.000Z",
+    "visible": true,
+    "xp": 40,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T12:34:00.000Z"
+  },
+  {
+    "id": "att-kubeedgeorca",
+    "handle": "kubeedgeorca",
+    "faceSeed": "kubeedgeorca",
+    "workingOn": "First KubeCon; Kubernetes at cell towers.",
+    "headline": "First KubeCon; Kubernetes at cell towers.",
+    "profileText": "First KubeCon. I work at a telco exploring KubeEdge to run workloads near cell towers. Learning about edge autonomy, device twins and how to manage thousands of tiny nodes.",
+    "profile": {
+      "topics": [
+        "kubeedge",
+        "edge",
+        "telco"
+      ],
+      "firstTimer": true,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "hyatt-regency-level-2-salt-lake-ballroom-de",
+    "lastLocation": {
+      "lat": 40.7675,
+      "lon": -111.89385
+    },
+    "lastSeenAt": "2026-11-09T16:36:00.000Z",
+    "visible": true,
+    "xp": 0,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T14:11:00.000Z"
+  },
+  {
+    "id": "att-spinsquirrel",
+    "handle": "spinsquirrel",
+    "faceSeed": "spinsquirrel",
+    "workingOn": "Ships Spin apps on SpinKube; welcomer.",
+    "headline": "Ships Spin apps on SpinKube; welcomer.",
+    "profileText": "Wasm enthusiast and welcomer. I build serverless functions with Spin and run them on Kubernetes via SpinKube. Millisecond cold starts are my party trick. Happy to help newcomers try Wasm in an afternoon.",
+    "profile": {
+      "topics": [
+        "webassembly",
+        "spin",
+        "serverless"
+      ],
+      "firstTimer": false,
+      "welcomer": true
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-2-250-ab",
+    "lastLocation": {
+      "lat": 40.76636,
+      "lon": -111.89475
+    },
+    "lastSeenAt": "2026-11-09T16:46:00.000Z",
+    "visible": true,
+    "xp": 275,
+    "level": 3,
+    "banners": [
+      "welcomer",
+      "connector"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T11:19:00.000Z"
+  },
+  {
+    "id": "att-wasmwombat",
+    "handle": "wasmwombat",
+    "faceSeed": "wasmwombat",
+    "workingOn": "First KubeCon; curious about WASI components.",
+    "headline": "First KubeCon; curious about WASI components.",
+    "profileText": "First KubeCon. I am a Rust developer curious whether WASI components can replace some of our sidecars. Here to learn and meet people building runtimes.",
+    "profile": {
+      "topics": [
+        "webassembly",
+        "wasi",
+        "runtimes"
+      ],
+      "firstTimer": true,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": false,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-1-grand-ballroom-h",
+    "lastLocation": {
+      "lat": 40.76657,
+      "lon": -111.8943
+    },
+    "lastSeenAt": "2026-11-09T17:18:00.000Z",
+    "visible": true,
+    "xp": 20,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T13:46:00.000Z"
+  },
+  {
+    "id": "att-a11yanteater",
+    "handle": "a11yanteater",
+    "faceSeed": "a11yanteater",
+    "workingOn": "Making dashboards and CLIs usable with a screen reader.",
+    "headline": "Making dashboards and CLIs usable with a screen reader.",
+    "profileText": "Accessibility engineer and welcomer. I audit internal tools, dashboards and CLIs for screen reader and keyboard use, and I push for accessible docs in open source projects. Happy to chat about inclusive tooling.",
+    "profile": {
+      "topics": [
+        "accessibility",
+        "developer-experience",
+        "documentation"
+      ],
+      "firstTimer": false,
+      "welcomer": true
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": true,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "hyatt-regency-level-4-regency-ballroom-b-d",
+    "lastLocation": {
+      "lat": 40.76732,
+      "lon": -111.89385
+    },
+    "lastSeenAt": "2026-11-09T17:31:00.000Z",
+    "visible": true,
+    "xp": 80,
+    "level": 2,
+    "banners": [
+      "welcomer"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T13:20:00.000Z"
+  },
+  {
+    "id": "att-docsdolphin",
+    "handle": "docsdolphin",
+    "faceSeed": "docsdolphin",
+    "workingOn": "CNCF docs contributor; will help you land your first PR.",
+    "headline": "CNCF docs contributor; will help you land your first PR.",
+    "profileText": "Ninth KubeCon, docs contributor and welcomer. I help new contributors land their first pull request in CNCF projects, mostly docs and tutorials. If you are new, come find me: I know which hallway the coffee is in and which SIG needs help.",
+    "profile": {
+      "topics": [
+        "documentation",
+        "contributor-experience",
+        "community"
+      ],
+      "firstTimer": false,
+      "welcomer": true
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-1-151",
+    "lastLocation": {
+      "lat": 40.76645,
+      "lon": -111.89445
+    },
+    "lastSeenAt": "2026-11-09T17:30:00.000Z",
+    "visible": true,
+    "xp": 910,
+    "level": 5,
+    "banners": [
+      "welcomer",
+      "connector"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T13:05:00.000Z"
+  },
+  {
+    "id": "att-capicormorant",
+    "handle": "capicormorant",
+    "faceSeed": "capicormorant",
+    "workingOn": "Creates clusters with Cluster API, mostly on purpose.",
+    "headline": "Creates clusters with Cluster API, mostly on purpose.",
+    "profileText": "Platform engineer and welcomer managing cluster lifecycle with Cluster API across vSphere and AWS. Ask me about upgrades, machine health checks and ClusterClass.",
+    "profile": {
+      "topics": [
+        "cluster-api",
         "multi-cluster",
+        "lifecycle"
+      ],
+      "firstTimer": false,
+      "welcomer": true
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-1-grand-ballroom-bdf",
+    "lastLocation": {
+      "lat": 40.76633,
+      "lon": -111.8943
+    },
+    "lastSeenAt": "2026-11-09T17:15:00.000Z",
+    "visible": true,
+    "xp": 65,
+    "level": 2,
+    "banners": [
+      "welcomer"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T14:29:00.000Z"
+  },
+  {
+    "id": "att-vclustervixen",
+    "handle": "vclustervixen",
+    "faceSeed": "vclustervixen",
+    "workingOn": "First KubeCon; giving every developer a virtual cluster.",
+    "headline": "First KubeCon; giving every developer a virtual cluster.",
+    "profileText": "First KubeCon. I am testing virtual clusters so every developer gets their own control plane for preview environments. Interested in cost, isolation and cleanup.",
+    "profile": {
+      "topics": [
+        "multi-tenancy",
+        "vcluster",
+        "developer-environments"
+      ],
+      "firstTimer": true,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": false,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "hyatt-regency-level-4-regency-ballroom-b-d",
+    "lastLocation": {
+      "lat": 40.76732,
+      "lon": -111.89385
+    },
+    "lastSeenAt": "2026-11-09T16:41:00.000Z",
+    "visible": true,
+    "xp": 30,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T12:28:00.000Z"
+  },
+  {
+    "id": "att-sreseahorse",
+    "handle": "sreseahorse",
+    "faceSeed": "sreseahorse",
+    "workingOn": "First KubeCon; new on-call lead learning the ropes.",
+    "headline": "First KubeCon; new on-call lead learning the ropes.",
+    "profileText": "First KubeCon. I just became on-call lead for a small team and I want to learn how others run incident response, write blameless postmortems and keep on-call humane.",
+    "profile": {
+      "topics": [
+        "incident-response",
+        "sre",
+        "postmortems"
+      ],
+      "firstTimer": true,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-1-grand-ballroom-h",
+    "lastLocation": {
+      "lat": 40.76657,
+      "lon": -111.8943
+    },
+    "lastSeenAt": "2026-11-09T17:57:00.000Z",
+    "visible": true,
+    "xp": 230,
+    "level": 3,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T11:31:00.000Z"
+  },
+  {
+    "id": "att-helmheron",
+    "handle": "helmheron",
+    "faceSeed": "helmheron",
+    "workingOn": "Helm maintainer-in-spirit; charts in OCI registries.",
+    "headline": "Helm maintainer-in-spirit; charts in OCI registries.",
+    "profileText": "Packaging engineer and welcomer. I publish our Helm charts to OCI registries, test them with chart-testing and help teams move from copy-pasted YAML to proper charts.",
+    "profile": {
+      "topics": [
+        "helm",
+        "oci",
+        "packaging"
+      ],
+      "firstTimer": false,
+      "welcomer": true
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-1-grand-ballroom-gi",
+    "lastLocation": {
+      "lat": 40.76645,
+      "lon": -111.8943
+    },
+    "lastSeenAt": "2026-11-09T16:28:00.000Z",
+    "visible": true,
+    "xp": 125,
+    "level": 2,
+    "banners": [
+      "welcomer"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T11:10:00.000Z"
+  },
+  {
+    "id": "att-harborhedgehog",
+    "handle": "harborhedgehog",
+    "faceSeed": "harborhedgehog",
+    "workingOn": "First KubeCon; running Harbor as our internal registry.",
+    "headline": "First KubeCon; running Harbor as our internal registry.",
+    "profileText": "First KubeCon. I administer Harbor as our internal container registry: replication, vulnerability scanning and retention rules. Learning how it fits into a signed supply chain.",
+    "profile": {
+      "topics": [
+        "harbor",
+        "registries",
+        "supply-chain"
+      ],
+      "firstTimer": true,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "hyatt-regency-level-4-regency-ballroom-b-d",
+    "lastLocation": {
+      "lat": 40.76732,
+      "lon": -111.89385
+    },
+    "lastSeenAt": "2026-11-09T16:51:00.000Z",
+    "visible": true,
+    "xp": 15,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T11:29:00.000Z"
+  },
+  {
+    "id": "att-booth-gitopsgibbon",
+    "handle": "gitopsgibbon",
+    "faceSeed": "gitopsgibbon",
+    "workingOn": "Cloud architect at an insurance company, deciding whether a service mesh is worth it.",
+    "headline": "Cloud architect at an insurance company, deciding whether a service mesh is worth it.",
+    "profileText": "Cloud architect at an insurance company, deciding whether a service mesh is worth it. I collect good war stories and share my own. Coffee is on me if you have a working example.",
+    "profile": {
+      "topics": [
+        "service-mesh",
+        "istio",
+        "linkerd",
+        "spiffe",
+        "workload-identity"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "outpost-solo-io",
+    "lastLocation": {
+      "lat": 40.765588,
+      "lon": -111.895056
+    },
+    "lastSeenAt": "2026-11-09T16:44:00.000Z",
+    "visible": true,
+    "xp": 50,
+    "level": 2,
+    "banners": [
+      "scout"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T13:14:00.000Z"
+  },
+  {
+    "id": "att-booth-gitopsosprey",
+    "handle": "gitopsosprey",
+    "faceSeed": "gitopsosprey",
+    "workingOn": "Platform engineer at a logistics company, testing backup and restore for stateful apps with Velero.",
+    "headline": "Platform engineer at a logistics company, testing backup and restore for stateful apps with Velero.",
+    "profileText": "Platform engineer at a logistics company, testing backup and restore for stateful apps with Velero. Planning to hit the Project Pavilion and talk to maintainers. If you maintain a CNCF project, I want to hear how you got started.",
+    "profile": {
+      "topics": [
+        "backups",
+        "velero",
+        "storage"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "outpost-cloudsmith",
+    "lastLocation": {
+      "lat": 40.765997,
+      "lon": -111.894246
+    },
+    "lastSeenAt": "2026-11-09T16:27:00.000Z",
+    "visible": true,
+    "xp": 30,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T07:33:00.000Z"
+  },
+  {
+    "id": "att-booth-tracealpaca",
+    "handle": "tracealpaca",
+    "faceSeed": "tracealpaca",
+    "workingOn": "Security engineer at a bank, migrating from Ingress to Gateway API.",
+    "headline": "Security engineer at a bank, migrating from Ingress to Gateway API.",
+    "profileText": "Security engineer at a bank, migrating from Ingress to Gateway API. I keep a list of booths my team asked me to check out. I am trying to keep my notes short enough to actually read later.",
+    "profile": {
+      "topics": [
+        "gateway-api",
+        "ingress",
         "networking",
-        "envoy"
+        "kueue",
+        "gpu-sharing"
+      ],
+      "firstTimer": false,
+      "welcomer": true
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "outpost-haproxy-technologies",
+    "lastLocation": {
+      "lat": 40.765755,
+      "lon": -111.894836
+    },
+    "lastSeenAt": "2026-11-09T17:19:00.000Z",
+    "visible": true,
+    "xp": 30,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T06:26:00.000Z"
+  },
+  {
+    "id": "att-booth-llmvole",
+    "handle": "llmvole",
+    "faceSeed": "llmvole",
+    "workingOn": "Data engineer at a media company, writing Kyverno policies the developers do not hate.",
+    "headline": "Data engineer at a media company, writing Kyverno policies the developers do not hate.",
+    "profileText": "Data engineer at a media company, writing Kyverno policies the developers do not hate. I keep a list of booths my team asked me to check out. I would love to meet people who already did this migration.",
+    "profile": {
+      "topics": [
+        "kyverno",
+        "policy-as-code",
+        "security"
       ],
       "firstTimer": false,
       "welcomer": false
@@ -757,190 +2509,34 @@
     },
     "lastLocationId": "outpost-dash0",
     "lastLocation": {
-      "lat": 40.765871,
-      "lon": -111.894807
+      "lat": 40.76584,
+      "lon": -111.894831
     },
-    "lastSeenAt": "2026-11-09T16:24:00.000Z",
+    "lastSeenAt": "2026-11-09T16:56:00.000Z",
     "visible": true,
-    "xp": 20,
+    "xp": 30,
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T03:30:00.000Z"
+    "createdAt": "2026-11-09T13:48:00.000Z"
   },
   {
-    "id": "att-ebpftern",
-    "handle": "ebpftern",
-    "faceSeed": "ebpftern",
-    "workingOn": "Ops engineer at a public sector agency, moving a Kafka cluster onto Kubernetes.",
-    "headline": "Ops engineer at a public sector agency, moving a Kafka cluster onto Kubernetes.",
-    "profileText": "Ops engineer at a public sector agency, moving a Kafka cluster onto Kubernetes. At the showcase I want to see real demos, not slides. Ask me about what broke for us last quarter.",
+    "id": "att-booth-spiffegibbon",
+    "handle": "spiffegibbon",
+    "faceSeed": "spiffegibbon",
+    "workingOn": "Infrastructure engineer at a game studio, signing every image and checking it at admission.",
+    "headline": "Infrastructure engineer at a game studio, signing every image and checking it at admission.",
+    "profileText": "Infrastructure engineer at a game studio, signing every image and checking it at admission. Mostly here to learn what other teams run in production. Ask me about what broke for us last quarter.",
     "profile": {
       "topics": [
-        "streaming",
-        "kafka",
-        "storage"
-      ],
-      "firstTimer": false,
-      "welcomer": false
-    },
-    "settings": {
-      "meetingOn": true,
-      "accessibleMode": false,
-      "noWalking": false,
-      "locationOn": true,
-      "language": "en",
-      "hideFromLeaderboard": false
-    },
-    "lastLocationId": "outpost-nutanix",
-    "lastLocation": {
-      "lat": 40.765772,
-      "lon": -111.894711
-    },
-    "lastSeenAt": "2026-11-09T17:57:00.000Z",
-    "visible": true,
-    "xp": 50,
-    "level": 2,
-    "banners": [
-      "scout"
-    ],
-    "blockedIds": [],
-    "createdAt": "2026-11-09T10:26:00.000Z"
-  },
-  {
-    "id": "att-gpunarwhal",
-    "handle": "gpunarwhal",
-    "faceSeed": "gpunarwhal",
-    "workingOn": "Ops engineer at a public sector agency, connecting clusters across three regions.",
-    "headline": "Ops engineer at a public sector agency, connecting clusters across three regions.",
-    "profileText": "Ops engineer at a public sector agency, connecting clusters across three regions. I keep a list of booths my team asked me to check out. I learn best by asking dumb questions early, so I do.",
-    "profile": {
-      "topics": [
-        "multi-cluster",
-        "networking",
-        "envoy",
-        "keda",
-        "autoscaling"
-      ],
-      "firstTimer": false,
-      "welcomer": false
-    },
-    "settings": {
-      "meetingOn": true,
-      "accessibleMode": false,
-      "noWalking": false,
-      "locationOn": true,
-      "language": "en",
-      "hideFromLeaderboard": false
-    },
-    "lastLocationId": "outpost-infino-ai",
-    "lastLocation": {
-      "lat": 40.76688,
-      "lon": -111.89432
-    },
-    "lastSeenAt": "2026-11-09T17:49:00.000Z",
-    "visible": true,
-    "xp": 40,
-    "level": 1,
-    "banners": [],
-    "blockedIds": [],
-    "createdAt": "2026-11-09T05:55:00.000Z"
-  },
-  {
-    "id": "att-cronorca",
-    "handle": "cronorca",
-    "faceSeed": "cronorca",
-    "workingOn": "SRE at a streaming service, migrating from Ingress to Gateway API.",
-    "headline": "SRE at a streaming service, migrating from Ingress to Gateway API.",
-    "profileText": "SRE at a streaming service, migrating from Ingress to Gateway API. Planning to hit the Project Pavilion and talk to maintainers. If you maintain a CNCF project, I want to hear how you got started.",
-    "profile": {
-      "topics": [
-        "gateway-api",
-        "ingress",
-        "networking"
-      ],
-      "firstTimer": false,
-      "welcomer": false
-    },
-    "settings": {
-      "meetingOn": true,
-      "accessibleMode": false,
-      "noWalking": false,
-      "locationOn": true,
-      "language": "en",
-      "hideFromLeaderboard": false
-    },
-    "lastLocationId": "outpost-project-keda",
-    "lastLocation": {
-      "lat": 40.767072,
-      "lon": -111.893868
-    },
-    "lastSeenAt": "2026-11-09T16:53:00.000Z",
-    "visible": true,
-    "xp": 40,
-    "level": 1,
-    "banners": [],
-    "blockedIds": [],
-    "createdAt": "2026-11-09T11:00:00.000Z"
-  },
-  {
-    "id": "att-ciliumzebra",
-    "handle": "ciliumzebra",
-    "faceSeed": "ciliumzebra",
-    "workingOn": "SRE at a streaming service, serving open models on a small GPU pool.",
-    "headline": "SRE at a streaming service, serving open models on a small GPU pool.",
-    "profileText": "SRE at a streaming service, serving open models on a small GPU pool. Mostly here to learn what other teams run in production. Always up for a quick hallway chat between talks.",
-    "profile": {
-      "topics": [
-        "llm-inference",
-        "gpus",
-        "model-serving",
-        "keda",
-        "autoscaling"
-      ],
-      "firstTimer": false,
-      "welcomer": false
-    },
-    "settings": {
-      "meetingOn": false,
-      "accessibleMode": false,
-      "noWalking": false,
-      "locationOn": true,
-      "language": "en",
-      "hideFromLeaderboard": false
-    },
-    "lastLocationId": "outpost-google-cloud",
-    "lastLocation": {
-      "lat": 40.765681,
-      "lon": -111.894954
-    },
-    "lastSeenAt": "2026-11-09T17:18:00.000Z",
-    "visible": true,
-    "xp": 50,
-    "level": 2,
-    "banners": [
-      "scout"
-    ],
-    "blockedIds": [],
-    "createdAt": "2026-11-09T08:57:00.000Z"
-  },
-  {
-    "id": "att-jaegerraven",
-    "handle": "jaegerraven",
-    "faceSeed": "jaegerraven",
-    "workingOn": "Security engineer at a bank, moving a Kafka cluster onto Kubernetes.",
-    "headline": "Security engineer at a bank, moving a Kafka cluster onto Kubernetes.",
-    "profileText": "Security engineer at a bank, moving a Kafka cluster onto Kubernetes. Looking for tools we can try on a small cluster next week. Coffee is on me if you have a working example.",
-    "profile": {
-      "topics": [
-        "streaming",
-        "kafka",
-        "storage",
         "supply-chain",
-        "sigstore"
+        "sigstore",
+        "policy-as-code",
+        "rag",
+        "vector-search"
       ],
       "firstTimer": false,
-      "welcomer": true
+      "welcomer": false
     },
     "settings": {
       "meetingOn": true,
@@ -950,26 +2546,26 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-tailscale",
+    "lastLocationId": "outpost-haproxy-technologies",
     "lastLocation": {
-      "lat": 40.76608,
-      "lon": -111.894048
+      "lat": 40.765755,
+      "lon": -111.894836
     },
-    "lastSeenAt": "2026-11-09T15:24:00.000Z",
+    "lastSeenAt": "2026-11-09T15:59:00.000Z",
     "visible": true,
-    "xp": 10,
+    "xp": 30,
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T08:05:00.000Z"
+    "createdAt": "2026-11-09T03:34:00.000Z"
   },
   {
-    "id": "att-grpcmoose",
-    "handle": "grpcmoose",
-    "faceSeed": "grpcmoose",
-    "workingOn": "Student and open source contributor, testing backup and restore for stateful apps with Velero.",
-    "headline": "Student and open source contributor, testing backup and restore for stateful apps with Velero.",
-    "profileText": "Student and open source contributor, testing backup and restore for stateful apps with Velero. I collect good war stories and share my own. I am trying to keep my notes short enough to actually read later.",
+    "id": "att-booth-sbomkoala",
+    "handle": "sbomkoala",
+    "faceSeed": "sbomkoala",
+    "workingOn": "Release engineer at an automotive supplier, testing backup and restore for stateful apps with Velero.",
+    "headline": "Release engineer at an automotive supplier, testing backup and restore for stateful apps with Velero.",
+    "profileText": "Release engineer at an automotive supplier, testing backup and restore for stateful apps with Velero. Mostly here to learn what other teams run in production. I learn best by asking dumb questions early, so I do.",
     "profile": {
       "topics": [
         "backups",
@@ -987,109 +2583,68 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-tigris-data",
+    "lastLocationId": "outpost-haproxy-technologies",
     "lastLocation": {
-      "lat": 40.766253,
-      "lon": -111.894235
+      "lat": 40.765755,
+      "lon": -111.894836
     },
-    "lastSeenAt": "2026-11-09T16:45:00.000Z",
-    "visible": true,
-    "xp": 40,
-    "level": 1,
-    "banners": [],
-    "blockedIds": [],
-    "createdAt": "2026-11-09T06:50:00.000Z"
-  },
-  {
-    "id": "att-otelcheetah",
-    "handle": "otelcheetah",
-    "faceSeed": "otelcheetah",
-    "workingOn": "Platform engineer at a logistics company, moving a Kafka cluster onto Kubernetes.",
-    "headline": "Platform engineer at a logistics company, moving a Kafka cluster onto Kubernetes.",
-    "profileText": "Platform engineer at a logistics company, moving a Kafka cluster onto Kubernetes. Planning to hit the Project Pavilion and talk to maintainers. Hoping to bring back one idea my team can ship this month.",
-    "profile": {
-      "topics": [
-        "streaming",
-        "kafka",
-        "storage"
-      ],
-      "firstTimer": false,
-      "welcomer": false
-    },
-    "settings": {
-      "meetingOn": true,
-      "accessibleMode": false,
-      "noWalking": false,
-      "locationOn": true,
-      "language": "en",
-      "hideFromLeaderboard": false
-    },
-    "lastLocationId": "outpost-elastic",
-    "lastLocation": {
-      "lat": 40.766121,
-      "lon": -111.894113
-    },
-    "lastSeenAt": "2026-11-09T17:12:00.000Z",
-    "visible": true,
-    "xp": 50,
-    "level": 2,
-    "banners": [
-      "scout"
-    ],
-    "blockedIds": [],
-    "createdAt": "2026-11-09T10:32:00.000Z"
-  },
-  {
-    "id": "att-rookquail",
-    "handle": "rookquail",
-    "faceSeed": "rookquail",
-    "workingOn": "ML engineer at a robotics startup, replacing hand-rolled Helm charts with Crossplane compositions.",
-    "headline": "ML engineer at a robotics startup, replacing hand-rolled Helm charts with Crossplane compositions.",
-    "profileText": "ML engineer at a robotics startup, replacing hand-rolled Helm charts with Crossplane compositions. Looking for tools we can try on a small cluster next week. Hoping to bring back one idea my team can ship this month.",
-    "profile": {
-      "topics": [
-        "crossplane",
-        "helm",
-        "platform-engineering"
-      ],
-      "firstTimer": false,
-      "welcomer": false
-    },
-    "settings": {
-      "meetingOn": true,
-      "accessibleMode": false,
-      "noWalking": false,
-      "locationOn": true,
-      "language": "en",
-      "hideFromLeaderboard": false
-    },
-    "lastLocationId": "outpost-aenix",
-    "lastLocation": {
-      "lat": 40.766566,
-      "lon": -111.894046
-    },
-    "lastSeenAt": "2026-11-09T15:10:00.000Z",
+    "lastSeenAt": "2026-11-09T17:18:00.000Z",
     "visible": true,
     "xp": 30,
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T04:04:00.000Z"
+    "createdAt": "2026-11-09T10:07:00.000Z"
   },
   {
-    "id": "att-kservecheetah",
-    "handle": "kservecheetah",
-    "faceSeed": "kservecheetah",
-    "workingOn": "Founder of a two-person devtools startup, turning noisy alerts into SLOs people trust.",
-    "headline": "Founder of a two-person devtools startup, turning noisy alerts into SLOs people trust.",
-    "profileText": "Founder of a two-person devtools startup, turning noisy alerts into SLOs people trust. Mostly here to learn what other teams run in production. Hoping to bring back one idea my team can ship this month.",
+    "id": "att-booth-sidecarseal",
+    "handle": "sidecarseal",
+    "faceSeed": "sidecarseal",
+    "workingOn": "Engineering manager on a platform team, getting runtime alerts from Falco to the right on-call.",
+    "headline": "Engineering manager on a platform team, getting runtime alerts from Falco to the right on-call.",
+    "profileText": "Engineering manager on a platform team, getting runtime alerts from Falco to the right on-call. I am walking the expo floor to compare a few vendors side by side. I am trying to keep my notes short enough to actually read later.",
     "profile": {
       "topics": [
-        "slos",
-        "observability",
-        "sre",
-        "rag",
-        "vector-search"
+        "falco",
+        "runtime-security",
+        "incident-response"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "outpost-akuity",
+    "lastLocation": {
+      "lat": 40.765919,
+      "lon": -111.894246
+    },
+    "lastSeenAt": "2026-11-09T15:54:00.000Z",
+    "visible": true,
+    "xp": 40,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T04:05:00.000Z"
+  },
+  {
+    "id": "att-booth-gitopsalpaca",
+    "handle": "gitopsalpaca",
+    "faceSeed": "gitopsalpaca",
+    "workingOn": "Student and open source contributor, serving open models on a small GPU pool.",
+    "headline": "Student and open source contributor, serving open models on a small GPU pool.",
+    "profileText": "Student and open source contributor, serving open models on a small GPU pool. Looking for tools we can try on a small cluster next week. Always up for a quick hallway chat between talks.",
+    "profile": {
+      "topics": [
+        "llm-inference",
+        "gpus",
+        "model-serving"
       ],
       "firstTimer": false,
       "welcomer": false
@@ -1102,31 +2657,33 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-microsoft-azure",
+    "lastLocationId": "outpost-cvs-health",
     "lastLocation": {
-      "lat": 40.765718,
-      "lon": -111.894782
+      "lat": 40.766798,
+      "lon": -111.894239
     },
-    "lastSeenAt": "2026-11-09T16:39:00.000Z",
+    "lastSeenAt": "2026-11-09T16:14:00.000Z",
     "visible": true,
-    "xp": 40,
+    "xp": 30,
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T11:59:00.000Z"
+    "createdAt": "2026-11-09T06:48:00.000Z"
   },
   {
-    "id": "att-tektoncapybara",
-    "handle": "tektoncapybara",
-    "faceSeed": "tektoncapybara",
-    "workingOn": "Security engineer at a bank, connecting clusters across three regions.",
-    "headline": "Security engineer at a bank, connecting clusters across three regions.",
-    "profileText": "Security engineer at a bank, connecting clusters across three regions. Planning to hit the Project Pavilion and talk to maintainers. Always up for a quick hallway chat between talks.",
+    "id": "att-booth-etcdimpala",
+    "handle": "etcdimpala",
+    "faceSeed": "etcdimpala",
+    "workingOn": "Security engineer at a bank, giving AI agents safe access to cluster tools over MCP.",
+    "headline": "Security engineer at a bank, giving AI agents safe access to cluster tools over MCP.",
+    "profileText": "Security engineer at a bank, giving AI agents safe access to cluster tools over MCP. Looking for tools we can try on a small cluster next week. Ask me about what broke for us last quarter.",
     "profile": {
       "topics": [
-        "multi-cluster",
-        "networking",
-        "envoy"
+        "ai-agents",
+        "mcp",
+        "security",
+        "opentelemetry",
+        "observability"
       ],
       "firstTimer": true,
       "welcomer": false
@@ -1139,33 +2696,31 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-obot-ai",
+    "lastLocationId": "outpost-vijil",
     "lastLocation": {
-      "lat": 40.766642,
-      "lon": -111.894116
+      "lat": 40.766887,
+      "lon": -111.894311
     },
-    "lastSeenAt": "2026-11-09T16:54:00.000Z",
+    "lastSeenAt": "2026-11-09T17:20:00.000Z",
     "visible": true,
-    "xp": 50,
-    "level": 2,
-    "banners": [
-      "scout"
-    ],
+    "xp": 40,
+    "level": 1,
+    "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T09:16:00.000Z"
+    "createdAt": "2026-11-09T11:17:00.000Z"
   },
   {
-    "id": "att-meshtapir",
-    "handle": "meshtapir",
-    "faceSeed": "meshtapir",
-    "workingOn": "Infrastructure engineer at a game studio, deciding whether a service mesh is worth it.",
-    "headline": "Infrastructure engineer at a game studio, deciding whether a service mesh is worth it.",
-    "profileText": "Infrastructure engineer at a game studio, deciding whether a service mesh is worth it. Planning to hit the Project Pavilion and talk to maintainers. Coffee is on me if you have a working example.",
+    "id": "att-booth-rookibex",
+    "handle": "rookibex",
+    "faceSeed": "rookibex",
+    "workingOn": "Kubernetes admin at a university, getting runtime alerts from Falco to the right on-call.",
+    "headline": "Kubernetes admin at a university, getting runtime alerts from Falco to the right on-call.",
+    "profileText": "Kubernetes admin at a university, getting runtime alerts from Falco to the right on-call. I collect good war stories and share my own. Always up for a quick hallway chat between talks.",
     "profile": {
       "topics": [
-        "service-mesh",
-        "istio",
-        "linkerd"
+        "falco",
+        "runtime-security",
+        "incident-response"
       ],
       "firstTimer": false,
       "welcomer": false
@@ -1178,41 +2733,150 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-planetscale",
+    "lastLocationId": "outpost-google-cloud",
     "lastLocation": {
-      "lat": 40.766451,
-      "lon": -111.894318
+      "lat": 40.765643,
+      "lon": -111.894983
     },
-    "lastSeenAt": "2026-11-09T17:11:00.000Z",
+    "lastSeenAt": "2026-11-09T14:38:00.000Z",
     "visible": true,
-    "xp": 50,
-    "level": 2,
-    "banners": [
-      "scout"
-    ],
+    "xp": 10,
+    "level": 1,
+    "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T12:16:00.000Z"
+    "createdAt": "2026-11-09T03:38:00.000Z"
   },
   {
-    "id": "att-argoibex",
-    "handle": "argoibex",
-    "faceSeed": "argoibex",
-    "workingOn": "Infrastructure engineer at a game studio, moving notebooks into Kubeflow pipelines.",
-    "headline": "Infrastructure engineer at a game studio, moving notebooks into Kubeflow pipelines.",
-    "profileText": "Infrastructure engineer at a game studio, moving notebooks into Kubeflow pipelines. Happy to swap notes with anyone fighting the same problem. If you maintain a CNCF project, I want to hear how you got started.",
+    "id": "att-booth-vitesshedgehog",
+    "handle": "vitesshedgehog",
+    "faceSeed": "vitesshedgehog",
+    "workingOn": "Engineering manager on a platform team, cutting container build times in half.",
+    "headline": "Engineering manager on a platform team, cutting container build times in half.",
+    "profileText": "Engineering manager on a platform team, cutting container build times in half. I keep a list of booths my team asked me to check out. Ask me about what broke for us last quarter.",
     "profile": {
       "topics": [
-        "kubeflow",
-        "mlops",
-        "pipelines",
-        "streaming",
-        "kafka"
+        "containers",
+        "ci-cd",
+        "developer-experience",
+        "vitess",
+        "databases"
       ],
       "firstTimer": false,
       "welcomer": false
     },
     "settings": {
-      "meetingOn": false,
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "outpost-project-kai-scheduler",
+    "lastLocation": {
+      "lat": 40.76687,
+      "lon": -111.894112
+    },
+    "lastSeenAt": "2026-11-09T16:33:00.000Z",
+    "visible": true,
+    "xp": 20,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T05:50:00.000Z"
+  },
+  {
+    "id": "att-booth-linkerdegret",
+    "handle": "linkerdegret",
+    "faceSeed": "linkerdegret",
+    "workingOn": "Solutions engineer at a small consultancy, running Kubernetes at cell towers.",
+    "headline": "Solutions engineer at a small consultancy, running Kubernetes at cell towers.",
+    "profileText": "Solutions engineer at a small consultancy, running Kubernetes at cell towers. Mostly here to learn what other teams run in production. I learn best by asking dumb questions early, so I do.",
+    "profile": {
+      "topics": [
+        "edge",
+        "telco",
+        "networking"
+      ],
+      "firstTimer": true,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "outpost-traversal",
+    "lastLocation": {
+      "lat": 40.765683,
+      "lon": -111.895147
+    },
+    "lastSeenAt": "2026-11-09T16:26:00.000Z",
+    "visible": true,
+    "xp": 30,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T09:10:00.000Z"
+  },
+  {
+    "id": "att-booth-sidecarmanatee",
+    "handle": "sidecarmanatee",
+    "faceSeed": "sidecarmanatee",
+    "workingOn": "Network engineer at a telecom, replacing hand-rolled Helm charts with Crossplane compositions.",
+    "headline": "Network engineer at a telecom, replacing hand-rolled Helm charts with Crossplane compositions.",
+    "profileText": "Network engineer at a telecom, replacing hand-rolled Helm charts with Crossplane compositions. Mostly here to learn what other teams run in production. I am trying to keep my notes short enough to actually read later.",
+    "profile": {
+      "topics": [
+        "crossplane",
+        "helm",
+        "platform-engineering"
+      ],
+      "firstTimer": true,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "outpost-spotify",
+    "lastLocation": {
+      "lat": 40.766561,
+      "lon": -111.894304
+    },
+    "lastSeenAt": "2026-11-09T17:21:00.000Z",
+    "visible": true,
+    "xp": 40,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T09:17:00.000Z"
+  },
+  {
+    "id": "att-booth-jaegerorca",
+    "handle": "jaegerorca",
+    "faceSeed": "jaegerorca",
+    "workingOn": "Platform engineer at a logistics company, getting the Kubernetes bill under control.",
+    "headline": "Platform engineer at a logistics company, getting the Kubernetes bill under control.",
+    "profileText": "Platform engineer at a logistics company, getting the Kubernetes bill under control. Looking for tools we can try on a small cluster next week. I learn best by asking dumb questions early, so I do.",
+    "profile": {
+      "topics": [
+        "finops",
+        "cost",
+        "autoscaling"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
       "accessibleMode": false,
       "noWalking": false,
       "locationOn": true,
@@ -1221,185 +2885,29 @@
     },
     "lastLocationId": "outpost-datadog",
     "lastLocation": {
-      "lat": 40.765873,
-      "lon": -111.894391
+      "lat": 40.765842,
+      "lon": -111.894398
     },
-    "lastSeenAt": "2026-11-09T16:25:00.000Z",
-    "visible": true,
-    "xp": 40,
-    "level": 1,
-    "banners": [],
-    "blockedIds": [],
-    "createdAt": "2026-11-09T03:37:00.000Z"
-  },
-  {
-    "id": "att-tracenarwhal",
-    "handle": "tracenarwhal",
-    "faceSeed": "tracenarwhal",
-    "workingOn": "Cloud architect at an insurance company, starting a cloud native meetup in a small city.",
-    "headline": "Cloud architect at an insurance company, starting a cloud native meetup in a small city.",
-    "profileText": "Cloud architect at an insurance company, starting a cloud native meetup in a small city. Planning to hit the Project Pavilion and talk to maintainers. Always up for a quick hallway chat between talks.",
-    "profile": {
-      "topics": [
-        "community",
-        "meetups",
-        "mentoring",
-        "kueue",
-        "gpu-sharing"
-      ],
-      "firstTimer": true,
-      "welcomer": false
-    },
-    "settings": {
-      "meetingOn": true,
-      "accessibleMode": false,
-      "noWalking": false,
-      "locationOn": true,
-      "language": "en",
-      "hideFromLeaderboard": false
-    },
-    "lastLocationId": "outpost-elastic",
-    "lastLocation": {
-      "lat": 40.766121,
-      "lon": -111.894113
-    },
-    "lastSeenAt": "2026-11-09T16:05:00.000Z",
-    "visible": false,
-    "xp": 30,
-    "level": 1,
-    "banners": [],
-    "blockedIds": [],
-    "createdAt": "2026-11-09T10:42:00.000Z"
-  },
-  {
-    "id": "att-nodebadger",
-    "handle": "nodebadger",
-    "faceSeed": "nodebadger",
-    "workingOn": "Cloud architect at an insurance company, rolling out OpenTelemetry across a hundred services.",
-    "headline": "Cloud architect at an insurance company, rolling out OpenTelemetry across a hundred services.",
-    "profileText": "Cloud architect at an insurance company, rolling out OpenTelemetry across a hundred services. I collect good war stories and share my own. If you maintain a CNCF project, I want to hear how you got started.",
-    "profile": {
-      "topics": [
-        "opentelemetry",
-        "observability",
-        "tracing"
-      ],
-      "firstTimer": false,
-      "welcomer": false
-    },
-    "settings": {
-      "meetingOn": true,
-      "accessibleMode": false,
-      "noWalking": false,
-      "locationOn": true,
-      "language": "en",
-      "hideFromLeaderboard": false
-    },
-    "lastLocationId": "outpost-grafana-labs",
-    "lastLocation": {
-      "lat": 40.766237,
-      "lon": -111.894318
-    },
-    "lastSeenAt": "2026-11-09T17:20:00.000Z",
-    "visible": true,
-    "xp": 50,
-    "level": 2,
-    "banners": [
-      "scout"
-    ],
-    "blockedIds": [],
-    "createdAt": "2026-11-09T05:54:00.000Z"
-  },
-  {
-    "id": "att-kedaferret",
-    "handle": "kedaferret",
-    "faceSeed": "kedaferret",
-    "workingOn": "Security engineer at a bank, moving notebooks into Kubeflow pipelines.",
-    "headline": "Security engineer at a bank, moving notebooks into Kubeflow pipelines.",
-    "profileText": "Security engineer at a bank, moving notebooks into Kubeflow pipelines. I collect good war stories and share my own. If you maintain a CNCF project, I want to hear how you got started.",
-    "profile": {
-      "topics": [
-        "kubeflow",
-        "mlops",
-        "pipelines",
-        "multi-cluster",
-        "networking"
-      ],
-      "firstTimer": true,
-      "welcomer": false
-    },
-    "settings": {
-      "meetingOn": true,
-      "accessibleMode": false,
-      "noWalking": false,
-      "locationOn": true,
-      "language": "en",
-      "hideFromLeaderboard": false
-    },
-    "lastLocationId": "outpost-dragonflydb",
-    "lastLocation": {
-      "lat": 40.766195,
-      "lon": -111.89417
-    },
-    "lastSeenAt": "2026-11-09T17:14:00.000Z",
-    "visible": true,
-    "xp": 20,
-    "level": 1,
-    "banners": [],
-    "blockedIds": [],
-    "createdAt": "2026-11-09T08:18:00.000Z"
-  },
-  {
-    "id": "att-helmlemur",
-    "handle": "helmlemur",
-    "faceSeed": "helmlemur",
-    "workingOn": "Backend developer at a retail chain, rotating secrets without restarting the world.",
-    "headline": "Backend developer at a retail chain, rotating secrets without restarting the world.",
-    "profileText": "Backend developer at a retail chain, rotating secrets without restarting the world. I collect good war stories and share my own. Hoping to bring back one idea my team can ship this month.",
-    "profile": {
-      "topics": [
-        "secrets",
-        "external-secrets",
-        "security",
-        "backups",
-        "velero"
-      ],
-      "firstTimer": false,
-      "welcomer": true
-    },
-    "settings": {
-      "meetingOn": false,
-      "accessibleMode": false,
-      "noWalking": false,
-      "locationOn": true,
-      "language": "en",
-      "hideFromLeaderboard": false
-    },
-    "lastLocationId": "outpost-wiz",
-    "lastLocation": {
-      "lat": 40.766022,
-      "lon": -111.894113
-    },
-    "lastSeenAt": "2026-11-09T15:26:00.000Z",
+    "lastSeenAt": "2026-11-09T17:55:00.000Z",
     "visible": true,
     "xp": 30,
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T11:00:00.000Z"
+    "createdAt": "2026-11-09T13:16:00.000Z"
   },
   {
-    "id": "att-podllama",
-    "handle": "podllama",
-    "faceSeed": "podllama",
-    "workingOn": "Developer advocate at a database startup, mentoring new contributors through their first pull request.",
-    "headline": "Developer advocate at a database startup, mentoring new contributors through their first pull request.",
-    "profileText": "Developer advocate at a database startup, mentoring new contributors through their first pull request. Looking for tools we can try on a small cluster next week. I would love to meet people who already did this migration.",
+    "id": "att-booth-kservemarten",
+    "handle": "kservemarten",
+    "faceSeed": "kservemarten",
+    "workingOn": "Network engineer at a telecom, sharding a busy MySQL database with Vitess.",
+    "headline": "Network engineer at a telecom, sharding a busy MySQL database with Vitess.",
+    "profileText": "Network engineer at a telecom, sharding a busy MySQL database with Vitess. Planning to hit the Project Pavilion and talk to maintainers. I learn best by asking dumb questions early, so I do.",
     "profile": {
       "topics": [
-        "open-source",
-        "mentoring",
-        "community"
+        "vitess",
+        "databases",
+        "scaling"
       ],
       "firstTimer": false,
       "welcomer": false
@@ -1414,31 +2922,31 @@
     },
     "lastLocationId": "outpost-google-cloud",
     "lastLocation": {
-      "lat": 40.765681,
-      "lon": -111.894954
+      "lat": 40.765643,
+      "lon": -111.894983
     },
-    "lastSeenAt": "2026-11-09T15:20:00.000Z",
+    "lastSeenAt": "2026-11-09T17:46:00.000Z",
     "visible": true,
-    "xp": 20,
-    "level": 1,
-    "banners": [],
+    "xp": 50,
+    "level": 2,
+    "banners": [
+      "scout"
+    ],
     "blockedIds": [],
-    "createdAt": "2026-11-09T11:30:00.000Z"
+    "createdAt": "2026-11-09T04:34:00.000Z"
   },
   {
-    "id": "att-llmstoat",
-    "handle": "llmstoat",
-    "faceSeed": "llmstoat",
-    "workingOn": "ML engineer at a robotics startup, mentoring new contributors through their first pull request.",
-    "headline": "ML engineer at a robotics startup, mentoring new contributors through their first pull request.",
-    "profileText": "ML engineer at a robotics startup, mentoring new contributors through their first pull request. At the showcase I want to see real demos, not slides. Ask me about what broke for us last quarter.",
+    "id": "att-booth-kservebadger",
+    "handle": "kservebadger",
+    "faceSeed": "kservebadger",
+    "workingOn": "Staff engineer at a fintech, replacing long-lived service keys with workload identity.",
+    "headline": "Staff engineer at a fintech, replacing long-lived service keys with workload identity.",
+    "profileText": "Staff engineer at a fintech, replacing long-lived service keys with workload identity. At the showcase I want to see real demos, not slides. If you maintain a CNCF project, I want to hear how you got started.",
     "profile": {
       "topics": [
-        "open-source",
-        "mentoring",
-        "community",
-        "falco",
-        "runtime-security"
+        "spiffe",
+        "workload-identity",
+        "zero-trust"
       ],
       "firstTimer": true,
       "welcomer": false
@@ -1451,33 +2959,31 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-edge-delta",
+    "lastLocationId": "outpost-crusoe",
     "lastLocation": {
-      "lat": 40.766377,
-      "lon": -111.894251
+      "lat": 40.765587,
+      "lon": -111.894711
     },
-    "lastSeenAt": "2026-11-09T17:46:00.000Z",
-    "visible": true,
-    "xp": 40,
+    "lastSeenAt": "2026-11-09T16:11:00.000Z",
+    "visible": false,
+    "xp": 20,
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T03:34:00.000Z"
+    "createdAt": "2026-11-09T06:45:00.000Z"
   },
   {
-    "id": "att-kubelynx",
-    "handle": "kubelynx",
-    "faceSeed": "kubelynx",
-    "workingOn": "Engineering manager on a platform team, testing backup and restore for stateful apps with Velero.",
-    "headline": "Engineering manager on a platform team, testing backup and restore for stateful apps with Velero.",
-    "profileText": "Engineering manager on a platform team, testing backup and restore for stateful apps with Velero. Happy to swap notes with anyone fighting the same problem. Coffee is on me if you have a working example.",
+    "id": "att-booth-grpcpelican",
+    "handle": "grpcpelican",
+    "faceSeed": "grpcpelican",
+    "workingOn": "Engineering manager on a platform team, scheduling training jobs fairly across research teams.",
+    "headline": "Engineering manager on a platform team, scheduling training jobs fairly across research teams.",
+    "profileText": "Engineering manager on a platform team, scheduling training jobs fairly across research teams. Happy to swap notes with anyone fighting the same problem. Coffee is on me if you have a working example.",
     "profile": {
       "topics": [
-        "backups",
-        "velero",
-        "storage",
-        "spiffe",
-        "workload-identity"
+        "kueue",
+        "gpu-sharing",
+        "batch"
       ],
       "firstTimer": false,
       "welcomer": true
@@ -1490,12 +2996,12 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-villagesql",
+    "lastLocationId": "outpost-google-cloud",
     "lastLocation": {
-      "lat": 40.766843,
-      "lon": -111.894237
+      "lat": 40.765643,
+      "lon": -111.894983
     },
-    "lastSeenAt": "2026-11-09T17:27:00.000Z",
+    "lastSeenAt": "2026-11-09T17:22:00.000Z",
     "visible": true,
     "xp": 40,
     "level": 1,
@@ -1504,7 +3010,7 @@
     "createdAt": "2026-11-09T11:06:00.000Z"
   },
   {
-    "id": "att-gpucheetah",
+    "id": "att-booth-gpucheetah",
     "handle": "gpucheetah",
     "faceSeed": "gpucheetah",
     "workingOn": "Staff engineer at a fintech, signing every image and checking it at admission.",
@@ -1529,12 +3035,12 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-haproxy-technologies",
+    "lastLocationId": "outpost-cribl",
     "lastLocation": {
-      "lat": 40.765789,
-      "lon": -111.894812
+      "lat": 40.766177,
+      "lon": -111.894237
     },
-    "lastSeenAt": "2026-11-09T16:11:00.000Z",
+    "lastSeenAt": "2026-11-09T16:50:00.000Z",
     "visible": true,
     "xp": 20,
     "level": 1,
@@ -1543,7 +3049,7 @@
     "createdAt": "2026-11-09T12:05:00.000Z"
   },
   {
-    "id": "att-vectorvole",
+    "id": "att-booth-vectorvole",
     "handle": "vectorvole",
     "faceSeed": "vectorvole",
     "workingOn": "Solutions engineer at a small consultancy, testing backup and restore for stateful apps with Velero.",
@@ -1559,19 +3065,19 @@
       "welcomer": false
     },
     "settings": {
-      "meetingOn": false,
+      "meetingOn": true,
       "accessibleMode": false,
       "noWalking": false,
       "locationOn": true,
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-google-cloud",
+    "lastLocationId": "outpost-elastic",
     "lastLocation": {
-      "lat": 40.765681,
-      "lon": -111.894954
+      "lat": 40.766099,
+      "lon": -111.89411
     },
-    "lastSeenAt": "2026-11-09T15:56:00.000Z",
+    "lastSeenAt": "2026-11-09T17:44:00.000Z",
     "visible": true,
     "xp": 20,
     "level": 1,
@@ -1580,7 +3086,7 @@
     "createdAt": "2026-11-09T05:26:00.000Z"
   },
   {
-    "id": "att-helmpenguin",
+    "id": "att-booth-helmpenguin",
     "handle": "helmpenguin",
     "faceSeed": "helmpenguin",
     "workingOn": "Solutions engineer at a small consultancy, rotating secrets without restarting the world.",
@@ -1603,12 +3109,12 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-talos-by-sidero-labs",
+    "lastLocationId": "outpost-dash0",
     "lastLocation": {
-      "lat": 40.765869,
-      "lon": -111.894705
+      "lat": 40.76584,
+      "lon": -111.894831
     },
-    "lastSeenAt": "2026-11-09T17:41:00.000Z",
+    "lastSeenAt": "2026-11-09T17:54:00.000Z",
     "visible": true,
     "xp": 20,
     "level": 1,
@@ -1617,7 +3123,7 @@
     "createdAt": "2026-11-09T10:05:00.000Z"
   },
   {
-    "id": "att-ebpfbadger",
+    "id": "att-booth-ebpfbadger",
     "handle": "ebpfbadger",
     "faceSeed": "ebpfbadger",
     "workingOn": "Kubernetes admin at a university, signing every image and checking it at admission.",
@@ -1640,12 +3146,12 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-aikido-security",
+    "lastLocationId": "outpost-infisical",
     "lastLocation": {
-      "lat": 40.766509,
-      "lon": -111.894318
+      "lat": 40.765799,
+      "lon": -111.894541
     },
-    "lastSeenAt": "2026-11-09T17:31:00.000Z",
+    "lastSeenAt": "2026-11-09T17:07:00.000Z",
     "visible": true,
     "xp": 40,
     "level": 1,
@@ -1654,22 +3160,22 @@
     "createdAt": "2026-11-09T07:22:00.000Z"
   },
   {
-    "id": "att-argoalpaca",
-    "handle": "argoalpaca",
-    "faceSeed": "argoalpaca",
-    "workingOn": "Cloud architect at an insurance company, debugging DNS and network policy with eBPF tools.",
-    "headline": "Cloud architect at an insurance company, debugging DNS and network policy with eBPF tools.",
-    "profileText": "Cloud architect at an insurance company, debugging DNS and network policy with eBPF tools. Happy to swap notes with anyone fighting the same problem. Ask me about what broke for us last quarter.",
+    "id": "att-booth-llmgecko",
+    "handle": "llmgecko",
+    "faceSeed": "llmgecko",
+    "workingOn": "ML engineer at a robotics startup, mentoring new contributors through their first pull request.",
+    "headline": "ML engineer at a robotics startup, mentoring new contributors through their first pull request.",
+    "profileText": "ML engineer at a robotics startup, mentoring new contributors through their first pull request. I collect good war stories and share my own. Ask me about what broke for us last quarter.",
     "profile": {
       "topics": [
-        "ebpf",
-        "cilium",
-        "networking",
         "open-source",
-        "mentoring"
+        "mentoring",
+        "community",
+        "keda",
+        "autoscaling"
       ],
       "firstTimer": false,
-      "welcomer": false
+      "welcomer": true
     },
     "settings": {
       "meetingOn": false,
@@ -1679,31 +3185,31 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-devzero",
+    "lastLocationId": "outpost-crash-override",
     "lastLocation": {
-      "lat": 40.765948,
-      "lon": -111.894113
+      "lat": 40.766177,
+      "lon": -111.894118
     },
-    "lastSeenAt": "2026-11-09T16:50:00.000Z",
+    "lastSeenAt": "2026-11-09T17:32:00.000Z",
     "visible": true,
     "xp": 30,
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T04:15:00.000Z"
+    "createdAt": "2026-11-09T10:20:00.000Z"
   },
   {
-    "id": "att-kedakoala",
-    "handle": "kedakoala",
-    "faceSeed": "kedakoala",
-    "workingOn": "Kubernetes admin at a university, scaling batch workers on queue depth with KEDA.",
-    "headline": "Kubernetes admin at a university, scaling batch workers on queue depth with KEDA.",
-    "profileText": "Kubernetes admin at a university, scaling batch workers on queue depth with KEDA. I collect good war stories and share my own. Hoping to bring back one idea my team can ship this month.",
+    "id": "att-booth-kedapanda",
+    "handle": "kedapanda",
+    "faceSeed": "kedapanda",
+    "workingOn": "Network engineer at a telecom, migrating from Ingress to Gateway API.",
+    "headline": "Network engineer at a telecom, migrating from Ingress to Gateway API.",
+    "profileText": "Network engineer at a telecom, migrating from Ingress to Gateway API. Happy to swap notes with anyone fighting the same problem. If you maintain a CNCF project, I want to hear how you got started.",
     "profile": {
       "topics": [
-        "keda",
-        "autoscaling",
-        "event-driven"
+        "gateway-api",
+        "ingress",
+        "networking"
       ],
       "firstTimer": false,
       "welcomer": false
@@ -1716,31 +3222,70 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-harness",
+    "lastLocationId": "outpost-sonatype",
     "lastLocation": {
-      "lat": 40.765866,
-      "lon": -111.894244
+      "lat": 40.766159,
+      "lon": -111.894169
     },
-    "lastSeenAt": "2026-11-09T16:45:00.000Z",
+    "lastSeenAt": "2026-11-09T17:20:00.000Z",
+    "visible": true,
+    "xp": 10,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T05:34:00.000Z"
+  },
+  {
+    "id": "att-booth-jaegeryak",
+    "handle": "jaegeryak",
+    "faceSeed": "jaegeryak",
+    "workingOn": "Ops engineer at a public sector agency, cutting container build times in half.",
+    "headline": "Ops engineer at a public sector agency, cutting container build times in half.",
+    "profileText": "Ops engineer at a public sector agency, cutting container build times in half. Happy to swap notes with anyone fighting the same problem. I am trying to keep my notes short enough to actually read later.",
+    "profile": {
+      "topics": [
+        "containers",
+        "ci-cd",
+        "developer-experience"
+      ],
+      "firstTimer": true,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "outpost-fastly",
+    "lastLocation": {
+      "lat": 40.766382,
+      "lon": -111.894252
+    },
+    "lastSeenAt": "2026-11-09T17:55:00.000Z",
     "visible": true,
     "xp": 20,
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T08:11:00.000Z"
+    "createdAt": "2026-11-09T11:47:00.000Z"
   },
   {
-    "id": "att-certalpaca",
-    "handle": "certalpaca",
-    "faceSeed": "certalpaca",
-    "workingOn": "DevOps lead at a hospital network, scaling batch workers on queue depth with KEDA.",
-    "headline": "DevOps lead at a hospital network, scaling batch workers on queue depth with KEDA.",
-    "profileText": "DevOps lead at a hospital network, scaling batch workers on queue depth with KEDA. Planning to hit the Project Pavilion and talk to maintainers. I am trying to keep my notes short enough to actually read later.",
+    "id": "att-booth-istioibex",
+    "handle": "istioibex",
+    "faceSeed": "istioibex",
+    "workingOn": "Founder of a two-person devtools startup, building a golden path so teams can ship without filing tickets.",
+    "headline": "Founder of a two-person devtools startup, building a golden path so teams can ship without filing tickets.",
+    "profileText": "Founder of a two-person devtools startup, building a golden path so teams can ship without filing tickets. I am walking the expo floor to compare a few vendors side by side. Always up for a quick hallway chat between talks.",
     "profile": {
       "topics": [
-        "keda",
-        "autoscaling",
-        "event-driven"
+        "platform-engineering",
+        "internal-developer-platforms",
+        "backstage",
+        "kyverno",
+        "policy-as-code"
       ],
       "firstTimer": false,
       "welcomer": false
@@ -1753,10 +3298,49 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-google-cloud",
+    "lastLocationId": "outpost-mirrord-by-metalbear",
     "lastLocation": {
-      "lat": 40.765681,
-      "lon": -111.894954
+      "lat": 40.766784,
+      "lon": -111.894325
+    },
+    "lastSeenAt": "2026-11-09T16:25:00.000Z",
+    "visible": true,
+    "xp": 30,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T10:55:00.000Z"
+  },
+  {
+    "id": "att-booth-tracekoala",
+    "handle": "tracekoala",
+    "faceSeed": "tracekoala",
+    "workingOn": "Founder of a two-person devtools startup, replacing hand-rolled Helm charts with Crossplane compositions.",
+    "headline": "Founder of a two-person devtools startup, replacing hand-rolled Helm charts with Crossplane compositions.",
+    "profileText": "Founder of a two-person devtools startup, replacing hand-rolled Helm charts with Crossplane compositions. Planning to hit the Project Pavilion and talk to maintainers. Ask me about what broke for us last quarter.",
+    "profile": {
+      "topics": [
+        "crossplane",
+        "helm",
+        "platform-engineering",
+        "supply-chain",
+        "sigstore"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "outpost-amazon-web-services",
+    "lastLocation": {
+      "lat": 40.765552,
+      "lon": -111.894975
     },
     "lastSeenAt": "2026-11-09T17:44:00.000Z",
     "visible": true,
@@ -1764,22 +3348,20 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T11:30:00.000Z"
+    "createdAt": "2026-11-09T05:16:00.000Z"
   },
   {
-    "id": "att-fluxgecko",
-    "handle": "fluxgecko",
-    "faceSeed": "fluxgecko",
-    "workingOn": "Solutions engineer at a small consultancy, serving open models on a small GPU pool.",
-    "headline": "Solutions engineer at a small consultancy, serving open models on a small GPU pool.",
-    "profileText": "Solutions engineer at a small consultancy, serving open models on a small GPU pool. Looking for tools we can try on a small cluster next week. I would love to meet people who already did this migration.",
+    "id": "att-booth-yamljackal",
+    "handle": "yamljackal",
+    "faceSeed": "yamljackal",
+    "workingOn": "Backend developer at a retail chain, sharding a busy MySQL database with Vitess.",
+    "headline": "Backend developer at a retail chain, sharding a busy MySQL database with Vitess.",
+    "profileText": "Backend developer at a retail chain, sharding a busy MySQL database with Vitess. I keep a list of booths my team asked me to check out. If you maintain a CNCF project, I want to hear how you got started.",
     "profile": {
       "topics": [
-        "llm-inference",
-        "gpus",
-        "model-serving",
-        "opentelemetry",
-        "observability"
+        "vitess",
+        "databases",
+        "scaling"
       ],
       "firstTimer": false,
       "welcomer": false
@@ -1792,72 +3374,224 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-amazon-web-services",
+    "lastLocationId": "outpost-haproxy-technologies",
     "lastLocation": {
-      "lat": 40.765594,
-      "lon": -111.894946
+      "lat": 40.765755,
+      "lon": -111.894836
+    },
+    "lastSeenAt": "2026-11-09T17:54:00.000Z",
+    "visible": true,
+    "xp": 10,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T10:30:00.000Z"
+  },
+  {
+    "id": "att-booth-spiffetapir",
+    "handle": "spiffetapir",
+    "faceSeed": "spiffetapir",
+    "workingOn": "Security engineer at a bank, replacing long-lived service keys with workload identity.",
+    "headline": "Security engineer at a bank, replacing long-lived service keys with workload identity.",
+    "profileText": "Security engineer at a bank, replacing long-lived service keys with workload identity. Happy to swap notes with anyone fighting the same problem. Always up for a quick hallway chat between talks.",
+    "profile": {
+      "topics": [
+        "spiffe",
+        "workload-identity",
+        "zero-trust",
+        "platform-engineering",
+        "internal-developer-platforms"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "outpost-talos-by-sidero-labs",
+    "lastLocation": {
+      "lat": 40.765838,
+      "lon": -111.894725
+    },
+    "lastSeenAt": "2026-11-09T17:12:00.000Z",
+    "visible": true,
+    "xp": 20,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T13:57:00.000Z"
+  },
+  {
+    "id": "att-booth-argokiwi",
+    "handle": "argokiwi",
+    "faceSeed": "argokiwi",
+    "workingOn": "Student and open source contributor, running Kubernetes at cell towers.",
+    "headline": "Student and open source contributor, running Kubernetes at cell towers.",
+    "profileText": "Student and open source contributor, running Kubernetes at cell towers. I collect good war stories and share my own. I would love to meet people who already did this migration.",
+    "profile": {
+      "topics": [
+        "edge",
+        "telco",
+        "networking"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": false,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "outpost-pulumi",
+    "lastLocation": {
+      "lat": 40.76616,
+      "lon": -111.894304
+    },
+    "lastSeenAt": "2026-11-09T17:33:00.000Z",
+    "visible": true,
+    "xp": 50,
+    "level": 2,
+    "banners": [
+      "scout"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T07:47:00.000Z"
+  },
+  {
+    "id": "att-booth-kedallama",
+    "handle": "kedallama",
+    "faceSeed": "kedallama",
+    "workingOn": "Solutions engineer at a small consultancy, mentoring new contributors through their first pull request.",
+    "headline": "Solutions engineer at a small consultancy, mentoring new contributors through their first pull request.",
+    "profileText": "Solutions engineer at a small consultancy, mentoring new contributors through their first pull request. Looking for tools we can try on a small cluster next week. Hoping to bring back one idea my team can ship this month.",
+    "profile": {
+      "topics": [
+        "open-source",
+        "mentoring",
+        "community"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "outpost-haproxy-technologies",
+    "lastLocation": {
+      "lat": 40.765755,
+      "lon": -111.894836
+    },
+    "lastSeenAt": "2026-11-09T16:27:00.000Z",
+    "visible": false,
+    "xp": 30,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T12:00:00.000Z"
+  },
+  {
+    "id": "att-booth-envoygecko",
+    "handle": "envoygecko",
+    "faceSeed": "envoygecko",
+    "workingOn": "SRE at a streaming service, scheduling training jobs fairly across research teams.",
+    "headline": "SRE at a streaming service, scheduling training jobs fairly across research teams.",
+    "profileText": "SRE at a streaming service, scheduling training jobs fairly across research teams. Planning to hit the Project Pavilion and talk to maintainers. Ask me about what broke for us last quarter.",
+    "profile": {
+      "topics": [
+        "kueue",
+        "gpu-sharing",
+        "batch"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "outpost-microsoft-azure",
+    "lastLocation": {
+      "lat": 40.765682,
+      "lon": -111.894804
     },
     "lastSeenAt": "2026-11-09T16:04:00.000Z",
+    "visible": true,
+    "xp": 20,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T04:34:00.000Z"
+  },
+  {
+    "id": "att-booth-rookkiwi",
+    "handle": "rookkiwi",
+    "faceSeed": "rookkiwi",
+    "workingOn": "DevOps lead at a hospital network, running a fleet of small clusters at retail stores.",
+    "headline": "DevOps lead at a hospital network, running a fleet of small clusters at retail stores.",
+    "profileText": "DevOps lead at a hospital network, running a fleet of small clusters at retail stores. I collect good war stories and share my own. I am trying to keep my notes short enough to actually read later.",
+    "profile": {
+      "topics": [
+        "multi-cluster",
+        "fleet-management",
+        "edge",
+        "spiffe",
+        "workload-identity"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "outpost-canonical",
+    "lastLocation": {
+      "lat": 40.765579,
+      "lon": -111.895176
+    },
+    "lastSeenAt": "2026-11-09T17:30:00.000Z",
     "visible": true,
     "xp": 30,
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T12:25:00.000Z"
+    "createdAt": "2026-11-09T03:16:00.000Z"
   },
   {
-    "id": "att-tektonpanda",
-    "handle": "tektonpanda",
-    "faceSeed": "tektonpanda",
-    "workingOn": "Site reliability engineer at a travel site, scheduling training jobs fairly across research teams.",
-    "headline": "Site reliability engineer at a travel site, scheduling training jobs fairly across research teams.",
-    "profileText": "Site reliability engineer at a travel site, scheduling training jobs fairly across research teams. Mostly here to learn what other teams run in production. Coffee is on me if you have a working example.",
+    "id": "att-booth-otelgecko",
+    "handle": "otelgecko",
+    "faceSeed": "otelgecko",
+    "workingOn": "Founder of a two-person devtools startup, picking block storage for a new on-prem cluster.",
+    "headline": "Founder of a two-person devtools startup, picking block storage for a new on-prem cluster.",
+    "profileText": "Founder of a two-person devtools startup, picking block storage for a new on-prem cluster. I keep a list of booths my team asked me to check out. I learn best by asking dumb questions early, so I do.",
     "profile": {
       "topics": [
-        "kueue",
-        "gpu-sharing",
-        "batch",
-        "finops",
-        "cost"
-      ],
-      "firstTimer": false,
-      "welcomer": false
-    },
-    "settings": {
-      "meetingOn": true,
-      "accessibleMode": false,
-      "noWalking": false,
-      "locationOn": true,
-      "language": "en",
-      "hideFromLeaderboard": false
-    },
-    "lastLocationId": "outpost-elastic",
-    "lastLocation": {
-      "lat": 40.766121,
-      "lon": -111.894113
-    },
-    "lastSeenAt": "2026-11-09T17:58:00.000Z",
-    "visible": true,
-    "xp": 50,
-    "level": 2,
-    "banners": [
-      "scout"
-    ],
-    "blockedIds": [],
-    "createdAt": "2026-11-09T05:08:00.000Z"
-  },
-  {
-    "id": "att-fluxbadger",
-    "handle": "fluxbadger",
-    "faceSeed": "fluxbadger",
-    "workingOn": "Network engineer at a telecom, giving AI agents safe access to cluster tools over MCP.",
-    "headline": "Network engineer at a telecom, giving AI agents safe access to cluster tools over MCP.",
-    "profileText": "Network engineer at a telecom, giving AI agents safe access to cluster tools over MCP. I collect good war stories and share my own. I learn best by asking dumb questions early, so I do.",
-    "profile": {
-      "topics": [
-        "ai-agents",
-        "mcp",
-        "security"
+        "storage",
+        "rook",
+        "ceph",
+        "secrets",
+        "external-secrets"
       ],
       "firstTimer": true,
       "welcomer": false
@@ -1870,230 +3604,33 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-everbridge-xmatters",
+    "lastLocationId": "outpost-cvs-health",
     "lastLocation": {
-      "lat": 40.766393,
-      "lon": -111.894233
+      "lat": 40.766798,
+      "lon": -111.894239
     },
-    "lastSeenAt": "2026-11-09T16:55:00.000Z",
-    "visible": true,
-    "xp": 20,
+    "lastSeenAt": "2026-11-09T15:44:00.000Z",
+    "visible": false,
+    "xp": 10,
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T08:42:00.000Z"
+    "createdAt": "2026-11-09T11:53:00.000Z"
   },
   {
-    "id": "att-kedacapybara",
-    "handle": "kedacapybara",
-    "faceSeed": "kedacapybara",
-    "workingOn": "ML engineer at a robotics startup, starting a cloud native meetup in a small city.",
-    "headline": "ML engineer at a robotics startup, starting a cloud native meetup in a small city.",
-    "profileText": "ML engineer at a robotics startup, starting a cloud native meetup in a small city. At the showcase I want to see real demos, not slides. I am trying to keep my notes short enough to actually read later.",
+    "id": "att-booth-kedaseal",
+    "handle": "kedaseal",
+    "faceSeed": "kedaseal",
+    "workingOn": "Security engineer at a bank, writing Kyverno policies the developers do not hate.",
+    "headline": "Security engineer at a bank, writing Kyverno policies the developers do not hate.",
+    "profileText": "Security engineer at a bank, writing Kyverno policies the developers do not hate. I keep a list of booths my team asked me to check out. I am trying to keep my notes short enough to actually read later.",
     "profile": {
       "topics": [
-        "community",
-        "meetups",
-        "mentoring"
-      ],
-      "firstTimer": true,
-      "welcomer": false
-    },
-    "settings": {
-      "meetingOn": true,
-      "accessibleMode": false,
-      "noWalking": false,
-      "locationOn": true,
-      "language": "en",
-      "hideFromLeaderboard": false
-    },
-    "lastLocationId": "outpost-project-cedar",
-    "lastLocation": {
-      "lat": 40.766868,
-      "lon": -111.893875
-    },
-    "lastSeenAt": "2026-11-09T17:43:00.000Z",
-    "visible": true,
-    "xp": 40,
-    "level": 1,
-    "banners": [],
-    "blockedIds": [],
-    "createdAt": "2026-11-09T08:19:00.000Z"
-  },
-  {
-    "id": "att-tracekoala",
-    "handle": "tracekoala",
-    "faceSeed": "tracekoala",
-    "workingOn": "Site reliability engineer at a travel site, building a golden path so teams can ship without filing tickets.",
-    "headline": "Site reliability engineer at a travel site, building a golden path so teams can ship without filing tickets.",
-    "profileText": "Site reliability engineer at a travel site, building a golden path so teams can ship without filing tickets. Mostly here to learn what other teams run in production. I am trying to keep my notes short enough to actually read later.",
-    "profile": {
-      "topics": [
-        "platform-engineering",
-        "internal-developer-platforms",
-        "backstage",
-        "opentelemetry",
-        "observability"
-      ],
-      "firstTimer": false,
-      "welcomer": false
-    },
-    "settings": {
-      "meetingOn": true,
-      "accessibleMode": false,
-      "noWalking": false,
-      "locationOn": true,
-      "language": "en",
-      "hideFromLeaderboard": false
-    },
-    "lastLocationId": "outpost-amazon-web-services",
-    "lastLocation": {
-      "lat": 40.765594,
-      "lon": -111.894946
-    },
-    "lastSeenAt": "2026-11-09T17:43:00.000Z",
-    "visible": true,
-    "xp": 50,
-    "level": 2,
-    "banners": [
-      "scout"
-    ],
-    "blockedIds": [],
-    "createdAt": "2026-11-09T12:30:00.000Z"
-  },
-  {
-    "id": "att-jaegernarwhal",
-    "handle": "jaegernarwhal",
-    "faceSeed": "jaegernarwhal",
-    "workingOn": "Ops engineer at a public sector agency, debugging DNS and network policy with eBPF tools.",
-    "headline": "Ops engineer at a public sector agency, debugging DNS and network policy with eBPF tools.",
-    "profileText": "Ops engineer at a public sector agency, debugging DNS and network policy with eBPF tools. I collect good war stories and share my own. Hoping to bring back one idea my team can ship this month.",
-    "profile": {
-      "topics": [
-        "ebpf",
-        "cilium",
-        "networking",
-        "kueue",
-        "gpu-sharing"
-      ],
-      "firstTimer": false,
-      "welcomer": false
-    },
-    "settings": {
-      "meetingOn": true,
-      "accessibleMode": false,
-      "noWalking": false,
-      "locationOn": true,
-      "language": "en",
-      "hideFromLeaderboard": false
-    },
-    "lastLocationId": "outpost-vast-data",
-    "lastLocation": {
-      "lat": 40.766335,
-      "lon": -111.894233
-    },
-    "lastSeenAt": "2026-11-09T17:57:00.000Z",
-    "visible": true,
-    "xp": 50,
-    "level": 2,
-    "banners": [
-      "scout"
-    ],
-    "blockedIds": [],
-    "createdAt": "2026-11-09T10:50:00.000Z"
-  },
-  {
-    "id": "att-envoylynx",
-    "handle": "envoylynx",
-    "faceSeed": "envoylynx",
-    "workingOn": "Data engineer at a media company, turning noisy alerts into SLOs people trust.",
-    "headline": "Data engineer at a media company, turning noisy alerts into SLOs people trust.",
-    "profileText": "Data engineer at a media company, turning noisy alerts into SLOs people trust. I keep a list of booths my team asked me to check out. I learn best by asking dumb questions early, so I do.",
-    "profile": {
-      "topics": [
-        "slos",
-        "observability",
-        "sre",
-        "supply-chain",
-        "sigstore"
-      ],
-      "firstTimer": true,
-      "welcomer": false
-    },
-    "settings": {
-      "meetingOn": true,
-      "accessibleMode": false,
-      "noWalking": false,
-      "locationOn": true,
-      "language": "en",
-      "hideFromLeaderboard": false
-    },
-    "lastLocationId": "outpost-project-containerd",
-    "lastLocation": {
-      "lat": 40.766996,
-      "lon": -111.893976
-    },
-    "lastSeenAt": "2026-11-09T17:21:00.000Z",
-    "visible": true,
-    "xp": 20,
-    "level": 1,
-    "banners": [],
-    "blockedIds": [],
-    "createdAt": "2026-11-09T08:30:00.000Z"
-  },
-  {
-    "id": "att-llmgecko",
-    "handle": "llmgecko",
-    "faceSeed": "llmgecko",
-    "workingOn": "Solutions engineer at a small consultancy, serving open models on a small GPU pool.",
-    "headline": "Solutions engineer at a small consultancy, serving open models on a small GPU pool.",
-    "profileText": "Solutions engineer at a small consultancy, serving open models on a small GPU pool. I keep a list of booths my team asked me to check out. I would love to meet people who already did this migration.",
-    "profile": {
-      "topics": [
-        "llm-inference",
-        "gpus",
-        "model-serving",
-        "gitops",
-        "argo-cd"
-      ],
-      "firstTimer": false,
-      "welcomer": false
-    },
-    "settings": {
-      "meetingOn": true,
-      "accessibleMode": false,
-      "noWalking": false,
-      "locationOn": true,
-      "language": "en",
-      "hideFromLeaderboard": false
-    },
-    "lastLocationId": "outpost-coreweave",
-    "lastLocation": {
-      "lat": 40.765799,
-      "lon": -111.895204
-    },
-    "lastSeenAt": "2026-11-09T17:47:00.000Z",
-    "visible": true,
-    "xp": 20,
-    "level": 1,
-    "banners": [],
-    "blockedIds": [],
-    "createdAt": "2026-11-09T11:11:00.000Z"
-  },
-  {
-    "id": "att-kservemarten",
-    "handle": "kservemarten",
-    "faceSeed": "kservemarten",
-    "workingOn": "Platform engineer at a logistics company, signing every image and checking it at admission.",
-    "headline": "Platform engineer at a logistics company, signing every image and checking it at admission.",
-    "profileText": "Platform engineer at a logistics company, signing every image and checking it at admission. I am walking the expo floor to compare a few vendors side by side. Hoping to bring back one idea my team can ship this month.",
-    "profile": {
-      "topics": [
-        "supply-chain",
-        "sigstore",
+        "kyverno",
         "policy-as-code",
-        "gateway-api",
-        "ingress"
+        "security",
+        "rag",
+        "vector-search"
       ],
       "firstTimer": false,
       "welcomer": false
@@ -2106,49 +3643,12 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-project-hyperlight",
+    "lastLocationId": "outpost-tailscale",
     "lastLocation": {
-      "lat": 40.766972,
-      "lon": -111.89397
+      "lat": 40.766057,
+      "lon": -111.894043
     },
-    "lastSeenAt": "2026-11-09T16:36:00.000Z",
-    "visible": true,
-    "xp": 20,
-    "level": 1,
-    "banners": [],
-    "blockedIds": [],
-    "createdAt": "2026-11-09T03:40:00.000Z"
-  },
-  {
-    "id": "att-sbommanatee",
-    "handle": "sbommanatee",
-    "faceSeed": "sbommanatee",
-    "workingOn": "Security engineer at a bank, giving AI agents safe access to cluster tools over MCP.",
-    "headline": "Security engineer at a bank, giving AI agents safe access to cluster tools over MCP.",
-    "profileText": "Security engineer at a bank, giving AI agents safe access to cluster tools over MCP. I keep a list of booths my team asked me to check out. I am trying to keep my notes short enough to actually read later.",
-    "profile": {
-      "topics": [
-        "ai-agents",
-        "mcp",
-        "security"
-      ],
-      "firstTimer": false,
-      "welcomer": false
-    },
-    "settings": {
-      "meetingOn": false,
-      "accessibleMode": false,
-      "noWalking": false,
-      "locationOn": true,
-      "language": "en",
-      "hideFromLeaderboard": false
-    },
-    "lastLocationId": "outpost-controltheory",
-    "lastLocation": {
-      "lat": 40.766063,
-      "lon": -111.894048
-    },
-    "lastSeenAt": "2026-11-09T17:34:00.000Z",
+    "lastSeenAt": "2026-11-09T17:12:00.000Z",
     "visible": true,
     "xp": 50,
     "level": 2,
@@ -2159,7 +3659,7 @@
     "createdAt": "2026-11-09T03:40:00.000Z"
   },
   {
-    "id": "att-vitesstoucan",
+    "id": "att-booth-vitesstoucan",
     "handle": "vitesstoucan",
     "faceSeed": "vitesstoucan",
     "workingOn": "Site reliability engineer at a travel site, debugging DNS and network policy with eBPF tools.",
@@ -2182,12 +3682,12 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-isovalent-at-cisco",
+    "lastLocationId": "outpost-suse",
     "lastLocation": {
-      "lat": 40.765792,
-      "lon": -111.89458
+      "lat": 40.765552,
+      "lon": -111.894867
     },
-    "lastSeenAt": "2026-11-09T15:54:00.000Z",
+    "lastSeenAt": "2026-11-09T16:14:00.000Z",
     "visible": false,
     "xp": 30,
     "level": 1,
@@ -2196,7 +3696,7 @@
     "createdAt": "2026-11-09T06:20:00.000Z"
   },
   {
-    "id": "att-cronkoala",
+    "id": "att-booth-cronkoala",
     "handle": "cronkoala",
     "faceSeed": "cronkoala",
     "workingOn": "ML engineer at a robotics startup, migrating from Ingress to Gateway API.",
@@ -2221,12 +3721,12 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-talos-by-sidero-labs",
+    "lastLocationId": "outpost-solo-io",
     "lastLocation": {
-      "lat": 40.765869,
-      "lon": -111.894705
+      "lat": 40.765588,
+      "lon": -111.895056
     },
-    "lastSeenAt": "2026-11-09T17:20:00.000Z",
+    "lastSeenAt": "2026-11-09T17:47:00.000Z",
     "visible": true,
     "xp": 40,
     "level": 1,
@@ -2235,7 +3735,7 @@
     "createdAt": "2026-11-09T12:05:00.000Z"
   },
   {
-    "id": "att-linkerdraven",
+    "id": "att-booth-linkerdraven",
     "handle": "linkerdraven",
     "faceSeed": "linkerdraven",
     "workingOn": "Network engineer at a telecom, writing Kyverno policies the developers do not hate.",
@@ -2258,12 +3758,12 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-project-tag-infrastructure",
+    "lastLocationId": "outpost-aikido-security",
     "lastLocation": {
-      "lat": 40.766839,
-      "lon": -111.893956
+      "lat": 40.766502,
+      "lon": -111.894323
     },
-    "lastSeenAt": "2026-11-09T17:33:00.000Z",
+    "lastSeenAt": "2026-11-09T16:47:00.000Z",
     "visible": true,
     "xp": 40,
     "level": 1,
@@ -2272,7 +3772,7 @@
     "createdAt": "2026-11-09T12:59:00.000Z"
   },
   {
-    "id": "att-helmraccoon",
+    "id": "att-booth-helmraccoon",
     "handle": "helmraccoon",
     "faceSeed": "helmraccoon",
     "workingOn": "Data engineer at a media company, deciding whether a service mesh is worth it.",
@@ -2295,12 +3795,12 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-project-envoyproxy",
+    "lastLocationId": "outpost-project-openeverest",
     "lastLocation": {
-      "lat": 40.767017,
-      "lon": -111.893882
+      "lat": 40.766831,
+      "lon": -111.89403
     },
-    "lastSeenAt": "2026-11-09T16:31:00.000Z",
+    "lastSeenAt": "2026-11-09T17:21:00.000Z",
     "visible": true,
     "xp": 50,
     "level": 2,
@@ -2311,7 +3811,7 @@
     "createdAt": "2026-11-09T10:54:00.000Z"
   },
   {
-    "id": "att-istioorca",
+    "id": "att-booth-istioorca",
     "handle": "istioorca",
     "faceSeed": "istioorca",
     "workingOn": "Kubernetes admin at a university, turning noisy alerts into SLOs people trust.",
@@ -2334,12 +3834,12 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-dash0",
+    "lastLocationId": "outpost-pagerduty",
     "lastLocation": {
-      "lat": 40.765871,
-      "lon": -111.894807
+      "lat": 40.766177,
+      "lon": -111.894304
     },
-    "lastSeenAt": "2026-11-09T17:32:00.000Z",
+    "lastSeenAt": "2026-11-09T17:11:00.000Z",
     "visible": false,
     "xp": 20,
     "level": 1,
@@ -2348,7 +3848,7 @@
     "createdAt": "2026-11-09T05:29:00.000Z"
   },
   {
-    "id": "att-chartocelot",
+    "id": "att-booth-chartocelot",
     "handle": "chartocelot",
     "faceSeed": "chartocelot",
     "workingOn": "Network engineer at a telecom, building a golden path so teams can ship without filing tickets.",
@@ -2373,12 +3873,12 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-datadog",
+    "lastLocationId": "outpost-komodor",
     "lastLocation": {
-      "lat": 40.765873,
-      "lon": -111.894391
+      "lat": 40.766057,
+      "lon": -111.894178
     },
-    "lastSeenAt": "2026-11-09T17:43:00.000Z",
+    "lastSeenAt": "2026-11-09T16:09:00.000Z",
     "visible": true,
     "xp": 40,
     "level": 1,
@@ -2387,7 +3887,7 @@
     "createdAt": "2026-11-09T04:52:00.000Z"
   },
   {
-    "id": "att-chartquail",
+    "id": "att-booth-chartquail",
     "handle": "chartquail",
     "faceSeed": "chartquail",
     "workingOn": "Security engineer at a bank, moving forty services from Jenkins to Argo CD.",
@@ -2412,12 +3912,12 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-solo-io",
+    "lastLocationId": "outpost-project-kagent",
     "lastLocation": {
-      "lat": 40.765628,
-      "lon": -111.895024
+      "lat": 40.766854,
+      "lon": -111.894112
     },
-    "lastSeenAt": "2026-11-09T17:33:00.000Z",
+    "lastSeenAt": "2026-11-09T15:54:00.000Z",
     "visible": true,
     "xp": 30,
     "level": 1,
@@ -2426,7 +3926,7 @@
     "createdAt": "2026-11-09T10:14:00.000Z"
   },
   {
-    "id": "att-istioseal",
+    "id": "att-booth-istioseal",
     "handle": "istioseal",
     "faceSeed": "istioseal",
     "workingOn": "Release engineer at an automotive supplier, rolling out OpenTelemetry across a hundred services.",
@@ -2451,12 +3951,12 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-dash0",
+    "lastLocationId": "outpost-nutanix",
     "lastLocation": {
-      "lat": 40.765871,
-      "lon": -111.894807
+      "lat": 40.765737,
+      "lon": -111.894731
     },
-    "lastSeenAt": "2026-11-09T17:45:00.000Z",
+    "lastSeenAt": "2026-11-09T16:17:00.000Z",
     "visible": true,
     "xp": 30,
     "level": 1,
@@ -2465,7 +3965,7 @@
     "createdAt": "2026-11-09T04:39:00.000Z"
   },
   {
-    "id": "att-kubeshrew",
+    "id": "att-booth-kubeshrew",
     "handle": "kubeshrew",
     "faceSeed": "kubeshrew",
     "workingOn": "Infrastructure engineer at a game studio, picking block storage for a new on-prem cluster.",
@@ -2490,12 +3990,12 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-yugabyte",
+    "lastLocationId": "outpost-datadog",
     "lastLocation": {
-      "lat": 40.765874,
-      "lon": -111.894315
+      "lat": 40.765842,
+      "lon": -111.894398
     },
-    "lastSeenAt": "2026-11-09T17:30:00.000Z",
+    "lastSeenAt": "2026-11-09T17:56:00.000Z",
     "visible": true,
     "xp": 50,
     "level": 2,
@@ -2506,7 +4006,7 @@
     "createdAt": "2026-11-09T03:24:00.000Z"
   },
   {
-    "id": "att-argopelican",
+    "id": "att-booth-argopelican",
     "handle": "argopelican",
     "faceSeed": "argopelican",
     "workingOn": "DevOps lead at a hospital network, scheduling training jobs fairly across research teams.",
@@ -2529,12 +4029,12 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-docker",
+    "lastLocationId": "outpost-ascend",
     "lastLocation": {
-      "lat": 40.765676,
-      "lon": -111.895275
+      "lat": 40.766835,
+      "lon": -111.894311
     },
-    "lastSeenAt": "2026-11-09T17:28:00.000Z",
+    "lastSeenAt": "2026-11-09T14:55:00.000Z",
     "visible": true,
     "xp": 20,
     "level": 1,
@@ -2543,7 +4043,7 @@
     "createdAt": "2026-11-09T08:23:00.000Z"
   },
   {
-    "id": "att-vitessorca",
+    "id": "att-booth-vitessorca",
     "handle": "vitessorca",
     "faceSeed": "vitessorca",
     "workingOn": "Backend developer at a retail chain, running Postgres on Kubernetes with CloudNativePG.",
@@ -2568,12 +4068,12 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-elastic",
+    "lastLocationId": "outpost-ciroos",
     "lastLocation": {
-      "lat": 40.766121,
-      "lon": -111.894113
+      "lat": 40.766365,
+      "lon": -111.894234
     },
-    "lastSeenAt": "2026-11-09T17:43:00.000Z",
+    "lastSeenAt": "2026-11-09T17:30:00.000Z",
     "visible": true,
     "xp": 50,
     "level": 2,
@@ -2584,7 +4084,7 @@
     "createdAt": "2026-11-09T13:26:00.000Z"
   },
   {
-    "id": "att-fluxpanda",
+    "id": "att-booth-fluxpanda",
     "handle": "fluxpanda",
     "faceSeed": "fluxpanda",
     "workingOn": "Release engineer at an automotive supplier, rolling out OpenTelemetry across a hundred services.",
@@ -2607,12 +4107,12 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-oracle",
+    "lastLocationId": "outpost-datadog",
     "lastLocation": {
-      "lat": 40.765574,
-      "lon": -111.895095
+      "lat": 40.765842,
+      "lon": -111.894398
     },
-    "lastSeenAt": "2026-11-09T17:46:00.000Z",
+    "lastSeenAt": "2026-11-09T17:42:00.000Z",
     "visible": true,
     "xp": 50,
     "level": 2,
@@ -2623,7 +4123,7 @@
     "createdAt": "2026-11-09T06:50:00.000Z"
   },
   {
-    "id": "att-vectoryak",
+    "id": "att-booth-vectoryak",
     "handle": "vectoryak",
     "faceSeed": "vectoryak",
     "workingOn": "Developer advocate at a database startup, deciding whether a service mesh is worth it.",
@@ -2646,12 +4146,12 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-project-istio",
+    "lastLocationId": "outpost-cloudchipr",
     "lastLocation": {
-      "lat": 40.767038,
-      "lon": -111.893882
+      "lat": 40.766695,
+      "lon": -111.894325
     },
-    "lastSeenAt": "2026-11-09T16:47:00.000Z",
+    "lastSeenAt": "2026-11-09T17:11:00.000Z",
     "visible": true,
     "xp": 50,
     "level": 2,
@@ -2662,7 +4162,7 @@
     "createdAt": "2026-11-09T09:15:00.000Z"
   },
   {
-    "id": "att-etcdcaribou",
+    "id": "att-booth-etcdcaribou",
     "handle": "etcdcaribou",
     "faceSeed": "etcdcaribou",
     "workingOn": "Ops engineer at a public sector agency, cutting container build times in half.",
@@ -2687,12 +4187,12 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-cloudchipr",
+    "lastLocationId": "outpost-causal-dynamics-lab",
     "lastLocation": {
-      "lat": 40.766695,
-      "lon": -111.89432
+      "lat": 40.766938,
+      "lon": -111.894325
     },
-    "lastSeenAt": "2026-11-09T17:13:00.000Z",
+    "lastSeenAt": "2026-11-09T17:09:00.000Z",
     "visible": true,
     "xp": 40,
     "level": 1,
@@ -2701,20 +4201,22 @@
     "createdAt": "2026-11-09T04:10:00.000Z"
   },
   {
-    "id": "att-meshcaribou",
-    "handle": "meshcaribou",
-    "faceSeed": "meshcaribou",
-    "workingOn": "Ops engineer at a public sector agency, getting the Kubernetes bill under control.",
-    "headline": "Ops engineer at a public sector agency, getting the Kubernetes bill under control.",
-    "profileText": "Ops engineer at a public sector agency, getting the Kubernetes bill under control. Mostly here to learn what other teams run in production. I would love to meet people who already did this migration.",
+    "id": "att-booth-tektonpanda",
+    "handle": "tektonpanda",
+    "faceSeed": "tektonpanda",
+    "workingOn": "Engineering manager on a platform team, running Postgres on Kubernetes with CloudNativePG.",
+    "headline": "Engineering manager on a platform team, running Postgres on Kubernetes with CloudNativePG.",
+    "profileText": "Engineering manager on a platform team, running Postgres on Kubernetes with CloudNativePG. At the showcase I want to see real demos, not slides. Always up for a quick hallway chat between talks.",
     "profile": {
       "topics": [
-        "finops",
-        "cost",
-        "autoscaling"
+        "databases",
+        "cloudnativepg",
+        "backups",
+        "slos",
+        "observability"
       ],
       "firstTimer": false,
-      "welcomer": true
+      "welcomer": false
     },
     "settings": {
       "meetingOn": true,
@@ -2724,12 +4226,12 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-akamai",
+    "lastLocationId": "outpost-elastic",
     "lastLocation": {
-      "lat": 40.765787,
-      "lon": -111.894919
+      "lat": 40.766099,
+      "lon": -111.89411
     },
-    "lastSeenAt": "2026-11-09T16:11:00.000Z",
+    "lastSeenAt": "2026-11-09T16:37:00.000Z",
     "visible": true,
     "xp": 50,
     "level": 2,
@@ -2737,20 +4239,22 @@
       "scout"
     ],
     "blockedIds": [],
-    "createdAt": "2026-11-09T03:05:00.000Z"
+    "createdAt": "2026-11-09T11:51:00.000Z"
   },
   {
-    "id": "att-vitessmoose",
-    "handle": "vitessmoose",
-    "faceSeed": "vitessmoose",
-    "workingOn": "Infrastructure engineer at a game studio, turning noisy alerts into SLOs people trust.",
-    "headline": "Infrastructure engineer at a game studio, turning noisy alerts into SLOs people trust.",
-    "profileText": "Infrastructure engineer at a game studio, turning noisy alerts into SLOs people trust. Planning to hit the Project Pavilion and talk to maintainers. I would love to meet people who already did this migration.",
+    "id": "att-booth-ciliumkoala",
+    "handle": "ciliumkoala",
+    "faceSeed": "ciliumkoala",
+    "workingOn": "Infrastructure engineer at a game studio, getting runtime alerts from Falco to the right on-call.",
+    "headline": "Infrastructure engineer at a game studio, getting runtime alerts from Falco to the right on-call.",
+    "profileText": "Infrastructure engineer at a game studio, getting runtime alerts from Falco to the right on-call. Planning to hit the Project Pavilion and talk to maintainers. I would love to meet people who already did this migration.",
     "profile": {
       "topics": [
-        "slos",
-        "observability",
-        "sre"
+        "falco",
+        "runtime-security",
+        "incident-response",
+        "kubeflow",
+        "mlops"
       ],
       "firstTimer": false,
       "welcomer": false
@@ -2763,12 +4267,12 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-project-dapr",
+    "lastLocationId": "outpost-ciq",
     "lastLocation": {
-      "lat": 40.766785,
-      "lon": -111.893875
+      "lat": 40.766623,
+      "lon": -111.89404
     },
-    "lastSeenAt": "2026-11-09T16:43:00.000Z",
+    "lastSeenAt": "2026-11-09T16:17:00.000Z",
     "visible": true,
     "xp": 20,
     "level": 1,
@@ -2777,7 +4281,7 @@
     "createdAt": "2026-11-09T11:33:00.000Z"
   },
   {
-    "id": "att-argoimpala",
+    "id": "att-booth-argoimpala",
     "handle": "argoimpala",
     "faceSeed": "argoimpala",
     "workingOn": "ML engineer at a robotics startup, running Kubernetes at cell towers.",
@@ -2802,12 +4306,12 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-akamai",
+    "lastLocationId": "outpost-couchbase",
     "lastLocation": {
-      "lat": 40.765787,
-      "lon": -111.894919
+      "lat": 40.765808,
+      "lon": -111.895187
     },
-    "lastSeenAt": "2026-11-09T16:57:00.000Z",
+    "lastSeenAt": "2026-11-09T17:35:00.000Z",
     "visible": true,
     "xp": 30,
     "level": 1,
@@ -2816,7 +4320,7 @@
     "createdAt": "2026-11-09T13:19:00.000Z"
   },
   {
-    "id": "att-grpcorca",
+    "id": "att-booth-grpcorca",
     "handle": "grpcorca",
     "faceSeed": "grpcorca",
     "workingOn": "Security engineer at a bank, picking block storage for a new on-prem cluster.",
@@ -2841,12 +4345,12 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-google-cloud",
+    "lastLocationId": "outpost-project-radius",
     "lastLocation": {
-      "lat": 40.765681,
-      "lon": -111.894954
+      "lat": 40.766807,
+      "lon": -111.89416
     },
-    "lastSeenAt": "2026-11-09T16:43:00.000Z",
+    "lastSeenAt": "2026-11-09T16:10:00.000Z",
     "visible": true,
     "xp": 30,
     "level": 1,
@@ -2855,7 +4359,7 @@
     "createdAt": "2026-11-09T12:11:00.000Z"
   },
   {
-    "id": "att-podgibbon",
+    "id": "att-booth-podgibbon",
     "handle": "podgibbon",
     "faceSeed": "podgibbon",
     "workingOn": "Solutions engineer at a small consultancy, scheduling training jobs fairly across research teams.",
@@ -2878,12 +4382,12 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-activestate",
+    "lastLocationId": "outpost-talos-by-sidero-labs",
     "lastLocation": {
-      "lat": 40.766509,
-      "lon": -111.894251
+      "lat": 40.765838,
+      "lon": -111.894725
     },
-    "lastSeenAt": "2026-11-09T17:22:00.000Z",
+    "lastSeenAt": "2026-11-09T16:05:00.000Z",
     "visible": true,
     "xp": 20,
     "level": 1,
@@ -2892,7 +4396,7 @@
     "createdAt": "2026-11-09T04:25:00.000Z"
   },
   {
-    "id": "att-etcdgibbon",
+    "id": "att-booth-etcdgibbon",
     "handle": "etcdgibbon",
     "faceSeed": "etcdgibbon",
     "workingOn": "Engineering manager on a platform team, running Postgres on Kubernetes with CloudNativePG.",
@@ -2917,12 +4421,12 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-veeam",
+    "lastLocationId": "outpost-sysdig",
     "lastLocation": {
-      "lat": 40.76608,
-      "lon": -111.894113
+      "lat": 40.765903,
+      "lon": -111.89411
     },
-    "lastSeenAt": "2026-11-09T14:59:00.000Z",
+    "lastSeenAt": "2026-11-09T16:04:00.000Z",
     "visible": true,
     "xp": 10,
     "level": 1,
@@ -2931,7 +4435,7 @@
     "createdAt": "2026-11-09T08:48:00.000Z"
   },
   {
-    "id": "att-argoshrew",
+    "id": "att-booth-argoshrew",
     "handle": "argoshrew",
     "faceSeed": "argoshrew",
     "workingOn": "Security engineer at a bank, deciding whether a service mesh is worth it.",
@@ -2954,12 +4458,12 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-omnistrate",
+    "lastLocationId": "outpost-aranya",
     "lastLocation": {
-      "lat": 40.766731,
-      "lon": -111.894307
+      "lat": 40.766901,
+      "lon": -111.894325
     },
-    "lastSeenAt": "2026-11-09T16:55:00.000Z",
+    "lastSeenAt": "2026-11-09T17:13:00.000Z",
     "visible": true,
     "xp": 20,
     "level": 1,
@@ -2968,7 +4472,7 @@
     "createdAt": "2026-11-09T12:27:00.000Z"
   },
   {
-    "id": "att-spiffepanda",
+    "id": "att-booth-spiffepanda",
     "handle": "spiffepanda",
     "faceSeed": "spiffepanda",
     "workingOn": "Platform engineer at a logistics company, adding retrieval to an internal support assistant.",
@@ -2993,12 +4497,12 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-kong",
+    "lastLocationId": "outpost-google-cloud",
     "lastLocation": {
-      "lat": 40.765882,
-      "lon": -111.894244
+      "lat": 40.765643,
+      "lon": -111.894983
     },
-    "lastSeenAt": "2026-11-09T15:37:00.000Z",
+    "lastSeenAt": "2026-11-09T14:52:00.000Z",
     "visible": true,
     "xp": 10,
     "level": 1,
@@ -3007,7 +4511,7 @@
     "createdAt": "2026-11-09T04:22:00.000Z"
   },
   {
-    "id": "att-nodeosprey",
+    "id": "att-booth-nodeosprey",
     "handle": "nodeosprey",
     "faceSeed": "nodeosprey",
     "workingOn": "DevOps lead at a hospital network, rotating secrets without restarting the world.",
@@ -3032,12 +4536,12 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-project-kpt",
+    "lastLocationId": "outpost-chainguard",
     "lastLocation": {
-      "lat": 40.766843,
-      "lon": -111.893868
+      "lat": 40.765676,
+      "lon": -111.894703
     },
-    "lastSeenAt": "2026-11-09T17:27:00.000Z",
+    "lastSeenAt": "2026-11-09T17:07:00.000Z",
     "visible": true,
     "xp": 40,
     "level": 1,
@@ -3046,7 +4550,7 @@
     "createdAt": "2026-11-09T11:32:00.000Z"
   },
   {
-    "id": "att-yamlraccoon",
+    "id": "att-booth-yamlraccoon",
     "handle": "yamlraccoon",
     "faceSeed": "yamlraccoon",
     "workingOn": "Data engineer at a media company, giving AI agents safe access to cluster tools over MCP.",
@@ -3062,19 +4566,19 @@
       "welcomer": false
     },
     "settings": {
-      "meetingOn": false,
+      "meetingOn": true,
       "accessibleMode": false,
       "noWalking": false,
       "locationOn": true,
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-patapscoai",
+    "lastLocationId": "outpost-elastic",
     "lastLocation": {
-      "lat": 40.766942,
-      "lon": -111.89432
+      "lat": 40.766099,
+      "lon": -111.89411
     },
-    "lastSeenAt": "2026-11-09T15:49:00.000Z",
+    "lastSeenAt": "2026-11-09T17:46:00.000Z",
     "visible": true,
     "xp": 20,
     "level": 1,
@@ -3083,7 +4587,7 @@
     "createdAt": "2026-11-09T10:55:00.000Z"
   },
   {
-    "id": "att-ciliumjackal",
+    "id": "att-booth-ciliumjackal",
     "handle": "ciliumjackal",
     "faceSeed": "ciliumjackal",
     "workingOn": "Developer advocate at a database startup, picking block storage for a new on-prem cluster.",
@@ -3106,12 +4610,12 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-camara-project",
+    "lastLocationId": "outpost-amutable",
     "lastLocation": {
-      "lat": 40.766642,
-      "lon": -111.894166
+      "lat": 40.766747,
+      "lon": -111.89418
     },
-    "lastSeenAt": "2026-11-09T17:20:00.000Z",
+    "lastSeenAt": "2026-11-09T16:43:00.000Z",
     "visible": true,
     "xp": 50,
     "level": 2,
@@ -3122,97 +4626,19 @@
     "createdAt": "2026-11-09T03:26:00.000Z"
   },
   {
-    "id": "att-rookibex",
-    "handle": "rookibex",
-    "faceSeed": "rookibex",
-    "workingOn": "Founder of a two-person devtools startup, building a golden path so teams can ship without filing tickets.",
-    "headline": "Founder of a two-person devtools startup, building a golden path so teams can ship without filing tickets.",
-    "profileText": "Founder of a two-person devtools startup, building a golden path so teams can ship without filing tickets. Happy to swap notes with anyone fighting the same problem. I would love to meet people who already did this migration.",
+    "id": "att-booth-argovole",
+    "handle": "argovole",
+    "faceSeed": "argovole",
+    "workingOn": "Backend developer at a retail chain, connecting clusters across three regions.",
+    "headline": "Backend developer at a retail chain, connecting clusters across three regions.",
+    "profileText": "Backend developer at a retail chain, connecting clusters across three regions. At the showcase I want to see real demos, not slides. I learn best by asking dumb questions early, so I do.",
     "profile": {
       "topics": [
-        "platform-engineering",
-        "internal-developer-platforms",
-        "backstage"
-      ],
-      "firstTimer": true,
-      "welcomer": false
-    },
-    "settings": {
-      "meetingOn": true,
-      "accessibleMode": false,
-      "noWalking": false,
-      "locationOn": true,
-      "language": "en",
-      "hideFromLeaderboard": false
-    },
-    "lastLocationId": "outpost-project-cartography",
-    "lastLocation": {
-      "lat": 40.766872,
-      "lon": -111.893882
-    },
-    "lastSeenAt": "2026-11-09T17:00:00.000Z",
-    "visible": true,
-    "xp": 50,
-    "level": 2,
-    "banners": [
-      "scout"
-    ],
-    "blockedIds": [],
-    "createdAt": "2026-11-09T13:33:00.000Z"
-  },
-  {
-    "id": "att-jaegercoyote",
-    "handle": "jaegercoyote",
-    "faceSeed": "jaegercoyote",
-    "workingOn": "Developer advocate at a database startup, writing Kyverno policies the developers do not hate.",
-    "headline": "Developer advocate at a database startup, writing Kyverno policies the developers do not hate.",
-    "profileText": "Developer advocate at a database startup, writing Kyverno policies the developers do not hate. I collect good war stories and share my own. I would love to meet people who already did this migration.",
-    "profile": {
-      "topics": [
+        "multi-cluster",
+        "networking",
+        "envoy",
         "kyverno",
-        "policy-as-code",
-        "security",
-        "slos",
-        "observability"
-      ],
-      "firstTimer": false,
-      "welcomer": true
-    },
-    "settings": {
-      "meetingOn": true,
-      "accessibleMode": false,
-      "noWalking": false,
-      "locationOn": true,
-      "language": "en",
-      "hideFromLeaderboard": false
-    },
-    "lastLocationId": "outpost-dash0",
-    "lastLocation": {
-      "lat": 40.765871,
-      "lon": -111.894807
-    },
-    "lastSeenAt": "2026-11-09T17:06:00.000Z",
-    "visible": true,
-    "xp": 50,
-    "level": 2,
-    "banners": [
-      "scout"
-    ],
-    "blockedIds": [],
-    "createdAt": "2026-11-09T13:10:00.000Z"
-  },
-  {
-    "id": "att-grpcegret",
-    "handle": "grpcegret",
-    "faceSeed": "grpcegret",
-    "workingOn": "Ops engineer at a public sector agency, picking block storage for a new on-prem cluster.",
-    "headline": "Ops engineer at a public sector agency, picking block storage for a new on-prem cluster.",
-    "profileText": "Ops engineer at a public sector agency, picking block storage for a new on-prem cluster. Mostly here to learn what other teams run in production. Coffee is on me if you have a working example.",
-    "profile": {
-      "topics": [
-        "storage",
-        "rook",
-        "ceph"
+        "policy-as-code"
       ],
       "firstTimer": false,
       "welcomer": false
@@ -3227,146 +4653,31 @@
     },
     "lastLocationId": "outpost-project-confidential-containers",
     "lastLocation": {
-      "lat": 40.766788,
-      "lon": -111.893882
+      "lat": 40.766901,
+      "lon": -111.89403
     },
-    "lastSeenAt": "2026-11-09T17:35:00.000Z",
+    "lastSeenAt": "2026-11-09T15:56:00.000Z",
     "visible": true,
-    "xp": 50,
-    "level": 2,
-    "banners": [
-      "scout"
-    ],
-    "blockedIds": [],
-    "createdAt": "2026-11-09T07:23:00.000Z"
-  },
-  {
-    "id": "att-vectorgibbon",
-    "handle": "vectorgibbon",
-    "faceSeed": "vectorgibbon",
-    "workingOn": "Ops engineer at a public sector agency, deciding whether a service mesh is worth it.",
-    "headline": "Ops engineer at a public sector agency, deciding whether a service mesh is worth it.",
-    "profileText": "Ops engineer at a public sector agency, deciding whether a service mesh is worth it. I keep a list of booths my team asked me to check out. Always up for a quick hallway chat between talks.",
-    "profile": {
-      "topics": [
-        "service-mesh",
-        "istio",
-        "linkerd"
-      ],
-      "firstTimer": false,
-      "welcomer": false
-    },
-    "settings": {
-      "meetingOn": true,
-      "accessibleMode": false,
-      "noWalking": false,
-      "locationOn": true,
-      "language": "en",
-      "hideFromLeaderboard": false
-    },
-    "lastLocationId": "outpost-gravitee",
-    "lastLocation": {
-      "lat": 40.765866,
-      "lon": -111.894113
-    },
-    "lastSeenAt": "2026-11-09T16:49:00.000Z",
-    "visible": true,
-    "xp": 40,
-    "level": 1,
-    "banners": [],
-    "blockedIds": [],
-    "createdAt": "2026-11-09T07:45:00.000Z"
-  },
-  {
-    "id": "att-otelegret",
-    "handle": "otelegret",
-    "faceSeed": "otelegret",
-    "workingOn": "Engineering manager on a platform team, running a fleet of small clusters at retail stores.",
-    "headline": "Engineering manager on a platform team, running a fleet of small clusters at retail stores.",
-    "profileText": "Engineering manager on a platform team, running a fleet of small clusters at retail stores. Looking for tools we can try on a small cluster next week. If you maintain a CNCF project, I want to hear how you got started.",
-    "profile": {
-      "topics": [
-        "multi-cluster",
-        "fleet-management",
-        "edge",
-        "ebpf",
-        "cilium"
-      ],
-      "firstTimer": false,
-      "welcomer": false
-    },
-    "settings": {
-      "meetingOn": true,
-      "accessibleMode": false,
-      "noWalking": false,
-      "locationOn": true,
-      "language": "en",
-      "hideFromLeaderboard": false
-    },
-    "lastLocationId": "outpost-tigera",
-    "lastLocation": {
-      "lat": 40.765868,
-      "lon": -111.895112
-    },
-    "lastSeenAt": "2026-11-09T17:09:00.000Z",
-    "visible": true,
-    "xp": 40,
-    "level": 1,
-    "banners": [],
-    "blockedIds": [],
-    "createdAt": "2026-11-09T10:10:00.000Z"
-  },
-  {
-    "id": "att-spiffekiwi",
-    "handle": "spiffekiwi",
-    "faceSeed": "spiffekiwi",
-    "workingOn": "Solutions engineer at a small consultancy, testing backup and restore for stateful apps with Velero.",
-    "headline": "Solutions engineer at a small consultancy, testing backup and restore for stateful apps with Velero.",
-    "profileText": "Solutions engineer at a small consultancy, testing backup and restore for stateful apps with Velero. Looking for tools we can try on a small cluster next week. Hoping to bring back one idea my team can ship this month.",
-    "profile": {
-      "topics": [
-        "backups",
-        "velero",
-        "storage"
-      ],
-      "firstTimer": false,
-      "welcomer": false
-    },
-    "settings": {
-      "meetingOn": true,
-      "accessibleMode": false,
-      "noWalking": false,
-      "locationOn": true,
-      "language": "en",
-      "hideFromLeaderboard": false
-    },
-    "lastLocationId": "outpost-haproxy-technologies",
-    "lastLocation": {
-      "lat": 40.765789,
-      "lon": -111.894812
-    },
-    "lastSeenAt": "2026-11-09T16:36:00.000Z",
-    "visible": true,
-    "xp": 10,
+    "xp": 20,
     "level": 1,
     "banners": [],
     "blockedIds": [],
     "createdAt": "2026-11-09T08:18:00.000Z"
   },
   {
-    "id": "att-wasmshrew",
-    "handle": "wasmshrew",
-    "faceSeed": "wasmshrew",
-    "workingOn": "Developer advocate at a database startup, getting the Kubernetes bill under control.",
-    "headline": "Developer advocate at a database startup, getting the Kubernetes bill under control.",
-    "profileText": "Developer advocate at a database startup, getting the Kubernetes bill under control. I am walking the expo floor to compare a few vendors side by side. Ask me about what broke for us last quarter.",
+    "id": "att-booth-fluxraccoon",
+    "handle": "fluxraccoon",
+    "faceSeed": "fluxraccoon",
+    "workingOn": "Staff engineer at a fintech, writing Kyverno policies the developers do not hate.",
+    "headline": "Staff engineer at a fintech, writing Kyverno policies the developers do not hate.",
+    "profileText": "Staff engineer at a fintech, writing Kyverno policies the developers do not hate. At the showcase I want to see real demos, not slides. If you maintain a CNCF project, I want to hear how you got started.",
     "profile": {
       "topics": [
-        "finops",
-        "cost",
-        "autoscaling",
-        "ai-agents",
-        "mcp"
+        "kyverno",
+        "policy-as-code",
+        "security",
+        "community",
+        "meetups"
       ],
       "firstTimer": false,
       "welcomer": false
@@ -3379,33 +4690,31 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-palo-alto-networks",
+    "lastLocationId": "outpost-controltheory",
     "lastLocation": {
-      "lat": 40.766022,
-      "lon": -111.894048
+      "lat": 40.766039,
+      "lon": -111.894043
     },
-    "lastSeenAt": "2026-11-09T17:33:00.000Z",
+    "lastSeenAt": "2026-11-09T17:05:00.000Z",
     "visible": true,
     "xp": 40,
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T08:40:00.000Z"
+    "createdAt": "2026-11-09T05:36:00.000Z"
   },
   {
-    "id": "att-ciliumferret",
-    "handle": "ciliumferret",
-    "faceSeed": "ciliumferret",
-    "workingOn": "Platform engineer at a logistics company, picking block storage for a new on-prem cluster.",
-    "headline": "Platform engineer at a logistics company, picking block storage for a new on-prem cluster.",
-    "profileText": "Platform engineer at a logistics company, picking block storage for a new on-prem cluster. Happy to swap notes with anyone fighting the same problem. Ask me about what broke for us last quarter.",
+    "id": "att-booth-spiffeshrew",
+    "handle": "spiffeshrew",
+    "faceSeed": "spiffeshrew",
+    "workingOn": "Infrastructure engineer at a game studio, rotating secrets without restarting the world.",
+    "headline": "Infrastructure engineer at a game studio, rotating secrets without restarting the world.",
+    "profileText": "Infrastructure engineer at a game studio, rotating secrets without restarting the world. Happy to swap notes with anyone fighting the same problem. I learn best by asking dumb questions early, so I do.",
     "profile": {
       "topics": [
-        "storage",
-        "rook",
-        "ceph",
-        "slos",
-        "observability"
+        "secrets",
+        "external-secrets",
+        "security"
       ],
       "firstTimer": false,
       "welcomer": false
@@ -3418,31 +4727,31 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-tintri",
+    "lastLocationId": "outpost-haproxy-technologies",
     "lastLocation": {
-      "lat": 40.765771,
-      "lon": -111.894503
+      "lat": 40.765755,
+      "lon": -111.894836
     },
-    "lastSeenAt": "2026-11-09T16:38:00.000Z",
+    "lastSeenAt": "2026-11-09T17:27:00.000Z",
     "visible": true,
-    "xp": 30,
+    "xp": 20,
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T10:36:00.000Z"
+    "createdAt": "2026-11-09T04:56:00.000Z"
   },
   {
-    "id": "att-gpucoyote",
-    "handle": "gpucoyote",
-    "faceSeed": "gpucoyote",
-    "workingOn": "Release engineer at an automotive supplier, building a golden path so teams can ship without filing tickets.",
-    "headline": "Release engineer at an automotive supplier, building a golden path so teams can ship without filing tickets.",
-    "profileText": "Release engineer at an automotive supplier, building a golden path so teams can ship without filing tickets. At the showcase I want to see real demos, not slides. I am trying to keep my notes short enough to actually read later.",
+    "id": "att-booth-vectorzebra",
+    "handle": "vectorzebra",
+    "faceSeed": "vectorzebra",
+    "workingOn": "Engineering manager on a platform team, starting a cloud native meetup in a small city.",
+    "headline": "Engineering manager on a platform team, starting a cloud native meetup in a small city.",
+    "profileText": "Engineering manager on a platform team, starting a cloud native meetup in a small city. I am walking the expo floor to compare a few vendors side by side. Hoping to bring back one idea my team can ship this month.",
     "profile": {
       "topics": [
-        "platform-engineering",
-        "internal-developer-platforms",
-        "backstage"
+        "community",
+        "meetups",
+        "mentoring"
       ],
       "firstTimer": false,
       "welcomer": false
@@ -3455,180 +4764,219 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-portworx-by-everpure",
+    "lastLocationId": "outpost-splunk-a-cisco-company",
     "lastLocation": {
-      "lat": 40.766095,
-      "lon": -111.894315
+      "lat": 40.765695,
+      "lon": -111.894569
+    },
+    "lastSeenAt": "2026-11-09T16:27:00.000Z",
+    "visible": true,
+    "xp": 20,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T08:33:00.000Z"
+  },
+  {
+    "id": "att-booth-nodeibex",
+    "handle": "nodeibex",
+    "faceSeed": "nodeibex",
+    "workingOn": "Engineering manager on a platform team, debugging DNS and network policy with eBPF tools.",
+    "headline": "Engineering manager on a platform team, debugging DNS and network policy with eBPF tools.",
+    "profileText": "Engineering manager on a platform team, debugging DNS and network policy with eBPF tools. Looking for tools we can try on a small cluster next week. Hoping to bring back one idea my team can ship this month.",
+    "profile": {
+      "topics": [
+        "ebpf",
+        "cilium",
+        "networking"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "outpost-portainer",
+    "lastLocation": {
+      "lat": 40.766365,
+      "lon": -111.894182
+    },
+    "lastSeenAt": "2026-11-09T17:27:00.000Z",
+    "visible": true,
+    "xp": 50,
+    "level": 2,
+    "banners": [
+      "scout"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T07:16:00.000Z"
+  },
+  {
+    "id": "att-booth-vectorlemur",
+    "handle": "vectorlemur",
+    "faceSeed": "vectorlemur",
+    "workingOn": "Kubernetes admin at a university, picking block storage for a new on-prem cluster.",
+    "headline": "Kubernetes admin at a university, picking block storage for a new on-prem cluster.",
+    "profileText": "Kubernetes admin at a university, picking block storage for a new on-prem cluster. Planning to hit the Project Pavilion and talk to maintainers. I am trying to keep my notes short enough to actually read later.",
+    "profile": {
+      "topics": [
+        "storage",
+        "rook",
+        "ceph"
+      ],
+      "firstTimer": false,
+      "welcomer": true
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "outpost-nvidia",
+    "lastLocation": {
+      "lat": 40.765903,
+      "lon": -111.894043
+    },
+    "lastSeenAt": "2026-11-09T17:02:00.000Z",
+    "visible": true,
+    "xp": 20,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T04:55:00.000Z"
+  },
+  {
+    "id": "att-booth-podferret",
+    "handle": "podferret",
+    "faceSeed": "podferret",
+    "workingOn": "Developer advocate at a database startup, moving a Kafka cluster onto Kubernetes.",
+    "headline": "Developer advocate at a database startup, moving a Kafka cluster onto Kubernetes.",
+    "profileText": "Developer advocate at a database startup, moving a Kafka cluster onto Kubernetes. At the showcase I want to see real demos, not slides. Always up for a quick hallway chat between talks.",
+    "profile": {
+      "topics": [
+        "streaming",
+        "kafka",
+        "storage"
+      ],
+      "firstTimer": true,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "outpost-datacore",
+    "lastLocation": {
+      "lat": 40.766502,
+      "lon": -111.894022
+    },
+    "lastSeenAt": "2026-11-09T17:04:00.000Z",
+    "visible": true,
+    "xp": 50,
+    "level": 2,
+    "banners": [
+      "scout"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T07:34:00.000Z"
+  },
+  {
+    "id": "att-booth-yamlmagpie",
+    "handle": "yamlmagpie",
+    "faceSeed": "yamlmagpie",
+    "workingOn": "Staff engineer at a fintech, connecting clusters across three regions.",
+    "headline": "Staff engineer at a fintech, connecting clusters across three regions.",
+    "profileText": "Staff engineer at a fintech, connecting clusters across three regions. Planning to hit the Project Pavilion and talk to maintainers. Hoping to bring back one idea my team can ship this month.",
+    "profile": {
+      "topics": [
+        "multi-cluster",
+        "networking",
+        "envoy"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "outpost-dash0",
+    "lastLocation": {
+      "lat": 40.76584,
+      "lon": -111.894831
+    },
+    "lastSeenAt": "2026-11-09T17:50:00.000Z",
+    "visible": true,
+    "xp": 50,
+    "level": 2,
+    "banners": [
+      "scout"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T13:44:00.000Z"
+  },
+  {
+    "id": "att-booth-ciliumvole",
+    "handle": "ciliumvole",
+    "faceSeed": "ciliumvole",
+    "workingOn": "Site reliability engineer at a travel site, turning noisy alerts into SLOs people trust.",
+    "headline": "Site reliability engineer at a travel site, turning noisy alerts into SLOs people trust.",
+    "profileText": "Site reliability engineer at a travel site, turning noisy alerts into SLOs people trust. Planning to hit the Project Pavilion and talk to maintainers. Hoping to bring back one idea my team can ship this month.",
+    "profile": {
+      "topics": [
+        "slos",
+        "observability",
+        "sre",
+        "backups",
+        "velero"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "outpost-dash0",
+    "lastLocation": {
+      "lat": 40.76584,
+      "lon": -111.894831
     },
     "lastSeenAt": "2026-11-09T16:52:00.000Z",
     "visible": true,
-    "xp": 30,
+    "xp": 20,
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T11:59:00.000Z"
+    "createdAt": "2026-11-09T10:22:00.000Z"
   },
   {
-    "id": "att-grpcpelican",
-    "handle": "grpcpelican",
-    "faceSeed": "grpcpelican",
-    "workingOn": "Solutions engineer at a small consultancy, getting the Kubernetes bill under control.",
-    "headline": "Solutions engineer at a small consultancy, getting the Kubernetes bill under control.",
-    "profileText": "Solutions engineer at a small consultancy, getting the Kubernetes bill under control. At the showcase I want to see real demos, not slides. Coffee is on me if you have a working example.",
-    "profile": {
-      "topics": [
-        "finops",
-        "cost",
-        "autoscaling",
-        "llm-inference",
-        "gpus"
-      ],
-      "firstTimer": false,
-      "welcomer": false
-    },
-    "settings": {
-      "meetingOn": true,
-      "accessibleMode": false,
-      "noWalking": false,
-      "locationOn": true,
-      "language": "en",
-      "hideFromLeaderboard": false
-    },
-    "lastLocationId": "outpost-docker",
-    "lastLocation": {
-      "lat": 40.765676,
-      "lon": -111.895275
-    },
-    "lastSeenAt": "2026-11-09T17:33:00.000Z",
-    "visible": true,
-    "xp": 40,
-    "level": 1,
-    "banners": [],
-    "blockedIds": [],
-    "createdAt": "2026-11-09T09:44:00.000Z"
-  },
-  {
-    "id": "att-vitessimpala",
-    "handle": "vitessimpala",
-    "faceSeed": "vitessimpala",
-    "workingOn": "Ops engineer at a public sector agency, sharding a busy MySQL database with Vitess.",
-    "headline": "Ops engineer at a public sector agency, sharding a busy MySQL database with Vitess.",
-    "profileText": "Ops engineer at a public sector agency, sharding a busy MySQL database with Vitess. Looking for tools we can try on a small cluster next week. Coffee is on me if you have a working example.",
-    "profile": {
-      "topics": [
-        "vitess",
-        "databases",
-        "scaling",
-        "opentelemetry",
-        "observability"
-      ],
-      "firstTimer": false,
-      "welcomer": false
-    },
-    "settings": {
-      "meetingOn": true,
-      "accessibleMode": false,
-      "noWalking": false,
-      "locationOn": true,
-      "language": "en",
-      "hideFromLeaderboard": false
-    },
-    "lastLocationId": "outpost-intuit",
-    "lastLocation": {
-      "lat": 40.765882,
-      "lon": -111.894179
-    },
-    "lastSeenAt": "2026-11-09T16:46:00.000Z",
-    "visible": true,
-    "xp": 30,
-    "level": 1,
-    "banners": [],
-    "blockedIds": [],
-    "createdAt": "2026-11-09T09:39:00.000Z"
-  },
-  {
-    "id": "att-helmpelican",
-    "handle": "helmpelican",
-    "faceSeed": "helmpelican",
-    "workingOn": "Data engineer at a media company, migrating from Ingress to Gateway API.",
-    "headline": "Data engineer at a media company, migrating from Ingress to Gateway API.",
-    "profileText": "Data engineer at a media company, migrating from Ingress to Gateway API. I am walking the expo floor to compare a few vendors side by side. I am trying to keep my notes short enough to actually read later.",
-    "profile": {
-      "topics": [
-        "gateway-api",
-        "ingress",
-        "networking",
-        "spiffe",
-        "workload-identity"
-      ],
-      "firstTimer": false,
-      "welcomer": false
-    },
-    "settings": {
-      "meetingOn": true,
-      "accessibleMode": false,
-      "noWalking": false,
-      "locationOn": true,
-      "language": "en",
-      "hideFromLeaderboard": false
-    },
-    "lastLocationId": "outpost-supabase",
-    "lastLocation": {
-      "lat": 40.766335,
-      "lon": -111.894301
-    },
-    "lastSeenAt": "2026-11-09T17:08:00.000Z",
-    "visible": true,
-    "xp": 40,
-    "level": 1,
-    "banners": [],
-    "blockedIds": [],
-    "createdAt": "2026-11-09T10:07:00.000Z"
-  },
-  {
-    "id": "att-falcoraccoon",
-    "handle": "falcoraccoon",
-    "faceSeed": "falcoraccoon",
-    "workingOn": "Platform engineer at a logistics company, mentoring new contributors through their first pull request.",
-    "headline": "Platform engineer at a logistics company, mentoring new contributors through their first pull request.",
-    "profileText": "Platform engineer at a logistics company, mentoring new contributors through their first pull request. Mostly here to learn what other teams run in production. I would love to meet people who already did this migration.",
-    "profile": {
-      "topics": [
-        "open-source",
-        "mentoring",
-        "community"
-      ],
-      "firstTimer": false,
-      "welcomer": false
-    },
-    "settings": {
-      "meetingOn": true,
-      "accessibleMode": false,
-      "noWalking": false,
-      "locationOn": true,
-      "language": "en",
-      "hideFromLeaderboard": false
-    },
-    "lastLocationId": "outpost-project-open-cluster-management",
-    "lastLocation": {
-      "lat": 40.766985,
-      "lon": -111.893956
-    },
-    "lastSeenAt": "2026-11-09T17:12:00.000Z",
-    "visible": true,
-    "xp": 40,
-    "level": 1,
-    "banners": [],
-    "blockedIds": [],
-    "createdAt": "2026-11-09T08:51:00.000Z"
-  },
-  {
-    "id": "att-kservemagpie",
-    "handle": "kservemagpie",
-    "faceSeed": "kservemagpie",
-    "workingOn": "Platform engineer at a logistics company, mentoring new contributors through their first pull request.",
-    "headline": "Platform engineer at a logistics company, mentoring new contributors through their first pull request.",
-    "profileText": "Platform engineer at a logistics company, mentoring new contributors through their first pull request. I am walking the expo floor to compare a few vendors side by side. Ask me about what broke for us last quarter.",
+    "id": "att-booth-grpcibex",
+    "handle": "grpcibex",
+    "faceSeed": "grpcibex",
+    "workingOn": "Developer advocate at a database startup, mentoring new contributors through their first pull request.",
+    "headline": "Developer advocate at a database startup, mentoring new contributors through their first pull request.",
+    "profileText": "Developer advocate at a database startup, mentoring new contributors through their first pull request. Happy to swap notes with anyone fighting the same problem. Hoping to bring back one idea my team can ship this month.",
     "profile": {
       "topics": [
         "open-source",
@@ -3648,72 +4996,31 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-crusoe",
+    "lastLocationId": "outpost-activestate",
     "lastLocation": {
-      "lat": 40.765628,
-      "lon": -111.894692
+      "lat": 40.766502,
+      "lon": -111.894252
     },
-    "lastSeenAt": "2026-11-09T15:26:00.000Z",
+    "lastSeenAt": "2026-11-09T16:15:00.000Z",
     "visible": true,
-    "xp": 10,
+    "xp": 20,
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T06:22:00.000Z"
+    "createdAt": "2026-11-09T10:30:00.000Z"
   },
   {
-    "id": "att-cronocelot",
-    "handle": "cronocelot",
-    "faceSeed": "cronocelot",
-    "workingOn": "Infrastructure engineer at a game studio, picking block storage for a new on-prem cluster.",
-    "headline": "Infrastructure engineer at a game studio, picking block storage for a new on-prem cluster.",
-    "profileText": "Infrastructure engineer at a game studio, picking block storage for a new on-prem cluster. Mostly here to learn what other teams run in production. Coffee is on me if you have a working example.",
+    "id": "att-booth-spiffeibex",
+    "handle": "spiffeibex",
+    "faceSeed": "spiffeibex",
+    "workingOn": "Infrastructure engineer at a game studio, getting runtime alerts from Falco to the right on-call.",
+    "headline": "Infrastructure engineer at a game studio, getting runtime alerts from Falco to the right on-call.",
+    "profileText": "Infrastructure engineer at a game studio, getting runtime alerts from Falco to the right on-call. I keep a list of booths my team asked me to check out. Coffee is on me if you have a working example.",
     "profile": {
       "topics": [
-        "storage",
-        "rook",
-        "ceph",
-        "gitops",
-        "argo-cd"
-      ],
-      "firstTimer": true,
-      "welcomer": false
-    },
-    "settings": {
-      "meetingOn": true,
-      "accessibleMode": false,
-      "noWalking": false,
-      "locationOn": true,
-      "language": "en",
-      "hideFromLeaderboard": false
-    },
-    "lastLocationId": "outpost-amazon-web-services",
-    "lastLocation": {
-      "lat": 40.765594,
-      "lon": -111.894946
-    },
-    "lastSeenAt": "2026-11-09T17:09:00.000Z",
-    "visible": true,
-    "xp": 40,
-    "level": 1,
-    "banners": [],
-    "blockedIds": [],
-    "createdAt": "2026-11-09T09:19:00.000Z"
-  },
-  {
-    "id": "att-podpelican",
-    "handle": "podpelican",
-    "faceSeed": "podpelican",
-    "workingOn": "Student and open source contributor, testing backup and restore for stateful apps with Velero.",
-    "headline": "Student and open source contributor, testing backup and restore for stateful apps with Velero.",
-    "profileText": "Student and open source contributor, testing backup and restore for stateful apps with Velero. Mostly here to learn what other teams run in production. Coffee is on me if you have a working example.",
-    "profile": {
-      "topics": [
-        "backups",
-        "velero",
-        "storage",
-        "spiffe",
-        "workload-identity"
+        "falco",
+        "runtime-security",
+        "incident-response"
       ],
       "firstTimer": false,
       "welcomer": true
@@ -3726,17 +5033,395 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-haproxy-technologies",
+    "lastLocationId": "outpost-google-cloud",
     "lastLocation": {
-      "lat": 40.765789,
-      "lon": -111.894812
+      "lat": 40.765643,
+      "lon": -111.894983
     },
-    "lastSeenAt": "2026-11-09T17:16:00.000Z",
+    "lastSeenAt": "2026-11-09T16:11:00.000Z",
+    "visible": true,
+    "xp": 30,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T05:18:00.000Z"
+  },
+  {
+    "id": "att-booth-chartmoose",
+    "handle": "chartmoose",
+    "faceSeed": "chartmoose",
+    "workingOn": "DevOps lead at a hospital network, moving a Kafka cluster onto Kubernetes.",
+    "headline": "DevOps lead at a hospital network, moving a Kafka cluster onto Kubernetes.",
+    "profileText": "DevOps lead at a hospital network, moving a Kafka cluster onto Kubernetes. Looking for tools we can try on a small cluster next week. Coffee is on me if you have a working example.",
+    "profile": {
+      "topics": [
+        "streaming",
+        "kafka",
+        "storage"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "outpost-project-argo",
+    "lastLocation": {
+      "lat": 40.766893,
+      "lon": -111.89403
+    },
+    "lastSeenAt": "2026-11-09T16:52:00.000Z",
+    "visible": true,
+    "xp": 50,
+    "level": 2,
+    "banners": [
+      "scout"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T05:38:00.000Z"
+  },
+  {
+    "id": "att-booth-ebpfbeaver",
+    "handle": "ebpfbeaver",
+    "faceSeed": "ebpfbeaver",
+    "workingOn": "DevOps lead at a hospital network, testing backup and restore for stateful apps with Velero.",
+    "headline": "DevOps lead at a hospital network, testing backup and restore for stateful apps with Velero.",
+    "profileText": "DevOps lead at a hospital network, testing backup and restore for stateful apps with Velero. I keep a list of booths my team asked me to check out. I am trying to keep my notes short enough to actually read later.",
+    "profile": {
+      "topics": [
+        "backups",
+        "velero",
+        "storage",
+        "falco",
+        "runtime-security"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": false,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "outpost-sysdig",
+    "lastLocation": {
+      "lat": 40.765903,
+      "lon": -111.89411
+    },
+    "lastSeenAt": "2026-11-09T17:09:00.000Z",
+    "visible": true,
+    "xp": 30,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T03:14:00.000Z"
+  },
+  {
+    "id": "att-booth-rookbadger",
+    "handle": "rookbadger",
+    "faceSeed": "rookbadger",
+    "workingOn": "DevOps lead at a hospital network, debugging DNS and network policy with eBPF tools.",
+    "headline": "DevOps lead at a hospital network, debugging DNS and network policy with eBPF tools.",
+    "profileText": "DevOps lead at a hospital network, debugging DNS and network policy with eBPF tools. I keep a list of booths my team asked me to check out. If you maintain a CNCF project, I want to hear how you got started.",
+    "profile": {
+      "topics": [
+        "ebpf",
+        "cilium",
+        "networking"
+      ],
+      "firstTimer": true,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "outpost-netlox",
+    "lastLocation": {
+      "lat": 40.766561,
+      "lon": -111.894234
+    },
+    "lastSeenAt": "2026-11-09T17:33:00.000Z",
+    "visible": true,
+    "xp": 40,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T05:50:00.000Z"
+  },
+  {
+    "id": "att-booth-certferret",
+    "handle": "certferret",
+    "faceSeed": "certferret",
+    "workingOn": "Student and open source contributor, running a fleet of small clusters at retail stores.",
+    "headline": "Student and open source contributor, running a fleet of small clusters at retail stores.",
+    "profileText": "Student and open source contributor, running a fleet of small clusters at retail stores. At the showcase I want to see real demos, not slides. Hoping to bring back one idea my team can ship this month.",
+    "profile": {
+      "topics": [
+        "multi-cluster",
+        "fleet-management",
+        "edge",
+        "slos",
+        "observability"
+      ],
+      "firstTimer": true,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "outpost-ibm-kubecost",
+    "lastLocation": {
+      "lat": 40.766016,
+      "lon": -111.894319
+    },
+    "lastSeenAt": "2026-11-09T17:33:00.000Z",
+    "visible": true,
+    "xp": 40,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T13:07:00.000Z"
+  },
+  {
+    "id": "att-booth-metriccoyote",
+    "handle": "metriccoyote",
+    "faceSeed": "metriccoyote",
+    "workingOn": "Release engineer at an automotive supplier, sharding a busy MySQL database with Vitess.",
+    "headline": "Release engineer at an automotive supplier, sharding a busy MySQL database with Vitess.",
+    "profileText": "Release engineer at an automotive supplier, sharding a busy MySQL database with Vitess. Mostly here to learn what other teams run in production. Coffee is on me if you have a working example.",
+    "profile": {
+      "topics": [
+        "vitess",
+        "databases",
+        "scaling"
+      ],
+      "firstTimer": true,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "outpost-ciq",
+    "lastLocation": {
+      "lat": 40.766623,
+      "lon": -111.89404
+    },
+    "lastSeenAt": "2026-11-09T17:22:00.000Z",
     "visible": true,
     "xp": 40,
     "level": 1,
     "banners": [],
     "blockedIds": [],
     "createdAt": "2026-11-09T12:58:00.000Z"
+  },
+  {
+    "id": "att-booth-cronpanda",
+    "handle": "cronpanda",
+    "faceSeed": "cronpanda",
+    "workingOn": "Backend developer at a retail chain, connecting clusters across three regions.",
+    "headline": "Backend developer at a retail chain, connecting clusters across three regions.",
+    "profileText": "Backend developer at a retail chain, connecting clusters across three regions. I keep a list of booths my team asked me to check out. I learn best by asking dumb questions early, so I do.",
+    "profile": {
+      "topics": [
+        "multi-cluster",
+        "networking",
+        "envoy"
+      ],
+      "firstTimer": true,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "outpost-suse",
+    "lastLocation": {
+      "lat": 40.765552,
+      "lon": -111.894867
+    },
+    "lastSeenAt": "2026-11-09T16:47:00.000Z",
+    "visible": true,
+    "xp": 20,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T11:05:00.000Z"
+  },
+  {
+    "id": "att-booth-tektonosprey",
+    "handle": "tektonosprey",
+    "faceSeed": "tektonosprey",
+    "workingOn": "DevOps lead at a hospital network, sharding a busy MySQL database with Vitess.",
+    "headline": "DevOps lead at a hospital network, sharding a busy MySQL database with Vitess.",
+    "profileText": "DevOps lead at a hospital network, sharding a busy MySQL database with Vitess. I collect good war stories and share my own. Hoping to bring back one idea my team can ship this month.",
+    "profile": {
+      "topics": [
+        "vitess",
+        "databases",
+        "scaling"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "outpost-portworx-by-everpure",
+    "lastLocation": {
+      "lat": 40.766073,
+      "lon": -111.894319
+    },
+    "lastSeenAt": "2026-11-09T17:33:00.000Z",
+    "visible": false,
+    "xp": 40,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T04:02:00.000Z"
+  },
+  {
+    "id": "att-booth-ebpfmoose",
+    "handle": "ebpfmoose",
+    "faceSeed": "ebpfmoose",
+    "workingOn": "Backend developer at a retail chain, signing every image and checking it at admission.",
+    "headline": "Backend developer at a retail chain, signing every image and checking it at admission.",
+    "profileText": "Backend developer at a retail chain, signing every image and checking it at admission. Mostly here to learn what other teams run in production. If you maintain a CNCF project, I want to hear how you got started.",
+    "profile": {
+      "topics": [
+        "supply-chain",
+        "sigstore",
+        "policy-as-code"
+      ],
+      "firstTimer": true,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "outpost-docker",
+    "lastLocation": {
+      "lat": 40.765638,
+      "lon": -111.895317
+    },
+    "lastSeenAt": "2026-11-09T17:54:00.000Z",
+    "visible": true,
+    "xp": 50,
+    "level": 2,
+    "banners": [
+      "scout"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T05:59:00.000Z"
+  },
+  {
+    "id": "att-booth-certraccoon",
+    "handle": "certraccoon",
+    "faceSeed": "certraccoon",
+    "workingOn": "Backend developer at a retail chain, migrating from Ingress to Gateway API.",
+    "headline": "Backend developer at a retail chain, migrating from Ingress to Gateway API.",
+    "profileText": "Backend developer at a retail chain, migrating from Ingress to Gateway API. Happy to swap notes with anyone fighting the same problem. Hoping to bring back one idea my team can ship this month.",
+    "profile": {
+      "topics": [
+        "gateway-api",
+        "ingress",
+        "networking"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "outpost-heroku",
+    "lastLocation": {
+      "lat": 40.765903,
+      "lon": -111.894177
+    },
+    "lastSeenAt": "2026-11-09T17:28:00.000Z",
+    "visible": true,
+    "xp": 10,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T11:22:00.000Z"
+  },
+  {
+    "id": "att-booth-gpukiwi",
+    "handle": "gpukiwi",
+    "faceSeed": "gpukiwi",
+    "workingOn": "Cloud architect at an insurance company, testing backup and restore for stateful apps with Velero.",
+    "headline": "Cloud architect at an insurance company, testing backup and restore for stateful apps with Velero.",
+    "profileText": "Cloud architect at an insurance company, testing backup and restore for stateful apps with Velero. Planning to hit the Project Pavilion and talk to maintainers. Always up for a quick hallway chat between talks.",
+    "profile": {
+      "topics": [
+        "backups",
+        "velero",
+        "storage"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "outpost-dash0",
+    "lastLocation": {
+      "lat": 40.76584,
+      "lon": -111.894831
+    },
+    "lastSeenAt": "2026-11-09T17:45:00.000Z",
+    "visible": true,
+    "xp": 40,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T03:59:00.000Z"
   }
 ]

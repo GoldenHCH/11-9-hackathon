@@ -1,9 +1,19 @@
 import express, { Router } from 'express';
 import { appConfig } from '../config';
-import { hasSpaBuild, placeholderPage, spaIndexPath } from './spa';
+import { hasLandingBuild, hasSpaBuild, landingIndexPath, placeholderPage, spaIndexPath } from './spa';
 
 export function webRoutes(): Router {
   const router = Router();
+
+  router.get('/', (_request, response, next) => {
+    if (hasLandingBuild()) {
+      response.sendFile(landingIndexPath());
+
+      return;
+    }
+
+    next();
+  });
 
   router.use(express.static(appConfig.publicDir, { index: false, maxAge: '1h' }));
 
@@ -27,8 +37,21 @@ export function webRoutes(): Router {
     });
   });
 
+  router.get('/h/:token', (request, response) => {
+    if (hasSpaBuild()) {
+      response.sendFile(spaIndexPath());
+
+      return;
+    }
+
+    response.json({
+      hasToken: request.params.token !== '',
+      next: { method: 'POST', path: '/api/tools/start_handshake', body: { attendeeId: '<your attendee id>', token: '<the path segment after /h/>' } },
+    });
+  });
+
   router.use((request, response, next) => {
-    if (request.method !== 'GET' || !request.accepts('html')) {
+    if (request.method !== 'GET' || !request.accepts('html') || request.path.startsWith('/landing/')) {
       next();
 
       return;

@@ -1,4 +1,5 @@
-import { AiProvider, AiPurpose, BannerId, CheckInRejection, Material, XpEventType } from './kubequest.types';
+import { IBoothNote } from './kubequest.interfaces';
+import { AiProvider, AiPurpose, BannerId, CheckInRejection, HandshakeQuestionSource, HandshakeStatus, IsoDateString, Material, XpEventType } from './kubequest.types';
 
 export interface IAwardXpInput {
   attendeeId: string;
@@ -35,4 +36,58 @@ export interface IWalkPoint {
   id: string;
   building: string;
   level: string;
+}
+
+export interface IHandshakeTokenCheck {
+  valid: boolean;
+  reason?: 'missing_token' | 'bad_signature' | 'expired_token';
+  playerId?: string;
+  nonce?: string;
+  expiresAt?: Date;
+}
+
+export interface IHandshakeQuestion {
+  question: string;
+  answererQuestion: string;
+  source: HandshakeQuestionSource;
+  reason?: string;
+}
+
+export interface IStoredHandshake {
+  id: string;
+  askerId: string;
+  answererId: string;
+  pairKey: string;
+  nonce: string;
+  status: HandshakeStatus;
+  question: string;
+  answererQuestion: string;
+  questionSource: HandshakeQuestionSource;
+  questionReason?: string;
+  answererAnswer?: string;
+  askerPending?: string;
+  askerAttempts: string[];
+  sharedTopics: string[];
+  firstTimerPair: boolean;
+  askerXp?: number;
+  answererXp?: number;
+  meetId?: string;
+  createdAt: IsoDateString;
+  expiresAt: IsoDateString;
+  matchedAt?: IsoDateString;
+  closedAt?: IsoDateString;
+}
+
+export interface IStoredBoothNote extends IBoothNote {
+  attendeeId: string;
+  noteText?: string;
+}
+
+export interface IStoredMessage {
+  id: string;
+  meetId: string;
+  fromId: string;
+  toId: string;
+  text: string;
+  at: IsoDateString;
 }

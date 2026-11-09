@@ -32,15 +32,6 @@ export async function getAttendee(attendeeId: string): Promise<IAttendee> {
   return attendee;
 }
 
-export async function handleTaken(handle: string): Promise<boolean> {
-  const response = await getEsClient().count(
-    { index: indexNames.ATTENDEES, query: { term: { handle } } },
-    esOptions(esTimeouts.DEFAULT_MS),
-  );
-
-  return response.count > 0;
-}
-
 export async function createAttendee(attendee: IAttendee): Promise<void> {
   await getEsClient().create(
     { index: indexNames.ATTENDEES, id: attendee.id, document: attendee, refresh: 'wait_for' },

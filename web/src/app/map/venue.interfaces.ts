@@ -23,14 +23,39 @@ export interface IVenueArea {
   scheduleRooms?: string[];
   connectsTo?: string;
   inferred?: boolean;
+  points?: IVenuePoint[];
+  fill?: string;
+  labelAt?: IVenuePoint;
+}
+
+export interface IVenueLabel {
+  text: string;
+  x: number;
+  y: number;
+  rotate?: number;
+  tone?: 'zone';
+}
+
+export interface IVenueOfficialMap {
+  label: string;
+  url: string;
+}
+
+export interface IVendorFootprint {
+  size: number;
+  rotated: boolean;
 }
 
 export interface IVenueLevel {
   id: string;
   label: string;
+  title: string;
   width: number;
   height: number;
-  boothSize?: number;
+  boothScale?: number;
+  officialMap?: IVenueOfficialMap;
+  outline?: IVenuePoint[];
+  labels?: IVenueLabel[];
   areas: IVenueArea[];
 }
 
@@ -49,9 +74,11 @@ export interface IVendor {
   booth: string;
   areaId?: string;
   zone?: string;
+  hall?: string;
   categories?: string[];
   levelId?: string;
   position?: IVenuePoint;
+  footprint?: IVendorFootprint;
   schedule?: string;
 }
 

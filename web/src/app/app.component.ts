@@ -1,5 +1,5 @@
 import { AsyncPipe } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { NavigationEnd, Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -9,6 +9,7 @@ import { filter, map, shareReplay, startWith } from 'rxjs';
 import { fullScreenRoutePrefixes, navigationTabs, roleViews } from './app.constants';
 import { AppHelper } from './app.helper';
 import { LoadingService } from './core/services/loading.service';
+import { AccessibilityService } from './profile/services/accessibility.service';
 
 @Component({
   selector: 'app-root',
@@ -25,9 +26,10 @@ import { LoadingService } from './core/services/loading.service';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   private readonly _router = inject(Router);
   private readonly _loadingService = inject(LoadingService);
+  private readonly _accessibilityService = inject(AccessibilityService);
 
   private readonly _url$ = this._router.events.pipe(
     filter((event) => event instanceof NavigationEnd),
@@ -40,5 +42,11 @@ export class AppComponent {
   public readonly roles = roleViews;
   public readonly isLoading$ = this._loadingService.isLoading$;
   public readonly isFullScreen$ = this._url$.pipe(map((url) => fullScreenRoutePrefixes.some((prefix) => url.startsWith(prefix))));
-  public readonly activeRole$ = this._url$.pipe(map((url) => roleViews.find((view) => view.role === AppHelper.roleForUrl(url)) ?? roleViews[0]));
+  public readonly activeRole$ = this._url$.pipe(
+    map((url) => roleViews.find((view) => view.role === AppHelper.roleForUrl(url)) ?? roleViews[0]),
+  );
+
+  public ngOnInit(): void {
+    this._accessibilityService.restore();
+  }
 }

@@ -5,17 +5,34 @@
 }
 
 @let activeRole = activeRole$ | async;
+@let isFullScreen = isFullScreen$ | async;
+@let isAttendee = !activeRole || activeRole.role === 'attendee';
 
-@if ((isFullScreen$ | async) === false) {
-  <header class="brand-bar" [class.brand-bar--staff]="activeRole?.role !== 'attendee'">
-    <a class="brand" [routerLink]="activeRole?.path ?? '/map'" aria-label="KubeQuest home">
-      <span class="brand-cube" aria-hidden="true"></span>
-      <span class="brand-name app-pixel">KubeQuest</span>
-      @if (activeRole && activeRole.role !== 'attendee') {
-        <span class="role-chip">{{ activeRole.label }}</span>
+@if (isFullScreen === false) {
+  <header class="brand-bar" [class.brand-bar--staff]="!isAttendee">
+    <a class="brand" [routerLink]="activeRole?.path ?? '/'" aria-label="KubeQuest home">
+      <svg class="brand-cube" viewBox="0 0 32 32" aria-hidden="true" shape-rendering="crispEdges">
+        <polygon points="16,2 30,9 16,16 2,9" fill="#8bd17c" stroke="#000" stroke-width="2" />
+        <polygon points="2,9 16,16 16,30 2,23" fill="#4f9a3a" stroke="#000" stroke-width="2" />
+        <polygon points="30,9 16,16 16,30 30,23" fill="#2f6b2b" stroke="#000" stroke-width="2" />
+      </svg>
+      <span class="brand-name kq-pixel">KubeQuest</span>
+      @if (!isAttendee) {
+        <span class="role-chip">{{ activeRole?.label }}</span>
       }
     </a>
     <div class="brand-actions">
+      @if (isAttendee) {
+        <a
+          class="brand-icon"
+          routerLink="/exhibitors"
+          routerLinkActive="brand-icon--active"
+          ariaCurrentWhenActive="page"
+          aria-label="Booths"
+        >
+          <mat-icon>storefront</mat-icon>
+        </a>
+      }
       <button
         mat-button
         type="button"
@@ -25,12 +42,11 @@
       >
         <span class="btn-content">
           <mat-icon aria-hidden="true">{{ activeRole?.icon ?? 'person' }}</mat-icon>
-          <span class="role-switch-label">{{ activeRole?.label ?? 'Attendee' }}</span>
           <mat-icon aria-hidden="true">expand_more</mat-icon>
         </span>
       </button>
-      @if (activeRole?.role === 'attendee') {
-        <a class="brand-me" routerLink="/signup" aria-label="Your profile">
+      @if (isAttendee) {
+        <a class="brand-icon" routerLink="/profile" aria-label="Your profile">
           <mat-icon>account_circle</mat-icon>
         </a>
       }
@@ -50,21 +66,24 @@
   </mat-menu>
 }
 
-<main id="main" class="main" [class.main--staff]="activeRole?.role !== 'attendee'" tabindex="-1">
+<main id="main" class="main" [class.main--full]="isFullScreen" [class.main--staff]="!isAttendee" tabindex="-1">
   <router-outlet></router-outlet>
 </main>
 
-@if ((isFullScreen$ | async) === false && activeRole?.role === 'attendee') {
+@if (isFullScreen === false && isAttendee) {
   <nav class="bottom-nav" aria-label="Main">
     @for (tab of tabs; track tab.path) {
       <a
         class="bottom-nav-tab"
+        [class.bottom-nav-tab--primary]="tab.isPrimary"
         [routerLink]="tab.path"
         routerLinkActive="bottom-nav-tab--active"
         ariaCurrentWhenActive="page"
       >
-        <mat-icon aria-hidden="true">{{ tab.icon }}</mat-icon>
-        <span class="bottom-nav-label">{{ tab.label }}</span>
+        <span class="bottom-nav-icon">
+          <mat-icon aria-hidden="true">{{ tab.icon }}</mat-icon>
+        </span>
+        <span class="bottom-nav-label kq-pixel">{{ tab.label }}</span>
       </a>
     }
   </nav>

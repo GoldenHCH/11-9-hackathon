@@ -20,7 +20,9 @@
     "lint": "eslint .",
     "index-all": "tsx scripts/index-all.ts",
     "fixtures": "tsx scripts/build-fixtures.ts",
-    "access-links": "tsx scripts/print-access-links.ts"
+    "access-links": "tsx scripts/print-access-links.ts",
+    "seed:demo": "tsx scripts/seed-demo-login.ts",
+    "reserve:handles": "tsx scripts/reserve-handles.ts"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",

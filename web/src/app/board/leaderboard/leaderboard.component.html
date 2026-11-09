@@ -1,0 +1,135 @@
+<app-screen-toolbar title="Leaderboard" subtitle="Top 20 in the block world"></app-screen-toolbar>
+
+<div class="board">
+  <div class="tabs" role="tablist" aria-label="Leaderboard">
+    @for (option of boards; track option.id) {
+      <button
+        type="button"
+        role="tab"
+        class="tab kq-pixel"
+        [class.is-active]="option.id === board"
+        [attr.aria-selected]="option.id === board"
+        (click)="selectBoard(option.id)"
+      >
+        {{ option.label }}
+      </button>
+    }
+  </div>
+
+  <div class="periods" role="group" aria-label="Time range">
+    @for (option of periods; track option.id) {
+      <button
+        type="button"
+        class="period"
+        [class.is-active]="option.id === period"
+        [attr.aria-pressed]="option.id === period"
+        (click)="selectPeriod(option.id)"
+      >
+        {{ option.label }}
+      </button>
+    }
+  </div>
+
+  <app-state-wrapper
+    [isLoading]="isLoading"
+    [isEmpty]="!isLoading && !errorMessage && rows.length === 0"
+    [errorMessage]="errorMessage"
+    emptyIcon="leaderboard"
+    emptyMessage="Be the first on the board: scan a room QR"
+    [skeletonRows]="6"
+    (retry)="retry()"
+  >
+    <ol class="podium" aria-label="Top three">
+      @for (row of podium; track row.player.id) {
+        <li
+          class="podium-spot"
+          [class.place-1]="podiumPlace(row) === 1"
+          [class.place-2]="podiumPlace(row) === 2"
+          [class.place-3]="podiumPlace(row) === 3"
+          [class.is-me]="row.isMe"
+          [attr.data-change]="rankChange(row)"
+        >
+          <div class="podium-player">
+            <app-pixel-face
+              [seed]="faceSeed(row)"
+              [size]="podiumPlace(row) === 1 ? 56 : 44"
+              [label]="row.player.handle + ' face'"
+            ></app-pixel-face>
+            <span class="podium-handle">{{ row.player.handle }}</span>
+            <span class="podium-score kq-pixel">{{ row.score }} <small>{{ scoreUnit }}</small></span>
+            <span class="podium-level">{{ row.player.levelName }}</span>
+            @if (row.latestTraceId) {
+              <a
+                class="trace-link"
+                [href]="traceUrl(row)"
+                target="_blank"
+                rel="noopener noreferrer"
+                [attr.aria-label]="'Open trace for ' + row.player.handle"
+                title="Open trace in Dash0"
+              >
+                <mat-icon aria-hidden="true">timeline</mat-icon>
+              </a>
+            }
+          </div>
+          <div class="podium-step kq-block">
+            <span class="podium-rank kq-pixel" [attr.aria-label]="'Rank ' + row.rank">{{ row.rank }}</span>
+          </div>
+        </li>
+      }
+    </ol>
+
+    @if (listRows.length) {
+      <ol class="rows" aria-label="Ranks 4 to 20">
+        @for (row of listRows; track row.player.id) {
+          <li>
+            <ng-container *ngTemplateOutlet="rowTemplate; context: { $implicit: row }"></ng-container>
+          </li>
+        }
+      </ol>
+    }
+
+    @if (pinnedMe; as me) {
+      <div class="me-pin" aria-label="Your rank">
+        <ng-container *ngTemplateOutlet="rowTemplate; context: { $implicit: me }"></ng-container>
+      </div>
+    }
+  </app-state-wrapper>
+</div>
+
+<ng-template #rowTemplate let-row>
+  <div class="row kq-block" [class.is-me]="row.isMe" [attr.data-change]="rankChange(row)">
+    <span class="row-rank kq-pixel" [attr.aria-label]="'Rank ' + row.rank">{{ row.rank }}</span>
+    <app-pixel-face [seed]="faceSeed(row)" [size]="32" [label]="row.player.handle + ' face'"></app-pixel-face>
+    <div class="row-body">
+      <span class="row-handle">
+        {{ row.player.handle }}
+        @if (row.isMe) {
+          <span class="me-tag kq-pixel">you</span>
+        }
+      </span>
+      <span class="row-meta">
+        <span class="row-level">{{ row.player.levelName }}</span>
+        @for (bannerId of row.player.banners; track bannerId) {
+          <mat-icon class="banner-icon" role="img" [attr.aria-label]="bannerIcon(bannerId).label">
+            {{ bannerIcon(bannerId).icon }}
+          </mat-icon>
+        }
+      </span>
+    </div>
+    <span class="row-score kq-pixel">{{ row.score }}<small>{{ scoreUnit }}</small></span>
+    @if (row.latestTraceId) {
+      <a
+        class="trace-link"
+        [href]="traceUrl(row)"
+        target="_blank"
+        rel="noopener noreferrer"
+        [attr.aria-label]="'Open trace for ' + row.player.handle"
+        title="Open trace in Dash0"
+      >
+        <mat-icon aria-hidden="true">timeline</mat-icon>
+      </a>
+    } @else {
+      <span class="trace-spacer"></span>
+    }
+  </div>
+</ng-template>

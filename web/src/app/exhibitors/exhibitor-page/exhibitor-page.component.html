@@ -171,7 +171,7 @@
               <ul class="players">
                 @for (player of page.playersHere; track player.id) {
                   <li class="player app-card">
-                    <app-pixel-face [seed]="player.faceSeed" [handle]="player.handle" [size]="40"></app-pixel-face>
+                    <app-pixel-face [seed]="player.faceSeed" [label]="'@' + player.handle" [size]="40"></app-pixel-face>
                     <span class="player-text">
                       <span class="player-handle">&#64;{{ player.handle }}</span>
                       <span class="muted">Level {{ player.level }} · {{ player.levelName }}</span>

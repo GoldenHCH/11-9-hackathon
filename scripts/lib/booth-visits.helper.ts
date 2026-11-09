@@ -26,18 +26,11 @@ export function isBoothSeedEvent(event: IXpEvent): boolean {
 }
 
 export function stripBoothSeed(attendees: IAttendee[], xpEvents: IXpEvent[]): { attendees: IAttendee[]; xpEvents: IXpEvent[] } {
-  const boothOnly = new Set<string>();
-  const otherwiseActive = new Set<string>();
-
-  for (const event of xpEvents) {
-    (isBoothSeedEvent(event) ? boothOnly : otherwiseActive).add(event.attendeeId);
-  }
-
-  const generatedIds = new Set([...boothOnly].filter((attendeeId) => !otherwiseActive.has(attendeeId)));
+  const isGenerated = (attendeeId: string): boolean => attendeeId.startsWith(boothVisitRules.ATTENDEE_ID_PREFIX);
 
   return {
-    attendees: attendees.filter((attendee) => !generatedIds.has(attendee.id)),
-    xpEvents: xpEvents.filter((event) => !isBoothSeedEvent(event)),
+    attendees: attendees.filter((attendee) => !isGenerated(attendee.id)),
+    xpEvents: xpEvents.filter((event) => !isBoothSeedEvent(event) && !isGenerated(event.attendeeId)),
   };
 }
 
@@ -80,7 +73,7 @@ function buildVisitor(prng: IPrng, handle: string, anchorMs: number): { attendee
   return {
     tracks,
     attendee: {
-      id: `att-${handle}`,
+      id: `${boothVisitRules.ATTENDEE_ID_PREFIX}${handle}`,
       handle,
       faceSeed: handle,
       workingOn,
@@ -171,7 +164,7 @@ function pickBooths(prng: IPrng, booths: ILocation[], plan: IVisitorPlan, count:
 
   while (picked.length < count) {
     const isLatestRecent = plan.recent && picked.length === count - 1;
-    const candidates = booths.filter((booth) => !picked.includes(booth));
+    const candidates = booths.filter((booth) => !picked.includes(booth) && !plan.visitedBoothIds.has(booth.id));
     const boost = isLatestRecent ? boothVisitRules.RECENT_HAND_WRITTEN_BOOST : boothVisitRules.HAND_WRITTEN_BOOST;
     const weights = candidates.map((booth) => boothWeight(booth, plan.tracks, boost));
     picked.push(prng.weightedPick(candidates, weights));
@@ -204,6 +197,7 @@ function existingVisitorPlans(prng: IPrng, attendees: IAttendee[], xpEvents: IXp
         },
         recent: false,
         generated: false,
+        visitedBoothIds: new Set(ownEvents.flatMap((event) => (event.type === 'outpost' && event.locationId ? [event.locationId] : []))),
       },
     ];
   });
@@ -237,6 +231,7 @@ function generatedVisitorPlans(prng: IPrng, attendees: IAttendee[], anchorMs: nu
       },
       recent,
       generated: true,
+      visitedBoothIds: new Set<string>(),
     };
   });
 }

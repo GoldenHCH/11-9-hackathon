@@ -1,1981 +1,2186 @@
 {
-"311": {
-"x": 343.2,
-"y": 216.7,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 79,
-"Cosmic Canyon": 14
-}
-},
-"313": {
-"x": 348.3,
-"y": 216.7,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 80,
-"Cosmic Canyon": 12
-}
-},
-"312": {
-"x": 348.3,
-"y": 223.1,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 90,
-"Cosmic Canyon": 3
-}
-},
-"310": {
-"x": 343.2,
-"y": 223.1,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 90,
-"Cosmic Canyon": 4
-}
-},
-"315": {
-"x": 363.1,
-"y": 216.7,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 77,
-"Cosmic Canyon": 11
-}
-},
-"317": {
-"x": 368.2,
-"y": 216.7,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 74,
-"Cosmic Canyon": 7
-}
-},
-"316": {
-"x": 368.2,
-"y": 223.1,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 82,
-"Cosmic Canyon": 2
-}
-},
-"314": {
-"x": 363.1,
-"y": 223.1,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 85,
-"Cosmic Canyon": 3
-}
-},
-"319": {
-"x": 383.0,
-"y": 216.7,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 77,
-"Cosmic Canyon": 2
-}
-},
-"321": {
-"x": 388.2,
-"y": 216.7,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 79,
-"Cosmic Canyon": 2
-}
-},
-"320": {
-"x": 388.2,
-"y": 223.1,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 85
-}
-},
-"318": {
-"x": 383.0,
-"y": 223.1,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 85
-}
-},
-"323": {
-"x": 402.9,
-"y": 216.7,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 75,
-"Cosmic Canyon": 9
-}
-},
-"325": {
-"x": 408.1,
-"y": 216.7,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 76,
-"Cosmic Canyon": 10
-}
-},
-"324": {
-"x": 408.1,
-"y": 223.1,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 83,
-"Cosmic Canyon": 3
-}
-},
-"322": {
-"x": 402.9,
-"y": 223.1,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 81,
-"Cosmic Canyon": 2
-}
-},
-"327": {
-"x": 423.5,
-"y": 216.7,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 85,
-"Cosmic Canyon": 13
-}
-},
-"326": {
-"x": 423.5,
-"y": 223.1,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 93,
-"Cosmic Canyon": 3
-}
-},
-"337": {
-"x": 423.5,
-"y": 194.3,
-"zone": "Cosmic Canyon",
-"votes": {
-"Cosmic Canyon": 47,
-"Amber Hive": 21
-}
-},
-"339": {
-"x": 428.7,
-"y": 194.3,
-"zone": "Cosmic Canyon",
-"votes": {
-"Cosmic Canyon": 50,
-"Amber Hive": 20
-}
-},
-"338": {
-"x": 428.7,
-"y": 200.7,
-"zone": "Cosmic Canyon",
-"votes": {
-"Cosmic Canyon": 44,
-"Amber Hive": 40
-}
-},
-"336": {
-"x": 423.5,
-"y": 200.7,
-"zone": "Cosmic Canyon",
-"votes": {
-"Cosmic Canyon": 44,
-"Amber Hive": 41
-}
-},
-"305": {
-"x": 423.5,
-"y": 246.3,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 85
-}
-},
-"307": {
-"x": 428.7,
-"y": 246.3,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 84
-}
-},
-"306": {
-"x": 428.7,
-"y": 252.7,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 81
-}
-},
-"304": {
-"x": 423.5,
-"y": 252.7,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 81
-}
-},
-"287": {
-"x": 423.5,
-"y": 268.7,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 83
-}
-},
-"289": {
-"x": 428.7,
-"y": 268.7,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 83
-}
-},
-"288": {
-"x": 428.7,
-"y": 275.1,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 93
-}
-},
-"286": {
-"x": 423.5,
-"y": 275.1,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 91
-}
-},
-"299": {
-"x": 383.0,
-"y": 246.3,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 86
-}
-},
-"301": {
-"x": 388.2,
-"y": 246.3,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 84
-}
-},
-"300": {
-"x": 388.2,
-"y": 252.7,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 80
-}
-},
-"298": {
-"x": 383.0,
-"y": 252.7,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 86
-}
-},
-"281": {
-"x": 383.0,
-"y": 268.7,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 85
-}
-},
-"283": {
-"x": 388.2,
-"y": 268.7,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 79
-}
-},
-"282": {
-"x": 388.2,
-"y": 275.1,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 81
-}
-},
-"280": {
-"x": 383.0,
-"y": 275.1,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 89
-}
-},
-"263": {
-"x": 383.0,
-"y": 291.3,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 87,
-"Honeycomb Hub": 4
-}
-},
-"265": {
-"x": 388.2,
-"y": 291.3,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 86,
-"Honeycomb Hub": 4
-}
-},
-"264": {
-"x": 388.2,
-"y": 297.7,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 80,
-"Honeycomb Hub": 11
-}
-},
-"262": {
-"x": 383.0,
-"y": 297.7,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 81,
-"Honeycomb Hub": 11
-}
-},
-"251": {
-"x": 383.2,
-"y": 313.7,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 50,
-"Amber Hive": 39
-}
-},
-"253": {
-"x": 388.2,
-"y": 313.7,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 52,
-"Amber Hive": 37
-}
-},
-"252": {
-"x": 388.2,
-"y": 320.1,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 71,
-"Amber Hive": 17
-}
-},
-"250": {
-"x": 383.2,
-"y": 320.1,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 69,
-"Amber Hive": 17
-}
-},
-"267": {
-"x": 402.9,
-"y": 291.3,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 86,
-"Honeycomb Hub": 4
-}
-},
-"269": {
-"x": 408.1,
-"y": 291.3,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 90,
-"Honeycomb Hub": 4
-}
-},
-"268": {
-"x": 408.1,
-"y": 297.7,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 84,
-"Honeycomb Hub": 13
-}
-},
-"266": {
-"x": 402.9,
-"y": 297.7,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 80,
-"Honeycomb Hub": 11
-}
-},
-"255": {
-"x": 402.9,
-"y": 313.7,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 52,
-"Amber Hive": 37
-}
-},
-"257": {
-"x": 408.1,
-"y": 313.7,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 56,
-"Amber Hive": 39
-}
-},
-"256": {
-"x": 408.1,
-"y": 320.1,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 77,
-"Amber Hive": 17
-}
-},
-"254": {
-"x": 402.9,
-"y": 320.1,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 71,
-"Amber Hive": 17
-}
-},
-"233": {
-"x": 383.0,
-"y": 336.2,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 87
-}
-},
-"235": {
-"x": 388.2,
-"y": 336.2,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 86
-}
-},
-"234": {
-"x": 388.2,
-"y": 342.6,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 82
-}
-},
-"232": {
-"x": 383.0,
-"y": 342.6,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 85
-}
-},
-"237": {
-"x": 402.9,
-"y": 336.2,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 90
-}
-},
-"239": {
-"x": 408.1,
-"y": 336.2,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 96
-}
-},
-"238": {
-"x": 408.1,
-"y": 342.6,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 92
-}
-},
-"236": {
-"x": 402.9,
-"y": 342.6,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 86
-}
-},
-"225": {
-"x": 343.2,
-"y": 336.2,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 85
-}
-},
-"227": {
-"x": 348.3,
-"y": 336.2,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 90
-}
-},
-"226": {
-"x": 348.3,
-"y": 342.6,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 91
-}
-},
-"224": {
-"x": 343.2,
-"y": 342.6,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 88
-}
-},
-"229": {
-"x": 363.1,
-"y": 336.2,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 86
-}
-},
-"231": {
-"x": 368.2,
-"y": 336.2,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 88
-}
-},
-"230": {
-"x": 368.2,
-"y": 342.6,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 90
-}
-},
-"228": {
-"x": 363.1,
-"y": 342.6,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 94
-}
-},
-"243": {
-"x": 343.2,
-"y": 313.7,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 49,
-"Amber Hive": 35
-}
-},
-"245": {
-"x": 348.3,
-"y": 313.7,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 51,
-"Amber Hive": 38
-}
-},
-"244": {
-"x": 348.3,
-"y": 320.1,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 70,
-"Amber Hive": 17
-}
-},
-"242": {
-"x": 343.2,
-"y": 320.1,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 68,
-"Amber Hive": 16
-}
-},
-"247": {
-"x": 363.1,
-"y": 313.7,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 50,
-"Amber Hive": 40
-}
-},
-"249": {
-"x": 368.2,
-"y": 313.7,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 50,
-"Amber Hive": 40
-}
-},
-"248": {
-"x": 368.2,
-"y": 320.1,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 69,
-"Amber Hive": 19
-}
-},
-"246": {
-"x": 363.1,
-"y": 320.1,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 69,
-"Amber Hive": 19
-}
-},
-"273": {
-"x": 343.2,
-"y": 268.7,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 89
-}
-},
-"275": {
-"x": 348.3,
-"y": 268.7,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 91
-}
-},
-"274": {
-"x": 348.3,
-"y": 275.1,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 93
-}
-},
-"272": {
-"x": 343.2,
-"y": 275.1,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 90
-}
-},
-"277": {
-"x": 363.1,
-"y": 268.7,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 90
-}
-},
-"279": {
-"x": 368.2,
-"y": 268.7,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 90
-}
-},
-"278": {
-"x": 368.2,
-"y": 275.1,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 93
-}
-},
-"276": {
-"x": 363.1,
-"y": 275.1,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 91
-}
-},
-"291": {
-"x": 343.2,
-"y": 246.3,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 92
-}
-},
-"293": {
-"x": 348.3,
-"y": 246.3,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 92
-}
-},
-"292": {
-"x": 348.3,
-"y": 252.7,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 90
-}
-},
-"290": {
-"x": 343.2,
-"y": 252.7,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 89
-}
-},
-"295": {
-"x": 363.1,
-"y": 246.3,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 88
-}
-},
-"297": {
-"x": 368.2,
-"y": 246.3,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 83
-}
-},
-"296": {
-"x": 368.2,
-"y": 252.7,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 85
-}
-},
-"294": {
-"x": 363.1,
-"y": 252.7,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 86
-}
-},
-"215": {
-"x": 343.2,
-"y": 368.3,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 87
-}
-},
-"217": {
-"x": 348.3,
-"y": 368.3,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 90
-}
-},
-"216": {
-"x": 348.3,
-"y": 374.7,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 89
-}
-},
-"214": {
-"x": 343.2,
-"y": 374.7,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 85
-}
-},
-"219": {
-"x": 362.5,
-"y": 368.3,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 93
-}
-},
-"221": {
-"x": 367.6,
-"y": 368.3,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 90
-}
-},
-"220": {
-"x": 367.6,
-"y": 374.7,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 87
-}
-},
-"218": {
-"x": 362.5,
-"y": 374.7,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 87
-}
-},
-"199": {
-"x": 343.2,
-"y": 390.7,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 82
-}
-},
-"201": {
-"x": 348.3,
-"y": 390.7,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 90
-}
-},
-"200": {
-"x": 348.3,
-"y": 397.2,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 90
-}
-},
-"198": {
-"x": 343.2,
-"y": 397.2,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 83
-}
-},
-"203": {
-"x": 362.5,
-"y": 390.7,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 85
-}
-},
-"205": {
-"x": 367.6,
-"y": 390.7,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 84
-}
-},
-"204": {
-"x": 367.6,
-"y": 397.2,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 84
-}
-},
-"202": {
-"x": 362.5,
-"y": 397.2,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 89
-}
-},
-"207": {
-"x": 381.7,
-"y": 390.8,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 81
-}
-},
-"209": {
-"x": 386.9,
-"y": 390.8,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 77
-}
-},
-"208": {
-"x": 386.9,
-"y": 397.3,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 79
-}
-},
-"206": {
-"x": 381.7,
-"y": 397.3,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 80
-}
-},
-"193": {
-"x": 381.7,
-"y": 413.3,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 63,
-"Alpine Overlook": 23
-}
-},
-"195": {
-"x": 386.9,
-"y": 413.3,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 63,
-"Alpine Overlook": 24
-}
-},
-"194": {
-"x": 386.9,
-"y": 419.7,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 46,
-"Alpine Overlook": 41
-}
-},
-"192": {
-"x": 381.7,
-"y": 419.7,
-"zone": "Honeycomb Hub",
-"votes": {
-"Alpine Overlook": 39,
-"Honeycomb Hub": 47
-}
-},
-"197": {
-"x": 403.6,
-"y": 413.4,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 71,
-"Alpine Overlook": 25
-}
-},
-"196": {
-"x": 403.6,
-"y": 419.8,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 55,
-"Alpine Overlook": 42
-}
-},
-"167": {
-"x": 384.6,
-"y": 487.1,
-"zone": "Alpine Overlook",
-"votes": {
-"Alpine Overlook": 88
-}
-},
-"166": {
-"x": 384.6,
-"y": 493.5,
-"zone": "Alpine Overlook",
-"votes": {
-"Alpine Overlook": 93
-}
-},
-"185": {
-"x": 384.2,
-"y": 435.8,
-"zone": "Alpine Overlook",
-"votes": {
-"Alpine Overlook": 77,
-"Honeycomb Hub": 7
-}
-},
-"184": {
-"x": 384.2,
-"y": 442.2,
-"zone": "Alpine Overlook",
-"votes": {
-"Alpine Overlook": 76,
-"Honeycomb Hub": 2
-}
-},
-"187": {
-"x": 403.6,
-"y": 435.8,
-"zone": "Alpine Overlook",
-"votes": {
-"Alpine Overlook": 89,
-"Honeycomb Hub": 7
-}
-},
-"186": {
-"x": 403.6,
-"y": 442.2,
-"zone": "Alpine Overlook",
-"votes": {
-"Alpine Overlook": 91,
-"Honeycomb Hub": 2
-}
-},
-"189": {
-"x": 422.8,
-"y": 435.8,
-"zone": "Alpine Overlook",
-"votes": {
-"Alpine Overlook": 87,
-"Honeycomb Hub": 14
-}
-},
-"188": {
-"x": 422.8,
-"y": 442.2,
-"zone": "Alpine Overlook",
-"votes": {
-"Alpine Overlook": 91,
-"Honeycomb Hub": 3
-}
-},
-"179": {
-"x": 403.6,
-"y": 458.3,
-"zone": "Alpine Overlook",
-"votes": {
-"Alpine Overlook": 85
-}
-},
-"178": {
-"x": 403.6,
-"y": 464.6,
-"zone": "Alpine Overlook",
-"votes": {
-"Alpine Overlook": 87
-}
-},
-"181": {
-"x": 422.8,
-"y": 458.3,
-"zone": "Alpine Overlook",
-"votes": {
-"Alpine Overlook": 93
-}
-},
-"180": {
-"x": 422.8,
-"y": 464.6,
-"zone": "Alpine Overlook",
-"votes": {
-"Alpine Overlook": 95
-}
-},
-"169": {
-"x": 403.6,
-"y": 487.2,
-"zone": "Alpine Overlook",
-"votes": {
-"Alpine Overlook": 93
-}
-},
-"168": {
-"x": 403.6,
-"y": 493.6,
-"zone": "Alpine Overlook",
-"votes": {
-"Alpine Overlook": 97
-}
-},
-"171": {
-"x": 422.8,
-"y": 487.2,
-"zone": "Alpine Overlook",
-"votes": {
-"Alpine Overlook": 93
-}
-},
-"170": {
-"x": 422.8,
-"y": 493.6,
-"zone": "Alpine Overlook",
-"votes": {
-"Alpine Overlook": 92
-}
-},
-"159": {
-"x": 403.6,
-"y": 512.9,
-"zone": "Alpine Overlook",
-"votes": {
-"Alpine Overlook": 103
-}
-},
-"161": {
-"x": 422.8,
-"y": 512.9,
-"zone": "Alpine Overlook",
-"votes": {
-"Alpine Overlook": 103
-}
-},
-"155": {
-"x": 365.0,
-"y": 512.9,
-"zone": "Alpine Overlook",
-"votes": {
-"Alpine Overlook": 99
-}
-},
-"154": {
-"x": 365.0,
-"y": 519.2,
-"zone": "Alpine Overlook",
-"votes": {
-"Alpine Overlook": 93
-}
-},
-"157": {
-"x": 384.3,
-"y": 512.9,
-"zone": "Alpine Overlook",
-"votes": {
-"Alpine Overlook": 100
-}
-},
-"156": {
-"x": 384.3,
-"y": 519.2,
-"zone": "Alpine Overlook",
-"votes": {
-"Alpine Overlook": 93
-}
-},
-"165": {
-"x": 365.0,
-"y": 487.2,
-"zone": "Alpine Overlook",
-"votes": {
-"Alpine Overlook": 100
-}
-},
-"164": {
-"x": 365.0,
-"y": 493.6,
-"zone": "Alpine Overlook",
-"votes": {
-"Alpine Overlook": 100
-}
-},
-"175": {
-"x": 365.0,
-"y": 458.3,
-"zone": "Alpine Overlook",
-"votes": {
-"Alpine Overlook": 83
-}
-},
-"174": {
-"x": 365.0,
-"y": 464.6,
-"zone": "Alpine Overlook",
-"votes": {
-"Alpine Overlook": 90
-}
-},
-"191": {
-"x": 344.2,
-"y": 429.7,
-"zone": "Alpine Overlook",
-"votes": {
-"Alpine Overlook": 58,
-"Honeycomb Hub": 36
-}
-},
-"182": {
-"x": 344.1,
-"y": 450.9,
-"zone": "Alpine Overlook",
-"votes": {
-"Alpine Overlook": 86
-}
-},
-"163": {
-"x": 344.1,
-"y": 494.8,
-"zone": "Alpine Overlook",
-"votes": {
-"Alpine Overlook": 83,
-"Astral Peak": 13,
-"Starlight Summit": 1
-}
-},
-"172": {
-"x": 344.1,
-"y": 472.3,
-"zone": "Alpine Overlook",
-"votes": {
-"Alpine Overlook": 89,
-"Astral Peak": 1,
-"Starlight Summit": 1
-}
-},
-"152": {
-"x": 321.8,
-"y": 516.2,
-"zone": "Astral Peak",
-"votes": {
-"Astral Peak": 93,
-"Alpine Overlook": 12
-}
-},
-"153": {
-"x": 344.2,
-"y": 516.1,
-"zone": "Alpine Overlook",
-"votes": {
-"Alpine Overlook": 76,
-"Astral Peak": 18
-}
-},
-"259": {
-"x": 343.2,
-"y": 291.3,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 89,
-"Honeycomb Hub": 4
-}
-},
-"261": {
-"x": 348.3,
-"y": 291.3,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 92,
-"Honeycomb Hub": 4
-}
-},
-"260": {
-"x": 348.3,
-"y": 297.7,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 82,
-"Honeycomb Hub": 11
-}
-},
-"258": {
-"x": 343.2,
-"y": 297.7,
-"zone": "Amber Hive",
-"votes": {
-"Amber Hive": 79,
-"Honeycomb Hub": 12
-}
-},
-"331": {
-"x": 342.6,
-"y": 196.2,
-"zone": "Cosmic Canyon",
-"votes": {
-"Cosmic Canyon": 77,
-"Amber Hive": 26
-}
-},
-"333": {
-"x": 346.4,
-"y": 196.2,
-"zone": "Cosmic Canyon",
-"votes": {
-"Cosmic Canyon": 74,
-"Amber Hive": 25
-}
-},
-"332": {
-"x": 346.4,
-"y": 201.4,
-"zone": "Cosmic Canyon",
-"votes": {
-"Cosmic Canyon": 56,
-"Amber Hive": 40
-}
-},
-"330": {
-"x": 342.6,
-"y": 201.4,
-"zone": "Cosmic Canyon",
-"votes": {
-"Cosmic Canyon": 59,
-"Amber Hive": 42
-}
-},
-"341": {
-"x": 342.6,
-"y": 176.9,
-"zone": "Cosmic Canyon",
-"votes": {
-"Cosmic Canyon": 103
-}
-},
-"343": {
-"x": 346.4,
-"y": 176.9,
-"zone": "Cosmic Canyon",
-"votes": {
-"Cosmic Canyon": 99
-}
-},
-"342": {
-"x": 346.4,
-"y": 182.1,
-"zone": "Cosmic Canyon",
-"votes": {
-"Cosmic Canyon": 101
-}
-},
-"340": {
-"x": 342.6,
-"y": 182.1,
-"zone": "Cosmic Canyon",
-"votes": {
-"Cosmic Canyon": 103
-}
-},
-"353": {
-"x": 342.6,
-"y": 157.6,
-"zone": "Cosmic Canyon",
-"votes": {
-"Cosmic Canyon": 104
-}
-},
-"355": {
-"x": 346.4,
-"y": 157.6,
-"zone": "Cosmic Canyon",
-"votes": {
-"Cosmic Canyon": 101
-}
-},
-"354": {
-"x": 346.4,
-"y": 162.7,
-"zone": "Cosmic Canyon",
-"votes": {
-"Cosmic Canyon": 101
-}
-},
-"352": {
-"x": 342.6,
-"y": 162.7,
-"zone": "Cosmic Canyon",
-"votes": {
-"Cosmic Canyon": 104
-}
-},
-"357": {
-"x": 363.1,
-"y": 157.6,
-"zone": "Cosmic Canyon",
-"votes": {
-"Cosmic Canyon": 103
-}
-},
-"359": {
-"x": 367.0,
-"y": 157.6,
-"zone": "Cosmic Canyon",
-"votes": {
-"Cosmic Canyon": 103
-}
-},
-"358": {
-"x": 367.0,
-"y": 162.7,
-"zone": "Cosmic Canyon",
-"votes": {
-"Cosmic Canyon": 101
-}
-},
-"356": {
-"x": 363.1,
-"y": 162.7,
-"zone": "Cosmic Canyon",
-"votes": {
-"Cosmic Canyon": 101
-}
-},
-"347": {
-"x": 383.6,
-"y": 176.9,
-"zone": "Cosmic Canyon",
-"votes": {
-"Cosmic Canyon": 91
-}
-},
-"346": {
-"x": 383.6,
-"y": 182.1,
-"zone": "Cosmic Canyon",
-"votes": {
-"Cosmic Canyon": 83
-}
-},
-"361": {
-"x": 342.6,
-"y": 138.4,
-"zone": "Cosmic Canyon",
-"votes": {
-"Cosmic Canyon": 102
-}
-},
-"363": {
-"x": 346.4,
-"y": 138.4,
-"zone": "Cosmic Canyon",
-"votes": {
-"Cosmic Canyon": 99
-}
-},
-"362": {
-"x": 346.4,
-"y": 143.5,
-"zone": "Cosmic Canyon",
-"votes": {
-"Cosmic Canyon": 100
-}
-},
-"360": {
-"x": 342.6,
-"y": 143.5,
-"zone": "Cosmic Canyon",
-"votes": {
-"Cosmic Canyon": 103
-}
-},
-"365": {
-"x": 363.1,
-"y": 138.4,
-"zone": "Cosmic Canyon",
-"votes": {
-"Cosmic Canyon": 89
-}
-},
-"367": {
-"x": 367.0,
-"y": 138.4,
-"zone": "Cosmic Canyon",
-"votes": {
-"Cosmic Canyon": 85
-}
-},
-"366": {
-"x": 367.0,
-"y": 143.5,
-"zone": "Cosmic Canyon",
-"votes": {
-"Cosmic Canyon": 91
-}
-},
-"364": {
-"x": 363.1,
-"y": 143.5,
-"zone": "Cosmic Canyon",
-"votes": {
-"Cosmic Canyon": 95
-}
-},
-"369": {
-"x": 342.6,
-"y": 119.1,
-"zone": "Cosmic Canyon",
-"votes": {
-"Cosmic Canyon": 97
-}
-},
-"371": {
-"x": 346.4,
-"y": 119.1,
-"zone": "Cosmic Canyon",
-"votes": {
-"Cosmic Canyon": 91
-}
-},
-"370": {
-"x": 346.4,
-"y": 124.2,
-"zone": "Cosmic Canyon",
-"votes": {
-"Cosmic Canyon": 93
-}
-},
-"368": {
-"x": 342.6,
-"y": 124.2,
-"zone": "Cosmic Canyon",
-"votes": {
-"Cosmic Canyon": 99
-}
-},
-"373": {
-"x": 342.6,
-"y": 99.8,
-"zone": "Cosmic Canyon",
-"votes": {
-"Cosmic Canyon": 91
-}
-},
-"375": {
-"x": 346.4,
-"y": 99.8,
-"zone": "Cosmic Canyon",
-"votes": {
-"Cosmic Canyon": 84
-}
-},
-"374": {
-"x": 346.4,
-"y": 104.9,
-"zone": "Cosmic Canyon",
-"votes": {
-"Cosmic Canyon": 86
-}
-},
-"372": {
-"x": 342.6,
-"y": 104.9,
-"zone": "Cosmic Canyon",
-"votes": {
-"Cosmic Canyon": 94
-}
-},
-"113": {
-"x": 281.4,
-"y": 532.6,
-"zone": "Astral Peak",
-"votes": {
-"Astral Peak": 103
-}
-},
-"112": {
-"x": 265.9,
-"y": 548.0,
-"zone": "Astral Peak",
-"votes": {
-"Astral Peak": 88
-}
-},
-"110": {
-"x": 235.1,
-"y": 578.9,
-"zone": "Astral Peak",
-"votes": {
-"Astral Peak": 93
-}
-},
-"111": {
-"x": 250.6,
-"y": 563.5,
-"zone": "Astral Peak",
-"votes": {
-"Astral Peak": 91
-}
-},
-"105": {
-"x": 273.2,
-"y": 571.5,
-"zone": "Astral Peak",
-"votes": {
-"Astral Peak": 95
-}
-},
-"106": {
-"x": 288.7,
-"y": 556.1,
-"zone": "Astral Peak",
-"votes": {
-"Astral Peak": 97
-}
-},
-"103": {
-"x": 217.4,
-"y": 627.5,
-"zone": "Astral Peak",
-"votes": {
-"Astral Peak": 102
-}
-},
-"104": {
-"x": 232.8,
-"y": 612.0,
-"zone": "Astral Peak",
-"votes": {
-"Astral Peak": 94
-}
-},
-"108": {
-"x": 204.1,
-"y": 609.7,
-"zone": "Astral Peak",
-"votes": {
-"Astral Peak": 92
-}
-},
-"109": {
-"x": 219.6,
-"y": 594.3,
-"zone": "Astral Peak",
-"votes": {
-"Astral Peak": 90
-}
-},
-"107": {
-"x": 188.8,
-"y": 625.2,
-"zone": "Astral Peak",
-"votes": {
-"Astral Peak": 100
-}
-},
-"100": {
-"x": 248.2,
-"y": 627.3,
-"zone": "Astral Peak",
-"votes": {
-"Astral Peak": 100
-}
-},
-"125": {
-"x": 214.3,
-"y": 532.4,
-"zone": "Starlight Summit",
-"votes": {
-"Starlight Summit": 80,
-"Astral Peak": 12
-}
-},
-"126": {
-"x": 228.9,
-"y": 517.9,
-"zone": "Starlight Summit",
-"votes": {
-"Starlight Summit": 85,
-"Astral Peak": 11
-}
-},
-"134": {
-"x": 198.8,
-"y": 517.0,
-"zone": "Starlight Summit",
-"votes": {
-"Starlight Summit": 95
-}
-},
-"119": {
-"x": 246.9,
-"y": 536.3,
-"zone": "Astral Peak",
-"votes": {
-"Astral Peak": 83,
-"Starlight Summit": 16
-}
-},
-"132": {
-"x": 166.0,
-"y": 549.7,
-"zone": "Starlight Summit",
-"votes": {
-"Starlight Summit": 90
-}
-},
-"131": {
-"x": 149.8,
-"y": 566.0,
-"zone": "Starlight Summit",
-"votes": {
-"Starlight Summit": 86
-}
-},
-"130": {
-"x": 135.2,
-"y": 580.5,
-"zone": "Starlight Summit",
-"votes": {
-"Starlight Summit": 90
-}
-},
-"129": {
-"x": 117.1,
-"y": 598.7,
-"zone": "Starlight Summit",
-"votes": {
-"Starlight Summit": 90
-}
-},
-"128": {
-"x": 100.7,
-"y": 615.1,
-"zone": "Starlight Summit",
-"votes": {
-"Starlight Summit": 88
-}
-},
-"138": {
-"x": 108.9,
-"y": 576.2,
-"zone": "Starlight Summit",
-"votes": {
-"Starlight Summit": 87
-}
-},
-"141": {
-"x": 60.7,
-"y": 593.2,
-"zone": "Starlight Summit",
-"votes": {
-"Starlight Summit": 102
-}
-},
-"120": {
-"x": 113.9,
-"y": 632.8,
-"zone": "Starlight Summit",
-"votes": {
-"Starlight Summit": 72,
-"Astral Peak": 13
-}
-},
-"121": {
-"x": 134.8,
-"y": 612.0,
-"zone": "Starlight Summit",
-"votes": {
-"Starlight Summit": 73,
-"Astral Peak": 14
-}
-},
-"116": {
-"x": 178.8,
-"y": 604.3,
-"zone": "Astral Peak",
-"votes": {
-"Astral Peak": 77,
-"Starlight Summit": 13
-}
-},
-"115": {
-"x": 158.0,
-"y": 625.2,
-"zone": "Astral Peak",
-"votes": {
-"Astral Peak": 83,
-"Starlight Summit": 13
-}
-},
-"123": {
-"x": 176.5,
-"y": 570.2,
-"zone": "Starlight Summit",
-"votes": {
-"Starlight Summit": 72,
-"Astral Peak": 14
-}
-},
-"122": {
-"x": 155.6,
-"y": 591.0,
-"zone": "Starlight Summit",
-"votes": {
-"Starlight Summit": 71,
-"Astral Peak": 13
-}
-},
-"118": {
-"x": 227.3,
-"y": 555.8,
-"zone": "Astral Peak",
-"votes": {
-"Astral Peak": 69,
-"Starlight Summit": 14
-}
-},
-"117": {
-"x": 206.4,
-"y": 576.7,
-"zone": "Astral Peak",
-"votes": {
-"Astral Peak": 76,
-"Starlight Summit": 14
-}
-},
-"124": {
-"x": 197.4,
-"y": 549.3,
-"zone": "Starlight Summit",
-"votes": {
-"Starlight Summit": 71,
-"Astral Peak": 12
-}
-},
-"133": {
-"x": 183.0,
-"y": 533.5,
-"zone": "Starlight Summit",
-"votes": {
-"Starlight Summit": 95
-}
-},
-"151": {
-"x": 113.7,
-"y": 513.5,
-"zone": "Starlight Summit",
-"votes": {
-"Starlight Summit": 104
-}
-},
-"150": {
-"x": 109.0,
-"y": 518.2,
-"zone": "Starlight Summit",
-"votes": {
-"Starlight Summit": 104
-}
-},
-"149": {
-"x": 97.7,
-"y": 529.4,
-"zone": "Starlight Summit",
-"votes": {
-"Starlight Summit": 105
-}
-},
-"148": {
-"x": 93.1,
-"y": 534.0,
-"zone": "Starlight Summit",
-"votes": {
-"Starlight Summit": 104
-}
-},
-"147": {
-"x": 81.9,
-"y": 545.4,
-"zone": "Starlight Summit",
-"votes": {
-"Starlight Summit": 101
-}
-},
-"145": {
-"x": 138.7,
-"y": 517.6,
-"zone": "Starlight Summit",
-"votes": {
-"Starlight Summit": 101
-}
-},
-"144": {
-"x": 134.0,
-"y": 522.3,
-"zone": "Starlight Summit",
-"votes": {
-"Starlight Summit": 93
-}
-},
-"211": {
-"x": 401.3,
-"y": 390.5,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 79
-}
-},
-"213": {
-"x": 406.4,
-"y": 390.5,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 89
-}
-},
-"210": {
-"x": 401.3,
-"y": 396.8,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 85
-}
-},
-"212": {
-"x": 406.4,
-"y": 396.8,
-"zone": "Honeycomb Hub",
-"votes": {
-"Honeycomb Hub": 95
-}
-},
-"146": {
-"x": 63.2,
-"y": 563.5,
-"zone": "Starlight Summit",
-"votes": {
-"Starlight Summit": 104
-}
-},
-"160": {
-"x": 403.6,
-"y": 519.2,
-"zone": "Alpine Overlook",
-"votes": {
-"Alpine Overlook": 95
-}
-},
-"140": {
-"x": 151.5,
-"y": 535.2,
-"zone": "Starlight Summit",
-"votes": {
-"Starlight Summit": 81
-}
-}
+ "100": {
+  "x": 1035.8,
+  "y": 550.8,
+  "size": 11.2,
+  "rotated": true,
+  "zone": "Astral Peak",
+  "hall": "A"
+ },
+ "103": {
+  "x": 1008.9,
+  "y": 550.8,
+  "size": 11.2,
+  "rotated": true,
+  "zone": "Astral Peak",
+  "hall": "A"
+ },
+ "104": {
+  "x": 1022.4,
+  "y": 537.3,
+  "size": 11.2,
+  "rotated": true,
+  "zone": "Astral Peak",
+  "hall": "A"
+ },
+ "105": {
+  "x": 1057.6,
+  "y": 502.0,
+  "size": 11.2,
+  "rotated": true,
+  "zone": "Astral Peak",
+  "hall": "A"
+ },
+ "106": {
+  "x": 1071.1,
+  "y": 488.5,
+  "size": 11.2,
+  "rotated": true,
+  "zone": "Astral Peak",
+  "hall": "A"
+ },
+ "107": {
+  "x": 983.9,
+  "y": 548.8,
+  "size": 11.2,
+  "rotated": true,
+  "zone": "Astral Peak",
+  "hall": "B"
+ },
+ "108": {
+  "x": 997.4,
+  "y": 535.3,
+  "size": 11.2,
+  "rotated": true,
+  "zone": "Astral Peak",
+  "hall": "B"
+ },
+ "109": {
+  "x": 1010.8,
+  "y": 521.8,
+  "size": 11.2,
+  "rotated": true,
+  "zone": "Astral Peak",
+  "hall": "A"
+ },
+ "110": {
+  "x": 1024.4,
+  "y": 508.4,
+  "size": 11.2,
+  "rotated": true,
+  "zone": "Astral Peak",
+  "hall": "A"
+ },
+ "111": {
+  "x": 1037.9,
+  "y": 494.9,
+  "size": 11.2,
+  "rotated": true,
+  "zone": "Astral Peak",
+  "hall": "A"
+ },
+ "112": {
+  "x": 1051.2,
+  "y": 481.5,
+  "size": 11.2,
+  "rotated": true,
+  "zone": "Astral Peak",
+  "hall": "A"
+ },
+ "113": {
+  "x": 1064.7,
+  "y": 468.0,
+  "size": 11.2,
+  "rotated": true,
+  "zone": "Astral Peak",
+  "hall": "A"
+ },
+ "115": {
+  "x": 957.0,
+  "y": 548.8,
+  "size": 14.0,
+  "rotated": true,
+  "zone": "Astral Peak",
+  "hall": "B"
+ },
+ "116": {
+  "x": 975.2,
+  "y": 530.6,
+  "size": 14.0,
+  "rotated": true,
+  "zone": "Astral Peak",
+  "hall": "B"
+ },
+ "117": {
+  "x": 999.4,
+  "y": 506.5,
+  "size": 14.0,
+  "rotated": true,
+  "zone": "Astral Peak",
+  "hall": "B"
+ },
+ "118": {
+  "x": 1017.6,
+  "y": 488.3,
+  "size": 14.0,
+  "rotated": true,
+  "zone": "Astral Peak",
+  "hall": "A"
+ },
+ "119": {
+  "x": 1034.6,
+  "y": 471.2,
+  "size": 11.2,
+  "rotated": true,
+  "zone": "Astral Peak",
+  "hall": "A"
+ },
+ "120": {
+  "x": 918.6,
+  "y": 555.4,
+  "size": 14.0,
+  "rotated": true,
+  "zone": "Starlight Summit",
+  "hall": "C"
+ },
+ "121": {
+  "x": 936.8,
+  "y": 537.2,
+  "size": 14.0,
+  "rotated": true,
+  "zone": "Starlight Summit",
+  "hall": "B"
+ },
+ "122": {
+  "x": 955.1,
+  "y": 519.0,
+  "size": 14.0,
+  "rotated": true,
+  "zone": "Starlight Summit",
+  "hall": "B"
+ },
+ "123": {
+  "x": 973.3,
+  "y": 500.8,
+  "size": 14.0,
+  "rotated": true,
+  "zone": "Starlight Summit",
+  "hall": "B"
+ },
+ "124": {
+  "x": 991.5,
+  "y": 482.6,
+  "size": 14.0,
+  "rotated": true,
+  "zone": "Starlight Summit",
+  "hall": "B"
+ },
+ "125": {
+  "x": 1006.2,
+  "y": 467.9,
+  "size": 11.2,
+  "rotated": true,
+  "zone": "Starlight Summit",
+  "hall": "A"
+ },
+ "126": {
+  "x": 1018.9,
+  "y": 455.2,
+  "size": 11.2,
+  "rotated": true,
+  "zone": "Starlight Summit",
+  "hall": "A"
+ },
+ "128": {
+  "x": 907.1,
+  "y": 540.0,
+  "size": 11.2,
+  "rotated": true,
+  "zone": "Starlight Summit",
+  "hall": "C"
+ },
+ "129": {
+  "x": 921.4,
+  "y": 525.7,
+  "size": 11.2,
+  "rotated": true,
+  "zone": "Starlight Summit",
+  "hall": "C"
+ },
+ "130": {
+  "x": 937.2,
+  "y": 509.9,
+  "size": 11.2,
+  "rotated": true,
+  "zone": "Starlight Summit",
+  "hall": "B"
+ },
+ "131": {
+  "x": 949.9,
+  "y": 497.2,
+  "size": 11.2,
+  "rotated": true,
+  "zone": "Starlight Summit",
+  "hall": "B"
+ },
+ "132": {
+  "x": 964.1,
+  "y": 483.0,
+  "size": 11.2,
+  "rotated": true,
+  "zone": "Starlight Summit",
+  "hall": "B"
+ },
+ "133": {
+  "x": 978.9,
+  "y": 468.8,
+  "size": 11.2,
+  "rotated": true,
+  "zone": "Starlight Summit",
+  "hall": "B"
+ },
+ "134": {
+  "x": 992.7,
+  "y": 454.5,
+  "size": 11.2,
+  "rotated": true,
+  "zone": "Starlight Summit",
+  "hall": "B"
+ },
+ "138": {
+  "x": 914.3,
+  "y": 506.0,
+  "size": 11.2,
+  "rotated": true,
+  "zone": "Starlight Summit",
+  "hall": "C"
+ },
+ "140": {
+  "x": 949.8,
+  "y": 468.1,
+  "size": 13.8,
+  "rotated": true,
+  "zone": "Starlight Summit",
+  "hall": "B"
+ },
+ "141": {
+  "x": 872.2,
+  "y": 520.9,
+  "size": 11.2,
+  "rotated": true,
+  "zone": "Starlight Summit",
+  "hall": "C"
+ },
+ "144": {
+  "x": 940.2,
+  "y": 455.0,
+  "size": 7.0,
+  "rotated": true,
+  "zone": "Starlight Summit",
+  "hall": "B"
+ },
+ "145": {
+  "x": 940.2,
+  "y": 455.0,
+  "size": 7.0,
+  "rotated": true,
+  "zone": "Starlight Summit",
+  "hall": "B"
+ },
+ "146": {
+  "x": 874.7,
+  "y": 495.0,
+  "size": 11.2,
+  "rotated": true,
+  "zone": "Starlight Summit",
+  "hall": "C"
+ },
+ "147": {
+  "x": 890.7,
+  "y": 479.2,
+  "size": 7.0,
+  "rotated": true,
+  "zone": "Starlight Summit",
+  "hall": "C"
+ },
+ "148": {
+  "x": 904.5,
+  "y": 465.2,
+  "size": 7.0,
+  "rotated": true,
+  "zone": "Starlight Summit",
+  "hall": "C"
+ },
+ "149": {
+  "x": 904.5,
+  "y": 465.2,
+  "size": 7.0,
+  "rotated": true,
+  "zone": "Starlight Summit",
+  "hall": "C"
+ },
+ "150": {
+  "x": 918.4,
+  "y": 451.4,
+  "size": 7.0,
+  "rotated": true,
+  "zone": "Starlight Summit",
+  "hall": "C"
+ },
+ "151": {
+  "x": 918.4,
+  "y": 451.4,
+  "size": 7.0,
+  "rotated": true,
+  "zone": "Starlight Summit",
+  "hall": "C"
+ },
+ "152": {
+  "x": 1100.1,
+  "y": 453.8,
+  "size": 11.2,
+  "rotated": false,
+  "zone": "Astral Peak",
+  "hall": "A"
+ },
+ "153": {
+  "x": 1119.6,
+  "y": 453.8,
+  "size": 11.2,
+  "rotated": false,
+  "zone": "Alpine Overlook",
+  "hall": "1"
+ },
+ "154": {
+  "x": 1137.8,
+  "y": 456.5,
+  "size": 5.6,
+  "rotated": false,
+  "zone": "Alpine Overlook",
+  "hall": "1"
+ },
+ "155": {
+  "x": 1137.8,
+  "y": 450.9,
+  "size": 5.6,
+  "rotated": false,
+  "zone": "Alpine Overlook",
+  "hall": "1"
+ },
+ "156": {
+  "x": 1154.7,
+  "y": 456.5,
+  "size": 5.6,
+  "rotated": false,
+  "zone": "Alpine Overlook",
+  "hall": "1"
+ },
+ "157": {
+  "x": 1154.7,
+  "y": 450.9,
+  "size": 5.6,
+  "rotated": false,
+  "zone": "Alpine Overlook",
+  "hall": "1"
+ },
+ "159": {
+  "x": 1171.5,
+  "y": 450.9,
+  "size": 5.6,
+  "rotated": false,
+  "zone": "Alpine Overlook",
+  "hall": "1"
+ },
+ "160": {
+  "x": 1171.5,
+  "y": 456.5,
+  "size": 5.6,
+  "rotated": false,
+  "zone": "Alpine Overlook",
+  "hall": "1"
+ },
+ "161": {
+  "x": 1188.2,
+  "y": 450.9,
+  "size": 5.6,
+  "rotated": false,
+  "zone": "Alpine Overlook",
+  "hall": "1"
+ },
+ "163": {
+  "x": 1119.6,
+  "y": 435.1,
+  "size": 11.2,
+  "rotated": false,
+  "zone": "Alpine Overlook",
+  "hall": "1"
+ },
+ "164": {
+  "x": 1137.8,
+  "y": 434.1,
+  "size": 5.6,
+  "rotated": false,
+  "zone": "Alpine Overlook",
+  "hall": "1"
+ },
+ "165": {
+  "x": 1137.8,
+  "y": 428.6,
+  "size": 5.6,
+  "rotated": false,
+  "zone": "Alpine Overlook",
+  "hall": "1"
+ },
+ "166": {
+  "x": 1154.9,
+  "y": 434.0,
+  "size": 5.6,
+  "rotated": false,
+  "zone": "Alpine Overlook",
+  "hall": "1"
+ },
+ "167": {
+  "x": 1154.9,
+  "y": 428.5,
+  "size": 5.6,
+  "rotated": false,
+  "zone": "Alpine Overlook",
+  "hall": "1"
+ },
+ "168": {
+  "x": 1171.5,
+  "y": 434.1,
+  "size": 5.6,
+  "rotated": false,
+  "zone": "Alpine Overlook",
+  "hall": "1"
+ },
+ "169": {
+  "x": 1171.5,
+  "y": 428.6,
+  "size": 5.6,
+  "rotated": false,
+  "zone": "Alpine Overlook",
+  "hall": "1"
+ },
+ "170": {
+  "x": 1188.2,
+  "y": 434.1,
+  "size": 5.6,
+  "rotated": false,
+  "zone": "Alpine Overlook",
+  "hall": "1"
+ },
+ "171": {
+  "x": 1188.2,
+  "y": 428.6,
+  "size": 5.6,
+  "rotated": false,
+  "zone": "Alpine Overlook",
+  "hall": "1"
+ },
+ "172": {
+  "x": 1119.6,
+  "y": 415.5,
+  "size": 11.2,
+  "rotated": false,
+  "zone": "Alpine Overlook",
+  "hall": "1"
+ },
+ "174": {
+  "x": 1137.8,
+  "y": 408.9,
+  "size": 5.6,
+  "rotated": false,
+  "zone": "Alpine Overlook",
+  "hall": "1"
+ },
+ "175": {
+  "x": 1137.8,
+  "y": 403.3,
+  "size": 5.6,
+  "rotated": false,
+  "zone": "Alpine Overlook",
+  "hall": "1"
+ },
+ "178": {
+  "x": 1171.5,
+  "y": 408.9,
+  "size": 5.6,
+  "rotated": false,
+  "zone": "Alpine Overlook",
+  "hall": "1"
+ },
+ "179": {
+  "x": 1171.5,
+  "y": 403.3,
+  "size": 5.6,
+  "rotated": false,
+  "zone": "Alpine Overlook",
+  "hall": "1"
+ },
+ "180": {
+  "x": 1188.2,
+  "y": 408.9,
+  "size": 5.6,
+  "rotated": false,
+  "zone": "Alpine Overlook",
+  "hall": "1"
+ },
+ "181": {
+  "x": 1188.2,
+  "y": 403.3,
+  "size": 5.6,
+  "rotated": false,
+  "zone": "Alpine Overlook",
+  "hall": "1"
+ },
+ "182": {
+  "x": 1119.6,
+  "y": 396.9,
+  "size": 11.2,
+  "rotated": false,
+  "zone": "Alpine Overlook",
+  "hall": "1"
+ },
+ "184": {
+  "x": 1154.6,
+  "y": 389.2,
+  "size": 5.6,
+  "rotated": false,
+  "zone": "Alpine Overlook",
+  "hall": "1"
+ },
+ "185": {
+  "x": 1154.6,
+  "y": 383.7,
+  "size": 5.6,
+  "rotated": false,
+  "zone": "Alpine Overlook",
+  "hall": "1"
+ },
+ "186": {
+  "x": 1171.5,
+  "y": 389.2,
+  "size": 5.6,
+  "rotated": false,
+  "zone": "Alpine Overlook",
+  "hall": "1"
+ },
+ "187": {
+  "x": 1171.5,
+  "y": 383.7,
+  "size": 5.6,
+  "rotated": false,
+  "zone": "Alpine Overlook",
+  "hall": "1"
+ },
+ "188": {
+  "x": 1188.2,
+  "y": 389.3,
+  "size": 5.6,
+  "rotated": false,
+  "zone": "Alpine Overlook",
+  "hall": "1"
+ },
+ "189": {
+  "x": 1188.2,
+  "y": 383.7,
+  "size": 5.6,
+  "rotated": false,
+  "zone": "Alpine Overlook",
+  "hall": "1"
+ },
+ "191": {
+  "x": 1119.6,
+  "y": 378.4,
+  "size": 11.2,
+  "rotated": false,
+  "zone": "Alpine Overlook",
+  "hall": "1"
+ },
+ "192": {
+  "x": 1152.4,
+  "y": 369.7,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "193": {
+  "x": 1152.4,
+  "y": 364.1,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "194": {
+  "x": 1156.9,
+  "y": 369.7,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "195": {
+  "x": 1156.9,
+  "y": 364.1,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "196": {
+  "x": 1171.5,
+  "y": 369.7,
+  "size": 5.6,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "197": {
+  "x": 1171.5,
+  "y": 364.2,
+  "size": 5.6,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "198": {
+  "x": 1118.8,
+  "y": 350.0,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "199": {
+  "x": 1118.8,
+  "y": 344.4,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "200": {
+  "x": 1123.3,
+  "y": 350.0,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "201": {
+  "x": 1123.3,
+  "y": 344.4,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "202": {
+  "x": 1135.6,
+  "y": 350.0,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "203": {
+  "x": 1135.6,
+  "y": 344.4,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "204": {
+  "x": 1140.1,
+  "y": 350.0,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "205": {
+  "x": 1140.1,
+  "y": 344.4,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "206": {
+  "x": 1152.4,
+  "y": 350.1,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "207": {
+  "x": 1152.4,
+  "y": 344.5,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "208": {
+  "x": 1156.9,
+  "y": 350.1,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "209": {
+  "x": 1156.9,
+  "y": 344.5,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "210": {
+  "x": 1169.5,
+  "y": 349.7,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "211": {
+  "x": 1169.5,
+  "y": 344.2,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "212": {
+  "x": 1174.0,
+  "y": 349.7,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "213": {
+  "x": 1174.0,
+  "y": 344.2,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "214": {
+  "x": 1118.8,
+  "y": 330.4,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "215": {
+  "x": 1118.8,
+  "y": 324.8,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "216": {
+  "x": 1123.3,
+  "y": 330.4,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "217": {
+  "x": 1123.3,
+  "y": 324.8,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "218": {
+  "x": 1135.6,
+  "y": 330.4,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "219": {
+  "x": 1135.6,
+  "y": 324.8,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "220": {
+  "x": 1140.1,
+  "y": 330.4,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "221": {
+  "x": 1140.1,
+  "y": 324.8,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "224": {
+  "x": 1118.8,
+  "y": 302.4,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "225": {
+  "x": 1118.8,
+  "y": 296.8,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "226": {
+  "x": 1123.3,
+  "y": 302.4,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "227": {
+  "x": 1123.3,
+  "y": 296.8,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "228": {
+  "x": 1136.2,
+  "y": 302.4,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "229": {
+  "x": 1136.2,
+  "y": 296.8,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "230": {
+  "x": 1140.7,
+  "y": 302.4,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "231": {
+  "x": 1140.7,
+  "y": 296.8,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "232": {
+  "x": 1153.5,
+  "y": 302.4,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "233": {
+  "x": 1153.5,
+  "y": 296.8,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "234": {
+  "x": 1158.0,
+  "y": 302.4,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "235": {
+  "x": 1158.0,
+  "y": 296.8,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "236": {
+  "x": 1170.9,
+  "y": 302.4,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "237": {
+  "x": 1170.9,
+  "y": 296.8,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "238": {
+  "x": 1175.4,
+  "y": 302.4,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "239": {
+  "x": 1175.4,
+  "y": 296.8,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "242": {
+  "x": 1118.8,
+  "y": 282.8,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "243": {
+  "x": 1118.8,
+  "y": 277.1,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "244": {
+  "x": 1123.3,
+  "y": 282.8,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "245": {
+  "x": 1123.3,
+  "y": 277.1,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "246": {
+  "x": 1136.2,
+  "y": 282.8,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "247": {
+  "x": 1136.2,
+  "y": 277.1,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "248": {
+  "x": 1140.7,
+  "y": 282.8,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "249": {
+  "x": 1140.7,
+  "y": 277.1,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "250": {
+  "x": 1153.7,
+  "y": 282.8,
+  "size": 4.2,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "251": {
+  "x": 1153.7,
+  "y": 277.1,
+  "size": 4.2,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "252": {
+  "x": 1158.0,
+  "y": 282.8,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "253": {
+  "x": 1158.0,
+  "y": 277.1,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "254": {
+  "x": 1170.9,
+  "y": 282.8,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "255": {
+  "x": 1170.9,
+  "y": 277.1,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "256": {
+  "x": 1175.4,
+  "y": 282.8,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "257": {
+  "x": 1175.4,
+  "y": 277.1,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Honeycomb Hub",
+  "hall": "2"
+ },
+ "258": {
+  "x": 1118.8,
+  "y": 263.2,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "259": {
+  "x": 1118.8,
+  "y": 257.6,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "260": {
+  "x": 1123.3,
+  "y": 263.2,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "261": {
+  "x": 1123.3,
+  "y": 257.6,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "262": {
+  "x": 1153.5,
+  "y": 263.2,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "263": {
+  "x": 1153.5,
+  "y": 257.6,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "264": {
+  "x": 1158.0,
+  "y": 263.2,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "265": {
+  "x": 1158.0,
+  "y": 257.6,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "266": {
+  "x": 1170.9,
+  "y": 263.2,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "267": {
+  "x": 1170.9,
+  "y": 257.6,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "268": {
+  "x": 1175.4,
+  "y": 263.2,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "269": {
+  "x": 1175.4,
+  "y": 257.6,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "272": {
+  "x": 1118.8,
+  "y": 243.5,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "273": {
+  "x": 1118.8,
+  "y": 237.9,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "274": {
+  "x": 1123.3,
+  "y": 243.5,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "275": {
+  "x": 1123.3,
+  "y": 237.9,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "276": {
+  "x": 1136.2,
+  "y": 243.5,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "277": {
+  "x": 1136.2,
+  "y": 237.9,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "278": {
+  "x": 1140.7,
+  "y": 243.5,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "279": {
+  "x": 1140.7,
+  "y": 237.9,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "280": {
+  "x": 1153.5,
+  "y": 243.5,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "281": {
+  "x": 1153.5,
+  "y": 237.9,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "282": {
+  "x": 1158.0,
+  "y": 243.5,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "283": {
+  "x": 1158.0,
+  "y": 237.9,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "286": {
+  "x": 1188.9,
+  "y": 243.5,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "287": {
+  "x": 1188.9,
+  "y": 237.9,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "288": {
+  "x": 1193.4,
+  "y": 243.5,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "289": {
+  "x": 1193.4,
+  "y": 237.9,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "290": {
+  "x": 1118.8,
+  "y": 224.0,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "291": {
+  "x": 1118.8,
+  "y": 218.4,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "292": {
+  "x": 1123.3,
+  "y": 224.0,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "293": {
+  "x": 1123.3,
+  "y": 218.4,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "294": {
+  "x": 1136.2,
+  "y": 224.0,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "295": {
+  "x": 1136.2,
+  "y": 218.4,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "296": {
+  "x": 1140.7,
+  "y": 224.0,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "297": {
+  "x": 1140.7,
+  "y": 218.4,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "298": {
+  "x": 1153.5,
+  "y": 224.0,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "299": {
+  "x": 1153.5,
+  "y": 218.4,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "300": {
+  "x": 1158.0,
+  "y": 224.0,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "301": {
+  "x": 1158.0,
+  "y": 218.4,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "304": {
+  "x": 1188.9,
+  "y": 224.0,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "305": {
+  "x": 1188.9,
+  "y": 218.4,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "306": {
+  "x": 1193.4,
+  "y": 224.0,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "307": {
+  "x": 1193.4,
+  "y": 218.4,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "310": {
+  "x": 1118.8,
+  "y": 198.1,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "311": {
+  "x": 1118.8,
+  "y": 192.5,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "312": {
+  "x": 1123.3,
+  "y": 198.1,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "313": {
+  "x": 1123.3,
+  "y": 192.5,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "314": {
+  "x": 1136.2,
+  "y": 198.1,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "315": {
+  "x": 1136.2,
+  "y": 192.5,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "316": {
+  "x": 1140.7,
+  "y": 198.1,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "317": {
+  "x": 1140.7,
+  "y": 192.5,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "318": {
+  "x": 1153.5,
+  "y": 198.1,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "319": {
+  "x": 1153.5,
+  "y": 192.5,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "320": {
+  "x": 1158.0,
+  "y": 198.1,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "321": {
+  "x": 1158.0,
+  "y": 192.5,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "322": {
+  "x": 1170.9,
+  "y": 198.1,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "323": {
+  "x": 1170.9,
+  "y": 192.5,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "324": {
+  "x": 1175.4,
+  "y": 198.1,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "325": {
+  "x": 1175.4,
+  "y": 192.5,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "326": {
+  "x": 1188.9,
+  "y": 198.1,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "327": {
+  "x": 1188.9,
+  "y": 192.5,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Amber Hive",
+  "hall": "3"
+ },
+ "330": {
+  "x": 1118.3,
+  "y": 179.2,
+  "size": 3.4,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "331": {
+  "x": 1118.3,
+  "y": 174.7,
+  "size": 3.4,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "332": {
+  "x": 1121.6,
+  "y": 179.2,
+  "size": 3.4,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "333": {
+  "x": 1121.6,
+  "y": 174.7,
+  "size": 3.4,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "336": {
+  "x": 1188.9,
+  "y": 178.6,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "337": {
+  "x": 1188.9,
+  "y": 173.0,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "338": {
+  "x": 1193.4,
+  "y": 178.6,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "339": {
+  "x": 1193.4,
+  "y": 173.0,
+  "size": 4.5,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "340": {
+  "x": 1118.3,
+  "y": 162.3,
+  "size": 3.4,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "341": {
+  "x": 1118.3,
+  "y": 157.8,
+  "size": 3.4,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "342": {
+  "x": 1121.6,
+  "y": 162.3,
+  "size": 3.4,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "343": {
+  "x": 1121.6,
+  "y": 157.8,
+  "size": 3.4,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "346": {
+  "x": 1154.1,
+  "y": 162.3,
+  "size": 3.4,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "347": {
+  "x": 1154.1,
+  "y": 157.8,
+  "size": 3.4,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "352": {
+  "x": 1118.3,
+  "y": 145.5,
+  "size": 3.4,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "353": {
+  "x": 1118.3,
+  "y": 141.0,
+  "size": 3.4,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "354": {
+  "x": 1121.6,
+  "y": 145.5,
+  "size": 3.4,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "355": {
+  "x": 1121.6,
+  "y": 141.0,
+  "size": 3.4,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "356": {
+  "x": 1136.2,
+  "y": 145.5,
+  "size": 3.4,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "357": {
+  "x": 1136.2,
+  "y": 141.0,
+  "size": 3.4,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "358": {
+  "x": 1139.5,
+  "y": 145.5,
+  "size": 3.4,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "359": {
+  "x": 1139.5,
+  "y": 141.0,
+  "size": 3.4,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "360": {
+  "x": 1118.3,
+  "y": 128.7,
+  "size": 3.4,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "361": {
+  "x": 1118.3,
+  "y": 124.2,
+  "size": 3.4,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "362": {
+  "x": 1121.6,
+  "y": 128.7,
+  "size": 3.4,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "363": {
+  "x": 1121.6,
+  "y": 124.2,
+  "size": 3.4,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "364": {
+  "x": 1136.2,
+  "y": 128.7,
+  "size": 3.4,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "365": {
+  "x": 1136.2,
+  "y": 124.2,
+  "size": 3.4,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "366": {
+  "x": 1139.5,
+  "y": 128.7,
+  "size": 3.4,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "367": {
+  "x": 1139.5,
+  "y": 124.2,
+  "size": 3.4,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "368": {
+  "x": 1118.3,
+  "y": 111.8,
+  "size": 3.4,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "369": {
+  "x": 1118.3,
+  "y": 107.3,
+  "size": 3.4,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "370": {
+  "x": 1121.6,
+  "y": 111.8,
+  "size": 3.4,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "371": {
+  "x": 1121.6,
+  "y": 107.3,
+  "size": 3.4,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "372": {
+  "x": 1118.3,
+  "y": 95.0,
+  "size": 3.4,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "373": {
+  "x": 1118.3,
+  "y": 90.5,
+  "size": 3.4,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "374": {
+  "x": 1121.6,
+  "y": 95.0,
+  "size": 3.4,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "375": {
+  "x": 1121.6,
+  "y": 90.5,
+  "size": 3.4,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "P-10A": {
+  "x": 1180.8,
+  "y": 140.6,
+  "size": 2.6,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "P-10B": {
+  "x": 1180.8,
+  "y": 138.0,
+  "size": 2.6,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "P-11A": {
+  "x": 1180.8,
+  "y": 132.9,
+  "size": 2.6,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "P-11B": {
+  "x": 1180.8,
+  "y": 130.3,
+  "size": 2.6,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "P-12A": {
+  "x": 1180.8,
+  "y": 125.1,
+  "size": 2.6,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "P-12B": {
+  "x": 1180.8,
+  "y": 122.5,
+  "size": 2.6,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "P-13A": {
+  "x": 1180.8,
+  "y": 117.3,
+  "size": 2.6,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "P-13B": {
+  "x": 1180.8,
+  "y": 114.7,
+  "size": 2.6,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "P-14A": {
+  "x": 1191.3,
+  "y": 140.8,
+  "size": 2.6,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "P-14B": {
+  "x": 1191.3,
+  "y": 138.2,
+  "size": 2.6,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "P-15A": {
+  "x": 1191.3,
+  "y": 132.9,
+  "size": 2.6,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "P-15B": {
+  "x": 1191.3,
+  "y": 130.3,
+  "size": 2.6,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "P-16A": {
+  "x": 1191.3,
+  "y": 125.1,
+  "size": 2.6,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "P-16B": {
+  "x": 1191.3,
+  "y": 122.5,
+  "size": 2.6,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "P-17A": {
+  "x": 1191.3,
+  "y": 117.3,
+  "size": 2.6,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "P-17B": {
+  "x": 1191.3,
+  "y": 114.7,
+  "size": 2.6,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "P-18A": {
+  "x": 1191.3,
+  "y": 109.7,
+  "size": 2.6,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "P-18B": {
+  "x": 1191.3,
+  "y": 107.1,
+  "size": 2.6,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "P-1A": {
+  "x": 1159.2,
+  "y": 140.6,
+  "size": 2.6,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "P-1B": {
+  "x": 1159.2,
+  "y": 138.0,
+  "size": 2.6,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "P-2A": {
+  "x": 1159.2,
+  "y": 132.9,
+  "size": 2.6,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "P-2B": {
+  "x": 1159.2,
+  "y": 130.3,
+  "size": 2.6,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "P-3A": {
+  "x": 1159.2,
+  "y": 125.1,
+  "size": 2.6,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "P-3B": {
+  "x": 1159.2,
+  "y": 122.5,
+  "size": 2.6,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "P-4A": {
+  "x": 1159.2,
+  "y": 117.3,
+  "size": 2.6,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "P-4B": {
+  "x": 1159.2,
+  "y": 114.7,
+  "size": 2.6,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "P-5A": {
+  "x": 1159.2,
+  "y": 109.5,
+  "size": 2.6,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "P-5B": {
+  "x": 1159.2,
+  "y": 106.9,
+  "size": 2.6,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "P-6A": {
+  "x": 1171.1,
+  "y": 140.5,
+  "size": 2.6,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "P-6B": {
+  "x": 1171.1,
+  "y": 137.9,
+  "size": 2.6,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "P-7A": {
+  "x": 1171.1,
+  "y": 132.9,
+  "size": 2.6,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "P-7B": {
+  "x": 1171.1,
+  "y": 130.3,
+  "size": 2.6,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "P-8A": {
+  "x": 1171.1,
+  "y": 125.1,
+  "size": 2.6,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "P-8B": {
+  "x": 1171.1,
+  "y": 122.5,
+  "size": 2.6,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "P-9A": {
+  "x": 1171.1,
+  "y": 117.3,
+  "size": 2.6,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ },
+ "P-9B": {
+  "x": 1171.1,
+  "y": 114.7,
+  "size": 2.6,
+  "rotated": false,
+  "zone": "Cosmic Canyon",
+  "hall": "4-5"
+ }
 }

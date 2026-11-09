@@ -1,13 +1,10 @@
 import type { Track } from '../../app/src/types/kubequest.types';
 
 export const exhibitorLayout = {
-  MAP_CENTER_X: 260,
-  MAP_CENTER_Y: 350,
-  METERS_PER_MAP_UNIT: 0.2857,
-  PAVILION_SIDE_A_X: 444,
-  PAVILION_SIDE_B_X: 472,
-  PAVILION_TOP_Y: 22,
-  PAVILION_ROW_SPACING: 8.1,
+  EXPO_LEVEL_ID: 'sp-expo',
+  MAP_CENTER_X: 424,
+  MAP_CENTER_Y: 592,
+  METERS_PER_MAP_UNIT: 0.17,
   PAVILION_HALL: '5',
   PAVILION_ZONE: 'Cosmic Canyon',
   PROJECT_TIER: 'Project',

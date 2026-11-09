@@ -20,15 +20,26 @@ import { respondMeetTool } from './respond-meet.tool';
 import { respondQuestTool } from './respond-quest.tool';
 import { screenTokenTool } from './screen-token.tool';
 import { searchTool } from './search.tool';
+import { signInTool } from './sign-in.tool';
 import { signUpTool } from './sign-up.tool';
 import { submitQuizTool } from './submit-quiz.tool';
 import { updateSettingsTool } from './update-settings.tool';
 import { whatsAroundMeTool } from './whats-around-me.tool';
 import { whatsNextTool } from './whats-next.tool';
 import { worldTool } from './world.tool';
+import { answerHandshakeTool } from './answer-handshake.tool';
+import { handshakeCodeTool } from './handshake-code.tool';
+import { handshakeStateTool } from './handshake-state.tool';
+import { listBoothNotesTool } from './list-booth-notes.tool';
+import { listMessagesTool } from './list-messages.tool';
+import { recapTool } from './recap.tool';
+import { saveBoothNoteTool } from './save-booth-note.tool';
+import { sendMessageTool } from './send-message.tool';
+import { startHandshakeTool } from './start-handshake.tool';
 import { IRegisteredTool } from './define-tool';
 
 export const toolRegistry = {
+  sign_in: signInTool,
   sign_up: signUpTool,
   get_profile: getProfileTool,
   update_settings: updateSettingsTool,
@@ -56,6 +67,15 @@ export const toolRegistry = {
   get_exhibitor: getExhibitorTool,
   exhibitor_dashboard: exhibitorDashboardTool,
   admin_overview: adminOverviewTool,
+  handshake_code: handshakeCodeTool,
+  start_handshake: startHandshakeTool,
+  handshake_state: handshakeStateTool,
+  answer_handshake: answerHandshakeTool,
+  save_booth_note: saveBoothNoteTool,
+  list_booth_notes: listBoothNotesTool,
+  send_message: sendMessageTool,
+  list_messages: listMessagesTool,
+  recap: recapTool,
 } satisfies { [TName in ToolName]: IRegisteredTool<TName> };
 
 export function findTool(name: string): IRegisteredTool | undefined {

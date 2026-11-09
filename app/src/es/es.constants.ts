@@ -5,6 +5,9 @@ export const indexNames = {
   XP_EVENTS: 'xp_events',
   INTROS: 'intros',
   QUESTS: 'quests',
+  HANDSHAKES: 'handshakes',
+  BOOTH_NOTES: 'booth_notes',
+  MESSAGES: 'messages',
 } as const;
 
 export const esTimeouts = {

@@ -108,3 +108,42 @@ export async function recordArrival(attendeeId: string, locationId: string): Pro
     },
   );
 }
+
+function acceptedMeetWith(candidates: IStoredIntro[], partnerId: string): IStoredIntro | undefined {
+  return candidates.find(
+    (stored) => stored.intro.status === 'accepted' && (stored.intro.fromId === partnerId || stored.intro.toId === partnerId),
+  );
+}
+
+async function markMet(stored: IStoredIntro, at: string): Promise<void> {
+  await replaceIntro(stored, { ...stored.intro, status: 'met', metAt: at });
+}
+
+export async function completeMeetByHandshake(attendeeId: string, partnerId: string): Promise<string | undefined> {
+  const at = new Date().toISOString();
+  const stored = acceptedMeetWith(await searchIntros(attendeeId), partnerId);
+
+  if (!stored) {
+    return undefined;
+  }
+
+  try {
+    await markMet(stored, at);
+  } catch (error) {
+    if (!isConflict(error)) {
+      throw error;
+    }
+
+    const fresh = await getIntro(stored.intro.id);
+
+    if (fresh?.intro.status === 'accepted') {
+      await markMet(fresh, at);
+    } else if (fresh?.intro.status !== 'met') {
+      return undefined;
+    }
+  }
+
+  logger.info({ meetId: stored.intro.id }, 'meet completed by handshake');
+
+  return stored.intro.id;
+}

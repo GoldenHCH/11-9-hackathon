@@ -4,7 +4,7 @@
   <ul class="visitor-list" [attr.aria-label]="label || null">
     @for (visitor of visitors; track visitor.id + visitor.when) {
       <li class="visitor-row">
-        <app-pixel-face [seed]="visitor.faceSeed" [handle]="visitor.handle" [size]="36"></app-pixel-face>
+        <app-pixel-face [seed]="visitor.faceSeed" [label]="'@' + visitor.handle" [size]="36"></app-pixel-face>
         <div class="visitor-text">
           <span class="visitor-handle">&#64;{{ visitor.handle }}</span>
           <span class="visitor-meta">{{ visitor.when ? visitor.levelName + ' · ' + visitor.when : visitor.levelName }}</span>

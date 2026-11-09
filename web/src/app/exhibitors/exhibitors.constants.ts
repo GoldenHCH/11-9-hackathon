@@ -49,7 +49,7 @@ export const exhibitorDirectorySettings = {
 
 export const exhibitorPageSettings = {
   LIVE_REFRESH_MS: 30000,
-  EXPO_LEVEL_ID: 'sp-showcase',
+  EXPO_LEVEL_ID: 'sp-expo',
   MAP_PADDING: 12,
   MARKER_SIZE: 18,
   MIN_LABEL_WIDTH: 60,

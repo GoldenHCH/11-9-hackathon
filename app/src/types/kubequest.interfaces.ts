@@ -6,6 +6,9 @@ import {
   CheckInStatus,
   DeclineReason,
   ExhibitorType,
+  HandshakeQuestionSource,
+  HandshakeRole,
+  HandshakeStatus,
   IsoDateString,
   ItineraryItemKind,
   LeaderboardBoard,
@@ -112,6 +115,8 @@ export interface IAttendee {
   handle: string;
   faceSeed: string;
   realName?: string;
+  displayName?: string;
+  email?: string;
   githubLogin?: string;
   avatarUrl?: string;
   photoUrl?: string;
@@ -518,6 +523,8 @@ export interface ICheckInResult {
   boss?: IBossState;
   levelUp?: ILevelProgress;
   newBanners: IBannerProgress[];
+  boothNote?: IBoothNote;
+  noteRequired?: boolean;
   peopleHere?: IPersonMatch[];
 }
 
@@ -715,8 +722,21 @@ export interface IAttendeeInput {
   attendeeId: string;
 }
 
+export interface ISignInInput {
+  name: string;
+  email: string;
+}
+
+export interface ISignInResult {
+  attendee: IProfile;
+  personalLink: string;
+  isNew: boolean;
+  needsOnboarding: boolean;
+}
+
 export interface ISignUpInput {
-  handle: string;
+  attendeeId?: string;
+  handle?: string;
   workingOn: string;
   firstKubeCon: boolean;
   happyToWelcome?: boolean;
@@ -855,7 +875,156 @@ export interface IAdminOverviewInput {
   since?: IsoDateString;
 }
 
+export interface IHandshakeCode {
+  playerId: string;
+  token: string;
+  scanUrl: string;
+  expiresAt: IsoDateString;
+}
+
+export interface IStartHandshakeInput {
+  attendeeId: string;
+  token: string;
+}
+
+export interface IHandshakeStateInput {
+  attendeeId: string;
+  handshakeId?: string;
+}
+
+export interface IAnswerHandshakeInput {
+  attendeeId: string;
+  handshakeId: string;
+  answer: string;
+}
+
+export interface IHandshake {
+  id: string;
+  status: HandshakeStatus;
+  role: HandshakeRole;
+  statusLine: string;
+  partner: IMatchPlayer;
+  question: string;
+  questionSource: HandshakeQuestionSource;
+  questionReason?: string;
+  iAnswered: boolean;
+  partnerAnswered: boolean;
+  attemptsLeft: number;
+  expiresAt: IsoDateString;
+  matchedAt?: IsoDateString;
+  myAnswer?: string;
+  theirAnswer?: string;
+  xpAwarded?: number;
+  meetId?: string;
+}
+
+export interface IHandshakeStateResult {
+  handshake?: IHandshake;
+}
+
+export interface IBoothNote {
+  id: string;
+  locationId: string;
+  boothName: string;
+  boothNumber?: string;
+  sponsorTier?: string;
+  liked: string;
+  thoughts?: string;
+  followUp: boolean;
+  xpAwarded: number;
+  createdAt: IsoDateString;
+  updatedAt: IsoDateString;
+}
+
+export interface ISaveBoothNoteInput {
+  attendeeId: string;
+  locationId: string;
+  liked: string;
+  thoughts?: string;
+  followUp?: boolean;
+}
+
+export interface ISaveBoothNoteResult {
+  note: IBoothNote;
+  xpAwarded: number;
+  message: string;
+  levelUp?: ILevelProgress;
+  newBanners: IBannerProgress[];
+}
+
+export interface IMessage {
+  id: string;
+  meetId: string;
+  fromMe: boolean;
+  text: string;
+  at: IsoDateString;
+}
+
+export interface ISendMessageInput {
+  attendeeId: string;
+  meetId: string;
+  text: string;
+}
+
+export interface IListMessagesInput {
+  attendeeId: string;
+  meetId: string;
+  since?: IsoDateString;
+}
+
+export interface IRecapTalk {
+  talkId: string;
+  title: string;
+  room: string;
+  at: IsoDateString;
+  quizCorrect?: number;
+  quizTotal?: number;
+}
+
+export interface IRecapPerson {
+  playerId: string;
+  handle: string;
+  faceSeed: string;
+  metAt: IsoDateString;
+  question?: string;
+  theirAnswer?: string;
+  sharedTopics: string[];
+  githubLogin?: string;
+  nextStep: string;
+}
+
+export interface IRecapBooth {
+  locationId: string;
+  name: string;
+  boothNumber?: string;
+  liked: string;
+  thoughts?: string;
+  followUp: boolean;
+  nextStep: string;
+}
+
+export interface IRecapTotals {
+  xp: number;
+  talks: number;
+  people: number;
+  booths: number;
+  quizCorrect: number;
+}
+
+export interface IRecap {
+  player: IPublicPlayer;
+  generatedAt: IsoDateString;
+  totals: IRecapTotals;
+  talks: IRecapTalk[];
+  people: IRecapPerson[];
+  booths: IRecapBooth[];
+  nextSteps: string[];
+  emailSubject: string;
+  emailHtml: string;
+}
+
 export interface IToolContracts {
+  sign_in: { input: ISignInInput; output: ISignInResult };
   sign_up: { input: ISignUpInput; output: ISignUpResult };
   get_profile: { input: IAttendeeInput; output: IProfile };
   update_settings: { input: IUpdateSettingsInput; output: IProfile };
@@ -883,6 +1052,15 @@ export interface IToolContracts {
   get_exhibitor: { input: IGetExhibitorInput; output: IExhibitorPage };
   exhibitor_dashboard: { input: IExhibitorDashboardInput; output: IExhibitorDashboard };
   admin_overview: { input: IAdminOverviewInput; output: IAdminOverview };
+  handshake_code: { input: IAttendeeInput; output: IHandshakeCode };
+  start_handshake: { input: IStartHandshakeInput; output: IHandshake };
+  handshake_state: { input: IHandshakeStateInput; output: IHandshakeStateResult };
+  answer_handshake: { input: IAnswerHandshakeInput; output: IHandshake };
+  save_booth_note: { input: ISaveBoothNoteInput; output: ISaveBoothNoteResult };
+  list_booth_notes: { input: IAttendeeInput; output: IBoothNote[] };
+  send_message: { input: ISendMessageInput; output: IMessage };
+  list_messages: { input: IListMessagesInput; output: IMessage[] };
+  recap: { input: IAttendeeInput; output: IRecap };
 }
 
 export interface IToolInfo {

@@ -1,0 +1,294 @@
+{
+  "tool": "sign_in",
+  "endpoint": "POST /api/tools/sign_in",
+  "request": {
+    "name": "John Doe",
+    "email": "  JohnDoe@Gmail.com "
+  },
+  "status": 200,
+  "response": {
+    "attendee": {
+      "attendee": {
+        "id": "p_demoJohnDoeId00",
+        "handle": "johndoe",
+        "faceSeed": "066031b9bc419b8f",
+        "displayName": "John Doe",
+        "email": "johndoe@gmail.com",
+        "workingOn": "",
+        "profileText": "johndoe is at KubeCon.",
+        "profile": {
+          "topics": [],
+          "firstTimer": false,
+          "welcomer": false
+        },
+        "settings": {
+          "accessibleMode": false,
+          "noWalking": false,
+          "locationOn": true,
+          "language": "en",
+          "hideFromLeaderboard": false,
+          "meetingOn": false
+        },
+        "visible": true,
+        "xp": 0,
+        "level": 1,
+        "banners": [],
+        "blockedIds": [],
+        "createdAt": "2026-11-09T21:41:24.567Z"
+      },
+      "level": {
+        "level": 1,
+        "name": "Pod",
+        "xp": 0,
+        "levelMinXp": 0,
+        "nextLevelXp": 50,
+        "nextLevelName": "Deployment",
+        "progress": 0
+      },
+      "inventory": {
+        "blocks": {
+          "circuit": 0,
+          "stone": 0,
+          "glass": 0,
+          "crate": 0,
+          "iron": 0,
+          "copper": 0,
+          "lantern": 0,
+          "wood": 0,
+          "gold": 0
+        },
+        "totalBlocks": 0,
+        "gems": 0,
+        "banners": [
+          {
+            "id": "observability-nerd",
+            "name": "Observability Nerd",
+            "description": "Collect 3 glass blocks from Operations + Performance talks",
+            "progress": 0,
+            "target": 3,
+            "earned": false
+          },
+          {
+            "id": "connector",
+            "name": "Connector",
+            "description": "Complete 3 meets",
+            "progress": 0,
+            "target": 3,
+            "earned": false
+          },
+          {
+            "id": "welcomer",
+            "name": "Welcomer",
+            "description": "Complete 2 meets with first-timers",
+            "progress": 0,
+            "target": 2,
+            "earned": false
+          },
+          {
+            "id": "explorer",
+            "name": "Explorer",
+            "description": "Check in at both buildings",
+            "progress": 0,
+            "target": 2,
+            "earned": false
+          },
+          {
+            "id": "scout",
+            "name": "Scout",
+            "description": "Visit 5 outposts in a day",
+            "progress": 0,
+            "target": 5,
+            "earned": false
+          },
+          {
+            "id": "speaker",
+            "name": "Speaker",
+            "description": "Speaking at KubeCon",
+            "progress": 0,
+            "target": 1,
+            "earned": false
+          }
+        ],
+        "xp": 0,
+        "level": {
+          "level": 1,
+          "name": "Pod",
+          "xp": 0,
+          "levelMinXp": 0,
+          "nextLevelXp": 50,
+          "nextLevelName": "Deployment",
+          "progress": 0
+        },
+        "nextLevelXp": 50
+      },
+      "personalLink": "https://kube-quest.cnh.radarhq.io/me/p_demoJohnDoeId00",
+      "publicId": "pl_01c88990a33676aa"
+    },
+    "personalLink": "https://kube-quest.cnh.radarhq.io/me/p_demoJohnDoeId00",
+    "isNew": true,
+    "needsOnboarding": true
+  },
+  "variants": {
+    "returning": {
+      "request": {
+        "name": "John Doe",
+        "email": "johndoe@gmail.com"
+      },
+      "status": 200,
+      "response": {
+        "attendee": {
+          "attendee": {
+            "id": "p_demoJohnDoeId00",
+            "handle": "johndoe",
+            "faceSeed": "066031b9bc419b8f",
+            "displayName": "John Doe",
+            "email": "johndoe@gmail.com",
+            "workingOn": "Running an internal developer platform with Argo CD and GitOps: golden paths, multi-cluster rollouts and progressive delivery",
+            "profileText": "johndoe is a returning KubeCon attendee. Working on: Running an internal developer platform with Argo CD and GitOps: golden paths, multi-cluster rollouts and progressive delivery. Interested in platform engineering, gitops, argo cd, developer experience, observability. Happy to welcome a first-timer.",
+            "profile": {
+              "topics": [
+                "platform engineering",
+                "gitops",
+                "argo cd",
+                "developer experience",
+                "observability"
+              ],
+              "firstTimer": false,
+              "welcomer": true
+            },
+            "settings": {
+              "accessibleMode": false,
+              "noWalking": false,
+              "locationOn": true,
+              "language": "en",
+              "hideFromLeaderboard": false,
+              "meetingOn": true
+            },
+            "visible": true,
+            "xp": 0,
+            "level": 1,
+            "banners": [],
+            "blockedIds": [],
+            "createdAt": "2026-11-09T21:41:24.567Z",
+            "lastSeenAt": "2026-11-09T21:41:58.037Z",
+            "lastLocation": {
+              "lon": -111.89475,
+              "lat": 40.76621
+            },
+            "lastLocationId": "campfire-community-hub",
+            "spotMe": "Grey KubeQuest hoodie, near the Community Hub",
+            "inventory": {
+              "gems": 0,
+              "blocks": {
+                "stone": 1
+              }
+            }
+          },
+          "level": {
+            "level": 1,
+            "name": "Pod",
+            "xp": 0,
+            "levelMinXp": 0,
+            "nextLevelXp": 50,
+            "nextLevelName": "Deployment",
+            "progress": 0
+          },
+          "inventory": {
+            "blocks": {
+              "circuit": 0,
+              "stone": 1,
+              "glass": 0,
+              "crate": 0,
+              "iron": 0,
+              "copper": 0,
+              "lantern": 0,
+              "wood": 0,
+              "gold": 0
+            },
+            "totalBlocks": 1,
+            "gems": 0,
+            "banners": [
+              {
+                "id": "observability-nerd",
+                "name": "Observability Nerd",
+                "description": "Collect 3 glass blocks from Operations + Performance talks",
+                "progress": 0,
+                "target": 3,
+                "earned": false
+              },
+              {
+                "id": "connector",
+                "name": "Connector",
+                "description": "Complete 3 meets",
+                "progress": 0,
+                "target": 3,
+                "earned": false
+              },
+              {
+                "id": "welcomer",
+                "name": "Welcomer",
+                "description": "Complete 2 meets with first-timers",
+                "progress": 0,
+                "target": 2,
+                "earned": false
+              },
+              {
+                "id": "explorer",
+                "name": "Explorer",
+                "description": "Check in at both buildings",
+                "progress": 0,
+                "target": 2,
+                "earned": false
+              },
+              {
+                "id": "scout",
+                "name": "Scout",
+                "description": "Visit 5 outposts in a day",
+                "progress": 0,
+                "target": 5,
+                "earned": false
+              },
+              {
+                "id": "speaker",
+                "name": "Speaker",
+                "description": "Speaking at KubeCon",
+                "progress": 0,
+                "target": 1,
+                "earned": false
+              }
+            ],
+            "xp": 0,
+            "level": {
+              "level": 1,
+              "name": "Pod",
+              "xp": 0,
+              "levelMinXp": 0,
+              "nextLevelXp": 50,
+              "nextLevelName": "Deployment",
+              "progress": 0
+            },
+            "nextLevelXp": 50
+          },
+          "personalLink": "https://kube-quest.cnh.radarhq.io/me/p_demoJohnDoeId00",
+          "publicId": "pl_01c88990a33676aa"
+        },
+        "personalLink": "https://kube-quest.cnh.radarhq.io/me/p_demoJohnDoeId00",
+        "isNew": false,
+        "needsOnboarding": false
+      }
+    },
+    "invalid_email": {
+      "request": {
+        "name": "John Doe",
+        "email": "not-an-email"
+      },
+      "status": 400,
+      "response": {
+        "error": {
+          "code": "invalid_input",
+          "message": "That request is missing something: email: Invalid email address"
+        }
+      }
+    }
+  }
+}

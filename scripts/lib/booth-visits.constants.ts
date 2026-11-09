@@ -5,6 +5,7 @@ export const boothVisitRules = {
   SEED_KEY: 'kubequest-booth-visits-v1',
   SEED_ANCHOR: '2026-11-09T18:00:00.000Z',
   EVENT_ID_PREFIX: 'xp-booth-',
+  ATTENDEE_ID_PREFIX: 'att-booth-',
   GENERATED_VISITORS: 80,
   RECENT_VISITORS: 14,
   RECENT_WINDOW_MINUTES: 19,

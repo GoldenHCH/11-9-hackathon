@@ -24,4 +24,4 @@ There is no `refresh: wait_for`. On serverless it added about 5s per award. Read
 
 ## Smoke check
 
-`cd app && npx tsx src/xp/xp-smoke.ts` creates a throwaway attendee, awards 3 glass check-ins, 3 handshakes and 2 welcomes, prints the inventory, then deletes everything it wrote.
+`cd app && npx tsx ../scripts/xp-smoke.ts` (dev only, kept out of `app/src` because it deletes from `xp_events`) creates a throwaway attendee, awards 3 glass check-ins, 3 handshakes and 2 welcomes, prints the inventory, then deletes everything it wrote.

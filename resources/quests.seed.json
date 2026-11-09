@@ -1,0 +1,1120 @@
+[
+  {
+    "id": "quest-seed-001",
+    "attendeeId": "att-backstagebeaver",
+    "type": "outpost",
+    "status": "completed",
+    "source": "board",
+    "title": "Visit Docker",
+    "reason": "Ask them: Hardened images and faster container builds",
+    "nextStep": "Scan the code at booth 141",
+    "reward": {
+      "xp": 10,
+      "material": "copper",
+      "label": "10 XP + copper"
+    },
+    "where": {
+      "locationId": "outpost-docker",
+      "name": "Docker",
+      "kind": "outpost",
+      "building": "Salt Palace",
+      "level": "Level 1"
+    },
+    "locationId": "outpost-docker",
+    "offeredAt": "2026-11-09T18:50:27.112Z",
+    "respondedAt": "2026-11-09T18:52:27.112Z",
+    "completedAt": "2026-11-09T19:21:27.112Z"
+  },
+  {
+    "id": "quest-seed-002",
+    "attendeeId": "att-crossplanecrab",
+    "type": "chat",
+    "status": "completed",
+    "source": "board",
+    "title": "Meet @argoalpaca",
+    "reason": "Working on Runs Argo CD for 80 teams; welcomer at heart.",
+    "nextStep": "Accept, then meet at Network Nook",
+    "reward": {
+      "xp": 75,
+      "gems": 1,
+      "label": "75 XP + 1 gem each"
+    },
+    "where": {
+      "locationId": "campfire-network-nook",
+      "name": "Network Nook",
+      "kind": "campfire",
+      "building": "Salt Palace",
+      "level": "Level 1"
+    },
+    "locationId": "campfire-network-nook",
+    "offeredAt": "2026-11-09T18:53:40.112Z",
+    "respondedAt": "2026-11-09T18:56:40.112Z",
+    "completedAt": "2026-11-09T19:34:40.112Z"
+  },
+  {
+    "id": "quest-seed-003",
+    "attendeeId": "att-crossplanecrab",
+    "type": "outpost",
+    "status": "completed",
+    "source": "board",
+    "title": "Visit Elastic",
+    "reason": "Ask them: Hybrid search with semantic_text and Agent Builder",
+    "nextStep": "Scan the code at booth 196",
+    "reward": {
+      "xp": 10,
+      "material": "wood",
+      "label": "10 XP + wood"
+    },
+    "where": {
+      "locationId": "outpost-elastic",
+      "name": "Elastic",
+      "kind": "outpost",
+      "building": "Salt Palace",
+      "level": "Level 1"
+    },
+    "locationId": "outpost-elastic",
+    "offeredAt": "2026-11-09T18:37:12.112Z",
+    "respondedAt": "2026-11-09T18:39:12.112Z",
+    "completedAt": "2026-11-09T18:56:12.112Z"
+  },
+  {
+    "id": "quest-seed-004",
+    "attendeeId": "att-kueuekoala",
+    "type": "chat",
+    "status": "completed",
+    "source": "board",
+    "title": "Meet @argoalpaca",
+    "reason": "Working on Runs Argo CD for 80 teams; welcomer at heart.",
+    "nextStep": "Accept, then meet at Network Nook",
+    "reward": {
+      "xp": 75,
+      "gems": 1,
+      "label": "75 XP + 1 gem each"
+    },
+    "where": {
+      "locationId": "campfire-network-nook",
+      "name": "Network Nook",
+      "kind": "campfire",
+      "building": "Salt Palace",
+      "level": "Level 1"
+    },
+    "locationId": "campfire-network-nook",
+    "offeredAt": "2026-11-09T18:16:46.112Z",
+    "respondedAt": "2026-11-09T18:19:46.112Z",
+    "completedAt": "2026-11-09T18:46:46.112Z"
+  },
+  {
+    "id": "quest-seed-005",
+    "attendeeId": "att-kueuekoala",
+    "type": "chat",
+    "status": "completed",
+    "source": "board",
+    "title": "Meet @docsdolphin",
+    "reason": "Working on CNCF docs contributor; will help you land your first PR.",
+    "nextStep": "Accept, then meet at Salt Lake Foyer",
+    "reward": {
+      "xp": 75,
+      "gems": 1,
+      "label": "75 XP + 1 gem each"
+    },
+    "where": {
+      "locationId": "campfire-salt-lake-foyer",
+      "name": "Salt Lake Foyer",
+      "kind": "campfire",
+      "building": "Hyatt Regency",
+      "level": "Level 2"
+    },
+    "locationId": "campfire-salt-lake-foyer",
+    "offeredAt": "2026-11-09T18:44:56.112Z",
+    "respondedAt": "2026-11-09T18:47:56.112Z",
+    "completedAt": "2026-11-09T19:23:56.112Z"
+  },
+  {
+    "id": "quest-seed-006",
+    "attendeeId": "att-tensortapir",
+    "type": "outpost",
+    "status": "completed",
+    "source": "board",
+    "title": "Visit Dash0",
+    "reason": "Ask them: OpenTelemetry-native observability and tracing a request end to end",
+    "nextStep": "Scan the code at booth 134",
+    "reward": {
+      "xp": 10,
+      "material": "stone",
+      "label": "10 XP + stone"
+    },
+    "where": {
+      "locationId": "outpost-dash0",
+      "name": "Dash0",
+      "kind": "outpost",
+      "building": "Salt Palace",
+      "level": "Level 1"
+    },
+    "locationId": "outpost-dash0",
+    "offeredAt": "2026-11-09T18:31:58.112Z",
+    "respondedAt": "2026-11-09T18:33:58.112Z",
+    "completedAt": "2026-11-09T19:04:58.112Z"
+  },
+  {
+    "id": "quest-seed-007",
+    "attendeeId": "att-inferenceibex",
+    "type": "chat",
+    "status": "completed",
+    "source": "board",
+    "title": "Meet @prometheuspanda",
+    "reason": "Working on Prometheus maintainer-adjacent; loves a good recording rule.",
+    "nextStep": "Accept, then meet at Regency Foyer",
+    "reward": {
+      "xp": 75,
+      "gems": 1,
+      "label": "75 XP + 1 gem each"
+    },
+    "where": {
+      "locationId": "campfire-regency-foyer",
+      "name": "Regency Foyer",
+      "kind": "campfire",
+      "building": "Hyatt Regency",
+      "level": "Level 4"
+    },
+    "locationId": "campfire-regency-foyer",
+    "offeredAt": "2026-11-09T18:09:09.112Z",
+    "respondedAt": "2026-11-09T18:12:09.112Z",
+    "completedAt": "2026-11-09T18:53:09.112Z"
+  },
+  {
+    "id": "quest-seed-008",
+    "attendeeId": "att-modelmeshmoose",
+    "type": "outpost",
+    "status": "completed",
+    "source": "board",
+    "title": "Visit HAProxy Technologies",
+    "reason": "Ask them: Moving from Ingress to Gateway API without downtime",
+    "nextStep": "Scan the code at booth 124",
+    "reward": {
+      "xp": 10,
+      "material": "gold",
+      "label": "10 XP + gold"
+    },
+    "where": {
+      "locationId": "outpost-haproxy-technologies",
+      "name": "HAProxy Technologies",
+      "kind": "outpost",
+      "building": "Salt Palace",
+      "level": "Level 1"
+    },
+    "locationId": "outpost-haproxy-technologies",
+    "offeredAt": "2026-11-09T20:21:42.112Z",
+    "respondedAt": "2026-11-09T20:23:42.112Z",
+    "completedAt": "2026-11-09T20:38:42.112Z"
+  },
+  {
+    "id": "quest-seed-009",
+    "attendeeId": "att-modelmeshmoose",
+    "type": "chat",
+    "status": "completed",
+    "source": "board",
+    "title": "Meet @draslynx",
+    "reason": "Working on Trying out Dynamic Resource Allocation for accelerators and NICs.",
+    "nextStep": "Accept, then meet at The Meeting Point",
+    "reward": {
+      "xp": 75,
+      "gems": 1,
+      "label": "75 XP + 1 gem each"
+    },
+    "where": {
+      "locationId": "campfire-the-meeting-point",
+      "name": "The Meeting Point",
+      "kind": "campfire",
+      "building": "Salt Palace",
+      "level": "Level 1"
+    },
+    "locationId": "campfire-the-meeting-point",
+    "offeredAt": "2026-11-09T19:43:54.112Z",
+    "respondedAt": "2026-11-09T19:46:54.112Z",
+    "completedAt": "2026-11-09T20:19:54.112Z"
+  },
+  {
+    "id": "quest-seed-010",
+    "attendeeId": "att-falcofox",
+    "type": "outpost",
+    "status": "completed",
+    "source": "board",
+    "title": "Visit Datadog",
+    "reason": "Ask them: Watching Kubernetes cost and performance together",
+    "nextStep": "Scan the code at booth 152",
+    "reward": {
+      "xp": 10,
+      "material": "crate",
+      "label": "10 XP + crate"
+    },
+    "where": {
+      "locationId": "outpost-datadog",
+      "name": "Datadog",
+      "kind": "outpost",
+      "building": "Salt Palace",
+      "level": "Level 1"
+    },
+    "locationId": "outpost-datadog",
+    "offeredAt": "2026-11-09T18:25:43.112Z",
+    "respondedAt": "2026-11-09T18:27:43.112Z",
+    "completedAt": "2026-11-09T18:52:43.112Z"
+  },
+  {
+    "id": "quest-seed-011",
+    "attendeeId": "att-falcofox",
+    "type": "outpost",
+    "status": "completed",
+    "source": "board",
+    "title": "Visit Docker",
+    "reason": "Ask them: Hardened images and faster container builds",
+    "nextStep": "Scan the code at booth 141",
+    "reward": {
+      "xp": 10,
+      "material": "copper",
+      "label": "10 XP + copper"
+    },
+    "where": {
+      "locationId": "outpost-docker",
+      "name": "Docker",
+      "kind": "outpost",
+      "building": "Salt Palace",
+      "level": "Level 1"
+    },
+    "locationId": "outpost-docker",
+    "offeredAt": "2026-11-09T18:36:58.112Z",
+    "respondedAt": "2026-11-09T18:38:58.112Z",
+    "completedAt": "2026-11-09T19:18:58.112Z"
+  },
+  {
+    "id": "quest-seed-012",
+    "attendeeId": "att-prometheuspanda",
+    "type": "chat",
+    "status": "completed",
+    "source": "board",
+    "title": "Meet @argoalpaca",
+    "reason": "Working on Runs Argo CD for 80 teams; welcomer at heart.",
+    "nextStep": "Accept, then meet at The Meeting Point",
+    "reward": {
+      "xp": 75,
+      "gems": 1,
+      "label": "75 XP + 1 gem each"
+    },
+    "where": {
+      "locationId": "campfire-the-meeting-point",
+      "name": "The Meeting Point",
+      "kind": "campfire",
+      "building": "Salt Palace",
+      "level": "Level 1"
+    },
+    "locationId": "campfire-the-meeting-point",
+    "offeredAt": "2026-11-09T17:53:13.112Z",
+    "respondedAt": "2026-11-09T17:56:13.112Z",
+    "completedAt": "2026-11-09T18:28:13.112Z"
+  },
+  {
+    "id": "quest-seed-013",
+    "attendeeId": "att-prometheuspanda",
+    "type": "outpost",
+    "status": "completed",
+    "source": "board",
+    "title": "Visit Elastic",
+    "reason": "Ask them: Hybrid search with semantic_text and Agent Builder",
+    "nextStep": "Scan the code at booth 196",
+    "reward": {
+      "xp": 10,
+      "material": "stone",
+      "label": "10 XP + stone"
+    },
+    "where": {
+      "locationId": "outpost-elastic",
+      "name": "Elastic",
+      "kind": "outpost",
+      "building": "Salt Palace",
+      "level": "Level 1"
+    },
+    "locationId": "outpost-elastic",
+    "offeredAt": "2026-11-09T19:20:48.112Z",
+    "respondedAt": "2026-11-09T19:22:48.112Z",
+    "completedAt": "2026-11-09T20:04:48.112Z"
+  },
+  {
+    "id": "quest-seed-014",
+    "attendeeId": "att-prometheuspanda",
+    "type": "chat",
+    "status": "completed",
+    "source": "board",
+    "title": "Meet @linkerdlark",
+    "reason": "Working on Linkerd user since 2.0; happy to demystify meshes.",
+    "nextStep": "Accept, then meet at Community Hub",
+    "reward": {
+      "xp": 75,
+      "gems": 1,
+      "label": "75 XP + 1 gem each"
+    },
+    "where": {
+      "locationId": "campfire-community-hub",
+      "name": "Community Hub",
+      "kind": "campfire",
+      "building": "Salt Palace",
+      "level": "Level 1"
+    },
+    "locationId": "campfire-community-hub",
+    "offeredAt": "2026-11-09T19:01:09.112Z",
+    "respondedAt": "2026-11-09T19:04:09.112Z",
+    "completedAt": "2026-11-09T19:22:09.112Z"
+  },
+  {
+    "id": "quest-seed-015",
+    "attendeeId": "att-prometheuspanda",
+    "type": "chat",
+    "status": "completed",
+    "source": "board",
+    "title": "Meet @crossplanecrab",
+    "reason": "Working on Replacing Terraform tickets with Crossplane compositions.",
+    "nextStep": "Accept, then meet at The Meeting Point",
+    "reward": {
+      "xp": 75,
+      "gems": 1,
+      "label": "75 XP + 1 gem each"
+    },
+    "where": {
+      "locationId": "campfire-the-meeting-point",
+      "name": "The Meeting Point",
+      "kind": "campfire",
+      "building": "Salt Palace",
+      "level": "Level 1"
+    },
+    "locationId": "campfire-the-meeting-point",
+    "offeredAt": "2026-11-09T17:56:55.112Z",
+    "respondedAt": "2026-11-09T17:59:55.112Z",
+    "completedAt": "2026-11-09T18:30:55.112Z"
+  },
+  {
+    "id": "quest-seed-016",
+    "attendeeId": "att-lokilemur",
+    "type": "outpost",
+    "status": "completed",
+    "source": "board",
+    "title": "Visit Elastic",
+    "reason": "Ask them: Hybrid search with semantic_text and Agent Builder",
+    "nextStep": "Scan the code at booth 196",
+    "reward": {
+      "xp": 10,
+      "material": "glass",
+      "label": "10 XP + glass"
+    },
+    "where": {
+      "locationId": "outpost-elastic",
+      "name": "Elastic",
+      "kind": "outpost",
+      "building": "Salt Palace",
+      "level": "Level 1"
+    },
+    "locationId": "outpost-elastic",
+    "offeredAt": "2026-11-09T18:50:12.112Z",
+    "respondedAt": "2026-11-09T18:52:12.112Z",
+    "completedAt": "2026-11-09T19:16:12.112Z"
+  },
+  {
+    "id": "quest-seed-017",
+    "attendeeId": "att-jaegerjackal",
+    "type": "outpost",
+    "status": "completed",
+    "source": "board",
+    "title": "Visit Docker",
+    "reason": "Ask them: Hardened images and faster container builds",
+    "nextStep": "Scan the code at booth 141",
+    "reward": {
+      "xp": 10,
+      "material": "copper",
+      "label": "10 XP + copper"
+    },
+    "where": {
+      "locationId": "outpost-docker",
+      "name": "Docker",
+      "kind": "outpost",
+      "building": "Salt Palace",
+      "level": "Level 1"
+    },
+    "locationId": "outpost-docker",
+    "offeredAt": "2026-11-09T18:45:15.112Z",
+    "respondedAt": "2026-11-09T18:47:15.112Z",
+    "completedAt": "2026-11-09T19:09:15.112Z"
+  },
+  {
+    "id": "quest-seed-018",
+    "attendeeId": "att-slosalamander",
+    "type": "chat",
+    "status": "completed",
+    "source": "board",
+    "title": "Meet @argoalpaca",
+    "reason": "Working on Runs Argo CD for 80 teams; welcomer at heart.",
+    "nextStep": "Accept, then meet at Learning Lounge",
+    "reward": {
+      "xp": 75,
+      "gems": 1,
+      "label": "75 XP + 1 gem each"
+    },
+    "where": {
+      "locationId": "campfire-learning-lounge",
+      "name": "Learning Lounge",
+      "kind": "campfire",
+      "building": "Salt Palace",
+      "level": "Level 1"
+    },
+    "locationId": "campfire-learning-lounge",
+    "offeredAt": "2026-11-09T17:57:24.112Z",
+    "respondedAt": "2026-11-09T18:00:24.112Z",
+    "completedAt": "2026-11-09T18:27:24.112Z"
+  },
+  {
+    "id": "quest-seed-019",
+    "attendeeId": "att-slosalamander",
+    "type": "outpost",
+    "status": "completed",
+    "source": "board",
+    "title": "Visit Dash0",
+    "reason": "Ask them: OpenTelemetry-native observability and tracing a request end to end",
+    "nextStep": "Scan the code at booth 134",
+    "reward": {
+      "xp": 10,
+      "material": "copper",
+      "label": "10 XP + copper"
+    },
+    "where": {
+      "locationId": "outpost-dash0",
+      "name": "Dash0",
+      "kind": "outpost",
+      "building": "Salt Palace",
+      "level": "Level 1"
+    },
+    "locationId": "outpost-dash0",
+    "offeredAt": "2026-11-09T18:17:44.112Z",
+    "respondedAt": "2026-11-09T18:19:44.112Z",
+    "completedAt": "2026-11-09T18:50:44.112Z"
+  },
+  {
+    "id": "quest-seed-020",
+    "attendeeId": "att-argoalpaca",
+    "type": "outpost",
+    "status": "completed",
+    "source": "board",
+    "title": "Visit Google Cloud",
+    "reason": "Ask them: Serving LLM inference on GKE with GPUs and TPUs",
+    "nextStep": "Scan the code at booth 122",
+    "reward": {
+      "xp": 10,
+      "material": "stone",
+      "label": "10 XP + stone"
+    },
+    "where": {
+      "locationId": "outpost-google-cloud",
+      "name": "Google Cloud",
+      "kind": "outpost",
+      "building": "Salt Palace",
+      "level": "Level 1"
+    },
+    "locationId": "outpost-google-cloud",
+    "offeredAt": "2026-11-09T19:09:30.112Z",
+    "respondedAt": "2026-11-09T19:11:30.112Z",
+    "completedAt": "2026-11-09T19:49:30.112Z"
+  },
+  {
+    "id": "quest-seed-021",
+    "attendeeId": "att-argoalpaca",
+    "type": "chat",
+    "status": "completed",
+    "source": "board",
+    "title": "Meet @etcdeagle",
+    "reason": "Working on Keeps etcd healthy for a managed Kubernetes service.",
+    "nextStep": "Accept, then meet at The Meeting Point",
+    "reward": {
+      "xp": 75,
+      "gems": 1,
+      "label": "75 XP + 1 gem each"
+    },
+    "where": {
+      "locationId": "campfire-the-meeting-point",
+      "name": "The Meeting Point",
+      "kind": "campfire",
+      "building": "Salt Palace",
+      "level": "Level 1"
+    },
+    "locationId": "campfire-the-meeting-point",
+    "offeredAt": "2026-11-09T18:39:21.112Z",
+    "respondedAt": "2026-11-09T18:42:21.112Z",
+    "completedAt": "2026-11-09T19:15:21.112Z"
+  },
+  {
+    "id": "quest-seed-022",
+    "attendeeId": "att-argoalpaca",
+    "type": "outpost",
+    "status": "completed",
+    "source": "board",
+    "title": "Visit Elastic",
+    "reason": "Ask them: Hybrid search with semantic_text and Agent Builder",
+    "nextStep": "Scan the code at booth 196",
+    "reward": {
+      "xp": 10,
+      "material": "iron",
+      "label": "10 XP + iron"
+    },
+    "where": {
+      "locationId": "outpost-elastic",
+      "name": "Elastic",
+      "kind": "outpost",
+      "building": "Salt Palace",
+      "level": "Level 1"
+    },
+    "locationId": "outpost-elastic",
+    "offeredAt": "2026-11-09T18:09:42.112Z",
+    "respondedAt": "2026-11-09T18:11:42.112Z",
+    "completedAt": "2026-11-09T18:27:42.112Z"
+  },
+  {
+    "id": "quest-seed-023",
+    "attendeeId": "att-argoalpaca",
+    "type": "chat",
+    "status": "completed",
+    "source": "board",
+    "title": "Meet @docsdolphin",
+    "reason": "Working on CNCF docs contributor; will help you land your first PR.",
+    "nextStep": "Accept, then meet at Network Nook",
+    "reward": {
+      "xp": 75,
+      "gems": 1,
+      "label": "75 XP + 1 gem each"
+    },
+    "where": {
+      "locationId": "campfire-network-nook",
+      "name": "Network Nook",
+      "kind": "campfire",
+      "building": "Salt Palace",
+      "level": "Level 1"
+    },
+    "locationId": "campfire-network-nook",
+    "offeredAt": "2026-11-09T19:10:17.112Z",
+    "respondedAt": "2026-11-09T19:13:17.112Z",
+    "completedAt": "2026-11-09T19:44:17.112Z"
+  },
+  {
+    "id": "quest-seed-024",
+    "attendeeId": "att-rolloutrabbit",
+    "type": "outpost",
+    "status": "completed",
+    "source": "board",
+    "title": "Visit Dash0",
+    "reason": "Ask them: OpenTelemetry-native observability and tracing a request end to end",
+    "nextStep": "Scan the code at booth 134",
+    "reward": {
+      "xp": 10,
+      "material": "circuit",
+      "label": "10 XP + circuit"
+    },
+    "where": {
+      "locationId": "outpost-dash0",
+      "name": "Dash0",
+      "kind": "outpost",
+      "building": "Salt Palace",
+      "level": "Level 1"
+    },
+    "locationId": "outpost-dash0",
+    "offeredAt": "2026-11-09T18:55:53.112Z",
+    "respondedAt": "2026-11-09T18:57:53.112Z",
+    "completedAt": "2026-11-09T19:26:53.112Z"
+  },
+  {
+    "id": "quest-seed-025",
+    "attendeeId": "att-linkerdlark",
+    "type": "outpost",
+    "status": "completed",
+    "source": "board",
+    "title": "Visit Google Cloud",
+    "reason": "Ask them: Serving LLM inference on GKE with GPUs and TPUs",
+    "nextStep": "Scan the code at booth 122",
+    "reward": {
+      "xp": 10,
+      "material": "stone",
+      "label": "10 XP + stone"
+    },
+    "where": {
+      "locationId": "outpost-google-cloud",
+      "name": "Google Cloud",
+      "kind": "outpost",
+      "building": "Salt Palace",
+      "level": "Level 1"
+    },
+    "locationId": "outpost-google-cloud",
+    "offeredAt": "2026-11-09T19:33:58.112Z",
+    "respondedAt": "2026-11-09T19:35:58.112Z",
+    "completedAt": "2026-11-09T20:06:58.112Z"
+  },
+  {
+    "id": "quest-seed-026",
+    "attendeeId": "att-linkerdlark",
+    "type": "chat",
+    "status": "completed",
+    "source": "board",
+    "title": "Meet @slosalamander",
+    "reason": "Working on SLO evangelist and welcomer; error budgets over gut feel.",
+    "nextStep": "Accept, then meet at Community Hub",
+    "reward": {
+      "xp": 75,
+      "gems": 1,
+      "label": "75 XP + 1 gem each"
+    },
+    "where": {
+      "locationId": "campfire-community-hub",
+      "name": "Community Hub",
+      "kind": "campfire",
+      "building": "Salt Palace",
+      "level": "Level 1"
+    },
+    "locationId": "campfire-community-hub",
+    "offeredAt": "2026-11-09T19:17:25.112Z",
+    "respondedAt": "2026-11-09T19:20:25.112Z",
+    "completedAt": "2026-11-09T19:33:25.112Z"
+  },
+  {
+    "id": "quest-seed-027",
+    "attendeeId": "att-envoyemu",
+    "type": "outpost",
+    "status": "completed",
+    "source": "board",
+    "title": "Visit Datadog",
+    "reason": "Ask them: Watching Kubernetes cost and performance together",
+    "nextStep": "Scan the code at booth 152",
+    "reward": {
+      "xp": 10,
+      "material": "stone",
+      "label": "10 XP + stone"
+    },
+    "where": {
+      "locationId": "outpost-datadog",
+      "name": "Datadog",
+      "kind": "outpost",
+      "building": "Salt Palace",
+      "level": "Level 1"
+    },
+    "locationId": "outpost-datadog",
+    "offeredAt": "2026-11-09T19:31:18.112Z",
+    "respondedAt": "2026-11-09T19:33:18.112Z",
+    "completedAt": "2026-11-09T19:53:18.112Z"
+  },
+  {
+    "id": "quest-seed-028",
+    "attendeeId": "att-vitessvole",
+    "type": "chat",
+    "status": "completed",
+    "source": "board",
+    "title": "Meet @karpenterkangaroo",
+    "reason": "Working on Karpenter tamer and welcomer; consolidation is my hobby.",
+    "nextStep": "Accept, then meet at Salt Lake Foyer",
+    "reward": {
+      "xp": 75,
+      "gems": 1,
+      "label": "75 XP + 1 gem each"
+    },
+    "where": {
+      "locationId": "campfire-salt-lake-foyer",
+      "name": "Salt Lake Foyer",
+      "kind": "campfire",
+      "building": "Hyatt Regency",
+      "level": "Level 2"
+    },
+    "locationId": "campfire-salt-lake-foyer",
+    "offeredAt": "2026-11-09T17:48:43.112Z",
+    "respondedAt": "2026-11-09T17:51:43.112Z",
+    "completedAt": "2026-11-09T18:21:43.112Z"
+  },
+  {
+    "id": "quest-seed-029",
+    "attendeeId": "att-vitessvole",
+    "type": "outpost",
+    "status": "completed",
+    "source": "board",
+    "title": "Visit Datadog",
+    "reason": "Ask them: Watching Kubernetes cost and performance together",
+    "nextStep": "Scan the code at booth 152",
+    "reward": {
+      "xp": 10,
+      "material": "iron",
+      "label": "10 XP + iron"
+    },
+    "where": {
+      "locationId": "outpost-datadog",
+      "name": "Datadog",
+      "kind": "outpost",
+      "building": "Salt Palace",
+      "level": "Level 1"
+    },
+    "locationId": "outpost-datadog",
+    "offeredAt": "2026-11-09T18:55:15.112Z",
+    "respondedAt": "2026-11-09T18:57:15.112Z",
+    "completedAt": "2026-11-09T19:11:15.112Z"
+  },
+  {
+    "id": "quest-seed-030",
+    "attendeeId": "att-spotsparrow",
+    "type": "outpost",
+    "status": "completed",
+    "source": "board",
+    "title": "Visit Docker",
+    "reason": "Ask them: Hardened images and faster container builds",
+    "nextStep": "Scan the code at booth 141",
+    "reward": {
+      "xp": 10,
+      "material": "circuit",
+      "label": "10 XP + circuit"
+    },
+    "where": {
+      "locationId": "outpost-docker",
+      "name": "Docker",
+      "kind": "outpost",
+      "building": "Salt Palace",
+      "level": "Level 1"
+    },
+    "locationId": "outpost-docker",
+    "offeredAt": "2026-11-09T19:23:37.112Z",
+    "respondedAt": "2026-11-09T19:25:37.112Z",
+    "completedAt": "2026-11-09T19:54:37.112Z"
+  },
+  {
+    "id": "quest-seed-031",
+    "attendeeId": "att-karpenterkangaroo",
+    "type": "chat",
+    "status": "completed",
+    "source": "board",
+    "title": "Meet @vitessvole",
+    "reason": "Working on Shards MySQL with Vitess; welcomer for data folks.",
+    "nextStep": "Accept, then meet at Salt Lake Foyer",
+    "reward": {
+      "xp": 75,
+      "gems": 1,
+      "label": "75 XP + 1 gem each"
+    },
+    "where": {
+      "locationId": "campfire-salt-lake-foyer",
+      "name": "Salt Lake Foyer",
+      "kind": "campfire",
+      "building": "Hyatt Regency",
+      "level": "Level 2"
+    },
+    "locationId": "campfire-salt-lake-foyer",
+    "offeredAt": "2026-11-09T17:58:43.112Z",
+    "respondedAt": "2026-11-09T18:01:43.112Z",
+    "completedAt": "2026-11-09T18:21:43.112Z"
+  },
+  {
+    "id": "quest-seed-032",
+    "attendeeId": "att-karpenterkangaroo",
+    "type": "outpost",
+    "status": "completed",
+    "source": "board",
+    "title": "Visit Dash0",
+    "reason": "Ask them: OpenTelemetry-native observability and tracing a request end to end",
+    "nextStep": "Scan the code at booth 134",
+    "reward": {
+      "xp": 10,
+      "material": "circuit",
+      "label": "10 XP + circuit"
+    },
+    "where": {
+      "locationId": "outpost-dash0",
+      "name": "Dash0",
+      "kind": "outpost",
+      "building": "Salt Palace",
+      "level": "Level 1"
+    },
+    "locationId": "outpost-dash0",
+    "offeredAt": "2026-11-09T18:38:04.112Z",
+    "respondedAt": "2026-11-09T18:40:04.112Z",
+    "completedAt": "2026-11-09T19:16:04.112Z"
+  },
+  {
+    "id": "quest-seed-033",
+    "attendeeId": "att-edgeelk",
+    "type": "outpost",
+    "status": "completed",
+    "source": "board",
+    "title": "Visit Google Cloud",
+    "reason": "Ask them: Serving LLM inference on GKE with GPUs and TPUs",
+    "nextStep": "Scan the code at booth 122",
+    "reward": {
+      "xp": 10,
+      "material": "copper",
+      "label": "10 XP + copper"
+    },
+    "where": {
+      "locationId": "outpost-google-cloud",
+      "name": "Google Cloud",
+      "kind": "outpost",
+      "building": "Salt Palace",
+      "level": "Level 1"
+    },
+    "locationId": "outpost-google-cloud",
+    "offeredAt": "2026-11-09T18:55:41.112Z",
+    "respondedAt": "2026-11-09T18:57:41.112Z",
+    "completedAt": "2026-11-09T19:34:41.112Z"
+  },
+  {
+    "id": "quest-seed-034",
+    "attendeeId": "att-spinsquirrel",
+    "type": "outpost",
+    "status": "completed",
+    "source": "board",
+    "title": "Visit Datadog",
+    "reason": "Ask them: Watching Kubernetes cost and performance together",
+    "nextStep": "Scan the code at booth 152",
+    "reward": {
+      "xp": 10,
+      "material": "circuit",
+      "label": "10 XP + circuit"
+    },
+    "where": {
+      "locationId": "outpost-datadog",
+      "name": "Datadog",
+      "kind": "outpost",
+      "building": "Salt Palace",
+      "level": "Level 1"
+    },
+    "locationId": "outpost-datadog",
+    "offeredAt": "2026-11-09T19:05:27.112Z",
+    "respondedAt": "2026-11-09T19:07:27.112Z",
+    "completedAt": "2026-11-09T19:37:27.112Z"
+  },
+  {
+    "id": "quest-seed-035",
+    "attendeeId": "att-spinsquirrel",
+    "type": "outpost",
+    "status": "completed",
+    "source": "board",
+    "title": "Visit Amazon Web Services",
+    "reason": "Ask them: How EKS Auto Mode handles node upgrades for you",
+    "nextStep": "Scan the code at booth 115",
+    "reward": {
+      "xp": 10,
+      "material": "lantern",
+      "label": "10 XP + lantern"
+    },
+    "where": {
+      "locationId": "outpost-amazon-web-services",
+      "name": "Amazon Web Services",
+      "kind": "outpost",
+      "building": "Salt Palace",
+      "level": "Level 1"
+    },
+    "locationId": "outpost-amazon-web-services",
+    "offeredAt": "2026-11-09T19:42:41.112Z",
+    "respondedAt": "2026-11-09T19:44:41.112Z",
+    "completedAt": "2026-11-09T19:59:41.112Z"
+  },
+  {
+    "id": "quest-seed-036",
+    "attendeeId": "att-a11yanteater",
+    "type": "chat",
+    "status": "completed",
+    "source": "board",
+    "title": "Meet @spinsquirrel",
+    "reason": "Working on Ships Spin apps on SpinKube; welcomer.",
+    "nextStep": "Accept, then meet at Community Hub",
+    "reward": {
+      "xp": 75,
+      "gems": 1,
+      "label": "75 XP + 1 gem each"
+    },
+    "where": {
+      "locationId": "campfire-community-hub",
+      "name": "Community Hub",
+      "kind": "campfire",
+      "building": "Salt Palace",
+      "level": "Level 1"
+    },
+    "locationId": "campfire-community-hub",
+    "offeredAt": "2026-11-09T19:03:50.112Z",
+    "respondedAt": "2026-11-09T19:06:50.112Z",
+    "completedAt": "2026-11-09T19:24:50.112Z"
+  },
+  {
+    "id": "quest-seed-037",
+    "attendeeId": "att-docsdolphin",
+    "type": "chat",
+    "status": "completed",
+    "source": "board",
+    "title": "Meet @modelmeshmoose",
+    "reason": "Working on MLOps lead; ask me about model rollouts.",
+    "nextStep": "Accept, then meet at Salt Lake Foyer",
+    "reward": {
+      "xp": 75,
+      "gems": 1,
+      "label": "75 XP + 1 gem each"
+    },
+    "where": {
+      "locationId": "campfire-salt-lake-foyer",
+      "name": "Salt Lake Foyer",
+      "kind": "campfire",
+      "building": "Hyatt Regency",
+      "level": "Level 2"
+    },
+    "locationId": "campfire-salt-lake-foyer",
+    "offeredAt": "2026-11-09T20:32:08.112Z",
+    "respondedAt": "2026-11-09T20:35:08.112Z",
+    "completedAt": "2026-11-09T20:47:08.112Z"
+  },
+  {
+    "id": "quest-seed-038",
+    "attendeeId": "att-docsdolphin",
+    "type": "outpost",
+    "status": "completed",
+    "source": "board",
+    "title": "Visit Docker",
+    "reason": "Ask them: Hardened images and faster container builds",
+    "nextStep": "Scan the code at booth 141",
+    "reward": {
+      "xp": 10,
+      "material": "crate",
+      "label": "10 XP + crate"
+    },
+    "where": {
+      "locationId": "outpost-docker",
+      "name": "Docker",
+      "kind": "outpost",
+      "building": "Salt Palace",
+      "level": "Level 1"
+    },
+    "locationId": "outpost-docker",
+    "offeredAt": "2026-11-09T19:31:18.112Z",
+    "respondedAt": "2026-11-09T19:33:18.112Z",
+    "completedAt": "2026-11-09T20:09:18.112Z"
+  },
+  {
+    "id": "quest-seed-039",
+    "attendeeId": "att-docsdolphin",
+    "type": "chat",
+    "status": "completed",
+    "source": "board",
+    "title": "Meet @sreseahorse",
+    "reason": "Working on First KubeCon; new on-call lead learning the ropes.",
+    "nextStep": "Accept, then meet at The Meeting Point",
+    "reward": {
+      "xp": 75,
+      "gems": 1,
+      "label": "75 XP + 1 gem each"
+    },
+    "where": {
+      "locationId": "campfire-the-meeting-point",
+      "name": "The Meeting Point",
+      "kind": "campfire",
+      "building": "Salt Palace",
+      "level": "Level 1"
+    },
+    "locationId": "campfire-the-meeting-point",
+    "offeredAt": "2026-11-09T19:36:16.112Z",
+    "respondedAt": "2026-11-09T19:39:16.112Z",
+    "completedAt": "2026-11-09T20:16:16.112Z"
+  },
+  {
+    "id": "quest-seed-040",
+    "attendeeId": "att-docsdolphin",
+    "type": "outpost",
+    "status": "completed",
+    "source": "board",
+    "title": "Visit HAProxy Technologies",
+    "reason": "Ask them: Moving from Ingress to Gateway API without downtime",
+    "nextStep": "Scan the code at booth 124",
+    "reward": {
+      "xp": 10,
+      "material": "circuit",
+      "label": "10 XP + circuit"
+    },
+    "where": {
+      "locationId": "outpost-haproxy-technologies",
+      "name": "HAProxy Technologies",
+      "kind": "outpost",
+      "building": "Salt Palace",
+      "level": "Level 1"
+    },
+    "locationId": "outpost-haproxy-technologies",
+    "offeredAt": "2026-11-09T18:03:36.112Z",
+    "respondedAt": "2026-11-09T18:05:36.112Z",
+    "completedAt": "2026-11-09T18:35:36.112Z"
+  },
+  {
+    "id": "quest-seed-041",
+    "attendeeId": "att-docsdolphin",
+    "type": "chat",
+    "status": "completed",
+    "source": "board",
+    "title": "Meet @kyvernokiwi",
+    "reason": "Working on First KubeCon; turning a compliance spreadsheet into policies.",
+    "nextStep": "Accept, then meet at Salt Lake Foyer",
+    "reward": {
+      "xp": 75,
+      "gems": 1,
+      "label": "75 XP + 1 gem each"
+    },
+    "where": {
+      "locationId": "campfire-salt-lake-foyer",
+      "name": "Salt Lake Foyer",
+      "kind": "campfire",
+      "building": "Hyatt Regency",
+      "level": "Level 2"
+    },
+    "locationId": "campfire-salt-lake-foyer",
+    "offeredAt": "2026-11-09T18:15:15.112Z",
+    "respondedAt": "2026-11-09T18:18:15.112Z",
+    "completedAt": "2026-11-09T18:37:15.112Z"
+  },
+  {
+    "id": "quest-seed-042",
+    "attendeeId": "att-capicormorant",
+    "type": "outpost",
+    "status": "completed",
+    "source": "board",
+    "title": "Visit Dash0",
+    "reason": "Ask them: OpenTelemetry-native observability and tracing a request end to end",
+    "nextStep": "Scan the code at booth 134",
+    "reward": {
+      "xp": 10,
+      "material": "crate",
+      "label": "10 XP + crate"
+    },
+    "where": {
+      "locationId": "outpost-dash0",
+      "name": "Dash0",
+      "kind": "outpost",
+      "building": "Salt Palace",
+      "level": "Level 1"
+    },
+    "locationId": "outpost-dash0",
+    "offeredAt": "2026-11-09T20:04:37.112Z",
+    "respondedAt": "2026-11-09T20:06:37.112Z",
+    "completedAt": "2026-11-09T20:29:37.112Z"
+  },
+  {
+    "id": "quest-seed-043",
+    "attendeeId": "att-sreseahorse",
+    "type": "chat",
+    "status": "completed",
+    "source": "board",
+    "title": "Meet @docsdolphin",
+    "reason": "Working on CNCF docs contributor; will help you land your first PR.",
+    "nextStep": "Accept, then meet at The Meeting Point",
+    "reward": {
+      "xp": 75,
+      "gems": 1,
+      "label": "75 XP + 1 gem each"
+    },
+    "where": {
+      "locationId": "campfire-the-meeting-point",
+      "name": "The Meeting Point",
+      "kind": "campfire",
+      "building": "Salt Palace",
+      "level": "Level 1"
+    },
+    "locationId": "campfire-the-meeting-point",
+    "offeredAt": "2026-11-09T19:57:16.112Z",
+    "respondedAt": "2026-11-09T20:00:16.112Z",
+    "completedAt": "2026-11-09T20:16:16.112Z"
+  }
+]

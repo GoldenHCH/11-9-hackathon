@@ -1,23 +1,102 @@
 :host {
   display: block;
+  --map-ink: var(--kq-text, #1c1b22);
+  --map-border: var(--kq-border, var(--app-theme--border, #1c1b22));
+  --map-shadow: var(--kq-shadow, #1c1b22);
+  --map-accent: var(--kq-accent, var(--app-theme--accent, #ff8a2a));
+  --map-primary: var(--kq-primary, var(--app-theme--primary, #3b5bdb));
+  --map-surface: var(--kq-surface, var(--app-theme--paper, #fffdf6));
+  --map-pixel: var(--kq-font-pixel, var(--app-theme--pixel-font, 'Silkscreen', 'Courier New', monospace));
+}
+
+.schematic-frame {
+  position: relative;
+}
+
+.zoom-controls {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  background: var(--map-surface);
+  border: 3px solid var(--map-border);
+  box-shadow: 4px 4px 0 var(--map-shadow);
+}
+
+.zoom-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--map-ink);
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.35;
+    cursor: default;
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--map-primary);
+    outline-offset: -3px;
+  }
+}
+
+.zoom-level {
+  min-width: 28px;
+  text-align: center;
+  font-family: var(--map-pixel);
+  font-size: 12px;
+  color: var(--map-ink);
 }
 
 .schematic-scroller {
-  overflow-x: auto;
-  border: 3px solid var(--app-theme--border);
-  box-shadow: var(--app-theme--shadow);
-  background: var(--app-theme--paper);
+  overflow: auto;
+  border: 3px solid var(--map-border);
+  border-radius: 0;
+  box-shadow: 4px 4px 0 var(--map-shadow);
+  background: #eef3e2;
+  max-height: 78vh;
+
+  &:focus-visible {
+    outline: 3px solid var(--map-primary);
+    outline-offset: 2px;
+  }
 }
 
 .schematic {
   display: block;
-  width: 100%;
-  min-width: 640px;
   height: auto;
+  max-height: 76vh;
+  margin: 0 auto;
 }
 
-.floor {
-  fill: #fbfaf5;
+.schematic-scroller--zoomed .schematic {
+  max-height: none;
+}
+
+.grid-tile {
+  fill: #eef3e2;
+}
+
+.grid-line {
+  stroke: #dfe6cf;
+}
+
+.slab {
+  fill: #fbfaf3;
+  stroke: var(--map-border);
+}
+
+.slab-side,
+.block-side {
+  fill: var(--map-shadow);
 }
 
 .area {
@@ -27,72 +106,90 @@
 
 .area-outline {
   fill: none;
-  stroke: #2b2b2b;
-  stroke-width: 2;
+  stroke: var(--map-border);
+  stroke-linejoin: miter;
 }
 
-.area--inferred .area-outline {
-  stroke-dasharray: 6 4;
+.area--void .area-fill {
+  opacity: 0.85;
 }
 
 .area-label {
-  font-family: var(--app-theme--pixel-font);
-  fill: #1f1f1f;
+  font-family: var(--map-pixel);
   pointer-events: none;
   user-select: none;
 }
 
-.area:hover .area-outline {
-  stroke-width: 4;
+.map-label {
+  font-family: var(--map-pixel);
+  fill: #1c1b22;
+  paint-order: stroke;
+  stroke: #ffffff;
+  stroke-width: 3px;
+  pointer-events: none;
+  user-select: none;
+}
+
+.map-label--zone {
+  opacity: 1;
+  fill: #1c1b22;
+  paint-order: stroke;
+  stroke: #ffffff;
+  stroke-width: 3px;
+}
+
+.area:hover .area-fill {
+  filter: brightness(1.08);
 }
 
 .area--highlighted .area-outline {
-  stroke: var(--app-theme--accent);
-  stroke-width: 6;
-  stroke-dasharray: none;
+  stroke: var(--map-accent);
+  stroke-width: 6px;
 }
 
 .area--selected .area-outline {
-  stroke: var(--app-theme--focus);
-  stroke-width: 6;
-  stroke-dasharray: none;
+  stroke: var(--map-primary);
+  stroke-width: 6px;
+}
+
+.area:focus-visible .area-outline {
+  stroke: var(--map-primary);
+  stroke-width: 7px;
+  stroke-dasharray: 10 4;
+}
+
+.booth-group {
+  cursor: pointer;
 }
 
 .booth {
-  stroke: #2b2b2b;
-  stroke-width: 1;
-  cursor: pointer;
+  stroke: var(--map-border);
 
   &:hover {
-    stroke-width: 2.5;
+    filter: brightness(1.15);
   }
 }
 
 .booth--highlighted {
-  fill: var(--app-theme--accent);
-  stroke-width: 3;
+  fill: var(--map-accent);
+}
+
+.booth-number {
+  font-family: var(--map-pixel);
+  fill: #1c1b22;
+  pointer-events: none;
+}
+
+.callout-shadow {
+  fill: var(--map-shadow);
 }
 
 .callout-box {
-  fill: #1f1f1f;
-  stroke: var(--app-theme--accent);
-  stroke-width: 2;
+  fill: #1c1b22;
+  stroke: var(--map-accent);
 }
 
 .callout-text {
   fill: #ffffff;
-  font-family: var(--app-theme--body-font);
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.area:focus-visible .area-outline {
-  stroke: var(--app-theme--focus);
-  stroke-width: 7;
-  stroke-dasharray: 10 4;
-}
-
-.schematic-scroller--fit .schematic {
-  min-width: 0;
-  max-height: 80vh;
+  font-family: var(--map-pixel);
 }

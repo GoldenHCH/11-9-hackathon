@@ -1,0 +1,126 @@
+<section class="app-page">
+  <app-screen-toolbar title="Meet in person" [showBack]="true"></app-screen-toolbar>
+
+  <app-state-wrapper [isLoading]="isLoading" [errorMessage]="errorMessage" [skeletonRows]="3" (retry)="load()">
+    @if (handshake; as current) {
+      <header class="partner">
+        <app-pixel-face [seed]="current.partner.faceSeed" [size]="56" [label]="'Face of ' + partnerHandle"></app-pixel-face>
+        <div class="partner-text">
+          <h2 class="partner-handle app-pixel">{{ partnerHandle }}</h2>
+          <p class="partner-line">{{ current.partner.levelName }} · {{ current.partner.workingOn }}</p>
+        </div>
+      </header>
+
+      <!-- Question -->
+      <article class="question app-block" aria-live="polite">
+        <p class="question-role app-pixel">
+          @if (isAsker) {
+            Ask {{ partnerHandle }}
+          } @else {
+            {{ partnerHandle }} is asking you
+          }
+        </p>
+        <p class="question-text">{{ current.question }}</p>
+        @if (current.questionReason) {
+          <p class="question-reason">
+            <mat-icon aria-hidden="true">auto_awesome</mat-icon>
+            <span>{{ current.questionReason }}</span>
+          </p>
+        }
+      </article>
+
+      <p class="status-line" role="status">{{ current.statusLine }}</p>
+
+      @switch (current.status) {
+        @case ('waiting') {
+          @if (canAnswer) {
+            <form class="answer-form" (ngSubmit)="submitAnswer()">
+              <mat-form-field appearance="outline" class="answer-field">
+                <mat-label>{{ isAsker ? 'What did they say?' : 'Your answer' }}</mat-label>
+                <input
+                  matInput
+                  name="answer"
+                  [(ngModel)]="answer"
+                  [maxlength]="maxAnswerLength"
+                  autocomplete="off"
+                  autocapitalize="off"
+                  required
+                />
+                <mat-hint>
+                  @if (isAsker) {
+                    Type what {{ partnerHandle }} told you. {{ current.attemptsLeft }} {{ current.attemptsLeft === 1 ? 'try' : 'tries' }} left.
+                  } @else {
+                    One to three words. Keep your screen to yourself and say it out loud.
+                  }
+                </mat-hint>
+              </mat-form-field>
+              @if (submitError) {
+                <app-alert-banner [message]="submitError" (dismissed)="submitError = ''"></app-alert-banner>
+              }
+              <button mat-flat-button type="submit" class="answer-submit" [disabled]="!answer.trim() || isSubmitting">
+                @if (isSubmitting) {
+                  <mat-spinner diameter="20"></mat-spinner>
+                } @else {
+                  {{ isAsker ? 'Check answer' : 'Lock it in' }}
+                }
+              </button>
+            </form>
+          } @else {
+            <p class="waiting">
+              <mat-spinner diameter="20" aria-hidden="true"></mat-spinner>
+              <span>
+                @if (isAsker) {
+                  Waiting for {{ partnerHandle }} to lock in their answer…
+                } @else {
+                  Locked in. Tell {{ partnerHandle }} your answer out loud.
+                }
+              </span>
+            </p>
+          }
+        }
+        @case ('matched') {
+          <article class="result result--matched app-block">
+            <mat-icon class="result-icon" aria-hidden="true">handshake</mat-icon>
+            <h2 class="result-title app-pixel">You met {{ partnerHandle }}</h2>
+            @if (current.xpAwarded) {
+              <p class="result-xp app-pixel">+{{ current.xpAwarded }} XP</p>
+            }
+            <dl class="answers">
+              <dt class="answers-label">{{ isAsker ? 'You heard' : 'You said' }}</dt>
+              <dd class="answers-value">{{ current.myAnswer }}</dd>
+              <dt class="answers-label">{{ isAsker ? 'They said' : 'They heard' }}</dt>
+              <dd class="answers-value">{{ current.theirAnswer }}</dd>
+            </dl>
+            <p class="result-note">It’s in your recap, with a next step to follow up.</p>
+            <div class="result-actions">
+              <a mat-flat-button routerLink="/meets">Back to meets</a>
+              <a mat-stroked-button routerLink="/recap">See my recap</a>
+            </div>
+          </article>
+        }
+        @case ('mismatched') {
+          <article class="result app-block">
+            <mat-icon class="result-icon" aria-hidden="true">sync_problem</mat-icon>
+            <h2 class="result-title app-pixel">The answers didn’t line up</h2>
+            <dl class="answers">
+              <dt class="answers-label">{{ isAsker ? 'You heard' : 'You said' }}</dt>
+              <dd class="answers-value">{{ current.myAnswer }}</dd>
+              <dt class="answers-label">{{ isAsker ? 'They said' : 'They heard' }}</dt>
+              <dd class="answers-value">{{ current.theirAnswer }}</dd>
+            </dl>
+            <p class="result-note">No harm done. Show a fresh code to get a new question.</p>
+            <a mat-flat-button routerLink="/code">Try a new question</a>
+          </article>
+        }
+        @case ('expired') {
+          <article class="result app-block">
+            <mat-icon class="result-icon" aria-hidden="true">timer_off</mat-icon>
+            <h2 class="result-title app-pixel">This question timed out</h2>
+            <p class="result-note">Questions last five minutes. Scan a fresh code to try again.</p>
+            <a mat-flat-button routerLink="/code">Show my code</a>
+          </article>
+        }
+      }
+    }
+  </app-state-wrapper>
+</section>

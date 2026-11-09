@@ -15,7 +15,10 @@ export interface IProjectKioskRow {
   schedule: string;
 }
 
-export interface IKioskSlot {
-  row: number;
-  side: string;
+export interface ISchematicVendor {
+  name: string;
+  kind: string;
+  booth: string;
+  levelId?: string;
+  position?: { x: number; y: number };
 }

@@ -1,127 +1,189 @@
-<div class="schematic-scroller" [class.schematic-scroller--fit]="hasBooths" tabindex="0" [attr.aria-label]="'Scrollable map of ' + level.label">
-  <svg
-    class="schematic"
-    [attr.viewBox]="viewBox"
-    preserveAspectRatio="xMidYMid meet"
-    role="group"
-    [attr.aria-label]="'Schematic of ' + buildingName + ', ' + level.label + '. Not to scale.'"
-  >
-    <defs>
-      <pattern id="kq-pattern-stone" width="16" height="16" patternUnits="userSpaceOnUse">
-        <path d="M0 8 H16 M8 0 V8 M0 16 H16 M4 8 V16" stroke="#00000022" stroke-width="1.5" fill="none" />
-      </pattern>
-      <pattern id="kq-pattern-crate" width="20" height="20" patternUnits="userSpaceOnUse">
-        <path d="M0 0 L20 20 M20 0 L0 20" stroke="#00000026" stroke-width="1.5" />
-      </pattern>
-      <pattern id="kq-pattern-dots" width="12" height="12" patternUnits="userSpaceOnUse">
-        <rect x="4" y="4" width="3" height="3" fill="#00000030" />
-      </pattern>
-      <pattern id="kq-pattern-circuit" width="24" height="24" patternUnits="userSpaceOnUse">
-        <path d="M0 12 H8 V4 H16 M16 20 H24 M12 24 V16" stroke="#00000030" stroke-width="2" fill="none" />
-      </pattern>
-      <pattern id="kq-pattern-stripes" width="12" height="12" patternUnits="userSpaceOnUse">
-        <path d="M0 12 L12 0" stroke="#00000030" stroke-width="3" />
-      </pattern>
-      <pattern id="kq-pattern-flame" width="16" height="16" patternUnits="userSpaceOnUse">
-        <rect x="6" y="6" width="4" height="4" fill="#00000035" />
-        <rect x="2" y="2" width="2" height="2" fill="#00000025" />
-      </pattern>
-    </defs>
+<div class="schematic-frame">
+  <div class="zoom-controls" role="group" aria-label="Zoom">
+    <button type="button" class="zoom-button" aria-label="Zoom out" [disabled]="!canZoomOut" (click)="zoomOut()">
+      <mat-icon aria-hidden="true">remove</mat-icon>
+    </button>
+    <span class="zoom-level" aria-live="polite">{{ zoom }}x</span>
+    <button type="button" class="zoom-button" aria-label="Zoom in" [disabled]="!canZoomIn" (click)="zoomIn()">
+      <mat-icon aria-hidden="true">add</mat-icon>
+    </button>
+  </div>
 
-    <rect class="floor" x="0" y="0" [attr.width]="level.width" [attr.height]="level.height"></rect>
+  <div class="schematic-scroller" [class.schematic-scroller--zoomed]="zoom > 1" tabindex="0" [attr.aria-label]="'Scrollable map of ' + level.title">
+    <svg
+      class="schematic"
+      [style.width.%]="zoom * 100"
+      [attr.viewBox]="viewBox"
+      preserveAspectRatio="xMidYMid meet"
+      role="group"
+      [attr.aria-label]="'Map of ' + level.title + ', traced from the official map'"
+    >
+      <defs>
+        <pattern id="kq-pattern-grid" [attr.width]="unit * 20" [attr.height]="unit * 20" patternUnits="userSpaceOnUse">
+          <rect [attr.width]="unit * 20" [attr.height]="unit * 20" class="grid-tile"></rect>
+          <path [attr.d]="'M' + unit * 20 + ' 0 H0 V' + unit * 20" class="grid-line" fill="none" [attr.stroke-width]="unit"></path>
+        </pattern>
+        <pattern id="kq-pattern-stone" width="16" height="16" patternUnits="userSpaceOnUse">
+          <path d="M0 8 H16 M8 0 V8 M0 16 H16 M4 8 V16" stroke="#00000022" stroke-width="1.5" fill="none" />
+        </pattern>
+        <pattern id="kq-pattern-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+          <rect x="4" y="4" width="3" height="3" fill="#00000030" />
+        </pattern>
+        <pattern id="kq-pattern-circuit" width="24" height="24" patternUnits="userSpaceOnUse">
+          <path d="M0 12 H8 V4 H16 M16 20 H24 M12 24 V16" stroke="#00000030" stroke-width="2" fill="none" />
+        </pattern>
+        <pattern id="kq-pattern-stripes" width="12" height="12" patternUnits="userSpaceOnUse">
+          <path d="M0 12 L12 0" stroke="#00000030" stroke-width="3" />
+        </pattern>
+        <pattern id="kq-pattern-flame" width="12" height="12" patternUnits="userSpaceOnUse">
+          <rect x="4" y="4" width="4" height="4" fill="#ffdb6e" />
+          <rect x="0" y="0" width="2" height="2" fill="#00000025" />
+        </pattern>
+      </defs>
 
-    @for (area of orderedAreas; track area.id) {
-      <g
-        class="area"
-        [class.area--selected]="isSelected(area)"
-        [class.area--highlighted]="isHighlighted(area)"
-        [class.area--inferred]="area.inferred"
-        role="button"
-        tabindex="0"
-        [attr.aria-label]="ariaLabelFor(area)"
-        [attr.aria-pressed]="isSelected(area)"
-        (click)="areaSelected.emit(area)"
-        (keydown)="onAreaKeydown($event, area)"
-      >
-        <title>{{ area.name }} · {{ kindDisplay[area.kind].label }}</title>
-        <rect
-          class="area-fill"
-          [attr.x]="area.shape.x"
-          [attr.y]="area.shape.y"
-          [attr.width]="area.shape.width"
-          [attr.height]="area.shape.height"
-          [attr.fill]="kindDisplay[area.kind].fill"
-        ></rect>
-        @if (kindDisplay[area.kind].pattern !== 'none') {
-          <rect
-            class="area-pattern"
-            [attr.x]="area.shape.x"
-            [attr.y]="area.shape.y"
-            [attr.width]="area.shape.width"
-            [attr.height]="area.shape.height"
-            [attr.fill]="'url(#kq-pattern-' + kindDisplay[area.kind].pattern + ')'"
-          ></rect>
-        }
-        <rect
-          class="area-outline"
-          [attr.x]="area.shape.x"
-          [attr.y]="area.shape.y"
-          [attr.width]="area.shape.width"
-          [attr.height]="area.shape.height"
-        ></rect>
+      <rect
+        class="floor"
+        [attr.x]="-unit * 16"
+        [attr.y]="-unit * 16"
+        [attr.width]="level.width + unit * 32"
+        [attr.height]="level.height + unit * 32"
+        fill="url(#kq-pattern-grid)"
+      ></rect>
+
+      @if (outlinePoints) {
+        <polygon class="slab-side" [attr.points]="outlinePoints" [attr.transform]="'translate(' + depth + ' ' + depth + ')'"></polygon>
+        <polygon class="slab" [attr.points]="outlinePoints" [attr.stroke-width]="unit * 2"></polygon>
+      }
+
+      @for (area of orderedAreas; track area.id) {
+        <polygon
+          class="block-side"
+          [attr.points]="pointsFor(area)"
+          [attr.transform]="'translate(' + depth + ' ' + depth + ')'"
+          aria-hidden="true"
+        ></polygon>
+      }
+
+      @for (area of orderedAreas; track area.id) {
+        @let label = labelFor(area);
+        <g
+          class="area"
+          [class.area--selected]="isSelected(area)"
+          [class.area--highlighted]="isHighlighted(area)"
+          [class.area--void]="area.kind === 'void'"
+          role="button"
+          tabindex="0"
+          [attr.aria-label]="ariaLabelFor(area)"
+          [attr.aria-pressed]="isSelected(area)"
+          (click)="areaSelected.emit(area)"
+          (keydown)="onAreaKeydown($event, area)"
+        >
+          <title>{{ area.name }} · {{ kindDisplay[area.kind].label }}</title>
+          <polygon class="area-fill" [attr.points]="pointsFor(area)" [style.fill]="fillFor(area)"></polygon>
+          @if (kindDisplay[area.kind].pattern !== 'none') {
+            <polygon class="area-pattern" [attr.points]="pointsFor(area)" [attr.fill]="'url(#kq-pattern-' + kindDisplay[area.kind].pattern + ')'"></polygon>
+          }
+          <polygon class="area-outline" [attr.points]="pointsFor(area)" [attr.stroke-width]="unit * 2"></polygon>
+          @if (label.lines.length) {
+            <text
+              class="area-label"
+              [attr.x]="label.x"
+              [attr.y]="label.y"
+              [attr.font-size]="label.fontSize"
+              [style.fill]="inkFor(area)"
+              text-anchor="middle"
+              dominant-baseline="central"
+              aria-hidden="true"
+            >
+              @for (line of label.lines; track $index) {
+                <tspan [attr.x]="label.x" [attr.y]="label.y + lineDy(label, $index)">{{ line }}</tspan>
+              }
+            </text>
+          }
+        </g>
+      }
+
+      @if (hasBooths) {
+        <g class="booths" aria-hidden="true">
+          @for (booth of booths; track booth.id) {
+            @let rect = boothRect(booth);
+            <g class="booth-group" [attr.transform]="boothTransform(booth)" (click)="onBoothClick($event, booth)">
+              <rect
+                class="booth"
+                [class.booth--highlighted]="booth.id === highlightedVendorId"
+                [attr.x]="rect.x"
+                [attr.y]="rect.y"
+                [attr.width]="rect.width"
+                [attr.height]="rect.height"
+                [attr.stroke-width]="unit * 1.2"
+                [style.fill]="booth.id === highlightedVendorId ? null : tierFill[booth.tier]"
+              >
+                <title>{{ booth.booth }} · {{ booth.name }} ({{ booth.tier }})</title>
+              </rect>
+            </g>
+            @if (showsBoothNumber(booth)) {
+              <text
+                class="booth-number"
+                [attr.x]="booth.position?.x"
+                [attr.y]="booth.position?.y"
+                [attr.font-size]="unit * 7"
+                text-anchor="middle"
+                dominant-baseline="central"
+              >
+                {{ booth.booth }}
+              </text>
+            }
+          }
+        </g>
+      }
+
+      @for (text of level.labels ?? []; track $index) {
         <text
-          class="area-label"
-          [attr.x]="area.shape.x + area.shape.width / 2"
-          [attr.y]="labelY(area)"
-          [attr.font-size]="labelFontSize(area)"
+          class="map-label"
+          [class.map-label--zone]="text.tone === 'zone'"
+          [attr.x]="text.x"
+          [attr.y]="text.y"
+          [attr.font-size]="unit * (text.tone === 'zone' ? 11 : 16)"
+          [attr.transform]="text.rotate ? 'rotate(' + text.rotate + ' ' + text.x + ' ' + text.y + ')' : null"
           text-anchor="middle"
           dominant-baseline="central"
           aria-hidden="true"
         >
-          {{ labelFor(area) }}
+          {{ text.text }}
         </text>
-      </g>
-    }
-
-    @if (hasBooths) {
-      <g class="booths" aria-hidden="true">
-        @for (booth of booths; track booth.id) {
-          @let rect = boothRect(booth);
-          <rect
-            class="booth"
-            [class.booth--highlighted]="booth.id === highlightedVendorId"
-            [attr.x]="rect.x"
-            [attr.y]="rect.y"
-            [attr.width]="rect.width"
-            [attr.height]="rect.height"
-            [attr.fill]="booth.id === highlightedVendorId ? null : tierFill[booth.tier]"
-            (click)="onBoothClick($event, booth)"
-          >
-            <title>{{ booth.booth }} · {{ booth.name }} ({{ booth.tier }})</title>
-          </rect>
-        }
-      </g>
-
-      @if (highlightedBooth; as booth) {
-        @let callout = calloutRect(booth);
-        <g class="callout" aria-hidden="true">
-          <rect
-            class="callout-box"
-            [attr.x]="callout.x"
-            [attr.y]="callout.y"
-            [attr.width]="callout.width"
-            [attr.height]="callout.height"
-          ></rect>
-          <text
-            class="callout-text"
-            [attr.x]="callout.x + 8"
-            [attr.y]="callout.y + callout.height / 2"
-            dominant-baseline="central"
-          >
-            {{ calloutText(booth) }}
-          </text>
-        </g>
       }
-    }
-  </svg>
+
+      @if (hasBooths) {
+        @if (highlightedBooth; as booth) {
+          @let callout = calloutRect(booth);
+          <g class="callout" aria-hidden="true">
+            <rect
+              class="callout-shadow"
+              [attr.x]="callout.x + unit * 4"
+              [attr.y]="callout.y + unit * 4"
+              [attr.width]="callout.width"
+              [attr.height]="callout.height"
+            ></rect>
+            <rect
+              class="callout-box"
+              [attr.x]="callout.x"
+              [attr.y]="callout.y"
+              [attr.width]="callout.width"
+              [attr.height]="callout.height"
+              [attr.stroke-width]="unit * 2"
+            ></rect>
+            <text
+              class="callout-text"
+              [attr.x]="callout.x + calloutFontSize * 0.7"
+              [attr.y]="callout.y + callout.height / 2"
+              [attr.font-size]="calloutFontSize"
+              dominant-baseline="central"
+            >
+              {{ calloutText(booth) }}
+            </text>
+          </g>
+        }
+      }
+    </svg>
+  </div>
 </div>

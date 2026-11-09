@@ -193,15 +193,31 @@ async function completeQuestsSafely(event: IXpEvent): Promise<IQuest[]> {
   }
 }
 
-export async function awardXpDetailed(award: IAwardXpInput): Promise<IAwardXpOutcome> {
+export async function claimOnce(event: IXpEvent): Promise<boolean> {
+  return writeEvent(event, true);
+}
+
+async function runAward(award: IAwardXpInput, onceKey?: string): Promise<IAwardXpOutcome | undefined> {
   return tracer.startActiveSpan(
     'xp.award',
     { attributes: { 'kubequest.attendee.id': award.attendeeId, 'kubequest.xp.type': award.type, 'kubequest.xp.awarded': award.xp } },
     async (span) => {
       try {
-        const event = buildEvent({ ...award, xp: Math.max(0, Math.round(award.xp)) }, randomUUID());
+        const event = buildEvent({ ...award, xp: Math.max(0, Math.round(award.xp)) }, onceKey ?? randomUUID());
+
+        if (onceKey !== undefined && !(await writeEvent(event, true))) {
+          span.setAttribute('kubequest.xp.already_paid', true);
+          span.setStatus({ code: SpanStatusCode.OK });
+
+          return undefined;
+        }
+
         const totals = await applyToAttendee(event);
-        await writeEvent(event, false);
+
+        if (onceKey === undefined) {
+          await writeEvent(event, false);
+        }
+
         const xpAfter = totals.xp ?? event.xp;
         const xpBefore = xpAfter - event.xp;
 
@@ -236,6 +252,24 @@ export async function awardXpDetailed(award: IAwardXpInput): Promise<IAwardXpOut
       }
     },
   );
+}
+
+export async function awardXpDetailed(award: IAwardXpInput): Promise<IAwardXpOutcome> {
+  const outcome = await runAward(award);
+
+  if (!outcome) {
+    throw new Error('xp award returned no outcome');
+  }
+
+  return outcome;
+}
+
+export async function awardXpOnce(award: IAwardXpInput, onceKey: string): Promise<boolean> {
+  return (await runAward(award, onceKey)) !== undefined;
+}
+
+export async function awardXpOnceDetailed(award: IAwardXpInput, onceKey: string): Promise<IAwardXpOutcome | undefined> {
+  return runAward(award, onceKey);
 }
 
 export async function awardXp(award: IAwardXpInput): Promise<IXpEvent> {

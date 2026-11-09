@@ -48,3 +48,4 @@ resources/qr-links.local.txt
 *.tsbuildinfo
 /scripts/dist/
 # Angular web app
+/web/public/fixtures/

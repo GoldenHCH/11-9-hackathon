@@ -20,6 +20,7 @@ export interface IVisitorPlan {
   window: IVisitWindow;
   recent: boolean;
   generated: boolean;
+  visitedBoothIds: Set<string>;
 }
 
 export interface IPlannedVisit {

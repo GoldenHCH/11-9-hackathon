@@ -21,40 +21,45 @@
     (retry)="loadSchematic()"
   >
     @if (schematic) {
-      <div #mapTop class="pickers">
-        <mat-button-toggle-group
-          class="picker"
-          [value]="selectedBuildingId"
-          (change)="selectBuilding($event.value)"
-          aria-label="Building"
-          hideSingleSelectionIndicator
-        >
-          @for (building of schematic.buildings; track building.id) {
-            <mat-button-toggle [value]="building.id">{{ building.shortName }}</mat-button-toggle>
-          }
-        </mat-button-toggle-group>
-
-        @if (selectedBuilding && selectedBuilding.levels.length > 1) {
-          <mat-button-toggle-group
-            class="picker"
-            [value]="selectedLevelId"
-            (change)="selectLevel($event.value)"
-            aria-label="Level"
-            hideSingleSelectionIndicator
-          >
-            @for (level of selectedBuilding.levels; track level.id) {
-              <mat-button-toggle [value]="level.id">{{ level.label }}</mat-button-toggle>
-            }
-          </mat-button-toggle-group>
+      <nav #mapTop class="level-switcher" aria-label="Building and level">
+        @for (building of schematic.buildings; track building.id) {
+          <div class="switch-group" role="group" [attr.aria-label]="building.name">
+            <span class="switch-building" aria-hidden="true">{{ building.shortName }}</span>
+            <div class="switch-buttons">
+              @for (level of building.levels; track level.id) {
+                <button
+                  type="button"
+                  class="switch-button"
+                  [class.switch-button--active]="level.id === selectedLevelId"
+                  [attr.aria-pressed]="level.id === selectedLevelId"
+                  [attr.aria-label]="level.title"
+                  (click)="goToLevel(building.id, level.id)"
+                >
+                  {{ level.label }}
+                </button>
+              }
+            </div>
+          </div>
         }
-      </div>
+      </nav>
+
+      @if (selectedLevel) {
+        <div class="level-heading">
+          <h2 class="level-title">{{ selectedLevel.title }}</h2>
+          @if (selectedLevel.officialMap) {
+            <a class="pdf-link" [href]="selectedLevel.officialMap.url" target="_blank" rel="noopener">
+              <mat-icon aria-hidden="true">picture_as_pdf</mat-icon>
+              <span>View official PDF</span>
+            </a>
+          }
+        </div>
+      }
 
       @if (viewMode === 'map') {
         <!-- Schematic -->
         @if (selectedLevel && selectedBuilding) {
           <app-venue-schematic
             [level]="selectedLevel"
-            [buildingName]="selectedBuilding.name"
             [selectedAreaId]="selectedAreaId"
             [highlightedAreaIds]="highlightedAreaIds"
             [booths]="levelBooths"
@@ -64,7 +69,15 @@
           ></app-venue-schematic>
 
           @if (levelBooths.length) {
-            <p class="details-hint">Tap a booth square, or search below. Squares are coloured by tier and listed by name in the search.</p>
+            <p class="details-hint">Tap a booth, or search below. Booths are coloured by sponsor tier, as on the official map.</p>
+            <ul class="legend" aria-label="Booth tiers">
+              @for (tier of boothTiers; track tier) {
+                <li class="legend-item">
+                  <span class="legend-swatch" [style.background]="tierFill[tier]" aria-hidden="true"></span>
+                  <span>{{ tier }}</span>
+                </li>
+              }
+            </ul>
           }
 
           <ul class="legend" aria-label="Map key">
@@ -75,21 +88,17 @@
                 <span>{{ kindDisplay[kind].label }}</span>
               </li>
             }
-            <li class="legend-item">
-              <span class="legend-swatch legend-swatch--inferred" aria-hidden="true"></span>
-              <span>Dashed outline: position estimated</span>
-            </li>
           </ul>
         }
 
         <!-- Selected booth and area -->
         <div class="details" aria-live="polite">
           @if (highlightedVendor) {
-            <article class="details-card details-card--booth app-block">
+            <article class="details-card details-card--booth kq-block">
               <div class="details-header">
-                <div class="booth-badge app-pixel" aria-hidden="true">{{ highlightedVendor.booth }}</div>
+                <div class="booth-badge kq-pixel" aria-hidden="true">{{ highlightedVendor.booth }}</div>
                 <div class="details-heading">
-                  <h2 class="details-title app-pixel">{{ highlightedVendor.name }}</h2>
+                  <h2 class="details-title kq-pixel">{{ highlightedVendor.name }}</h2>
                   <p class="details-kind">
                     {{ highlightedVendor.kind === 'project' ? 'Project kiosk' : 'Booth' }} {{ highlightedVendor.booth }} ·
                     {{ highlightedVendor.tier }}@if (vendorLocationLabel(highlightedVendor)) { · {{ vendorLocationLabel(highlightedVendor) }} }
@@ -112,13 +121,13 @@
             </article>
           }
           @if (selectedArea) {
-            <article class="details-card app-block">
+            <article class="details-card kq-block">
               <div class="details-header">
-                <div class="app-card-icon"><mat-icon aria-hidden="true">{{ kindDisplay[selectedArea.kind].icon }}</mat-icon></div>
+                <div class="details-icon"><mat-icon aria-hidden="true">{{ kindDisplay[selectedArea.kind].icon }}</mat-icon></div>
                 <div class="details-heading">
-                  <h2 class="details-title app-pixel">{{ selectedArea.name }}</h2>
+                  <h2 class="details-title kq-pixel">{{ selectedArea.name }}</h2>
                   <p class="details-kind">
-                    {{ kindDisplay[selectedArea.kind].label }} · {{ selectedBuilding?.name }}, {{ selectedLevel?.label }}
+                    {{ kindDisplay[selectedArea.kind].label }} · {{ selectedLevel?.title }}
                   </p>
                 </div>
                 <button mat-icon-button type="button" aria-label="Close details" (click)="selectedAreaId = null">
@@ -144,7 +153,7 @@
                 <ul class="vendor-list vendor-list--compact">
                   @for (vendor of selectedAreaVendors; track vendor.id) {
                     <li class="vendor-row" [class.vendor-row--highlighted]="vendor.id === highlightedVendor?.id">
-                      <span class="vendor-booth app-pixel">{{ vendor.booth }}</span>
+                      <span class="vendor-booth kq-pixel">{{ vendor.booth }}</span>
                       <span class="vendor-name">{{ vendor.name }}</span>
                       <span class="vendor-tier">{{ vendor.tier }}</span>
                     </li>
@@ -161,10 +170,16 @@
         @if (selectedBuilding) {
           @for (level of selectedBuilding.levels; track level.id) {
             <section class="level-list" [attr.aria-labelledby]="'level-' + level.id">
-              <h2 class="level-list-title app-pixel" [id]="'level-' + level.id">{{ selectedBuilding.name }} · {{ level.label }}</h2>
+              <h2 class="level-list-title kq-pixel" [id]="'level-' + level.id">{{ level.title }}</h2>
+              @if (level.officialMap) {
+                <a class="pdf-link pdf-link--inline" [href]="level.officialMap.url" target="_blank" rel="noopener">
+                  <mat-icon aria-hidden="true">picture_as_pdf</mat-icon>
+                  <span>View official PDF</span>
+                </a>
+              }
               <ul class="area-list">
                 @for (area of level.areas; track area.id) {
-                  <li class="area-row app-card">
+                  <li class="area-row kq-block">
                     <mat-icon aria-hidden="true">{{ kindDisplay[area.kind].icon }}</mat-icon>
                     <div class="area-row-text">
                       <span class="area-row-name">{{ area.name }}</span>
@@ -183,7 +198,7 @@
 
       <!-- Vendor finder -->
       <section class="finder" aria-labelledby="finder-title">
-        <h2 id="finder-title" class="finder-title app-pixel">Find a booth</h2>
+        <h2 id="finder-title" class="finder-title kq-pixel">Find a booth</h2>
         <mat-form-field appearance="outline" class="finder-field">
           <mat-label>Company, project or booth number</mat-label>
           <mat-icon matPrefix aria-hidden="true">search</mat-icon>
@@ -197,18 +212,18 @@
               <li>
                 <button
                   type="button"
-                  class="vendor-button app-card app-card--clickable"
+                  class="vendor-button kq-block"
                   [class.vendor-row--highlighted]="vendor.id === highlightedVendor?.id"
                   [disabled]="!vendor.areaId"
                   (click)="showVendorOnMap(vendor)"
                 >
-                  <span class="vendor-booth app-pixel">{{ vendor.booth }}</span>
+                  <span class="vendor-booth kq-pixel">{{ vendor.booth }}</span>
                   <span class="vendor-text">
                     <span class="vendor-name">{{ vendor.name }}</span>
                     <span class="vendor-location">{{ vendor.tier }}@if (vendorLocationLabel(vendor)) { · {{ vendorLocationLabel(vendor) }} }</span>
                   </span>
                   @if (vendor.areaId) {
-                    <mat-icon class="app-card-arrow" aria-hidden="true">place</mat-icon>
+                    <mat-icon class="vendor-arrow" aria-hidden="true">place</mat-icon>
                   }
                 </button>
               </li>

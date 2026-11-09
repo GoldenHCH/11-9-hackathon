@@ -21,7 +21,7 @@ import {
   projectTracks,
   sponsorTierLabels,
 } from '../lib/exhibitors.constants';
-import { IKioskSlot, IProjectKioskRow, ISponsorRow } from '../lib/exhibitors.interfaces';
+import { IProjectKioskRow, ISchematicVendor, ISponsorRow } from '../lib/exhibitors.interfaces';
 import { offsetMeters } from '../lib/geo.helper';
 
 type LocationSeed = Omit<ILocation, 'geo'> & { searchText: string };
@@ -47,6 +47,7 @@ const resourcesDir = path.resolve(__dirname, '..', '..', 'resources');
 const outputFile = path.join(resourcesDir, 'locations.json');
 const sponsorsFile = path.join(resourcesDir, 'venue', 'sponsors.json');
 const projectKiosksFile = path.join(resourcesDir, 'venue', 'project_pavilion_kiosks.json');
+const schematicFile = path.join(resourcesDir, '..', 'web', 'public', 'venue', 'schematic.json');
 
 const sessionRoomStrings: string[] = [
   'Salt Palace | Level 1 | Hall DE',
@@ -66,6 +67,16 @@ const sessionRoomStrings: string[] = [
   'Hyatt Regency | Level 4 | Regency Ballroom A',
   'Hyatt Regency | Level 4 | Regency Ballroom B-D',
 ];
+
+const officialRoomNames: Record<string, string> = {
+  '150 DEFG': '150 A-F',
+  '151 G': '151',
+  '155 E': '155 A-F',
+  '250 AB': '250 A-C',
+  '251 ABC': '251 A-C',
+  '251 DEF': '251 D-F',
+  '254 AB': '254',
+};
 
 const places: IPlaceSeed[] = [
   {
@@ -91,7 +102,7 @@ const places: IPlaceSeed[] = [
     kind: 'theater',
     building: buildingNames.SALT_PALACE,
     level: 'Level 1',
-    zone: 'Project Pavilion',
+    zone: 'Hall 5, Cosmic Canyon',
     description: 'Project updates and community talks, scheduled like a room, inside the halls.',
     hasScreen: true,
   },
@@ -99,7 +110,8 @@ const places: IPlaceSeed[] = [
     name: 'The Meeting Point',
     kind: 'campfire',
     building: buildingNames.SALT_PALACE,
-    level: 'Level 1',
+    level: 'Level 2',
+    zone: 'North Foyer',
     description: "The venue's own named meeting spot. Meet your quest partner here.",
   },
   {
@@ -107,6 +119,7 @@ const places: IPlaceSeed[] = [
     kind: 'campfire',
     building: buildingNames.SALT_PALACE,
     level: 'Level 1',
+    zone: 'Grand Ballroom J',
     description: 'Open seating meant for conversation. Meet your quest partner here.',
   },
   {
@@ -114,7 +127,7 @@ const places: IPlaceSeed[] = [
     kind: 'campfire',
     building: buildingNames.SALT_PALACE,
     level: 'Level 1',
-    zone: 'Solutions Showcase',
+    zone: 'Hall 1, Alpine Overlook',
     description: 'Hosts the scheduled meetups, next to the outposts.',
   },
   {
@@ -122,7 +135,7 @@ const places: IPlaceSeed[] = [
     kind: 'campfire',
     building: buildingNames.SALT_PALACE,
     level: 'Level 1',
-    zone: 'Hall B, Starlight Summit Zone',
+    zone: 'Hall B, Starlight Summit, booth 140',
     description: 'Named in the schedule and easy to find in the showcase.',
   },
   {
@@ -282,11 +295,11 @@ function roomSeed(parsed: IParsedLocation): LocationSeed {
 
   return {
     id: roomLocationId(parsed),
-    name: parsed.room,
+    name: officialRoomNames[parsed.room] ?? parsed.room,
     kind,
     building: parsed.building,
     level: parsed.level,
-    room: parsed.room,
+    room: officialRoomNames[parsed.room] ?? parsed.room,
     description,
     hasScreen: kind === 'boss-room',
     searchText: `${parsed.room}, ${parsed.building} ${parsed.level}. ${description}`,
@@ -401,14 +414,18 @@ function exhibitorSearchText(seed: Omit<LocationSeed, 'searchText'>): string {
   return parts.filter((part) => part !== '').join(' ');
 }
 
-function sponsorExhibitor(row: ISponsorRow, booth: string | string[], handWritten: LocationSeed | undefined, usedIds: Set<string>): ExhibitorSeed {
+function sponsorExhibitor(
+  row: ISponsorRow,
+  booth: string | string[],
+  handWritten: LocationSeed | undefined,
+  usedIds: Set<string>,
+  mapPosition: IMapPoint | undefined,
+): ExhibitorSeed {
   const tier = normalizeTier(row.tier);
   const categories = normalizeCategories(row.categories);
   const boothNumber = boothLabel(booth);
   const zone = row.zone ?? 'Solutions Showcase';
   const hall = row.hall ?? '';
-  const mapPosition: IMapPoint | undefined =
-    typeof row.mapX === 'number' && typeof row.mapY === 'number' ? { x: row.mapX, y: row.mapY } : undefined;
   const tierLabel = sponsorTierLabels[tier] ?? tier;
   const id = handWritten ? handWritten.id : uniqueId(slugify(`outpost ${row.name}`), usedIds);
   const seed: Omit<LocationSeed, 'searchText'> = {
@@ -438,23 +455,7 @@ function sponsorExhibitor(row: ISponsorRow, booth: string | string[], handWritte
   };
 }
 
-function kioskSlot(kiosk: string): IKioskSlot {
-  const match = /^P-(\d+)([AB])$/i.exec(kiosk);
-
-  return match ? { row: Number(match[1]), side: match[2].toUpperCase() } : { row: 1, side: 'A' };
-}
-
-function pavilionPosition(kiosk: string, shareIndex: number): IMapPoint {
-  const slot = kioskSlot(kiosk);
-  const x = slot.side === 'A' ? exhibitorLayout.PAVILION_SIDE_A_X : exhibitorLayout.PAVILION_SIDE_B_X;
-
-  return {
-    x: x + shareIndex * 2,
-    y: exhibitorLayout.PAVILION_TOP_Y + (slot.row - 1) * exhibitorLayout.PAVILION_ROW_SPACING + shareIndex * 1.5,
-  };
-}
-
-function projectExhibitor(row: IProjectKioskRow, shareIndex: number, usedIds: Set<string>): ExhibitorSeed {
+function projectExhibitor(row: IProjectKioskRow, usedIds: Set<string>, mapPosition: IMapPoint | undefined): ExhibitorSeed {
   const seed: Omit<LocationSeed, 'searchText'> = {
     id: uniqueId(slugify(`outpost project ${row.project}`), usedIds),
     name: row.project,
@@ -472,12 +473,45 @@ function projectExhibitor(row: IProjectKioskRow, shareIndex: number, usedIds: Se
     exhibitorType: 'project',
     hall: exhibitorLayout.PAVILION_HALL,
     schedule: row.schedule,
+    mapPosition,
   };
 
-  return { ...seed, searchText: exhibitorSearchText(seed), geo: geoFromMap(pavilionPosition(row.kiosk, shareIndex)) };
+  return {
+    ...seed,
+    searchText: exhibitorSearchText(seed),
+    geo: geoFromMap(mapPosition ?? { x: exhibitorLayout.MAP_CENTER_X, y: exhibitorLayout.MAP_CENTER_Y }),
+  };
+}
+
+function vendorKey(kind: string, key: string): string {
+  return `${kind}|${key}`;
+}
+
+function schematicPositions(): Map<string, IMapPoint> {
+  const parsed: unknown = JSON.parse(readFileSync(schematicFile, 'utf8'));
+  const vendors: ISchematicVendor[] =
+    typeof parsed === 'object' && parsed !== null && Array.isArray(Reflect.get(parsed, 'vendors'))
+      ? (Reflect.get(parsed, 'vendors') as ISchematicVendor[])
+      : [];
+  const positions = new Map<string, IMapPoint>();
+
+  for (const vendor of vendors) {
+    if (vendor.levelId !== exhibitorLayout.EXPO_LEVEL_ID || !vendor.position) {
+      continue;
+    }
+
+    const key = vendor.kind === 'project' ? vendorKey('project', `${vendor.name}|${vendor.booth}`) : vendorKey('sponsor', vendor.booth);
+
+    if (!positions.has(key)) {
+      positions.set(key, { x: vendor.position.x, y: vendor.position.y });
+    }
+  }
+
+  return positions;
 }
 
 function buildExhibitors(): ExhibitorSeed[] {
+  const positions = schematicPositions();
   const handWrittenByBooth = new Map(
     handWrittenOutposts.flatMap((place) => (place.boothNumber ? [[place.boothNumber, placeSeed(place)] as const] : [])),
   );
@@ -489,15 +523,11 @@ function buildExhibitors(): ExhibitorSeed[] {
       return [];
     }
 
-    return [sponsorExhibitor(row, booth, handWrittenByBooth.get(firstBooth(booth)), usedIds)];
+    return [sponsorExhibitor(row, booth, handWrittenByBooth.get(firstBooth(booth)), usedIds, positions.get(vendorKey('sponsor', firstBooth(booth))))];
   });
-  const kioskShares = new Map<string, number>();
-  const projects = readJsonRows<IProjectKioskRow>(projectKiosksFile).map((row) => {
-    const shareIndex = kioskShares.get(row.kiosk) ?? 0;
-    kioskShares.set(row.kiosk, shareIndex + 1);
-
-    return projectExhibitor(row, shareIndex, usedIds);
-  });
+  const projects = readJsonRows<IProjectKioskRow>(projectKiosksFile).map((row) =>
+    projectExhibitor(row, usedIds, positions.get(vendorKey('project', `${row.project}|${row.kiosk}`))),
+  );
 
   return [...sponsors, ...projects];
 }
