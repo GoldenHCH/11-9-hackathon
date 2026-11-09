@@ -1,4 +1,6 @@
-# Phase 05 — Phone-to-phone handshakes, booth notes, messages and the recap
+# Phase 06 — Phone-to-phone handshakes, booth notes, messages and the recap
+
+> **Status (14:50 MST): merged as PR 16 and live** (`/healthz` reports `0110194`). Renamed from `phase-05-handshake-booth-notes.md`, because three plans were all numbered 05. The backend boxes below are ticked from the merged code. The "Done when" checks on two phones have not been run yet; run them before the demo rehearsal, since the handshake is now how the demo's meet completes.
 
 **Goal:** a meet can't be faked from a screenshot or a group chat; booth scans turn into takeaways people actually wrote; two players who both opted in can plan their meet in the app; and everyone is promised a recap email of the people, booths and next steps from their conference.
 **Brief requirements covered:** Hallway (mutual opt-in, meeting point, icebreaker, verified handshake), "makes conferences easier", Elastic as the core data layer (questions picked from profiles and notes, `semantic_text` notes), Merge Forward (no timers on the question, works with a pasted link instead of a camera, plain text), Dash0 (every tool emits a span).
@@ -19,13 +21,13 @@
 - [x] Tool names, interfaces and game rules in `app/src/types/` (`handshake_code`, `start_handshake`, `handshake_state`, `answer_handshake`, `save_booth_note`, `list_booth_notes`, `send_message`, `list_messages`, `recap`)
 
 ### Backend (`app/src/`)
-- [ ] Signed, single-use, 60 s personal handshake tokens in `security/tokens.ts`
-- [ ] `handshakes` index; question picker over ES data with a non-AI fallback; fuzzy answer matcher with a focused test
-- [ ] XP through `awardXp` only; hourly handshake XP cap; accepted meet → `met`
-- [ ] `booth_notes` index with `semantic_text`; outpost check-in returns `noteRequired` and the note; `save_booth_note` XP rules
-- [ ] `messages` index; send and list only for mutually accepted meets
-- [ ] `recap` tool, email renderer, `GET /api/recap/:attendeeId/email.html`, `docs/mock/recap-email.html`
-- [ ] Fixtures for every new tool; `docs/api.md` and `docs/architecture.md` updated
+- [x] Signed, single-use, 60 s personal handshake tokens in `security/tokens.ts`
+- [x] `handshakes` index; question picker over ES data with a non-AI fallback; fuzzy answer matcher with a focused test
+- [x] XP through `awardXp` only; hourly handshake XP cap; accepted meet → `met`
+- [x] `booth_notes` index with `semantic_text`; outpost check-in returns `noteRequired` and the note; `save_booth_note` XP rules
+- [x] `messages` index; send and list only for mutually accepted meets
+- [x] `recap` tool, email renderer, `GET /api/recap/:attendeeId/email.html`, `docs/mock/recap-email.html`
+- [x] Fixtures for every new tool; `docs/api.md` and `docs/architecture.md` updated
 
 ### Web (`web/src/app/`)
 - [x] `/code`: rotating personal QR, opens the question when someone scans it, paste-a-link fallback
@@ -42,4 +44,4 @@
 - [ ] Scanning a booth QR shows the takeaways form; a 20+ character note earns 10 XP; a second booth within 3 minutes saves without XP
 - [ ] Two players with an accepted meet can message each other; a third player can't read or send
 - [ ] `/recap` shows the people, booths and next steps, and the email preview matches `docs/mock/recap-email.html`
-- [ ] PR opened and reviewed by Gitar
+- [x] PR opened and reviewed by Gitar (PR 16, merged 14:32)

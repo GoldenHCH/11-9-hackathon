@@ -1,5 +1,15 @@
 # Phase 02 — Tools for real: signed check-in, XP, Hallway, quiz, badges
 
+> **Status (14:50 MST): done, apart from the small leftovers below.** Checked against `origin/main` (`69d5f47`, live as `0110194`):
+> - **1. Gitar's three PR 5 findings: done** (PR 15). Minting a screen token needs a per-location display key, `screen_token` is blocked on the public tools router, the boss bonus is create-only with a deterministic id, and `claimQuiz` goes through `award.ts`.
+> - **2. A working model: done.** The app's key reaches the Agent Builder agent `kubequest-writer` (PR 10, PR 14). PR 14 put each model call on a per-purpose time budget (topics 4 s, chat 9 s, quizzes 13 s) so signup stays under the gateway's 15 s limit, with the deterministic fallbacks behind it. `docs/ops-ai.md` still describes the 403s from before PR 10; update it in the last mile. No OpenAI fallback, on purpose.
+> - **3. Dash0 keys: done** (Collin; `docs/sponsor-tools.md`: spans from the cluster show in Dash0).
+> - **4. `DEMO_NOW`: decided, leave it unset.** At 14:47 `boss_state` for `cloud-native-hackathon` read `fighting`, 10/10, on the real clock. Setting `DEMO_NOW` to Nov 10 would make it `escaped`.
+> - **5. "Who else is here"** (PR 12) is live. Still not in `docs/api.md` or `resources/fixtures/check_in.json` (`peopleHere` appears in neither). No owner.
+> - **6. `GITHUB_TOKEN` and the `index-all` bundle:** unchanged, no owner.
+> - **PR 9** (signed check-in): empty diff against `main`. Close it.
+> - The meet flow changed after this phase: PR 16 (`phase-06-handshake-booth-notes.md`) completes meets with a phone-to-phone handshake, not a double campfire scan.
+>
 > **Status (13:55 MST):** superseded by PR 5, "KubeQuest backend v1", which built sections 1–8 in one PR against `knowledge-graph/game-design.md` (23 tools, quests, boss rooms, meets, levels; see `docs/api.md`). The file names and tool names below no longer match the code. What is left of this phase:
 > 1. **Gitar's three findings on PR 5**, merged unaddressed: unauthenticated `GET /api/screen-token/:locationId` and the `screen_token` tool let anyone check in to a boss room remotely; the boss defeat bonus can pay more than once under concurrent `boss_state` polls (needs a deterministic event id with `op_type: create`); `claimQuiz` writes to `xp_events` outside `app/src/xp/award.ts`, breaking `.gitar/rules/game-integrity.md`. One PR, referencing the review.
 > 2. **A working model.** Elastic completion endpoints return 403 and Agent Builder lacks the `agentBuilder:read` Kibana privilege (`docs/ops-ai.md`), so quizzes and icebreakers are deterministic fallbacks. Ask Sophia for a key with Kibana privileges and the LLM entitlement; otherwise add an OpenAI fallback to `app/src/ai/client.ts`.

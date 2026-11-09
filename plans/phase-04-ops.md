@@ -1,5 +1,11 @@
 # Phase 00 + 04 — Platform: cnh-starter, Argo CD, OTel Collector, Gitar, Radar
 
+> **Status (14:50 MST):** item 1 is done: the Dash0 token, endpoint and dataset are in `app-credentials`, and spans from the cluster (HTTP, Elasticsearch, `tool.*`) show in Dash0's trace explorer (`docs/sponsor-tools.md`, Collin). Still open, re-checked at 14:47:
+> - **2. Browser RUM and the trace link (Collin):** the live `/api/config` (`0110194`) still returns no `rum` and no `traceUrlTemplate`, so the leaderboard's "open trace" link has nothing to open. The demo path needs `traceUrlTemplate`; RUM is a Dash0 rubric line.
+> - **3. Gitar auto-apply:** not confirmed on. No owner.
+> - **4. `main` protection:** `protected: false`. No owner.
+> - **5. `GITHUB_TOKEN`:** no owner. `OPENAI_API_KEY` is no longer needed: the model runs through Agent Builder (`phase-02-tools.md`).
+>
 > **Status (14:10 MST):** Phase 00 is done. Most of Phase 04 landed in PR 5: collector, Node SDK, JSON logs with trace ids, all four `kubequest.*` metrics, Gitar review instructions and rules, and `app-credentials` loaded through `envFrom` (verified live in `knowledge-graph/platform-status.md`). Still open. **Collin owns items 1 and 2** (Dash0 keys, the first trace and browser RUM), plus the Dash0 dashboard + SLO in `phase-05-widen.md`; items 3 to 5 have no owner. Checked at 14:10: the live `/api/config` (`ae5e756`) returns no `traceUrlTemplate` and no `rum`. The Secret and Dash0 itself were not re-checked.
 > 1. **Dash0 keys** (`DASH0_AUTH_TOKEN`, `DASH0_ENDPOINT`) are not in `app-credentials`, so the collector's `otlp/dash0` exporter sends nothing and no trace has been seen in Dash0. Steps: `docs/ops.md`, "Adding the Dash0 keys". This blocks the Dash0 track and the "open trace" step of the demo. **Owner: Collin.**
 > 2. **Browser RUM** in the Angular app (Phase 03 section 8 reads `rum` from `/api/config`) and the **Dash0 MCP** in Claude Code. **Owner: Collin.**

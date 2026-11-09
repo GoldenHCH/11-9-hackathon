@@ -1,6 +1,14 @@
 # Phase 03 — Angular UI against the live backend
 
-**Goal:** every screen on the demo path works on a phone at 375 px against the 23 tools in `docs/api.md`, first from `resources/fixtures/`, then live, and the whole loop runs keyboard-only. The demo screen shows a live QR that judges scan.
+> **Status (14:50 MST): the critical path.** Checked against `origin/main` (`69d5f47`, live as `0110194`). No Phase 03 branch or PR is on GitHub; Collin's local work was not checked.
+> - **Placeholders on `main`, all on the demo path:** `/signup` (section 1), `/here` with the boss bar (section 2), `/quiz/:talkId` (section 3), `/quests` (section 4), `/board` and `/screen/:locationId` (section 5), `/organizer` (section 7). Sections 0–5 come before anything else.
+> - **Already built by PR 16** (`phase-06-handshake-booth-notes.md`), don't rebuild: `/r/:locationId` (scan landing with the booth takeaways form, section 1's scan half), `/meets` and `/intro/:id` (section 4's meet half; keep the `intro/:id` route name instead of renaming it to `meet/:meetId`), `/me/:attendeeId` (the personal link signs you in), plus `/code`, `/handshake/:id`, `/notes`, `/recap`. `MeGuard`, `ApiErrorHelper` and `PixelFaceComponent` exist in `web/src/app/core/` and `shared/`; `ConfigService` and a polling helper don't yet.
+> - **Section 4 changed:** a meet completes by handshake (`/code` → scan → shared question), not by two campfire scans. The meet card links to `/code` once accepted; the campfire is only the suggested place.
+> - **Section 7 moves:** the organizer screen is Phase 07's `/admin` (`phase-07-roles-booths.md`, Golden). Skip it here.
+> - **`whats_next` and `recommend_talks` stay empty live:** `DEMO_NOW` stays unset so the demo boss is fightable. Build the itinerary on fixtures, or drop it from the demo.
+> - **Tool count:** the contract is now 32 tools (PR 16 added 9).
+
+**Goal:** every screen on the demo path works on a phone at 375 px against the tools in `docs/api.md`, first from `resources/fixtures/`, then live, and the whole loop runs keyboard-only. The demo screen shows a live QR that judges scan.
 **Spec for this phase:** `docs/api.md` (the UI contract, with a fixture per tool) and `knowledge-graph/game-design.md` ("Build today" column). The brief sets the rubric; where the brief and the game design differ, the game design and the API win, because the backend already implements them.
 **Brief requirements covered:** Angular UI with loading, empty and error states, mobile-first; Merge Forward (keyboard, screen reader, no timers, badges not by color alone, pseudonymous handles, accessible mode, no-walking quests); Dash0 RUM; "every point is traceable" (trace link on each leaderboard row).
 **Depends on:** PR 5 (merged): the backend, `docs/api.md`, the fixtures, the Angular shell with `ToolsService`, `MeService`, `StateWrapperComponent`, `ScreenToolbarComponent`, the Map screen. Nothing else.

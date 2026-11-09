@@ -1,5 +1,11 @@
 # Phase 05 — Widen: the incident, Dash0 dashboard + SLO, assistant + MCP, nudges
 
+> **Status (14:50 MST):** not started; nothing below has a branch. What changed since 14:10:
+> - **Dependencies met:** the Dash0 keys and a first trace (items 1 and 2), and a working model through Agent Builder (item 3; PR 10, PR 14). The 403 fallback is no longer an incident candidate; the `index-all` bundle still is.
+> - **Item 7:** `DEMO_NOW` stays unset, and the boss read `fighting`, 10/10, at 14:47. What's left is keeping rehearsals from draining it before 17:15.
+> - **Phase 03 is the critical path** and its screens are placeholders on `main` (`phase-03-ui.md`). If Collin needs help, a demo-path screen comes before items 3 to 6 here.
+> - PR 16 added two more phase files: the handshake work is `phase-06-handshake-booth-notes.md` (merged) and the role views are `phase-07-roles-booths.md` (in progress).
+>
 > **Status (14:10 MST):** not started. Written against `origin/main` at `5e290cb` (live as `ae5e756`), `docs/api.md` and the open PRs. PR 5 already shipped part of the old Phase 05 row; see "Already shipped" below.
 
 **Goal:** the demo's tooling story is real (an incident found with Radar and Agent0 and fixed through a Gitar-reviewed PR and Argo CD, a Dash0 dashboard with an SLO), and then, in cut order, the extras that widen the game.
@@ -80,8 +86,8 @@ Partly there: offers carry `walkMinutes` from the last scan and other-building o
 
 "Build today" in the game design: one boss whose health bar drops as judges answer. No plan checks that it is fightable at 17:15.
 
-- [ ] `resources/sessions.json` has `cnh-demo-boss-2026` at `cloud-native-hackathon`, 13:00 to 18:30 on Nov 9, so on the real clock the fight is open through the demo. Whether the live `talks` index has it: not checked; check with `boss_state` for `{"locationId":"cloud-native-hackathon"}`
-- [ ] Decide `DEMO_NOW` with that in mind. From reading `app/src/world/clock.ts` and `app/src/quests/boss.ts` (not run): `DEMO_NOW=2026-11-10T09:00:00-07:00` puts the world clock past the demo boss's deadline, and `boss_state` would read `escaped`. Either leave the real clock (the boss works; `whats_next` stays empty, as `docs/api.md` says) or move the demo boss into the `DEMO_NOW` window and reseed. One or the other, not both
+- [x] `resources/sessions.json` has `cnh-demo-boss-2026` at `cloud-native-hackathon`, 13:00 to 18:30 on Nov 9, so on the real clock the fight is open through the demo. Checked live at 14:47: `boss_state` for `{"locationId":"cloud-native-hackathon"}` reads `fighting`, health 10/10, deadline 18:45 MST
+- [x] Decided at 14:50: leave the real clock, so `DEMO_NOW` stays unset. The reasoning: From reading `app/src/world/clock.ts` and `app/src/quests/boss.ts` (not run): `DEMO_NOW=2026-11-10T09:00:00-07:00` puts the world clock past the demo boss's deadline, and `boss_state` would read `escaped`. Either leave the real clock (the boss works; `whats_next` stays empty, as `docs/api.md` says) or move the demo boss into the `DEMO_NOW` window and reseed. One or the other, not both
 - [ ] Rehearsal answers count as damage. Before the demo, make sure the bar is not already at zero: check `boss_state`, and if it is, decide the reset (delete the rehearsal's `boss` events for that talk, or seed a second demo boss)
 - **Done when:** on the live URL at the chosen clock, `boss_state` for the demo room reads `waiting` or `fighting`, and one quiz submission from a checked-in player lowers `health`.
 
