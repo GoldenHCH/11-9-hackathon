@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Hero } from './sections/Hero';
+import { Plan } from './sections/Plan';
 import { Access, Day, Finale, Hallway, Levels, Loop, Traceable, Tracks } from './sections/Sections';
 
 const readPlain = () => {
@@ -31,6 +32,7 @@ export const App = () => {
         <Day />
         <Loop />
         <Tracks />
+        <Plan />
         <Hallway />
         <Levels />
         <Traceable />

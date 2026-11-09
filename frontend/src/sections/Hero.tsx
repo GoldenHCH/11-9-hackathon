@@ -51,6 +51,7 @@ export const Hero = () => {
         <nav className="topnav" aria-label="Sections">
           <a href="#day">A day</a>
           <a href="#loop">How it plays</a>
+          <a href="#plan">Plan your day</a>
           <a href="#hallway">Hallway</a>
           <a href="#levels">Levels</a>
         </nav>
