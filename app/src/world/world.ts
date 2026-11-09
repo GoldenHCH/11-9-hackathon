@@ -61,12 +61,29 @@ export async function listLocations(): Promise<ILocation[]> {
       index: indexNames.LOCATIONS,
       size: MAX_LOCATIONS,
       _source: locationSourceFields,
-      query: { match_all: {} },
+      query: { bool: { must_not: [{ term: { kind: 'outpost' } }] } },
     },
     esOptions(esTimeouts.SEARCH_MS),
   );
 
   return sources(response);
+}
+
+async function locationById(locationId: string): Promise<ILocation | undefined> {
+  const response = await getEsClient().get<ILocation>(
+    { index: indexNames.LOCATIONS, id: locationId, _source_includes: locationSourceFields },
+    { ...esOptions(esTimeouts.DEFAULT_MS), ignore: [404] },
+  );
+
+  return response.found ? response._source : undefined;
+}
+
+async function originFor(locations: ILocation[], lastLocationId: string | undefined): Promise<ILocation | undefined> {
+  if (!lastLocationId) {
+    return undefined;
+  }
+
+  return locations.find((location) => location.id === lastLocationId) ?? (await locationById(lastLocationId));
 }
 
 async function upcomingTalks(now: Date): Promise<ITalk[]> {
@@ -199,7 +216,7 @@ export async function buildWorld(input: IWorldInput): Promise<IWorld> {
     recentCheckInCounts(now),
     lastLocationIdFor(input.attendeeId),
   ]);
-  const origin = lastLocationId ? locations.find((location) => location.id === lastLocationId) : undefined;
+  const origin = await originFor(locations, lastLocationId);
   const world = assembleWorld(locations, talks, checkIns, origin, now);
   const span = trace.getActiveSpan();
 

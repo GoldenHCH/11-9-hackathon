@@ -1,0 +1,545 @@
+{
+  "tool": "get_exhibitor",
+  "endpoint": "POST /api/tools/get_exhibitor",
+  "request": {
+    "outpostId": "outpost-dash0",
+    "attendeeId": "p_Ljp4ZfHC-VPDFwqx"
+  },
+  "status": 200,
+  "response": {
+    "exhibitor": {
+      "id": "outpost-dash0",
+      "name": "Dash0",
+      "exhibitorType": "sponsor",
+      "tier": "Platinum",
+      "boothNumber": "134",
+      "hall": "B",
+      "zone": "Starlight Summit",
+      "topics": [
+        "operations"
+      ],
+      "categories": [
+        "Observability",
+        "Application Development + Developer Experience"
+      ],
+      "askAbout": "OpenTelemetry-native observability and tracing a request end to end",
+      "visitorsNow": 3,
+      "visitedByMe": true,
+      "building": "Salt Palace",
+      "level": "Level 1",
+      "description": "Dash0 booth in the Solutions Showcase.",
+      "mapPosition": {
+        "x": 198.8,
+        "y": 517
+      }
+    },
+    "live": {
+      "visitorsNow": 3,
+      "visitsToday": 41,
+      "uniqueVisitorsToday": 37
+    },
+    "talks": [
+      {
+        "id": "kc26-wed-otel-tail-sampling",
+        "title": "Tail Sampling Without Tears: Keeping the Traces That Matter",
+        "start": "2026-11-11T11:00:00-07:00",
+        "end": "2026-11-11T11:30:00-07:00",
+        "where": "Salt Palace · Level 2 · 250 AB",
+        "speakers": [
+          "Mira Okafor"
+        ],
+        "track": "operations"
+      },
+      {
+        "id": "kc26-thu-otel-semconv-k8s",
+        "title": "Kubernetes Semantic Conventions in Practice: Labels, Resources and Cost",
+        "start": "2026-11-12T14:15:00-07:00",
+        "end": "2026-11-12T14:45:00-07:00",
+        "where": "Salt Palace · Level 1 · 151 G",
+        "speakers": [
+          "Jonas Feld",
+          "Priya Raman"
+        ],
+        "track": "operations"
+      }
+    ],
+    "playersHere": [
+      {
+        "id": "pl_f9564cec0583e8b2",
+        "handle": "otelotter",
+        "faceSeed": "otelotter",
+        "level": 4,
+        "levelName": "Cluster",
+        "xp": 610,
+        "banners": [
+          "welcomer",
+          "scout"
+        ]
+      },
+      {
+        "id": "pl_4c2ab4d5bed0e6c1",
+        "handle": "ebpfennec",
+        "faceSeed": "ebpfennec",
+        "level": 4,
+        "levelName": "Cluster",
+        "xp": 480,
+        "banners": [
+          "scout"
+        ]
+      },
+      {
+        "id": "pl_1707737723367c06",
+        "handle": "chaoschinchilla",
+        "faceSeed": "chaoschinchilla",
+        "level": 3,
+        "levelName": "Node",
+        "xp": 230,
+        "banners": []
+      }
+    ],
+    "nearby": [
+      {
+        "id": "outpost-spectro-cloud",
+        "name": "Spectro Cloud",
+        "exhibitorType": "sponsor",
+        "tier": "Platinum",
+        "boothNumber": "125",
+        "hall": "A",
+        "zone": "Starlight Summit",
+        "topics": [
+          "ai",
+          "connectivity"
+        ],
+        "categories": [
+          "Artificial Intelligence (AI)",
+          "Edge + IoT + Telco"
+        ],
+        "askAbout": "What they're building for AI and edge and telco",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-nebius",
+        "name": "Nebius",
+        "exhibitorType": "sponsor",
+        "tier": "Platinum",
+        "boothNumber": "133",
+        "hall": "B",
+        "zone": "Starlight Summit",
+        "topics": [
+          "platform",
+          "ai"
+        ],
+        "categories": [
+          "Application Development + Developer Experience",
+          "Artificial Intelligence (AI)"
+        ],
+        "askAbout": "What they're building for developer experience and AI",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-talos-by-sidero-labs",
+        "name": "Talos by Sidero Labs",
+        "exhibitorType": "sponsor",
+        "tier": "Platinum",
+        "boothNumber": "126",
+        "hall": "A",
+        "zone": "Starlight Summit",
+        "topics": [
+          "ai",
+          "security"
+        ],
+        "categories": [
+          "Artificial Intelligence (AI)",
+          "Security"
+        ],
+        "askAbout": "What they're building for AI and security",
+        "visitorsNow": 0,
+        "visitedByMe": false
+      },
+      {
+        "id": "outpost-haproxy-technologies",
+        "name": "HAProxy Technologies",
+        "exhibitorType": "sponsor",
+        "tier": "Diamond",
+        "boothNumber": "124",
+        "hall": "B",
+        "zone": "Starlight Summit",
+        "topics": [
+          "connectivity",
+          "security"
+        ],
+        "categories": [
+          "Networking",
+          "Security",
+          "Platform Engineering"
+        ],
+        "askAbout": "Moving from Ingress to Gateway API without downtime",
+        "visitorsNow": 1,
+        "visitedByMe": false
+      }
+    ],
+    "me": {
+      "visited": true,
+      "lastVisitAt": "2026-11-09T20:14:33.208Z",
+      "questId": "q_5d0c3a9e71b24f86a1c2e0d4",
+      "questStatus": "completed"
+    },
+    "expoMapUrl": "https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+    "generatedAt": "2026-11-09T21:42:10.512Z"
+  },
+  "variants": {
+    "project": {
+      "request": {
+        "outpostId": "outpost-project-opentelemetry",
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx"
+      },
+      "status": 200,
+      "response": {
+        "exhibitor": {
+          "id": "outpost-project-opentelemetry",
+          "name": "OpenTelemetry",
+          "exhibitorType": "project",
+          "tier": "Project",
+          "boothNumber": "P-16A",
+          "hall": "5",
+          "zone": "Cosmic Canyon",
+          "topics": [
+            "operations"
+          ],
+          "categories": [],
+          "askAbout": "How to start contributing to OpenTelemetry",
+          "visitorsNow": 4,
+          "visitedByMe": true,
+          "building": "Salt Palace",
+          "level": "Level 1",
+          "description": "OpenTelemetry project kiosk P-16A in the Project Pavilion. Staffed Tuesday 10:30 AM – 2:30 PM, Wednesday 10:15 AM – 1:25 PM, Thursday 10:15 AM – 11:55 AM.",
+          "schedule": "Tuesday 10:30 AM – 2:30 PM, Wednesday 10:15 AM – 1:25 PM, Thursday 10:15 AM – 11:55 AM"
+        },
+        "live": {
+          "visitorsNow": 4,
+          "visitsToday": 29,
+          "uniqueVisitorsToday": 26
+        },
+        "talks": [
+          {
+            "id": "kc26-tue-otel-project-update",
+            "title": "OpenTelemetry Project Update: Profiles, Entities and What Graduated",
+            "start": "2026-11-10T16:00:00-07:00",
+            "end": "2026-11-10T16:30:00-07:00",
+            "where": "Salt Palace · Level 2 · Ballroom ACE",
+            "speakers": [
+              "OpenTelemetry maintainers"
+            ],
+            "track": "operations"
+          },
+          {
+            "id": "kc26-wed-otel-contribfest",
+            "title": "OpenTelemetry Collector ContribFest",
+            "start": "2026-11-11T14:15:00-07:00",
+            "end": "2026-11-11T15:30:00-07:00",
+            "where": "Salt Palace · Level 1 · 155 E",
+            "speakers": [
+              "OpenTelemetry maintainers"
+            ],
+            "track": "operations"
+          }
+        ],
+        "playersHere": [
+          {
+            "id": "pl_cdaf997eca16a7ca",
+            "handle": "kedakestrel",
+            "faceSeed": "kedakestrel",
+            "level": 2,
+            "levelName": "Deployment",
+            "xp": 175,
+            "banners": []
+          },
+          {
+            "id": "pl_cda2c9b243cc0083",
+            "handle": "datadugong",
+            "faceSeed": "datadugong",
+            "level": 2,
+            "levelName": "Deployment",
+            "xp": 150,
+            "banners": []
+          }
+        ],
+        "nearby": [
+          {
+            "id": "outpost-project-tag-developer-experience",
+            "name": "TAG Developer Experience",
+            "exhibitorType": "project",
+            "tier": "Project",
+            "boothNumber": "P-16A",
+            "hall": "5",
+            "zone": "Cosmic Canyon",
+            "topics": [
+              "platform"
+            ],
+            "categories": [],
+            "askAbout": "How to start contributing to TAG Developer Experience",
+            "visitorsNow": 0,
+            "visitedByMe": false
+          },
+          {
+            "id": "outpost-project-openfeature",
+            "name": "OpenFeature",
+            "exhibitorType": "project",
+            "tier": "Project",
+            "boothNumber": "P-15A",
+            "hall": "5",
+            "zone": "Cosmic Canyon",
+            "topics": [
+              "platform"
+            ],
+            "categories": [],
+            "askAbout": "How to start contributing to OpenFeature",
+            "visitorsNow": 0,
+            "visitedByMe": false
+          },
+          {
+            "id": "outpost-project-kitops",
+            "name": "KitOps",
+            "exhibitorType": "project",
+            "tier": "Project",
+            "boothNumber": "P-15A",
+            "hall": "5",
+            "zone": "Cosmic Canyon",
+            "topics": [
+              "ai"
+            ],
+            "categories": [],
+            "askAbout": "How to start contributing to KitOps",
+            "visitorsNow": 0,
+            "visitedByMe": false
+          },
+          {
+            "id": "outpost-project-tag-infrastructure",
+            "name": "TAG Infrastructure",
+            "exhibitorType": "project",
+            "tier": "Project",
+            "boothNumber": "P-15A",
+            "hall": "5",
+            "zone": "Cosmic Canyon",
+            "topics": [
+              "platform"
+            ],
+            "categories": [],
+            "askAbout": "How to start contributing to TAG Infrastructure",
+            "visitorsNow": 0,
+            "visitedByMe": false
+          }
+        ],
+        "me": {
+          "visited": true,
+          "lastVisitAt": "2026-11-09T19:02:11.940Z"
+        },
+        "expoMapUrl": "https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+        "generatedAt": "2026-11-09T21:42:10.512Z"
+      }
+    },
+    "not_visited": {
+      "request": {
+        "outpostId": "outpost-dash0",
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx"
+      },
+      "status": 200,
+      "response": {
+        "exhibitor": {
+          "id": "outpost-dash0",
+          "name": "Dash0",
+          "exhibitorType": "sponsor",
+          "tier": "Platinum",
+          "boothNumber": "134",
+          "hall": "B",
+          "zone": "Starlight Summit",
+          "topics": [
+            "operations"
+          ],
+          "categories": [
+            "Observability",
+            "Application Development + Developer Experience"
+          ],
+          "askAbout": "OpenTelemetry-native observability and tracing a request end to end",
+          "visitorsNow": 3,
+          "visitedByMe": false,
+          "building": "Salt Palace",
+          "level": "Level 1",
+          "description": "Dash0 booth in the Solutions Showcase.",
+          "mapPosition": {
+            "x": 198.8,
+            "y": 517
+          }
+        },
+        "live": {
+          "visitorsNow": 3,
+          "visitsToday": 41,
+          "uniqueVisitorsToday": 37
+        },
+        "talks": [
+          {
+            "id": "kc26-wed-otel-tail-sampling",
+            "title": "Tail Sampling Without Tears: Keeping the Traces That Matter",
+            "start": "2026-11-11T11:00:00-07:00",
+            "end": "2026-11-11T11:30:00-07:00",
+            "where": "Salt Palace · Level 2 · 250 AB",
+            "speakers": [
+              "Mira Okafor"
+            ],
+            "track": "operations"
+          },
+          {
+            "id": "kc26-thu-otel-semconv-k8s",
+            "title": "Kubernetes Semantic Conventions in Practice: Labels, Resources and Cost",
+            "start": "2026-11-12T14:15:00-07:00",
+            "end": "2026-11-12T14:45:00-07:00",
+            "where": "Salt Palace · Level 1 · 151 G",
+            "speakers": [
+              "Jonas Feld",
+              "Priya Raman"
+            ],
+            "track": "operations"
+          }
+        ],
+        "playersHere": [
+          {
+            "id": "pl_f9564cec0583e8b2",
+            "handle": "otelotter",
+            "faceSeed": "otelotter",
+            "level": 4,
+            "levelName": "Cluster",
+            "xp": 610,
+            "banners": [
+              "welcomer",
+              "scout"
+            ]
+          },
+          {
+            "id": "pl_4c2ab4d5bed0e6c1",
+            "handle": "ebpfennec",
+            "faceSeed": "ebpfennec",
+            "level": 4,
+            "levelName": "Cluster",
+            "xp": 480,
+            "banners": [
+              "scout"
+            ]
+          },
+          {
+            "id": "pl_1707737723367c06",
+            "handle": "chaoschinchilla",
+            "faceSeed": "chaoschinchilla",
+            "level": 3,
+            "levelName": "Node",
+            "xp": 230,
+            "banners": []
+          }
+        ],
+        "nearby": [
+          {
+            "id": "outpost-spectro-cloud",
+            "name": "Spectro Cloud",
+            "exhibitorType": "sponsor",
+            "tier": "Platinum",
+            "boothNumber": "125",
+            "hall": "A",
+            "zone": "Starlight Summit",
+            "topics": [
+              "ai",
+              "connectivity"
+            ],
+            "categories": [
+              "Artificial Intelligence (AI)",
+              "Edge + IoT + Telco"
+            ],
+            "askAbout": "What they're building for AI and edge and telco",
+            "visitorsNow": 0,
+            "visitedByMe": false
+          },
+          {
+            "id": "outpost-nebius",
+            "name": "Nebius",
+            "exhibitorType": "sponsor",
+            "tier": "Platinum",
+            "boothNumber": "133",
+            "hall": "B",
+            "zone": "Starlight Summit",
+            "topics": [
+              "platform",
+              "ai"
+            ],
+            "categories": [
+              "Application Development + Developer Experience",
+              "Artificial Intelligence (AI)"
+            ],
+            "askAbout": "What they're building for developer experience and AI",
+            "visitorsNow": 0,
+            "visitedByMe": false
+          },
+          {
+            "id": "outpost-talos-by-sidero-labs",
+            "name": "Talos by Sidero Labs",
+            "exhibitorType": "sponsor",
+            "tier": "Platinum",
+            "boothNumber": "126",
+            "hall": "A",
+            "zone": "Starlight Summit",
+            "topics": [
+              "ai",
+              "security"
+            ],
+            "categories": [
+              "Artificial Intelligence (AI)",
+              "Security"
+            ],
+            "askAbout": "What they're building for AI and security",
+            "visitorsNow": 0,
+            "visitedByMe": false
+          },
+          {
+            "id": "outpost-haproxy-technologies",
+            "name": "HAProxy Technologies",
+            "exhibitorType": "sponsor",
+            "tier": "Diamond",
+            "boothNumber": "124",
+            "hall": "B",
+            "zone": "Starlight Summit",
+            "topics": [
+              "connectivity",
+              "security"
+            ],
+            "categories": [
+              "Networking",
+              "Security",
+              "Platform Engineering"
+            ],
+            "askAbout": "Moving from Ingress to Gateway API without downtime",
+            "visitorsNow": 1,
+            "visitedByMe": false
+          }
+        ],
+        "me": {
+          "visited": false,
+          "questId": "q_8a41f0c2be9d47e3b5a61c07",
+          "questStatus": "offered"
+        },
+        "expoMapUrl": "https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+        "generatedAt": "2026-11-09T21:42:10.512Z"
+      }
+    },
+    "unknown_outpost": {
+      "request": {
+        "outpostId": "outpost-nope"
+      },
+      "status": 404,
+      "response": {
+        "error": {
+          "code": "unknown_outpost",
+          "message": "We could not find that booth. Check the booth list and try again."
+        }
+      }
+    }
+  }
+}

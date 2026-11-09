@@ -7,6 +7,7 @@ import {
   checkInRejections,
   checkInStatuses,
   declineReasons,
+  exhibitorTypes,
   handshakeQuestionSources,
   handshakeRoles,
   handshakeStatuses,
@@ -18,6 +19,7 @@ import {
   meetResponses,
   meetRoles,
   meetStatuses,
+  notificationTypes,
   questResponses,
   questSources,
   questStatuses,
@@ -38,6 +40,8 @@ export type Material = (typeof materials)[number];
 export type Track = (typeof tracks)[number];
 
 export type LocationKind = (typeof locationKinds)[number];
+
+export type ExhibitorType = (typeof exhibitorTypes)[number];
 
 export type SessionType = (typeof sessionTypes)[number];
 
@@ -84,6 +88,8 @@ export type AiPurpose = (typeof aiPurposes)[number];
 export type BannerId = (typeof bannerIds)[number];
 
 export type ToolName = (typeof toolNames)[number];
+
+export type NotificationType = (typeof notificationTypes)[number];
 
 export type HandshakeStatus = (typeof handshakeStatuses)[number];
 

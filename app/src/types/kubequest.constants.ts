@@ -1,3 +1,5 @@
+import { connectionToolNames } from './connections.constants';
+
 export const materials = ['circuit', 'stone', 'glass', 'crate', 'iron', 'copper', 'lantern', 'wood', 'gold'] as const;
 
 export const tracks = ['ai', 'platform', 'operations', 'data', 'security', 'connectivity', 'inclusion', 'other'] as const;
@@ -27,9 +29,13 @@ export const materialCatalog = {
 
 export const locationKinds = ['room', 'outpost', 'theater', 'campfire', 'boss-room'] as const;
 
+export const exhibitorTypes = ['sponsor', 'project'] as const;
+
+export const exhibitorTierOrder = ['Diamond', 'Platinum', 'Gold', 'Silver', 'Start-Up', 'End User', 'Media Partner', 'Exhibitor', 'Project'] as const;
+
 export const sessionTypes = ['keynote', 'breakout', 'lightning', 'tutorial', 'panel', 'other'] as const;
 
-export const xpEventTypes = ['check_in', 'quiz', 'handshake', 'welcome', 'outpost', 'boss', 'badge'] as const;
+export const xpEventTypes = ['check_in', 'quiz', 'handshake', 'welcome', 'outpost', 'boss', 'badge', 'photo'] as const;
 
 export const handshakeStatuses = ['waiting', 'matched', 'mismatched', 'expired'] as const;
 
@@ -37,7 +43,7 @@ export const handshakeRoles = ['asker', 'answerer'] as const;
 
 export const handshakeQuestionSources = ['shared_topic', 'booth_note', 'talk', 'working_on', 'fallback'] as const;
 
-export const questTypes = ['attend', 'quiz', 'chat', 'outpost', 'collection', 'boss'] as const;
+export const questTypes = ['attend', 'quiz', 'chat', 'outpost', 'collection', 'boss', 'photo'] as const;
 
 export const questStatuses = ['offered', 'accepted', 'not_now', 'declined', 'dropped', 'completed', 'expired'] as const;
 
@@ -82,7 +88,7 @@ export const quizSources = ['transcript', 'abstract'] as const;
 
 export const aiProviders = ['agent_builder', 'inference', 'fallback'] as const;
 
-export const aiPurposes = ['quiz', 'icebreaker', 'chat_prompt', 'match_reason', 'profile_topics', 'quest_reason', 'handshake_question'] as const;
+export const aiPurposes = ['quiz', 'icebreaker', 'chat_prompt', 'match_reason', 'profile_topics', 'quest_reason', 'handshake_question', 'profile_import'] as const;
 
 export const bannerIds = ['observability-nerd', 'connector', 'welcomer', 'explorer', 'scout', 'speaker'] as const;
 
@@ -111,6 +117,7 @@ export const xpRewards = {
   OUTPOST: 10,
   BOSS_CORRECT_ANSWER: 5,
   BOSS_DEFEATED_BONUS: 25,
+  PHOTO: 15,
 } as const;
 
 export const gameRules = {
@@ -140,6 +147,14 @@ export const gameRules = {
   BOOTH_XP_GAP_MINUTES: 3,
   MESSAGE_MAX_CHARS: 500,
   MESSAGES_PER_TEN_MINUTES: 20,
+  PHOTO_PRESENCE_MINUTES: 30,
+  PHOTOS_PER_BOOTH: 3,
+  PHOTOS_PER_DAY: 10,
+  PHOTO_MAX_BYTES: 400_000,
+  PHOTO_MAX_EDGE: 2048,
+  PHOTO_CAPTION_MAX_CHARS: 120,
+  PHOTO_REPORTS_TO_HIDE: 2,
+  PHOTO_QUEST_BELOW: 3,
 } as const;
 
 export const walkTimes = {
@@ -161,6 +176,7 @@ export const toolNames = [
   'update_settings',
   'check_in',
   'screen_token',
+  'demo_scan_token',
   'whats_around_me',
   'whats_next',
   'search',
@@ -179,13 +195,31 @@ export const toolNames = [
   'inventory',
   'world',
   'organizer_stats',
+  'list_exhibitors',
+  'get_exhibitor',
+  'exhibitor_dashboard',
+  'admin_overview',
   'handshake_code',
   'start_handshake',
   'handshake_state',
   'answer_handshake',
   'save_booth_note',
   'list_booth_notes',
+  'upload_booth_photo',
+  'list_booth_photos',
+  'report_booth_photo',
+  'delete_booth_photo',
   'send_message',
   'list_messages',
   'recap',
+  'import_profile',
+  'list_notifications',
+  'mark_notifications_read',
+  'list_schedule',
+  'get_itinerary',
+  'add_to_itinerary',
+  'remove_from_itinerary',
+  ...connectionToolNames,
 ] as const;
+
+export const notificationTypes = ['new_quest', 'new_match', 'meet_offer', 'meet_accepted', 'banner'] as const;

@@ -1,0 +1,97 @@
+<section class="photos" aria-label="Booth photos">
+  <div class="photos-head">
+    <h3 class="photos-title kq-pixel">Photos</h3>
+    @if (count > 0) {
+      <span class="photos-count">{{ count }}</span>
+    }
+  </div>
+
+  <p class="app-visually-hidden" aria-live="polite">{{ notice }}</p>
+
+  @if (errorMessage) {
+    <app-alert-banner [message]="errorMessage" actionLabel="Try again" (action)="load()" (dismissed)="errorMessage = ''"></app-alert-banner>
+  }
+
+  @if (isLoading && photos.length === 0) {
+    <div class="photos-busy" aria-busy="true">
+      <mat-spinner diameter="24"></mat-spinner>
+      <span class="app-visually-hidden">Loading photos</span>
+    </div>
+  } @else if (photos.length === 0 && !errorMessage) {
+    <p class="photos-empty">
+      <mat-icon aria-hidden="true">photo_camera</mat-icon>
+      <span>{{ emptyLine }}</span>
+    </p>
+  } @else {
+    <ul class="photos-strip">
+      @for (photo of photos; track photo.id) {
+        <li class="photo-tile">
+          <button class="photo-open" type="button" (click)="openLightbox(photo, $event)" [attr.aria-label]="'Enlarge photo by @' + photo.uploader.handle + (photo.caption ? ': ' + photo.caption : '')">
+            <img [src]="photo.url" [attr.width]="photo.width" [attr.height]="photo.height" loading="lazy" alt="" />
+          </button>
+          @if (photo.caption) {
+            <p class="photo-caption">{{ photo.caption }}</p>
+          }
+          <div class="photo-meta">
+            <app-pixel-face [seed]="photo.uploader.faceSeed" [size]="20" [label]="'@' + photo.uploader.handle"></app-pixel-face>
+            <span class="photo-handle">&#64;{{ photo.uploader.handle }}</span>
+            <span class="photo-time">{{ relativeTime(photo.createdAt) }}</span>
+          </div>
+          @if (isSignedIn) {
+            <div class="photo-actions">
+              @if (photo.mine) {
+                <button mat-button type="button" class="photo-action" [disabled]="busyIds.has(photo.id)" (click)="remove(photo)" aria-label="Delete your photo">
+                  <mat-icon>delete</mat-icon>
+                  <span>Delete</span>
+                </button>
+              } @else {
+                <button mat-button type="button" class="photo-action" [disabled]="busyIds.has(photo.id)" (click)="report(photo)" [attr.aria-label]="'Report photo by @' + photo.uploader.handle">
+                  <mat-icon>flag</mat-icon>
+                  <span>Report</span>
+                </button>
+              }
+            </div>
+          }
+        </li>
+      }
+    </ul>
+  }
+</section>
+
+@if (enlarged; as photo) {
+  <div class="lightbox" (click)="closeLightbox()">
+    <div
+      class="lightbox-panel"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="lightbox-title"
+      cdkTrapFocus
+      [cdkTrapFocusAutoCapture]="true"
+      (click)="$event.stopPropagation()"
+    >
+      <div class="lightbox-head">
+        <h4 class="lightbox-title" id="lightbox-title">{{ photo.boothName }}</h4>
+        <button mat-icon-button type="button" (click)="closeLightbox()" aria-label="Close photo">
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+      <img class="lightbox-image" [src]="photo.url" [attr.width]="photo.width" [attr.height]="photo.height" [alt]="photo.caption || 'Photo of the ' + photo.boothName + ' booth'" />
+      <div class="lightbox-meta">
+        <app-pixel-face [seed]="photo.uploader.faceSeed" [size]="28" [label]="'@' + photo.uploader.handle"></app-pixel-face>
+        <div class="lightbox-text">
+          @if (photo.caption) {
+            <p class="lightbox-caption">{{ photo.caption }}</p>
+          }
+          <p class="lightbox-by">&#64;{{ photo.uploader.handle }} · {{ relativeTime(photo.createdAt) }}</p>
+        </div>
+        @if (isSignedIn) {
+          @if (photo.mine) {
+            <button mat-stroked-button type="button" [disabled]="busyIds.has(photo.id)" (click)="remove(photo)">Delete</button>
+          } @else {
+            <button mat-stroked-button type="button" [disabled]="busyIds.has(photo.id)" (click)="report(photo)">Report</button>
+          }
+        }
+      </div>
+    </div>
+  </div>
+}

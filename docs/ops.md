@@ -59,6 +59,10 @@ npx qrcode -o ../qr/<locationId>.png "<scanUrl>"
 
 Run the `qrcode` line once per row of `qr-urls.txt`, then lay the PNGs out with the location name under each code. Keep `qr-urls.txt` and the PNGs out of git: a printed token is a credential for that location. A changed `QR_SECRET` invalidates every printed code.
 
+## Demo: simulated scans
+
+`deploy/deployment.yaml` sets `DEMO_SIMULATE_SCANS: "true"` so the hackathon demo can check in from the venue map ("Demo: simulate scan", or "simulate scan here" on a tapped room or booth) without a printed QR code. With the flag on, `demo_scan_token` hands out a printed-QR token for any location, so anyone can check in anywhere. **It must be off at a real event:** remove the env var (or set it to `"false"`) and push; `/api/config` then reports `demoSimulateScans: false`, the button disappears, and the tool returns `404 disabled`.
+
 ## Day-to-day
 
 - Deploy: push to `main`; the `build-and-deploy` Action builds the image and commits `deploy: <sha> [skip ci]`; Argo CD syncs `deploy/`.

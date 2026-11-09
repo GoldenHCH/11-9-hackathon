@@ -1,0 +1,15 @@
+{
+  "tool": "remove_from_itinerary",
+  "endpoint": "POST /api/tools/remove_from_itinerary",
+  "request": {
+    "attendeeId": "p_zqxtrvalqA7IoBqp",
+    "talkId": "kc26-tue-autoscaling-reality-check"
+  },
+  "status": 200,
+  "response": {
+    "talkId": "kc26-tue-autoscaling-reality-check",
+    "inItinerary": false,
+    "plannedCount": 2,
+    "maxItems": 40
+  }
+}

@@ -1,0 +1,52 @@
+<section class="app-page">
+  <app-screen-toolbar title="People met" subtitle="Everyone you shook hands or met up with">
+    <a mat-stroked-button routerLink="/links">
+      <div class="btn-content">
+        <mat-icon>link</mat-icon>
+        <span>My links</span>
+      </div>
+    </a>
+  </app-screen-toolbar>
+
+  <app-state-wrapper
+    [isLoading]="isLoading"
+    [errorMessage]="errorMessage"
+    [isEmpty]="!connections.length"
+    emptyIcon="group_add"
+    emptyMessage="Nobody yet. Show your handshake code to someone at a campfire and they’ll appear here with their links."
+    emptyActionLabel="Show my code"
+    (emptyAction)="openCode()"
+    (retry)="loadConnections()"
+  >
+    <ul class="list">
+      @for (connection of connections; track connection.id) {
+        <li>
+          <a class="person app-card app-card--clickable" [routerLink]="['/connections', connection.id]">
+            <app-pixel-face [seed]="connection.player.faceSeed" [size]="48" [label]="'Face of @' + connection.player.handle"></app-pixel-face>
+            <div class="person-text">
+              <p class="person-handle">&#64;{{ connection.player.handle }}</p>
+              @if (connection.player.realName || connection.player.headline) {
+                <p class="person-line">{{ connection.player.realName }}@if (connection.player.realName && connection.player.headline) { · }{{ connection.player.headline }}</p>
+              }
+              <p class="person-line person-muted">
+                <mat-icon class="inline-icon" aria-hidden="true">place</mat-icon>
+                {{ connection.where?.name ?? 'In person' }} · {{ connection.metAt | date: 'EEE h:mm a' }}
+              </p>
+              <div class="person-tags">
+                @if (connection.links.length) {
+                  <span class="tag">{{ connection.links.length }} {{ connection.links.length === 1 ? 'link' : 'links' }}</span>
+                }
+                @if (connection.note) {
+                  <span class="tag tag--note">Notes</span>
+                } @else {
+                  <span class="tag tag--todo">Add notes</span>
+                }
+              </div>
+            </div>
+            <mat-icon class="app-card-arrow" aria-hidden="true">chevron_right</mat-icon>
+          </a>
+        </li>
+      }
+    </ul>
+  </app-state-wrapper>
+</section>

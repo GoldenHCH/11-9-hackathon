@@ -1,0 +1,56 @@
+:host {
+  display: block;
+}
+
+.bar-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bar-list-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.bar-list-label {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.bar-list-value {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.bar-list-detail {
+  font-weight: 400;
+  color: var(--app-theme--ink-muted);
+}
+
+.bar-list-track {
+  height: 12px;
+  background: var(--app-theme--surface);
+  border: 2px solid var(--app-theme--border);
+}
+
+.bar-list-fill {
+  height: 100%;
+  background: var(--app-theme--primary-light);
+}
+
+.bar-list-fill--accent {
+  background: var(--app-theme--accent);
+}
+
+.bar-list-empty {
+  margin: 0;
+  color: var(--app-theme--ink-muted);
+}

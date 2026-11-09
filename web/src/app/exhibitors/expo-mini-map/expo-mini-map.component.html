@@ -1,0 +1,39 @@
+<svg class="mini-map" [attr.viewBox]="map.viewBox" preserveAspectRatio="xMidYMid meet" role="img" [attr.aria-label]="ariaLabel">
+  <g aria-hidden="true">
+    @for (area of map.areas; track area.id) {
+      <rect
+        class="mini-area"
+        [class.mini-area--home]="area.isHome"
+        [attr.x]="area.x"
+        [attr.y]="area.y"
+        [attr.width]="area.width"
+        [attr.height]="area.height"
+        [attr.fill]="area.fill"
+      ></rect>
+      @if (area.showLabel) {
+        <text
+          class="mini-label"
+          [attr.x]="area.x + area.width / 2"
+          [attr.y]="area.y + 14"
+          text-anchor="middle"
+        >
+          {{ area.label }}
+        </text>
+      }
+    }
+    <rect
+      class="mini-ring"
+      [attr.x]="map.markerX - map.markerSize"
+      [attr.y]="map.markerY - map.markerSize"
+      [attr.width]="map.markerSize * 2"
+      [attr.height]="map.markerSize * 2"
+    ></rect>
+    <rect
+      class="mini-marker"
+      [attr.x]="map.markerX - map.markerSize / 2"
+      [attr.y]="map.markerY - map.markerSize / 2"
+      [attr.width]="map.markerSize"
+      [attr.height]="map.markerSize"
+    ></rect>
+  </g>
+</svg>

@@ -1,0 +1,13 @@
+{
+  "tool": "delete_booth_photo",
+  "endpoint": "POST /api/tools/delete_booth_photo",
+  "request": {
+    "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+    "photoId": "bp-788d73e24c904880a7c7017a"
+  },
+  "status": 200,
+  "response": {
+    "photoId": "bp-788d73e24c904880a7c7017a",
+    "deleted": true
+  }
+}

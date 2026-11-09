@@ -15,14 +15,14 @@ Researched 2026-11-09. Every source below was public and nothing was blocked.
 
 - `maps/KCNA26-VenueMap.pdf`, `maps/KCNA26_ExpoHallMap.pdf`: local copies of the official venue map and Solutions Showcase (expo hall) map PDFs above.
 - `sponsors.json`: 235 rows. 229 come from the LF sponsor directory (10 Diamond, 30 Platinum, 32 Gold, 123 Silver, 33 Start-Up, 1 End User). 6 more appear only in the expo PDF's exhibitor directory: Cloud Native Studios (337-339), Techstrong (197), TFiR (148), The New Stack (156), theCube (146), all media-partner orange, plus New Orleans CVB (306). Each row with a booth has `zone`, `hall`, `hallConfidence` and `mapX`/`mapY` (PDF points on the local `maps/KCNA26_ExpoHallMap.pdf`, synced from `booth_positions.json`).
-- `booth_positions.json`: re-extracted 2026-11-09 from the local `maps/KCNA26_ExpoHallMap.pdf`. One entry per booth number (237, all directory booths plus unassigned 261) and per Project Pavilion kiosk side (P-1A..P-18B): label centre `x`/`y` in PDF points, `size` (booth footprint from the vector shape under the label), `rotated` (the diamond booths in Halls A-C), `zone` (point-in-polygon against the zone fills) and `hall`.
+- `booth_positions.json`: re-extracted 2026-11-09 from the local `maps/KCNA26_ExpoHallMap.pdf`. One entry per booth number (237, every directory booth; 261 is Northflank per the PDF directory) and per Project Pavilion kiosk side (P-1A..P-18B): label centre `x`/`y` in PDF points, `size` (booth footprint from the vector shape under the label), `rotated` (the diamond booths in Halls A-C), `zone` (point-in-polygon against the zone fills) and `hall`.
 - `project_pavilion_kiosks.json`: 86 project-to-kiosk rows (P-1A … P-18B) with shift times. Many kiosks are shared by AM and PM shifts.
 - `session_rooms.json`: all 37 Sessionize room strings with session counts.
 
 ## Confirmed
 
 - All 7 sample booths match: AWS Diamond 115, Google Cloud Diamond 122, HAProxy Diamond 124, Dash0 Platinum 134, Docker Platinum 141, Datadog Platinum 152, Elastic Gold 196.
-- Booth numbers. The website directory and the expo PDF's text layer agree exactly. Every directory booth appears on the map, and every map booth except 261 has an exhibitor. The PDF directory page is outlined text, so I read it visually; I spot-checked it against the site but did not compare it line by line.
+- Booth numbers. The website directory and the expo PDF's text layer agree exactly. Every directory booth appears on the map, and every map booth has an exhibitor (261 is Northflank, Amber Hive). Where the website and the expo PDF directory disagree, the PDF wins: 181 is Chronosphere (a Palo Alto Networks company), 254 is Loophole Labs, 362 is CodeVisionary. The PDF directory page is outlined text, so I read it visually; I spot-checked it against the site but did not compare it line by line.
 - No booth for Anthropic (Diamond) or Northflank (Silver). Neither appears in the PDF directory.
 - HPE has two booths, 145 and 151.
 - Zone of every booth: taken from the map's fill colour around the booth (Cosmic Canyon, Amber Hive, Honeycomb Hub, Alpine Overlook, Starlight Summit, Astral Peak). Booths on a colour edge are noted in `booth_pos.json` votes: 191-197, 243-257, 330-339.

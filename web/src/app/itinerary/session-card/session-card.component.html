@@ -1,0 +1,94 @@
+<article class="session kq-block" [class.session--planned]="isPlanned" [class.session--live]="isLive" [attr.aria-label]="session.title">
+  <div class="session-head">
+    <span
+      class="kq-swatch kq-swatch--{{ session.material }} session-swatch"
+      [attr.title]="session.track + ' track'"
+      aria-hidden="true"
+    ></span>
+    <span class="session-time">{{ timeRange }}</span>
+    @if (isLive) {
+      <span class="session-tag session-tag--live kq-pixel">Live</span>
+    }
+    @if (session.isBoss) {
+      <span class="session-tag session-tag--boss kq-pixel">Boss</span>
+    }
+  </div>
+
+  <h3 class="session-title">{{ session.title }}</h3>
+
+  @if (speakers) {
+    <p class="session-line session-speakers">{{ speakers }}</p>
+  }
+
+  <p class="session-line session-place">
+    <mat-icon class="session-line-icon" aria-hidden="true">place</mat-icon>
+    <span>{{ place }}</span>
+  </p>
+
+  @if (session.checkedInCount > 0) {
+    <p class="session-line session-count">
+      <mat-icon class="session-line-icon" aria-hidden="true">group</mat-icon>
+      <span>{{ session.checkedInCount }} checked in</span>
+    </p>
+  }
+
+  <div class="session-actions">
+    @if (isPlanned) {
+      <button
+        mat-stroked-button
+        class="session-plan session-plan--planned"
+        type="button"
+        [disabled]="isBusy"
+        aria-pressed="true"
+        [attr.aria-label]="'Planned. Remove from my plan: ' + session.title"
+        (click)="togglePlan.emit(session)"
+      >
+        @if (isBusy) {
+          <mat-spinner diameter="18"></mat-spinner>
+        } @else {
+          <div class="btn-content">
+            <mat-icon aria-hidden="true">check</mat-icon>
+            <span>Planned</span>
+          </div>
+        }
+      </button>
+    } @else {
+      <button
+        mat-flat-button
+        class="session-plan"
+        type="button"
+        [disabled]="isBusy"
+        aria-pressed="false"
+        [attr.aria-label]="'Add to my plan: ' + session.title"
+        (click)="togglePlan.emit(session)"
+      >
+        @if (isBusy) {
+          <mat-spinner diameter="18"></mat-spinner>
+        } @else {
+          <div class="btn-content">
+            <mat-icon aria-hidden="true">add</mat-icon>
+            <span>Add</span>
+          </div>
+        }
+      </button>
+    }
+
+    <button
+      mat-stroked-button
+      class="session-quest"
+      type="button"
+      [disabled]="isQuestBusy || isQuestMade"
+      [attr.aria-label]="(isQuestMade ? 'Quest made: ' : 'Make this a quest: ') + session.title"
+      (click)="makeQuest.emit(session)"
+    >
+      @if (isQuestBusy) {
+        <mat-spinner diameter="18"></mat-spinner>
+      } @else {
+        <div class="btn-content">
+          <mat-icon aria-hidden="true">{{ isQuestMade ? 'flag' : 'outlined_flag' }}</mat-icon>
+          <span>{{ isQuestMade ? 'Quest made' : 'Make this a quest' }}</span>
+        </div>
+      }
+    </button>
+  </div>
+</article>

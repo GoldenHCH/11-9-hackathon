@@ -1,0 +1,54 @@
+<form class="panel app-block" (ngSubmit)="onSave()" aria-label="My notes for this talk">
+  <div class="panel-header">
+    <h3 class="panel-title app-pixel">My notes</h3>
+    <span class="panel-privacy">
+      <mat-icon aria-hidden="true">lock</mat-icon>
+      Private
+    </span>
+  </div>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Notes</mat-label>
+    <textarea matInput name="note" [(ngModel)]="text" rows="4" [maxlength]="noteMaxChars" [disabled]="isLoading"></textarea>
+    <mat-hint>What you want to remember. It goes in your recap PDF.</mat-hint>
+  </mat-form-field>
+
+  <p class="takeaways-label">Takeaways</p>
+  @for (takeaway of takeaways; track $index) {
+    <div class="takeaway-row">
+      <mat-form-field appearance="outline" class="takeaway-field">
+        <mat-label>Takeaway {{ $index + 1 }}</mat-label>
+        <input matInput [name]="'takeaway-' + $index" [(ngModel)]="takeaways[$index]" [maxlength]="takeawayMaxChars" [disabled]="isLoading" />
+      </mat-form-field>
+      <button mat-icon-button type="button" (click)="removeTakeaway($index)" [attr.aria-label]="'Remove takeaway ' + ($index + 1)">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+  }
+
+  @if (takeaways.length < maxTakeaways) {
+    <button mat-stroked-button type="button" class="add" (click)="addTakeaway()">
+      <div class="btn-content">
+        <mat-icon>add</mat-icon>
+        <span>Add a takeaway</span>
+      </div>
+    </button>
+  }
+
+  @if (errorMessage) {
+    <app-alert-banner [message]="errorMessage" (dismissed)="errorMessage = ''"></app-alert-banner>
+  }
+
+  <div class="actions">
+    <button mat-flat-button type="submit" [disabled]="isSaving || isLoading">
+      @if (isSaving) {
+        <mat-spinner diameter="20"></mat-spinner>
+      } @else {
+        Save notes
+      }
+    </button>
+    @if (savedAt) {
+      <span class="saved" role="status">Saved</span>
+    }
+  </div>
+</form>
