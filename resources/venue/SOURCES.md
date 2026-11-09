@@ -13,6 +13,7 @@ Researched 2026-11-09. Every source below was public and nothing was blocked.
 
 ## Files
 
+- `maps/KCNA26-VenueMap.pdf`, `maps/KCNA26_ExpoHallMap.pdf`: local copies of the official venue map and Solutions Showcase (expo hall) map PDFs above.
 - `sponsors.json`: 235 rows. 229 come from the LF sponsor directory (10 Diamond, 30 Platinum, 32 Gold, 123 Silver, 33 Start-Up, 1 End User). 6 more appear only in the expo PDF's exhibitor directory: Cloud Native Studios (337-339), Techstrong (197), TFiR (148), The New Stack (156), theCube (146), all media-partner orange, plus New Orleans CVB (306). Each row with a booth has `zone`, `hall`, `hallConfidence` and `mapX`/`mapY` (PDF points on the expo map, page 1).
 - `layout.json`: buildings, levels and areas, booth-numbering notes, sources.
 - `project_pavilion_kiosks.json`: 86 project-to-kiosk rows (P-1A … P-18B) with shift times. Many kiosks are shared by AM and PM shifts.
