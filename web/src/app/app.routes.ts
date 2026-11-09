@@ -94,6 +94,33 @@ export const routes: Routes = [
     loadComponent: () => import('./booth/scan-landing/scan-landing.component').then((module) => module.ScanLandingComponent),
   },
   {
+    path: 'notes/talks',
+    title: 'Talk notes · KubeQuest',
+    canActivate: [meGuard],
+    loadComponent: () =>
+      import('./talk-notes/talk-notes-list/talk-notes-list.component').then((module) => module.TalkNotesListComponent),
+  },
+  {
+    path: 'connections',
+    title: 'People met · KubeQuest',
+    canActivate: [meGuard],
+    loadComponent: () =>
+      import('./connections/connections-list/connections-list.component').then((module) => module.ConnectionsListComponent),
+  },
+  {
+    path: 'connections/:connectionId',
+    title: 'Connection · KubeQuest',
+    canActivate: [meGuard],
+    loadComponent: () =>
+      import('./connections/connection-detail/connection-detail.component').then((module) => module.ConnectionDetailComponent),
+  },
+  {
+    path: 'links',
+    title: 'My links · KubeQuest',
+    canActivate: [meGuard],
+    loadComponent: () => import('./links/links-editor/links-editor.component').then((module) => module.LinksEditorComponent),
+  },
+  {
     path: 'notes',
     title: 'My notes · KubeQuest',
     canActivate: [meGuard],

@@ -1,0 +1,74 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 640px;
+}
+
+.preview {
+  padding: 16px;
+}
+
+.preview-title {
+  margin: 0 0 12px;
+  font-size: 14px;
+}
+
+.preview-empty {
+  margin: 0;
+  color: var(--app-theme--ink-muted);
+}
+
+.privacy {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 12px 0 0;
+  font-size: 13px;
+  color: var(--app-theme--ink-muted);
+}
+
+.links-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.net-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  margin-top: 6px;
+  color: #fff;
+  font-size: 12px;
+  border: 2px solid var(--app-theme--border);
+  box-shadow: var(--app-theme--shadow-small);
+}
+
+.field {
+  flex: 1;
+  min-width: 0;
+}
+
+.saved {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  color: var(--app-theme--tertiary);
+  font-weight: 600;
+}
+
+.save {
+  align-self: flex-start;
+  min-width: 140px;
+}

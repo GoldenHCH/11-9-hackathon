@@ -1,0 +1,68 @@
+<section class="app-page">
+  <app-screen-toolbar title="My links" subtitle="Shared only with people you’ve met" [showBack]="true">
+    <a mat-stroked-button routerLink="/connections">
+      <div class="btn-content">
+        <mat-icon>group</mat-icon>
+        <span>People met</span>
+      </div>
+    </a>
+  </app-screen-toolbar>
+
+  <app-state-wrapper [isLoading]="isLoading" [errorMessage]="errorMessage" [skeletonRows]="4" (retry)="loadLinks()">
+    <div class="layout">
+      <section class="preview app-block" aria-labelledby="preview-title">
+        <h2 id="preview-title" class="preview-title app-pixel">What your connections see</h2>
+        @if (items.length) {
+          <app-link-chips [items]="items"></app-link-chips>
+        } @else {
+          <p class="preview-empty">Add a link below. After a handshake, the other player can tap it to keep in touch.</p>
+        }
+        <p class="privacy">
+          <mat-icon aria-hidden="true">lock</mat-icon>
+          <span>Hidden from the leaderboard, search and anyone you haven’t met.</span>
+        </p>
+      </section>
+
+      <form class="links-form" (ngSubmit)="onSave()">
+        @for (option of options; track option.network) {
+          <div class="field-row">
+            <span class="net-icon app-pixel" [style.background]="colors[option.network]" aria-hidden="true">{{ option.glyph }}</span>
+            <mat-form-field appearance="outline" class="field">
+              <mat-label>{{ option.label }}</mat-label>
+              <input
+                matInput
+                [name]="option.network"
+                [(ngModel)]="values[option.network]"
+                [placeholder]="option.placeholder"
+                maxlength="300"
+                autocomplete="off"
+                autocapitalize="off"
+                spellcheck="false"
+              />
+              <mat-hint>{{ option.hint }}</mat-hint>
+            </mat-form-field>
+          </div>
+        }
+
+        @if (saveError) {
+          <app-alert-banner [message]="saveError" (dismissed)="saveError = ''"></app-alert-banner>
+        }
+
+        @if (savedMessage) {
+          <p class="saved" role="status">
+            <mat-icon aria-hidden="true">task_alt</mat-icon>
+            <span>{{ savedMessage }}</span>
+          </p>
+        }
+
+        <button mat-flat-button type="submit" class="save" [disabled]="isSaving">
+          @if (isSaving) {
+            <mat-spinner diameter="20"></mat-spinner>
+          } @else {
+            Save links
+          }
+        </button>
+      </form>
+    </div>
+  </app-state-wrapper>
+</section>
