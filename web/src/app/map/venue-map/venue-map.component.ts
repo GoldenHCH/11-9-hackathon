@@ -1,6 +1,7 @@
 import { Component, DestroyRef, ElementRef, OnInit, ViewChild, inject } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormsModule } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -10,10 +11,10 @@ import { ScreenToolbarComponent } from '../../shared/components/screen-toolbar/s
 import { StateWrapperComponent } from '../../shared/components/state-wrapper/state-wrapper.component';
 import { VenueService } from '../services/venue.service';
 import { VenueSchematicComponent } from '../venue-schematic/venue-schematic.component';
-import { venueAreaKindDisplay } from '../venue.constants';
+import { vendorTierFill, vendorTierOrder, venueAreaKindDisplay } from '../venue.constants';
 import { VenueHelper } from '../venue.helper';
 import { IVendor, IVenueArea, IVenueBuilding, IVenueLevel, IVenueSchematic } from '../venue.interfaces';
-import { VenueAreaKind, VenueMapViewMode } from '../venue.types';
+import { VendorTier, VenueAreaKind, VenueMapViewMode } from '../venue.types';
 
 const maxVendorResults = 40;
 
@@ -36,10 +37,12 @@ const maxVendorResults = 40;
 export class VenueMapComponent implements OnInit {
   private readonly _venueService = inject(VenueService);
   private readonly _destroyRef = inject(DestroyRef);
+  private readonly _route = inject(ActivatedRoute);
 
   @ViewChild('mapTop') private readonly _mapTop?: ElementRef<HTMLElement>;
 
   public readonly kindDisplay = venueAreaKindDisplay;
+  public readonly tierFill = vendorTierFill;
   public schematic: IVenueSchematic | null = null;
   public isLoading = true;
   public errorMessage = '';
@@ -65,6 +68,7 @@ export class VenueMapComponent implements OnInit {
         next: (schematic) => {
           this.schematic = schematic;
           this.selectBuilding(schematic.buildings[0]?.id ?? '');
+          this.openRequestedLevel(schematic);
           this.isLoading = false;
         },
         error: (error: unknown) => {
@@ -119,9 +123,25 @@ export class VenueMapComponent implements OnInit {
     this.selectedAreaId = null;
   }
 
-  public selectLevel(levelId: string): void {
+  private openRequestedLevel(schematic: IVenueSchematic): void {
+    const requestedLevelId = this._route.snapshot.queryParamMap.get('level');
+    const placement = requestedLevelId ? VenueHelper.findLevel(schematic, requestedLevelId) : null;
+
+    if (placement) {
+      this.goToLevel(placement.building.id, placement.level.id);
+    }
+  }
+
+  public goToLevel(buildingId: string, levelId: string): void {
+    this.selectedBuildingId = buildingId;
     this.selectedLevelId = levelId;
     this.selectedAreaId = null;
+  }
+
+  public get boothTiers(): VendorTier[] {
+    const tiers = new Set(this.levelBooths.map((booth) => booth.tier));
+
+    return [...tiers].sort((first, second) => vendorTierOrder[first] - vendorTierOrder[second]);
   }
 
   public selectArea(area: IVenueArea): void {
@@ -200,6 +220,6 @@ export class VenueMapComponent implements OnInit {
     const area = vendor.areaId && this.schematic ? VenueHelper.findArea(this.schematic, vendor.areaId)?.area : null;
     const areaName = area ? (area.shortLabel ?? area.name) : '';
 
-    return [areaName, vendor.zone].filter(Boolean).join(' · ');
+    return [vendor.hall, areaName && areaName !== vendor.zone ? areaName : vendor.zone].filter(Boolean).join(' · ');
   }
 }

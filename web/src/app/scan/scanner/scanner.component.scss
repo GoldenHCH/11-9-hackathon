@@ -1,0 +1,164 @@
+:host {
+  display: block;
+}
+
+.scanner {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.scanner-live {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.viewfinder {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #000;
+  border: 3px solid var(--kq-border, #1b1b1b);
+  box-shadow: var(--kq-shadow, 4px 4px 0 #1b1b1b);
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+.viewfinder-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.viewfinder-frame {
+  position: absolute;
+  inset: 14%;
+  pointer-events: none;
+}
+
+.corner {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border: 0 solid var(--kq-accent, #ffd23f);
+
+  &--tl {
+    top: 0;
+    left: 0;
+    border-top-width: 6px;
+    border-left-width: 6px;
+  }
+
+  &--tr {
+    top: 0;
+    right: 0;
+    border-top-width: 6px;
+    border-right-width: 6px;
+  }
+
+  &--bl {
+    bottom: 0;
+    left: 0;
+    border-bottom-width: 6px;
+    border-left-width: 6px;
+  }
+
+  &--br {
+    bottom: 0;
+    right: 0;
+    border-bottom-width: 6px;
+    border-right-width: 6px;
+  }
+}
+
+.viewfinder-status {
+  position: absolute;
+  inset: auto 0 12px;
+  margin: 0;
+  text-align: center;
+  color: #fff;
+}
+
+.scanner-hint {
+  margin: 0;
+  text-align: center;
+  font-family: var(--kq-font-pixel, monospace);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--kq-text, inherit);
+}
+
+.scanner-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fallback {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 16px;
+  background: var(--kq-surface, #fff);
+  color: var(--kq-text, inherit);
+  border: 3px solid var(--kq-border, #1b1b1b);
+  box-shadow: var(--kq-shadow, 4px 4px 0 #1b1b1b);
+
+  p {
+    margin: 0;
+  }
+
+  .scanner-actions {
+    align-self: stretch;
+    margin-top: 8px;
+  }
+}
+
+.fallback-icon {
+  color: var(--kq-primary, inherit);
+}
+
+.fallback-title {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.fallback-steps {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--kq-muted, inherit);
+}
+
+.manual {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+
+  button {
+    margin-top: 8px;
+  }
+}
+
+.manual-field {
+  flex: 1;
+  min-width: 0;
+}

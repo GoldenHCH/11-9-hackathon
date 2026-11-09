@@ -6,17 +6,21 @@
 
 @if ((isFullScreen$ | async) === false) {
   <header class="brand-bar">
-    <a class="brand" routerLink="/map" aria-label="KubeQuest home">
-      <span class="brand-cube" aria-hidden="true"></span>
-      <span class="brand-name app-pixel">KubeQuest</span>
+    <a class="brand" routerLink="/" aria-label="KubeQuest home">
+      <svg class="brand-cube" viewBox="0 0 32 32" aria-hidden="true" shape-rendering="crispEdges">
+        <polygon points="16,2 30,9 16,16 2,9" fill="#8bd17c" stroke="#000" stroke-width="2" />
+        <polygon points="2,9 16,16 16,30 2,23" fill="#4f9a3a" stroke="#000" stroke-width="2" />
+        <polygon points="30,9 16,16 16,30 30,23" fill="#2f6b2b" stroke="#000" stroke-width="2" />
+      </svg>
+      <span class="brand-name kq-pixel">KubeQuest</span>
     </a>
-    <a class="brand-me" routerLink="/signup" aria-label="Your profile">
+    <a class="brand-me" routerLink="/profile" aria-label="Your profile">
       <mat-icon>account_circle</mat-icon>
     </a>
   </header>
 }
 
-<main id="main" class="main" tabindex="-1">
+<main id="main" class="main" [class.main--full]="isFullScreen$ | async" tabindex="-1">
   <router-outlet></router-outlet>
 </main>
 
@@ -25,12 +29,15 @@
     @for (tab of tabs; track tab.path) {
       <a
         class="bottom-nav-tab"
+        [class.bottom-nav-tab--primary]="tab.isPrimary"
         [routerLink]="tab.path"
         routerLinkActive="bottom-nav-tab--active"
         ariaCurrentWhenActive="page"
       >
-        <mat-icon aria-hidden="true">{{ tab.icon }}</mat-icon>
-        <span class="bottom-nav-label">{{ tab.label }}</span>
+        <span class="bottom-nav-icon">
+          <mat-icon aria-hidden="true">{{ tab.icon }}</mat-icon>
+        </span>
+        <span class="bottom-nav-label kq-pixel">{{ tab.label }}</span>
       </a>
     }
   </nav>

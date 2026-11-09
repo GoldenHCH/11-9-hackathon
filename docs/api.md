@@ -32,7 +32,7 @@ JSON in this doc is trimmed: long strings end in `…` and `"…N more"` stands 
 
 ## Identity
 
-There are no auth headers. `sign_up` returns `profile.attendee.id` (for example `p_Ljp4ZfHC-VPDFwqx`) and `personalLink` (`https://kube-quest.cnh.radarhq.io/me/<id>`). Store the id in `localStorage`; if it is missing, send the player to signup or ask them to open their personal link. Every player tool takes it as `attendeeId`.
+There are no auth headers. The demo sign-in is `sign_in` with a name and an email (no password; the live-demo account is **John Doe**, `johndoe@gmail.com`, created by `npm run seed:demo`). It returns the same `attendee.id` and `personalLink` as `sign_up`, and `needsOnboarding` tells the UI whether to run the onboarding questions, which it sends to `sign_up` with that `attendeeId`. `sign_up` without an `attendeeId` still creates a player directly. `sign_up` returns `profile.attendee.id` (for example `p_Ljp4ZfHC-VPDFwqx`) and `personalLink` (`https://kube-quest.cnh.radarhq.io/me/<id>`). Store the id in `localStorage`; if it is missing, send the player to signup or ask them to open their personal link. Every player tool takes it as `attendeeId`.
 
 The `attendeeId` is the player's only credential: anyone who has it can act as that player. Treat it like a password, and never show it to anyone but its owner. Every other player in every response (leaderboard rows, `recommend_people`, `search` player results, `whats_around_me.matchesHere`, a meet's `partner`, a quest's `partnerId`, `get_profile` with `targetId`) carries only a **public id** (`pl_` plus 16 hex characters, for example `pl_592a78e076ad8c1f`), the handle and the face. Tools that point at another player (`get_profile` `targetId`, `propose_meet` `partnerId`) take that public id and resolve it on the server. The player's own public id is `profile.publicId` (from `sign_up`, `get_profile`, `update_settings`); the leaderboard `me` row also uses it, so match rows with `isMe`, not by comparing ids. New attendee ids are random (`p_` plus 16 random base64url characters), never derived from the handle. An unknown or stale public id returns `404 unknown_player`.
 
@@ -126,9 +126,27 @@ Enum values used below:
 - Track: `ai`, `platform`, `operations`, `data`, `security`, `connectivity`, `inclusion`, `other`
 - Handshake `status`: `waiting`, `matched`, `mismatched`, `expired`; `role`: `asker`, `answerer`; `questionSource`: `shared_topic`, `booth_note`, `talk`, `working_on`, `fallback`
 
+### sign_in
+
+Demo sign-in, no password. Required: `name` (1 to 80 chars) and `email` (trimmed, lowercased, validated). The email is the account key: the same email always returns the same player. A new email creates a minimal player (random `p_` id, handle from the name, lowercase letters and digits, with a short number added if it is taken; `meetingOn: false`, `xp: 0`).
+
+```json
+{"name":"John Doe","email":"johndoe@gmail.com"}
+```
+
+```json
+{"attendee":{"attendee":{"id":"p_…","handle":"johndoe","faceSeed":"066031b9bc419b8f","displayName":"John Doe","email":"johndoe@gmail.com","workingOn":"","profile":{"topics":[],"firstTimer":false,"welcomer":false},"settings":{"meetingOn":false,"…":"…"},"visible":true,"xp":0,"level":1,"banners":[],"blockedIds":[]},"level":{"level":1,"name":"Pod","…":"…"},"inventory":{"…":"same shape as the inventory tool"},"personalLink":"https://kube-quest.cnh.radarhq.io/me/p_…","publicId":"pl_01c88990a33676aa"},
+ "personalLink":"https://kube-quest.cnh.radarhq.io/me/p_…",
+ "isNew":true,"needsOnboarding":true}
+```
+
+`attendee` is the own profile (the same object as `get_profile` without `targetId`). `isNew` is `true` only when this call created the player. `needsOnboarding` is `true` for a new player and for a returning one whose profile has neither `workingOn` nor `topics`; send them to onboarding, then call `sign_up` with `attendeeId`. `email` and `displayName` appear only in the player's own profile: never in `get_profile` with `targetId`, the leaderboard, `search`, `recommend_people`, `whats_around_me`, meets, messages, handshakes or the recap.
+
+Errors: `400 invalid_input` for a missing name or a malformed email (`"email: Invalid email address"`); `409 handle_taken` only if no free handle could be picked for the name; `502/503` when Elastic is down. Fixture: `resources/fixtures/sign_in.json` (`variants.returning`, `variants.invalid_email`).
+
 ### sign_up (awards XP)
 
-Required: `handle` (3 to 20 chars, `^[a-z0-9_.-]+$`), `workingOn`, `firstKubeCon`, `meetingOn`. Optional: `happyToWelcome`, `topics` (up to 5), `spotMe`, `githubLogin`, `realName`, `accessibleMode`, `noWalking`, `scanLocationId`, `scanToken`.
+Required: `handle` (3 to 20 chars, `^[a-z0-9_.-]+$`, unless `attendeeId` is sent), `workingOn`, `firstKubeCon`, `meetingOn`. Optional: `attendeeId`, `happyToWelcome`, `topics` (up to 5), `spotMe`, `githubLogin`, `realName`, `accessibleMode`, `noWalking`, `scanLocationId`, `scanToken`.
 
 ```json
 {"handle":"verify93279","workingOn":"Running GPU inference on Kubernetes with autoscaling","firstKubeCon":true,"happyToWelcome":false,"topics":["ai","gpu","autoscaling"],"meetingOn":true,"spotMe":"Green hoodie","scanLocationId":"salt-palace-level-1-150-defg","scanToken":"<signed-token>"}
@@ -143,6 +161,8 @@ Required: `handle` (3 to 20 chars, `^[a-z0-9_.-]+$`), `workingOn`, `firstKubeCon
 ```
 
 `checkIn` is present only when `scanLocationId` was sent, and has the `check_in` shape. A taken handle returns `409 handle_taken`.
+
+With `attendeeId` (a player from `sign_in` finishing onboarding), `sign_up` updates that player's profile fields instead of creating one; `handle` is optional and changes the handle only when sent and free. The starter block is awarded once, on the first onboarding. An unknown `attendeeId` returns `404 unknown_attendee`. Without `attendeeId` and without `handle`, it returns `400 invalid_input` (`handle: handle is required to create a player`).
 
 ### get_profile
 

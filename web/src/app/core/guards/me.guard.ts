@@ -10,5 +10,5 @@ export const meGuard: CanActivateFn = (_route, state) => {
     return true;
   }
 
-  return router.createUrlTree(['/signup'], { queryParams: { next: state.url } });
+  return router.createUrlTree(['/onboarding'], { queryParams: { next: state.url } });
 };

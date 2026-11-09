@@ -1,0 +1,220 @@
+<article
+  class="quest-card"
+  [class.is-done]="mode === 'done'"
+  [class.is-active]="mode === 'active'"
+  [style.--quest-color]="meta.colorVar"
+  [attr.aria-labelledby]="headingId"
+>
+  <div class="quest-stripe" aria-hidden="true"></div>
+
+  <div class="quest-body">
+    <div class="quest-topline">
+      <span class="quest-type">
+        <span class="quest-type-cube" aria-hidden="true">
+          <mat-icon>{{ meta.icon }}</mat-icon>
+        </span>
+        <span class="quest-type-label kq-pixel">{{ meta.label }}</span>
+      </span>
+
+      @if (mode === 'active') {
+        <span class="quest-status quest-status-active">
+          <mat-icon aria-hidden="true">play_arrow</mat-icon>
+          <span>Active</span>
+        </span>
+      } @else if (mode === 'done') {
+        <span class="quest-status quest-status-done">
+          <mat-icon aria-hidden="true">check</mat-icon>
+          <span>Done</span>
+        </span>
+      } @else if (quest.expiresAt) {
+        <span class="quest-expiry">Until {{ quest.expiresAt | date: 'h:mm a' }}</span>
+      }
+    </div>
+
+    <h3 class="quest-title" [id]="headingId">{{ quest.title }}</h3>
+
+    @if (mode !== 'done') {
+      <p class="quest-why">
+        <span class="quest-why-label">Why you got this</span>
+        <span>{{ quest.reason }}</span>
+      </p>
+    }
+
+    @if (quest.where || quest.when || quest.walkMinutes !== undefined) {
+      <ul class="quest-facts">
+        @if (quest.where) {
+          <li class="quest-fact">
+            <mat-icon aria-hidden="true">place</mat-icon>
+            <span>{{ quest.where.name }} · {{ quest.where.level }}, {{ quest.where.building }}</span>
+          </li>
+        }
+        @if (quest.when) {
+          <li class="quest-fact">
+            <mat-icon aria-hidden="true">schedule</mat-icon>
+            <span>{{ quest.when.start | date: 'EEE h:mm a' }}–{{ quest.when.end | date: 'h:mm a' }}</span>
+          </li>
+        }
+        @if (quest.walkMinutes !== undefined) {
+          <li class="quest-fact">
+            <mat-icon aria-hidden="true">directions_walk</mat-icon>
+            <span>{{ quest.walkMinutes }} min walk</span>
+          </li>
+        }
+      </ul>
+    }
+
+    @if (quest.progress) {
+      <div class="quest-progress">
+        <div
+          class="quest-progress-track"
+          role="progressbar"
+          [attr.aria-valuenow]="quest.progress.current"
+          aria-valuemin="0"
+          [attr.aria-valuemax]="quest.progress.target"
+          [attr.aria-label]="quest.title + ' progress'"
+        >
+          <div class="quest-progress-fill" [style.width.%]="progressPercent"></div>
+        </div>
+        <span class="quest-progress-text">{{ quest.progress.current }}/{{ quest.progress.target }}</span>
+      </div>
+    }
+
+    @if (mode === 'active') {
+      <div class="quest-next">
+        <mat-icon aria-hidden="true">arrow_forward</mat-icon>
+        <p class="quest-next-text"><span class="quest-next-label">Next step</span>{{ quest.nextStep }}</p>
+      </div>
+    }
+
+    <div class="quest-reward">
+      <span class="quest-reward-label">Reward</span>
+      <span class="quest-reward-items">
+        @if (quest.reward.xp > 0) {
+          <span class="reward-chip reward-xp kq-pixel">+{{ quest.reward.xp }} XP</span>
+        }
+        @if (materialColor) {
+          <span class="reward-chip">
+            <span class="swatch" [style.background]="materialColor" aria-hidden="true"></span>
+            <span class="reward-material">{{ quest.reward.material }}</span>
+          </span>
+        }
+        @if (quest.reward.gems) {
+          <span class="reward-chip">
+            <span class="swatch swatch-gem" aria-hidden="true"></span>
+            <span>{{ quest.reward.gems }} gem{{ quest.reward.gems === 1 ? '' : 's' }}</span>
+          </span>
+        }
+        @if (quest.reward.banner) {
+          <span class="reward-chip">
+            <mat-icon aria-hidden="true">flag</mat-icon>
+            <span>Banner</span>
+          </span>
+        }
+      </span>
+      <span class="app-visually-hidden">{{ quest.reward.label }}</span>
+    </div>
+
+    @if (mode === 'offer') {
+      @if (isChoosingReason) {
+        <div class="quest-reasons" role="group" [attr.aria-label]="'Why is ' + quest.title + ' not for you?'">
+          <p class="quest-reasons-prompt">Why not? <span class="quest-reasons-optional">(optional)</span></p>
+          <div class="quest-reason-chips">
+            @for (option of declineReasons; track option.value) {
+              <button class="reason-chip" type="button" [disabled]="isBusy" (click)="notForMe(option.value)">
+                {{ option.label }}
+              </button>
+            }
+          </div>
+          <div class="quest-actions">
+            <button mat-flat-button class="btn-danger" type="button" [disabled]="isBusy" (click)="notForMe()">
+              <div class="btn-content">
+                <mat-icon>block</mat-icon>
+                <span>Just remove it</span>
+              </div>
+            </button>
+            <button mat-stroked-button type="button" [disabled]="isBusy" (click)="cancelNotForMe()">Keep it</button>
+          </div>
+        </div>
+      } @else {
+        <div class="quest-actions">
+          <button
+            mat-flat-button
+            class="btn-accept"
+            type="button"
+            [disabled]="isBusy || !canAccept"
+            (click)="accept()"
+            [attr.aria-label]="'Accept quest: ' + quest.title"
+          >
+            @if (isBusy) {
+              <mat-spinner diameter="20"></mat-spinner>
+            } @else {
+              <div class="btn-content">
+                <mat-icon>check</mat-icon>
+                <span>Accept</span>
+              </div>
+            }
+          </button>
+          <button mat-stroked-button type="button" [disabled]="isBusy" (click)="notNow()">
+            <div class="btn-content">
+              <mat-icon>snooze</mat-icon>
+              <span>Not now</span>
+            </div>
+          </button>
+          <button mat-stroked-button type="button" [disabled]="isBusy" (click)="startNotForMe()">
+            <div class="btn-content">
+              <mat-icon>close</mat-icon>
+              <span>Not for me</span>
+            </div>
+          </button>
+        </div>
+        @if (!canAccept) {
+          <p class="quest-hint">You hold 3 active quests. Finish or drop one to accept this.</p>
+        }
+      }
+    }
+
+    @if (mode === 'active') {
+      <div class="quest-actions">
+        @if (quizTalkId) {
+          <a mat-flat-button class="btn-accept" [routerLink]="['/quiz', quizTalkId]">
+            <div class="btn-content">
+              <mat-icon>quiz</mat-icon>
+              <span>Take the quiz</span>
+            </div>
+          </a>
+        } @else if (quest.type === 'chat' && quest.introId) {
+          <a mat-flat-button class="btn-accept" [routerLink]="['/intro', quest.introId]">
+            <div class="btn-content">
+              <mat-icon>forum</mat-icon>
+              <span>Open meet</span>
+            </div>
+          </a>
+        } @else if (quest.type !== 'collection') {
+          <a mat-flat-button class="btn-accept" routerLink="/scan">
+            <div class="btn-content">
+              <mat-icon>qr_code_scanner</mat-icon>
+              <span>Scan</span>
+            </div>
+          </a>
+        }
+        <button mat-stroked-button type="button" [disabled]="isBusy" (click)="drop()" [attr.aria-label]="'Drop quest: ' + quest.title">
+          @if (isBusy) {
+            <mat-spinner diameter="20"></mat-spinner>
+          } @else {
+            <div class="btn-content">
+              <mat-icon>remove_circle_outline</mat-icon>
+              <span>Drop</span>
+            </div>
+          }
+        </button>
+      </div>
+    }
+
+    @if (mode === 'offer' && quizTalkId) {
+      <a class="quest-link" [routerLink]="['/quiz', quizTalkId]">
+        <mat-icon aria-hidden="true">quiz</mat-icon>
+        <span>Take the quiz</span>
+      </a>
+    }
+  </div>
+</article>

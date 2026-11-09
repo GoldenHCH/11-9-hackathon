@@ -9,10 +9,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Astral Peak",
-  "mapX": 248.2,
-  "mapY": 627.3,
+  "mapX": 1035.8,
+  "mapY": 550.8,
   "hall": "A",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Teleport",
@@ -24,10 +24,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Astral Peak",
-  "mapX": 217.4,
-  "mapY": 627.5,
+  "mapX": 1008.9,
+  "mapY": 550.8,
   "hall": "A",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Crusoe",
@@ -39,10 +39,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Astral Peak",
-  "mapX": 232.8,
-  "mapY": 612.0,
+  "mapX": 1022.4,
+  "mapY": 537.3,
   "hall": "A",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Splunk, a Cisco Company",
@@ -54,10 +54,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Astral Peak",
-  "mapX": 273.2,
-  "mapY": 571.5,
+  "mapX": 1057.6,
+  "mapY": 502.0,
   "hall": "A",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Tintri",
@@ -69,10 +69,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Astral Peak",
-  "mapX": 288.7,
-  "mapY": 556.1,
+  "mapX": 1071.1,
+  "mapY": 488.5,
   "hall": "A",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "SUSE",
@@ -84,10 +84,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Astral Peak",
-  "mapX": 188.8,
-  "mapY": 625.2,
+  "mapX": 983.9,
+  "mapY": 548.8,
   "hall": "B",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "ClickHouse",
@@ -99,10 +99,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Astral Peak",
-  "mapX": 204.1,
-  "mapY": 609.7,
+  "mapX": 997.4,
+  "mapY": 535.3,
   "hall": "B",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Port",
@@ -111,10 +111,10 @@
   "categories": [],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Astral Peak",
-  "mapX": 219.6,
-  "mapY": 594.3,
+  "mapX": 1010.8,
+  "mapY": 521.8,
   "hall": "A",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Chainguard",
@@ -126,10 +126,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Astral Peak",
-  "mapX": 235.1,
-  "mapY": 578.9,
+  "mapX": 1024.4,
+  "mapY": 508.4,
   "hall": "A",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "groundcover",
@@ -141,10 +141,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Astral Peak",
-  "mapX": 250.6,
-  "mapY": 563.5,
+  "mapX": 1037.9,
+  "mapY": 494.9,
   "hall": "A",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Isovalent at Cisco",
@@ -156,10 +156,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Astral Peak",
-  "mapX": 265.9,
-  "mapY": 548.0,
+  "mapX": 1051.2,
+  "mapY": 481.5,
   "hall": "A",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Infisical",
@@ -171,10 +171,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Astral Peak",
-  "mapX": 281.4,
-  "mapY": 532.6,
+  "mapX": 1064.7,
+  "mapY": 468.0,
   "hall": "A",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Amazon Web Services",
@@ -187,10 +187,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Astral Peak",
-  "mapX": 158.0,
-  "mapY": 625.2,
+  "mapX": 957.0,
+  "mapY": 548.8,
   "hall": "B",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Red Hat",
@@ -203,10 +203,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Astral Peak",
-  "mapX": 178.8,
-  "mapY": 604.3,
+  "mapX": 975.2,
+  "mapY": 530.6,
   "hall": "B",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Microsoft Azure",
@@ -219,10 +219,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Astral Peak",
-  "mapX": 206.4,
-  "mapY": 576.7,
+  "mapX": 999.4,
+  "mapY": 506.5,
   "hall": "B",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Nutanix",
@@ -235,10 +235,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Astral Peak",
-  "mapX": 227.3,
-  "mapY": 555.8,
+  "mapX": 1017.6,
+  "mapY": 488.3,
   "hall": "A",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Cast AI",
@@ -250,10 +250,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Astral Peak",
-  "mapX": 246.9,
-  "mapY": 536.3,
+  "mapX": 1034.6,
+  "mapY": 471.2,
   "hall": "A",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Oracle",
@@ -266,10 +266,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Starlight Summit",
-  "mapX": 113.9,
-  "mapY": 632.8,
+  "mapX": 918.6,
+  "mapY": 555.4,
   "hall": "C",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Solo.io",
@@ -282,10 +282,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Starlight Summit",
-  "mapX": 134.8,
-  "mapY": 612.0,
+  "mapX": 936.8,
+  "mapY": 537.2,
   "hall": "B",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Google Cloud",
@@ -298,10 +298,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Starlight Summit",
-  "mapX": 155.6,
-  "mapY": 591.0,
+  "mapX": 955.1,
+  "mapY": 519.0,
   "hall": "B",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "ScaleOps",
@@ -314,10 +314,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Starlight Summit",
-  "mapX": 176.5,
-  "mapY": 570.2,
+  "mapX": 973.3,
+  "mapY": 500.8,
   "hall": "B",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "HAProxy Technologies",
@@ -330,10 +330,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Starlight Summit",
-  "mapX": 197.4,
-  "mapY": 549.3,
+  "mapX": 991.5,
+  "mapY": 482.6,
   "hall": "B",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Spectro Cloud",
@@ -345,10 +345,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Starlight Summit",
-  "mapX": 214.3,
-  "mapY": 532.4,
+  "mapX": 1006.2,
+  "mapY": 467.9,
   "hall": "A",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Talos by Sidero Labs",
@@ -360,10 +360,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Starlight Summit",
-  "mapX": 228.9,
-  "mapY": 517.9,
+  "mapX": 1018.9,
+  "mapY": 455.2,
   "hall": "A",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Canonical",
@@ -375,10 +375,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Starlight Summit",
-  "mapX": 100.7,
-  "mapY": 615.1,
+  "mapX": 907.1,
+  "mapY": 540.0,
   "hall": "C",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "VMware by Broadcom",
@@ -390,10 +390,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Starlight Summit",
-  "mapX": 117.1,
-  "mapY": 598.7,
+  "mapX": 921.4,
+  "mapY": 525.7,
   "hall": "C",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Postman",
@@ -405,10 +405,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Starlight Summit",
-  "mapX": 135.2,
-  "mapY": 580.5,
+  "mapX": 937.2,
+  "mapY": 509.9,
   "hall": "B",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "PerfectScale by DoiT",
@@ -419,10 +419,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Starlight Summit",
-  "mapX": 149.8,
-  "mapY": 566.0,
+  "mapX": 949.9,
+  "mapY": 497.2,
   "hall": "B",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Akamai",
@@ -434,10 +434,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Starlight Summit",
-  "mapX": 166.0,
-  "mapY": 549.7,
+  "mapX": 964.1,
+  "mapY": 483.0,
   "hall": "B",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Nebius",
@@ -449,10 +449,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Starlight Summit",
-  "mapX": 183.0,
-  "mapY": 533.5,
+  "mapX": 978.9,
+  "mapY": 468.8,
   "hall": "B",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Dash0",
@@ -464,10 +464,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Starlight Summit",
-  "mapX": 198.8,
-  "mapY": 517.0,
+  "mapX": 992.7,
+  "mapY": 454.5,
   "hall": "B",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Traversal",
@@ -479,10 +479,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Starlight Summit",
-  "mapX": 108.9,
-  "mapY": 576.2,
+  "mapX": 914.3,
+  "mapY": 506.0,
   "hall": "C",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Linux Foundation Education",
@@ -493,10 +493,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Starlight Summit",
-  "mapX": 151.5,
-  "mapY": 535.2,
+  "mapX": 949.8,
+  "mapY": 468.1,
   "hall": "B",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Docker",
@@ -508,10 +508,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Starlight Summit",
-  "mapX": 60.7,
-  "mapY": 593.2,
+  "mapX": 872.2,
+  "mapY": 520.9,
   "hall": "C",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Echo",
@@ -520,10 +520,10 @@
   "categories": [],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Starlight Summit",
-  "mapX": 134.0,
-  "mapY": 522.3,
+  "mapX": 940.2,
+  "mapY": 455.0,
   "hall": "B",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "HPE",
@@ -539,10 +539,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Starlight Summit",
-  "mapX": 138.7,
-  "mapY": 517.6,
+  "mapX": 940.2,
+  "mapY": 455.0,
   "hall": "B",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "theCube",
@@ -550,10 +550,10 @@
   "booth": "146",
   "source": "https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf (exhibitor directory page 2, read visually)",
   "zone": "Starlight Summit",
-  "mapX": 63.2,
-  "mapY": 563.5,
+  "mapX": 874.7,
+  "mapY": 495.0,
   "hall": "C",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "CoreWeave",
@@ -565,10 +565,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Starlight Summit",
-  "mapX": 81.9,
-  "mapY": 545.4,
+  "mapX": 890.7,
+  "mapY": 479.2,
   "hall": "C",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "TFiR",
@@ -576,10 +576,10 @@
   "booth": "148",
   "source": "https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf (exhibitor directory page 2, read visually)",
   "zone": "Starlight Summit",
-  "mapX": 93.1,
-  "mapY": 534.0,
+  "mapX": 904.5,
+  "mapY": 465.2,
   "hall": "C",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Couchbase",
@@ -591,10 +591,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Starlight Summit",
-  "mapX": 97.7,
-  "mapY": 529.4,
+  "mapX": 904.5,
+  "mapY": 465.2,
   "hall": "C",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Tigera",
@@ -606,10 +606,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Starlight Summit",
-  "mapX": 109.0,
-  "mapY": 518.2,
+  "mapX": 918.4,
+  "mapY": 451.4,
   "hall": "C",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Datadog",
@@ -621,10 +621,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Astral Peak",
-  "mapX": 321.8,
-  "mapY": 516.2,
+  "mapX": 1100.1,
+  "mapY": 453.8,
   "hall": "A",
-  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Yugabyte",
@@ -636,10 +636,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Alpine Overlook",
-  "mapX": 344.2,
-  "mapY": 516.1,
+  "mapX": 1119.6,
+  "mapY": 453.8,
   "hall": "1",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Harness",
@@ -651,10 +651,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Alpine Overlook",
-  "mapX": 365.0,
-  "mapY": 519.2,
+  "mapX": 1137.8,
+  "mapY": 456.5,
   "hall": "1",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Kong",
@@ -666,10 +666,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Alpine Overlook",
-  "mapX": 365.0,
-  "mapY": 512.9,
+  "mapX": 1137.8,
+  "mapY": 450.9,
   "hall": "1",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "The New Stack",
@@ -677,10 +677,10 @@
   "booth": "156",
   "source": "https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf (exhibitor directory page 2, read visually)",
   "zone": "Alpine Overlook",
-  "mapX": 384.3,
-  "mapY": 519.2,
+  "mapX": 1154.7,
+  "mapY": 456.5,
   "hall": "1",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Intuit",
@@ -692,10 +692,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Alpine Overlook",
-  "mapX": 384.3,
-  "mapY": 512.9,
+  "mapX": 1154.7,
+  "mapY": 450.9,
   "hall": "1",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "New Relic",
@@ -707,10 +707,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Alpine Overlook",
-  "mapX": 403.6,
-  "mapY": 512.9,
+  "mapX": 1171.5,
+  "mapY": 450.9,
   "hall": "1",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Gravitee",
@@ -719,10 +719,10 @@
   "categories": [],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Alpine Overlook",
-  "mapX": 403.6,
-  "mapY": 519.2,
+  "mapX": 1171.5,
+  "mapY": 456.5,
   "hall": "1",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Resolve AI",
@@ -734,10 +734,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Alpine Overlook",
-  "mapX": 422.8,
-  "mapY": 512.9,
+  "mapX": 1188.2,
+  "mapY": 450.9,
   "hall": "1",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Sedai",
@@ -749,10 +749,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Alpine Overlook",
-  "mapX": 344.1,
-  "mapY": 494.8,
+  "mapX": 1119.6,
+  "mapY": 435.1,
   "hall": "1",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "vCluster",
@@ -764,10 +764,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Alpine Overlook",
-  "mapX": 365.0,
-  "mapY": 493.6,
+  "mapX": 1137.8,
+  "mapY": 434.1,
   "hall": "1",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Akuity",
@@ -779,10 +779,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Alpine Overlook",
-  "mapX": 365.0,
-  "mapY": 487.2,
+  "mapX": 1137.8,
+  "mapY": 428.6,
   "hall": "1",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Heroku",
@@ -794,10 +794,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Alpine Overlook",
-  "mapX": 384.6,
-  "mapY": 493.5,
+  "mapX": 1154.9,
+  "mapY": 434.0,
   "hall": "1",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "OpenObserve",
@@ -809,10 +809,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Alpine Overlook",
-  "mapX": 384.6,
-  "mapY": 487.1,
+  "mapX": 1154.9,
+  "mapY": 428.5,
   "hall": "1",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Sysdig",
@@ -824,10 +824,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Alpine Overlook",
-  "mapX": 403.6,
-  "mapY": 493.6,
+  "mapX": 1171.5,
+  "mapY": 434.1,
   "hall": "1",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "DevZero",
@@ -838,10 +838,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Alpine Overlook",
-  "mapX": 403.6,
-  "mapY": 487.2,
+  "mapX": 1171.5,
+  "mapY": 428.6,
   "hall": "1",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "NVIDIA",
@@ -852,10 +852,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Alpine Overlook",
-  "mapX": 422.8,
-  "mapY": 493.6,
+  "mapX": 1188.2,
+  "mapY": 434.1,
   "hall": "1",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Temporal",
@@ -867,10 +867,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Alpine Overlook",
-  "mapX": 422.8,
-  "mapY": 487.2,
+  "mapX": 1188.2,
+  "mapY": 428.6,
   "hall": "1",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "IBM",
@@ -882,10 +882,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Alpine Overlook",
-  "mapX": 344.1,
-  "mapY": 472.3,
+  "mapX": 1119.6,
+  "mapY": 415.5,
   "hall": "1",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Octopus Deploy",
@@ -897,10 +897,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Alpine Overlook",
-  "mapX": 365.0,
-  "mapY": 464.6,
+  "mapX": 1137.8,
+  "mapY": 408.9,
   "hall": "1",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Cloudsmith",
@@ -912,10 +912,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Alpine Overlook",
-  "mapX": 365.0,
-  "mapY": 458.3,
+  "mapX": 1137.8,
+  "mapY": 403.3,
   "hall": "1",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Zesty",
@@ -927,10 +927,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Alpine Overlook",
-  "mapX": 403.6,
-  "mapY": 464.6,
+  "mapX": 1171.5,
+  "mapY": 408.9,
   "hall": "1",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Wiz",
@@ -941,10 +941,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Alpine Overlook",
-  "mapX": 403.6,
-  "mapY": 458.3,
+  "mapX": 1171.5,
+  "mapY": 403.3,
   "hall": "1",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "OpenSearch",
@@ -956,10 +956,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Alpine Overlook",
-  "mapX": 422.8,
-  "mapY": 464.6,
+  "mapX": 1188.2,
+  "mapY": 408.9,
   "hall": "1",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Palo Alto Networks",
@@ -970,10 +970,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Alpine Overlook",
-  "mapX": 422.8,
-  "mapY": 458.3,
+  "mapX": 1188.2,
+  "mapY": 403.3,
   "hall": "1",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "IBM Kubecost",
@@ -984,10 +984,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Alpine Overlook",
-  "mapX": 344.1,
-  "mapY": 450.9,
+  "mapX": 1119.6,
+  "mapY": 396.9,
   "hall": "1",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Dynatrace",
@@ -1000,10 +1000,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Alpine Overlook",
-  "mapX": 384.2,
-  "mapY": 442.2,
+  "mapX": 1154.6,
+  "mapY": 389.2,
   "hall": "1",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Komodor",
@@ -1015,10 +1015,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Alpine Overlook",
-  "mapX": 384.2,
-  "mapY": 435.8,
+  "mapX": 1154.6,
+  "mapY": 383.7,
   "hall": "1",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Vultr",
@@ -1030,10 +1030,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Alpine Overlook",
-  "mapX": 403.6,
-  "mapY": 442.2,
+  "mapX": 1171.5,
+  "mapY": 389.2,
   "hall": "1",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Veeam",
@@ -1045,10 +1045,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Alpine Overlook",
-  "mapX": 403.6,
-  "mapY": 435.8,
+  "mapX": 1171.5,
+  "mapY": 383.7,
   "hall": "1",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "ControlTheory",
@@ -1060,10 +1060,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Alpine Overlook",
-  "mapX": 422.8,
-  "mapY": 442.2,
+  "mapX": 1188.2,
+  "mapY": 389.3,
   "hall": "1",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Tailscale",
@@ -1075,10 +1075,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Alpine Overlook",
-  "mapX": 422.8,
-  "mapY": 435.8,
+  "mapX": 1188.2,
+  "mapY": 383.7,
   "hall": "1",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Portworx by Everpure",
@@ -1090,10 +1090,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Alpine Overlook",
-  "mapX": 344.2,
-  "mapY": 429.7,
+  "mapX": 1119.6,
+  "mapY": 378.4,
   "hall": "1",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Plural",
@@ -1104,10 +1104,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 381.7,
-  "mapY": 419.7,
+  "mapX": 1152.4,
+  "mapY": 369.7,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Diagrid",
@@ -1118,10 +1118,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 381.7,
-  "mapY": 413.3,
+  "mapX": 1152.4,
+  "mapY": 364.1,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Replicated",
@@ -1130,10 +1130,10 @@
   "categories": [],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 386.9,
-  "mapY": 419.7,
+  "mapX": 1156.9,
+  "mapY": 369.7,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Coder",
@@ -1144,10 +1144,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 386.9,
-  "mapY": 413.3,
+  "mapX": 1156.9,
+  "mapY": 364.1,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Elastic",
@@ -1159,10 +1159,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 403.6,
-  "mapY": 419.8,
+  "mapX": 1171.5,
+  "mapY": 369.7,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Techstrong",
@@ -1170,10 +1170,10 @@
   "booth": "197",
   "source": "https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf (exhibitor directory page 2, read visually)",
   "zone": "Honeycomb Hub",
-  "mapX": 403.6,
-  "mapY": 413.4,
+  "mapX": 1171.5,
+  "mapY": 364.2,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "SigNoz",
@@ -1184,10 +1184,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 343.2,
-  "mapY": 397.2,
+  "mapX": 1118.8,
+  "mapY": 350.0,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Redpanda",
@@ -1198,10 +1198,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 343.2,
-  "mapY": 390.7,
+  "mapX": 1118.8,
+  "mapY": 344.4,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Pulumi",
@@ -1212,10 +1212,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 348.3,
-  "mapY": 397.2,
+  "mapX": 1123.3,
+  "mapY": 350.0,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "PagerDuty",
@@ -1226,10 +1226,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 348.3,
-  "mapY": 390.7,
+  "mapX": 1123.3,
+  "mapY": 344.4,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Spacelift",
@@ -1240,10 +1240,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 362.5,
-  "mapY": 397.2,
+  "mapX": 1135.6,
+  "mapY": 350.0,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Honeycomb",
@@ -1254,10 +1254,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 362.5,
-  "mapY": 390.7,
+  "mapX": 1135.6,
+  "mapY": 344.4,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Firefly",
@@ -1268,10 +1268,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 367.6,
-  "mapY": 397.2,
+  "mapX": 1140.1,
+  "mapY": 350.0,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Cribl",
@@ -1282,10 +1282,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 367.6,
-  "mapY": 390.7,
+  "mapX": 1140.1,
+  "mapY": 344.4,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Kubex",
@@ -1296,10 +1296,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 381.7,
-  "mapY": 397.3,
+  "mapX": 1152.4,
+  "mapY": 350.1,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "StormForge by CloudBolt",
@@ -1310,10 +1310,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 381.7,
-  "mapY": 390.8,
+  "mapX": 1152.4,
+  "mapY": 344.5,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Sonatype",
@@ -1324,10 +1324,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 386.9,
-  "mapY": 397.3,
+  "mapX": 1156.9,
+  "mapY": 350.1,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "DragonflyDB",
@@ -1338,10 +1338,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 386.9,
-  "mapY": 390.8,
+  "mapX": 1156.9,
+  "mapY": 344.5,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Mezmo",
@@ -1350,10 +1350,10 @@
   "categories": [],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 401.3,
-  "mapY": 396.8,
+  "mapX": 1169.5,
+  "mapY": 349.7,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Crash Override",
@@ -1364,10 +1364,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 401.3,
-  "mapY": 390.5,
+  "mapX": 1169.5,
+  "mapY": 344.2,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Sonrai Security",
@@ -1378,10 +1378,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 406.4,
-  "mapY": 396.8,
+  "mapX": 1174.0,
+  "mapY": 349.7,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Arpio",
@@ -1392,10 +1392,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 406.4,
-  "mapY": 390.5,
+  "mapX": 1174.0,
+  "mapY": 344.2,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Grafana Labs",
@@ -1406,10 +1406,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 343.2,
-  "mapY": 374.7,
+  "mapX": 1118.8,
+  "mapY": 330.4,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Akamas",
@@ -1420,10 +1420,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 343.2,
-  "mapY": 368.3,
+  "mapX": 1118.8,
+  "mapY": 324.8,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Lablup",
@@ -1434,10 +1434,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 348.3,
-  "mapY": 374.7,
+  "mapX": 1123.3,
+  "mapY": 330.4,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Sentry",
@@ -1448,10 +1448,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 348.3,
-  "mapY": 368.3,
+  "mapX": 1123.3,
+  "mapY": 324.8,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "VictoriaMetrics",
@@ -1460,10 +1460,10 @@
   "categories": [],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 362.5,
-  "mapY": 374.7,
+  "mapX": 1135.6,
+  "mapY": 330.4,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Framework",
@@ -1474,10 +1474,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 362.5,
-  "mapY": 368.3,
+  "mapX": 1135.6,
+  "mapY": 324.8,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Akeyless Security",
@@ -1488,10 +1488,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 367.6,
-  "mapY": 374.7,
+  "mapX": 1140.1,
+  "mapY": 330.4,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Tigris Data",
@@ -1502,10 +1502,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 367.6,
-  "mapY": 368.3,
+  "mapX": 1140.1,
+  "mapY": 324.8,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Cosmonic",
@@ -1516,10 +1516,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 343.2,
-  "mapY": 342.6,
+  "mapX": 1118.8,
+  "mapY": 302.4,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "HashiCorp, an IBM Company",
@@ -1530,10 +1530,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 343.2,
-  "mapY": 336.2,
+  "mapX": 1118.8,
+  "mapY": 296.8,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Edera",
@@ -1544,10 +1544,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 348.3,
-  "mapY": 342.6,
+  "mapX": 1123.3,
+  "mapY": 302.4,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Supabase",
@@ -1558,10 +1558,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 348.3,
-  "mapY": 336.2,
+  "mapX": 1123.3,
+  "mapY": 296.8,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Better Stack",
@@ -1572,10 +1572,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 363.1,
-  "mapY": 342.6,
+  "mapX": 1136.2,
+  "mapY": 302.4,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Kubermatic",
@@ -1586,10 +1586,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 363.1,
-  "mapY": 336.2,
+  "mapX": 1136.2,
+  "mapY": 296.8,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "ZEDEDA",
@@ -1600,10 +1600,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 368.2,
-  "mapY": 342.6,
+  "mapX": 1140.7,
+  "mapY": 302.4,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "VAST Data",
@@ -1614,10 +1614,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 368.2,
-  "mapY": 336.2,
+  "mapX": 1140.7,
+  "mapY": 296.8,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Mirantis",
@@ -1628,10 +1628,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 383.0,
-  "mapY": 342.6,
+  "mapX": 1153.5,
+  "mapY": 302.4,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Flox",
@@ -1642,10 +1642,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 383.0,
-  "mapY": 336.2,
+  "mapX": 1153.5,
+  "mapY": 296.8,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Cockroach Labs",
@@ -1656,10 +1656,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 388.2,
-  "mapY": 342.6,
+  "mapX": 1158.0,
+  "mapY": 302.4,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Incident.io",
@@ -1670,10 +1670,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 388.2,
-  "mapY": 336.2,
+  "mapX": 1158.0,
+  "mapY": 296.8,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Attribute by DoiT",
@@ -1684,10 +1684,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 402.9,
-  "mapY": 342.6,
+  "mapX": 1170.9,
+  "mapY": 302.4,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Xata",
@@ -1698,10 +1698,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 402.9,
-  "mapY": 336.2,
+  "mapX": 1170.9,
+  "mapY": 296.8,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Rafay Systems",
@@ -1712,10 +1712,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 408.1,
-  "mapY": 342.6,
+  "mapX": 1175.4,
+  "mapY": 302.4,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Decimal AI",
@@ -1726,10 +1726,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 408.1,
-  "mapY": 336.2,
+  "mapX": 1175.4,
+  "mapY": 296.8,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Percona",
@@ -1740,10 +1740,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 343.2,
-  "mapY": 320.1,
+  "mapX": 1118.8,
+  "mapY": 282.8,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Adaptive6",
@@ -1754,10 +1754,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 343.2,
-  "mapY": 313.7,
+  "mapX": 1118.8,
+  "mapY": 277.1,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Antithesis",
@@ -1768,10 +1768,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 348.3,
-  "mapY": 320.1,
+  "mapX": 1123.3,
+  "mapY": 282.8,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "HeroDevs",
@@ -1782,10 +1782,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 348.3,
-  "mapY": 313.7,
+  "mapX": 1123.3,
+  "mapY": 277.1,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Edge Delta",
@@ -1796,10 +1796,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 363.1,
-  "mapY": 320.1,
+  "mapX": 1136.2,
+  "mapY": 282.8,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Fastly",
@@ -1808,10 +1808,10 @@
   "categories": [],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 363.1,
-  "mapY": 313.7,
+  "mapX": 1136.2,
+  "mapY": 277.1,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Ciroos",
@@ -1822,10 +1822,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 368.2,
-  "mapY": 320.1,
+  "mapX": 1140.7,
+  "mapY": 282.8,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Everbridge xMatters",
@@ -1836,10 +1836,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 368.2,
-  "mapY": 313.7,
+  "mapX": 1140.7,
+  "mapY": 277.1,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Portainer",
@@ -1850,10 +1850,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 383.2,
-  "mapY": 320.1,
+  "mapX": 1153.7,
+  "mapY": 282.8,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Digital.ai",
@@ -1864,10 +1864,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 383.2,
-  "mapY": 313.7,
+  "mapX": 1153.7,
+  "mapY": 277.1,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "FusionAuth",
@@ -1878,10 +1878,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 388.2,
-  "mapY": 320.1,
+  "mapX": 1158.0,
+  "mapY": 282.8,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Bindplane",
@@ -1892,10 +1892,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 388.2,
-  "mapY": 313.7,
+  "mapX": 1158.0,
+  "mapY": 277.1,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "LiveKit",
@@ -1906,10 +1906,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 402.9,
-  "mapY": 320.1,
+  "mapX": 1170.9,
+  "mapY": 282.8,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "MacStadium",
@@ -1920,10 +1920,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 402.9,
-  "mapY": 313.7,
+  "mapX": 1170.9,
+  "mapY": 277.1,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Twingate",
@@ -1934,10 +1934,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 408.1,
-  "mapY": 320.1,
+  "mapX": 1175.4,
+  "mapY": 282.8,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Black Duck",
@@ -1948,10 +1948,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Honeycomb Hub",
-  "mapX": 408.1,
-  "mapY": 313.7,
+  "mapX": 1175.4,
+  "mapY": 277.1,
   "hall": "2",
-  "hallConfidence": "confirmed (zone fill matches hall)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Upbound",
@@ -1962,10 +1962,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 343.2,
-  "mapY": 297.7,
+  "mapX": 1118.8,
+  "mapY": 263.2,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "PlanetScale",
@@ -1976,10 +1976,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 343.2,
-  "mapY": 291.3,
+  "mapX": 1118.8,
+  "mapY": 257.6,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Jozu",
@@ -1990,10 +1990,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 348.3,
-  "mapY": 297.7,
+  "mapX": 1123.3,
+  "mapY": 263.2,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Greptime",
@@ -2004,10 +2004,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 383.0,
-  "mapY": 297.7,
+  "mapX": 1153.5,
+  "mapY": 263.2,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "ProsperOps",
@@ -2018,10 +2018,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 383.0,
-  "mapY": 291.3,
+  "mapX": 1153.5,
+  "mapY": 257.6,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "VATES",
@@ -2030,10 +2030,10 @@
   "categories": [],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 388.2,
-  "mapY": 297.7,
+  "mapX": 1158.0,
+  "mapY": 263.2,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Gremlin",
@@ -2044,10 +2044,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 388.2,
-  "mapY": 291.3,
+  "mapX": 1158.0,
+  "mapY": 257.6,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Sigi",
@@ -2058,10 +2058,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 402.9,
-  "mapY": 297.7,
+  "mapX": 1170.9,
+  "mapY": 263.2,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Apollo GraphQL",
@@ -2072,10 +2072,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 402.9,
-  "mapY": 291.3,
+  "mapX": 1170.9,
+  "mapY": 257.6,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "DataAgent",
@@ -2086,10 +2086,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 408.1,
-  "mapY": 297.7,
+  "mapX": 1175.4,
+  "mapY": 263.2,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "CloudBees",
@@ -2100,10 +2100,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 408.1,
-  "mapY": 291.3,
+  "mapX": 1175.4,
+  "mapY": 257.6,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Blacksmith",
@@ -2114,10 +2114,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 343.2,
-  "mapY": 275.1,
+  "mapX": 1118.8,
+  "mapY": 243.5,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Aikido Security",
@@ -2128,10 +2128,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 343.2,
-  "mapY": 268.7,
+  "mapX": 1118.8,
+  "mapY": 237.9,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Robusta.dev",
@@ -2142,10 +2142,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 348.3,
-  "mapY": 275.1,
+  "mapX": 1123.3,
+  "mapY": 243.5,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "IOWN Global Forum",
@@ -2156,10 +2156,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 348.3,
-  "mapY": 268.7,
+  "mapX": 1123.3,
+  "mapY": 237.9,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Klique",
@@ -2170,10 +2170,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 363.1,
-  "mapY": 275.1,
+  "mapX": 1136.2,
+  "mapY": 243.5,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "ActiveState",
@@ -2184,10 +2184,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 363.1,
-  "mapY": 268.7,
+  "mapX": 1136.2,
+  "mapY": 237.9,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Nirmata",
@@ -2198,10 +2198,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 368.2,
-  "mapY": 275.1,
+  "mapX": 1140.7,
+  "mapY": 243.5,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Momentic",
@@ -2212,10 +2212,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 368.2,
-  "mapY": 268.7,
+  "mapX": 1140.7,
+  "mapY": 237.9,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "EnterpriseDB",
@@ -2226,10 +2226,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 383.0,
-  "mapY": 275.1,
+  "mapX": 1153.5,
+  "mapY": 243.5,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Syntasso",
@@ -2240,10 +2240,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 383.0,
-  "mapY": 268.7,
+  "mapX": 1153.5,
+  "mapY": 237.9,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "NeuBird",
@@ -2254,10 +2254,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 388.2,
-  "mapY": 275.1,
+  "mapX": 1158.0,
+  "mapY": 243.5,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "StackGen",
@@ -2268,10 +2268,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 388.2,
-  "mapY": 268.7,
+  "mapX": 1158.0,
+  "mapY": 237.9,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "NorthMark Compute and Cloud",
@@ -2282,10 +2282,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 423.5,
-  "mapY": 275.1,
+  "mapX": 1188.9,
+  "mapY": 243.5,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Pump",
@@ -2296,10 +2296,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 423.5,
-  "mapY": 268.7,
+  "mapX": 1188.9,
+  "mapY": 237.9,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Qualcomm",
@@ -2310,10 +2310,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 428.7,
-  "mapY": 275.1,
+  "mapX": 1193.4,
+  "mapY": 243.5,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "DataCore",
@@ -2324,10 +2324,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 428.7,
-  "mapY": 268.7,
+  "mapX": 1193.4,
+  "mapY": 237.9,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Traefik Labs",
@@ -2338,10 +2338,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 343.2,
-  "mapY": 252.7,
+  "mapX": 1118.8,
+  "mapY": 224.0,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Grepr",
@@ -2352,10 +2352,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 343.2,
-  "mapY": 246.3,
+  "mapX": 1118.8,
+  "mapY": 218.4,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Runpod",
@@ -2366,10 +2366,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 348.3,
-  "mapY": 252.7,
+  "mapX": 1123.3,
+  "mapY": 224.0,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Spotify",
@@ -2380,10 +2380,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 348.3,
-  "mapY": 246.3,
+  "mapX": 1123.3,
+  "mapY": 218.4,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Varnish Software",
@@ -2394,10 +2394,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 363.1,
-  "mapY": 252.7,
+  "mapX": 1136.2,
+  "mapY": 224.0,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "SquaredUp",
@@ -2408,10 +2408,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 363.1,
-  "mapY": 246.3,
+  "mapX": 1136.2,
+  "mapY": 218.4,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "KodeKloud",
@@ -2422,10 +2422,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 368.2,
-  "mapY": 252.7,
+  "mapX": 1140.7,
+  "mapY": 224.0,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "NetLOX",
@@ -2436,10 +2436,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 368.2,
-  "mapY": 246.3,
+  "mapX": 1140.7,
+  "mapY": 218.4,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "TrueFoundry",
@@ -2450,10 +2450,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 383.0,
-  "mapY": 252.7,
+  "mapX": 1153.5,
+  "mapY": 224.0,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Faros",
@@ -2464,10 +2464,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 383.0,
-  "mapY": 246.3,
+  "mapX": 1153.5,
+  "mapY": 218.4,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Observe by Snowflake",
@@ -2478,10 +2478,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 388.2,
-  "mapY": 252.7,
+  "mapX": 1158.0,
+  "mapY": 224.0,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "LINBIT",
@@ -2492,10 +2492,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 388.2,
-  "mapY": 246.3,
+  "mapX": 1158.0,
+  "mapY": 218.4,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Myota",
@@ -2506,10 +2506,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 423.5,
-  "mapY": 252.7,
+  "mapX": 1188.9,
+  "mapY": 224.0,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "AEnix",
@@ -2520,10 +2520,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 423.5,
-  "mapY": 246.3,
+  "mapX": 1188.9,
+  "mapY": 218.4,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "New Orleans CVB",
@@ -2531,10 +2531,10 @@
   "booth": "306",
   "source": "https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf (exhibitor directory page 2, read visually)",
   "zone": "Amber Hive",
-  "mapX": 428.7,
-  "mapY": 252.7,
+  "mapX": 1193.4,
+  "mapY": 224.0,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "North",
@@ -2545,10 +2545,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 428.7,
-  "mapY": 246.3,
+  "mapX": 1193.4,
+  "mapY": 218.4,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "RapidFort",
@@ -2559,10 +2559,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 343.2,
-  "mapY": 223.1,
+  "mapX": 1118.8,
+  "mapY": 198.1,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Endor Labs",
@@ -2573,10 +2573,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 343.2,
-  "mapY": 216.7,
+  "mapX": 1118.8,
+  "mapY": 192.5,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Uber",
@@ -2587,10 +2587,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 348.3,
-  "mapY": 223.1,
+  "mapX": 1123.3,
+  "mapY": 198.1,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Open Source Security Foundation (OpenSSF)",
@@ -2601,10 +2601,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 348.3,
-  "mapY": 216.7,
+  "mapX": 1123.3,
+  "mapY": 192.5,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Databricks",
@@ -2615,10 +2615,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 363.1,
-  "mapY": 223.1,
+  "mapX": 1136.2,
+  "mapY": 198.1,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "RavenDB",
@@ -2629,10 +2629,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 363.1,
-  "mapY": 216.7,
+  "mapX": 1136.2,
+  "mapY": 192.5,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Coralogix",
@@ -2643,10 +2643,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 368.2,
-  "mapY": 223.1,
+  "mapX": 1140.7,
+  "mapY": 198.1,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Anyscale",
@@ -2657,10 +2657,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 368.2,
-  "mapY": 216.7,
+  "mapX": 1140.7,
+  "mapY": 192.5,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Latitude.sh",
@@ -2671,10 +2671,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 383.0,
-  "mapY": 223.1,
+  "mapX": 1153.5,
+  "mapY": 198.1,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "JetBrains",
@@ -2685,10 +2685,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 383.0,
-  "mapY": 216.7,
+  "mapX": 1153.5,
+  "mapY": 192.5,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Depot",
@@ -2699,10 +2699,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 388.2,
-  "mapY": 223.1,
+  "mapX": 1158.0,
+  "mapY": 198.1,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "CAMARA Project",
@@ -2713,10 +2713,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 388.2,
-  "mapY": 216.7,
+  "mapX": 1158.0,
+  "mapY": 192.5,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Stacklet",
@@ -2727,10 +2727,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 402.9,
-  "mapY": 223.1,
+  "mapX": 1170.9,
+  "mapY": 198.1,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Obot AI",
@@ -2741,10 +2741,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 402.9,
-  "mapY": 216.7,
+  "mapX": 1170.9,
+  "mapY": 192.5,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "pganalyze",
@@ -2755,10 +2755,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 408.1,
-  "mapY": 223.1,
+  "mapX": 1175.4,
+  "mapY": 198.1,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Orca Security",
@@ -2769,10 +2769,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 408.1,
-  "mapY": 216.7,
+  "mapX": 1175.4,
+  "mapY": 192.5,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "CIQ",
@@ -2783,10 +2783,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 423.5,
-  "mapY": 223.1,
+  "mapX": 1188.9,
+  "mapY": 198.1,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "empirik",
@@ -2797,10 +2797,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Amber Hive",
-  "mapX": 423.5,
-  "mapY": 216.7,
+  "mapX": 1188.9,
+  "mapY": 192.5,
   "hall": "3",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "KubeDB",
@@ -2811,10 +2811,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Cosmic Canyon",
-  "mapX": 342.6,
-  "mapY": 201.4,
+  "mapX": 1118.3,
+  "mapY": 179.2,
   "hall": "4-5",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Cloudchipr",
@@ -2825,10 +2825,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Cosmic Canyon",
-  "mapX": 342.6,
-  "mapY": 196.2,
+  "mapX": 1118.3,
+  "mapY": 174.7,
   "hall": "4-5",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "StackGuardian",
@@ -2839,10 +2839,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Cosmic Canyon",
-  "mapX": 346.4,
-  "mapY": 201.4,
+  "mapX": 1121.6,
+  "mapY": 179.2,
   "hall": "4-5",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Maze",
@@ -2853,10 +2853,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Cosmic Canyon",
-  "mapX": 346.4,
-  "mapY": 196.2,
+  "mapX": 1121.6,
+  "mapY": 174.7,
   "hall": "4-5",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Aiven",
@@ -2867,10 +2867,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Cosmic Canyon",
-  "mapX": 423.5,
-  "mapY": 200.7,
+  "mapX": 1188.9,
+  "mapY": 178.6,
   "hall": "4-5",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Cloud Native Studios",
@@ -2882,10 +2882,10 @@
   ],
   "source": "https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf (exhibitor directory page 2, read visually)",
   "zone": "Cosmic Canyon",
-  "mapX": 423.5,
-  "mapY": 194.3,
+  "mapX": 1188.9,
+  "mapY": 173.0,
   "hall": "4-5",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Rootly AI",
@@ -2896,10 +2896,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Cosmic Canyon",
-  "mapX": 342.6,
-  "mapY": 182.1,
+  "mapX": 1118.3,
+  "mapY": 162.3,
   "hall": "4-5",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Plakar",
@@ -2910,10 +2910,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Cosmic Canyon",
-  "mapX": 342.6,
-  "mapY": 176.9,
+  "mapX": 1118.3,
+  "mapY": 157.8,
   "hall": "4-5",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Omnistrate",
@@ -2924,10 +2924,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Cosmic Canyon",
-  "mapX": 346.4,
-  "mapY": 182.1,
+  "mapX": 1121.6,
+  "mapY": 162.3,
   "hall": "4-5",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Tensormesh",
@@ -2938,10 +2938,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Cosmic Canyon",
-  "mapX": 346.4,
-  "mapY": 176.9,
+  "mapX": 1121.6,
+  "mapY": 157.8,
   "hall": "4-5",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Stacklok",
@@ -2952,10 +2952,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Cosmic Canyon",
-  "mapX": 383.6,
-  "mapY": 182.1,
+  "mapX": 1154.1,
+  "mapY": 162.3,
   "hall": "4-5",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Amutable",
@@ -2964,10 +2964,10 @@
   "categories": [],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Cosmic Canyon",
-  "mapX": 383.6,
-  "mapY": 176.9,
+  "mapX": 1154.1,
+  "mapY": 157.8,
   "hall": "4-5",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "mirrord by MetalBear",
@@ -2978,10 +2978,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Cosmic Canyon",
-  "mapX": 342.6,
-  "mapY": 162.7,
+  "mapX": 1118.3,
+  "mapY": 145.5,
   "hall": "4-5",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "FluidCloud",
@@ -2992,10 +2992,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Cosmic Canyon",
-  "mapX": 342.6,
-  "mapY": 157.6,
+  "mapX": 1118.3,
+  "mapY": 141.0,
   "hall": "4-5",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Causely",
@@ -3006,10 +3006,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Cosmic Canyon",
-  "mapX": 346.4,
-  "mapY": 162.7,
+  "mapX": 1121.6,
+  "mapY": 145.5,
   "hall": "4-5",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Ascendra Networks",
@@ -3020,10 +3020,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Cosmic Canyon",
-  "mapX": 346.4,
-  "mapY": 157.6,
+  "mapX": 1121.6,
+  "mapY": 141.0,
   "hall": "4-5",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "OllyGarden",
@@ -3034,10 +3034,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Cosmic Canyon",
-  "mapX": 363.1,
-  "mapY": 162.7,
+  "mapX": 1136.2,
+  "mapY": 145.5,
   "hall": "4-5",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Emphere",
@@ -3048,10 +3048,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Cosmic Canyon",
-  "mapX": 363.1,
-  "mapY": 157.6,
+  "mapX": 1136.2,
+  "mapY": 141.0,
   "hall": "4-5",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Kedify",
@@ -3062,10 +3062,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Cosmic Canyon",
-  "mapX": 367.0,
-  "mapY": 162.7,
+  "mapX": 1139.5,
+  "mapY": 145.5,
   "hall": "4-5",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "CVS Health",
@@ -3076,10 +3076,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Cosmic Canyon",
-  "mapX": 367.0,
-  "mapY": 157.6,
+  "mapX": 1139.5,
+  "mapY": 141.0,
   "hall": "4-5",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "InfrOS",
@@ -3090,10 +3090,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Cosmic Canyon",
-  "mapX": 342.6,
-  "mapY": 143.5,
+  "mapX": 1118.3,
+  "mapY": 128.7,
   "hall": "4-5",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Archestra AI",
@@ -3102,10 +3102,10 @@
   "categories": [],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Cosmic Canyon",
-  "mapX": 342.6,
-  "mapY": 138.4,
+  "mapX": 1118.3,
+  "mapY": 124.2,
   "hall": "4-5",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Ascend",
@@ -3116,10 +3116,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Cosmic Canyon",
-  "mapX": 346.4,
-  "mapY": 143.5,
+  "mapX": 1121.6,
+  "mapY": 128.7,
   "hall": "4-5",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Testkube",
@@ -3130,10 +3130,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Cosmic Canyon",
-  "mapX": 346.4,
-  "mapY": 138.4,
+  "mapX": 1121.6,
+  "mapY": 124.2,
   "hall": "4-5",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Actualyze AI",
@@ -3144,10 +3144,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Cosmic Canyon",
-  "mapX": 363.1,
-  "mapY": 143.5,
+  "mapX": 1136.2,
+  "mapY": 128.7,
   "hall": "4-5",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Radar",
@@ -3158,10 +3158,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Cosmic Canyon",
-  "mapX": 363.1,
-  "mapY": 138.4,
+  "mapX": 1136.2,
+  "mapY": 124.2,
   "hall": "4-5",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "pgEdge",
@@ -3170,10 +3170,10 @@
   "categories": [],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Cosmic Canyon",
-  "mapX": 367.0,
-  "mapY": 143.5,
+  "mapX": 1139.5,
+  "mapY": 128.7,
   "hall": "4-5",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "VillageSQL",
@@ -3184,10 +3184,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Cosmic Canyon",
-  "mapX": 367.0,
-  "mapY": 138.4,
+  "mapX": 1139.5,
+  "mapY": 124.2,
   "hall": "4-5",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Infino AI",
@@ -3198,10 +3198,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Cosmic Canyon",
-  "mapX": 342.6,
-  "mapY": 124.2,
+  "mapX": 1118.3,
+  "mapY": 111.8,
   "hall": "4-5",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Aranya",
@@ -3212,10 +3212,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Cosmic Canyon",
-  "mapX": 342.6,
-  "mapY": 119.1,
+  "mapX": 1118.3,
+  "mapY": 107.3,
   "hall": "4-5",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Vijil",
@@ -3226,10 +3226,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Cosmic Canyon",
-  "mapX": 346.4,
-  "mapY": 124.2,
+  "mapX": 1121.6,
+  "mapY": 111.8,
   "hall": "4-5",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Paper Compute Company",
@@ -3240,10 +3240,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Cosmic Canyon",
-  "mapX": 346.4,
-  "mapY": 119.1,
+  "mapX": 1121.6,
+  "mapY": 107.3,
   "hall": "4-5",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Causal Dynamics Lab",
@@ -3254,10 +3254,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Cosmic Canyon",
-  "mapX": 342.6,
-  "mapY": 104.9,
+  "mapX": 1118.3,
+  "mapY": 95.0,
   "hall": "4-5",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "PatapscoAI",
@@ -3268,10 +3268,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Cosmic Canyon",
-  "mapX": 342.6,
-  "mapY": 99.8,
+  "mapX": 1118.3,
+  "mapY": 90.5,
   "hall": "4-5",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "MyDecisive",
@@ -3280,10 +3280,10 @@
   "categories": [],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Cosmic Canyon",
-  "mapX": 346.4,
-  "mapY": 104.9,
+  "mapX": 1121.6,
+  "mapY": 95.0,
   "hall": "4-5",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Effodio",
@@ -3294,10 +3294,10 @@
   ],
   "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
   "zone": "Cosmic Canyon",
-  "mapX": 346.4,
-  "mapY": 99.8,
+  "mapX": 1121.6,
+  "mapY": 90.5,
   "hall": "4-5",
-  "hallConfidence": "inferred (hall boundary not drawn on map)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
   "name": "Anthropic",

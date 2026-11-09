@@ -16,6 +16,7 @@ import { respondMeetTool } from './respond-meet.tool';
 import { respondQuestTool } from './respond-quest.tool';
 import { screenTokenTool } from './screen-token.tool';
 import { searchTool } from './search.tool';
+import { signInTool } from './sign-in.tool';
 import { signUpTool } from './sign-up.tool';
 import { submitQuizTool } from './submit-quiz.tool';
 import { updateSettingsTool } from './update-settings.tool';
@@ -34,6 +35,7 @@ import { startHandshakeTool } from './start-handshake.tool';
 import { IRegisteredTool } from './define-tool';
 
 export const toolRegistry = {
+  sign_in: signInTool,
   sign_up: signUpTool,
   get_profile: getProfileTool,
   update_settings: updateSettingsTool,

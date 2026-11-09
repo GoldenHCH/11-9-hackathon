@@ -1,0 +1,61 @@
+@if (boss) {
+  <section class="boss-card" [class.is-over]="!isLive" aria-labelledby="boss-title">
+    <div class="boss-head">
+      <span class="boss-cube" aria-hidden="true">
+        <mat-icon>local_fire_department</mat-icon>
+      </span>
+      <div class="boss-head-text">
+        <span class="boss-kicker kq-pixel">Boss · {{ statusLabel }}</span>
+        <h2 class="boss-title" id="boss-title">{{ boss.title }}</h2>
+      </div>
+      <span class="boss-status">
+        <mat-icon aria-hidden="true">{{ statusIcon }}</mat-icon>
+      </span>
+    </div>
+
+    <div class="boss-health">
+      <div
+        class="boss-health-track"
+        role="progressbar"
+        aria-label="Boss health"
+        aria-valuemin="0"
+        [attr.aria-valuemax]="boss.maxHealth"
+        [attr.aria-valuenow]="boss.health"
+        [attr.aria-valuetext]="boss.health + ' of ' + boss.maxHealth + ' health left'"
+      >
+        <div class="boss-health-fill" [style.width.%]="healthPercent"></div>
+      </div>
+      <span class="boss-health-text kq-pixel">{{ boss.health }}/{{ boss.maxHealth }} HP</span>
+    </div>
+
+    <ul class="boss-stats">
+      <li class="boss-stat">
+        <mat-icon aria-hidden="true">groups</mat-icon>
+        <span>{{ boss.participants }} fighting · {{ boss.playersInRoom }} in the room</span>
+      </li>
+      @if (isLive) {
+        <li class="boss-stat">
+          <mat-icon aria-hidden="true">timer</mat-icon>
+          <span>Beat it by {{ boss.deadline | date: 'h:mm a' }}</span>
+        </li>
+      }
+      <li class="boss-stat">
+        <mat-icon aria-hidden="true">star</mat-icon>
+        <span>+{{ boss.bonusXp }} XP and a gold block each if it falls</span>
+      </li>
+    </ul>
+
+    @if (isLive) {
+      <a mat-flat-button class="boss-fight" [routerLink]="['/quiz', boss.talkId]">
+        <div class="btn-content">
+          <mat-icon>bolt</mat-icon>
+          <span>Fight: answer the quiz</span>
+        </div>
+      </a>
+    } @else if (boss.status === 'defeated') {
+      <p class="boss-result">The room won together. Bonus XP is on its way.</p>
+    } @else {
+      <p class="boss-result">The boss got away this time. Your quiz XP still counts.</p>
+    }
+  </section>
+}

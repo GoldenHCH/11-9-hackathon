@@ -155,6 +155,7 @@ export const matchSignalWords = {
 } as const;
 
 export const toolNames = [
+  'sign_in',
   'sign_up',
   'get_profile',
   'update_settings',
