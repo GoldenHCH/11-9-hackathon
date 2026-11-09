@@ -2,6 +2,8 @@
 
 Code: `app/src/ai/`. Tools never call a model. They call `generateJson` or `chatPrompt` from here.
 
+**Deliberate exception: `ask_guide`.** It is the one registered tool whose whole job is a model answer: the grounded Agent Builder guide (`app/src/ai/guide.ts`). Cost and nondeterminism are bounded. At most one agent call runs per attendee and interest at a time, an answer is cached for 10 minutes, a call is capped at 30 s, and the tool answers within about 10 s with the deterministic, reranked `recommend_talks` picks when the agent is slow or fails. Talk ids the agent returns are verified against the index before they are shown. Nothing that walks the registry on a schedule should call it, and `recommend_talks` stays the deterministic tool for MCP and CronJob use.
+
 ## How a call flows
 
 1. `generateJson(purpose, prompt, validate, fallback)` opens span `ai.generate` with `kubequest.ai.purpose`, `kubequest.ai.provider`, `kubequest.ai.cache_hit`, `kubequest.ai.attempts`, `kubequest.ai.duration_ms`, and `kubequest.ai.inference_id` for the endpoint that answered.
