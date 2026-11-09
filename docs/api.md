@@ -20,6 +20,8 @@ JSON in this doc is trimmed: long strings end in `…` and `"…N more"` stands 
 | `GET /api/tools` | Every tool with `name`, `description`, `awardsXp` and its JSON Schema `inputSchema`. |
 | `GET /api/screen-token/:locationId` | Same as the `screen_token` tool. Used by the demo screen. |
 | `GET /r/:locationId?t=<token>` | Printed and on-screen QR codes open this. With the Angular build it serves the SPA (the scan-result route); without it, it returns the JSON in `fixtures/scan_route.json`. |
+| `GET /h/<token>` | A handshake QR (from `handshake_code`) opens this. With the Angular build it serves the SPA; read the token from the path segment and call `start_handshake`. Without the build it returns a JSON hint. |
+| `GET /api/recap/:attendeeId/email.html` | The player's recap email (`recap.emailHtml`) as `text/html`. A mock of it is in `docs/mock/recap-email.html`; no email is sent. |
 | `GET /healthz`, `GET /readyz` | Liveness, and readiness that pings Elasticsearch: `{"status":"ok","version":"dev","elasticsearch":"reachable"}`. |
 
 `/api/config` from this server:
@@ -46,10 +48,11 @@ Every failure has the same envelope:
 
 | Status | Codes seen | UI behaviour |
 |---|---|---|
-| 400 | `invalid_input`, `invalid_json` | A UI bug. Log it and show the message. |
-| 403 | `bad_signature`, `expired_token`, `missing_token` (check_in), `no_screen` (screen_token) | On a scan, show "scan the code on the door" with the message. |
-| 404 | `unknown_attendee`, `unknown_player`, `attendee_not_found`, `unknown_location`, `unknown_talk`, `talk_not_found`, `boss_not_found`, `unknown_meet`, `unknown_quest`, `unknown_outpost`, `unknown_tool`, `not_found` | For `unknown_attendee`, clear the stored id and go to signup (not for `unknown_player`, which is about the other player). Otherwise show the message. |
-| 409 | `handle_taken`, `meeting_off`, `no_match`, `meet_closed`, `meet_locked`, `quest_not_open`, `quest_not_active`, `quest_done`, `quest_expired`, `too_many_active`, `conflict` | An expected game state. Show the message and refetch the screen's data. |
+| 400 | `invalid_input`, `invalid_json`, `self_handshake` | A UI bug, or (`self_handshake`) the player scanned their own code. Show the message. |
+| 403 | `bad_signature`, `expired_token`, `missing_token` (check_in, start_handshake), `no_screen` (screen_token) | On a scan, show "scan the code on the door" with the message. |
+| 404 | `unknown_attendee`, `unknown_player`, `attendee_not_found`, `unknown_location`, `unknown_talk`, `talk_not_found`, `boss_not_found`, `unknown_meet`, `unknown_quest`, `unknown_outpost`, `unknown_handshake`, `unknown_tool`, `not_found` | For `unknown_attendee`, clear the stored id and go to signup (not for `unknown_player`, which is about the other player). Otherwise show the message. |
+| 409 | `handle_taken`, `meeting_off`, `no_match`, `meet_closed`, `meet_locked`, `quest_not_open`, `quest_not_active`, `quest_done`, `quest_expired`, `too_many_active`, `code_used`, `already_shook_hands`, `already_answered`, `handshake_closed`, `meet_not_accepted`, `conflict` | An expected game state. Show the message and refetch the screen's data. |
+| 429 | `slow_down` (send_message) | Show the message; let the player try again in a few minutes. |
 | 500 | `internal_error` | Show a toast and retry once. |
 | 501 | `not_implemented` | The feature isn't built yet. Hide the control. |
 | 502/503 | `datastore_write_failed`, `datastore_unavailable`, `qr_secret_missing` | Elastic is down or misconfigured. Show "try again in a moment" and back off. |
@@ -68,6 +71,10 @@ There are no websockets. Poll, and stop when the tab is hidden (`document.visibi
 |---|---|---|---|
 | Boss bar (phone and screen) | `boss_state` | 3 s | `status` is `defeated` or `escaped` |
 | Meet screen, waiting for the partner | `list_meets` | 10 s | no meet is `proposed` or `accepted` |
+| Handshake: own QR | `handshake_code` | every 50 s (codes live 60) | the code was scanned (`handshake_state` returns a handshake) |
+| Handshake: own QR, waiting to be scanned | `handshake_state` without `handshakeId` | 2 s | it returns a `handshake`; then poll with its id |
+| Handshake in progress | `handshake_state` with `handshakeId` | 2 s | `status` is not `waiting` |
+| Meet chat | `list_messages` with `since` (the last message's `at`) | 5 s | the chat is closed |
 | Itinerary Now card | `whats_around_me` | 30 s, and right after every `check_in` | |
 | Quests tab | `quest_board` | on tab focus and after every `check_in` (offers refresh after a scan) | |
 | Demo screen leaderboard | `leaderboard` | 15 s | |
@@ -85,7 +92,10 @@ On a 5xx, double the interval up to 60 s, then reset after a success.
 | Itinerary: Next | `whats_next` |
 | Search | `search`, `world` (browse by building, level and room), `make_quest` ("Make this a quest") |
 | Quests | `quest_board`, `respond_quest`, `recommend_people`, `recommend_talks`, `propose_meet` |
-| Meet screen | `list_meets` (one item), `respond_meet` |
+| Meet screen | `list_meets` (one item), `respond_meet`, `send_message`, `list_messages` (once the meet is `accepted` or `met`) |
+| Handshake | `handshake_code` (show `scanUrl` as a QR), `handshake_state`, `start_handshake` (after scanning `/h/<token>`), `answer_handshake` |
+| Booth note (after an outpost scan, `noteRequired: true`) | `save_booth_note`, `list_booth_notes` |
+| Recap | `recap` (or `GET /api/recap/:attendeeId/email.html`) |
 | Profile | `get_profile`, `inventory`, `leaderboard` (3 boards), `update_settings` |
 | Another player's card | `get_profile` with `targetId` |
 | Boss bar | `boss_state` |
@@ -114,6 +124,7 @@ Enum values used below:
 - Itinerary item `kind`: `talk`, `meet`, `quest`, `gap`
 - Search `kinds`: `session`, `player`, `outpost`, `room`, `campfire`
 - Track: `ai`, `platform`, `operations`, `data`, `security`, `connectivity`, `inclusion`, `other`
+- Handshake `status`: `waiting`, `matched`, `mismatched`, `expired`; `role`: `asker`, `answerer`; `questionSource`: `shared_topic`, `booth_note`, `talk`, `working_on`, `fallback`
 
 ### sign_up (awards XP)
 
@@ -159,21 +170,26 @@ After a confirmed meet (`variants.get_profile_partner`), `workingOn` and `topics
 {"attendeeId":"p_Ljp4ZfHC-VPDFwqx","locationId":"outpost-elastic","token":"<signed-token>","geo":{"lat":40.766,"lon":-111.894}}
 ```
 
-`geo` is optional; send it only when the player turned location on. Awarded, at an outpost:
+`geo` is optional; send it only when the player turned location on.
+
+**An outpost (booth) scan no longer awards XP.** It saves the booth to the player's notes and returns the note with `noteRequired: true`. Open the booth-note form and call `save_booth_note`; that is where the 10 XP comes from. The first scan returns `status: "awarded"` (the scan was accepted), later scans `status: "repeat"`; both have `xpAwarded: 0`. `noteRequired` turns `false` once the note has earned its XP:
 
 ```json
-{"status":"awarded","message":"+10 XP at Elastic. Ask them about Hybrid search with semantic_text and Agent Builder.","xpAwarded":10,"location":{"id":"outpost-elastic","name":"Elastic","kind":"outpost","boothNumber":"196","sponsorTier":"Gold","askAbout":"Hybrid search with semantic_text and Agent Builder"},"event":{"id":"ecb14094-7fce-4aee-a124-a17a7704153d","attendeeId":"p_Ljp4ZfHC-VPDFwqx","type":"outpost","xp":10,"at":"2026-11-09T20:20:52.189Z","locationId":"outpost-elastic","traceId":"b34ef99319b12fb3312113372e11120d","spanId":"5086e4fe51558abf"},"quizAvailable":false,"completedQuests":[],"newBanners":[]}
+{"status":"awarded","message":"Saved Elastic to your notes. Ask them about Hybrid search with semantic_text and Agent Builder. Add what you liked to earn 10 XP. We'll send you a summary of every booth and person after the conference.","xpAwarded":0,"location":{"id":"outpost-elastic","name":"Elastic","kind":"outpost","boothNumber":"196","sponsorTier":"Gold","askAbout":"Hybrid search with semantic_text and Agent Builder"},"quizAvailable":false,"completedQuests":[],"newBanners":[],
+ "boothNote":{"id":"bn-5e2d8c4a1f7b49d3a6c0e8b1","locationId":"outpost-elastic","boothName":"Elastic","boothNumber":"196","sponsorTier":"Gold","liked":"","followUp":false,"xpAwarded":0,"createdAt":"2026-11-09T21:21:05.118Z","updatedAt":"2026-11-09T21:21:05.118Z"},"noteRequired":true}
 ```
+
+**A campfire scan no longer completes a meet.** It is a plain visit (0 XP, `"You're at Network Nook. When you find your match, open Handshake and scan each other's phone."`). Meets complete with the phone-to-phone handshake (`answer_handshake`).
 
 The other cases are in `fixtures/check_in.json` under `variants`:
 
 | Variant | Result |
 |---|---|
-| `check_in_outpost_repeat` | 200, `status: "repeat"`, `xpAwarded: 0` |
+| `check_in_outpost` | 200, `status: "awarded"`, `xpAwarded: 0`, `boothNote`, `noteRequired: true` |
+| `check_in_outpost_repeat` | 200, `status: "repeat"`, the same note |
 | `check_in` (a room with nothing running) | 200, `status: "rejected"`, `rejectedReason: "outside_session"` |
 | `check_in_bad_token`, `check_in_wrong_location` (the token is for a different place) | 403 `bad_signature` |
-| `check_in_meet_me` (a campfire, completing a meet) | 200, `"You both made it to Network Nook. Say hi!"` |
-| `check_in_meet_partner` (a campfire with no open meet) | 200, `"You're at Network Nook. Meets happen here once both players accept."` |
+| `check_in_campfire` | 200, `status: "awarded"`, `xpAwarded: 0`, points the player to Handshake |
 
 In a session room during a session, `talkNow` is set and `quizAvailable` is `true`; open the quiz from the scan result. Optional fields: `material` and `gemsAwarded` (blocks and gems earned), `talkNow`, and `levelUp` (a level object, set only when the player levelled up). Show `levelUp` and `newBanners` when they are present. `event.traceId` is the Dash0 trace behind the XP.
 
@@ -316,7 +332,7 @@ The bar is `health / maxHealth`. Show a countdown to `deadline` while `status` i
 
 ### list_meets (meet screen)
 
-`{"attendeeId":"p_…"}` → an array of the meet views above, in every status. After both players scan the campfire, the status is `met` and `statusLine` reads `"You met @podwrangler."` (`variants.list_meets_after`).
+`{"attendeeId":"p_…"}` → an array of the meet views above, in every status. After the two players complete a handshake, the status is `met` and `statusLine` reads `"You met @podwrangler."` (`variants.list_meets_after`).
 
 ### leaderboard
 
@@ -359,6 +375,98 @@ The banners are `observability-nerd`, `connector`, `welcomer`, `explorer`, `scou
 ```json
 {"players":20,"checkInsToday":31,"xpToday":1820,"xpByType":{"check_in":310,"quiz":335,"outpost":220,"handshake":900,"badge":0,"welcome":50,"boss":5},"meets":{"accepted":2,"proposed":4,"met":0},"quests":{"offered":12,"accepted":2,"declined":1},"busiestRooms":[{"location":{"id":"salt-palace-level-1-150-defg","name":"150 DEFG","kind":"room"},"count":1},"…2 more"],"bosses":[],"generatedAt":"2026-11-09T20:20:16.769Z"}
 ```
+
+### Handshake (phone to phone)
+
+A handshake is how two players prove they met: B shows a QR, A scans it, A asks B one question out loud, and both type the answer. Matching answers complete the handshake, award XP to both and mark any accepted meet between them `met`. Campfires stay as meeting places, but scanning one completes nothing.
+
+1. **B** calls `handshake_code` and draws `scanUrl` as a QR. Refresh it every 50 s (it lives 60 s and is single use). While it is on screen, poll `handshake_state` without an id every 2 s; when it returns a `handshake`, switch to the answer screen and poll with that id.
+2. **A** scans the QR. It opens `/h/<token>`; take the token from the path and call `start_handshake`. A sees the `question` (about B) and `questionReason`.
+3. **B** locks in an answer (`answer_handshake`), then says it out loud. B answers once.
+4. **A** types what they heard (`answer_handshake`). A gets 2 tries. If A submits before B, A's answer waits and is checked when B locks in.
+
+Answers are compared after lowercasing, removing punctuation and a leading "a", "an" or "the". They match when they are equal, within a small edit distance (20% of the longer answer, at least 1), or, for multi-word answers, when 60% of the words overlap. Answers stay hidden (`myAnswer`, `theirAnswer` absent) until `status` leaves `waiting`.
+
+The question is chosen from Elasticsearch data in this order: a topic both players share (`shared_topic`), B's booth notes (`booth_note`), talks B checked in to (`talk`), what B is working on (`working_on`), else a fixed list (`fallback`). The asker's `question` names B (`"Ask @otelotter: …"`); the answerer's `question` is the same question in the second person.
+
+### handshake_code
+
+`{"attendeeId":"p_…"}` →
+
+```json
+{"playerId":"pl_aeea8bd684c45f90","token":"<signed-token>","scanUrl":"https://kube-quest.cnh.radarhq.io/h/<signed-token>","expiresAt":"2026-11-09T21:20:21.447Z"}
+```
+
+The token is URL-safe (base64url parts joined by dots).
+
+### start_handshake
+
+`{"attendeeId":"p_…","token":"<signed-token>"}` → the handshake from the asker's view:
+
+```json
+{"id":"hs-d6bd862c723d14f0b6469479","role":"asker","partner":{"id":"pl_aeea8bd684c45f90","handle":"otelotter","…":"…"},
+ "question":"You both work on observability. Ask @otelotter: which observability tool do they reach for first?","questionSource":"shared_topic","questionReason":"You both care about observability",
+ "expiresAt":"2026-11-09T21:24:21.448Z","status":"waiting","statusLine":"Ask @otelotter the question out loud, then type what you heard.","iAnswered":false,"partnerAnswered":false,"attemptsLeft":2}
+```
+
+A handshake lasts 5 minutes. Scanning the same code again returns the same handshake. Errors: `403 expired_token` (the code refreshed; scan again), `403 bad_signature`, `400 self_handshake`, `409 code_used` (another player already used this code), `409 already_shook_hands` (this pair already matched today; no second XP), `409 no_match` (one blocked the other). Measured at 3.5 s against live Elastic (it includes up to 1.5 s for optional AI phrasing), so show a spinner.
+
+### handshake_state
+
+`{"attendeeId":"p_…","handshakeId":"hs-…"}` → `{"handshake": IHandshake}` from the caller's view. Without `handshakeId` it returns the caller's newest open (`waiting`, unexpired) handshake, or `{}`. A handshake past `expiresAt` reads `expired`.
+
+### answer_handshake (awards XP)
+
+`{"attendeeId":"p_…","handshakeId":"hs-…","answer":"otel collector"}` (1 to 60 characters). Returns the handshake from the caller's view. When it matches:
+
+```json
+{"id":"hs-d6bd862c723d14f0b6469479","role":"asker","status":"matched","statusLine":"Handshake complete! You and @otelotter are connected. +50 XP.","iAnswered":true,"partnerAnswered":true,"attemptsLeft":0,
+ "matchedAt":"2026-11-09T21:19:26.597Z","myAnswer":"otel collector","theirAnswer":"The OTel Collector!","xpAwarded":50,"meetId":"meet-4c2b89f53c32d32090bdc992","…":"…"}
+```
+
+| Case | Result |
+|---|---|
+| Answerer locks in | `waiting`, `iAnswered: true`, `"Locked in. Now tell @ebpfennec your answer."` |
+| Asker answers before the answerer | `waiting`, `iAnswered: true`, `partnerAnswered: false`, `"Got it. Waiting for @otelotter to lock in their answer."` |
+| Miss with a try left | `waiting`, asker `iAnswered: false`, `partnerAnswered: true`, `attemptsLeft: 1`, `"That didn't match. Ask @otelotter again: 1 try left."` |
+| Second miss | `mismatched`, both answers revealed |
+| Match | `matched`, 50 XP each (+25 each when one is a first-timer), `meetId` when an accepted meet existed |
+| Match after 6 handshake awards this hour | `matched`, `xpAwarded: 0`, the status line says why |
+
+Errors: `409 already_answered` (the answerer already locked in), `409 handshake_closed`, `404 unknown_handshake`. Every case is in `fixtures/answer_handshake.json`.
+
+### save_booth_note (awards XP)
+
+`{"attendeeId":"p_…","locationId":"outpost-dash0","liked":"Jumped from a slow span to the pod logs in one click.","thoughts":"optional","followUp":true}`. `liked` and `thoughts` are up to 1000 characters each. Saving again edits the note. →
+
+```json
+{"note":{"id":"bn-1f0c6a2d9e8b47c3a5d1e2f3","locationId":"outpost-dash0","boothName":"Dash0","boothNumber":"134","sponsorTier":"Platinum","liked":"Jumped from a slow span to the pod logs in one click.","followUp":true,"xpAwarded":10,"createdAt":"2026-11-09T21:19:28.101Z","updatedAt":"2026-11-09T21:19:28.101Z"},
+ "xpAwarded":10,"message":"+10 XP for your note on Dash0. It's in your summary.","newBanners":[]}
+```
+
+A booth earns 10 XP once, only when `liked` plus `thoughts` is at least 20 characters, the daily limit of 5 booth awards isn't reached, and the last booth XP was at least 3 minutes ago. Otherwise the note is saved with `xpAwarded: 0` and `message` says why (`variants`: `too_short`, `too_soon`, `daily_cap`). `levelUp` appears when the player levelled up. A location that is not an outpost returns `404 unknown_outpost`.
+
+### list_booth_notes
+
+`{"attendeeId":"p_…"}` → the player's notes, newest first (`IBoothNote[]`, as in `save_booth_note`).
+
+### send_message
+
+`{"attendeeId":"p_…","meetId":"meet-…","text":"See you at the campfire in 5?"}` →
+
+```json
+{"id":"4097b15f-5638-4278-944b-997129851651","meetId":"meet-4c2b89f53c32d32090bdc992","fromMe":true,"text":"See you at the campfire in 5?","at":"2026-11-09T21:20:37.270Z"}
+```
+
+Only the two players in a meet that both accepted (`accepted` or `met`) can message. Plain text, trimmed, 1 to 500 characters, 20 per 10 minutes per sender. Errors: `409 meet_not_accepted`, `409 no_match` (blocked), `404 unknown_meet`, `429 slow_down`.
+
+### list_messages
+
+`{"attendeeId":"p_…","meetId":"meet-…","since":"2026-11-09T21:20:37.270Z"}` (`since` optional) → messages oldest first, each with `fromMe`. Neither player's id is ever included.
+
+### recap
+
+`{"attendeeId":"p_…"}` → `IRecap`: `player`, `totals` (`xp`, `talks`, `people`, `booths`, `quizCorrect`), `talks` (check-ins with the best quiz score), `people` (one per handshake partner: handle, the question, their answer, shared topics, `githubLogin` only when the two also accepted a meet), `booths` (from notes), a `nextStep` on every person and booth, an overall `nextSteps` list, and `emailSubject` plus `emailHtml` (a self-contained 600 px email). Next steps are rule-based: a follow-up booth becomes "Book a follow-up with Elastic.", a person with a shared topic becomes "Follow up with @otelotter about observability.". The full mock is `fixtures/recap.json`; the rendered email is `docs/mock/recap-email.html` (regenerate with `npx tsx scripts/render-recap-mock.ts`).
 
 ## Demo flow (curl order used for this doc)
 

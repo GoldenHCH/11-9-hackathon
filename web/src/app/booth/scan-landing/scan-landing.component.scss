@@ -1,0 +1,67 @@
+.result {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  max-width: 600px;
+}
+
+.result--awarded {
+  border-color: var(--app-theme--tertiary);
+  background: var(--app-theme--tertiary-bg);
+}
+
+.result--rejected {
+  background: var(--app-theme--accent-bg);
+}
+
+.result-icon {
+  width: 32px;
+  height: 32px;
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.result-xp {
+  margin: 0 0 4px;
+  font-size: 22px;
+  color: var(--app-theme--tertiary);
+}
+
+.result-message {
+  margin: 0;
+}
+
+.booth {
+  margin-top: 24px;
+}
+
+.booth-title {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.booth-number {
+  color: var(--app-theme--ink-muted);
+}
+
+.booth-intro {
+  margin: 0 0 16px;
+  max-width: 600px;
+}
+
+.saved {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 16px;
+  color: var(--app-theme--tertiary);
+  font-weight: 600;
+}
+
+.next-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}

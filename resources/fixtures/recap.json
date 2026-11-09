@@ -1,0 +1,141 @@
+{
+  "tool": "recap",
+  "endpoint": "POST /api/tools/recap",
+  "request": {
+    "attendeeId": "p_Ljp4ZfHC-VPDFwqx"
+  },
+  "status": 200,
+  "response": {
+    "player": {
+      "id": "pl_4451cf61b8914498",
+      "handle": "quietgopher",
+      "faceSeed": "quietgopher",
+      "level": 4,
+      "levelName": "Cluster",
+      "xp": 515,
+      "banners": [
+        "connector",
+        "scout",
+        "observability-nerd"
+      ]
+    },
+    "generatedAt": "2026-11-12T23:30:00.000Z",
+    "totals": {
+      "xp": 515,
+      "talks": 4,
+      "people": 3,
+      "booths": 3,
+      "quizCorrect": 10
+    },
+    "talks": [
+      {
+        "talkId": "kc26-tue-saturated-by-design",
+        "title": "Saturated by Design: Maximizing Cluster Allocation in On-Premises Kubernetes",
+        "room": "Grand Ballroom ACE",
+        "at": "2026-11-10T18:33:12.000Z",
+        "quizCorrect": 3,
+        "quizTotal": 3
+      },
+      {
+        "talkId": "kc26-tue-cache-aware-inference",
+        "title": "What the Docs Don't Tell You: A Telecom's Year Operating Cache-Aware LLM Inference",
+        "room": "Grand Ballroom H",
+        "at": "2026-11-10T19:22:40.000Z",
+        "quizCorrect": 2,
+        "quizTotal": 3
+      },
+      {
+        "talkId": "kc26-tue-tracing-at-scale",
+        "title": "Tracing at Scale: Running a 16 Billion Spans/Hour Pipeline at Nubank",
+        "room": "Grand Ballroom ACE",
+        "at": "2026-11-10T21:52:05.000Z",
+        "quizCorrect": 3,
+        "quizTotal": 3
+      },
+      {
+        "talkId": "kc26-tue-signed-sealed-denied",
+        "title": "Signed, Sealed, Denied: Attestation-Driven Admission with Kyverno + CEL",
+        "room": "151",
+        "at": "2026-11-10T19:24:18.000Z",
+        "quizCorrect": 2,
+        "quizTotal": 3
+      }
+    ],
+    "people": [
+      {
+        "playerId": "pl_592a78e076ad8c1f",
+        "handle": "podwrangler",
+        "faceSeed": "podwrangler",
+        "metAt": "2026-11-10T20:05:31.000Z",
+        "question": "You both work on gpus. Ask @podwrangler: which gpus tool do they reach for first?",
+        "theirAnswer": "Kueue",
+        "sharedTopics": [
+          "gpus",
+          "autoscaling"
+        ],
+        "githubLogin": "podwrangler-dev",
+        "nextStep": "Follow up with @podwrangler about gpus."
+      },
+      {
+        "playerId": "pl_aeea8bd684c45f90",
+        "handle": "otelotter",
+        "faceSeed": "otelotter",
+        "metAt": "2026-11-10T22:41:09.000Z",
+        "question": "Ask @otelotter: which booth has been their favorite so far?",
+        "theirAnswer": "Dash0",
+        "sharedTopics": [
+          "opentelemetry"
+        ],
+        "nextStep": "Follow up with @otelotter about opentelemetry."
+      },
+      {
+        "playerId": "pl_0c1d9e7f22ab4c63",
+        "handle": "helmhiker",
+        "faceSeed": "helmhiker",
+        "metAt": "2026-11-11T16:18:44.000Z",
+        "question": "@helmhiker asked you: Which talk would you tell someone not to miss?",
+        "theirAnswer": "tracing at scale",
+        "sharedTopics": [],
+        "nextStep": "Ask @helmhiker how tracing at scale is going for them."
+      }
+    ],
+    "booths": [
+      {
+        "locationId": "outpost-elastic",
+        "name": "Elastic",
+        "boothNumber": "196",
+        "liked": "Hybrid search with semantic_text: one field, embeddings handled for me, RRF with BM25 in a single query.",
+        "thoughts": "Could replace our separate vector DB for the internal docs bot.",
+        "followUp": true,
+        "nextStep": "Book a follow-up with Elastic."
+      },
+      {
+        "locationId": "outpost-dash0",
+        "name": "Dash0",
+        "boothNumber": "134",
+        "liked": "Clicked from a slow span straight into the pod logs and the Kubernetes events behind it.",
+        "followUp": false,
+        "nextStep": "Try what you liked at Dash0: Clicked from a slow span straight into the pod logs and the…"
+      },
+      {
+        "locationId": "outpost-datadog",
+        "name": "Datadog",
+        "boothNumber": "152",
+        "liked": "Cost per namespace sitting right next to CPU throttling on one dashboard.",
+        "thoughts": "Worth showing the platform team before budget planning.",
+        "followUp": true,
+        "nextStep": "Book a follow-up with Datadog."
+      }
+    ],
+    "nextSteps": [
+      "Book a follow-up with Elastic.",
+      "Book a follow-up with Datadog.",
+      "Follow up with @podwrangler about gpus.",
+      "Follow up with @otelotter about opentelemetry.",
+      "Ask @helmhiker how tracing at scale is going for them.",
+      "Rewatch \"What the Docs Don't Tell You: A Telecom's Year Operating Cache-Aware LLM Inference\" when the recording goes up."
+    ],
+    "emailSubject": "Your KubeCon NA 2026 recap: 4 talks, 3 people, 3 booths",
+    "emailHtml": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<title>Your KubeCon NA 2026 recap: 4 talks, 3 people, 3 booths</title>\n</head>\n<body style=\"margin:0;padding:0;background:#e9efe4;\">\n<table role=\"presentation\" width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"background:#e9efe4;\">\n<tr><td align=\"center\" style=\"padding:24px 8px;\">\n<table role=\"presentation\" width=\"600\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"width:600px;max-width:100%;background:#e9efe4;border:3px solid #1d2420;box-shadow:6px 6px 0 #1d2420;\">\n<tr><td style=\"background:#2f6b2b;border-bottom:6px solid #8a5a2b;padding:24px 32px;\">\n<div style=\"font-family:'Courier New', Courier, monospace;font-size:28px;font-weight:bold;color:#ffffff;letter-spacing:2px;\">KUBEQUEST</div>\n<div style=\"font-family:Arial, Helvetica, sans-serif;font-size:15px;color:#dfeedd;margin-top:4px;\">Your KubeCon + CloudNativeCon North America 2026 recap</div>\n</td></tr>\n<tr><td style=\"padding:24px 32px 0 32px;font-family:Arial, Helvetica, sans-serif;font-size:16px;line-height:24px;color:#1d2420;\">\nHi @quietgopher, here is everything you saw, heard and said at KubeCon, with a next step for each, so the hallway conversations don't end in the hallway. You finished at level 4 (Cluster).\n</td></tr>\n<tr><td style=\"padding:20px 32px 0 32px;\"><table role=\"presentation\" width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tr><td width=\"25%\" align=\"center\" style=\"padding:12px 4px;background:#ffffff;border:2px solid #1d2420;font-family:'Courier New', Courier, monospace;\"><div style=\"font-size:24px;font-weight:bold;color:#2f6b2b;\">515</div><div style=\"font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#5b6660;text-transform:uppercase;\">XP</div></td><td width=\"8\" style=\"font-size:0;line-height:0;\">&nbsp;</td><td width=\"25%\" align=\"center\" style=\"padding:12px 4px;background:#ffffff;border:2px solid #1d2420;font-family:'Courier New', Courier, monospace;\"><div style=\"font-size:24px;font-weight:bold;color:#2f6b2b;\">4</div><div style=\"font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#5b6660;text-transform:uppercase;\">Talks</div></td><td width=\"8\" style=\"font-size:0;line-height:0;\">&nbsp;</td><td width=\"25%\" align=\"center\" style=\"padding:12px 4px;background:#ffffff;border:2px solid #1d2420;font-family:'Courier New', Courier, monospace;\"><div style=\"font-size:24px;font-weight:bold;color:#2f6b2b;\">3</div><div style=\"font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#5b6660;text-transform:uppercase;\">People</div></td><td width=\"8\" style=\"font-size:0;line-height:0;\">&nbsp;</td><td width=\"25%\" align=\"center\" style=\"padding:12px 4px;background:#ffffff;border:2px solid #1d2420;font-family:'Courier New', Courier, monospace;\"><div style=\"font-size:24px;font-weight:bold;color:#2f6b2b;\">3</div><div style=\"font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#5b6660;text-transform:uppercase;\">Booths</div></td></tr></table></td></tr>\n<tr><td style=\"padding:28px 32px 8px 32px;font-family:'Courier New', Courier, monospace;font-size:18px;font-weight:bold;color:#2f6b2b;text-transform:uppercase;letter-spacing:1px;\">Your next steps</td></tr><tr><td style=\"padding:8px 32px;\"><table role=\"presentation\" width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"background:#ffffff;border:2px solid #1d2420;box-shadow:4px 4px 0 #1d2420;\"><tr><td style=\"padding:14px 16px;font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:20px;color:#1d2420;\"><table role=\"presentation\" width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tr><td width=\"28\" valign=\"top\" style=\"font-family:'Courier New', Courier, monospace;font-weight:bold;color:#2f6b2b;padding:4px 0;\">1.</td><td style=\"font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:20px;color:#1d2420;padding:4px 0;\">Book a follow-up with Elastic.</td></tr><tr><td width=\"28\" valign=\"top\" style=\"font-family:'Courier New', Courier, monospace;font-weight:bold;color:#2f6b2b;padding:4px 0;\">2.</td><td style=\"font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:20px;color:#1d2420;padding:4px 0;\">Book a follow-up with Datadog.</td></tr><tr><td width=\"28\" valign=\"top\" style=\"font-family:'Courier New', Courier, monospace;font-weight:bold;color:#2f6b2b;padding:4px 0;\">3.</td><td style=\"font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:20px;color:#1d2420;padding:4px 0;\">Follow up with @podwrangler about gpus.</td></tr><tr><td width=\"28\" valign=\"top\" style=\"font-family:'Courier New', Courier, monospace;font-weight:bold;color:#2f6b2b;padding:4px 0;\">4.</td><td style=\"font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:20px;color:#1d2420;padding:4px 0;\">Follow up with @otelotter about opentelemetry.</td></tr><tr><td width=\"28\" valign=\"top\" style=\"font-family:'Courier New', Courier, monospace;font-weight:bold;color:#2f6b2b;padding:4px 0;\">5.</td><td style=\"font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:20px;color:#1d2420;padding:4px 0;\">Ask @helmhiker how tracing at scale is going for them.</td></tr><tr><td width=\"28\" valign=\"top\" style=\"font-family:'Courier New', Courier, monospace;font-weight:bold;color:#2f6b2b;padding:4px 0;\">6.</td><td style=\"font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:20px;color:#1d2420;padding:4px 0;\">Rewatch &quot;What the Docs Don&#39;t Tell You: A Telecom&#39;s Year Operating Cache-Aware LLM Inference&quot; when the recording goes up.</td></tr></table></td></tr></table></td></tr>\n<tr><td style=\"padding:28px 32px 8px 32px;font-family:'Courier New', Courier, monospace;font-size:18px;font-weight:bold;color:#2f6b2b;text-transform:uppercase;letter-spacing:1px;\">People you met</td></tr><tr><td style=\"padding:8px 32px;\"><table role=\"presentation\" width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"background:#ffffff;border:2px solid #1d2420;box-shadow:4px 4px 0 #1d2420;\"><tr><td style=\"padding:14px 16px;font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:20px;color:#1d2420;\"><div style=\"font-family:'Courier New', Courier, monospace;font-size:16px;font-weight:bold;\">@podwrangler</div><div style=\"color:#5b6660;font-size:12px;\">Shook hands Tue 1:05 PM &middot; <a href=\"https://github.com/podwrangler-dev\" style=\"color:#2f6b2b;\">github.com/podwrangler-dev</a></div><div style=\"color:#5b6660;font-size:13px;\">You both care about gpus, autoscaling</div><div style=\"margin-top:6px;\">You both work on gpus. Ask @podwrangler: which gpus tool do they reach for first?<br><span style=\"font-family:'Courier New', Courier, monospace;font-weight:bold;\">&ldquo;Kueue&rdquo;</span></div><div style=\"margin-top:8px;padding:6px 10px;background:#e9efe4;border-left:4px solid #2f6b2b;font-size:13px;\"><strong>Next:</strong> Follow up with @podwrangler about gpus.</div></td></tr></table></td></tr><tr><td style=\"padding:8px 32px;\"><table role=\"presentation\" width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"background:#ffffff;border:2px solid #1d2420;box-shadow:4px 4px 0 #1d2420;\"><tr><td style=\"padding:14px 16px;font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:20px;color:#1d2420;\"><div style=\"font-family:'Courier New', Courier, monospace;font-size:16px;font-weight:bold;\">@otelotter</div><div style=\"color:#5b6660;font-size:12px;\">Shook hands Tue 3:41 PM</div><div style=\"color:#5b6660;font-size:13px;\">You both care about opentelemetry</div><div style=\"margin-top:6px;\">Ask @otelotter: which booth has been their favorite so far?<br><span style=\"font-family:'Courier New', Courier, monospace;font-weight:bold;\">&ldquo;Dash0&rdquo;</span></div><div style=\"margin-top:8px;padding:6px 10px;background:#e9efe4;border-left:4px solid #2f6b2b;font-size:13px;\"><strong>Next:</strong> Follow up with @otelotter about opentelemetry.</div></td></tr></table></td></tr><tr><td style=\"padding:8px 32px;\"><table role=\"presentation\" width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"background:#ffffff;border:2px solid #1d2420;box-shadow:4px 4px 0 #1d2420;\"><tr><td style=\"padding:14px 16px;font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:20px;color:#1d2420;\"><div style=\"font-family:'Courier New', Courier, monospace;font-size:16px;font-weight:bold;\">@helmhiker</div><div style=\"color:#5b6660;font-size:12px;\">Shook hands Wed 9:18 AM</div><div style=\"margin-top:6px;\">@helmhiker asked you: Which talk would you tell someone not to miss?<br><span style=\"font-family:'Courier New', Courier, monospace;font-weight:bold;\">&ldquo;tracing at scale&rdquo;</span></div><div style=\"margin-top:8px;padding:6px 10px;background:#e9efe4;border-left:4px solid #2f6b2b;font-size:13px;\"><strong>Next:</strong> Ask @helmhiker how tracing at scale is going for them.</div></td></tr></table></td></tr>\n<tr><td style=\"padding:28px 32px 8px 32px;font-family:'Courier New', Courier, monospace;font-size:18px;font-weight:bold;color:#2f6b2b;text-transform:uppercase;letter-spacing:1px;\">Booths you visited</td></tr><tr><td style=\"padding:8px 32px;\"><table role=\"presentation\" width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"background:#ffffff;border:2px solid #1d2420;box-shadow:4px 4px 0 #1d2420;\"><tr><td style=\"padding:14px 16px;font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:20px;color:#1d2420;\"><div style=\"font-family:'Courier New', Courier, monospace;font-size:16px;font-weight:bold;\">Elastic <span style=\"color:#5b6660;font-size:12px;font-weight:normal;\">Booth 196</span> <span style=\"display:inline-block;padding:1px 6px;background:#f5d142;border:1px solid #1d2420;font-size:11px;font-weight:bold;\">FOLLOW UP</span></div><div style=\"margin-top:6px;\"><strong>You liked:</strong> Hybrid search with semantic_text: one field, embeddings handled for me, RRF with BM25 in a single query.</div><div style=\"margin-top:4px;color:#5b6660;\">Could replace our separate vector DB for the internal docs bot.</div><div style=\"margin-top:8px;padding:6px 10px;background:#e9efe4;border-left:4px solid #2f6b2b;font-size:13px;\"><strong>Next:</strong> Book a follow-up with Elastic.</div></td></tr></table></td></tr><tr><td style=\"padding:8px 32px;\"><table role=\"presentation\" width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"background:#ffffff;border:2px solid #1d2420;box-shadow:4px 4px 0 #1d2420;\"><tr><td style=\"padding:14px 16px;font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:20px;color:#1d2420;\"><div style=\"font-family:'Courier New', Courier, monospace;font-size:16px;font-weight:bold;\">Dash0 <span style=\"color:#5b6660;font-size:12px;font-weight:normal;\">Booth 134</span></div><div style=\"margin-top:6px;\"><strong>You liked:</strong> Clicked from a slow span straight into the pod logs and the Kubernetes events behind it.</div><div style=\"margin-top:8px;padding:6px 10px;background:#e9efe4;border-left:4px solid #2f6b2b;font-size:13px;\"><strong>Next:</strong> Try what you liked at Dash0: Clicked from a slow span straight into the pod logs and the…</div></td></tr></table></td></tr><tr><td style=\"padding:8px 32px;\"><table role=\"presentation\" width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"background:#ffffff;border:2px solid #1d2420;box-shadow:4px 4px 0 #1d2420;\"><tr><td style=\"padding:14px 16px;font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:20px;color:#1d2420;\"><div style=\"font-family:'Courier New', Courier, monospace;font-size:16px;font-weight:bold;\">Datadog <span style=\"color:#5b6660;font-size:12px;font-weight:normal;\">Booth 152</span> <span style=\"display:inline-block;padding:1px 6px;background:#f5d142;border:1px solid #1d2420;font-size:11px;font-weight:bold;\">FOLLOW UP</span></div><div style=\"margin-top:6px;\"><strong>You liked:</strong> Cost per namespace sitting right next to CPU throttling on one dashboard.</div><div style=\"margin-top:4px;color:#5b6660;\">Worth showing the platform team before budget planning.</div><div style=\"margin-top:8px;padding:6px 10px;background:#e9efe4;border-left:4px solid #2f6b2b;font-size:13px;\"><strong>Next:</strong> Book a follow-up with Datadog.</div></td></tr></table></td></tr>\n<tr><td style=\"padding:28px 32px 8px 32px;font-family:'Courier New', Courier, monospace;font-size:18px;font-weight:bold;color:#2f6b2b;text-transform:uppercase;letter-spacing:1px;\">Talks you attended</td></tr><tr><td style=\"padding:8px 32px;\"><table role=\"presentation\" width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"background:#ffffff;border:2px solid #1d2420;box-shadow:4px 4px 0 #1d2420;\"><tr><td style=\"padding:14px 16px;font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:20px;color:#1d2420;\"><table role=\"presentation\" width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tr><td style=\"font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:19px;color:#1d2420;padding:6px 0;border-bottom:1px solid #e9efe4;\"><strong>Saturated by Design: Maximizing Cluster Allocation in On-Premises Kubernetes</strong><br><span style=\"color:#5b6660;font-size:12px;\">Grand Ballroom ACE &middot; Tue 11:33 AM</span></td><td align=\"right\" valign=\"top\" style=\"font-family:'Courier New', Courier, monospace;font-weight:bold;color:#2f6b2b;white-space:nowrap;padding:6px 0 6px 8px;\">3/3</td></tr><tr><td style=\"font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:19px;color:#1d2420;padding:6px 0;border-bottom:1px solid #e9efe4;\"><strong>What the Docs Don&#39;t Tell You: A Telecom&#39;s Year Operating Cache-Aware LLM Inference</strong><br><span style=\"color:#5b6660;font-size:12px;\">Grand Ballroom H &middot; Tue 12:22 PM</span></td><td align=\"right\" valign=\"top\" style=\"font-family:'Courier New', Courier, monospace;font-weight:bold;color:#2f6b2b;white-space:nowrap;padding:6px 0 6px 8px;\">2/3</td></tr><tr><td style=\"font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:19px;color:#1d2420;padding:6px 0;border-bottom:1px solid #e9efe4;\"><strong>Tracing at Scale: Running a 16 Billion Spans/Hour Pipeline at Nubank</strong><br><span style=\"color:#5b6660;font-size:12px;\">Grand Ballroom ACE &middot; Tue 2:52 PM</span></td><td align=\"right\" valign=\"top\" style=\"font-family:'Courier New', Courier, monospace;font-weight:bold;color:#2f6b2b;white-space:nowrap;padding:6px 0 6px 8px;\">3/3</td></tr><tr><td style=\"font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:19px;color:#1d2420;padding:6px 0;border-bottom:1px solid #e9efe4;\"><strong>Signed, Sealed, Denied: Attestation-Driven Admission with Kyverno + CEL</strong><br><span style=\"color:#5b6660;font-size:12px;\">151 &middot; Tue 12:24 PM</span></td><td align=\"right\" valign=\"top\" style=\"font-family:'Courier New', Courier, monospace;font-weight:bold;color:#2f6b2b;white-space:nowrap;padding:6px 0 6px 8px;\">2/3</td></tr></table></td></tr></table></td></tr>\n<tr><td style=\"padding:28px 32px;font-family:Arial, Helvetica, sans-serif;font-size:12px;line-height:18px;color:#5b6660;\">\nYou're getting this because you played KubeQuest at KubeCon + CloudNativeCon North America 2026 in Salt Lake City. Other players only ever see your handle.<br>\n<span style=\"background:#1f4a1c;color:#ffffff;padding:1px 4px;font-family:'Courier New', Courier, monospace;\">KUBEQUEST</span> &middot; Generated Thu 4:30 PM\n</td></tr>\n</table>\n</td></tr>\n</table>\n</body>\n</html>\n"
+  }
+}

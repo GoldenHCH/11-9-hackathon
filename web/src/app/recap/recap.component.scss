@@ -1,0 +1,107 @@
+.totals {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+  max-width: 640px;
+}
+
+.total {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 4px;
+}
+
+.total-value {
+  font-size: 22px;
+  color: var(--app-theme--primary);
+}
+
+.total-label {
+  font-size: 13px;
+  color: var(--app-theme--ink-muted);
+  text-align: center;
+}
+
+.section {
+  margin-bottom: 24px;
+  max-width: 640px;
+}
+
+.section-title {
+  margin: 0 0 12px;
+  font-size: 16px;
+}
+
+.next-steps {
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.item {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+}
+
+.item-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.item-title {
+  margin: 0 0 4px;
+  font-weight: 600;
+}
+
+.item-line {
+  margin: 0 0 4px;
+}
+
+.item-muted {
+  color: var(--app-theme--ink-muted);
+  font-weight: 400;
+}
+
+.item-next {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 4px 0 0;
+  color: var(--app-theme--primary);
+  font-weight: 500;
+}
+
+.email-subject {
+  margin: 0 0 12px;
+}
+
+.email-frame {
+  display: block;
+  width: 100%;
+  height: 70vh;
+  margin-top: 12px;
+  border: 3px solid var(--app-theme--border);
+  background: #fff;
+}
+
+@media (max-width: 599.98px) {
+  .totals {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

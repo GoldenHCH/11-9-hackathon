@@ -1,0 +1,119 @@
+{
+  "tool": "save_booth_note",
+  "endpoint": "POST /api/tools/save_booth_note",
+  "request": {
+    "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+    "locationId": "outpost-dash0",
+    "liked": "Jumped from a slow span to the pod logs in one click.",
+    "followUp": true
+  },
+  "status": 200,
+  "response": {
+    "note": {
+      "id": "bn-1f0c6a2d9e8b47c3a5d1e2f3",
+      "locationId": "outpost-dash0",
+      "boothName": "Dash0",
+      "boothNumber": "134",
+      "sponsorTier": "Platinum",
+      "liked": "Jumped from a slow span to the pod logs in one click.",
+      "followUp": true,
+      "xpAwarded": 10,
+      "createdAt": "2026-11-09T21:19:28.101Z",
+      "updatedAt": "2026-11-09T21:19:28.101Z"
+    },
+    "xpAwarded": 10,
+    "message": "+10 XP for your note on Dash0. It's in your summary.",
+    "newBanners": []
+  },
+  "variants": {
+    "save_booth_note_too_short": {
+      "request": {
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+        "locationId": "outpost-elastic",
+        "liked": "cool"
+      },
+      "status": 200,
+      "response": {
+        "note": {
+          "id": "bn-7a3e5c1b9d2f48e6b0c4a8d2",
+          "locationId": "outpost-elastic",
+          "boothName": "Elastic",
+          "boothNumber": "196",
+          "sponsorTier": "Gold",
+          "liked": "cool",
+          "followUp": false,
+          "xpAwarded": 0,
+          "createdAt": "2026-11-09T21:19:30.410Z",
+          "updatedAt": "2026-11-09T21:19:30.410Z"
+        },
+        "xpAwarded": 0,
+        "message": "Saved. Write a little more about what you liked at Elastic (at least 20 characters) to earn 10 XP.",
+        "newBanners": []
+      }
+    },
+    "save_booth_note_too_soon": {
+      "request": {
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+        "locationId": "outpost-elastic",
+        "liked": "Hybrid search with semantic_text in one query."
+      },
+      "status": 200,
+      "response": {
+        "note": {
+          "id": "bn-7a3e5c1b9d2f48e6b0c4a8d2",
+          "locationId": "outpost-elastic",
+          "boothName": "Elastic",
+          "boothNumber": "196",
+          "sponsorTier": "Gold",
+          "liked": "Hybrid search with semantic_text in one query.",
+          "followUp": false,
+          "xpAwarded": 0,
+          "createdAt": "2026-11-09T21:19:30.410Z",
+          "updatedAt": "2026-11-09T21:19:30.410Z"
+        },
+        "xpAwarded": 0,
+        "message": "Take a few minutes at each booth. Your note is saved; save it again in 2 minutes to earn 10 XP.",
+        "newBanners": []
+      }
+    },
+    "save_booth_note_daily_cap": {
+      "request": {
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+        "locationId": "outpost-elastic",
+        "liked": "Hybrid search with semantic_text in one query."
+      },
+      "status": 200,
+      "response": {
+        "note": {
+          "id": "bn-7a3e5c1b9d2f48e6b0c4a8d2",
+          "locationId": "outpost-elastic",
+          "boothName": "Elastic",
+          "boothNumber": "196",
+          "sponsorTier": "Gold",
+          "liked": "Hybrid search with semantic_text in one query.",
+          "followUp": false,
+          "xpAwarded": 0,
+          "createdAt": "2026-11-09T21:19:30.410Z",
+          "updatedAt": "2026-11-09T21:19:30.410Z"
+        },
+        "xpAwarded": 0,
+        "message": "Saved. You've earned booth XP 5 times today, the daily limit. This note still goes in your summary.",
+        "newBanners": []
+      }
+    },
+    "save_booth_note_not_outpost": {
+      "request": {
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+        "locationId": "salt-palace-level-1-151",
+        "liked": "Great talk"
+      },
+      "status": 404,
+      "response": {
+        "error": {
+          "code": "unknown_outpost",
+          "message": "That booth is not in the game. Scan the code at the booth first."
+        }
+      }
+    }
+  }
+}

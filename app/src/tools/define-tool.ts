@@ -29,6 +29,7 @@ const spanAttributeKeys = {
   meetId: 'kubequest.intro.id',
   questId: 'kubequest.quest.id',
   partnerId: 'kubequest.partner.id',
+  handshakeId: 'kubequest.handshake.id',
 } as const;
 
 function inputAttributes(input: unknown): Attributes {

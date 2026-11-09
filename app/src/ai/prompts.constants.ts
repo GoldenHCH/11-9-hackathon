@@ -23,3 +23,13 @@ export const chatPromptTemplate = [
   'Maximum 160 characters. No emojis.',
   'Return JSON shaped exactly like {"line": "Ask @{handleB} ..."}.',
 ].join('\n');
+
+export const handshakeQuestionTemplate = [
+  'Rephrase this hallway question so it sounds friendly and natural. Keep its meaning and keep it answerable in one to three words.',
+  'It must start with "Ask @{handleB}" and end with a question mark. Maximum 140 characters. No emojis.',
+  'Return JSON shaped exactly like {"question": "Ask @{handleB} ..."}.',
+].join('\n');
+
+export const handshakeAiSettings = {
+  TIMEOUT_MS: 1500,
+} as const;

@@ -82,7 +82,7 @@ export const quizSources = ['transcript', 'abstract'] as const;
 
 export const aiProviders = ['agent_builder', 'inference', 'fallback'] as const;
 
-export const aiPurposes = ['quiz', 'icebreaker', 'chat_prompt', 'match_reason', 'profile_topics', 'quest_reason'] as const;
+export const aiPurposes = ['quiz', 'icebreaker', 'chat_prompt', 'match_reason', 'profile_topics', 'quest_reason', 'handshake_question'] as const;
 
 export const bannerIds = ['observability-nerd', 'connector', 'welcomer', 'explorer', 'scout', 'speaker'] as const;
 

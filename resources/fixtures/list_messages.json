@@ -1,0 +1,44 @@
+{
+  "tool": "list_messages",
+  "endpoint": "POST /api/tools/list_messages",
+  "request": {
+    "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+    "meetId": "meet-4c2b89f53c32d32090bdc992"
+  },
+  "status": 200,
+  "response": [
+    {
+      "id": "4097b15f-5638-4278-944b-997129851651",
+      "meetId": "meet-4c2b89f53c32d32090bdc992",
+      "fromMe": true,
+      "text": "See you at the campfire in 5?",
+      "at": "2026-11-09T21:20:37.270Z"
+    },
+    {
+      "id": "7ff83ebe-9f20-49ae-ae92-52ce49c89f73",
+      "meetId": "meet-4c2b89f53c32d32090bdc992",
+      "fromMe": false,
+      "text": "On my way, green hoodie.",
+      "at": "2026-11-09T21:20:40.500Z"
+    }
+  ],
+  "variants": {
+    "list_messages_since": {
+      "request": {
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+        "meetId": "meet-4c2b89f53c32d32090bdc992",
+        "since": "2026-11-09T21:20:37.270Z"
+      },
+      "status": 200,
+      "response": [
+        {
+          "id": "7ff83ebe-9f20-49ae-ae92-52ce49c89f73",
+          "meetId": "meet-4c2b89f53c32d32090bdc992",
+          "fromMe": false,
+          "text": "On my way, green hoodie.",
+          "at": "2026-11-09T21:20:40.500Z"
+        }
+      ]
+    }
+  }
+}

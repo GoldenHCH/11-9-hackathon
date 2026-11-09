@@ -1,6 +1,5 @@
 import { trace } from '@opentelemetry/api';
-import { appConfig } from '../config';
-import { recordArrival } from '../meet/arrivals';
+import { openBoothNote } from '../booth/booth-notes';
 import { logger } from '../observability/logger';
 import { kubequestMetrics } from '../observability/metrics';
 import { completeQuestsFor } from '../quests/complete';
@@ -25,7 +24,6 @@ import { awardXpDetailed } from '../xp/award';
 import { evaluateBanners } from '../xp/banners';
 import { leveledUp, levelProgress } from '../xp/levels';
 import {
-  countOutpostsToday,
   findAttendee,
   findLocation,
   findRecentCheckIn,
@@ -34,8 +32,6 @@ import {
 } from './lookups';
 
 const ATTEND_XP = 10;
-const OUTPOST_XP = 10;
-const OUTPOSTS_PER_DAY = 5;
 const WRONG_BUILDING_METERS = 400;
 const EARTH_RADIUS_METERS = 6371000;
 
@@ -134,41 +130,44 @@ async function award(
   };
 }
 
-async function campfireCheckIn(attendee: IAttendee, location: ILocation): Promise<ICheckInResult> {
-  const intros = await optional('record_arrival', () => recordArrival(attendee.id, location.id), []);
-  const metIntros = intros.filter((intro) => intro.status === 'met');
-  const met = metIntros.length > 0;
-  const xpAwarded = metIntros.reduce((sum, intro) => sum + xpRewards.MEET + (intro.firstTimerPair ? xpRewards.MEET_FIRST_TIMER_BONUS : 0), 0);
-  const banners = met ? await optional('evaluate_banners', () => evaluateBanners(attendee.id), []) : [];
-  const newBanners = banners.filter((banner) => banner.earned && !attendee.banners.includes(banner.id));
-  recordOutcome(location, 'awarded', xpAwarded);
+function campfireCheckIn(location: ILocation): ICheckInResult {
+  recordOutcome(location, 'awarded', 0);
 
   return {
     status: 'awarded',
-    message: met
-      ? `You both made it to ${location.name}. Say hi!`
-      : intros.length > 0
-        ? `You're at ${location.name}. Hold up your match signal and look for the same screen.`
-        : `You're at ${location.name}. Meets happen here once both players accept.`,
-    xpAwarded,
-    ...(met ? { gemsAwarded: metIntros.length } : {}),
+    message: `You're at ${location.name}. When you find your match, open Handshake and scan each other's phone.`,
+    xpAwarded: 0,
     location,
     quizAvailable: false,
     completedQuests: [],
-    newBanners,
+    newBanners: [],
   };
 }
 
 async function outpostCheckIn(attendee: IAttendee, location: ILocation): Promise<ICheckInResult> {
-  const visitedToday = await countOutpostsToday(attendee.id, appConfig.conferenceTimeZone);
-
-  if (visitedToday >= OUTPOSTS_PER_DAY) {
-    return rejected(location, 'daily_cap', `You've visited ${OUTPOSTS_PER_DAY} outposts today, the daily limit. Come back tomorrow for more.`);
-  }
-
+  const { note, created } = await openBoothNote(attendee.id, location);
+  const status: CheckInStatus = created ? 'awarded' : 'repeat';
   const ask = location.askAbout ? ` Ask them about ${location.askAbout}.` : '';
+  const message =
+    note.xpAwarded > 0
+      ? `${location.name} is already in your notes. Edit what you liked any time.`
+      : !created
+        ? `${location.name} is already in your notes. Add what you liked to earn ${xpRewards.OUTPOST} XP.`
+        : `Saved ${location.name} to your notes.${ask} Add what you liked to earn ${xpRewards.OUTPOST} XP. We'll send you a summary of every booth and person after the conference.`;
+  recordOutcome(location, status, 0);
+  trace.getActiveSpan()?.setAttribute('kubequest.booth_note.id', note.id);
 
-  return award(attendee, location, { attendeeId: attendee.id, type: 'outpost', xp: OUTPOST_XP, locationId: location.id }, `+${OUTPOST_XP} XP at ${location.name}.${ask}`);
+  return {
+    status,
+    message,
+    xpAwarded: 0,
+    location,
+    quizAvailable: false,
+    completedQuests: [],
+    newBanners: [],
+    boothNote: note,
+    noteRequired: note.xpAwarded === 0,
+  };
 }
 
 async function sessionCheckIn(attendee: IAttendee, location: ILocation, now: Date): Promise<ICheckInResult> {
@@ -219,7 +218,11 @@ export async function runCheckIn(input: ICheckInInput): Promise<ICheckInResult> 
   await optional('record_last_location', () => recordLastLocation(attendee.id, location, now), undefined);
 
   if (location.kind === 'campfire') {
-    return campfireCheckIn(attendee, location);
+    return campfireCheckIn(location);
+  }
+
+  if (location.kind === 'outpost') {
+    return outpostCheckIn(attendee, location);
   }
 
   const recent = await findRecentCheckIn(attendee.id, location.id);
@@ -238,10 +241,6 @@ export async function runCheckIn(input: ICheckInInput): Promise<ICheckInResult> 
       completedQuests: [],
       newBanners: [],
     };
-  }
-
-  if (location.kind === 'outpost') {
-    return outpostCheckIn(attendee, location);
   }
 
   return sessionCheckIn(attendee, location, now);

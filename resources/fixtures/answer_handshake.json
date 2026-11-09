@@ -1,0 +1,281 @@
+{
+  "tool": "answer_handshake",
+  "endpoint": "POST /api/tools/answer_handshake",
+  "request": {
+    "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+    "handshakeId": "hs-d6bd862c723d14f0b6469479",
+    "answer": "otel collector"
+  },
+  "status": 200,
+  "response": {
+    "id": "hs-d6bd862c723d14f0b6469479",
+    "role": "asker",
+    "partner": {
+      "id": "pl_aeea8bd684c45f90",
+      "handle": "otelotter",
+      "faceSeed": "otelotter",
+      "level": 3,
+      "levelName": "Node",
+      "xp": 305,
+      "banners": [
+        "welcomer"
+      ],
+      "topics": [
+        "opentelemetry",
+        "observability",
+        "tracing",
+        "collector"
+      ],
+      "workingOn": "Runs the OpenTelemetry Collector fleet for 40 product teams",
+      "firstTimer": false
+    },
+    "question": "You both work on observability. Ask @otelotter: which observability tool do they reach for first?",
+    "questionSource": "shared_topic",
+    "questionReason": "You both care about observability",
+    "expiresAt": "2026-11-09T21:24:21.448Z",
+    "status": "matched",
+    "statusLine": "Handshake complete! You and @otelotter are connected. +50 XP.",
+    "iAnswered": true,
+    "partnerAnswered": true,
+    "attemptsLeft": 0,
+    "matchedAt": "2026-11-09T21:19:26.597Z",
+    "myAnswer": "otel collector",
+    "theirAnswer": "The OTel Collector!",
+    "xpAwarded": 50,
+    "meetId": "meet-4c2b89f53c32d32090bdc992"
+  },
+  "variants": {
+    "answer_handshake_answerer_locks": {
+      "request": {
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+        "handshakeId": "hs-d6bd862c723d14f0b6469479",
+        "answer": "The OTel Collector!"
+      },
+      "status": 200,
+      "response": {
+        "id": "hs-d6bd862c723d14f0b6469479",
+        "role": "answerer",
+        "partner": {
+          "id": "pl_4451cf61b8914498",
+          "handle": "ebpfennec",
+          "faceSeed": "ebpfennec",
+          "level": 3,
+          "levelName": "Node",
+          "xp": 240,
+          "banners": [],
+          "topics": [
+            "ebpf",
+            "observability",
+            "networking",
+            "cilium"
+          ],
+          "workingOn": "Builds eBPF-based network observability for a fintech platform",
+          "firstTimer": false
+        },
+        "question": "Which observability tool do you reach for first?",
+        "questionSource": "shared_topic",
+        "questionReason": "You both care about observability",
+        "expiresAt": "2026-11-09T21:24:21.448Z",
+        "status": "waiting",
+        "statusLine": "Locked in. Now tell @ebpfennec your answer.",
+        "iAnswered": true,
+        "partnerAnswered": false,
+        "attemptsLeft": 2
+      }
+    },
+    "answer_handshake_asker_before_answerer": {
+      "request": {
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+        "handshakeId": "hs-d6bd862c723d14f0b6469479",
+        "answer": "Grafana"
+      },
+      "status": 200,
+      "response": {
+        "id": "hs-d6bd862c723d14f0b6469479",
+        "role": "asker",
+        "partner": {
+          "id": "pl_aeea8bd684c45f90",
+          "handle": "otelotter",
+          "faceSeed": "otelotter",
+          "level": 3,
+          "levelName": "Node",
+          "xp": 305,
+          "banners": [
+            "welcomer"
+          ],
+          "topics": [
+            "opentelemetry",
+            "observability",
+            "tracing",
+            "collector"
+          ],
+          "workingOn": "Runs the OpenTelemetry Collector fleet for 40 product teams",
+          "firstTimer": false
+        },
+        "question": "You both work on observability. Ask @otelotter: which observability tool do they reach for first?",
+        "questionSource": "shared_topic",
+        "questionReason": "You both care about observability",
+        "expiresAt": "2026-11-09T21:24:21.448Z",
+        "status": "waiting",
+        "statusLine": "Got it. Waiting for @otelotter to lock in their answer.",
+        "iAnswered": true,
+        "partnerAnswered": false,
+        "attemptsLeft": 2
+      }
+    },
+    "answer_handshake_try_again": {
+      "request": {
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+        "handshakeId": "hs-d6bd862c723d14f0b6469479",
+        "answer": "Grafana"
+      },
+      "status": 200,
+      "response": {
+        "id": "hs-d6bd862c723d14f0b6469479",
+        "role": "asker",
+        "partner": {
+          "id": "pl_aeea8bd684c45f90",
+          "handle": "otelotter",
+          "faceSeed": "otelotter",
+          "level": 3,
+          "levelName": "Node",
+          "xp": 305,
+          "banners": [
+            "welcomer"
+          ],
+          "topics": [
+            "opentelemetry",
+            "observability",
+            "tracing",
+            "collector"
+          ],
+          "workingOn": "Runs the OpenTelemetry Collector fleet for 40 product teams",
+          "firstTimer": false
+        },
+        "question": "You both work on observability. Ask @otelotter: which observability tool do they reach for first?",
+        "questionSource": "shared_topic",
+        "questionReason": "You both care about observability",
+        "expiresAt": "2026-11-09T21:24:21.448Z",
+        "status": "waiting",
+        "statusLine": "That didn't match. Ask @otelotter again: 1 try left.",
+        "iAnswered": false,
+        "partnerAnswered": true,
+        "attemptsLeft": 1
+      }
+    },
+    "answer_handshake_mismatched": {
+      "request": {
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+        "handshakeId": "hs-d6bd862c723d14f0b6469479",
+        "answer": "Jaeger"
+      },
+      "status": 200,
+      "response": {
+        "id": "hs-d6bd862c723d14f0b6469479",
+        "role": "asker",
+        "partner": {
+          "id": "pl_aeea8bd684c45f90",
+          "handle": "otelotter",
+          "faceSeed": "otelotter",
+          "level": 3,
+          "levelName": "Node",
+          "xp": 305,
+          "banners": [
+            "welcomer"
+          ],
+          "topics": [
+            "opentelemetry",
+            "observability",
+            "tracing",
+            "collector"
+          ],
+          "workingOn": "Runs the OpenTelemetry Collector fleet for 40 product teams",
+          "firstTimer": false
+        },
+        "question": "You both work on observability. Ask @otelotter: which observability tool do they reach for first?",
+        "questionSource": "shared_topic",
+        "questionReason": "You both care about observability",
+        "expiresAt": "2026-11-09T21:24:21.448Z",
+        "status": "mismatched",
+        "statusLine": "No match this time. Find @otelotter later for another try, or shake hands with someone new.",
+        "iAnswered": true,
+        "partnerAnswered": true,
+        "attemptsLeft": 0,
+        "myAnswer": "Jaeger",
+        "theirAnswer": "The OTel Collector!"
+      }
+    },
+    "answer_handshake_capped": {
+      "request": {
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+        "handshakeId": "hs-d6bd862c723d14f0b6469479",
+        "answer": "otel collector"
+      },
+      "status": 200,
+      "response": {
+        "id": "hs-d6bd862c723d14f0b6469479",
+        "role": "asker",
+        "partner": {
+          "id": "pl_aeea8bd684c45f90",
+          "handle": "otelotter",
+          "faceSeed": "otelotter",
+          "level": 3,
+          "levelName": "Node",
+          "xp": 305,
+          "banners": [
+            "welcomer"
+          ],
+          "topics": [
+            "opentelemetry",
+            "observability",
+            "tracing",
+            "collector"
+          ],
+          "workingOn": "Runs the OpenTelemetry Collector fleet for 40 product teams",
+          "firstTimer": false
+        },
+        "question": "You both work on observability. Ask @otelotter: which observability tool do they reach for first?",
+        "questionSource": "shared_topic",
+        "questionReason": "You both care about observability",
+        "expiresAt": "2026-11-09T21:24:21.448Z",
+        "status": "matched",
+        "statusLine": "Handshake complete with @otelotter! You've hit 6 handshakes this hour, so this one is for fun, not XP.",
+        "iAnswered": true,
+        "partnerAnswered": true,
+        "attemptsLeft": 1,
+        "matchedAt": "2026-11-09T21:19:26.597Z",
+        "myAnswer": "otel collector",
+        "theirAnswer": "The OTel Collector!",
+        "xpAwarded": 0
+      }
+    },
+    "answer_handshake_already_answered": {
+      "request": {
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+        "handshakeId": "hs-d6bd862c723d14f0b6469479",
+        "answer": "Collector"
+      },
+      "status": 409,
+      "response": {
+        "error": {
+          "code": "already_answered",
+          "message": "Your answer is already locked in. Tell them what it is!"
+        }
+      }
+    },
+    "answer_handshake_closed": {
+      "request": {
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+        "handshakeId": "hs-d6bd862c723d14f0b6469479",
+        "answer": "Collector"
+      },
+      "status": 409,
+      "response": {
+        "error": {
+          "code": "handshake_closed",
+          "message": "This handshake ran out of time. Scan a fresh code to try again."
+        }
+      }
+    }
+  }
+}

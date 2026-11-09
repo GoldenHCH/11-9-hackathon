@@ -1,0 +1,132 @@
+{
+  "tool": "handshake_state",
+  "endpoint": "POST /api/tools/handshake_state",
+  "request": {
+    "attendeeId": "p_Ljp4ZfHC-VPDFwqx"
+  },
+  "status": 200,
+  "response": {
+    "handshake": {
+      "id": "hs-d6bd862c723d14f0b6469479",
+      "role": "answerer",
+      "partner": {
+        "id": "pl_4451cf61b8914498",
+        "handle": "ebpfennec",
+        "faceSeed": "ebpfennec",
+        "level": 3,
+        "levelName": "Node",
+        "xp": 240,
+        "banners": [],
+        "topics": [
+          "ebpf",
+          "observability",
+          "networking",
+          "cilium"
+        ],
+        "workingOn": "Builds eBPF-based network observability for a fintech platform",
+        "firstTimer": false
+      },
+      "question": "Which observability tool do you reach for first?",
+      "questionSource": "shared_topic",
+      "questionReason": "You both care about observability",
+      "expiresAt": "2026-11-09T21:24:21.448Z",
+      "status": "waiting",
+      "statusLine": "@ebpfennec is about to ask you something. Lock in your answer (1 to 3 words) before you say it.",
+      "iAnswered": false,
+      "partnerAnswered": false,
+      "attemptsLeft": 2
+    }
+  },
+  "variants": {
+    "handshake_state_none": {
+      "request": {
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx"
+      },
+      "status": 200,
+      "response": {}
+    },
+    "handshake_state_asker_retry": {
+      "request": {
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+        "handshakeId": "hs-d6bd862c723d14f0b6469479"
+      },
+      "status": 200,
+      "response": {
+        "handshake": {
+          "id": "hs-d6bd862c723d14f0b6469479",
+          "role": "asker",
+          "partner": {
+            "id": "pl_aeea8bd684c45f90",
+            "handle": "otelotter",
+            "faceSeed": "otelotter",
+            "level": 3,
+            "levelName": "Node",
+            "xp": 305,
+            "banners": [
+              "welcomer"
+            ],
+            "topics": [
+              "opentelemetry",
+              "observability",
+              "tracing",
+              "collector"
+            ],
+            "workingOn": "Runs the OpenTelemetry Collector fleet for 40 product teams",
+            "firstTimer": false
+          },
+          "question": "You both work on observability. Ask @otelotter: which observability tool do they reach for first?",
+          "questionSource": "shared_topic",
+          "questionReason": "You both care about observability",
+          "expiresAt": "2026-11-09T21:24:21.448Z",
+          "status": "waiting",
+          "statusLine": "That didn't match. Ask @otelotter again: 1 try left.",
+          "iAnswered": false,
+          "partnerAnswered": true,
+          "attemptsLeft": 1
+        }
+      }
+    },
+    "handshake_state_expired": {
+      "request": {
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+        "handshakeId": "hs-d6bd862c723d14f0b6469479"
+      },
+      "status": 200,
+      "response": {
+        "handshake": {
+          "id": "hs-d6bd862c723d14f0b6469479",
+          "role": "asker",
+          "partner": {
+            "id": "pl_aeea8bd684c45f90",
+            "handle": "otelotter",
+            "faceSeed": "otelotter",
+            "level": 3,
+            "levelName": "Node",
+            "xp": 305,
+            "banners": [
+              "welcomer"
+            ],
+            "topics": [
+              "opentelemetry",
+              "observability",
+              "tracing",
+              "collector"
+            ],
+            "workingOn": "Runs the OpenTelemetry Collector fleet for 40 product teams",
+            "firstTimer": false
+          },
+          "question": "You both work on observability. Ask @otelotter: which observability tool do they reach for first?",
+          "questionSource": "shared_topic",
+          "questionReason": "You both care about observability",
+          "expiresAt": "2026-11-09T21:24:21.448Z",
+          "status": "expired",
+          "statusLine": "This handshake ran out of time. Scan a fresh code to try again.",
+          "iAnswered": false,
+          "partnerAnswered": true,
+          "attemptsLeft": 2,
+          "theirAnswer": "The OTel Collector!"
+        }
+      }
+    }
+  }
+}

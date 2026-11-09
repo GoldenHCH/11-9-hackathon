@@ -7,6 +7,8 @@ import {
   ICheckInResult,
   ILeaderboard,
   ILeaderboardRow,
+  IHandshake,
+  IHandshakeStateResult,
   IMeet,
   IPersonMatch,
   IPublicPlayer,
@@ -141,4 +143,12 @@ export function publicCheckIn(result: ICheckInResult): ICheckInResult {
 
 export function publicAround<T extends IWhatsAroundMe>(around: T): T {
   return around.matchesHere ? { ...around, matchesHere: around.matchesHere.map(publicPersonMatch) } : around;
+}
+
+export function publicHandshake(handshake: IHandshake): IHandshake {
+  return { ...handshake, partner: publicPlayer(handshake.partner) };
+}
+
+export function publicHandshakeState(state: IHandshakeStateResult): IHandshakeStateResult {
+  return state.handshake ? { handshake: publicHandshake(state.handshake) } : state;
 }

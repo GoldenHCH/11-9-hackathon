@@ -1,0 +1,134 @@
+{
+  "tool": "start_handshake",
+  "endpoint": "POST /api/tools/start_handshake",
+  "request": {
+    "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+    "token": "<signed-token>"
+  },
+  "status": 200,
+  "response": {
+    "id": "hs-d6bd862c723d14f0b6469479",
+    "role": "asker",
+    "partner": {
+      "id": "pl_aeea8bd684c45f90",
+      "handle": "otelotter",
+      "faceSeed": "otelotter",
+      "level": 3,
+      "levelName": "Node",
+      "xp": 305,
+      "banners": [
+        "welcomer"
+      ],
+      "topics": [
+        "opentelemetry",
+        "observability",
+        "tracing",
+        "collector"
+      ],
+      "workingOn": "Runs the OpenTelemetry Collector fleet for 40 product teams",
+      "firstTimer": false
+    },
+    "question": "You both work on observability. Ask @otelotter: which observability tool do they reach for first?",
+    "questionSource": "shared_topic",
+    "questionReason": "You both care about observability",
+    "expiresAt": "2026-11-09T21:24:21.448Z",
+    "status": "waiting",
+    "statusLine": "Ask @otelotter the question out loud, then type what you heard.",
+    "iAnswered": false,
+    "partnerAnswered": false,
+    "attemptsLeft": 2
+  },
+  "variants": {
+    "start_handshake_booth_note": {
+      "request": {
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+        "token": "<signed-token>"
+      },
+      "status": 200,
+      "response": {
+        "id": "hs-d6bd862c723d14f0b6469479",
+        "role": "asker",
+        "partner": {
+          "id": "pl_aeea8bd684c45f90",
+          "handle": "otelotter",
+          "faceSeed": "otelotter",
+          "level": 3,
+          "levelName": "Node",
+          "xp": 305,
+          "banners": [
+            "welcomer"
+          ],
+          "topics": [
+            "opentelemetry",
+            "observability",
+            "tracing",
+            "collector"
+          ],
+          "workingOn": "Runs the OpenTelemetry Collector fleet for 40 product teams",
+          "firstTimer": false
+        },
+        "question": "Ask @otelotter: which booth has been their favorite so far?",
+        "questionSource": "booth_note",
+        "questionReason": "@otelotter has taken notes at 3 booths",
+        "expiresAt": "2026-11-09T21:24:21.448Z",
+        "status": "waiting",
+        "statusLine": "Ask @otelotter the question out loud, then type what you heard.",
+        "iAnswered": false,
+        "partnerAnswered": false,
+        "attemptsLeft": 2
+      }
+    },
+    "start_handshake_code_used": {
+      "request": {
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+        "token": "<signed-token>"
+      },
+      "status": 409,
+      "response": {
+        "error": {
+          "code": "code_used",
+          "message": "Someone already used that code. Ask them to show a fresh one."
+        }
+      }
+    },
+    "start_handshake_already_today": {
+      "request": {
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+        "token": "<signed-token>"
+      },
+      "status": 409,
+      "response": {
+        "error": {
+          "code": "already_shook_hands",
+          "message": "You and @otelotter already shook hands today. Go find someone new!"
+        }
+      }
+    },
+    "start_handshake_expired": {
+      "request": {
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+        "token": "<signed-token>"
+      },
+      "status": 403,
+      "response": {
+        "error": {
+          "code": "expired_token",
+          "message": "That code just refreshed. Scan the new one on their phone."
+        }
+      }
+    },
+    "start_handshake_self": {
+      "request": {
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+        "token": "<signed-token>"
+      },
+      "status": 400,
+      "response": {
+        "error": {
+          "code": "self_handshake",
+          "message": "That's your own code. Scan the QR on the other player's phone."
+        }
+      }
+    }
+  }
+}

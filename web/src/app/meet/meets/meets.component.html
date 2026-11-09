@@ -1,0 +1,43 @@
+<section class="app-page">
+  <app-screen-toolbar title="Meet" subtitle="People you’ve agreed to meet"></app-screen-toolbar>
+
+  <article class="code-cta app-block">
+    <mat-icon class="code-cta-icon" aria-hidden="true">qr_code_2</mat-icon>
+    <div class="code-cta-text">
+      <h2 class="code-cta-title app-pixel">Talking to someone now?</h2>
+      <p class="code-cta-body">Show your code or scan theirs. You’ll both get one question, and matching answers prove you met.</p>
+    </div>
+    <a mat-flat-button routerLink="/code">Show my code</a>
+  </article>
+
+  <app-state-wrapper
+    [isLoading]="isLoading"
+    [errorMessage]="errorMessage"
+    [isEmpty]="!meets.length"
+    emptyIcon="group"
+    emptyMessage="No meets yet. When you and another player both say yes to a meet, it shows up here with a place, a time and a chat."
+    emptyActionLabel="Show my code"
+    (emptyAction)="showCode()"
+    (retry)="loadMeets()"
+  >
+    <ul class="meet-list">
+      @for (meet of meets; track meet.id) {
+        <li>
+          <a class="meet app-card app-card--clickable" [routerLink]="['/intro', meet.id]">
+            <app-pixel-face [seed]="meet.partner.faceSeed" [size]="44" [label]="'Face of @' + meet.partner.handle"></app-pixel-face>
+            <span class="meet-text">
+              <span class="meet-handle">&#64;{{ meet.partner.handle }}</span>
+              <span class="meet-line">{{ meet.statusLine }}</span>
+              @if (meet.campfire && meet.slot) {
+                <span class="meet-line">
+                  {{ meet.campfire.name }} · {{ meet.slot.start | date: 'shortTime' }}
+                </span>
+              }
+            </span>
+            <span class="meet-status" [class.meet-status--met]="meet.status === 'met'">{{ statusLabels[meet.status] }}</span>
+          </a>
+        </li>
+      }
+    </ul>
+  </app-state-wrapper>
+</section>
