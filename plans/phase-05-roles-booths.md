@@ -16,7 +16,7 @@ A "View" menu in the header switches between the three. Staff views hide the att
 
 ## Data
 
-- `resources/locations.json` gets every exhibitor as an `outpost`: 233 sponsors with a booth number (`resources/venue/sponsors.json`, Anthropic and Northflank have no booth) and 86 Project Pavilion projects (`resources/venue/project_pavilion_kiosks.json`). The 7 hand-written booths keep their ids, `askAbout` and topics.
+- `resources/locations.json` gets every exhibitor as an `outpost`: 234 sponsors with a booth number (`resources/venue/sponsors.json`; Anthropic, LiveKit and Ascend have no booth) and 86 Project Pavilion projects (`resources/venue/project_pavilion_kiosks.json`). The 7 hand-written booths keep their ids, `askAbout` and topics.
 - New optional `ILocation` fields: `exhibitorType` (`sponsor` | `project`), `categories`, `hall`, `mapPosition` ({x, y} on the expo-hall PDF, the same coordinates as `web/public/venue/schematic.json`), `schedule` (project kiosk hours).
 - Topics come from the sponsor directory categories by rule (AI → `ai`, Platform Engineering / CI/CD / App Dev → `platform`, Observability → `operations`, Security → `security`, Storage + Databases → `data`, Networking / Service Mesh / Edge → `connectivity`). Projects get topics from a small project → track table.
 - `world` leaves outposts out (300+ booths would bury the rooms); booths live in `list_exhibitors`.
@@ -48,4 +48,4 @@ Fixtures: `resources/fixtures/{list_exhibitors,get_exhibitor,exhibitor_dashboard
 
 ## Done when
 
-On the live URL: `/exhibitors` lists 319 booths, a booth page shows live counts and its talks, a staff link opens that booth's dashboard with its QR, scanning that QR moves the dashboard's "now" count, and the admin link shows the booth table.
+On the live URL: `/exhibitors` lists 320 booths, a booth page shows live counts and its talks, a staff link opens that booth's dashboard with its QR, scanning that QR moves the dashboard's "now" count, and the admin link shows the booth table.

@@ -58,6 +58,10 @@ export function buildIndexMappings(inferenceId: string): Record<IndexName, Prope
       spotMe: unindexedKeyword,
       workingOn: text,
       headline: text,
+      skills: keyword,
+      offers: text,
+      asks: text,
+      summary: text,
       profileText: semanticText(inferenceId),
       profile: {
         properties: {
@@ -86,6 +90,7 @@ export function buildIndexMappings(inferenceId: string): Record<IndexName, Prope
       banners: keyword,
       blockedIds: keyword,
       createdAt: date,
+      itinerary: { properties: { talkId: keyword, addedAt: date } },
     },
     [indexNames.LOCATIONS]: {
       id: keyword,
@@ -209,6 +214,20 @@ export function buildIndexMappings(inferenceId: string): Record<IndexName, Prope
       createdAt: date,
       updatedAt: date,
       noteText: semanticText(inferenceId),
+      lastScanAt: date,
+      kind: keyword,
+      publicId: keyword,
+      handle: keyword,
+      faceSeed: unindexedKeyword,
+      image: { type: 'binary' },
+      mimeType: unindexedKeyword,
+      width: integer,
+      height: integer,
+      bytes: integer,
+      caption: text,
+      reports: integer,
+      reportedBy: keyword,
+      hidden: bool,
     },
     [indexNames.MESSAGES]: {
       id: keyword,
@@ -221,6 +240,12 @@ export function buildIndexMappings(inferenceId: string): Record<IndexName, Prope
       handle: keyword,
       attendeeId: keyword,
       createdAt: date,
+      type: keyword,
+      title: { type: 'text', index: false },
+      body: { type: 'text', index: false },
+      link: unindexedKeyword,
+      dedupeKey: keyword,
+      readAt: date,
     },
   };
 }

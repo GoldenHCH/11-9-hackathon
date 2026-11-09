@@ -31,6 +31,7 @@ import {
   replaceIntro,
   searchIntros,
 } from './meet.store';
+import { notifyMeetAccepted, notifyMeetOffer } from '../notifications/notify';
 import { matchSignalFor } from './signal';
 
 const MINUTE_MS = 60_000;
@@ -218,6 +219,7 @@ async function accept(stored: IStoredIntro, attendeeId: string): Promise<IIntro>
   const next = acceptedBy.includes(accepted.fromId) && acceptedBy.includes(accepted.toId) ? await confirmMeet(accepted, at) : accepted;
 
   await replaceIntro(stored, next);
+  await notifyMeetAccepted(next);
 
   return next;
 }
@@ -263,6 +265,8 @@ export async function proposeMeet(input: IProposeMeetInput): Promise<IMeet> {
         } else {
           await createIntro(intro);
         }
+
+        await notifyMeetOffer(intro, attendee);
 
         markSpan(meetId, intro.status);
 

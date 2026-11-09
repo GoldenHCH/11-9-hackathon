@@ -1011,8 +1011,8 @@
         "visitedByMe": false
       },
       {
-        "id": "outpost-palo-alto-networks",
-        "name": "Palo Alto Networks",
+        "id": "outpost-chronosphere-a-palo-alto-networks-company",
+        "name": "Chronosphere, a Palo Alto Networks Company",
         "exhibitorType": "sponsor",
         "tier": "Gold",
         "boothNumber": "181",
@@ -1202,12 +1202,12 @@
         "visitedByMe": false
       }
     ],
-    "total": 319,
+    "total": 320,
     "facets": {
       "types": [
         {
           "value": "sponsor",
-          "count": 233
+          "count": 234
         },
         {
           "value": "project",
@@ -1557,8 +1557,8 @@
             "visitorsNow": 0
           },
           {
-            "id": "outpost-palo-alto-networks",
-            "name": "Palo Alto Networks",
+            "id": "outpost-chronosphere-a-palo-alto-networks-company",
+            "name": "Chronosphere, a Palo Alto Networks Company",
             "exhibitorType": "sponsor",
             "tier": "Gold",
             "boothNumber": "181",

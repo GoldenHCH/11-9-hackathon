@@ -5916,7 +5916,7 @@
     "at": "2026-11-09T14:31:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-cloudchipr"
+    "locationId": "outpost-cloud-native-studios"
   },
   {
     "id": "xp-booth-003",
@@ -5936,7 +5936,7 @@
     "at": "2026-11-09T14:31:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-project-dapr"
+    "locationId": "outpost-crusoe"
   },
   {
     "id": "xp-booth-005",
@@ -6006,7 +6006,7 @@
     "at": "2026-11-09T14:35:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-klique"
+    "locationId": "outpost-project-karmada"
   },
   {
     "id": "xp-booth-012",
@@ -6056,7 +6056,7 @@
     "at": "2026-11-09T14:38:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-project-k3s"
+    "locationId": "outpost-jozu"
   },
   {
     "id": "xp-booth-017",
@@ -6066,7 +6066,7 @@
     "at": "2026-11-09T14:38:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-oracle"
+    "locationId": "outpost-opensearch"
   },
   {
     "id": "xp-booth-018",
@@ -6106,7 +6106,7 @@
     "at": "2026-11-09T14:39:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-greptime"
+    "locationId": "outpost-gremlin"
   },
   {
     "id": "xp-booth-022",
@@ -6116,7 +6116,7 @@
     "at": "2026-11-09T14:40:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-palo-alto-networks"
+    "locationId": "outpost-project-oscal-compass"
   },
   {
     "id": "xp-booth-023",
@@ -6126,7 +6126,7 @@
     "at": "2026-11-09T14:41:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-controltheory"
+    "locationId": "outpost-project-confidential-containers"
   },
   {
     "id": "xp-booth-024",
@@ -6136,7 +6136,7 @@
     "at": "2026-11-09T14:41:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-oracle"
+    "locationId": "outpost-opensearch"
   },
   {
     "id": "xp-booth-025",
@@ -6176,7 +6176,7 @@
     "at": "2026-11-09T14:44:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-project-k0s"
+    "locationId": "outpost-jetbrains"
   },
   {
     "id": "xp-booth-029",
@@ -6256,7 +6256,7 @@
     "at": "2026-11-09T14:46:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-iown-global-forum"
+    "locationId": "outpost-intuit"
   },
   {
     "id": "xp-booth-037",
@@ -6296,7 +6296,7 @@
     "at": "2026-11-09T14:50:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-framework"
+    "locationId": "outpost-fluidcloud"
   },
   {
     "id": "xp-booth-041",
@@ -6306,7 +6306,7 @@
     "at": "2026-11-09T14:50:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-infino-ai"
+    "locationId": "outpost-ibm"
   },
   {
     "id": "xp-booth-042",
@@ -6356,7 +6356,7 @@
     "at": "2026-11-09T14:51:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-nebius"
+    "locationId": "outpost-mirrord-by-metalbear"
   },
   {
     "id": "xp-booth-047",
@@ -6366,7 +6366,7 @@
     "at": "2026-11-09T14:52:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-project-backstage"
+    "locationId": "outpost-better-stack"
   },
   {
     "id": "xp-booth-048",
@@ -6406,7 +6406,7 @@
     "at": "2026-11-09T14:53:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-ascend"
+    "locationId": "outpost-attribute-by-doit"
   },
   {
     "id": "xp-booth-052",
@@ -6416,7 +6416,7 @@
     "at": "2026-11-09T14:54:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-mirantis"
+    "locationId": "outpost-mezmo"
   },
   {
     "id": "xp-booth-053",
@@ -6426,7 +6426,7 @@
     "at": "2026-11-09T14:55:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-ascend"
+    "locationId": "outpost-project-backstage"
   },
   {
     "id": "xp-booth-054",
@@ -6436,7 +6436,7 @@
     "at": "2026-11-09T14:55:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-openobserve"
+    "locationId": "outpost-project-openeverest"
   },
   {
     "id": "xp-booth-055",
@@ -6446,7 +6446,7 @@
     "at": "2026-11-09T14:56:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-new-relic"
+    "locationId": "outpost-new-orleans-cvb"
   },
   {
     "id": "xp-booth-056",
@@ -6466,7 +6466,7 @@
     "at": "2026-11-09T14:57:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-honeycomb"
+    "locationId": "outpost-project-helm"
   },
   {
     "id": "xp-booth-058",
@@ -6506,7 +6506,7 @@
     "at": "2026-11-09T15:00:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-crusoe"
+    "locationId": "outpost-cribl"
   },
   {
     "id": "xp-booth-062",
@@ -6516,7 +6516,7 @@
     "at": "2026-11-09T15:00:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-dash0"
+    "locationId": "outpost-cvs-health"
   },
   {
     "id": "xp-booth-063",
@@ -6546,7 +6546,7 @@
     "at": "2026-11-09T15:02:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-haproxy-technologies"
+    "locationId": "outpost-groundcover"
   },
   {
     "id": "xp-booth-066",
@@ -6556,7 +6556,7 @@
     "at": "2026-11-09T15:02:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-camara-project"
+    "locationId": "outpost-canonical"
   },
   {
     "id": "xp-booth-067",
@@ -6566,7 +6566,7 @@
     "at": "2026-11-09T15:02:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-project-lima"
+    "locationId": "outpost-lablup"
   },
   {
     "id": "xp-booth-068",
@@ -6596,7 +6596,7 @@
     "at": "2026-11-09T15:04:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-iown-global-forum"
+    "locationId": "outpost-infisical"
   },
   {
     "id": "xp-booth-071",
@@ -6606,7 +6606,7 @@
     "at": "2026-11-09T15:04:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-ibm-kubecost"
+    "locationId": "outpost-ibm"
   },
   {
     "id": "xp-booth-072",
@@ -6616,7 +6616,7 @@
     "at": "2026-11-09T15:04:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-palo-alto-networks"
+    "locationId": "outpost-project-oscal-compass"
   },
   {
     "id": "xp-booth-073",
@@ -6626,7 +6626,7 @@
     "at": "2026-11-09T15:05:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-ibm-kubecost"
+    "locationId": "outpost-ibm"
   },
   {
     "id": "xp-booth-074",
@@ -6636,7 +6636,7 @@
     "at": "2026-11-09T15:05:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-project-metal3-io"
+    "locationId": "outpost-project-meshery"
   },
   {
     "id": "xp-booth-075",
@@ -6676,7 +6676,7 @@
     "at": "2026-11-09T15:09:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-intuit"
+    "locationId": "outpost-infros"
   },
   {
     "id": "xp-booth-079",
@@ -6696,7 +6696,7 @@
     "at": "2026-11-09T15:10:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-linux-foundation-education"
+    "locationId": "outpost-linbit"
   },
   {
     "id": "xp-booth-081",
@@ -6726,7 +6726,7 @@
     "at": "2026-11-09T15:11:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-project-lima"
+    "locationId": "outpost-project-kyverno"
   },
   {
     "id": "xp-booth-084",
@@ -6756,7 +6756,7 @@
     "at": "2026-11-09T15:13:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-heroku"
+    "locationId": "outpost-project-helm"
   },
   {
     "id": "xp-booth-087",
@@ -6776,7 +6776,7 @@
     "at": "2026-11-09T15:16:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-datadog"
+    "locationId": "outpost-databricks"
   },
   {
     "id": "xp-booth-089",
@@ -6796,7 +6796,7 @@
     "at": "2026-11-09T15:17:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-haproxy-technologies"
+    "locationId": "outpost-project-hami"
   },
   {
     "id": "xp-booth-091",
@@ -6836,7 +6836,7 @@
     "at": "2026-11-09T15:21:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-intuit"
+    "locationId": "outpost-infisical"
   },
   {
     "id": "xp-booth-095",
@@ -6846,7 +6846,7 @@
     "at": "2026-11-09T15:21:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-fusionauth"
+    "locationId": "outpost-project-flux"
   },
   {
     "id": "xp-booth-096",
@@ -6866,7 +6866,7 @@
     "at": "2026-11-09T15:23:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-mezmo"
+    "locationId": "outpost-project-meshery"
   },
   {
     "id": "xp-booth-098",
@@ -6876,7 +6876,7 @@
     "at": "2026-11-09T15:23:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-cloudbees"
+    "locationId": "outpost-project-cloud-native-buildpacks"
   },
   {
     "id": "xp-booth-099",
@@ -6916,7 +6916,7 @@
     "at": "2026-11-09T15:25:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-framework"
+    "locationId": "outpost-project-flux"
   },
   {
     "id": "xp-booth-103",
@@ -6926,7 +6926,7 @@
     "at": "2026-11-09T15:26:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-orca-security"
+    "locationId": "outpost-oracle"
   },
   {
     "id": "xp-booth-104",
@@ -6946,7 +6946,7 @@
     "at": "2026-11-09T15:26:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-obot-ai"
+    "locationId": "outpost-nvidia"
   },
   {
     "id": "xp-booth-106",
@@ -6966,7 +6966,7 @@
     "at": "2026-11-09T15:29:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-macstadium"
+    "locationId": "outpost-loophole-labs"
   },
   {
     "id": "xp-booth-108",
@@ -6976,7 +6976,7 @@
     "at": "2026-11-09T15:31:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-cast-ai"
+    "locationId": "outpost-causely"
   },
   {
     "id": "xp-booth-109",
@@ -6986,7 +6986,7 @@
     "at": "2026-11-09T15:31:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-coralogix"
+    "locationId": "outpost-controltheory"
   },
   {
     "id": "xp-booth-110",
@@ -6996,7 +6996,7 @@
     "at": "2026-11-09T15:31:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-project-k8gb"
+    "locationId": "outpost-project-k0s"
   },
   {
     "id": "xp-booth-111",
@@ -7016,7 +7016,7 @@
     "at": "2026-11-09T15:32:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-f5"
+    "locationId": "outpost-everbridge-xmatters"
   },
   {
     "id": "xp-booth-113",
@@ -7036,7 +7036,7 @@
     "at": "2026-11-09T15:36:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-project-bootc"
+    "locationId": "outpost-project-cadence"
   },
   {
     "id": "xp-booth-115",
@@ -7046,7 +7046,7 @@
     "at": "2026-11-09T15:37:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-kodekloud"
+    "locationId": "outpost-project-kitops"
   },
   {
     "id": "xp-booth-116",
@@ -7056,7 +7056,7 @@
     "at": "2026-11-09T15:37:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-project-cedar"
+    "locationId": "outpost-chainguard"
   },
   {
     "id": "xp-booth-117",
@@ -7066,7 +7066,7 @@
     "at": "2026-11-09T15:38:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-blacksmith"
+    "locationId": "outpost-camara-project"
   },
   {
     "id": "xp-booth-118",
@@ -7086,7 +7086,7 @@
     "at": "2026-11-09T15:38:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-gravitee"
+    "locationId": "outpost-grafana-labs"
   },
   {
     "id": "xp-booth-120",
@@ -7166,7 +7166,7 @@
     "at": "2026-11-09T15:40:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-tfir"
+    "locationId": "outpost-testkube"
   },
   {
     "id": "xp-booth-128",
@@ -7176,7 +7176,7 @@
     "at": "2026-11-09T15:40:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-vijil"
+    "locationId": "outpost-victoriametrics"
   },
   {
     "id": "xp-booth-129",
@@ -7226,7 +7226,7 @@
     "at": "2026-11-09T15:41:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-project-lima"
+    "locationId": "outpost-latitude-sh"
   },
   {
     "id": "xp-booth-134",
@@ -7246,7 +7246,7 @@
     "at": "2026-11-09T15:43:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-project-istio"
+    "locationId": "outpost-isovalent-at-cisco"
   },
   {
     "id": "xp-booth-136",
@@ -7276,7 +7276,7 @@
     "at": "2026-11-09T15:44:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-project-opencost"
+    "locationId": "outpost-project-open-cluster-management"
   },
   {
     "id": "xp-booth-139",
@@ -7286,7 +7286,7 @@
     "at": "2026-11-09T15:44:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-cvs-health"
+    "locationId": "outpost-crusoe"
   },
   {
     "id": "xp-booth-140",
@@ -7306,7 +7306,7 @@
     "at": "2026-11-09T15:45:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-echo"
+    "locationId": "outpost-elastic"
   },
   {
     "id": "xp-booth-142",
@@ -7346,7 +7346,7 @@
     "at": "2026-11-09T15:46:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-openobserve"
+    "locationId": "outpost-project-openeverest"
   },
   {
     "id": "xp-booth-146",
@@ -7356,7 +7356,7 @@
     "at": "2026-11-09T15:46:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-project-cedar"
+    "locationId": "outpost-chainguard"
   },
   {
     "id": "xp-booth-147",
@@ -7386,7 +7386,7 @@
     "at": "2026-11-09T15:47:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-blacksmith"
+    "locationId": "outpost-project-bootc"
   },
   {
     "id": "xp-booth-150",
@@ -7406,7 +7406,7 @@
     "at": "2026-11-09T15:48:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-databricks"
+    "locationId": "outpost-dataagent"
   },
   {
     "id": "xp-booth-152",
@@ -7416,7 +7416,7 @@
     "at": "2026-11-09T15:48:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-crash-override"
+    "locationId": "outpost-couchbase"
   },
   {
     "id": "xp-booth-153",
@@ -7426,7 +7426,7 @@
     "at": "2026-11-09T15:48:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-maze"
+    "locationId": "outpost-macstadium"
   },
   {
     "id": "xp-booth-154",
@@ -7436,7 +7436,7 @@
     "at": "2026-11-09T15:48:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-microsoft-azure"
+    "locationId": "outpost-linbit"
   },
   {
     "id": "xp-booth-155",
@@ -7466,7 +7466,7 @@
     "at": "2026-11-09T15:50:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-mirrord-by-metalbear"
+    "locationId": "outpost-mirantis"
   },
   {
     "id": "xp-booth-158",
@@ -7476,7 +7476,7 @@
     "at": "2026-11-09T15:50:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-project-oscal-compass"
+    "locationId": "outpost-oracle"
   },
   {
     "id": "xp-booth-159",
@@ -7506,7 +7506,7 @@
     "at": "2026-11-09T15:52:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-kubedb"
+    "locationId": "outpost-project-kserve"
   },
   {
     "id": "xp-booth-162",
@@ -7576,7 +7576,7 @@
     "at": "2026-11-09T15:56:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-project-confidential-containers"
+    "locationId": "outpost-coder"
   },
   {
     "id": "xp-booth-169",
@@ -7606,7 +7606,7 @@
     "at": "2026-11-09T15:59:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-project-flux"
+    "locationId": "outpost-flox"
   },
   {
     "id": "xp-booth-172",
@@ -7616,7 +7616,7 @@
     "at": "2026-11-09T15:59:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-infros"
+    "locationId": "outpost-infisical"
   },
   {
     "id": "xp-booth-173",
@@ -7646,7 +7646,7 @@
     "at": "2026-11-09T15:59:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-nebius"
+    "locationId": "outpost-microsoft-azure"
   },
   {
     "id": "xp-booth-176",
@@ -7686,7 +7686,7 @@
     "at": "2026-11-09T16:04:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-black-duck"
+    "locationId": "outpost-blacksmith"
   },
   {
     "id": "xp-booth-180",
@@ -7716,7 +7716,7 @@
     "at": "2026-11-09T16:04:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-northmark-compute-and-cloud"
+    "locationId": "outpost-new-relic"
   },
   {
     "id": "xp-booth-183",
@@ -7736,7 +7736,7 @@
     "at": "2026-11-09T16:05:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-latitude-sh"
+    "locationId": "outpost-project-kyverno"
   },
   {
     "id": "xp-booth-185",
@@ -7746,7 +7746,7 @@
     "at": "2026-11-09T16:06:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-gremlin"
+    "locationId": "outpost-grafana-labs"
   },
   {
     "id": "xp-booth-186",
@@ -7766,7 +7766,7 @@
     "at": "2026-11-09T16:08:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-couchbase"
+    "locationId": "outpost-coreweave"
   },
   {
     "id": "xp-booth-188",
@@ -7776,7 +7776,7 @@
     "at": "2026-11-09T16:08:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-project-opentelemetry"
+    "locationId": "outpost-project-opencost"
   },
   {
     "id": "xp-booth-189",
@@ -7786,7 +7786,7 @@
     "at": "2026-11-09T16:08:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-new-relic"
+    "locationId": "outpost-neubird"
   },
   {
     "id": "xp-booth-190",
@@ -7836,7 +7836,7 @@
     "at": "2026-11-09T16:11:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-crusoe"
+    "locationId": "outpost-project-crossplane"
   },
   {
     "id": "xp-booth-195",
@@ -7856,7 +7856,7 @@
     "at": "2026-11-09T16:11:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-f5"
+    "locationId": "outpost-emphere"
   },
   {
     "id": "xp-booth-197",
@@ -7866,7 +7866,7 @@
     "at": "2026-11-09T16:12:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-clickhouse"
+    "locationId": "outpost-chronosphere-a-palo-alto-networks-company"
   },
   {
     "id": "xp-booth-198",
@@ -7896,7 +7896,7 @@
     "at": "2026-11-09T16:13:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-controltheory"
+    "locationId": "outpost-project-confidential-containers"
   },
   {
     "id": "xp-booth-201",
@@ -7906,7 +7906,7 @@
     "at": "2026-11-09T16:14:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-cvs-health"
+    "locationId": "outpost-crusoe"
   },
   {
     "id": "xp-booth-202",
@@ -7956,7 +7956,7 @@
     "at": "2026-11-09T16:15:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-grepr"
+    "locationId": "outpost-gravitee"
   },
   {
     "id": "xp-booth-207",
@@ -7976,7 +7976,7 @@
     "at": "2026-11-09T16:17:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-ciq"
+    "locationId": "outpost-project-cilium"
   },
   {
     "id": "xp-booth-209",
@@ -7996,7 +7996,7 @@
     "at": "2026-11-09T16:17:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-myota"
+    "locationId": "outpost-momentic"
   },
   {
     "id": "xp-booth-211",
@@ -8046,7 +8046,7 @@
     "at": "2026-11-09T16:19:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-oracle"
+    "locationId": "outpost-opensearch"
   },
   {
     "id": "xp-booth-216",
@@ -8056,7 +8056,7 @@
     "at": "2026-11-09T16:19:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-ibm-kubecost"
+    "locationId": "outpost-ibm"
   },
   {
     "id": "xp-booth-217",
@@ -8066,7 +8066,7 @@
     "at": "2026-11-09T16:19:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-cloudbees"
+    "locationId": "outpost-clickhouse"
   },
   {
     "id": "xp-booth-218",
@@ -8116,7 +8116,7 @@
     "at": "2026-11-09T16:22:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-palo-alto-networks"
+    "locationId": "outpost-project-ovn-kubernetes"
   },
   {
     "id": "xp-booth-223",
@@ -8126,7 +8126,7 @@
     "at": "2026-11-09T16:22:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-stacklok"
+    "locationId": "outpost-stacklet"
   },
   {
     "id": "xp-booth-224",
@@ -8136,7 +8136,7 @@
     "at": "2026-11-09T16:23:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-oracle"
+    "locationId": "outpost-omnistrate"
   },
   {
     "id": "xp-booth-225",
@@ -8146,7 +8146,7 @@
     "at": "2026-11-09T16:23:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-project-longhorn"
+    "locationId": "outpost-lablup"
   },
   {
     "id": "xp-booth-226",
@@ -8156,7 +8156,7 @@
     "at": "2026-11-09T16:24:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-mirantis"
+    "locationId": "outpost-microsoft-azure"
   },
   {
     "id": "xp-booth-227",
@@ -8186,7 +8186,7 @@
     "at": "2026-11-09T16:25:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-mirrord-by-metalbear"
+    "locationId": "outpost-mirantis"
   },
   {
     "id": "xp-booth-230",
@@ -8196,7 +8196,7 @@
     "at": "2026-11-09T16:26:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-lablup"
+    "locationId": "outpost-project-kyverno"
   },
   {
     "id": "xp-booth-231",
@@ -8236,7 +8236,7 @@
     "at": "2026-11-09T16:27:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-pagerduty"
+    "locationId": "outpost-project-oscal-compass"
   },
   {
     "id": "xp-booth-235",
@@ -8266,7 +8266,7 @@
     "at": "2026-11-09T16:28:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-microsoft-azure"
+    "locationId": "outpost-project-metal3-io"
   },
   {
     "id": "xp-booth-238",
@@ -8296,7 +8296,7 @@
     "at": "2026-11-09T16:31:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-canonical"
+    "locationId": "outpost-project-cartography"
   },
   {
     "id": "xp-booth-241",
@@ -8306,7 +8306,7 @@
     "at": "2026-11-09T16:32:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-dynatrace"
+    "locationId": "outpost-project-drasi"
   },
   {
     "id": "xp-booth-242",
@@ -8326,7 +8326,7 @@
     "at": "2026-11-09T16:33:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-project-kai-scheduler"
+    "locationId": "outpost-project-k3s"
   },
   {
     "id": "xp-booth-244",
@@ -8336,7 +8336,7 @@
     "at": "2026-11-09T16:33:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-fusionauth"
+    "locationId": "outpost-framework"
   },
   {
     "id": "xp-booth-245",
@@ -8366,7 +8366,7 @@
     "at": "2026-11-09T16:36:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-oracle"
+    "locationId": "outpost-project-opentofu"
   },
   {
     "id": "xp-booth-248",
@@ -8386,7 +8386,7 @@
     "at": "2026-11-09T16:37:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-cast-ai"
+    "locationId": "outpost-causal-dynamics-lab"
   },
   {
     "id": "xp-booth-250",
@@ -8396,7 +8396,7 @@
     "at": "2026-11-09T16:37:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-elastic"
+    "locationId": "outpost-project-dynamic-resource-allocation-sig-subproject"
   },
   {
     "id": "xp-booth-251",
@@ -8416,7 +8416,7 @@
     "at": "2026-11-09T16:38:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-rafay-systems"
+    "locationId": "outpost-project-radius"
   },
   {
     "id": "xp-booth-badge-tektonpanda",
@@ -8446,7 +8446,7 @@
     "at": "2026-11-09T16:43:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-amutable"
+    "locationId": "outpost-antithesis"
   },
   {
     "id": "xp-booth-255",
@@ -8456,7 +8456,7 @@
     "at": "2026-11-09T16:44:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-solo-io"
+    "locationId": "outpost-sentry"
   },
   {
     "id": "xp-booth-256",
@@ -8476,7 +8476,7 @@
     "at": "2026-11-09T16:44:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-linbit"
+    "locationId": "outpost-project-lima"
   },
   {
     "id": "xp-booth-badge-ciliumjackal",
@@ -8556,7 +8556,7 @@
     "at": "2026-11-09T16:50:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-cribl"
+    "locationId": "outpost-cosmonic"
   },
   {
     "id": "xp-booth-264",
@@ -8626,7 +8626,7 @@
     "at": "2026-11-09T16:54:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-project-kubevela"
+    "locationId": "outpost-kubermatic"
   },
   {
     "id": "xp-booth-270",
@@ -8636,7 +8636,7 @@
     "at": "2026-11-09T16:55:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-ibm-kubecost"
+    "locationId": "outpost-ibm"
   },
   {
     "id": "xp-booth-271",
@@ -8656,7 +8656,7 @@
     "at": "2026-11-09T16:59:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-project-opentofu"
+    "locationId": "outpost-opensearch"
   },
   {
     "id": "xp-booth-273",
@@ -8666,7 +8666,7 @@
     "at": "2026-11-09T16:59:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-infros"
+    "locationId": "outpost-infisical"
   },
   {
     "id": "xp-booth-274",
@@ -8696,7 +8696,7 @@
     "at": "2026-11-09T17:02:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-nvidia"
+    "locationId": "outpost-nutanix"
   },
   {
     "id": "xp-booth-277",
@@ -8706,7 +8706,7 @@
     "at": "2026-11-09T17:04:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-datacore"
+    "locationId": "outpost-dash0"
   },
   {
     "id": "xp-booth-278",
@@ -8766,7 +8766,7 @@
     "at": "2026-11-09T17:09:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-causal-dynamics-lab"
+    "locationId": "outpost-causely"
   },
   {
     "id": "xp-booth-283",
@@ -8776,7 +8776,7 @@
     "at": "2026-11-09T17:10:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-effodio"
+    "locationId": "outpost-edera"
   },
   {
     "id": "xp-booth-284",
@@ -8786,7 +8786,7 @@
     "at": "2026-11-09T17:11:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-pagerduty"
+    "locationId": "outpost-oracle"
   },
   {
     "id": "xp-booth-285",
@@ -8796,7 +8796,7 @@
     "at": "2026-11-09T17:11:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-cloudchipr"
+    "locationId": "outpost-cloud-native-studios"
   },
   {
     "id": "xp-booth-286",
@@ -8856,7 +8856,7 @@
     "at": "2026-11-09T17:16:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-cloud-native-studios"
+    "locationId": "outpost-project-cloud-native-buildpacks"
   },
   {
     "id": "xp-booth-290",
@@ -8876,7 +8876,7 @@
     "at": "2026-11-09T17:18:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-fusionauth"
+    "locationId": "outpost-faros"
   },
   {
     "id": "xp-booth-292",
@@ -8916,7 +8916,7 @@
     "at": "2026-11-09T17:21:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-project-openeverest"
+    "locationId": "outpost-open-source-security-foundation-openssf"
   },
   {
     "id": "xp-booth-296",
@@ -8956,7 +8956,7 @@
     "at": "2026-11-09T17:22:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-ciq"
+    "locationId": "outpost-chronosphere-a-palo-alto-networks-company"
   },
   {
     "id": "xp-booth-300",
@@ -9026,7 +9026,7 @@
     "at": "2026-11-09T17:27:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-portainer"
+    "locationId": "outpost-port"
   },
   {
     "id": "xp-booth-306",
@@ -9056,7 +9056,7 @@
     "at": "2026-11-09T17:28:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-heroku"
+    "locationId": "outpost-project-helm"
   },
   {
     "id": "xp-booth-badge-nodeibex",
@@ -9086,7 +9086,7 @@
     "at": "2026-11-09T17:30:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-ciroos"
+    "locationId": "outpost-clickhouse"
   },
   {
     "id": "xp-booth-badge-vitessorca",
@@ -9106,7 +9106,7 @@
     "at": "2026-11-09T17:32:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-crash-override"
+    "locationId": "outpost-coralogix"
   },
   {
     "id": "xp-booth-312",
@@ -9116,7 +9116,7 @@
     "at": "2026-11-09T17:33:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-pulumi"
+    "locationId": "outpost-prosperops"
   },
   {
     "id": "xp-booth-313",
@@ -9126,7 +9126,7 @@
     "at": "2026-11-09T17:33:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-ibm-kubecost"
+    "locationId": "outpost-ibm"
   },
   {
     "id": "xp-booth-314",
@@ -9166,7 +9166,7 @@
     "at": "2026-11-09T17:34:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-opensearch"
+    "locationId": "outpost-openobserve"
   },
   {
     "id": "xp-booth-badge-argokiwi",
@@ -9186,7 +9186,7 @@
     "at": "2026-11-09T17:35:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-couchbase"
+    "locationId": "outpost-coralogix"
   },
   {
     "id": "xp-booth-319",
@@ -9306,7 +9306,7 @@
     "at": "2026-11-09T17:54:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-docker"
+    "locationId": "outpost-devzero"
   },
   {
     "id": "xp-booth-328",
@@ -9346,7 +9346,7 @@
     "at": "2026-11-09T17:55:00.000Z",
     "type": "outpost",
     "xp": 10,
-    "locationId": "outpost-fastly"
+    "locationId": "outpost-f5"
   },
   {
     "id": "xp-booth-badge-ebpfmoose",

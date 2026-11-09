@@ -9,6 +9,7 @@ import { filter, map, shareReplay, startWith } from 'rxjs';
 import { fullScreenRoutePrefixes, navigationTabs, roleViews } from './app.constants';
 import { AppHelper } from './app.helper';
 import { LoadingService } from './core/services/loading.service';
+import { NotificationBellComponent } from './notifications/notification-bell/notification-bell.component';
 import { AccessibilityService } from './profile/services/accessibility.service';
 
 @Component({
@@ -22,6 +23,7 @@ import { AccessibilityService } from './profile/services/accessibility.service';
     MatIconModule,
     MatMenuModule,
     MatProgressBarModule,
+    NotificationBellComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

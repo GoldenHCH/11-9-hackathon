@@ -32,6 +32,7 @@ Other routes: `GET /healthz`, `GET /readyz` (pings Elasticsearch), `GET /api/con
 | `app/src/handshake/*` | hallway | phone-to-phone handshake: store (`handshakes` index), question choice, answer matching (`answer-match.helper.ts`, with a `node:test` file) |
 | `app/src/booth/booth-notes.ts` | check-in | booth notes (`booth_notes` index, `noteText` semantic_text written in the background), outpost XP rules |
 | `app/src/messages/messages.ts` | hallway | messages between players in a mutually accepted meet (`messages` index) |
+| `app/src/notifications/*` | notifications | the bell: create-only notification docs in `messages` (`kind: notification`), in-app triggers (`notify.ts`: meet offer, meet accepted, banner), list and mark read, and the `nudge` CronJob logic (new quests, new matches) |
 | `app/src/recap/*` | recap | recap data, rule-based next steps, pure email renderer (`recap-email.ts`) |
 | `app/src/ai/handshake.ts` | ai | optional phrasing of the handshake question (1.5 s budget, template fallback) |
 | `app/src/quests/complete.ts`, `quests/boss.ts` | quests | `completeQuestsFor(event)`, `recordBossAnswers(attendeeId, talkId, correct)` |
@@ -77,5 +78,7 @@ Cross-lane helpers start as stubs that throw `NotImplementedError` (HTTP 501, co
 | send_message | ISendMessageInput | IMessage | |
 | list_messages | IListMessagesInput | IMessage[] | |
 | recap | IAttendeeInput | IRecap | |
+| list_notifications | IListNotificationsInput | IListNotificationsResult | |
+| mark_notifications_read | IMarkNotificationsReadInput | IMarkNotificationsReadResult | |
 
 Contracts live in `IToolContracts` (`app/src/types/kubequest.interfaces.ts`). The XP column marks tools whose route must set `kubequest.xp.awarded`; the owning lane sets `xpAwarded` in its `defineTool` call.

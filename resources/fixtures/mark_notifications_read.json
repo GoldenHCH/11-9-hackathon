@@ -1,0 +1,26 @@
+{
+  "tool": "mark_notifications_read",
+  "endpoint": "POST /api/tools/mark_notifications_read",
+  "request": {
+    "attendeeId": "p_zqxtrvalqA7IoBqp",
+    "ids": ["quest:8189074aa2c4fd8e"]
+  },
+  "status": 200,
+  "response": {
+    "marked": 1,
+    "unread": 2
+  },
+  "variants": {
+    "mark_notifications_read_all": {
+      "request": {
+        "attendeeId": "p_zqxtrvalqA7IoBqp",
+        "all": true
+      },
+      "status": 200,
+      "response": {
+        "marked": 2,
+        "unread": 0
+      }
+    }
+  }
+}

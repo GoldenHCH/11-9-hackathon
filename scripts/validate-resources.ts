@@ -17,8 +17,16 @@ import { haversineMeters } from './lib/geo.helper';
 import { readJsonFile, resourcePath } from './lib/resource-files.helper';
 
 const minuteMs = 60 * 1000;
-const expectedSponsorBooths = 233;
-const expectedProjectKiosks = 86;
+interface IVenueSponsorRow {
+  booth: string | string[] | null;
+}
+
+const expectedSponsorBooths = readJsonFile<IVenueSponsorRow[]>(resourcePath('venue/sponsors.json')).filter(
+  (row) => row.booth !== null && row.booth.length > 0,
+).length;
+const expectedProjectKiosks = new Set(
+  readJsonFile<{ project: string }[]>(resourcePath('venue/project_pavilion_kiosks.json')).map((row) => row.project),
+).size;
 const maxBoothMetersFromCenter = 250;
 const sessionLocationKinds = ['room', 'boss-room', 'theater'];
 

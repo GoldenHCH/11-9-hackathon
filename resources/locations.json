@@ -681,37 +681,6 @@
     }
   },
   {
-    "id": "outpost-ascend",
-    "name": "Ascend",
-    "kind": "outpost",
-    "building": "Salt Palace",
-    "level": "Level 1",
-    "room": "Ascend",
-    "zone": "Cosmic Canyon",
-    "description": "Ascend, Start-Up sponsor, booth 362 in Hall 4-5, Cosmic Canyon zone.",
-    "boothNumber": "362",
-    "sponsorTier": "Start-Up",
-    "askAbout": "What they're building for AI",
-    "topics": [
-      "ai"
-    ],
-    "hasScreen": false,
-    "exhibitorType": "sponsor",
-    "categories": [
-      "Artificial Intelligence (AI)"
-    ],
-    "hall": "4-5",
-    "mapPosition": {
-      "x": 567.2,
-      "y": 241.4
-    },
-    "searchText": "Ascend (sponsor booth), Salt Palace Level 1, Cosmic Canyon zone, Hall 4-5. Ascend, Start-Up sponsor, booth 362 in Hall 4-5, Cosmic Canyon zone. Booth 362, Start-Up tier. Categories: Artificial Intelligence (AI). Ask them about: What they're building for AI. Topics: ai.",
-    "geo": {
-      "lat": 40.766835,
-      "lon": -111.894311
-    }
-  },
-  {
     "id": "outpost-ascendra-networks",
     "name": "Ascendra Networks",
     "kind": "outpost",
@@ -1235,6 +1204,37 @@
     }
   },
   {
+    "id": "outpost-chronosphere-a-palo-alto-networks-company",
+    "name": "Chronosphere, a Palo Alto Networks Company",
+    "kind": "outpost",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "Chronosphere, a Palo Alto Networks Company",
+    "zone": "Alpine Overlook",
+    "description": "Chronosphere, a Palo Alto Networks Company, Gold sponsor, booth 181 in Hall 1, Alpine Overlook zone.",
+    "boothNumber": "181",
+    "sponsorTier": "Gold",
+    "askAbout": "What they're building for observability",
+    "topics": [
+      "operations"
+    ],
+    "hasScreen": false,
+    "exhibitorType": "sponsor",
+    "categories": [
+      "Observability"
+    ],
+    "hall": "1",
+    "mapPosition": {
+      "x": 700.4,
+      "y": 790.6
+    },
+    "searchText": "Chronosphere, a Palo Alto Networks Company (sponsor booth), Salt Palace Level 1, Alpine Overlook zone, Hall 1. Chronosphere, a Palo Alto Networks Company, Gold sponsor, booth 181 in Hall 1, Alpine Overlook zone. Booth 181, Gold tier. Categories: Observability. Ask them about: What they're building for observability. Topics: operations.",
+    "geo": {
+      "lat": 40.765997,
+      "lon": -111.894043
+    }
+  },
+  {
     "id": "outpost-project-cilium",
     "name": "Cilium",
     "kind": "outpost",
@@ -1600,6 +1600,34 @@
     "geo": {
       "lat": 40.766116,
       "lon": -111.894169
+    }
+  },
+  {
+    "id": "outpost-codevisionary",
+    "name": "CodeVisionary",
+    "kind": "outpost",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "CodeVisionary",
+    "zone": "Cosmic Canyon",
+    "description": "CodeVisionary, Start-Up sponsor, booth 362 in Hall 4-5, Cosmic Canyon zone.",
+    "boothNumber": "362",
+    "sponsorTier": "Start-Up",
+    "askAbout": "What CodeVisionary is showing at KubeCon this year",
+    "topics": [
+      "other"
+    ],
+    "hasScreen": false,
+    "exhibitorType": "sponsor",
+    "hall": "4-5",
+    "mapPosition": {
+      "x": 567.2,
+      "y": 241.4
+    },
+    "searchText": "CodeVisionary (sponsor booth), Salt Palace Level 1, Cosmic Canyon zone, Hall 4-5. CodeVisionary, Start-Up sponsor, booth 362 in Hall 4-5, Cosmic Canyon zone. Booth 362, Start-Up tier. Ask them about: What CodeVisionary is showing at KubeCon this year. Topics: other.",
+    "geo": {
+      "lat": 40.766835,
+      "lon": -111.894311
     }
   },
   {
@@ -5338,37 +5366,6 @@
     }
   },
   {
-    "id": "outpost-livekit",
-    "name": "LiveKit",
-    "kind": "outpost",
-    "building": "Salt Palace",
-    "level": "Level 1",
-    "room": "LiveKit",
-    "zone": "Honeycomb Hub",
-    "description": "LiveKit, Silver sponsor, booth 254 in Hall 2, Honeycomb Hub zone.",
-    "boothNumber": "254",
-    "sponsorTier": "Silver",
-    "askAbout": "What they're building for developer experience",
-    "topics": [
-      "platform"
-    ],
-    "hasScreen": false,
-    "exhibitorType": "sponsor",
-    "categories": [
-      "Application Development + Developer Experience"
-    ],
-    "hall": "2",
-    "mapPosition": {
-      "x": 665.8,
-      "y": 549.6
-    },
-    "searchText": "LiveKit (sponsor booth), Salt Palace Level 1, Honeycomb Hub zone, Hall 2. LiveKit, Silver sponsor, booth 254 in Hall 2, Honeycomb Hub zone. Booth 254, Silver tier. Categories: Application Development + Developer Experience. Ask them about: What they're building for developer experience. Topics: platform.",
-    "geo": {
-      "lat": 40.766365,
-      "lon": -111.894112
-    }
-  },
-  {
     "id": "outpost-project-longhorn",
     "name": "Longhorn",
     "kind": "outpost",
@@ -5395,6 +5392,34 @@
     "geo": {
       "lat": 40.766799,
       "lon": -111.894073
+    }
+  },
+  {
+    "id": "outpost-loophole-labs",
+    "name": "Loophole Labs",
+    "kind": "outpost",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "Loophole Labs",
+    "zone": "Honeycomb Hub",
+    "description": "Loophole Labs, Silver sponsor, booth 254 in Hall 2, Honeycomb Hub zone.",
+    "boothNumber": "254",
+    "sponsorTier": "Silver",
+    "askAbout": "What Loophole Labs is showing at KubeCon this year",
+    "topics": [
+      "other"
+    ],
+    "hasScreen": false,
+    "exhibitorType": "sponsor",
+    "hall": "2",
+    "mapPosition": {
+      "x": 665.8,
+      "y": 549.6
+    },
+    "searchText": "Loophole Labs (sponsor booth), Salt Palace Level 1, Honeycomb Hub zone, Hall 2. Loophole Labs, Silver sponsor, booth 254 in Hall 2, Honeycomb Hub zone. Booth 254, Silver tier. Ask them about: What Loophole Labs is showing at KubeCon this year. Topics: other.",
+    "geo": {
+      "lat": 40.766365,
+      "lon": -111.894112
     }
   },
   {
@@ -5976,6 +6001,37 @@
     "geo": {
       "lat": 40.766561,
       "lon": -111.894022
+    }
+  },
+  {
+    "id": "outpost-northflank",
+    "name": "Northflank",
+    "kind": "outpost",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "Northflank",
+    "zone": "Amber Hive",
+    "description": "Northflank, Silver sponsor, booth 261 in Hall 3, Amber Hive zone.",
+    "boothNumber": "261",
+    "sponsorTier": "Silver",
+    "askAbout": "What they're building for AI",
+    "topics": [
+      "ai"
+    ],
+    "hasScreen": false,
+    "exhibitorType": "sponsor",
+    "categories": [
+      "Artificial Intelligence (AI)"
+    ],
+    "hall": "3",
+    "mapPosition": {
+      "x": 570.6,
+      "y": 499.2
+    },
+    "searchText": "Northflank (sponsor booth), Salt Palace Level 1, Amber Hive zone, Hall 3. Northflank, Silver sponsor, booth 261 in Hall 3, Amber Hive zone. Booth 261, Silver tier. Categories: Artificial Intelligence (AI). Ask them about: What they're building for AI. Topics: ai.",
+    "geo": {
+      "lat": 40.766442,
+      "lon": -111.894304
     }
   },
   {
@@ -6742,37 +6798,6 @@
     "geo": {
       "lat": 40.766177,
       "lon": -111.894304
-    }
-  },
-  {
-    "id": "outpost-palo-alto-networks",
-    "name": "Palo Alto Networks",
-    "kind": "outpost",
-    "building": "Salt Palace",
-    "level": "Level 1",
-    "room": "Palo Alto Networks",
-    "zone": "Alpine Overlook",
-    "description": "Palo Alto Networks, Gold sponsor, booth 181 in Hall 1, Alpine Overlook zone.",
-    "boothNumber": "181",
-    "sponsorTier": "Gold",
-    "askAbout": "What they're building for observability",
-    "topics": [
-      "operations"
-    ],
-    "hasScreen": false,
-    "exhibitorType": "sponsor",
-    "categories": [
-      "Observability"
-    ],
-    "hall": "1",
-    "mapPosition": {
-      "x": 700.4,
-      "y": 790.6
-    },
-    "searchText": "Palo Alto Networks (sponsor booth), Salt Palace Level 1, Alpine Overlook zone, Hall 1. Palo Alto Networks, Gold sponsor, booth 181 in Hall 1, Alpine Overlook zone. Booth 181, Gold tier. Categories: Observability. Ask them about: What they're building for observability. Topics: operations.",
-    "geo": {
-      "lat": 40.765997,
-      "lon": -111.894043
     }
   },
   {

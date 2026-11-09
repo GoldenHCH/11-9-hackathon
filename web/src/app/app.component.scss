@@ -120,8 +120,8 @@
   color: var(--kq-muted);
 }
 
-@media (max-width: 380px) {
-  .brand-bar--staff .brand-name {
+@media (max-width: 420px) {
+  .brand-name {
     display: none;
   }
 }

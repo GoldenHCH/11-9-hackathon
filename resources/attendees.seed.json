@@ -2392,10 +2392,10 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-solo-io",
+    "lastLocationId": "outpost-sentry",
     "lastLocation": {
-      "lat": 40.765588,
-      "lon": -111.895056
+      "lat": 40.766236,
+      "lon": -111.894304
     },
     "lastSeenAt": "2026-11-09T16:44:00.000Z",
     "visible": true,
@@ -2657,10 +2657,10 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-cvs-health",
+    "lastLocationId": "outpost-crusoe",
     "lastLocation": {
-      "lat": 40.766798,
-      "lon": -111.894239
+      "lat": 40.765587,
+      "lon": -111.894711
     },
     "lastSeenAt": "2026-11-09T16:14:00.000Z",
     "visible": true,
@@ -2772,9 +2772,9 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-project-kai-scheduler",
+    "lastLocationId": "outpost-project-k3s",
     "lastLocation": {
-      "lat": 40.76687,
+      "lat": 40.766846,
       "lon": -111.894112
     },
     "lastSeenAt": "2026-11-09T16:33:00.000Z",
@@ -2959,10 +2959,10 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-crusoe",
+    "lastLocationId": "outpost-project-crossplane",
     "lastLocation": {
-      "lat": 40.765587,
-      "lon": -111.894711
+      "lat": 40.766823,
+      "lon": -111.894112
     },
     "lastSeenAt": "2026-11-09T16:11:00.000Z",
     "visible": false,
@@ -3035,10 +3035,10 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-cribl",
+    "lastLocationId": "outpost-cosmonic",
     "lastLocation": {
-      "lat": 40.766177,
-      "lon": -111.894237
+      "lat": 40.766305,
+      "lon": -111.894323
     },
     "lastSeenAt": "2026-11-09T16:50:00.000Z",
     "visible": true,
@@ -3185,10 +3185,10 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-crash-override",
+    "lastLocationId": "outpost-coralogix",
     "lastLocation": {
-      "lat": 40.766177,
-      "lon": -111.894118
+      "lat": 40.766623,
+      "lon": -111.894234
     },
     "lastSeenAt": "2026-11-09T17:32:00.000Z",
     "visible": true,
@@ -3259,10 +3259,10 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-fastly",
+    "lastLocationId": "outpost-f5",
     "lastLocation": {
-      "lat": 40.766382,
-      "lon": -111.894252
+      "lat": 40.765546,
+      "lon": -111.894657
     },
     "lastSeenAt": "2026-11-09T17:55:00.000Z",
     "visible": true,
@@ -3298,10 +3298,10 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-mirrord-by-metalbear",
+    "lastLocationId": "outpost-mirantis",
     "lastLocation": {
-      "lat": 40.766784,
-      "lon": -111.894325
+      "lat": 40.766305,
+      "lon": -111.894183
     },
     "lastSeenAt": "2026-11-09T16:25:00.000Z",
     "visible": true,
@@ -3450,10 +3450,10 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-pulumi",
+    "lastLocationId": "outpost-prosperops",
     "lastLocation": {
-      "lat": 40.76616,
-      "lon": -111.894304
+      "lat": 40.766442,
+      "lon": -111.894183
     },
     "lastSeenAt": "2026-11-09T17:33:00.000Z",
     "visible": true,
@@ -3604,10 +3604,10 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-cvs-health",
+    "lastLocationId": "outpost-crusoe",
     "lastLocation": {
-      "lat": 40.766798,
-      "lon": -111.894239
+      "lat": 40.765587,
+      "lon": -111.894711
     },
     "lastSeenAt": "2026-11-09T15:44:00.000Z",
     "visible": false,
@@ -3795,10 +3795,10 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-project-openeverest",
+    "lastLocationId": "outpost-open-source-security-foundation-openssf",
     "lastLocation": {
-      "lat": 40.766831,
-      "lon": -111.89403
+      "lat": 40.766641,
+      "lon": -111.894304
     },
     "lastSeenAt": "2026-11-09T17:21:00.000Z",
     "visible": true,
@@ -3834,10 +3834,10 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-pagerduty",
+    "lastLocationId": "outpost-oracle",
     "lastLocation": {
-      "lat": 40.766177,
-      "lon": -111.894304
+      "lat": 40.765532,
+      "lon": -111.89513
     },
     "lastSeenAt": "2026-11-09T17:11:00.000Z",
     "visible": false,
@@ -4029,10 +4029,10 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-ascend",
+    "lastLocationId": "outpost-project-backstage",
     "lastLocation": {
-      "lat": 40.766835,
-      "lon": -111.894311
+      "lat": 40.766854,
+      "lon": -111.89416
     },
     "lastSeenAt": "2026-11-09T14:55:00.000Z",
     "visible": true,
@@ -4068,10 +4068,10 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-ciroos",
+    "lastLocationId": "outpost-clickhouse",
     "lastLocation": {
-      "lat": 40.766365,
-      "lon": -111.894234
+      "lat": 40.765594,
+      "lon": -111.894812
     },
     "lastSeenAt": "2026-11-09T17:30:00.000Z",
     "visible": true,
@@ -4146,10 +4146,10 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-cloudchipr",
+    "lastLocationId": "outpost-cloud-native-studios",
     "lastLocation": {
-      "lat": 40.766695,
-      "lon": -111.894325
+      "lat": 40.7667,
+      "lon": -111.89404
     },
     "lastSeenAt": "2026-11-09T17:11:00.000Z",
     "visible": true,
@@ -4187,10 +4187,10 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-causal-dynamics-lab",
+    "lastLocationId": "outpost-causely",
     "lastLocation": {
-      "lat": 40.766938,
-      "lon": -111.894325
+      "lat": 40.766784,
+      "lon": -111.894311
     },
     "lastSeenAt": "2026-11-09T17:09:00.000Z",
     "visible": true,
@@ -4226,10 +4226,10 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-elastic",
+    "lastLocationId": "outpost-project-dynamic-resource-allocation-sig-subproject",
     "lastLocation": {
-      "lat": 40.766099,
-      "lon": -111.89411
+      "lat": 40.766799,
+      "lon": -111.894112
     },
     "lastSeenAt": "2026-11-09T16:37:00.000Z",
     "visible": true,
@@ -4267,10 +4267,10 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-ciq",
+    "lastLocationId": "outpost-project-cilium",
     "lastLocation": {
-      "lat": 40.766623,
-      "lon": -111.89404
+      "lat": 40.76687,
+      "lon": -111.894112
     },
     "lastSeenAt": "2026-11-09T16:17:00.000Z",
     "visible": true,
@@ -4306,10 +4306,10 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-couchbase",
+    "lastLocationId": "outpost-coralogix",
     "lastLocation": {
-      "lat": 40.765808,
-      "lon": -111.895187
+      "lat": 40.766623,
+      "lon": -111.894234
     },
     "lastSeenAt": "2026-11-09T17:35:00.000Z",
     "visible": true,
@@ -4610,10 +4610,10 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-amutable",
+    "lastLocationId": "outpost-antithesis",
     "lastLocation": {
-      "lat": 40.766747,
-      "lon": -111.89418
+      "lat": 40.766365,
+      "lon": -111.894304
     },
     "lastSeenAt": "2026-11-09T16:43:00.000Z",
     "visible": true,
@@ -4651,10 +4651,10 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-project-confidential-containers",
+    "lastLocationId": "outpost-coder",
     "lastLocation": {
-      "lat": 40.766901,
-      "lon": -111.89403
+      "lat": 40.766116,
+      "lon": -111.894169
     },
     "lastSeenAt": "2026-11-09T15:56:00.000Z",
     "visible": true,
@@ -4801,10 +4801,10 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-portainer",
+    "lastLocationId": "outpost-port",
     "lastLocation": {
-      "lat": 40.766365,
-      "lon": -111.894182
+      "lat": 40.765635,
+      "lon": -111.894758
     },
     "lastSeenAt": "2026-11-09T17:27:00.000Z",
     "visible": true,
@@ -4840,10 +4840,10 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-nvidia",
+    "lastLocationId": "outpost-nutanix",
     "lastLocation": {
-      "lat": 40.765903,
-      "lon": -111.894043
+      "lat": 40.765737,
+      "lon": -111.894731
     },
     "lastSeenAt": "2026-11-09T17:02:00.000Z",
     "visible": true,
@@ -4877,10 +4877,10 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-datacore",
+    "lastLocationId": "outpost-dash0",
     "lastLocation": {
-      "lat": 40.766502,
-      "lon": -111.894022
+      "lat": 40.76584,
+      "lon": -111.894831
     },
     "lastSeenAt": "2026-11-09T17:04:00.000Z",
     "visible": true,
@@ -5187,9 +5187,9 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-ibm-kubecost",
+    "lastLocationId": "outpost-ibm",
     "lastLocation": {
-      "lat": 40.766016,
+      "lat": 40.765959,
       "lon": -111.894319
     },
     "lastSeenAt": "2026-11-09T17:33:00.000Z",
@@ -5224,10 +5224,10 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-ciq",
+    "lastLocationId": "outpost-chronosphere-a-palo-alto-networks-company",
     "lastLocation": {
-      "lat": 40.766623,
-      "lon": -111.89404
+      "lat": 40.765997,
+      "lon": -111.894043
     },
     "lastSeenAt": "2026-11-09T17:22:00.000Z",
     "visible": true,
@@ -5335,10 +5335,10 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-docker",
+    "lastLocationId": "outpost-devzero",
     "lastLocation": {
-      "lat": 40.765638,
-      "lon": -111.895317
+      "lat": 40.765919,
+      "lon": -111.89411
     },
     "lastSeenAt": "2026-11-09T17:54:00.000Z",
     "visible": true,
@@ -5374,10 +5374,10 @@
       "language": "en",
       "hideFromLeaderboard": false
     },
-    "lastLocationId": "outpost-heroku",
+    "lastLocationId": "outpost-project-helm",
     "lastLocation": {
-      "lat": 40.765903,
-      "lon": -111.894177
+      "lat": 40.766799,
+      "lon": -111.89416
     },
     "lastSeenAt": "2026-11-09T17:28:00.000Z",
     "visible": true,

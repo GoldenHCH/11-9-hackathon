@@ -11,6 +11,7 @@ import {
   HandshakeStatus,
   IsoDateString,
   ItineraryItemKind,
+  NotificationType,
   LeaderboardBoard,
   LeaderboardPeriod,
   LocationKind,
@@ -123,6 +124,10 @@ export interface IAttendee {
   spotMe?: string;
   workingOn: string;
   headline?: string;
+  skills?: string[];
+  offers?: string[];
+  asks?: string[];
+  summary?: string;
   profileText: string;
   profile: IPlayerProfile;
   settings: IPlayerSettings;
@@ -136,6 +141,7 @@ export interface IAttendee {
   banners: BannerId[];
   blockedIds: string[];
   createdAt: IsoDateString;
+  itinerary?: IItineraryEntry[];
 }
 
 export interface IPublicPlayer {
@@ -544,6 +550,11 @@ export interface IScreenToken {
   scanUrl: string;
 }
 
+export interface IDemoScanToken {
+  locationId: string;
+  path: string;
+}
+
 export interface IRespondQuestResult {
   quest: IQuest;
   board: IQuestBoard;
@@ -749,6 +760,29 @@ export interface ISignUpInput {
   noWalking?: boolean;
   scanLocationId?: string;
   scanToken?: string;
+  headline?: string;
+  skills?: string[];
+  offers?: string[];
+  asks?: string[];
+  summary?: string;
+}
+
+export interface IImportProfileInput {
+  attendeeId: string;
+  text?: string;
+}
+
+export interface IImportedProfile {
+  headline: string;
+  role: string;
+  seniority: string;
+  skills: string[];
+  topics: string[];
+  workingOn: string;
+  offers: string[];
+  asks: string[];
+  summary: string;
+  provider: AiProvider;
 }
 
 export interface IUpdateSettingsInput {
@@ -952,6 +986,70 @@ export interface ISaveBoothNoteResult {
   newBanners: IBannerProgress[];
 }
 
+export interface IBoothPhotoUploader {
+  publicId: string;
+  handle: string;
+  faceSeed: string;
+}
+
+export interface IBoothPhoto {
+  id: string;
+  locationId: string;
+  boothName: string;
+  url: string;
+  width: number;
+  height: number;
+  caption?: string;
+  uploader: IBoothPhotoUploader;
+  createdAt: IsoDateString;
+  mine?: boolean;
+}
+
+export interface IUploadBoothPhotoInput {
+  attendeeId: string;
+  locationId: string;
+  image: string;
+  caption?: string;
+}
+
+export interface IUploadBoothPhotoResult {
+  photo: IBoothPhoto;
+  xp: number;
+  questCompleted: boolean;
+  message: string;
+  levelUp?: ILevelProgress;
+  newBanners: IBannerProgress[];
+}
+
+export interface IListBoothPhotosInput {
+  locationId: string;
+  attendeeId?: string;
+  limit?: number;
+}
+
+export interface IBoothPhotoList {
+  locationId: string;
+  photos: IBoothPhoto[];
+  count: number;
+}
+
+export interface IBoothPhotoActionInput {
+  attendeeId: string;
+  photoId: string;
+}
+
+export interface IReportBoothPhotoResult {
+  photoId: string;
+  reports: number;
+  hidden: boolean;
+  message: string;
+}
+
+export interface IDeleteBoothPhotoResult {
+  photoId: string;
+  deleted: boolean;
+}
+
 export interface IMessage {
   id: string;
   meetId: string;
@@ -964,6 +1062,37 @@ export interface ISendMessageInput {
   attendeeId: string;
   meetId: string;
   text: string;
+}
+
+export interface INotification {
+  id: string;
+  type: NotificationType;
+  title: string;
+  body: string;
+  link: string;
+  createdAt: IsoDateString;
+  readAt: IsoDateString | null;
+}
+
+export interface IListNotificationsInput {
+  attendeeId: string;
+  limit?: number;
+}
+
+export interface IListNotificationsResult {
+  items: INotification[];
+  unread: number;
+}
+
+export interface IMarkNotificationsReadInput {
+  attendeeId: string;
+  ids?: string[];
+  all?: boolean;
+}
+
+export interface IMarkNotificationsReadResult {
+  marked: number;
+  unread: number;
 }
 
 export interface IListMessagesInput {
@@ -1023,6 +1152,101 @@ export interface IRecap {
   emailHtml: string;
 }
 
+export interface IItineraryEntry {
+  talkId: string;
+  addedAt: IsoDateString;
+}
+
+export interface IScheduleSession {
+  id: string;
+  title: string;
+  speakers: string[];
+  sessionType: SessionType;
+  track: Track;
+  material: Material;
+  start: IsoDateString;
+  end: IsoDateString;
+  locationId: string;
+  building: string;
+  level: string;
+  room: string;
+  isBoss: boolean;
+  checkedInCount: number;
+  inItinerary?: boolean;
+}
+
+export interface IScheduleSlot {
+  start: IsoDateString;
+  end: IsoDateString;
+  sessions: IScheduleSession[];
+}
+
+export interface IListScheduleInput {
+  attendeeId?: string;
+  day?: string;
+  from?: IsoDateString;
+  to?: IsoDateString;
+  track?: Track;
+  building?: string;
+  query?: string;
+}
+
+export interface ISchedule {
+  day: string;
+  days: string[];
+  now: IsoDateString;
+  from: IsoDateString;
+  to: IsoDateString;
+  total: number;
+  buildings: string[];
+  slots: IScheduleSlot[];
+}
+
+export interface IGetItineraryInput {
+  attendeeId: string;
+  day?: string;
+}
+
+export interface IItineraryChangeInput {
+  attendeeId: string;
+  talkId: string;
+}
+
+export interface IPlanItem {
+  id: string;
+  kind: ItineraryItemKind;
+  title: string;
+  start: IsoDateString;
+  end?: IsoDateString;
+  place?: IQuestPlace;
+  walkMinutes?: number;
+  walkFrom?: string;
+  gapMinutes?: number;
+  conflictsWith: string[];
+  talkId?: string;
+  questId?: string;
+  meetId?: string;
+  session?: IScheduleSession;
+  quizAvailable?: boolean;
+  isNow?: boolean;
+}
+
+export interface IItinerary {
+  now: IsoDateString;
+  day?: string;
+  plannedCount: number;
+  maxItems: number;
+  conflictCount: number;
+  items: IPlanItem[];
+}
+
+export interface IItineraryChangeResult {
+  talkId: string;
+  inItinerary: boolean;
+  plannedCount: number;
+  maxItems: number;
+}
+
 export interface IToolContracts {
   sign_in: { input: ISignInInput; output: ISignInResult };
   sign_up: { input: ISignUpInput; output: ISignUpResult };
@@ -1030,6 +1254,7 @@ export interface IToolContracts {
   update_settings: { input: IUpdateSettingsInput; output: IProfile };
   check_in: { input: ICheckInInput; output: ICheckInResult };
   screen_token: { input: IScreenTokenInput; output: IScreenToken };
+  demo_scan_token: { input: IScreenTokenInput; output: IDemoScanToken };
   whats_around_me: { input: IAttendeeInput; output: IWhatsAroundMe };
   whats_next: { input: IAttendeeInput; output: IWhatsNext };
   search: { input: ISearchInput; output: ISearchResponse };
@@ -1058,9 +1283,20 @@ export interface IToolContracts {
   answer_handshake: { input: IAnswerHandshakeInput; output: IHandshake };
   save_booth_note: { input: ISaveBoothNoteInput; output: ISaveBoothNoteResult };
   list_booth_notes: { input: IAttendeeInput; output: IBoothNote[] };
+  upload_booth_photo: { input: IUploadBoothPhotoInput; output: IUploadBoothPhotoResult };
+  list_booth_photos: { input: IListBoothPhotosInput; output: IBoothPhotoList };
+  report_booth_photo: { input: IBoothPhotoActionInput; output: IReportBoothPhotoResult };
+  delete_booth_photo: { input: IBoothPhotoActionInput; output: IDeleteBoothPhotoResult };
   send_message: { input: ISendMessageInput; output: IMessage };
   list_messages: { input: IListMessagesInput; output: IMessage[] };
   recap: { input: IAttendeeInput; output: IRecap };
+  import_profile: { input: IImportProfileInput; output: IImportedProfile };
+  list_notifications: { input: IListNotificationsInput; output: IListNotificationsResult };
+  mark_notifications_read: { input: IMarkNotificationsReadInput; output: IMarkNotificationsReadResult };
+  list_schedule: { input: IListScheduleInput; output: ISchedule };
+  get_itinerary: { input: IGetItineraryInput; output: IItinerary };
+  add_to_itinerary: { input: IItineraryChangeInput; output: IItineraryChangeResult };
+  remove_from_itinerary: { input: IItineraryChangeInput; output: IItineraryChangeResult };
 }
 
 export interface IToolInfo {
@@ -1082,6 +1318,7 @@ export interface IClientConfig {
   appVersion: string;
   publicBaseUrl: string;
   conferenceTimeZone: string;
+  demoSimulateScans: boolean;
   traceUrlTemplate?: string;
   rum?: {
     endpoint: string;

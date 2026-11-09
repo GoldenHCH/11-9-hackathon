@@ -1,7 +1,7 @@
 import { generateJson } from '../ai/client';
 import { gameRules, trackCatalog } from '../types/kubequest.constants';
 import { Material, Track } from '../types/kubequest.types';
-import { topicRules } from './profile.constants';
+import { topicLimits, topicRules } from './profile.constants';
 
 function hasKeyword(text: string, keyword: string): boolean {
   const escaped = keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -44,8 +44,36 @@ export async function suggestTopics(workingOn: string, languages: string[]): Pro
   }
 }
 
+const presetTopics = new Map(topicRules.map((rule) => [rule.topic.toLowerCase(), rule.topic]));
+
+function looksLikeContact(value: string): boolean {
+  return /@|:\/\/|^www\.|\.(com|io|dev|org|net|me|ai|co|app)(\/|$)/i.test(value);
+}
+
+export function cleanTopic(raw: string): string | undefined {
+  const collapsed = raw.replace(/\s+/g, ' ').trim();
+
+  if (looksLikeContact(collapsed)) {
+    return undefined;
+  }
+
+  const preset = presetTopics.get(collapsed.toLowerCase());
+
+  if (preset) {
+    return preset;
+  }
+
+  const stripped = collapsed.replace(/[^\p{L}\p{N} +#./-]/gu, '').replace(/\s+/g, ' ').trim();
+
+  if (stripped.length < topicLimits.MIN_CHARS || stripped.length > topicLimits.MAX_CHARS || looksLikeContact(stripped)) {
+    return undefined;
+  }
+
+  return presetTopics.get(stripped.toLowerCase()) ?? stripped.toLowerCase();
+}
+
 export function normalizeTopics(topics: string[]): string[] {
-  const unique = Array.from(new Set(topics.map((topic) => topic.trim()).filter((topic) => topic !== '')));
+  const unique = Array.from(new Set(topics.flatMap((topic) => cleanTopic(topic) ?? [])));
 
   return unique.slice(0, gameRules.MAX_TOPICS);
 }

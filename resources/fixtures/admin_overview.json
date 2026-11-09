@@ -86,8 +86,8 @@
       "generatedAt": "2026-11-09T20:20:16.769Z"
     },
     "exhibitors": {
-      "total": 319,
-      "sponsors": 233,
+      "total": 320,
+      "sponsors": 234,
       "projects": 86,
       "visitedToday": 75,
       "visitsToday": 760,
@@ -3149,8 +3149,8 @@
       },
       {
         "exhibitor": {
-          "id": "outpost-palo-alto-networks",
-          "name": "Palo Alto Networks",
+          "id": "outpost-chronosphere-a-palo-alto-networks-company",
+          "name": "Chronosphere, a Palo Alto Networks Company",
           "exhibitorType": "sponsor",
           "tier": "Gold",
           "boothNumber": "181",
@@ -3168,8 +3168,8 @@
         "visitsToday": 0,
         "uniqueToday": 0,
         "questsCompleted": 0,
-        "staffUrl": "https://kube-quest.cnh.radarhq.io/exhibitor/outpost-palo-alto-networks?k=<staff-key>",
-        "scanUrl": "https://kube-quest.cnh.radarhq.io/r/outpost-palo-alto-networks?t=<signed-token>"
+        "staffUrl": "https://kube-quest.cnh.radarhq.io/exhibitor/outpost-chronosphere-a-palo-alto-networks-company?k=<staff-key>",
+        "scanUrl": "https://kube-quest.cnh.radarhq.io/r/outpost-chronosphere-a-palo-alto-networks-company?t=<signed-token>"
       },
       {
         "exhibitor": {
@@ -4353,27 +4353,25 @@
       },
       {
         "exhibitor": {
-          "id": "outpost-livekit",
-          "name": "LiveKit",
+          "id": "outpost-loophole-labs",
+          "name": "Loophole Labs",
           "exhibitorType": "sponsor",
           "tier": "Silver",
           "boothNumber": "254",
           "hall": "2",
           "zone": "Honeycomb Hub",
           "topics": [
-            "platform"
+            "other"
           ],
-          "categories": [
-            "Application Development + Developer Experience"
-          ],
-          "askAbout": "What they're building for developer experience",
+          "categories": [],
+          "askAbout": "What Loophole Labs is showing at KubeCon this year",
           "visitorsNow": 0
         },
         "visitsToday": 0,
         "uniqueToday": 0,
         "questsCompleted": 0,
-        "staffUrl": "https://kube-quest.cnh.radarhq.io/exhibitor/outpost-livekit?k=<staff-key>",
-        "scanUrl": "https://kube-quest.cnh.radarhq.io/r/outpost-livekit?t=<signed-token>"
+        "staffUrl": "https://kube-quest.cnh.radarhq.io/exhibitor/outpost-loophole-labs?k=<staff-key>",
+        "scanUrl": "https://kube-quest.cnh.radarhq.io/r/outpost-loophole-labs?t=<signed-token>"
       },
       {
         "exhibitor": {
@@ -5839,7 +5837,7 @@
       },
       {
         "exhibitor": {
-          "id": "outpost-ascendra-networks",
+          "id": "outpost-codevisionaryra-networks",
           "name": "Ascendra Networks",
           "exhibitorType": "sponsor",
           "tier": "Start-Up",
@@ -5858,8 +5856,8 @@
         "visitsToday": 0,
         "uniqueToday": 0,
         "questsCompleted": 0,
-        "staffUrl": "https://kube-quest.cnh.radarhq.io/exhibitor/outpost-ascendra-networks?k=<staff-key>",
-        "scanUrl": "https://kube-quest.cnh.radarhq.io/r/outpost-ascendra-networks?t=<signed-token>"
+        "staffUrl": "https://kube-quest.cnh.radarhq.io/exhibitor/outpost-codevisionaryra-networks?k=<staff-key>",
+        "scanUrl": "https://kube-quest.cnh.radarhq.io/r/outpost-codevisionaryra-networks?t=<signed-token>"
       },
       {
         "exhibitor": {
@@ -5957,27 +5955,25 @@
       },
       {
         "exhibitor": {
-          "id": "outpost-ascend",
-          "name": "Ascend",
+          "id": "outpost-codevisionary",
+          "name": "CodeVisionary",
           "exhibitorType": "sponsor",
           "tier": "Start-Up",
           "boothNumber": "362",
           "hall": "4-5",
           "zone": "Cosmic Canyon",
           "topics": [
-            "ai"
+            "other"
           ],
-          "categories": [
-            "Artificial Intelligence (AI)"
-          ],
-          "askAbout": "What they're building for AI",
+          "categories": [],
+          "askAbout": "What CodeVisionary is showing at KubeCon this year",
           "visitorsNow": 0
         },
         "visitsToday": 0,
         "uniqueToday": 0,
         "questsCompleted": 0,
-        "staffUrl": "https://kube-quest.cnh.radarhq.io/exhibitor/outpost-ascend?k=<staff-key>",
-        "scanUrl": "https://kube-quest.cnh.radarhq.io/r/outpost-ascend?t=<signed-token>"
+        "staffUrl": "https://kube-quest.cnh.radarhq.io/exhibitor/outpost-codevisionary?k=<staff-key>",
+        "scanUrl": "https://kube-quest.cnh.radarhq.io/r/outpost-codevisionary?t=<signed-token>"
       },
       {
         "exhibitor": {

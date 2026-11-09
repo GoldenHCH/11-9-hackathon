@@ -1,0 +1,104 @@
+{
+  "tool": "get_itinerary",
+  "endpoint": "POST /api/tools/get_itinerary",
+  "request": {
+    "attendeeId": "p_zqxtrvalqA7IoBqp",
+    "day": "2026-11-10"
+  },
+  "status": 200,
+  "response": {
+    "now": "2026-11-09T22:22:00.499Z",
+    "day": "2026-11-10",
+    "plannedCount": 2,
+    "maxItems": 40,
+    "conflictCount": 0,
+    "items": [
+      {
+        "id": "talk:kc26-tue-agent-needs-a-platform",
+        "kind": "talk",
+        "title": "Your Agent Needs a Platform: Cloud Native Infrastructure for Multi-Agent AI Systems",
+        "start": "2026-11-10T11:30:00-07:00",
+        "end": "2026-11-10T12:00:00-07:00",
+        "place": {
+          "locationId": "salt-palace-level-2-255-bc",
+          "name": "255 BC",
+          "kind": "room",
+          "building": "Salt Palace",
+          "level": "Level 2"
+        },
+        "conflictsWith": [],
+        "talkId": "kc26-tue-agent-needs-a-platform",
+        "session": {
+          "id": "kc26-tue-agent-needs-a-platform",
+          "title": "Your Agent Needs a Platform: Cloud Native Infrastructure for Multi-Agent AI Systems",
+          "speakers": [
+            "Soham Ghadge"
+          ],
+          "sessionType": "breakout",
+          "track": "ai",
+          "material": "circuit",
+          "start": "2026-11-10T11:30:00-07:00",
+          "end": "2026-11-10T12:00:00-07:00",
+          "locationId": "salt-palace-level-2-255-bc",
+          "building": "Salt Palace",
+          "level": "Level 2",
+          "room": "255 BC",
+          "isBoss": false,
+          "checkedInCount": 0,
+          "inItinerary": true
+        },
+        "quizAvailable": false,
+        "isNow": false
+      },
+      {
+        "id": "gap:2026-11-10T12:00:00-07:00",
+        "kind": "gap",
+        "title": "170 min free",
+        "start": "2026-11-10T12:00:00-07:00",
+        "end": "2026-11-10T14:50:00-07:00",
+        "gapMinutes": 170,
+        "conflictsWith": []
+      },
+      {
+        "id": "talk:kc26-tue-tracing-at-scale",
+        "kind": "talk",
+        "title": "Tracing at Scale: Running a 16 Billion Spans/Hour Pipeline at Nubank",
+        "start": "2026-11-10T14:50:00-07:00",
+        "end": "2026-11-10T15:20:00-07:00",
+        "place": {
+          "locationId": "salt-palace-level-1-grand-ballroom-ace",
+          "name": "Grand Ballroom ACE",
+          "kind": "room",
+          "building": "Salt Palace",
+          "level": "Level 1"
+        },
+        "conflictsWith": [],
+        "talkId": "kc26-tue-tracing-at-scale",
+        "session": {
+          "id": "kc26-tue-tracing-at-scale",
+          "title": "Tracing at Scale: Running a 16 Billion Spans/Hour Pipeline at Nubank",
+          "speakers": [
+            "Felipe Araujo",
+            "Kaynan Coelho"
+          ],
+          "sessionType": "breakout",
+          "track": "operations",
+          "material": "glass",
+          "start": "2026-11-10T14:50:00-07:00",
+          "end": "2026-11-10T15:20:00-07:00",
+          "locationId": "salt-palace-level-1-grand-ballroom-ace",
+          "building": "Salt Palace",
+          "level": "Level 1",
+          "room": "Grand Ballroom ACE",
+          "isBoss": false,
+          "checkedInCount": 0,
+          "inItinerary": true
+        },
+        "quizAvailable": false,
+        "isNow": false,
+        "walkMinutes": 4,
+        "walkFrom": "255 BC"
+      }
+    ]
+  }
+}

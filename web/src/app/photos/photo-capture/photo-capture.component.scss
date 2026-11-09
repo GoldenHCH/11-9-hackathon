@@ -1,0 +1,114 @@
+:host {
+  display: block;
+}
+
+.capture {
+  --capture-border: var(--kq-border, var(--app-theme--border, #2b2b2b));
+  --capture-muted: var(--kq-muted, var(--app-theme--ink-muted, #55534d));
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.capture-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.capture-safety {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  margin: 0;
+  padding: 8px 10px;
+  font-size: 13px;
+  line-height: 1.4;
+  background: var(--kq-surface-2, var(--app-theme--surface, #f6f3ea));
+  border: 2px dashed var(--capture-border);
+
+  .mat-icon {
+    flex: 0 0 auto;
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+    color: var(--kq-danger, #c62828);
+  }
+}
+
+.capture-primary {
+  min-height: 44px;
+  border-radius: 0;
+  background-color: var(--kq-primary, var(--app-theme--primary, #2f6b2b));
+  color: #ffffff;
+  border: 2px solid var(--capture-border);
+  box-shadow: 3px 3px 0 var(--capture-border);
+}
+
+.capture-busy {
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+}
+
+.capture-preview {
+  margin: 0;
+  border: 2px solid var(--capture-border);
+  box-shadow: 4px 4px 0 var(--capture-border);
+  background: #1f1f1f;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 320px;
+    object-fit: contain;
+  }
+}
+
+.capture-size {
+  padding: 4px 8px;
+  font-size: 12px;
+  color: #ffffff;
+  font-family: var(--kq-font-pixel, var(--app-theme--pixel-font, monospace));
+}
+
+.capture-caption {
+  width: 100%;
+}
+
+.capture-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  .capture-primary {
+    flex: 1 1 100%;
+  }
+
+  .mat-mdc-outlined-button {
+    flex: 1 1 0;
+    min-height: 44px;
+    border-radius: 0;
+    border-width: 2px;
+  }
+}
+
+.capture-result {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 10px;
+  font-weight: 700;
+  background: var(--kq-gold, #fdd835);
+  color: #1f1f1f;
+  border: 2px solid var(--capture-border);
+
+  .mat-icon {
+    flex: 0 0 auto;
+  }
+}

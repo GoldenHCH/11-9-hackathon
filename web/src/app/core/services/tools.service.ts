@@ -44,4 +44,8 @@ export class ToolsService {
 
     return chosen as TResult;
   }
+
+  public upload<TResult>(path: string, form: FormData): Observable<TResult> {
+    return this._http.post<TResult>(`${environment.apiBaseUrl}/${path}`, form);
+  }
 }
