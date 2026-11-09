@@ -1,4 +1,4 @@
-import type { IIntro, ILocation, IPublicQuiz, ISession, IXpEvent } from './conference.interfaces';
+import type { IIntro, ILocation, IQuiz, ISession, IXpEvent } from './conference.interfaces';
 import type { HealthStatus, IndexName, IntroResponse } from './conference.types';
 import type { IPersonMatch, ITalkMatch } from './matches.interfaces';
 import type { ToolName } from './tools.types';
@@ -6,20 +6,13 @@ import type { ToolName } from './tools.types';
 export interface ICheckInInput {
   attendeeId: string;
   locationId: string;
-  token: string;
+  token?: string;
 }
 
 export interface ICheckInOutput {
   location: ILocation;
   xp: number;
   event: IXpEvent;
-  sessionNowHere?: ISession;
-}
-
-export interface IScreenToken {
-  locationId: string;
-  token: string;
-  exp: number;
 }
 
 export interface IRecommendTalksInput {
@@ -99,7 +92,7 @@ export interface IToolSignatures {
   whats_next: { input: IWhatsNextInput; output: IWhatsNextOutput };
   propose_intro: { input: IProposeIntroInput; output: IIntro };
   respond_intro: { input: IRespondIntroInput; output: IIntro };
-  quiz_for_talk: { input: IQuizForTalkInput; output: IPublicQuiz };
+  quiz_for_talk: { input: IQuizForTalkInput; output: IQuiz };
   submit_quiz: { input: ISubmitQuizInput; output: ISubmitQuizOutput };
   leaderboard: { input: ILeaderboardInput; output: ILeaderboardEntry[] };
 }

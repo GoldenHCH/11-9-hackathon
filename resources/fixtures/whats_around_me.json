@@ -1,164 +1,239 @@
 {
-  "location": {
-    "id": "salt-palace-151",
-    "name": "Room 151",
-    "kind": "room",
-    "venue": "Salt Palace",
-    "floor": "Level 1",
-    "geo": {
-      "lat": 40.76718,
-      "lon": -111.895831
-    }
+  "tool": "whats_around_me",
+  "endpoint": "POST /api/tools/whats_around_me",
+  "request": {
+    "attendeeId": "p_Ljp4ZfHC-VPDFwqx"
   },
-  "sessionsNowHere": [
-    {
-      "id": "talk-1247376",
-      "title": "The Operator Calls Are Coming from Inside the Namespace",
-      "abstract": "You locked down RBAC. You scoped your namespaces. You followed least privilege. But the attacker who just became your GCP Org admin? They never left their namespace. The call came from inside the cluster—through your own operator. I discovered confused deputy vulnerabilities (CWE-441) across Config Connector, ACK, ASO, and Crossplane. The pattern is universal: operators trust user-controlled CRD…",
+  "status": 200,
+  "response": {
+    "location": {
+      "id": "salt-palace-level-1-151",
+      "name": "151",
+      "kind": "room",
+      "building": "Salt Palace",
+      "level": "Level 1",
+      "room": "151",
+      "description": "Session room. Check in during a session, then take its quiz.",
+      "hasScreen": false,
+      "geo": {
+        "lat": 40.76645,
+        "lon": -111.89445
+      }
+    },
+    "next": {
+      "id": "kc26-tue-data-platform-panel",
+      "title": "Why We Bet the Data Platform on Kubernetes",
+      "abstract": "A panel on running large-scale data platforms on Kubernetes and how AI agents are changing day-2 operations for data teams.",
+      "sessionType": "panel",
+      "track": "data",
+      "material": "crate",
       "speakers": [
-        "Justin O’Leary"
+        "Vara Bonthu",
+        "Ying Xiong",
+        "Rainie Li",
+        "Damon Cortesi",
+        "Padma Aradhyula"
       ],
-      "start": "2026-11-10T14:50:00-07:00",
-      "end": "2026-11-10T15:20:00-07:00",
-      "venue": "Salt Palace",
-      "level": 2,
-      "track": "platform",
-      "locationId": "salt-palace-151",
-      "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1247376",
-      "hasTranscript": false
+      "speakerDetails": [
+        {
+          "name": "Vara Bonthu"
+        },
+        {
+          "name": "Ying Xiong"
+        },
+        {
+          "name": "Rainie Li"
+        },
+        {
+          "name": "Damon Cortesi"
+        },
+        {
+          "name": "Padma Aradhyula"
+        }
+      ],
+      "start": "2026-11-10T11:30:00-07:00",
+      "end": "2026-11-10T12:00:00-07:00",
+      "locationId": "salt-palace-level-1-151",
+      "building": "Salt Palace",
+      "level": "Level 1",
+      "room": "151",
+      "isBoss": false,
+      "hasTranscript": false,
+      "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+      "sample": false,
+      "geo": {
+        "lat": 40.7665,
+        "lon": -111.8945
+      }
+    },
+    "playersHere": 1,
+    "quizAvailable": false,
+    "nearestCampfire": {
+      "location": {
+        "id": "campfire-network-nook",
+        "name": "Network Nook",
+        "kind": "campfire",
+        "building": "Salt Palace",
+        "level": "Level 1",
+        "room": "Network Nook",
+        "zone": "Solutions Showcase",
+        "description": "Hosts the scheduled meetups, next to the outposts.",
+        "hasScreen": false,
+        "geo": {
+          "lat": 40.76645,
+          "lon": -111.89475
+        }
+      },
+      "walkMinutes": 2,
+      "distanceMeters": 25
+    },
+    "matchesHere": [
+      {
+        "player": {
+          "id": "pl_592a78e076ad8c1f",
+          "handle": "podwrangler",
+          "faceSeed": "podwrangler",
+          "level": 2,
+          "levelName": "Deployment",
+          "xp": 110,
+          "banners": [
+            "welcomer"
+          ],
+          "topics": [
+            "gpus",
+            "gpu-sharing",
+            "cluster-allocation",
+            "platform-engineering",
+            "kueue"
+          ],
+          "workingOn": "Runs GPU cluster allocation for ML teams; happy to help first-timers find their feet.",
+          "firstTimer": false
+        },
+        "score": 0.0952381,
+        "sharedTopics": [],
+        "reason": "Happy to welcome a first-timer. Working on Runs GPU cluster allocation for ML teams; happy to help first-timers find their . In the same room right now",
+        "sameRoom": true
+      },
+      {
+        "player": {
+          "id": "pl_1cef692d84e1d933",
+          "handle": "agentaxolotl",
+          "faceSeed": "agentaxolotl",
+          "level": 2,
+          "levelName": "Deployment",
+          "xp": 160,
+          "banners": [],
+          "topics": [
+            "ai-agents",
+            "llm-inference",
+            "mcp",
+            "platform-engineering"
+          ],
+          "workingOn": "Building AI agents that operate clusters (with guardrails).",
+          "firstTimer": false
+        },
+        "score": 0.09090909,
+        "sharedTopics": [],
+        "reason": "Working on Building AI agents that operate clusters (with guardrails).. In the same room right now",
+        "sameRoom": true
+      },
+      {
+        "player": {
+          "id": "pl_951f088072cdd824",
+          "handle": "ingressibis",
+          "faceSeed": "ingressibis",
+          "level": 2,
+          "levelName": "Deployment",
+          "xp": 110,
+          "banners": [],
+          "topics": [
+            "gateway-api",
+            "networking",
+            "ingress",
+            "envoy"
+          ],
+          "workingOn": "Gateway API convert.",
+          "firstTimer": false
+        },
+        "score": 0.08514493,
+        "sharedTopics": [],
+        "reason": "Working on Gateway API convert.. In the same room right now",
+        "sameRoom": true
+      }
+    ]
+  },
+  "variants": {
+    "whats_around_me_after": {
+      "request": {
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx"
+      },
+      "status": 200,
+      "response": {
+        "location": {
+          "id": "campfire-network-nook",
+          "name": "Network Nook",
+          "kind": "campfire",
+          "building": "Salt Palace",
+          "level": "Level 1",
+          "room": "Network Nook",
+          "zone": "Solutions Showcase",
+          "description": "Hosts the scheduled meetups, next to the outposts.",
+          "hasScreen": false,
+          "geo": {
+            "lat": 40.76645,
+            "lon": -111.89475
+          }
+        },
+        "playersHere": 3,
+        "quizAvailable": false,
+        "nearestCampfire": {
+          "location": {
+            "id": "campfire-network-nook",
+            "name": "Network Nook",
+            "kind": "campfire",
+            "building": "Salt Palace",
+            "level": "Level 1",
+            "room": "Network Nook",
+            "zone": "Solutions Showcase",
+            "description": "Hosts the scheduled meetups, next to the outposts.",
+            "hasScreen": false,
+            "geo": {
+              "lat": 40.76645,
+              "lon": -111.89475
+            }
+          },
+          "walkMinutes": 0,
+          "distanceMeters": 0
+        },
+        "matchesHere": [
+          {
+            "player": {
+              "id": "pl_592a78e076ad8c1f",
+              "handle": "podwrangler",
+              "faceSeed": "podwrangler",
+              "level": 3,
+              "levelName": "Node",
+              "xp": 260,
+              "banners": [
+                "welcomer"
+              ],
+              "topics": [
+                "gpus",
+                "gpu-sharing",
+                "cluster-allocation",
+                "platform-engineering",
+                "kueue"
+              ],
+              "workingOn": "Runs GPU cluster allocation for ML teams; happy to help first-timers find their feet.",
+              "firstTimer": false
+            },
+            "score": 0.0952381,
+            "sharedTopics": [],
+            "reason": "Happy to welcome a first-timer. Working on Runs GPU cluster allocation for ML teams; happy to help first-timers find their . In the same room right now",
+            "sameRoom": true
+          }
+        ]
+      }
     }
-  ],
-  "sessionsNextHere": [
-    {
-      "id": "talk-1244963",
-      "title": "Triaging 4,700 Alerts/Month at $0.33 Each: Verkada's MCP Agent on Nine Production Clusters",
-      "abstract": "Over the last three months Verkada's incident-triage agent handled about 4,700 production alerts a month across nine Kubernetes clusters at $0.33 per investigation, with an 87.5% prompt-cache-read ratio and a 139-second median time-to-summary. The control plane runs in-cluster on every shard. No AI-for-SRE SaaS is in the path; inference is managed Claude Opus 5, state lives on managed KV. Three…",
-      "speakers": [
-        "Rohan Sood",
-        "Adrian Ng"
-      ],
-      "start": "2026-11-10T15:40:00-07:00",
-      "end": "2026-11-10T16:10:00-07:00",
-      "venue": "Salt Palace",
-      "level": 2,
-      "track": "ai",
-      "locationId": "salt-palace-151",
-      "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1244963",
-      "hasTranscript": false
-    },
-    {
-      "id": "talk-1246066",
-      "title": "AI-DDoS: How AI-Generated Contributions Are Breaching OSS Communities, and What We Can Do about It",
-      "abstract": "OSS communities are sounding the alarm that AI-generated contributions are flooding their projects. Much like a DDoS attack overwhelms a server with excessive requests until it goes offline, this flood can overwhelm maintainers and push projects to shut their doors. We call it AI-DDoS. Some projects are already responding defensively: closing bug bounties, moving to invitation-only models, or…",
-      "speakers": [
-        "Zixuan Feng"
-      ],
-      "start": "2026-11-10T16:40:00-07:00",
-      "end": "2026-11-10T17:10:00-07:00",
-      "venue": "Salt Palace",
-      "level": 2,
-      "track": "ai",
-      "locationId": "salt-palace-151",
-      "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1246066",
-      "hasTranscript": false
-    }
-  ],
-  "peopleHere": [
-    {
-      "attendee": {
-        "id": "att-demo-frontend",
-        "handle": "diego-alvarez-ui",
-        "name": "Diego Alvarez",
-        "headline": "Frontend developer at an online retailer",
-        "firstTimer": true,
-        "welcomer": false,
-        "xp": 20,
-        "badges": []
-      },
-      "score": 7.5,
-      "reasons": [
-        "Both into kubernetes-upgrades",
-        "Both into platform-engineering",
-        "Both into gitops",
-        "First time here, a good person to welcome",
-        "In the same room right now"
-      ],
-      "sharedTopics": [
-        "kubernetes-upgrades",
-        "platform-engineering",
-        "gitops",
-        "developer-experience"
-      ],
-      "isHere": true,
-      "locationId": "salt-palace-151",
-      "distanceMeters": 0
-    },
-    {
-      "attendee": {
-        "id": "att-051",
-        "handle": "hannah-b-infra",
-        "name": "Hannah Barrow",
-        "headline": "Junior performance engineer at a managed Kubernetes provider",
-        "firstTimer": true,
-        "welcomer": false,
-        "xp": 10,
-        "badges": []
-      },
-      "score": 4.5,
-      "reasons": [
-        "Both into multi-cluster",
-        "First time here, a good person to welcome",
-        "In the same room right now"
-      ],
-      "sharedTopics": [
-        "multi-cluster"
-      ],
-      "isHere": true,
-      "locationId": "salt-palace-151",
-      "distanceMeters": 0
-    },
-    {
-      "attendee": {
-        "id": "att-114",
-        "handle": "infra-katarzyna82",
-        "name": "Katarzyna Dvorak",
-        "headline": "Staff DevOps engineer at a climate-tech startup",
-        "firstTimer": false,
-        "welcomer": false,
-        "xp": 65,
-        "badges": []
-      },
-      "score": 2.5,
-      "reasons": [
-        "Both into gitops",
-        "In the same room right now"
-      ],
-      "sharedTopics": [
-        "gitops"
-      ],
-      "isHere": true,
-      "locationId": "salt-palace-151",
-      "distanceMeters": 0
-    },
-    {
-      "attendee": {
-        "id": "att-089",
-        "handle": "folake-m-k8s",
-        "name": "Folake Mensah",
-        "headline": "Principal FinOps engineer at an e-commerce marketplace",
-        "firstTimer": false,
-        "welcomer": false,
-        "xp": 15,
-        "badges": []
-      },
-      "score": 1.5,
-      "reasons": [
-        "In the same room right now"
-      ],
-      "sharedTopics": [],
-      "isHere": true,
-      "locationId": "salt-palace-151",
-      "distanceMeters": 0
-    }
-  ]
+  }
 }

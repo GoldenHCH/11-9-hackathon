@@ -1,0 +1,98 @@
+:host {
+  display: block;
+}
+
+.schematic-scroller {
+  overflow-x: auto;
+  border: 3px solid var(--app-theme--border);
+  box-shadow: var(--app-theme--shadow);
+  background: var(--app-theme--paper);
+}
+
+.schematic {
+  display: block;
+  width: 100%;
+  min-width: 640px;
+  height: auto;
+}
+
+.floor {
+  fill: #fbfaf5;
+}
+
+.area {
+  cursor: pointer;
+  outline: none;
+}
+
+.area-outline {
+  fill: none;
+  stroke: #2b2b2b;
+  stroke-width: 2;
+}
+
+.area--inferred .area-outline {
+  stroke-dasharray: 6 4;
+}
+
+.area-label {
+  font-family: var(--app-theme--pixel-font);
+  fill: #1f1f1f;
+  pointer-events: none;
+  user-select: none;
+}
+
+.area:hover .area-outline {
+  stroke-width: 4;
+}
+
+.area--highlighted .area-outline {
+  stroke: var(--app-theme--accent);
+  stroke-width: 6;
+  stroke-dasharray: none;
+}
+
+.area--selected .area-outline {
+  stroke: var(--app-theme--focus);
+  stroke-width: 6;
+  stroke-dasharray: none;
+}
+
+.booth {
+  stroke: #2b2b2b;
+  stroke-width: 1;
+  cursor: pointer;
+
+  &:hover {
+    stroke-width: 2.5;
+  }
+}
+
+.booth--highlighted {
+  fill: var(--app-theme--accent);
+  stroke-width: 3;
+}
+
+.callout-box {
+  fill: #1f1f1f;
+  stroke: var(--app-theme--accent);
+  stroke-width: 2;
+}
+
+.callout-text {
+  fill: #ffffff;
+  font-family: var(--app-theme--body-font);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.area:focus-visible .area-outline {
+  stroke: var(--app-theme--focus);
+  stroke-width: 7;
+  stroke-dasharray: 10 4;
+}
+
+.schematic-scroller--fit .schematic {
+  min-width: 0;
+  max-height: 80vh;
+}

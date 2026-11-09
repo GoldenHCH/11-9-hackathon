@@ -1,38 +1,88 @@
-import '../config/load-env';
-import type { IScreenToken } from '@kubequest/shared';
-import { ConfigHelper } from '../config/config.helper';
-import { tokenSettings } from './tokens.constants';
-import { TokensHelper } from './tokens.helper';
-import type { TokenVerdict } from './tokens.types';
+import { createHmac, timingSafeEqual } from 'node:crypto';
+import { appConfig, readQrSecret } from '../config';
+import { ToolError } from '../tools/tool-errors';
+import { ITokenCheck } from '../types/internal.interfaces';
+
+const PRINTED_PREFIX = 'p';
+const SCREEN_PREFIX = 's';
+
+export const SCREEN_TOKEN_TTL_MS = 10 * 60 * 1000;
 
 function qrSecret(): string {
-  const secret = ConfigHelper.nonEmpty(process.env.QR_SECRET);
+  const secret = readQrSecret();
 
-  if (!secret) {
-    throw new Error('QR_SECRET is not set, so QR tokens cannot be signed or verified.');
+  if (secret === '') {
+    throw new ToolError(503, 'qr_secret_missing', 'Check-ins are not switched on yet. Try again in a minute.');
   }
 
   return secret;
 }
 
-function nowSeconds(): number {
-  return Math.floor(Date.now() / 1000);
+function sign(payload: string): string {
+  return createHmac('sha256', qrSecret()).update(payload).digest('base64url');
+}
+
+function sameSignature(expected: string, actual: string): boolean {
+  const expectedBytes = Buffer.from(expected, 'utf8');
+  const actualBytes = Buffer.from(actual, 'utf8');
+
+  if (expectedBytes.length !== actualBytes.length) {
+    timingSafeEqual(expectedBytes, expectedBytes);
+
+    return false;
+  }
+
+  return timingSafeEqual(expectedBytes, actualBytes);
 }
 
 export function signLocationToken(locationId: string): string {
-  return TokensHelper.signLocation(qrSecret(), locationId);
+  return `${PRINTED_PREFIX}.${sign(`${PRINTED_PREFIX}:${locationId}`)}`;
 }
 
-export function signScreenToken(locationId: string, exp: number): string {
-  return TokensHelper.signScreen(qrSecret(), locationId, exp);
+export function signScreenToken(locationId: string, expiresAt: Date): string {
+  const expiresAtSeconds = Math.floor(expiresAt.getTime() / 1000).toString(36);
+
+  return `${SCREEN_PREFIX}.${expiresAtSeconds}.${sign(`${SCREEN_PREFIX}:${locationId}:${expiresAtSeconds}`)}`;
 }
 
-export function mintScreenToken(locationId: string): IScreenToken {
-  const exp = nowSeconds() + tokenSettings.SCREEN_TOKEN_TTL_SECONDS;
+export function verifyLocationToken(locationId: string, token: string, now: Date = new Date()): ITokenCheck {
+  const trimmed = token.trim();
 
-  return { locationId, token: signScreenToken(locationId, exp), exp };
+  if (trimmed === '') {
+    return { valid: false, reason: 'missing_token' };
+  }
+
+  const parts = trimmed.split('.');
+
+  if (parts[0] === PRINTED_PREFIX && parts.length === 2) {
+    const valid = sameSignature(sign(`${PRINTED_PREFIX}:${locationId}`), parts[1] ?? '');
+
+    return valid ? { valid: true } : { valid: false, reason: 'bad_signature' };
+  }
+
+  if (parts[0] === SCREEN_PREFIX && parts.length === 3) {
+    const expiresAtSeconds = parts[1] ?? '';
+    const valid = sameSignature(sign(`${SCREEN_PREFIX}:${locationId}:${expiresAtSeconds}`), parts[2] ?? '');
+
+    if (!valid) {
+      return { valid: false, reason: 'bad_signature' };
+    }
+
+    const expiresAt = new Date(parseInt(expiresAtSeconds, 36) * 1000);
+
+    if (Number.isNaN(expiresAt.getTime()) || expiresAt.getTime() < now.getTime()) {
+      return { valid: false, reason: 'expired_token', expiresAt };
+    }
+
+    return { valid: true, expiresAt };
+  }
+
+  return { valid: false, reason: 'bad_signature' };
 }
 
-export function verifyToken(locationId: string, token: string): TokenVerdict {
-  return TokensHelper.verify(qrSecret(), locationId, token, nowSeconds());
+export function buildScanUrl(locationId: string, token: string): string {
+  const url = new URL(`/r/${encodeURIComponent(locationId)}`, appConfig.publicBaseUrl);
+  url.searchParams.set('t', token);
+
+  return url.toString();
 }

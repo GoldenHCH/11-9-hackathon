@@ -1,36 +1,292 @@
 {
-  "location": {
-    "id": "salt-palace-halls-a-c-halls-1-5",
-    "name": "Halls A-C, Halls 1-5",
-    "kind": "room",
-    "venue": "Salt Palace",
-    "floor": "Level 1",
-    "geo": {
-      "lat": 40.767204,
-      "lon": -111.896092
+  "tool": "check_in",
+  "endpoint": "POST /api/tools/check_in",
+  "request": {
+    "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+    "locationId": "salt-palace-level-1-151",
+    "token": "<signed-token>"
+  },
+  "status": 200,
+  "response": {
+    "status": "rejected",
+    "message": "Nothing is running in 151 right now. Scan again while a session is on to earn XP.",
+    "xpAwarded": 0,
+    "rejectedReason": "outside_session",
+    "location": {
+      "id": "salt-palace-level-1-151",
+      "name": "151",
+      "kind": "room",
+      "building": "Salt Palace",
+      "level": "Level 1",
+      "room": "151",
+      "description": "Session room. Check in during a session, then take its quiz.",
+      "hasScreen": false,
+      "searchText": "151, Salt Palace Level 1. Session room. Check in during a session, then take its quiz.",
+      "geo": {
+        "lat": 40.76645,
+        "lon": -111.89445
+      }
+    },
+    "quizAvailable": false,
+    "completedQuests": [],
+    "newBanners": []
+  },
+  "variants": {
+    "check_in_repeat": {
+      "request": {
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+        "locationId": "salt-palace-level-1-151",
+        "token": "<signed-token>"
+      },
+      "status": 200,
+      "response": {
+        "status": "rejected",
+        "message": "Nothing is running in 151 right now. Scan again while a session is on to earn XP.",
+        "xpAwarded": 0,
+        "rejectedReason": "outside_session",
+        "location": {
+          "id": "salt-palace-level-1-151",
+          "name": "151",
+          "kind": "room",
+          "building": "Salt Palace",
+          "level": "Level 1",
+          "room": "151",
+          "description": "Session room. Check in during a session, then take its quiz.",
+          "hasScreen": false,
+          "searchText": "151, Salt Palace Level 1. Session room. Check in during a session, then take its quiz.",
+          "geo": {
+            "lat": 40.76645,
+            "lon": -111.89445
+          }
+        },
+        "quizAvailable": false,
+        "completedQuests": [],
+        "newBanners": []
+      }
+    },
+    "check_in_bad_token": {
+      "request": {
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+        "locationId": "salt-palace-level-1-151",
+        "token": "<signed-token>"
+      },
+      "status": 403,
+      "response": {
+        "error": {
+          "code": "bad_signature",
+          "message": "That code isn't valid. Scan the one on the room's door."
+        }
+      }
+    },
+    "check_in_outpost": {
+      "request": {
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+        "locationId": "outpost-elastic",
+        "token": "<signed-token>"
+      },
+      "status": 200,
+      "response": {
+        "status": "awarded",
+        "message": "+10 XP at Elastic. Ask them about Hybrid search with semantic_text and Agent Builder.",
+        "xpAwarded": 10,
+        "location": {
+          "id": "outpost-elastic",
+          "name": "Elastic",
+          "kind": "outpost",
+          "building": "Salt Palace",
+          "level": "Level 1",
+          "room": "Elastic",
+          "zone": "Solutions Showcase",
+          "description": "Elastic booth in the Solutions Showcase.",
+          "boothNumber": "196",
+          "sponsorTier": "Gold",
+          "askAbout": "Hybrid search with semantic_text and Agent Builder",
+          "topics": [
+            "ai",
+            "data",
+            "operations"
+          ],
+          "hasScreen": false,
+          "searchText": "Elastic (outpost), Salt Palace Level 1, Solutions Showcase. Elastic booth in the Solutions Showcase. Booth 196, Gold sponsor. Ask them about: Hybrid search with semantic_text and Agent Builder. Topics: ai, data, operations.",
+          "geo": {
+            "lat": 40.76657,
+            "lon": -111.8946
+          }
+        },
+        "event": {
+          "id": "ecb14094-7fce-4aee-a124-a17a7704153d",
+          "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+          "type": "outpost",
+          "xp": 10,
+          "at": "2026-11-09T20:20:52.189Z",
+          "locationId": "outpost-elastic",
+          "traceId": "b34ef99319b12fb3312113372e11120d",
+          "spanId": "5086e4fe51558abf"
+        },
+        "quizAvailable": false,
+        "completedQuests": [],
+        "newBanners": []
+      }
+    },
+    "check_in_outpost_repeat": {
+      "request": {
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+        "locationId": "outpost-elastic",
+        "token": "<signed-token>"
+      },
+      "status": 200,
+      "response": {
+        "status": "repeat",
+        "message": "You already checked in at Elastic this hour. No extra XP, but you're all set.",
+        "xpAwarded": 0,
+        "location": {
+          "id": "outpost-elastic",
+          "name": "Elastic",
+          "kind": "outpost",
+          "building": "Salt Palace",
+          "level": "Level 1",
+          "room": "Elastic",
+          "zone": "Solutions Showcase",
+          "description": "Elastic booth in the Solutions Showcase.",
+          "boothNumber": "196",
+          "sponsorTier": "Gold",
+          "askAbout": "Hybrid search with semantic_text and Agent Builder",
+          "topics": [
+            "ai",
+            "data",
+            "operations"
+          ],
+          "hasScreen": false,
+          "searchText": "Elastic (outpost), Salt Palace Level 1, Solutions Showcase. Elastic booth in the Solutions Showcase. Booth 196, Gold sponsor. Ask them about: Hybrid search with semantic_text and Agent Builder. Topics: ai, data, operations.",
+          "geo": {
+            "lat": 40.76657,
+            "lon": -111.8946
+          }
+        },
+        "event": {
+          "id": "ecb14094-7fce-4aee-a124-a17a7704153d",
+          "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+          "type": "outpost",
+          "xp": 10,
+          "at": "2026-11-09T20:20:52.189Z",
+          "locationId": "outpost-elastic",
+          "traceId": "b34ef99319b12fb3312113372e11120d",
+          "spanId": "5086e4fe51558abf"
+        },
+        "quizAvailable": false,
+        "completedQuests": [],
+        "newBanners": []
+      }
+    },
+    "check_in_wrong_location": {
+      "request": {
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+        "locationId": "outpost-dash0",
+        "token": "<signed-token>"
+      },
+      "status": 403,
+      "response": {
+        "error": {
+          "code": "bad_signature",
+          "message": "That code isn't valid. Scan the one on the room's door."
+        }
+      }
+    },
+    "check_in_screen": {
+      "request": {
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+        "locationId": "cloud-native-hackathon",
+        "token": "<signed-token>"
+      },
+      "status": 200,
+      "response": {
+        "status": "rejected",
+        "message": "Nothing is running in Cloud Native Hackathon right now. Scan again while a session is on to earn XP.",
+        "xpAwarded": 0,
+        "rejectedReason": "outside_session",
+        "location": {
+          "id": "cloud-native-hackathon",
+          "name": "Cloud Native Hackathon",
+          "kind": "boss-room",
+          "building": "Salt Palace",
+          "level": "Level 2",
+          "room": "Cloud Native Hackathon",
+          "description": "The WeMakeDevs Cloud Native Hackathon venue. Judges and hackers check in here and fight the boss together.",
+          "hasScreen": true,
+          "searchText": "Cloud Native Hackathon (boss-room), Salt Palace Level 2. The WeMakeDevs Cloud Native Hackathon venue. Judges and hackers check in here and fight the boss together.",
+          "geo": {
+            "lat": 40.76612,
+            "lon": -111.89475
+          }
+        },
+        "quizAvailable": false,
+        "completedQuests": [],
+        "newBanners": []
+      }
+    },
+    "check_in_meet_me": {
+      "request": {
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+        "locationId": "campfire-network-nook",
+        "token": "<signed-token>"
+      },
+      "status": 200,
+      "response": {
+        "status": "awarded",
+        "message": "You both made it to Network Nook. Say hi!",
+        "xpAwarded": 0,
+        "location": {
+          "id": "campfire-network-nook",
+          "name": "Network Nook",
+          "kind": "campfire",
+          "building": "Salt Palace",
+          "level": "Level 1",
+          "room": "Network Nook",
+          "zone": "Solutions Showcase",
+          "description": "Hosts the scheduled meetups, next to the outposts.",
+          "hasScreen": false,
+          "searchText": "Network Nook (campfire), Salt Palace Level 1, Solutions Showcase. Hosts the scheduled meetups, next to the outposts.",
+          "geo": {
+            "lat": 40.76645,
+            "lon": -111.89475
+          }
+        },
+        "quizAvailable": false,
+        "completedQuests": [],
+        "newBanners": []
+      }
+    },
+    "check_in_meet_partner": {
+      "request": {
+        "attendeeId": "att-podwrangler",
+        "locationId": "campfire-network-nook",
+        "token": "<signed-token>"
+      },
+      "status": 200,
+      "response": {
+        "status": "awarded",
+        "message": "You're at Network Nook. Meets happen here once both players accept.",
+        "xpAwarded": 0,
+        "location": {
+          "id": "campfire-network-nook",
+          "name": "Network Nook",
+          "kind": "campfire",
+          "building": "Salt Palace",
+          "level": "Level 1",
+          "room": "Network Nook",
+          "zone": "Solutions Showcase",
+          "description": "Hosts the scheduled meetups, next to the outposts.",
+          "hasScreen": false,
+          "searchText": "Network Nook (campfire), Salt Palace Level 1, Solutions Showcase. Hosts the scheduled meetups, next to the outposts.",
+          "geo": {
+            "lat": 40.76645,
+            "lon": -111.89475
+          }
+        },
+        "quizAvailable": false,
+        "completedQuests": [],
+        "newBanners": []
+      }
     }
-  },
-  "xp": 10,
-  "event": {
-    "id": "xp-4f4e7375-b23e-4c2c-b69d-a7bbd89705ce",
-    "attendeeId": "att-demo-platform",
-    "type": "check_in",
-    "xp": 10,
-    "locationId": "salt-palace-halls-a-c-halls-1-5",
-    "at": "2026-11-10T22:15:00.000Z"
-  },
-  "sessionNowHere": {
-    "id": "talk-1289738",
-    "title": "Solutions Showcase",
-    "abstract": "In order to facilitate networking and business relationships at the event, you may choose to visit a third party’s booth or access sponsored content. You are never required to visit third party booths or to access sponsored content. When visiting a booth or participating in sponsored activities, the third party will receive some of your registration data. This data includes your first name, last…",
-    "speakers": [],
-    "start": "2026-11-10T10:45:00-07:00",
-    "end": "2026-11-10T17:15:00-07:00",
-    "venue": "Salt Palace",
-    "level": 2,
-    "track": "other",
-    "locationId": "salt-palace-halls-a-c-halls-1-5",
-    "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1289738",
-    "hasTranscript": false
   }
 }

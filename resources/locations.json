@@ -1,420 +1,648 @@
 [
   {
-    "id": "hyatt-regency-capitol-reef",
-    "name": "Capitol Reef",
-    "kind": "room",
-    "venue": "Hyatt Regency",
-    "floor": "Level 5",
+    "id": "salt-palace-level-1-hall-de",
+    "name": "Hall DE",
+    "kind": "boss-room",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "Hall DE",
+    "description": "Keynote hall. Check in during a keynote, then beat the boss with everyone in the room.",
+    "hasScreen": true,
+    "searchText": "Hall DE, Salt Palace Level 1. Keynote hall. Check in during a keynote, then beat the boss with everyone in the room.",
     "geo": {
-      "lat": 40.761695,
-      "lon": -111.890516
+      "lat": 40.76609,
+      "lon": -111.89475
     }
   },
   {
-    "id": "hyatt-regency-regency-ballroom-a",
-    "name": "Regency Ballroom A",
-    "kind": "room",
-    "venue": "Hyatt Regency",
-    "floor": "Level 4",
+    "id": "campfire-community-hub",
+    "name": "Community Hub",
+    "kind": "campfire",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "Community Hub",
+    "description": "Open seating meant for conversation. Meet your quest partner here.",
+    "hasScreen": false,
+    "searchText": "Community Hub (campfire), Salt Palace Level 1. Open seating meant for conversation. Meet your quest partner here.",
     "geo": {
-      "lat": 40.761844,
-      "lon": -111.890872
+      "lat": 40.76621,
+      "lon": -111.89475
     }
   },
   {
-    "id": "hyatt-regency-regency-ballroom-b",
-    "name": "Regency Ballroom B",
-    "kind": "room",
-    "venue": "Hyatt Regency",
-    "floor": "Level 4",
+    "id": "campfire-learning-lounge",
+    "name": "Learning Lounge",
+    "kind": "campfire",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "Learning Lounge",
+    "zone": "Hall B, Starlight Summit Zone",
+    "description": "Named in the schedule and easy to find in the showcase.",
+    "hasScreen": false,
+    "searchText": "Learning Lounge (campfire), Salt Palace Level 1, Hall B, Starlight Summit Zone. Named in the schedule and easy to find in the showcase.",
     "geo": {
-      "lat": 40.761798,
-      "lon": -111.890853
+      "lat": 40.76633,
+      "lon": -111.89475
     }
   },
   {
-    "id": "hyatt-regency-regency-ballroom-b-d",
-    "name": "Regency Ballroom B-D",
-    "kind": "room",
-    "venue": "Hyatt Regency",
-    "floor": "Level 4",
+    "id": "campfire-network-nook",
+    "name": "Network Nook",
+    "kind": "campfire",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "Network Nook",
+    "zone": "Solutions Showcase",
+    "description": "Hosts the scheduled meetups, next to the outposts.",
+    "hasScreen": false,
+    "searchText": "Network Nook (campfire), Salt Palace Level 1, Solutions Showcase. Hosts the scheduled meetups, next to the outposts.",
     "geo": {
-      "lat": 40.761779,
-      "lon": -111.890805
+      "lat": 40.76645,
+      "lon": -111.89475
     }
   },
   {
-    "id": "hyatt-regency-regency-ballroom-cd",
-    "name": "Regency Ballroom CD",
-    "kind": "room",
-    "venue": "Hyatt Regency",
-    "floor": "Level 4",
+    "id": "campfire-the-meeting-point",
+    "name": "The Meeting Point",
+    "kind": "campfire",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "The Meeting Point",
+    "description": "The venue's own named meeting spot. Meet your quest partner here.",
+    "hasScreen": false,
+    "searchText": "The Meeting Point (campfire), Salt Palace Level 1. The venue's own named meeting spot. Meet your quest partner here.",
     "geo": {
-      "lat": 40.761904,
-      "lon": -111.890713
+      "lat": 40.76657,
+      "lon": -111.89475
     }
   },
   {
-    "id": "hyatt-regency-salt-lake-ballroom-c",
-    "name": "Salt Lake Ballroom C",
-    "kind": "room",
-    "venue": "Hyatt Regency",
-    "floor": "Level 2",
+    "id": "outpost-amazon-web-services",
+    "name": "Amazon Web Services",
+    "kind": "outpost",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "Amazon Web Services",
+    "zone": "Solutions Showcase",
+    "description": "AWS booth in the Solutions Showcase.",
+    "boothNumber": "115",
+    "sponsorTier": "Diamond",
+    "askAbout": "How EKS Auto Mode handles node upgrades for you",
+    "topics": [
+      "platform",
+      "operations",
+      "ai"
+    ],
+    "hasScreen": false,
+    "searchText": "Amazon Web Services (outpost), Salt Palace Level 1, Solutions Showcase. AWS booth in the Solutions Showcase. Booth 115, Diamond sponsor. Ask them about: How EKS Auto Mode handles node upgrades for you. Topics: platform, operations, ai.",
     "geo": {
-      "lat": 40.762037,
-      "lon": -111.890419
+      "lat": 40.76609,
+      "lon": -111.8946
     }
   },
   {
-    "id": "hyatt-regency-salt-lake-ballroom-de",
-    "name": "Salt Lake Ballroom DE",
-    "kind": "room",
-    "venue": "Hyatt Regency",
-    "floor": "Level 2",
+    "id": "outpost-dash0",
+    "name": "Dash0",
+    "kind": "outpost",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "Dash0",
+    "zone": "Solutions Showcase",
+    "description": "Dash0 booth in the Solutions Showcase.",
+    "boothNumber": "134",
+    "sponsorTier": "Platinum",
+    "askAbout": "OpenTelemetry-native observability and tracing a request end to end",
+    "topics": [
+      "operations"
+    ],
+    "hasScreen": false,
+    "searchText": "Dash0 (outpost), Salt Palace Level 1, Solutions Showcase. Dash0 booth in the Solutions Showcase. Booth 134, Platinum sponsor. Ask them about: OpenTelemetry-native observability and tracing a request end to end. Topics: operations.",
     "geo": {
-      "lat": 40.761964,
-      "lon": -111.890692
+      "lat": 40.76621,
+      "lon": -111.8946
     }
   },
   {
-    "id": "off-site-off-site-location",
-    "name": "Off-Site Location",
-    "kind": "room",
-    "venue": "Off-Site",
-    "floor": "Ground",
+    "id": "outpost-datadog",
+    "name": "Datadog",
+    "kind": "outpost",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "Datadog",
+    "zone": "Solutions Showcase",
+    "description": "Datadog booth in the Solutions Showcase.",
+    "boothNumber": "152",
+    "sponsorTier": "Platinum",
+    "askAbout": "Watching Kubernetes cost and performance together",
+    "topics": [
+      "operations",
+      "data"
+    ],
+    "hasScreen": false,
+    "searchText": "Datadog (outpost), Salt Palace Level 1, Solutions Showcase. Datadog booth in the Solutions Showcase. Booth 152, Platinum sponsor. Ask them about: Watching Kubernetes cost and performance together. Topics: operations, data.",
     "geo": {
-      "lat": 40.753493,
-      "lon": -111.874512
+      "lat": 40.76633,
+      "lon": -111.8946
     }
   },
   {
-    "id": "salt-palace-151",
-    "name": "Room 151",
-    "kind": "room",
-    "venue": "Salt Palace",
-    "floor": "Level 1",
+    "id": "outpost-docker",
+    "name": "Docker",
+    "kind": "outpost",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "Docker",
+    "zone": "Solutions Showcase",
+    "description": "Docker booth in the Solutions Showcase.",
+    "boothNumber": "141",
+    "sponsorTier": "Platinum",
+    "askAbout": "Hardened images and faster container builds",
+    "topics": [
+      "platform",
+      "security"
+    ],
+    "hasScreen": false,
+    "searchText": "Docker (outpost), Salt Palace Level 1, Solutions Showcase. Docker booth in the Solutions Showcase. Booth 141, Platinum sponsor. Ask them about: Hardened images and faster container builds. Topics: platform, security.",
     "geo": {
-      "lat": 40.76718,
-      "lon": -111.895831
+      "lat": 40.76645,
+      "lon": -111.8946
     }
   },
   {
-    "id": "salt-palace-250-a-c",
-    "name": "Room 250 A-C",
-    "kind": "room",
-    "venue": "Salt Palace",
-    "floor": "Level 2",
+    "id": "outpost-elastic",
+    "name": "Elastic",
+    "kind": "outpost",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "Elastic",
+    "zone": "Solutions Showcase",
+    "description": "Elastic booth in the Solutions Showcase.",
+    "boothNumber": "196",
+    "sponsorTier": "Gold",
+    "askAbout": "Hybrid search with semantic_text and Agent Builder",
+    "topics": [
+      "ai",
+      "data",
+      "operations"
+    ],
+    "hasScreen": false,
+    "searchText": "Elastic (outpost), Salt Palace Level 1, Solutions Showcase. Elastic booth in the Solutions Showcase. Booth 196, Gold sponsor. Ask them about: Hybrid search with semantic_text and Agent Builder. Topics: ai, data, operations.",
     "geo": {
-      "lat": 40.767466,
-      "lon": -111.895514
+      "lat": 40.76657,
+      "lon": -111.8946
     }
   },
   {
-    "id": "salt-palace-250-d-f",
-    "name": "Room 250 D-F",
-    "kind": "room",
-    "venue": "Salt Palace",
-    "floor": "Level 2",
+    "id": "outpost-google-cloud",
+    "name": "Google Cloud",
+    "kind": "outpost",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "Google Cloud",
+    "zone": "Solutions Showcase",
+    "description": "Google Cloud booth in the Solutions Showcase.",
+    "boothNumber": "122",
+    "sponsorTier": "Diamond",
+    "askAbout": "Serving LLM inference on GKE with GPUs and TPUs",
+    "topics": [
+      "ai",
+      "platform"
+    ],
+    "hasScreen": false,
+    "searchText": "Google Cloud (outpost), Salt Palace Level 1, Solutions Showcase. Google Cloud booth in the Solutions Showcase. Booth 122, Diamond sponsor. Ask them about: Serving LLM inference on GKE with GPUs and TPUs. Topics: ai, platform.",
     "geo": {
-      "lat": 40.767656,
-      "lon": -111.896
+      "lat": 40.76609,
+      "lon": -111.89445
     }
   },
   {
-    "id": "salt-palace-251-a-c",
-    "name": "Room 251 A-C",
-    "kind": "room",
-    "venue": "Salt Palace",
-    "floor": "Level 2",
+    "id": "outpost-haproxy-technologies",
+    "name": "HAProxy Technologies",
+    "kind": "outpost",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "HAProxy Technologies",
+    "zone": "Solutions Showcase",
+    "description": "HAProxy booth in the Solutions Showcase.",
+    "boothNumber": "124",
+    "sponsorTier": "Diamond",
+    "askAbout": "Moving from Ingress to Gateway API without downtime",
+    "topics": [
+      "connectivity",
+      "security"
+    ],
+    "hasScreen": false,
+    "searchText": "HAProxy Technologies (outpost), Salt Palace Level 1, Solutions Showcase. HAProxy booth in the Solutions Showcase. Booth 124, Diamond sponsor. Ask them about: Moving from Ingress to Gateway API without downtime. Topics: connectivity, security.",
     "geo": {
-      "lat": 40.767147,
-      "lon": -111.895733
+      "lat": 40.76621,
+      "lon": -111.89445
     }
   },
   {
-    "id": "salt-palace-251-d-f",
-    "name": "Room 251 D-F",
+    "id": "salt-palace-level-1-150-defg",
+    "name": "150 DEFG",
     "kind": "room",
-    "venue": "Salt Palace",
-    "floor": "Level 2",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "150 DEFG",
+    "description": "Session room. Check in during a session, then take its quiz.",
+    "hasScreen": false,
+    "searchText": "150 DEFG, Salt Palace Level 1. Session room. Check in during a session, then take its quiz.",
     "geo": {
-      "lat": 40.767252,
-      "lon": -111.896225
+      "lat": 40.76633,
+      "lon": -111.89445
     }
   },
   {
-    "id": "salt-palace-254",
-    "name": "Room 254",
+    "id": "salt-palace-level-1-151",
+    "name": "151",
     "kind": "room",
-    "venue": "Salt Palace",
-    "floor": "Level 2",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "151",
+    "description": "Session room. Check in during a session, then take its quiz.",
+    "hasScreen": false,
+    "searchText": "151, Salt Palace Level 1. Session room. Check in during a session, then take its quiz.",
     "geo": {
-      "lat": 40.767608,
-      "lon": -111.895909
+      "lat": 40.76645,
+      "lon": -111.89445
     }
   },
   {
-    "id": "salt-palace-255-a",
-    "name": "Room 255 A",
+    "id": "salt-palace-level-1-151-g",
+    "name": "151 G",
     "kind": "room",
-    "venue": "Salt Palace",
-    "floor": "Level 2",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "151 G",
+    "description": "Session room. Check in during a session, then take its quiz.",
+    "hasScreen": false,
+    "searchText": "151 G, Salt Palace Level 1. Session room. Check in during a session, then take its quiz.",
     "geo": {
-      "lat": 40.767505,
-      "lon": -111.895944
+      "lat": 40.76657,
+      "lon": -111.89445
     }
   },
   {
-    "id": "salt-palace-255-bc",
-    "name": "Room 255 BC",
+    "id": "salt-palace-level-1-155-e",
+    "name": "155 E",
     "kind": "room",
-    "venue": "Salt Palace",
-    "floor": "Level 2",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "155 E",
+    "description": "Session room. Check in during a session, then take its quiz.",
+    "hasScreen": false,
+    "searchText": "155 E, Salt Palace Level 1. Session room. Check in during a session, then take its quiz.",
     "geo": {
-      "lat": 40.767526,
-      "lon": -111.895549
+      "lat": 40.76609,
+      "lon": -111.8943
     }
   },
   {
-    "id": "salt-palace-255-d",
-    "name": "Room 255 D",
-    "kind": "room",
-    "venue": "Salt Palace",
-    "floor": "Level 2",
-    "geo": {
-      "lat": 40.767146,
-      "lon": -111.8958
-    }
-  },
-  {
-    "id": "salt-palace-255-ef",
-    "name": "Room 255 EF",
-    "kind": "room",
-    "venue": "Salt Palace",
-    "floor": "Level 2",
-    "geo": {
-      "lat": 40.767265,
-      "lon": -111.896084
-    }
-  },
-  {
-    "id": "salt-palace-grand-ballroom-ace",
+    "id": "salt-palace-level-1-grand-ballroom-ace",
     "name": "Grand Ballroom ACE",
     "kind": "room",
-    "venue": "Salt Palace",
-    "floor": "Level 1",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "Grand Ballroom ACE",
+    "description": "Session room. Check in during a session, then take its quiz.",
+    "hasScreen": false,
+    "searchText": "Grand Ballroom ACE, Salt Palace Level 1. Session room. Check in during a session, then take its quiz.",
     "geo": {
-      "lat": 40.767373,
-      "lon": -111.896042
+      "lat": 40.76621,
+      "lon": -111.8943
     }
   },
   {
-    "id": "salt-palace-grand-ballroom-bdf",
+    "id": "salt-palace-level-1-grand-ballroom-bdf",
     "name": "Grand Ballroom BDF",
     "kind": "room",
-    "venue": "Salt Palace",
-    "floor": "Level 1",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "Grand Ballroom BDF",
+    "description": "Session room. Check in during a session, then take its quiz.",
+    "hasScreen": false,
+    "searchText": "Grand Ballroom BDF, Salt Palace Level 1. Session room. Check in during a session, then take its quiz.",
     "geo": {
-      "lat": 40.767053,
-      "lon": -111.896159
+      "lat": 40.76633,
+      "lon": -111.8943
     }
   },
   {
-    "id": "salt-palace-grand-ballroom-gi",
+    "id": "salt-palace-level-1-grand-ballroom-gi",
     "name": "Grand Ballroom GI",
     "kind": "room",
-    "venue": "Salt Palace",
-    "floor": "Level 1",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "Grand Ballroom GI",
+    "description": "Session room. Check in during a session, then take its quiz.",
+    "hasScreen": false,
+    "searchText": "Grand Ballroom GI, Salt Palace Level 1. Session room. Check in during a session, then take its quiz.",
     "geo": {
-      "lat": 40.767202,
-      "lon": -111.896212
+      "lat": 40.76645,
+      "lon": -111.8943
     }
   },
   {
-    "id": "salt-palace-grand-ballroom-h",
+    "id": "salt-palace-level-1-grand-ballroom-h",
     "name": "Grand Ballroom H",
     "kind": "room",
-    "venue": "Salt Palace",
-    "floor": "Level 1",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "Grand Ballroom H",
+    "description": "Session room. Check in during a session, then take its quiz.",
+    "hasScreen": false,
+    "searchText": "Grand Ballroom H, Salt Palace Level 1. Session room. Check in during a session, then take its quiz.",
     "geo": {
-      "lat": 40.767477,
-      "lon": -111.896336
+      "lat": 40.76657,
+      "lon": -111.8943
     }
   },
   {
-    "id": "salt-palace-grand-ballroom-j",
-    "name": "Grand Ballroom J",
+    "id": "salt-palace-level-1-cloud-native-theater",
+    "name": "Cloud Native Theater",
+    "kind": "theater",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "Cloud Native Theater",
+    "zone": "Project Pavilion",
+    "description": "Project updates and community talks, scheduled like a room, inside the halls.",
+    "hasScreen": true,
+    "searchText": "Cloud Native Theater (theater), Salt Palace Level 1, Project Pavilion. Project updates and community talks, scheduled like a room, inside the halls.",
+    "geo": {
+      "lat": 40.76609,
+      "lon": -111.89415
+    }
+  },
+  {
+    "id": "salt-palace-level-1-demo-theater",
+    "name": "Demo Theater",
+    "kind": "theater",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "Demo Theater",
+    "zone": "Solutions Showcase",
+    "description": "Short sponsor and project demos, scheduled like a room, inside the Solutions Showcase halls.",
+    "hasScreen": true,
+    "searchText": "Demo Theater (theater), Salt Palace Level 1, Solutions Showcase. Short sponsor and project demos, scheduled like a room, inside the Solutions Showcase halls.",
+    "geo": {
+      "lat": 40.76621,
+      "lon": -111.89415
+    }
+  },
+  {
+    "id": "cloud-native-hackathon",
+    "name": "Cloud Native Hackathon",
+    "kind": "boss-room",
+    "building": "Salt Palace",
+    "level": "Level 2",
+    "room": "Cloud Native Hackathon",
+    "description": "The WeMakeDevs Cloud Native Hackathon venue. Judges and hackers check in here and fight the boss together.",
+    "hasScreen": true,
+    "searchText": "Cloud Native Hackathon (boss-room), Salt Palace Level 2. The WeMakeDevs Cloud Native Hackathon venue. Judges and hackers check in here and fight the boss together.",
+    "geo": {
+      "lat": 40.76612,
+      "lon": -111.89475
+    }
+  },
+  {
+    "id": "salt-palace-level-2-250-a-c",
+    "name": "250 A-C",
     "kind": "room",
-    "venue": "Salt Palace",
-    "floor": "Level 1",
+    "building": "Salt Palace",
+    "level": "Level 2",
+    "room": "250 A-C",
+    "description": "Session room. Check in during a session, then take its quiz.",
+    "hasScreen": false,
+    "searchText": "250 A-C, Salt Palace Level 2. Session room. Check in during a session, then take its quiz.",
     "geo": {
-      "lat": 40.767468,
-      "lon": -111.896201
+      "lat": 40.76624,
+      "lon": -111.89475
     }
   },
   {
-    "id": "salt-palace-hall-de",
-    "name": "Hall DE",
+    "id": "salt-palace-level-2-250-ab",
+    "name": "250 AB",
     "kind": "room",
-    "venue": "Salt Palace",
-    "floor": "Level 1",
+    "building": "Salt Palace",
+    "level": "Level 2",
+    "room": "250 AB",
+    "description": "Session room. Check in during a session, then take its quiz.",
+    "hasScreen": false,
+    "searchText": "250 AB, Salt Palace Level 2. Session room. Check in during a session, then take its quiz.",
     "geo": {
-      "lat": 40.767335,
-      "lon": -111.89598
+      "lat": 40.76636,
+      "lon": -111.89475
     }
   },
   {
-    "id": "salt-palace-halls-a-c-halls-1-5",
-    "name": "Halls A-C, Halls 1-5",
+    "id": "salt-palace-level-2-251-abc",
+    "name": "251 ABC",
     "kind": "room",
-    "venue": "Salt Palace",
-    "floor": "Level 1",
+    "building": "Salt Palace",
+    "level": "Level 2",
+    "room": "251 ABC",
+    "description": "Session room. Check in during a session, then take its quiz.",
+    "hasScreen": false,
+    "searchText": "251 ABC, Salt Palace Level 2. Session room. Check in during a session, then take its quiz.",
     "geo": {
-      "lat": 40.767204,
-      "lon": -111.896092
+      "lat": 40.76648,
+      "lon": -111.89475
     }
   },
   {
-    "id": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
-    "name": "Solutions Showcase · Hall 1 · Alpine Overlook Zone · Demo Theater",
+    "id": "salt-palace-level-2-251-def",
+    "name": "251 DEF",
     "kind": "room",
-    "venue": "Salt Palace",
-    "floor": "Level 1",
+    "building": "Salt Palace",
+    "level": "Level 2",
+    "room": "251 DEF",
+    "description": "Session room. Check in during a session, then take its quiz.",
+    "hasScreen": false,
+    "searchText": "251 DEF, Salt Palace Level 2. Session room. Check in during a session, then take its quiz.",
     "geo": {
-      "lat": 40.76754,
-      "lon": -111.896033
+      "lat": 40.7666,
+      "lon": -111.89475
     }
   },
   {
-    "id": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-network-nook",
-    "name": "Solutions Showcase · Hall 1 · Alpine Overlook Zone · Network Nook",
+    "id": "salt-palace-level-2-254-ab",
+    "name": "254 AB",
     "kind": "room",
-    "venue": "Salt Palace",
-    "floor": "Level 1",
+    "building": "Salt Palace",
+    "level": "Level 2",
+    "room": "254 AB",
+    "description": "Session room. Check in during a session, then take its quiz.",
+    "hasScreen": false,
+    "searchText": "254 AB, Salt Palace Level 2. Session room. Check in during a session, then take its quiz.",
     "geo": {
-      "lat": 40.767172,
-      "lon": -111.896224
+      "lat": 40.76612,
+      "lon": -111.8946
     }
   },
   {
-    "id": "salt-palace-solutions-showcase-hall-5-cosmic-canyon-zone-project-pavilion",
-    "name": "Solutions Showcase · Hall 5 · Cosmic Canyon Zone · Project Pavilion",
+    "id": "salt-palace-level-2-255-bc",
+    "name": "255 BC",
     "kind": "room",
-    "venue": "Salt Palace",
-    "floor": "Level 1",
+    "building": "Salt Palace",
+    "level": "Level 2",
+    "room": "255 BC",
+    "description": "Session room. Check in during a session, then take its quiz.",
+    "hasScreen": false,
+    "searchText": "255 BC, Salt Palace Level 2. Session room. Check in during a session, then take its quiz.",
     "geo": {
-      "lat": 40.767382,
-      "lon": -111.895729
+      "lat": 40.76624,
+      "lon": -111.8946
     }
   },
   {
-    "id": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
-    "name": "Solutions Showcase · Hall B · Starlight Summit Zone",
+    "id": "salt-palace-level-2-255-ef",
+    "name": "255 EF",
     "kind": "room",
-    "venue": "Salt Palace",
-    "floor": "Level 1",
+    "building": "Salt Palace",
+    "level": "Level 2",
+    "room": "255 EF",
+    "description": "Session room. Check in during a session, then take its quiz.",
+    "hasScreen": false,
+    "searchText": "255 EF, Salt Palace Level 2. Session room. Check in during a session, then take its quiz.",
     "geo": {
-      "lat": 40.767409,
-      "lon": -111.896175
+      "lat": 40.76636,
+      "lon": -111.8946
     }
   },
   {
-    "id": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
-    "name": "Solutions Showcase · Halls 5 · Cosmic Canyon Zone · Cloud Native Theater",
+    "id": "campfire-salt-lake-foyer",
+    "name": "Salt Lake Foyer",
+    "kind": "campfire",
+    "building": "Hyatt Regency",
+    "level": "Level 2",
+    "room": "Salt Lake Foyer",
+    "description": "Outside the Salt Lake Ballrooms.",
+    "hasScreen": false,
+    "searchText": "Salt Lake Foyer (campfire), Hyatt Regency Level 2. Outside the Salt Lake Ballrooms.",
+    "geo": {
+      "lat": 40.76702,
+      "lon": -111.89385
+    }
+  },
+  {
+    "id": "hyatt-regency-level-2-salt-lake-ballroom-a",
+    "name": "Salt Lake Ballroom A",
     "kind": "room",
-    "venue": "Salt Palace",
-    "floor": "Level 1",
+    "building": "Hyatt Regency",
+    "level": "Level 2",
+    "room": "Salt Lake Ballroom A",
+    "description": "Session room. Check in during a session, then take its quiz.",
+    "hasScreen": false,
+    "searchText": "Salt Lake Ballroom A, Hyatt Regency Level 2. Session room. Check in during a session, then take its quiz.",
     "geo": {
-      "lat": 40.767501,
-      "lon": -111.895962
+      "lat": 40.76714,
+      "lon": -111.89385
     }
   },
   {
-    "id": "the-shop-workspace-hackathon-floor",
-    "name": "Hackathon Floor",
+    "id": "hyatt-regency-level-2-salt-lake-ballroom-b",
+    "name": "Salt Lake Ballroom B",
     "kind": "room",
-    "venue": "The Shop Workspace",
-    "floor": "Level 1",
+    "building": "Hyatt Regency",
+    "level": "Level 2",
+    "room": "Salt Lake Ballroom B",
+    "description": "Session room. Check in during a session, then take its quiz.",
+    "hasScreen": false,
+    "searchText": "Salt Lake Ballroom B, Hyatt Regency Level 2. Session room. Check in during a session, then take its quiz.",
     "geo": {
-      "lat": 40.77804,
-      "lon": -111.904379
+      "lat": 40.76726,
+      "lon": -111.89385
     }
   },
   {
-    "id": "mp-salt-palace-coffee",
-    "name": "Salt Palace Coffee Bar",
-    "kind": "meeting-point",
-    "venue": "Salt Palace",
-    "floor": "Level 1",
+    "id": "hyatt-regency-level-2-salt-lake-ballroom-c",
+    "name": "Salt Lake Ballroom C",
+    "kind": "room",
+    "building": "Hyatt Regency",
+    "level": "Level 2",
+    "room": "Salt Lake Ballroom C",
+    "description": "Session room. Check in during a session, then take its quiz.",
+    "hasScreen": false,
+    "searchText": "Salt Lake Ballroom C, Hyatt Regency Level 2. Session room. Check in during a session, then take its quiz.",
     "geo": {
-      "lat": 40.767165,
-      "lon": -111.896119
+      "lat": 40.76738,
+      "lon": -111.89385
     }
   },
   {
-    "id": "mp-hyatt-l4-foyer",
-    "name": "Hyatt Regency Level 4 Foyer",
-    "kind": "meeting-point",
-    "venue": "Hyatt Regency",
-    "floor": "Level 4",
+    "id": "hyatt-regency-level-2-salt-lake-ballroom-de",
+    "name": "Salt Lake Ballroom DE",
+    "kind": "room",
+    "building": "Hyatt Regency",
+    "level": "Level 2",
+    "room": "Salt Lake Ballroom DE",
+    "description": "Session room. Check in during a session, then take its quiz.",
+    "hasScreen": false,
+    "searchText": "Salt Lake Ballroom DE, Hyatt Regency Level 2. Session room. Check in during a session, then take its quiz.",
     "geo": {
-      "lat": 40.76191,
-      "lon": -111.890663
+      "lat": 40.7675,
+      "lon": -111.89385
     }
   },
   {
-    "id": "mp-hackathon-venue",
-    "name": "The Shop Workspace",
-    "kind": "meeting-point",
-    "venue": "The Shop Workspace",
-    "floor": "Level 1",
+    "id": "campfire-regency-foyer",
+    "name": "Regency Foyer",
+    "kind": "campfire",
+    "building": "Hyatt Regency",
+    "level": "Level 4",
+    "room": "Regency Foyer",
+    "description": "By the Regency Ballrooms, outside the lightning-talk room.",
+    "hasScreen": false,
+    "searchText": "Regency Foyer (campfire), Hyatt Regency Level 4. By the Regency Ballrooms, outside the lightning-talk room.",
     "geo": {
-      "lat": 40.77808,
-      "lon": -111.904303
+      "lat": 40.76708,
+      "lon": -111.89385
     }
   },
   {
-    "id": "mp-network-nook",
-    "name": "Network Nook",
-    "kind": "meeting-point",
-    "venue": "Salt Palace",
-    "floor": "Level 1",
+    "id": "hyatt-regency-level-4-regency-ballroom-a",
+    "name": "Regency Ballroom A",
+    "kind": "room",
+    "building": "Hyatt Regency",
+    "level": "Level 4",
+    "room": "Regency Ballroom A",
+    "description": "Session room. Check in during a session, then take its quiz.",
+    "hasScreen": false,
+    "searchText": "Regency Ballroom A, Hyatt Regency Level 4. Session room. Check in during a session, then take its quiz.",
     "geo": {
-      "lat": 40.767525,
-      "lon": -111.895644
+      "lat": 40.7672,
+      "lon": -111.89385
     }
   },
   {
-    "id": "booth-elastic",
-    "name": "Elastic Booth",
-    "kind": "booth",
-    "venue": "Salt Palace",
-    "floor": "Level 1",
+    "id": "hyatt-regency-level-4-regency-ballroom-b-d",
+    "name": "Regency Ballroom B-D",
+    "kind": "room",
+    "building": "Hyatt Regency",
+    "level": "Level 4",
+    "room": "Regency Ballroom B-D",
+    "description": "Session room. Check in during a session, then take its quiz.",
+    "hasScreen": false,
+    "searchText": "Regency Ballroom B-D, Hyatt Regency Level 4. Session room. Check in during a session, then take its quiz.",
     "geo": {
-      "lat": 40.767408,
-      "lon": -111.895348
+      "lat": 40.76732,
+      "lon": -111.89385
     }
   },
   {
-    "id": "booth-dash0",
-    "name": "Dash0 Booth",
-    "kind": "booth",
-    "venue": "Salt Palace",
-    "floor": "Level 1",
+    "id": "hyatt-regency-level-4-regency-ballroom-cd",
+    "name": "Regency Ballroom CD",
+    "kind": "room",
+    "building": "Hyatt Regency",
+    "level": "Level 4",
+    "room": "Regency Ballroom CD",
+    "description": "Session room. Check in during a session, then take its quiz.",
+    "hasScreen": false,
+    "searchText": "Regency Ballroom CD, Hyatt Regency Level 4. Session room. Check in during a session, then take its quiz.",
     "geo": {
-      "lat": 40.767255,
-      "lon": -111.89517
-    }
-  },
-  {
-    "id": "booth-radar",
-    "name": "Radar Booth",
-    "kind": "booth",
-    "venue": "Salt Palace",
-    "floor": "Level 1",
-    "geo": {
-      "lat": 40.767102,
-      "lon": -111.895265
+      "lat": 40.76744,
+      "lon": -111.89385
     }
   }
 ]

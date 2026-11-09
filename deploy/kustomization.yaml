@@ -8,7 +8,8 @@ resources:
   - deployment.yaml
   - service.yaml
   - httproute.yaml
+  - otel-collector.yaml
 images:
   - name: app
     newName: ghcr.io/goldenhch/11-9-hackathon
-    newTag: 47e596e
+    newTag: 79c99a0

@@ -1,0 +1,151 @@
+{
+  "tool": "update_settings",
+  "endpoint": "POST /api/tools/update_settings",
+  "request": {
+    "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+    "settings": {
+      "accessibleMode": false,
+      "noWalking": false
+    },
+    "topics": [
+      "ai",
+      "gpu",
+      "autoscaling",
+      "platform"
+    ]
+  },
+  "status": 200,
+  "response": {
+    "attendee": {
+      "id": "p_Ljp4ZfHC-VPDFwqx",
+      "handle": "verify93279",
+      "faceSeed": "cbd1b4ac2fe4ff69",
+      "spotMe": "Green hoodie",
+      "workingOn": "Running GPU inference on Kubernetes with autoscaling",
+      "profileText": "verify93279 is at their first KubeCon. Working on: Running GPU inference on Kubernetes with autoscaling. Interested in ai, gpu, autoscaling, platform.",
+      "profile": {
+        "topics": [
+          "ai",
+          "gpu",
+          "autoscaling",
+          "platform"
+        ],
+        "firstTimer": true,
+        "welcomer": false
+      },
+      "settings": {
+        "accessibleMode": false,
+        "noWalking": false,
+        "locationOn": true,
+        "language": "en",
+        "hideFromLeaderboard": false,
+        "meetingOn": true
+      },
+      "visible": true,
+      "xp": 0,
+      "level": 1,
+      "banners": [],
+      "blockedIds": [],
+      "createdAt": "2026-11-09T20:19:53.421Z",
+      "inventory": {
+        "gems": 0,
+        "blocks": {
+          "wood": 1
+        }
+      },
+      "lastSeenAt": "2026-11-09T20:19:55.026Z",
+      "lastLocation": {
+        "lon": -111.89445,
+        "lat": 40.76633
+      },
+      "lastLocationId": "salt-palace-level-1-150-defg"
+    },
+    "level": {
+      "level": 1,
+      "name": "Pod",
+      "xp": 0,
+      "levelMinXp": 0,
+      "nextLevelXp": 50,
+      "nextLevelName": "Deployment",
+      "progress": 0
+    },
+    "inventory": {
+      "blocks": {
+        "circuit": 0,
+        "stone": 0,
+        "glass": 0,
+        "crate": 0,
+        "iron": 0,
+        "copper": 0,
+        "lantern": 0,
+        "wood": 1,
+        "gold": 0
+      },
+      "totalBlocks": 1,
+      "gems": 0,
+      "banners": [
+        {
+          "id": "observability-nerd",
+          "name": "Observability Nerd",
+          "description": "Collect 3 glass blocks from Operations + Performance talks",
+          "progress": 0,
+          "target": 3,
+          "earned": false
+        },
+        {
+          "id": "connector",
+          "name": "Connector",
+          "description": "Complete 3 meets",
+          "progress": 0,
+          "target": 3,
+          "earned": false
+        },
+        {
+          "id": "welcomer",
+          "name": "Welcomer",
+          "description": "Complete 2 meets with first-timers",
+          "progress": 0,
+          "target": 2,
+          "earned": false
+        },
+        {
+          "id": "explorer",
+          "name": "Explorer",
+          "description": "Check in at both buildings",
+          "progress": 0,
+          "target": 2,
+          "earned": false
+        },
+        {
+          "id": "scout",
+          "name": "Scout",
+          "description": "Visit 5 outposts in a day",
+          "progress": 0,
+          "target": 5,
+          "earned": false
+        },
+        {
+          "id": "speaker",
+          "name": "Speaker",
+          "description": "Speaking at KubeCon",
+          "progress": 0,
+          "target": 1,
+          "earned": false
+        }
+      ],
+      "xp": 0,
+      "level": {
+        "level": 1,
+        "name": "Pod",
+        "xp": 0,
+        "levelMinXp": 0,
+        "nextLevelXp": 50,
+        "nextLevelName": "Deployment",
+        "progress": 0
+      },
+      "nextLevelXp": 50
+    },
+    "personalLink": "https://kube-quest.cnh.radarhq.io/me/p_Ljp4ZfHC-VPDFwqx",
+    "publicId": "pl_4451cf61b8914498"
+  }
+}

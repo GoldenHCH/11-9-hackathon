@@ -1,0 +1,387 @@
+{
+  "tool": "list_meets",
+  "endpoint": "POST /api/tools/list_meets",
+  "request": {
+    "attendeeId": "p_Ljp4ZfHC-VPDFwqx"
+  },
+  "status": 200,
+  "response": [
+    {
+      "id": "meet-4d7c25c123e592d61a6e986e",
+      "status": "accepted",
+      "role": "proposer",
+      "statusLine": "Meet @podwrangler at Network Nook and both scan its code.",
+      "partner": {
+        "id": "pl_592a78e076ad8c1f",
+        "handle": "podwrangler",
+        "faceSeed": "podwrangler",
+        "level": 2,
+        "levelName": "Deployment",
+        "xp": 110,
+        "banners": [
+          "welcomer"
+        ],
+        "topics": [
+          "gpus",
+          "gpu-sharing",
+          "cluster-allocation",
+          "platform-engineering",
+          "kueue"
+        ],
+        "workingOn": "Runs GPU cluster allocation for ML teams; happy to help first-timers find their feet.",
+        "firstTimer": false
+      },
+      "partnerDetails": {},
+      "campfire": {
+        "id": "campfire-network-nook",
+        "name": "Network Nook",
+        "kind": "campfire",
+        "building": "Salt Palace",
+        "level": "Level 1",
+        "room": "Network Nook",
+        "zone": "Solutions Showcase",
+        "description": "Hosts the scheduled meetups, next to the outposts.",
+        "hasScreen": false,
+        "searchText": "Network Nook (campfire), Salt Palace Level 1, Solutions Showcase. Hosts the scheduled meetups, next to the outposts.",
+        "geo": {
+          "lat": 40.76645,
+          "lon": -111.89475
+        }
+      },
+      "slot": {
+        "start": "2026-11-09T20:20:14.452Z",
+        "end": "2026-11-09T20:50:14.452Z"
+      },
+      "icebreaker": "You both work on Kubernetes. Ask what broke last.",
+      "chatPrompt": "Ask @podwrangler how they handle gpus on their team.",
+      "matchSignal": {
+        "words": "GLASS FOX",
+        "pattern": [
+          "crate",
+          "copper",
+          "copper",
+          "stone",
+          "wood",
+          "circuit",
+          "circuit",
+          "wood",
+          "stone",
+          "glass",
+          "lantern",
+          "stone",
+          "stone",
+          "iron",
+          "circuit",
+          "glass",
+          "stone",
+          "stone",
+          "copper",
+          "iron",
+          "lantern",
+          "copper",
+          "circuit",
+          "wood",
+          "circuit",
+          "wood",
+          "lantern",
+          "wood",
+          "copper",
+          "iron",
+          "stone",
+          "wood",
+          "glass",
+          "gold",
+          "circuit",
+          "gold",
+          "gold",
+          "gold",
+          "iron",
+          "crate",
+          "lantern",
+          "gold",
+          "glass",
+          "iron",
+          "wood",
+          "copper",
+          "crate",
+          "gold",
+          "crate",
+          "wood",
+          "copper",
+          "copper",
+          "gold",
+          "iron",
+          "lantern",
+          "iron",
+          "lantern",
+          "stone",
+          "lantern",
+          "lantern",
+          "crate",
+          "circuit",
+          "lantern",
+          "iron"
+        ]
+      },
+      "sharedTopics": [],
+      "iAccepted": true,
+      "partnerArrived": false,
+      "expiresAt": "2026-11-09T21:20:14.452Z"
+    },
+    {
+      "id": "meet-a08d179265d6e711506c8723",
+      "status": "proposed",
+      "role": "proposer",
+      "statusLine": "Waiting to hear back. We'll tell you if @quietgopher is in.",
+      "partner": {
+        "id": "pl_5f917ee1a2a89af1",
+        "handle": "quietgopher",
+        "faceSeed": "quietgopher",
+        "level": 1,
+        "levelName": "Pod",
+        "xp": 10,
+        "banners": [],
+        "topics": [
+          "platform-engineering",
+          "gpus",
+          "gpu-sharing",
+          "internal-developer-platforms",
+          "go"
+        ],
+        "workingOn": "Platform engineer, first KubeCon, figuring out how to share a small GPU pool fairly across teams.",
+        "firstTimer": true
+      },
+      "sharedTopics": [],
+      "iAccepted": true,
+      "partnerArrived": false,
+      "expiresAt": "2026-11-09T20:40:05.092Z"
+    }
+  ],
+  "variants": {
+    "list_meets_pending": {
+      "request": {
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx"
+      },
+      "status": 200,
+      "response": [
+        {
+          "id": "meet-4d7c25c123e592d61a6e986e",
+          "status": "proposed",
+          "role": "proposer",
+          "statusLine": "Waiting to hear back. We'll tell you if @podwrangler is in.",
+          "partner": {
+            "id": "pl_592a78e076ad8c1f",
+            "handle": "podwrangler",
+            "faceSeed": "podwrangler",
+            "level": 2,
+            "levelName": "Deployment",
+            "xp": 110,
+            "banners": [
+              "welcomer"
+            ],
+            "topics": [
+              "gpus",
+              "gpu-sharing",
+              "cluster-allocation",
+              "platform-engineering",
+              "kueue"
+            ],
+            "workingOn": "Runs GPU cluster allocation for ML teams; happy to help first-timers find their feet.",
+            "firstTimer": false
+          },
+          "sharedTopics": [],
+          "iAccepted": true,
+          "partnerArrived": false,
+          "expiresAt": "2026-11-09T20:40:13.391Z"
+        },
+        {
+          "id": "meet-a08d179265d6e711506c8723",
+          "status": "proposed",
+          "role": "proposer",
+          "statusLine": "Waiting to hear back. We'll tell you if @quietgopher is in.",
+          "partner": {
+            "id": "pl_5f917ee1a2a89af1",
+            "handle": "quietgopher",
+            "faceSeed": "quietgopher",
+            "level": 1,
+            "levelName": "Pod",
+            "xp": 10,
+            "banners": [],
+            "topics": [
+              "platform-engineering",
+              "gpus",
+              "gpu-sharing",
+              "internal-developer-platforms",
+              "go"
+            ],
+            "workingOn": "Platform engineer, first KubeCon, figuring out how to share a small GPU pool fairly across teams.",
+            "firstTimer": true
+          },
+          "sharedTopics": [],
+          "iAccepted": true,
+          "partnerArrived": false,
+          "expiresAt": "2026-11-09T20:40:05.092Z"
+        }
+      ]
+    },
+    "list_meets_after": {
+      "request": {
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx"
+      },
+      "status": 200,
+      "response": [
+        {
+          "id": "meet-4d7c25c123e592d61a6e986e",
+          "status": "met",
+          "role": "proposer",
+          "statusLine": "You met @podwrangler.",
+          "partner": {
+            "id": "pl_592a78e076ad8c1f",
+            "handle": "podwrangler",
+            "faceSeed": "podwrangler",
+            "level": 3,
+            "levelName": "Node",
+            "xp": 260,
+            "banners": [
+              "welcomer"
+            ],
+            "topics": [
+              "gpus",
+              "gpu-sharing",
+              "cluster-allocation",
+              "platform-engineering",
+              "kueue"
+            ],
+            "workingOn": "Runs GPU cluster allocation for ML teams; happy to help first-timers find their feet.",
+            "firstTimer": false
+          },
+          "partnerDetails": {},
+          "campfire": {
+            "id": "campfire-network-nook",
+            "name": "Network Nook",
+            "kind": "campfire",
+            "building": "Salt Palace",
+            "level": "Level 1",
+            "room": "Network Nook",
+            "zone": "Solutions Showcase",
+            "description": "Hosts the scheduled meetups, next to the outposts.",
+            "hasScreen": false,
+            "searchText": "Network Nook (campfire), Salt Palace Level 1, Solutions Showcase. Hosts the scheduled meetups, next to the outposts.",
+            "geo": {
+              "lat": 40.76645,
+              "lon": -111.89475
+            }
+          },
+          "slot": {
+            "start": "2026-11-09T20:20:14.452Z",
+            "end": "2026-11-09T20:50:14.452Z"
+          },
+          "icebreaker": "You both work on Kubernetes. Ask what broke last.",
+          "chatPrompt": "Ask @podwrangler how they handle gpus on their team.",
+          "matchSignal": {
+            "words": "GLASS FOX",
+            "pattern": [
+              "crate",
+              "copper",
+              "copper",
+              "stone",
+              "wood",
+              "circuit",
+              "circuit",
+              "wood",
+              "stone",
+              "glass",
+              "lantern",
+              "stone",
+              "stone",
+              "iron",
+              "circuit",
+              "glass",
+              "stone",
+              "stone",
+              "copper",
+              "iron",
+              "lantern",
+              "copper",
+              "circuit",
+              "wood",
+              "circuit",
+              "wood",
+              "lantern",
+              "wood",
+              "copper",
+              "iron",
+              "stone",
+              "wood",
+              "glass",
+              "gold",
+              "circuit",
+              "gold",
+              "gold",
+              "gold",
+              "iron",
+              "crate",
+              "lantern",
+              "gold",
+              "glass",
+              "iron",
+              "wood",
+              "copper",
+              "crate",
+              "gold",
+              "crate",
+              "wood",
+              "copper",
+              "copper",
+              "gold",
+              "iron",
+              "lantern",
+              "iron",
+              "lantern",
+              "stone",
+              "lantern",
+              "lantern",
+              "crate",
+              "circuit",
+              "lantern",
+              "iron"
+            ]
+          },
+          "sharedTopics": [],
+          "iAccepted": true,
+          "iArrivedAt": "2026-11-09T20:20:57.119Z",
+          "partnerArrived": true,
+          "expiresAt": "2026-11-09T21:20:14.452Z"
+        },
+        {
+          "id": "meet-a08d179265d6e711506c8723",
+          "status": "proposed",
+          "role": "proposer",
+          "statusLine": "Waiting to hear back. We'll tell you if @quietgopher is in.",
+          "partner": {
+            "id": "pl_5f917ee1a2a89af1",
+            "handle": "quietgopher",
+            "faceSeed": "quietgopher",
+            "level": 2,
+            "levelName": "Deployment",
+            "xp": 85,
+            "banners": [],
+            "topics": [
+              "platform-engineering",
+              "gpus",
+              "gpu-sharing",
+              "internal-developer-platforms",
+              "go"
+            ],
+            "workingOn": "Platform engineer, first KubeCon, figuring out how to share a small GPU pool fairly across teams.",
+            "firstTimer": true
+          },
+          "sharedTopics": [],
+          "iAccepted": true,
+          "partnerArrived": false,
+          "expiresAt": "2026-11-09T20:40:05.092Z"
+        }
+      ]
+    }
+  }
+}

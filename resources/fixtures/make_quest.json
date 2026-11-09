@@ -1,0 +1,42 @@
+{
+  "tool": "make_quest",
+  "endpoint": "POST /api/tools/make_quest",
+  "request": {
+    "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+    "targetKind": "session",
+    "targetId": "kc26-tue-keynote-openrl"
+  },
+  "status": 200,
+  "response": {
+    "id": "q_6630052209652399c296173c",
+    "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+    "type": "attend",
+    "status": "accepted",
+    "source": "player",
+    "offeredAt": "2026-11-09T20:20:08.447Z",
+    "title": "Attend \"Pods in the Wild: Reinforcement Learning on Kubernetes with OpenRL\"",
+    "reason": "You picked this session yourself.",
+    "nextStep": "Head to Hall DE; it starts in 1245 min. Scan the room's QR during the session.",
+    "reward": {
+      "xp": 10,
+      "material": "circuit",
+      "label": "10 XP + 1 Circuit block"
+    },
+    "where": {
+      "locationId": "salt-palace-level-1-hall-de",
+      "name": "Hall DE",
+      "kind": "boss-room",
+      "building": "Salt Palace",
+      "level": "Level 1"
+    },
+    "when": {
+      "start": "2026-11-10T10:05:00-07:00",
+      "end": "2026-11-10T10:13:00-07:00"
+    },
+    "walkMinutes": 2,
+    "talkId": "kc26-tue-keynote-openrl",
+    "locationId": "salt-palace-level-1-hall-de",
+    "expiresAt": "2026-11-10T10:13:00-07:00",
+    "respondedAt": "2026-11-09T20:20:08.447Z"
+  }
+}

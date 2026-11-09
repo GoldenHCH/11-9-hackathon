@@ -1,0 +1,14 @@
+<section class="app-page">
+  <app-screen-toolbar [title]="title"></app-screen-toolbar>
+  <div class="coming-soon app-block">
+    <mat-icon class="coming-soon-icon" aria-hidden="true">{{ icon }}</mat-icon>
+    <p class="coming-soon-message">{{ message }}</p>
+    <p class="coming-soon-note">This screen is being built. The venue map works today.</p>
+    <a mat-flat-button routerLink="/map">
+      <div class="btn-content">
+        <mat-icon>map</mat-icon>
+        <span>Open the map</span>
+      </div>
+    </a>
+  </div>
+</section>

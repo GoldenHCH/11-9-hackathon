@@ -1,0 +1,3323 @@
+[
+ {
+  "name": "F5",
+  "tier": "Platinum",
+  "booth": "100",
+  "categories": [
+   "Artificial Intelligence (AI)",
+   "Security"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Astral Peak",
+  "mapX": 248.2,
+  "mapY": 627.3,
+  "hall": "A",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "Teleport",
+  "tier": "Platinum",
+  "booth": "103",
+  "categories": [
+   "Platform Engineering",
+   "Security"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Astral Peak",
+  "mapX": 217.4,
+  "mapY": 627.5,
+  "hall": "A",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "Crusoe",
+  "tier": "Platinum",
+  "booth": "104",
+  "categories": [
+   "Artificial Intelligence (AI)",
+   "Application Development + Developer Experience"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Astral Peak",
+  "mapX": 232.8,
+  "mapY": 612.0,
+  "hall": "A",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "Splunk, a Cisco Company",
+  "tier": "Platinum",
+  "booth": "105",
+  "categories": [
+   "Observability",
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Astral Peak",
+  "mapX": 273.2,
+  "mapY": 571.5,
+  "hall": "A",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "Tintri",
+  "tier": "Platinum",
+  "booth": "106",
+  "categories": [
+   "Storage + Databases",
+   "CI/CD"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Astral Peak",
+  "mapX": 288.7,
+  "mapY": 556.1,
+  "hall": "A",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "SUSE",
+  "tier": "Platinum",
+  "booth": "107",
+  "categories": [
+   "Artificial Intelligence (AI)",
+   "Edge + IoT + Telco"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Astral Peak",
+  "mapX": 188.8,
+  "mapY": 625.2,
+  "hall": "B",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "ClickHouse",
+  "tier": "Platinum",
+  "booth": "108",
+  "categories": [
+   "Observability",
+   "Storage + Databases"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Astral Peak",
+  "mapX": 204.1,
+  "mapY": 609.7,
+  "hall": "B",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "Port",
+  "tier": "Platinum",
+  "booth": "109",
+  "categories": [],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Astral Peak",
+  "mapX": 219.6,
+  "mapY": 594.3,
+  "hall": "A",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "Chainguard",
+  "tier": "Platinum",
+  "booth": "110",
+  "categories": [
+   "Security",
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Astral Peak",
+  "mapX": 235.1,
+  "mapY": 578.9,
+  "hall": "A",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "groundcover",
+  "tier": "Platinum",
+  "booth": "111",
+  "categories": [
+   "Observability",
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Astral Peak",
+  "mapX": 250.6,
+  "mapY": 563.5,
+  "hall": "A",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "Isovalent at Cisco",
+  "tier": "Platinum",
+  "booth": "112",
+  "categories": [
+   "Networking",
+   "Security"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Astral Peak",
+  "mapX": 265.9,
+  "mapY": 548.0,
+  "hall": "A",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "Infisical",
+  "tier": "Platinum",
+  "booth": "113",
+  "categories": [
+   "Security",
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Astral Peak",
+  "mapX": 281.4,
+  "mapY": 532.6,
+  "hall": "A",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "Amazon Web Services",
+  "tier": "Diamond",
+  "booth": "115",
+  "categories": [
+   "Artificial Intelligence (AI)",
+   "Platform Engineering",
+   "Observability"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Astral Peak",
+  "mapX": 158.0,
+  "mapY": 625.2,
+  "hall": "B",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "Red Hat",
+  "tier": "Diamond",
+  "booth": "116",
+  "categories": [
+   "Artificial Intelligence (AI)",
+   "Certified Kubernetes Software",
+   "Security"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Astral Peak",
+  "mapX": 178.8,
+  "mapY": 604.3,
+  "hall": "B",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "Microsoft Azure",
+  "tier": "Diamond",
+  "booth": "117",
+  "categories": [
+   "Application Development + Developer Experience",
+   "Artificial Intelligence (AI)",
+   "Platform Engineeringvultr"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Astral Peak",
+  "mapX": 206.4,
+  "mapY": 576.7,
+  "hall": "B",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "Nutanix",
+  "tier": "Diamond",
+  "booth": "118",
+  "categories": [
+   "Artificial Intelligence (AI)",
+   "Platform Engineering",
+   "Storage + Databases"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Astral Peak",
+  "mapX": 227.3,
+  "mapY": 555.8,
+  "hall": "A",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "Cast AI",
+  "tier": "Platinum",
+  "booth": "119",
+  "categories": [
+   "Platform Engineering",
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Astral Peak",
+  "mapX": 246.9,
+  "mapY": 536.3,
+  "hall": "A",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "Oracle",
+  "tier": "Diamond",
+  "booth": "120",
+  "categories": [
+   "Artificial Intelligence (AI)",
+   "Storage + Databases",
+   "Certified Kubernetes Software"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Starlight Summit",
+  "mapX": 113.9,
+  "mapY": 632.8,
+  "hall": "C",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "Solo.io",
+  "tier": "Diamond",
+  "booth": "121",
+  "categories": [
+   "Artificial Intelligence (AI)",
+   "Platform Engineering",
+   "Networking"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Starlight Summit",
+  "mapX": 134.8,
+  "mapY": 612.0,
+  "hall": "B",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "Google Cloud",
+  "tier": "Diamond",
+  "booth": "122",
+  "categories": [
+   "Artificial Intelligence (AI)",
+   "Platform Engineering",
+   "Application Development + Developer Experience"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Starlight Summit",
+  "mapX": 155.6,
+  "mapY": 591.0,
+  "hall": "B",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "ScaleOps",
+  "tier": "Diamond",
+  "booth": "123",
+  "categories": [
+   "Platform Engineering",
+   "Artificial Intelligence (AI)",
+   "Observability"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Starlight Summit",
+  "mapX": 176.5,
+  "mapY": 570.2,
+  "hall": "B",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "HAProxy Technologies",
+  "tier": "Diamond",
+  "booth": "124",
+  "categories": [
+   "Networking",
+   "Security",
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Starlight Summit",
+  "mapX": 197.4,
+  "mapY": 549.3,
+  "hall": "B",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "Spectro Cloud",
+  "tier": "Platinum",
+  "booth": "125",
+  "categories": [
+   "Artificial Intelligence (AI)",
+   "Edge + IoT + Telco"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Starlight Summit",
+  "mapX": 214.3,
+  "mapY": 532.4,
+  "hall": "A",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "Talos by Sidero Labs",
+  "tier": "Platinum",
+  "booth": "126",
+  "categories": [
+   "Artificial Intelligence (AI)",
+   "Security"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Starlight Summit",
+  "mapX": 228.9,
+  "mapY": 517.9,
+  "hall": "A",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "Canonical",
+  "tier": "Platinum",
+  "booth": "128",
+  "categories": [
+   "Artificial Intelligence (AI)",
+   "Security"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Starlight Summit",
+  "mapX": 100.7,
+  "mapY": 615.1,
+  "hall": "C",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "VMware by Broadcom",
+  "tier": "Platinum",
+  "booth": "129",
+  "categories": [
+   "Artificial Intelligence (AI)",
+   "Certified Kubernetes Software"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Starlight Summit",
+  "mapX": 117.1,
+  "mapY": 598.7,
+  "hall": "C",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "Postman",
+  "tier": "Platinum",
+  "booth": "130",
+  "categories": [
+   "Application Development + Developer Experience",
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Starlight Summit",
+  "mapX": 135.2,
+  "mapY": 580.5,
+  "hall": "B",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "PerfectScale by DoiT",
+  "tier": "Platinum",
+  "booth": "131",
+  "categories": [
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Starlight Summit",
+  "mapX": 149.8,
+  "mapY": 566.0,
+  "hall": "B",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "Akamai",
+  "tier": "Platinum",
+  "booth": "132",
+  "categories": [
+   "Certified Kubernetes Software",
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Starlight Summit",
+  "mapX": 166.0,
+  "mapY": 549.7,
+  "hall": "B",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "Nebius",
+  "tier": "Platinum",
+  "booth": "133",
+  "categories": [
+   "Application Development + Developer Experience",
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Starlight Summit",
+  "mapX": 183.0,
+  "mapY": 533.5,
+  "hall": "B",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "Dash0",
+  "tier": "Platinum",
+  "booth": "134",
+  "categories": [
+   "Observability",
+   "Application Development + Developer Experience"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Starlight Summit",
+  "mapX": 198.8,
+  "mapY": 517.0,
+  "hall": "B",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "Traversal",
+  "tier": "Platinum",
+  "booth": "138",
+  "categories": [
+   "Application Development + Developer Experience",
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Starlight Summit",
+  "mapX": 108.9,
+  "mapY": 576.2,
+  "hall": "C",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "Linux Foundation Education",
+  "tier": "Silver",
+  "booth": "140",
+  "categories": [
+   "Kubernetes Certified Service Providers + Kubernetes Training Partners"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Starlight Summit",
+  "mapX": 151.5,
+  "mapY": 535.2,
+  "hall": "B",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "Docker",
+  "tier": "Platinum",
+  "booth": "141",
+  "categories": [
+   "Artificial Intelligence (AI)",
+   "Application Development + Developer Experience"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Starlight Summit",
+  "mapX": 60.7,
+  "mapY": 593.2,
+  "hall": "C",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "Echo",
+  "tier": "Gold",
+  "booth": "144",
+  "categories": [],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Starlight Summit",
+  "mapX": 134.0,
+  "mapY": 522.3,
+  "hall": "B",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "HPE",
+  "tier": "Gold",
+  "booth": [
+   "145",
+   "151"
+  ],
+  "categories": [
+   "Platform Engineering",
+   "Artificial Intelligence (AI)",
+   "Certified Kubernetes Software"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Starlight Summit",
+  "mapX": 138.7,
+  "mapY": 517.6,
+  "hall": "B",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "theCube",
+  "tier": "Media Partner",
+  "booth": "146",
+  "source": "https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf (exhibitor directory page 2, read visually)",
+  "zone": "Starlight Summit",
+  "mapX": 63.2,
+  "mapY": 563.5,
+  "hall": "C",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "CoreWeave",
+  "tier": "Gold",
+  "booth": "147",
+  "categories": [
+   "Artificial Intelligence (AI)",
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Starlight Summit",
+  "mapX": 81.9,
+  "mapY": 545.4,
+  "hall": "C",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "TFiR",
+  "tier": "Media Partner",
+  "booth": "148",
+  "source": "https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf (exhibitor directory page 2, read visually)",
+  "zone": "Starlight Summit",
+  "mapX": 93.1,
+  "mapY": 534.0,
+  "hall": "C",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "Couchbase",
+  "tier": "Gold",
+  "booth": "149",
+  "categories": [
+   "Artificial Intelligence (AI)",
+   "Storage + Databases"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Starlight Summit",
+  "mapX": 97.7,
+  "mapY": 529.4,
+  "hall": "C",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "Tigera",
+  "tier": "Gold",
+  "booth": "150",
+  "categories": [
+   "Platform Engineering",
+   "Security"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Starlight Summit",
+  "mapX": 109.0,
+  "mapY": 518.2,
+  "hall": "C",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "Datadog",
+  "tier": "Platinum",
+  "booth": "152",
+  "categories": [
+   "Observability",
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Astral Peak",
+  "mapX": 321.8,
+  "mapY": 516.2,
+  "hall": "A",
+  "hallConfidence": "inferred (nearest HALL A/B/C label; internal hall walls not drawn)"
+ },
+ {
+  "name": "Yugabyte",
+  "tier": "Platinum",
+  "booth": "153",
+  "categories": [
+   "Storage + Databases",
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Alpine Overlook",
+  "mapX": 344.2,
+  "mapY": 516.1,
+  "hall": "1",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Harness",
+  "tier": "Gold",
+  "booth": "154",
+  "categories": [
+   "Platform Engineering",
+   "CI/CD"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Alpine Overlook",
+  "mapX": 365.0,
+  "mapY": 519.2,
+  "hall": "1",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Kong",
+  "tier": "Gold",
+  "booth": "155",
+  "categories": [
+   "Service Mesh",
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Alpine Overlook",
+  "mapX": 365.0,
+  "mapY": 512.9,
+  "hall": "1",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "The New Stack",
+  "tier": "Media Partner",
+  "booth": "156",
+  "source": "https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf (exhibitor directory page 2, read visually)",
+  "zone": "Alpine Overlook",
+  "mapX": 384.3,
+  "mapY": 519.2,
+  "hall": "1",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Intuit",
+  "tier": "Gold",
+  "booth": "157",
+  "categories": [
+   "CI/CD",
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Alpine Overlook",
+  "mapX": 384.3,
+  "mapY": 512.9,
+  "hall": "1",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "New Relic",
+  "tier": "Gold",
+  "booth": "159",
+  "categories": [
+   "Observability",
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Alpine Overlook",
+  "mapX": 403.6,
+  "mapY": 512.9,
+  "hall": "1",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Gravitee",
+  "tier": "Gold",
+  "booth": "160",
+  "categories": [],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Alpine Overlook",
+  "mapX": 403.6,
+  "mapY": 519.2,
+  "hall": "1",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Resolve AI",
+  "tier": "Gold",
+  "booth": "161",
+  "categories": [
+   "Artificial Intelligence (AI)",
+   "Observability"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Alpine Overlook",
+  "mapX": 422.8,
+  "mapY": 512.9,
+  "hall": "1",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Sedai",
+  "tier": "Platinum",
+  "booth": "163",
+  "categories": [
+   "Artificial Intelligence (AI)",
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Alpine Overlook",
+  "mapX": 344.1,
+  "mapY": 494.8,
+  "hall": "1",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "vCluster",
+  "tier": "Gold",
+  "booth": "164",
+  "categories": [
+   "Artificial Intelligence (AI)",
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Alpine Overlook",
+  "mapX": 365.0,
+  "mapY": 493.6,
+  "hall": "1",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Akuity",
+  "tier": "Gold",
+  "booth": "165",
+  "categories": [
+   "CI/CD",
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Alpine Overlook",
+  "mapX": 365.0,
+  "mapY": 487.2,
+  "hall": "1",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Heroku",
+  "tier": "Gold",
+  "booth": "166",
+  "categories": [
+   "Application Development + Developer Experience",
+   "Storage + Databases"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Alpine Overlook",
+  "mapX": 384.6,
+  "mapY": 493.5,
+  "hall": "1",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "OpenObserve",
+  "tier": "Gold",
+  "booth": "167",
+  "categories": [
+   "Observability",
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Alpine Overlook",
+  "mapX": 384.6,
+  "mapY": 487.1,
+  "hall": "1",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Sysdig",
+  "tier": "Gold",
+  "booth": "168",
+  "categories": [
+   "Artificial Intelligence (AI)",
+   "Security"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Alpine Overlook",
+  "mapX": 403.6,
+  "mapY": 493.6,
+  "hall": "1",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "DevZero",
+  "tier": "Gold",
+  "booth": "169",
+  "categories": [
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Alpine Overlook",
+  "mapX": 403.6,
+  "mapY": 487.2,
+  "hall": "1",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "NVIDIA",
+  "tier": "Gold",
+  "booth": "170",
+  "categories": [
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Alpine Overlook",
+  "mapX": 422.8,
+  "mapY": 493.6,
+  "hall": "1",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Temporal",
+  "tier": "Gold",
+  "booth": "171",
+  "categories": [
+   "Platform Engineering",
+   "Application Development + Developer Experience"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Alpine Overlook",
+  "mapX": 422.8,
+  "mapY": 487.2,
+  "hall": "1",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "IBM",
+  "tier": "Platinum",
+  "booth": "172",
+  "categories": [
+   "Artificial Intelligence (AI)",
+   "Observability"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Alpine Overlook",
+  "mapX": 344.1,
+  "mapY": 472.3,
+  "hall": "1",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Octopus Deploy",
+  "tier": "Gold",
+  "booth": "174",
+  "categories": [
+   "CI/CD",
+   "Application Development + Developer Experience"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Alpine Overlook",
+  "mapX": 365.0,
+  "mapY": 464.6,
+  "hall": "1",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Cloudsmith",
+  "tier": "Gold",
+  "booth": "175",
+  "categories": [
+   "Security",
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Alpine Overlook",
+  "mapX": 365.0,
+  "mapY": 458.3,
+  "hall": "1",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Zesty",
+  "tier": "Gold",
+  "booth": "178",
+  "categories": [
+   "Platform Engineering",
+   "Application Development + Developer Experience"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Alpine Overlook",
+  "mapX": 403.6,
+  "mapY": 464.6,
+  "hall": "1",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Wiz",
+  "tier": "Gold",
+  "booth": "179",
+  "categories": [
+   "Security"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Alpine Overlook",
+  "mapX": 403.6,
+  "mapY": 458.3,
+  "hall": "1",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "OpenSearch",
+  "tier": "Gold",
+  "booth": "180",
+  "categories": [
+   "Artificial Intelligence (AI)",
+   "Observability"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Alpine Overlook",
+  "mapX": 422.8,
+  "mapY": 464.6,
+  "hall": "1",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Palo Alto Networks",
+  "tier": "Gold",
+  "booth": "181",
+  "categories": [
+   "Observability"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Alpine Overlook",
+  "mapX": 422.8,
+  "mapY": 458.3,
+  "hall": "1",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "IBM Kubecost",
+  "tier": "Platinum",
+  "booth": "182",
+  "categories": [
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Alpine Overlook",
+  "mapX": 344.1,
+  "mapY": 450.9,
+  "hall": "1",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Dynatrace",
+  "tier": "Gold",
+  "booth": "184",
+  "categories": [
+   "Application Development + Developer Experience",
+   "Observability",
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Alpine Overlook",
+  "mapX": 384.2,
+  "mapY": 442.2,
+  "hall": "1",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Komodor",
+  "tier": "Gold",
+  "booth": "185",
+  "categories": [
+   "Artificial Intelligence (AI)",
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Alpine Overlook",
+  "mapX": 384.2,
+  "mapY": 435.8,
+  "hall": "1",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Vultr",
+  "tier": "Gold",
+  "booth": "186",
+  "categories": [
+   "Platform Engineering",
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Alpine Overlook",
+  "mapX": 403.6,
+  "mapY": 442.2,
+  "hall": "1",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Veeam",
+  "tier": "Gold",
+  "booth": "187",
+  "categories": [
+   "Storage + Databases",
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Alpine Overlook",
+  "mapX": 403.6,
+  "mapY": 435.8,
+  "hall": "1",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "ControlTheory",
+  "tier": "Gold",
+  "booth": "188",
+  "categories": [
+   "Observability",
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Alpine Overlook",
+  "mapX": 422.8,
+  "mapY": 442.2,
+  "hall": "1",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Tailscale",
+  "tier": "Gold",
+  "booth": "189",
+  "categories": [
+   "Networking",
+   "Security"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Alpine Overlook",
+  "mapX": 422.8,
+  "mapY": 435.8,
+  "hall": "1",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Portworx by Everpure",
+  "tier": "Platinum",
+  "booth": "191",
+  "categories": [
+   "Platform Engineering",
+   "Storage + Databases"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Alpine Overlook",
+  "mapX": 344.2,
+  "mapY": 429.7,
+  "hall": "1",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Plural",
+  "tier": "Silver",
+  "booth": "192",
+  "categories": [
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 381.7,
+  "mapY": 419.7,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Diagrid",
+  "tier": "Silver",
+  "booth": "193",
+  "categories": [
+   "Application Development + Developer Experience"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 381.7,
+  "mapY": 413.3,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Replicated",
+  "tier": "Silver",
+  "booth": "194",
+  "categories": [],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 386.9,
+  "mapY": 419.7,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Coder",
+  "tier": "Silver",
+  "booth": "195",
+  "categories": [
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 386.9,
+  "mapY": 413.3,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Elastic",
+  "tier": "Gold",
+  "booth": "196",
+  "categories": [
+   "Observability",
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 403.6,
+  "mapY": 419.8,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Techstrong",
+  "tier": "Media Partner",
+  "booth": "197",
+  "source": "https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf (exhibitor directory page 2, read visually)",
+  "zone": "Honeycomb Hub",
+  "mapX": 403.6,
+  "mapY": 413.4,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "SigNoz",
+  "tier": "Silver",
+  "booth": "198",
+  "categories": [
+   "Observability"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 343.2,
+  "mapY": 397.2,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Redpanda",
+  "tier": "Silver",
+  "booth": "199",
+  "categories": [
+   "Observability"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 343.2,
+  "mapY": 390.7,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Pulumi",
+  "tier": "Silver",
+  "booth": "200",
+  "categories": [
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 348.3,
+  "mapY": 397.2,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "PagerDuty",
+  "tier": "Silver",
+  "booth": "201",
+  "categories": [
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 348.3,
+  "mapY": 390.7,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Spacelift",
+  "tier": "Silver",
+  "booth": "202",
+  "categories": [
+   "CI/CD"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 362.5,
+  "mapY": 397.2,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Honeycomb",
+  "tier": "Silver",
+  "booth": "203",
+  "categories": [
+   "Observability"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 362.5,
+  "mapY": 390.7,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Firefly",
+  "tier": "Silver",
+  "booth": "204",
+  "categories": [
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 367.6,
+  "mapY": 397.2,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Cribl",
+  "tier": "Silver",
+  "booth": "205",
+  "categories": [
+   "Observability"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 367.6,
+  "mapY": 390.7,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Kubex",
+  "tier": "Silver",
+  "booth": "206",
+  "categories": [
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 381.7,
+  "mapY": 397.3,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "StormForge by CloudBolt",
+  "tier": "Silver",
+  "booth": "207",
+  "categories": [
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 381.7,
+  "mapY": 390.8,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Sonatype",
+  "tier": "Silver",
+  "booth": "208",
+  "categories": [
+   "Application Development + Developer Experience"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 386.9,
+  "mapY": 397.3,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "DragonflyDB",
+  "tier": "Silver",
+  "booth": "209",
+  "categories": [
+   "Storage + Databases"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 386.9,
+  "mapY": 390.8,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Mezmo",
+  "tier": "Silver",
+  "booth": "210",
+  "categories": [],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 401.3,
+  "mapY": 396.8,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Crash Override",
+  "tier": "Silver",
+  "booth": "211",
+  "categories": [
+   "Observability"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 401.3,
+  "mapY": 390.5,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Sonrai Security",
+  "tier": "Silver",
+  "booth": "212",
+  "categories": [
+   "Security"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 406.4,
+  "mapY": 396.8,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Arpio",
+  "tier": "Silver",
+  "booth": "213",
+  "categories": [
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 406.4,
+  "mapY": 390.5,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Grafana Labs",
+  "tier": "Silver",
+  "booth": "214",
+  "categories": [
+   "Observability"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 343.2,
+  "mapY": 374.7,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Akamas",
+  "tier": "Silver",
+  "booth": "215",
+  "categories": [
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 343.2,
+  "mapY": 368.3,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Lablup",
+  "tier": "Silver",
+  "booth": "216",
+  "categories": [
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 348.3,
+  "mapY": 374.7,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Sentry",
+  "tier": "Silver",
+  "booth": "217",
+  "categories": [
+   "Observability"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 348.3,
+  "mapY": 368.3,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "VictoriaMetrics",
+  "tier": "Silver",
+  "booth": "218",
+  "categories": [],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 362.5,
+  "mapY": 374.7,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Framework",
+  "tier": "Silver",
+  "booth": "219",
+  "categories": [
+   "Application Development + Developer Experience"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 362.5,
+  "mapY": 368.3,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Akeyless Security",
+  "tier": "Silver",
+  "booth": "220",
+  "categories": [
+   "Security"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 367.6,
+  "mapY": 374.7,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Tigris Data",
+  "tier": "Silver",
+  "booth": "221",
+  "categories": [
+   "Storage + Databases"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 367.6,
+  "mapY": 368.3,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Cosmonic",
+  "tier": "Silver",
+  "booth": "224",
+  "categories": [
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 343.2,
+  "mapY": 342.6,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "HashiCorp, an IBM Company",
+  "tier": "Silver",
+  "booth": "225",
+  "categories": [
+   "Security"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 343.2,
+  "mapY": 336.2,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Edera",
+  "tier": "Silver",
+  "booth": "226",
+  "categories": [
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 348.3,
+  "mapY": 342.6,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Supabase",
+  "tier": "Silver",
+  "booth": "227",
+  "categories": [
+   "Storage + Databases"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 348.3,
+  "mapY": 336.2,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Better Stack",
+  "tier": "Silver",
+  "booth": "228",
+  "categories": [
+   "Observability"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 363.1,
+  "mapY": 342.6,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Kubermatic",
+  "tier": "Silver",
+  "booth": "229",
+  "categories": [
+   "Kubernetes Certified Service Providers + Kubernetes Training Partners"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 363.1,
+  "mapY": 336.2,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "ZEDEDA",
+  "tier": "Silver",
+  "booth": "230",
+  "categories": [
+   "Edge + IoT + Telco"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 368.2,
+  "mapY": 342.6,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "VAST Data",
+  "tier": "Silver",
+  "booth": "231",
+  "categories": [
+   "Storage + Databases"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 368.2,
+  "mapY": 336.2,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Mirantis",
+  "tier": "Silver",
+  "booth": "232",
+  "categories": [
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 383.0,
+  "mapY": 342.6,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Flox",
+  "tier": "Silver",
+  "booth": "233",
+  "categories": [
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 383.0,
+  "mapY": 336.2,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Cockroach Labs",
+  "tier": "Silver",
+  "booth": "234",
+  "categories": [
+   "Storage + Databases"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 388.2,
+  "mapY": 342.6,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Incident.io",
+  "tier": "Silver",
+  "booth": "235",
+  "categories": [
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 388.2,
+  "mapY": 336.2,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Attribute by DoiT",
+  "tier": "Silver",
+  "booth": "236",
+  "categories": [
+   "Observability"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 402.9,
+  "mapY": 342.6,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Xata",
+  "tier": "Silver",
+  "booth": "237",
+  "categories": [
+   "Storage + Databases"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 402.9,
+  "mapY": 336.2,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Rafay Systems",
+  "tier": "Silver",
+  "booth": "238",
+  "categories": [
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 408.1,
+  "mapY": 342.6,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Decimal AI",
+  "tier": "Silver",
+  "booth": "239",
+  "categories": [
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 408.1,
+  "mapY": 336.2,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Percona",
+  "tier": "Silver",
+  "booth": "242",
+  "categories": [
+   "Kubernetes Certified Service Providers + Kubernetes Training Partners"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 343.2,
+  "mapY": 320.1,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Adaptive6",
+  "tier": "Silver",
+  "booth": "243",
+  "categories": [
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 343.2,
+  "mapY": 313.7,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Antithesis",
+  "tier": "Silver",
+  "booth": "244",
+  "categories": [
+   "Application Development + Developer Experience"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 348.3,
+  "mapY": 320.1,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "HeroDevs",
+  "tier": "Silver",
+  "booth": "245",
+  "categories": [
+   "Security"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 348.3,
+  "mapY": 313.7,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Edge Delta",
+  "tier": "Silver",
+  "booth": "246",
+  "categories": [
+   "Observability"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 363.1,
+  "mapY": 320.1,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Fastly",
+  "tier": "Silver",
+  "booth": "247",
+  "categories": [],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 363.1,
+  "mapY": 313.7,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Ciroos",
+  "tier": "Silver",
+  "booth": "248",
+  "categories": [
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 368.2,
+  "mapY": 320.1,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Everbridge xMatters",
+  "tier": "Silver",
+  "booth": "249",
+  "categories": [
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 368.2,
+  "mapY": 313.7,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Portainer",
+  "tier": "Silver",
+  "booth": "250",
+  "categories": [
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 383.2,
+  "mapY": 320.1,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Digital.ai",
+  "tier": "Silver",
+  "booth": "251",
+  "categories": [
+   "CI/CD"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 383.2,
+  "mapY": 313.7,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "FusionAuth",
+  "tier": "Silver",
+  "booth": "252",
+  "categories": [
+   "Security"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 388.2,
+  "mapY": 320.1,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Bindplane",
+  "tier": "Silver",
+  "booth": "253",
+  "categories": [
+   "Observability"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 388.2,
+  "mapY": 313.7,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "LiveKit",
+  "tier": "Silver",
+  "booth": "254",
+  "categories": [
+   "Application Development + Developer Experience"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 402.9,
+  "mapY": 320.1,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "MacStadium",
+  "tier": "Silver",
+  "booth": "255",
+  "categories": [
+   "CI/CD"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 402.9,
+  "mapY": 313.7,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Twingate",
+  "tier": "Silver",
+  "booth": "256",
+  "categories": [
+   "Networking"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 408.1,
+  "mapY": 320.1,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Black Duck",
+  "tier": "Silver",
+  "booth": "257",
+  "categories": [
+   "Application Development + Developer Experience"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Honeycomb Hub",
+  "mapX": 408.1,
+  "mapY": 313.7,
+  "hall": "2",
+  "hallConfidence": "confirmed (zone fill matches hall)"
+ },
+ {
+  "name": "Upbound",
+  "tier": "Silver",
+  "booth": "258",
+  "categories": [
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 343.2,
+  "mapY": 297.7,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "PlanetScale",
+  "tier": "Silver",
+  "booth": "259",
+  "categories": [
+   "Storage + Databases"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 343.2,
+  "mapY": 291.3,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Jozu",
+  "tier": "Silver",
+  "booth": "260",
+  "categories": [
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 348.3,
+  "mapY": 297.7,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Greptime",
+  "tier": "Silver",
+  "booth": "262",
+  "categories": [
+   "Observability"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 383.0,
+  "mapY": 297.7,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "ProsperOps",
+  "tier": "Silver",
+  "booth": "263",
+  "categories": [
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 383.0,
+  "mapY": 291.3,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "VATES",
+  "tier": "Silver",
+  "booth": "264",
+  "categories": [],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 388.2,
+  "mapY": 297.7,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Gremlin",
+  "tier": "Silver",
+  "booth": "265",
+  "categories": [
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 388.2,
+  "mapY": 291.3,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Sigi",
+  "tier": "Silver",
+  "booth": "266",
+  "categories": [
+   "Observability"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 402.9,
+  "mapY": 297.7,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Apollo GraphQL",
+  "tier": "Silver",
+  "booth": "267",
+  "categories": [
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 402.9,
+  "mapY": 291.3,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "DataAgent",
+  "tier": "Silver",
+  "booth": "268",
+  "categories": [
+   "Observability"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 408.1,
+  "mapY": 297.7,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "CloudBees",
+  "tier": "Silver",
+  "booth": "269",
+  "categories": [
+   "CI/CD"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 408.1,
+  "mapY": 291.3,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Blacksmith",
+  "tier": "Silver",
+  "booth": "272",
+  "categories": [
+   "CI/CD"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 343.2,
+  "mapY": 275.1,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Aikido Security",
+  "tier": "Silver",
+  "booth": "273",
+  "categories": [
+   "Security"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 343.2,
+  "mapY": 268.7,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Robusta.dev",
+  "tier": "Silver",
+  "booth": "274",
+  "categories": [
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 348.3,
+  "mapY": 275.1,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "IOWN Global Forum",
+  "tier": "Silver",
+  "booth": "275",
+  "categories": [
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 348.3,
+  "mapY": 268.7,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Klique",
+  "tier": "Silver",
+  "booth": "276",
+  "categories": [
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 363.1,
+  "mapY": 275.1,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "ActiveState",
+  "tier": "Silver",
+  "booth": "277",
+  "categories": [
+   "Security"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 363.1,
+  "mapY": 268.7,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Nirmata",
+  "tier": "Silver",
+  "booth": "278",
+  "categories": [
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 368.2,
+  "mapY": 275.1,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Momentic",
+  "tier": "Silver",
+  "booth": "279",
+  "categories": [
+   "Application Development + Developer Experience"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 368.2,
+  "mapY": 268.7,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "EnterpriseDB",
+  "tier": "Silver",
+  "booth": "280",
+  "categories": [
+   "Storage + Databases"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 383.0,
+  "mapY": 275.1,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Syntasso",
+  "tier": "Silver",
+  "booth": "281",
+  "categories": [
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 383.0,
+  "mapY": 268.7,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "NeuBird",
+  "tier": "Silver",
+  "booth": "282",
+  "categories": [
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 388.2,
+  "mapY": 275.1,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "StackGen",
+  "tier": "Silver",
+  "booth": "283",
+  "categories": [
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 388.2,
+  "mapY": 268.7,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "NorthMark Compute and Cloud",
+  "tier": "Silver",
+  "booth": "286",
+  "categories": [
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 423.5,
+  "mapY": 275.1,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Pump",
+  "tier": "Silver",
+  "booth": "287",
+  "categories": [
+   "Observability"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 423.5,
+  "mapY": 268.7,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Qualcomm",
+  "tier": "Silver",
+  "booth": "288",
+  "categories": [
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 428.7,
+  "mapY": 275.1,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "DataCore",
+  "tier": "Silver",
+  "booth": "289",
+  "categories": [
+   "Storage + Databases"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 428.7,
+  "mapY": 268.7,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Traefik Labs",
+  "tier": "Silver",
+  "booth": "290",
+  "categories": [
+   "Networking"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 343.2,
+  "mapY": 252.7,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Grepr",
+  "tier": "Silver",
+  "booth": "291",
+  "categories": [
+   "Observability"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 343.2,
+  "mapY": 246.3,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Runpod",
+  "tier": "Silver",
+  "booth": "292",
+  "categories": [
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 348.3,
+  "mapY": 252.7,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Spotify",
+  "tier": "Silver",
+  "booth": "293",
+  "categories": [
+   "Application Development + Developer Experience"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 348.3,
+  "mapY": 246.3,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Varnish Software",
+  "tier": "Silver",
+  "booth": "294",
+  "categories": [
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 363.1,
+  "mapY": 252.7,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "SquaredUp",
+  "tier": "Silver",
+  "booth": "295",
+  "categories": [
+   "Observability"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 363.1,
+  "mapY": 246.3,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "KodeKloud",
+  "tier": "Silver",
+  "booth": "296",
+  "categories": [
+   "Kubernetes Certified Service Providers + Kubernetes Training Partners"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 368.2,
+  "mapY": 252.7,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "NetLOX",
+  "tier": "Silver",
+  "booth": "297",
+  "categories": [
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 368.2,
+  "mapY": 246.3,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "TrueFoundry",
+  "tier": "Silver",
+  "booth": "298",
+  "categories": [
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 383.0,
+  "mapY": 252.7,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Faros",
+  "tier": "Silver",
+  "booth": "299",
+  "categories": [
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 383.0,
+  "mapY": 246.3,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Observe by Snowflake",
+  "tier": "Silver",
+  "booth": "300",
+  "categories": [
+   "Observability"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 388.2,
+  "mapY": 252.7,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "LINBIT",
+  "tier": "Silver",
+  "booth": "301",
+  "categories": [
+   "Storage + Databases"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 388.2,
+  "mapY": 246.3,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Myota",
+  "tier": "Silver",
+  "booth": "304",
+  "categories": [
+   "Security"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 423.5,
+  "mapY": 252.7,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "AEnix",
+  "tier": "Silver",
+  "booth": "305",
+  "categories": [
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 423.5,
+  "mapY": 246.3,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "New Orleans CVB",
+  "tier": "Exhibitor (gray/Silver color on map; not in sponsor directory)",
+  "booth": "306",
+  "source": "https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf (exhibitor directory page 2, read visually)",
+  "zone": "Amber Hive",
+  "mapX": 428.7,
+  "mapY": 252.7,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "North",
+  "tier": "Silver",
+  "booth": "307",
+  "categories": [
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 428.7,
+  "mapY": 246.3,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "RapidFort",
+  "tier": "Silver",
+  "booth": "310",
+  "categories": [
+   "Security"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 343.2,
+  "mapY": 223.1,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Endor Labs",
+  "tier": "Silver",
+  "booth": "311",
+  "categories": [
+   "Security"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 343.2,
+  "mapY": 216.7,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Uber",
+  "tier": "Silver",
+  "booth": "312",
+  "categories": [
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 348.3,
+  "mapY": 223.1,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Open Source Security Foundation (OpenSSF)",
+  "tier": "Silver",
+  "booth": "313",
+  "categories": [
+   "Security"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 348.3,
+  "mapY": 216.7,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Databricks",
+  "tier": "Silver",
+  "booth": "314",
+  "categories": [
+   "Storage + Databases"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 363.1,
+  "mapY": 223.1,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "RavenDB",
+  "tier": "Silver",
+  "booth": "315",
+  "categories": [
+   "Storage + Databases"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 363.1,
+  "mapY": 216.7,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Coralogix",
+  "tier": "Silver",
+  "booth": "316",
+  "categories": [
+   "Observability"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 368.2,
+  "mapY": 223.1,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Anyscale",
+  "tier": "Silver",
+  "booth": "317",
+  "categories": [
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 368.2,
+  "mapY": 216.7,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Latitude.sh",
+  "tier": "Silver",
+  "booth": "318",
+  "categories": [
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 383.0,
+  "mapY": 223.1,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "JetBrains",
+  "tier": "Silver",
+  "booth": "319",
+  "categories": [
+   "CI/CD"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 383.0,
+  "mapY": 216.7,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Depot",
+  "tier": "Silver",
+  "booth": "320",
+  "categories": [
+   "Application Development + Developer Experience"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 388.2,
+  "mapY": 223.1,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "CAMARA Project",
+  "tier": "Silver",
+  "booth": "321",
+  "categories": [
+   "Edge + IoT + Telco"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 388.2,
+  "mapY": 216.7,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Stacklet",
+  "tier": "Silver",
+  "booth": "322",
+  "categories": [
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 402.9,
+  "mapY": 223.1,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Obot AI",
+  "tier": "Silver",
+  "booth": "323",
+  "categories": [
+   "Security"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 402.9,
+  "mapY": 216.7,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "pganalyze",
+  "tier": "Silver",
+  "booth": "324",
+  "categories": [
+   "Storage + Databases"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 408.1,
+  "mapY": 223.1,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Orca Security",
+  "tier": "Silver",
+  "booth": "325",
+  "categories": [
+   "Security"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 408.1,
+  "mapY": 216.7,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "CIQ",
+  "tier": "Silver",
+  "booth": "326",
+  "categories": [
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 423.5,
+  "mapY": 223.1,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "empirik",
+  "tier": "Silver",
+  "booth": "327",
+  "categories": [
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Amber Hive",
+  "mapX": 423.5,
+  "mapY": 216.7,
+  "hall": "3",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "KubeDB",
+  "tier": "Start-Up",
+  "booth": "330",
+  "categories": [
+   "Storage + Databases"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Cosmic Canyon",
+  "mapX": 342.6,
+  "mapY": 201.4,
+  "hall": "4-5",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Cloudchipr",
+  "tier": "Start-Up",
+  "booth": "331",
+  "categories": [
+   "Observability"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Cosmic Canyon",
+  "mapX": 342.6,
+  "mapY": 196.2,
+  "hall": "4-5",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "StackGuardian",
+  "tier": "Start-Up",
+  "booth": "332",
+  "categories": [
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Cosmic Canyon",
+  "mapX": 346.4,
+  "mapY": 201.4,
+  "hall": "4-5",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Maze",
+  "tier": "Start-Up",
+  "booth": "333",
+  "categories": [
+   "Security"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Cosmic Canyon",
+  "mapX": 346.4,
+  "mapY": 196.2,
+  "hall": "4-5",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Aiven",
+  "tier": "Silver",
+  "booth": "336",
+  "categories": [
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Cosmic Canyon",
+  "mapX": 423.5,
+  "mapY": 200.7,
+  "hall": "4-5",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Cloud Native Studios",
+  "tier": "Media Partner",
+  "booth": [
+   "337",
+   "338",
+   "339"
+  ],
+  "source": "https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf (exhibitor directory page 2, read visually)",
+  "zone": "Cosmic Canyon",
+  "mapX": 423.5,
+  "mapY": 194.3,
+  "hall": "4-5",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Rootly AI",
+  "tier": "Start-Up",
+  "booth": "340",
+  "categories": [
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Cosmic Canyon",
+  "mapX": 342.6,
+  "mapY": 182.1,
+  "hall": "4-5",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Plakar",
+  "tier": "Start-Up",
+  "booth": "341",
+  "categories": [
+   "Storage + Databases"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Cosmic Canyon",
+  "mapX": 342.6,
+  "mapY": 176.9,
+  "hall": "4-5",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Omnistrate",
+  "tier": "Start-Up",
+  "booth": "342",
+  "categories": [
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Cosmic Canyon",
+  "mapX": 346.4,
+  "mapY": 182.1,
+  "hall": "4-5",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Tensormesh",
+  "tier": "Start-Up",
+  "booth": "343",
+  "categories": [
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Cosmic Canyon",
+  "mapX": 346.4,
+  "mapY": 176.9,
+  "hall": "4-5",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Stacklok",
+  "tier": "Start-Up",
+  "booth": "346",
+  "categories": [
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Cosmic Canyon",
+  "mapX": 383.6,
+  "mapY": 182.1,
+  "hall": "4-5",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Amutable",
+  "tier": "Start-Up",
+  "booth": "347",
+  "categories": [],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Cosmic Canyon",
+  "mapX": 383.6,
+  "mapY": 176.9,
+  "hall": "4-5",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "mirrord by MetalBear",
+  "tier": "Start-Up",
+  "booth": "352",
+  "categories": [
+   "Application Development + Developer Experience"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Cosmic Canyon",
+  "mapX": 342.6,
+  "mapY": 162.7,
+  "hall": "4-5",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "FluidCloud",
+  "tier": "Start-Up",
+  "booth": "353",
+  "categories": [
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Cosmic Canyon",
+  "mapX": 342.6,
+  "mapY": 157.6,
+  "hall": "4-5",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Causely",
+  "tier": "Start-Up",
+  "booth": "354",
+  "categories": [
+   "Observability"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Cosmic Canyon",
+  "mapX": 346.4,
+  "mapY": 162.7,
+  "hall": "4-5",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Ascendra Networks",
+  "tier": "Start-Up",
+  "booth": "355",
+  "categories": [
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Cosmic Canyon",
+  "mapX": 346.4,
+  "mapY": 157.6,
+  "hall": "4-5",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "OllyGarden",
+  "tier": "Start-Up",
+  "booth": "356",
+  "categories": [
+   "Observability"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Cosmic Canyon",
+  "mapX": 363.1,
+  "mapY": 162.7,
+  "hall": "4-5",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Emphere",
+  "tier": "Start-Up",
+  "booth": "357",
+  "categories": [
+   "Security"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Cosmic Canyon",
+  "mapX": 363.1,
+  "mapY": 157.6,
+  "hall": "4-5",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Kedify",
+  "tier": "Start-Up",
+  "booth": "358",
+  "categories": [
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Cosmic Canyon",
+  "mapX": 367.0,
+  "mapY": 162.7,
+  "hall": "4-5",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "CVS Health",
+  "tier": "End User",
+  "booth": "359",
+  "categories": [
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Cosmic Canyon",
+  "mapX": 367.0,
+  "mapY": 157.6,
+  "hall": "4-5",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "InfrOS",
+  "tier": "Start-Up",
+  "booth": "360",
+  "categories": [
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Cosmic Canyon",
+  "mapX": 342.6,
+  "mapY": 143.5,
+  "hall": "4-5",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Archestra AI",
+  "tier": "Start-Up",
+  "booth": "361",
+  "categories": [],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Cosmic Canyon",
+  "mapX": 342.6,
+  "mapY": 138.4,
+  "hall": "4-5",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Ascend",
+  "tier": "Start-Up",
+  "booth": "362",
+  "categories": [
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Cosmic Canyon",
+  "mapX": 346.4,
+  "mapY": 143.5,
+  "hall": "4-5",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Testkube",
+  "tier": "Start-Up",
+  "booth": "363",
+  "categories": [
+   "CI/CD"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Cosmic Canyon",
+  "mapX": 346.4,
+  "mapY": 138.4,
+  "hall": "4-5",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Actualyze AI",
+  "tier": "Start-Up",
+  "booth": "364",
+  "categories": [
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Cosmic Canyon",
+  "mapX": 363.1,
+  "mapY": 143.5,
+  "hall": "4-5",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Radar",
+  "tier": "Start-Up",
+  "booth": "365",
+  "categories": [
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Cosmic Canyon",
+  "mapX": 363.1,
+  "mapY": 138.4,
+  "hall": "4-5",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "pgEdge",
+  "tier": "Start-Up",
+  "booth": "366",
+  "categories": [],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Cosmic Canyon",
+  "mapX": 367.0,
+  "mapY": 143.5,
+  "hall": "4-5",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "VillageSQL",
+  "tier": "Start-Up",
+  "booth": "367",
+  "categories": [
+   "Storage + Databases"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Cosmic Canyon",
+  "mapX": 367.0,
+  "mapY": 138.4,
+  "hall": "4-5",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Infino AI",
+  "tier": "Start-Up",
+  "booth": "368",
+  "categories": [
+   "Storage + Databases"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Cosmic Canyon",
+  "mapX": 342.6,
+  "mapY": 124.2,
+  "hall": "4-5",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Aranya",
+  "tier": "Start-Up",
+  "booth": "369",
+  "categories": [
+   "Platform Engineering"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Cosmic Canyon",
+  "mapX": 342.6,
+  "mapY": 119.1,
+  "hall": "4-5",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Vijil",
+  "tier": "Start-Up",
+  "booth": "370",
+  "categories": [
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Cosmic Canyon",
+  "mapX": 346.4,
+  "mapY": 124.2,
+  "hall": "4-5",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Paper Compute Company",
+  "tier": "Start-Up",
+  "booth": "371",
+  "categories": [
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Cosmic Canyon",
+  "mapX": 346.4,
+  "mapY": 119.1,
+  "hall": "4-5",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Causal Dynamics Lab",
+  "tier": "Start-Up",
+  "booth": "372",
+  "categories": [
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Cosmic Canyon",
+  "mapX": 342.6,
+  "mapY": 104.9,
+  "hall": "4-5",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "PatapscoAI",
+  "tier": "Start-Up",
+  "booth": "373",
+  "categories": [
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Cosmic Canyon",
+  "mapX": 342.6,
+  "mapY": 99.8,
+  "hall": "4-5",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "MyDecisive",
+  "tier": "Start-Up",
+  "booth": "374",
+  "categories": [],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Cosmic Canyon",
+  "mapX": 346.4,
+  "mapY": 104.9,
+  "hall": "4-5",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Effodio",
+  "tier": "Start-Up",
+  "booth": "375",
+  "categories": [
+   "Observability"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
+  "zone": "Cosmic Canyon",
+  "mapX": 346.4,
+  "mapY": 99.8,
+  "hall": "4-5",
+  "hallConfidence": "inferred (hall boundary not drawn on map)"
+ },
+ {
+  "name": "Anthropic",
+  "tier": "Diamond",
+  "booth": null,
+  "categories": [
+   "Artificial Intelligence (AI)",
+   "Careers + Recruiting"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/",
+  "note": "No booth listed in sponsor directory and not in the expo map exhibitor directory"
+ },
+ {
+  "name": "Northflank",
+  "tier": "Silver",
+  "booth": null,
+  "categories": [
+   "Artificial Intelligence (AI)"
+  ],
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/",
+  "note": "No booth listed in sponsor directory and not in the expo map exhibitor directory"
+ }
+]

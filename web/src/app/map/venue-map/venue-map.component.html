@@ -1,0 +1,235 @@
+<section class="app-page">
+  <app-screen-toolbar title="Venue map" [subtitle]="schematic?.event ?? 'KubeCon + CloudNativeCon North America 2026'">
+    <mat-button-toggle-group
+      [value]="viewMode"
+      (change)="viewMode = $event.value"
+      aria-label="Map or list view"
+      hideSingleSelectionIndicator
+    >
+      <mat-button-toggle value="map" aria-label="Map view"><mat-icon>map</mat-icon></mat-button-toggle>
+      <mat-button-toggle value="list" aria-label="List view"><mat-icon>view_list</mat-icon></mat-button-toggle>
+    </mat-button-toggle-group>
+  </app-screen-toolbar>
+
+  <app-state-wrapper
+    [isLoading]="isLoading"
+    [errorMessage]="errorMessage"
+    [isEmpty]="!schematic?.buildings?.length"
+    emptyIcon="map"
+    emptyMessage="No venue map is published yet."
+    [skeletonRows]="4"
+    (retry)="loadSchematic()"
+  >
+    @if (schematic) {
+      <div #mapTop class="pickers">
+        <mat-button-toggle-group
+          class="picker"
+          [value]="selectedBuildingId"
+          (change)="selectBuilding($event.value)"
+          aria-label="Building"
+          hideSingleSelectionIndicator
+        >
+          @for (building of schematic.buildings; track building.id) {
+            <mat-button-toggle [value]="building.id">{{ building.shortName }}</mat-button-toggle>
+          }
+        </mat-button-toggle-group>
+
+        @if (selectedBuilding && selectedBuilding.levels.length > 1) {
+          <mat-button-toggle-group
+            class="picker"
+            [value]="selectedLevelId"
+            (change)="selectLevel($event.value)"
+            aria-label="Level"
+            hideSingleSelectionIndicator
+          >
+            @for (level of selectedBuilding.levels; track level.id) {
+              <mat-button-toggle [value]="level.id">{{ level.label }}</mat-button-toggle>
+            }
+          </mat-button-toggle-group>
+        }
+      </div>
+
+      @if (viewMode === 'map') {
+        <!-- Schematic -->
+        @if (selectedLevel && selectedBuilding) {
+          <app-venue-schematic
+            [level]="selectedLevel"
+            [buildingName]="selectedBuilding.name"
+            [selectedAreaId]="selectedAreaId"
+            [highlightedAreaIds]="highlightedAreaIds"
+            [booths]="levelBooths"
+            [highlightedVendorId]="highlightedVendor?.id ?? null"
+            (areaSelected)="selectArea($event)"
+            (boothSelected)="selectBooth($event)"
+          ></app-venue-schematic>
+
+          @if (levelBooths.length) {
+            <p class="details-hint">Tap a booth square, or search below. Squares are coloured by tier and listed by name in the search.</p>
+          }
+
+          <ul class="legend" aria-label="Map key">
+            @for (kind of legendKinds; track kind) {
+              <li class="legend-item">
+                <span class="legend-swatch" [style.background]="kindDisplay[kind].fill" aria-hidden="true"></span>
+                <mat-icon class="legend-icon" aria-hidden="true">{{ kindDisplay[kind].icon }}</mat-icon>
+                <span>{{ kindDisplay[kind].label }}</span>
+              </li>
+            }
+            <li class="legend-item">
+              <span class="legend-swatch legend-swatch--inferred" aria-hidden="true"></span>
+              <span>Dashed outline: position estimated</span>
+            </li>
+          </ul>
+        }
+
+        <!-- Selected booth and area -->
+        <div class="details" aria-live="polite">
+          @if (highlightedVendor) {
+            <article class="details-card details-card--booth app-block">
+              <div class="details-header">
+                <div class="booth-badge app-pixel" aria-hidden="true">{{ highlightedVendor.booth }}</div>
+                <div class="details-heading">
+                  <h2 class="details-title app-pixel">{{ highlightedVendor.name }}</h2>
+                  <p class="details-kind">
+                    {{ highlightedVendor.kind === 'project' ? 'Project kiosk' : 'Booth' }} {{ highlightedVendor.booth }} ·
+                    {{ highlightedVendor.tier }}@if (vendorLocationLabel(highlightedVendor)) { · {{ vendorLocationLabel(highlightedVendor) }} }
+                  </p>
+                </div>
+                <button mat-icon-button type="button" aria-label="Clear booth" (click)="clearHighlightedVendor()">
+                  <mat-icon>close</mat-icon>
+                </button>
+              </div>
+              @if (highlightedVendor.schedule) {
+                <p class="details-description">Staffed: {{ highlightedVendor.schedule }}</p>
+              }
+              @if (highlightedVendor.categories?.length) {
+                <ul class="category-list" aria-label="Topics">
+                  @for (category of highlightedVendor.categories; track category) {
+                    <li class="category-chip">{{ category }}</li>
+                  }
+                </ul>
+              }
+            </article>
+          }
+          @if (selectedArea) {
+            <article class="details-card app-block">
+              <div class="details-header">
+                <div class="app-card-icon"><mat-icon aria-hidden="true">{{ kindDisplay[selectedArea.kind].icon }}</mat-icon></div>
+                <div class="details-heading">
+                  <h2 class="details-title app-pixel">{{ selectedArea.name }}</h2>
+                  <p class="details-kind">
+                    {{ kindDisplay[selectedArea.kind].label }} · {{ selectedBuilding?.name }}, {{ selectedLevel?.label }}
+                  </p>
+                </div>
+                <button mat-icon-button type="button" aria-label="Close details" (click)="selectedAreaId = null">
+                  <mat-icon>close</mat-icon>
+                </button>
+              </div>
+              @if (selectedArea.description) {
+                <p class="details-description">{{ selectedArea.description }}</p>
+              }
+              @if (selectedArea.scheduleRooms?.length) {
+                <p class="details-note">On the schedule as “{{ selectedArea.scheduleRooms!.join('”, “') }}”.</p>
+              }
+              @if (connectedLevelLabel) {
+                <button mat-stroked-button type="button" class="details-action" (click)="followConnection()">
+                  <div class="btn-content">
+                    <mat-icon>directions_walk</mat-icon>
+                    <span>Go to {{ connectedLevelLabel }}</span>
+                  </div>
+                </button>
+              }
+              @if (selectedAreaVendors.length) {
+                <h3 class="details-subtitle">Booths here ({{ selectedAreaVendors.length }})</h3>
+                <ul class="vendor-list vendor-list--compact">
+                  @for (vendor of selectedAreaVendors; track vendor.id) {
+                    <li class="vendor-row" [class.vendor-row--highlighted]="vendor.id === highlightedVendor?.id">
+                      <span class="vendor-booth app-pixel">{{ vendor.booth }}</span>
+                      <span class="vendor-name">{{ vendor.name }}</span>
+                      <span class="vendor-tier">{{ vendor.tier }}</span>
+                    </li>
+                  }
+                </ul>
+              }
+            </article>
+          } @else {
+            <p class="details-hint">Tap a block on the map to see what’s there.</p>
+          }
+        </div>
+      } @else {
+        <!-- Accessible list view -->
+        @if (selectedBuilding) {
+          @for (level of selectedBuilding.levels; track level.id) {
+            <section class="level-list" [attr.aria-labelledby]="'level-' + level.id">
+              <h2 class="level-list-title app-pixel" [id]="'level-' + level.id">{{ selectedBuilding.name }} · {{ level.label }}</h2>
+              <ul class="area-list">
+                @for (area of level.areas; track area.id) {
+                  <li class="area-row app-card">
+                    <mat-icon aria-hidden="true">{{ kindDisplay[area.kind].icon }}</mat-icon>
+                    <div class="area-row-text">
+                      <span class="area-row-name">{{ area.name }}</span>
+                      <span class="area-row-kind">{{ kindDisplay[area.kind].label }}</span>
+                      @if (area.description) {
+                        <span class="area-row-description">{{ area.description }}</span>
+                      }
+                    </div>
+                  </li>
+                }
+              </ul>
+            </section>
+          }
+        }
+      }
+
+      <!-- Vendor finder -->
+      <section class="finder" aria-labelledby="finder-title">
+        <h2 id="finder-title" class="finder-title app-pixel">Find a booth</h2>
+        <mat-form-field appearance="outline" class="finder-field">
+          <mat-label>Company, project or booth number</mat-label>
+          <mat-icon matPrefix aria-hidden="true">search</mat-icon>
+          <input matInput type="search" [(ngModel)]="vendorQuery" autocomplete="off" />
+          <mat-hint>{{ vendorResultTotal }} of {{ schematic.vendors.length }} booths and project kiosks</mat-hint>
+        </mat-form-field>
+
+        @if (vendorResults.length) {
+          <ul class="vendor-list">
+            @for (vendor of vendorResults; track vendor.id) {
+              <li>
+                <button
+                  type="button"
+                  class="vendor-button app-card app-card--clickable"
+                  [class.vendor-row--highlighted]="vendor.id === highlightedVendor?.id"
+                  [disabled]="!vendor.areaId"
+                  (click)="showVendorOnMap(vendor)"
+                >
+                  <span class="vendor-booth app-pixel">{{ vendor.booth }}</span>
+                  <span class="vendor-text">
+                    <span class="vendor-name">{{ vendor.name }}</span>
+                    <span class="vendor-location">{{ vendor.tier }}@if (vendorLocationLabel(vendor)) { · {{ vendorLocationLabel(vendor) }} }</span>
+                  </span>
+                  @if (vendor.areaId) {
+                    <mat-icon class="app-card-arrow" aria-hidden="true">place</mat-icon>
+                  }
+                </button>
+              </li>
+            }
+          </ul>
+        } @else {
+          <p class="details-hint">No booth matches “{{ vendorQuery }}”.</p>
+        }
+      </section>
+
+      <footer class="sources">
+        <p class="sources-disclaimer">{{ schematic.disclaimer }}</p>
+        <ul class="sources-list">
+          @for (source of schematic.sources; track source.url) {
+            <li>
+              <a [href]="source.url" target="_blank" rel="noopener">{{ source.label }}</a>
+            </li>
+          }
+        </ul>
+        <p class="sources-updated">Updated {{ schematic.updatedAt }}</p>
+      </footer>
+    }
+  </app-state-wrapper>
+</section>
