@@ -137,8 +137,10 @@ const saltPalaceLevel1 = {
       scheduleRooms: [showcase('Hall 1 | Alpine Overlook Zone | Demo Theater')],
     }),
     area('sp-l1-hall1-entrance', 'Secondary entrance (Hall 1)', 'entrance', sp1.rect(1424, 664, 1454, 780), { shortLabel: '↔' }),
-    area('sp-l1-155-df', '155 D–F', 'void', sp1.rect(1454, 664, 1546, 712), { description: 'Grey on the official map: not an event room.' }),
-    area('sp-l1-155-ac', '155 A–C', 'void', sp1.rect(1454, 735, 1546, 780), { description: 'Grey on the official map: not an event room.' }),
+    area('sp-l1-155', '155 A–F', 'void', sp1.rect(1454, 664, 1546, 780), {
+      shortLabel: '155',
+      description: 'Rooms 155 D–F (north row) and 155 A–C (south row), off the Hall 1 secondary entrance. Grey on the official map: not event space.',
+    }),
     area('sp-l1-lower-concourse', 'Lower Concourse', 'foyer', sp1.rect(767, 895, 1245, 931), { description: 'Runs from Badge Pick-Up past the Showcase Main Entrance to the North Foyer.' }),
     area('sp-l1-badge-pickup', 'Badge Pick-Up', 'registration', sp1.rect(664, 895, 767, 932), {
       shortLabel: 'Badges',
@@ -193,7 +195,7 @@ const expoLevel = {
       shortLabel: 'Cosmic Canyon',
       zone: 'Cosmic Canyon',
       fill: zoneFill['Cosmic Canyon'],
-      description: 'Start-up booths 330–375, the Game Zone, meal pick-up and seating.',
+      description: 'Start-up booths 330–375 (plus Aiven, CVS Health and Cloud Native Studios), the Game Zone, meal pick-up and seating.',
       scheduleRooms: ['Salt Palace | Level 1 | Halls A-C, Halls 1-5'],
     }),
     area('sp-x-amber-hive', 'Hall 3 · Amber Hive', 'showcase', ex.polygon([[1041, 182], [1244, 182], [1244, 274], [1088, 274], [1088, 248], [1041, 248]]), {
@@ -212,7 +214,7 @@ const expoLevel = {
       shortLabel: 'Alpine Overlook',
       zone: 'Alpine Overlook',
       fill: zoneFill['Alpine Overlook'],
-      description: 'Gold and Platinum booths 153–191, the Workshop Zone, the Demo Theater and the Network Nook.',
+      description: 'Gold and Platinum booths 153–191, a coffee bar, the Workshop Zone, the Demo Theater and the Network Nook.',
     }),
     area('sp-x-starlight-summit', 'Halls A–C · Starlight Summit', 'showcase', ex.polygon([[848, 424], [1106, 424], [1030, 461], [918, 572], [848, 572]]), {
       shortLabel: 'Starlight Summit',
@@ -225,7 +227,7 @@ const expoLevel = {
       shortLabel: 'Astral Peak',
       zone: 'Astral Peak',
       fill: zoneFill['Astral Peak'],
-      description: 'Hall A and part of Hall B: Diamond and Platinum booths, next to the Showcase Main Entrance.',
+      description: 'Hall A and part of Hall B: Diamond and Platinum booths, the Dirty Soda Bar and the Sponsorship + Membership Sales Lounge, next to the Showcase Main Entrance.',
     }),
     area('sp-x-project-pavilion', 'Project Pavilion', 'pavilion', ex.rect(1154, 52, 1196, 144), {
       shortLabel: 'Projects',
@@ -322,7 +324,7 @@ const saltPalaceLevel2 = {
     area('sp-l2-252a', '252 A · Speaker Ready Room', 'service', sp2.rect(1615, 927, 1627, 946), { shortLabel: 'A' }),
     area('sp-l2-252b', '252 B', 'void', sp2.rect(1627, 927, 1638, 946), { shortLabel: 'B' }),
     area('sp-l2-253', '253 · Speaker Lounge', 'service', sp2.rect(1615, 946, 1638, 985), { shortLabel: '253' }),
-    area('sp-l2-254', '254', 'breakout', sp2.polygon([[1624, 776], [1670, 812], [1636, 855], [1596, 820]]), { scheduleRooms: [sp('Level 2', '254')] }),
+    area('sp-l2-254', '254', 'breakout', sp2.polygon([[1641, 775], [1670, 803], [1652, 815], [1636, 835], [1628, 854], [1597, 824]]), { scheduleRooms: [sp('Level 2', '254')] }),
     area('sp-l2-255d', '255 D', 'breakout', sp2.rect(1747, 673, 1777, 720), { scheduleRooms: [sp('Level 2', '255 D')] }),
     area('sp-l2-255ef', '255 EF', 'breakout', sp2.rect(1777, 673, 1838, 720), { scheduleRooms: [sp('Level 2', '255 EF')] }),
     area('sp-l2-255a', '255 A', 'breakout', sp2.rect(1747, 741, 1777, 789), { scheduleRooms: [sp('Level 2', '255 A')] }),

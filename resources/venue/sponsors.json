@@ -962,7 +962,7 @@
   "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  },
  {
-  "name": "Palo Alto Networks",
+  "name": "Chronosphere, a Palo Alto Networks Company",
   "tier": "Gold",
   "booth": "181",
   "categories": [
@@ -973,7 +973,8 @@
   "mapX": 1188.2,
   "mapY": 403.3,
   "hall": "1",
-  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)",
+  "note": "The sponsor directory lists booth 181 as \"Palo Alto Networks\"; the expo PDF exhibitor directory lists it as \"Chronopshere [sic], a Palo Alto Networks Company\". Chronosphere also has the Deer Valley sponsor room at the Hyatt."
  },
  {
   "name": "IBM Kubecost",
@@ -1900,16 +1901,12 @@
  {
   "name": "LiveKit",
   "tier": "Silver",
-  "booth": "254",
+  "booth": null,
   "categories": [
    "Application Development + Developer Experience"
   ],
-  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
-  "zone": "Honeycomb Hub",
-  "mapX": 1170.9,
-  "mapY": 282.8,
-  "hall": "2",
-  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/",
+  "note": "The sponsor directory gave booth 254, but the expo PDF exhibitor directory and map give 254 to Loophole Labs and do not list LiveKit."
  },
  {
   "name": "MacStadium",
@@ -3110,16 +3107,12 @@
  {
   "name": "Ascend",
   "tier": "Start-Up",
-  "booth": "362",
+  "booth": null,
   "categories": [
    "Artificial Intelligence (AI)"
   ],
-  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth also on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf",
-  "zone": "Cosmic Canyon",
-  "mapX": 1121.6,
-  "mapY": 128.7,
-  "hall": "4-5",
-  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/",
+  "note": "The sponsor directory gave booth 362, but the expo PDF exhibitor directory and map give 362 to CodeVisionary and do not list Ascend."
  },
  {
   "name": "Testkube",
@@ -3313,11 +3306,37 @@
  {
   "name": "Northflank",
   "tier": "Silver",
-  "booth": null,
+  "booth": "261",
   "categories": [
    "Artificial Intelligence (AI)"
   ],
-  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/",
-  "note": "No booth listed in sponsor directory and not in the expo map exhibitor directory"
+  "source": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor/sponsor-directory/ ; booth only on https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf (exhibitor directory)",
+  "zone": "Amber Hive",
+  "mapX": 1123.3,
+  "mapY": 257.6,
+  "hall": "3",
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
+ },
+ {
+  "name": "Loophole Labs",
+  "tier": "Silver",
+  "booth": "254",
+  "source": "https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf (exhibitor directory; not in the sponsor directory)",
+  "zone": "Honeycomb Hub",
+  "mapX": 1170.9,
+  "mapY": 282.8,
+  "hall": "2",
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
+ },
+ {
+  "name": "CodeVisionary",
+  "tier": "Start-Up",
+  "booth": "362",
+  "source": "https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf (exhibitor directory; not in the sponsor directory)",
+  "zone": "Cosmic Canyon",
+  "mapX": 1121.6,
+  "mapY": 128.7,
+  "hall": "4-5",
+  "hallConfidence": "zone measured from the KCNA26_ExpoHallMap.pdf fill; hall inferred from the nearest HALL label (hall walls are not drawn)"
  }
 ]

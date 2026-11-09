@@ -16,7 +16,7 @@ JSON in this doc is trimmed: long strings end in `…` and `"…N more"` stands 
 
 | Route | Use |
 |---|---|
-| `GET /api/config` | Boot data: `{ appVersion, publicBaseUrl, conferenceTimeZone, traceUrlTemplate?, rum? }`. Call once at start. |
+| `GET /api/config` | Boot data: `{ appVersion, publicBaseUrl, conferenceTimeZone, demoSimulateScans, traceUrlTemplate?, rum? }`. Call once at start. `demoSimulateScans` is `true` only when the server runs with `DEMO_SIMULATE_SCANS=true`; the map shows its "Demo: simulate scan" button only then. |
 | `GET /api/tools` | Every tool with `name`, `description`, `awardsXp` and its JSON Schema `inputSchema`. |
 | `GET /api/screen-token/:locationId?key=<displayKey>` | The only way to run `screen_token`. Needs the location's display key as `?key=` or the `x-screen-key` header; without it, `403 bad_screen_key`. Used by the demo screen. |
 | `GET /r/:locationId?t=<token>` | Printed and on-screen QR codes open this. With the Angular build it serves the SPA (the scan-result route); without it, it returns the JSON in `fixtures/scan_route.json`. |
@@ -27,7 +27,7 @@ JSON in this doc is trimmed: long strings end in `…` and `"…N more"` stands 
 `/api/config` from this server:
 
 ```json
-{"appVersion":"dev","publicBaseUrl":"https://kube-quest.cnh.radarhq.io","conferenceTimeZone":"America/Denver"}
+{"appVersion":"dev","publicBaseUrl":"https://kube-quest.cnh.radarhq.io","conferenceTimeZone":"America/Denver","demoSimulateScans":false}
 ```
 
 ## Identity
@@ -50,7 +50,7 @@ Every failure has the same envelope:
 |---|---|---|
 | 400 | `invalid_input`, `invalid_json`, `self_handshake` | A UI bug, or (`self_handshake`) the player scanned their own code. Show the message. |
 | 403 | `bad_signature`, `expired_token`, `missing_token` (check_in, start_handshake), `no_screen`, `bad_screen_key` (screen token), `screen_only` (`POST /api/tools/screen_token`) | On a scan, show "scan the code on the door" with the message. |
-| 404 | `unknown_attendee`, `unknown_player`, `attendee_not_found`, `unknown_location`, `unknown_talk`, `talk_not_found`, `boss_not_found`, `unknown_meet`, `unknown_quest`, `unknown_outpost`, `unknown_handshake`, `unknown_tool`, `not_found` | For `unknown_attendee`, clear the stored id and go to signup (not for `unknown_player`, which is about the other player). Otherwise show the message. |
+| 404 | `disabled` (demo_scan_token with `DEMO_SIMULATE_SCANS` off), `unknown_attendee`, `unknown_player`, `attendee_not_found`, `unknown_location`, `unknown_talk`, `talk_not_found`, `boss_not_found`, `unknown_meet`, `unknown_quest`, `unknown_outpost`, `unknown_handshake`, `unknown_tool`, `not_found` | For `unknown_attendee`, clear the stored id and go to signup (not for `unknown_player`, which is about the other player). Otherwise show the message. |
 | 409 | `handle_taken`, `meeting_off`, `no_match`, `meet_closed`, `meet_locked`, `quest_not_open`, `quest_not_active`, `quest_done`, `quest_expired`, `too_many_active`, `code_used`, `already_shook_hands`, `already_answered`, `handshake_closed`, `meet_not_accepted`, `conflict` | An expected game state. Show the message and refetch the screen's data. |
 | 429 | `slow_down` (send_message) | Show the message; let the player try again in a few minutes. |
 | 500 | `internal_error` | Show a toast and retry once. |
@@ -224,6 +224,18 @@ Not callable through `POST /api/tools/screen_token` (that returns `403 screen_on
 ```
 
 A location without a screen returns `403 {"error":{"code":"no_screen","message":"151 has no screen. Scan the printed code on its door."}}`.
+
+### demo_scan_token (demo only)
+
+Lets the venue map simulate a QR scan on stage. It is switched off unless the server runs with `DEMO_SIMULATE_SCANS=true`; otherwise every call returns `404 {"error":{"code":"disabled","message":"Simulated scans are switched off."}}`. It takes no `attendeeId` and awards nothing itself: it returns the path a printed QR code for that location encodes (token from `signLocationToken`, the same token a printed code carries), and the UI navigates there so the normal `/r/:locationId` scan-result screen runs `check_in` for the signed-in player. A player who is not signed in is sent to `/onboarding` with the scan pending, exactly like the camera scanner.
+
+`{"locationId":"outpost-amazon-web-services"}` →
+
+```json
+{"locationId":"outpost-amazon-web-services","path":"/r/outpost-amazon-web-services?t=<signed-token>"}
+```
+
+An unknown location returns `404 unknown_location`. Because the token is a printed one, anyone who can call this tool can check in anywhere: keep the flag off at a real event (see `docs/ops.md`).
 
 ### whats_around_me (Itinerary Now card)
 
