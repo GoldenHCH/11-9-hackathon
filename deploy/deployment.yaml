@@ -31,6 +31,8 @@ spec:
               value: "kube-quest"
             - name: OTEL_SERVICE_NAME
               value: "kubequest-app"
+            - name: ELASTIC_AGENT_ID
+              value: "kubequest-writer"
             - name: OTEL_EXPORTER_OTLP_ENDPOINT
               value: "http://otel-collector:4318"
             - name: DEPLOYMENT_ENVIRONMENT

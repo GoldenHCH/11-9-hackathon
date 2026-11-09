@@ -19,7 +19,7 @@ export function getEsClient(): Client {
     node: appConfig.elastic.url,
     auth: { apiKey: appConfig.elastic.apiKey },
     serverMode: 'serverless',
-    requestTimeout: esTimeouts.DEFAULT_MS,
+    requestTimeout: esTimeouts.INFERENCE_MS,
     maxRetries: 1,
   });
 

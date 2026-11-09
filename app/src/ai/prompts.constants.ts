@@ -3,7 +3,7 @@ export const aiSettings = {
     .split(',')
     .map((id) => id.trim())
     .filter((id) => id !== ''),
-  TIMEOUT_MS: 8000,
+  TIMEOUT_MS: 15000,
   MAX_ATTEMPTS: 2,
   CACHE_TTL_MS: 30 * 60 * 1000,
   CACHE_MAX_ENTRIES: 500,
