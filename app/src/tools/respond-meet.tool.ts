@@ -8,7 +8,7 @@ import { attendeeIdSchema, idSchema } from './tool-schemas';
 export const respondMeetTool = defineTool({
   name: 'respond_meet',
   description:
-    "Answer a meet: accept, decline (silent to the other player) or can't make it (until the first scan). blockPartner stops future matches with that player.",
+    "Answer a meet: accept, decline (silent to the other player), later (keeps a live request open as a normal offer for 30 minutes, no popup again) or can't make it (until the first scan). blockPartner stops future matches with that player.",
   input: z.object({
     attendeeId: attendeeIdSchema,
     meetId: idSchema,

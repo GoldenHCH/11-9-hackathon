@@ -14,6 +14,7 @@ export interface ILinkItem {
   network: LinkNetwork;
   label: string;
   url: string;
+  verified?: boolean;
 }
 
 export interface IUpdateLinksInput {
@@ -46,6 +47,7 @@ export interface ILinksView {
   visible: boolean;
   links: IProfileLinks;
   items: ILinkItem[];
+  githubVerified?: boolean;
   hiddenReason?: string;
 }
 

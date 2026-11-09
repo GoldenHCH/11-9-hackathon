@@ -1,7 +1,7 @@
 import { Component, DestroyRef, ElementRef, OnInit, ViewChild, inject } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormsModule } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -13,6 +13,7 @@ import { ApiErrorHelper } from '../../core/helpers/api-error.helper';
 import { MeService } from '../../core/services/me.service';
 import { ToolsService } from '../../core/services/tools.service';
 import { ISchedule, IScheduleSession } from '../../itinerary/itinerary.types';
+import { IProfile, IQuest, IQuestBoard } from '../../quests/quests.types';
 import { BoothPhotosComponent } from '../../photos/booth-photos/booth-photos.component';
 import { ScreenToolbarComponent } from '../../shared/components/screen-toolbar/screen-toolbar.component';
 import { StateWrapperComponent } from '../../shared/components/state-wrapper/state-wrapper.component';
@@ -21,12 +22,13 @@ import { DemoScanHelper } from '../demo-scan.helper';
 import { NowNextBarComponent } from '../now-next-bar/now-next-bar.component';
 import { RoomSessionCardComponent } from '../room-session-card/room-session-card.component';
 import { IRoomSessions, RoomSessionsHelper } from '../room-sessions.helper';
+import { MapPinsHelper } from '../map-pins.helper';
 import { DemoScanService } from '../services/demo-scan.service';
 import { VenueService } from '../services/venue.service';
 import { VenueSchematicComponent } from '../venue-schematic/venue-schematic.component';
 import { vendorTierFill, vendorTierOrder, venueAreaKindDisplay } from '../venue.constants';
 import { VenueHelper } from '../venue.helper';
-import { IVendor, IVenueArea, IVenueBuilding, IVenueLevel, IVenueSchematic } from '../venue.interfaces';
+import { IMapPin, IVendor, IVenueArea, IVenueBuilding, IVenueLevel, IVenueSchematic } from '../venue.interfaces';
 import { VendorTier, VenueAreaKind, VenueMapViewMode } from '../venue.types';
 
 const maxVendorResults = 40;
@@ -41,6 +43,7 @@ const maxVendorResults = 40;
     MatIconModule,
     MatInputModule,
     MatProgressSpinnerModule,
+    RouterLink,
     BoothPhotosComponent,
     DemoScanPickerComponent,
     NowNextBarComponent,
@@ -60,7 +63,6 @@ export class VenueMapComponent implements OnInit {
   private readonly _toolsService = inject(ToolsService);
   private readonly _meService = inject(MeService);
   private _schedule: ISchedule | null = null;
-  private _focusApplied = false;
 
   @ViewChild('mapTop') private readonly _mapTop?: ElementRef<HTMLElement>;
   @ViewChild(VenueSchematicComponent) private readonly _schematic?: VenueSchematicComponent;
@@ -92,11 +94,19 @@ export class VenueMapComponent implements OnInit {
   public scheduleDay = '';
   public isScheduleLoading = false;
   public scheduleError = '';
+  public hereLocationId: string | null = null;
+  public activeQuests: IQuest[] = [];
+  public pins: IMapPin[] = [];
+  public selectedPin: IMapPin | null = null;
+  private _focusLocationId: string | null = null;
+  private _focusApplied = false;
 
   public ngOnInit(): void {
+    this._focusLocationId = this._route.snapshot.queryParamMap.get('focus');
     this.loadSchematic();
     this.loadDemoLocations();
     this.loadRoomSchedule();
+    this.loadPlayerPins();
     this._demoScanService
       .isEnabled()
       .pipe(takeUntilDestroyed(this._destroyRef))
@@ -164,7 +174,7 @@ export class VenueMapComponent implements OnInit {
         next: (locations) => {
           this.demoLocations = locations;
           this.isLoadingDemoLocations = false;
-          this.applyFocus();
+          this.rebuildPins();
         },
         error: (error: unknown) => {
           console.error('Game locations failed to load', error);
@@ -188,7 +198,7 @@ export class VenueMapComponent implements OnInit {
           this.openRequestedLevel(schematic);
           this.isLoading = false;
           this.indexRoomSessions();
-          this.applyFocus();
+          this.rebuildPins();
         },
         error: (error: unknown) => {
           console.error('Venue schematic failed to load', error);
@@ -253,37 +263,6 @@ export class VenueMapComponent implements OnInit {
     this.nowNextTags = tags;
     this.liveAreaIds = live;
     this.liveSessions = RoomSessionsHelper.liveSessions(this._schedule).slice(0, 4);
-  }
-
-  private applyFocus(): void {
-    const focusId = this._route.snapshot.queryParamMap.get('focus');
-
-    if (this._focusApplied || !focusId || !this.schematic) {
-      return;
-    }
-
-    const session = this._schedule?.slots.flatMap((slot) => slot.sessions).find((candidate) => candidate.locationId === focusId);
-    const location =
-      this.demoLocations.find((candidate) => candidate.id === focusId) ?? (session ? RoomSessionsHelper.locationFromSession(session) : null);
-
-    if (!location) {
-      return;
-    }
-
-    if (location.kind === 'outpost') {
-      const vendor = this.schematic.vendors.find((candidate) => DemoScanHelper.forVendor(candidate, [location]).length > 0);
-
-      if (vendor) {
-        this._focusApplied = true;
-        this.showVendorOnMap(vendor);
-
-        return;
-      }
-    }
-
-    if (this.focusLocation(location)) {
-      this._focusApplied = true;
-    }
   }
 
   public focusSession(session: IScheduleSession): void {
@@ -445,6 +424,122 @@ export class VenueMapComponent implements OnInit {
     const reducedMotion = typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches;
     this._mapTop?.nativeElement.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', block: 'start' });
     setTimeout(() => this._schematic?.focusVendor(vendor));
+  }
+
+  public get nearestQuestPinId(): string | null {
+    return MapPinsHelper.nearestQuest(this.pins)?.id ?? null;
+  }
+
+  public get selectedPinQuest(): IQuest | null {
+    const questId = this.selectedPin?.questId;
+
+    return questId ? (this.activeQuests.find((quest) => quest.id === questId) ?? null) : null;
+  }
+
+  public get questPins(): IMapPin[] {
+    return this.pins.filter((pin) => pin.kind === 'quest');
+  }
+
+  public get youPin(): IMapPin | null {
+    return this.pins.find((pin) => pin.kind === 'you') ?? null;
+  }
+
+  public selectPin(pin: IMapPin): void {
+    this.selectedPin = this.selectedPin?.id === pin.id ? null : pin;
+  }
+
+  public clearSelectedPin(): void {
+    this.selectedPin = null;
+  }
+
+  public showPin(pin: IMapPin): void {
+    this.selectedPin = pin;
+    this.viewMode = 'map';
+    this.goToLevel(pin.buildingId, pin.levelId);
+    setTimeout(() => this._schematic?.focusPoint(pin.point));
+  }
+
+  private loadPlayerPins(): void {
+    const attendeeId = this._meService.attendeeId;
+
+    if (!attendeeId) {
+      return;
+    }
+
+    this._toolsService
+      .call<IProfile>('get_profile', { attendeeId }, { background: true })
+      .pipe(takeUntilDestroyed(this._destroyRef))
+      .subscribe({
+        next: (profile) => {
+          this.hereLocationId = profile.attendee.lastLocationId ?? null;
+          this.rebuildPins();
+        },
+        error: (error: unknown) => console.error('Profile failed to load for the map', error),
+      });
+    this._toolsService
+      .call<IQuestBoard>('quest_board', { attendeeId }, { background: true })
+      .pipe(takeUntilDestroyed(this._destroyRef))
+      .subscribe({
+        next: (board) => {
+          this.activeQuests = board.active;
+          this.rebuildPins();
+        },
+        error: (error: unknown) => console.error('Quests failed to load for the map', error),
+      });
+  }
+
+  private rebuildPins(): void {
+    if (!this.schematic || !this.demoLocations.length) {
+      return;
+    }
+
+    this.pins = MapPinsHelper.pins(this.schematic, this.demoLocations, this.hereLocationId, this.activeQuests);
+    this.applyFocus();
+  }
+
+  private applyFocus(): void {
+    if (!this.schematic || !this._focusLocationId) {
+      return;
+    }
+
+    if (this._focusApplied) {
+      this.selectedPin ??= this.pins.find((candidate) => candidate.kind === 'quest' && candidate.locationId === this._focusLocationId) ?? null;
+
+      return;
+    }
+
+    const pin = this.pins.find((candidate) => candidate.kind === 'quest' && candidate.locationId === this._focusLocationId);
+
+    if (pin) {
+      this._focusApplied = true;
+      this.showPin(pin);
+
+      return;
+    }
+
+    const location = MapPinsHelper.locationFor(this.demoLocations, this._focusLocationId);
+    const place = location ? MapPinsHelper.placeOf(this.schematic, location) : null;
+
+    if (!location || !place) {
+      this.applySessionFocus(this._focusLocationId);
+
+      return;
+    }
+
+    this._focusApplied = true;
+    this.viewMode = 'map';
+    this.goToLevel(place.buildingId, place.levelId);
+    this.highlightedVendor = place.vendorId ? (this.schematic.vendors.find((vendor) => vendor.id === place.vendorId) ?? null) : null;
+    this.selectedAreaId = place.areaId ?? this.highlightedVendor?.areaId ?? null;
+    setTimeout(() => this._schematic?.focusPoint(place.point));
+  }
+
+  private applySessionFocus(focusId: string): void {
+    const session = this._schedule?.slots.flatMap((slot) => slot.sessions).find((candidate) => candidate.locationId === focusId);
+
+    if (session && this.focusLocation(RoomSessionsHelper.locationFromSession(session))) {
+      this._focusApplied = true;
+    }
   }
 
   public vendorLocationLabel(vendor: IVendor): string {

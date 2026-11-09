@@ -40,7 +40,7 @@
       </p>
     }
 
-    @if (quest.where || quest.when || quest.walkMinutes !== undefined) {
+    @if (quest.where || quest.when || quest.walkMinutes !== undefined || quest.directionHint) {
       <ul class="quest-facts">
         @if (quest.where) {
           <li class="quest-fact">
@@ -57,10 +57,28 @@
         @if (quest.walkMinutes !== undefined) {
           <li class="quest-fact">
             <mat-icon aria-hidden="true">directions_walk</mat-icon>
-            <span>{{ quest.walkMinutes }} min walk</span>
+            <span>{{ quest.walkMinutes }} min walk@if (quest.directionHint) { · {{ quest.directionHint }}}</span>
+          </li>
+        } @else if (quest.directionHint) {
+          <li class="quest-fact">
+            <mat-icon aria-hidden="true">directions_walk</mat-icon>
+            <span>{{ quest.directionHint }}</span>
+          </li>
+        }
+        @if (quest.distanceLabel) {
+          <li class="quest-fact quest-fact-far">
+            <mat-icon aria-hidden="true">swap_horiz</mat-icon>
+            <span>{{ quest.distanceLabel }}</span>
           </li>
         }
       </ul>
+    }
+
+    @if (mapLocationId && mode !== 'done') {
+      <a class="quest-link" routerLink="/map" [queryParams]="{ focus: mapLocationId }" [attr.aria-label]="'Show ' + (quest.where?.name ?? quest.title) + ' on the map'">
+        <mat-icon aria-hidden="true">map</mat-icon>
+        <span>Show on map</span>
+      </a>
     }
 
     @if (quest.progress) {

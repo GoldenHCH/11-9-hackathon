@@ -221,7 +221,7 @@ function viewConnection(connection: IStoredConnection, other: IAttendee, note: I
       workingOn: other.workingOn,
       topics: other.profile.topics,
     },
-    links: linkItems(other.links),
+    links: linkItems(other.links, other.githubVerified),
     source: connection.detail.source,
     ...(connection.detail.place ? { where: connection.detail.place } : {}),
     metAt: connection.metAt,

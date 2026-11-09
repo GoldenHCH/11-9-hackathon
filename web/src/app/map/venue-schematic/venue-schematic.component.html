@@ -232,6 +232,80 @@
           </g>
         }
       }
+
+      @if (routeLine; as line) {
+        <line
+          class="route-line"
+          [attr.x1]="line.x1"
+          [attr.y1]="line.y1"
+          [attr.x2]="line.x2"
+          [attr.y2]="line.y2"
+          [attr.stroke-width]="pinSize / 6"
+          [attr.stroke-dasharray]="pinSize / 3 + ' ' + pinSize / 4"
+          aria-hidden="true"
+        ></line>
+      }
+
+      @for (pin of levelPins; track pin.id) {
+        @let size = pinSize;
+        <g
+          class="pin"
+          [class.pin--you]="pin.kind === 'you'"
+          [class.pin--quest]="pin.kind === 'quest'"
+          [class.pin--selected]="pin.id === selectedPinId"
+          [attr.transform]="pinTransform(pin)"
+          role="button"
+          tabindex="0"
+          [attr.aria-label]="pinAriaLabel(pin)"
+          (click)="onPinClick($event, pin)"
+          (keydown)="onPinKeydown($event, pin)"
+        >
+          <title>{{ pinAriaLabel(pin) }}</title>
+          @if (pin.kind === 'you') {
+            <circle class="pin-pulse" [attr.r]="size * 0.9" [attr.stroke-width]="size / 8"></circle>
+            <circle class="pin-you-dot" [attr.r]="size * 0.42" [attr.stroke-width]="size / 8"></circle>
+            <rect
+              class="pin-tag"
+              [attr.x]="-size * 1.5"
+              [attr.y]="-size * 1.75"
+              [attr.width]="size * 3"
+              [attr.height]="size * 0.8"
+              [attr.stroke-width]="size / 12"
+            ></rect>
+            <text class="pin-tag-text" [attr.y]="-size * 1.35" [attr.font-size]="size * 0.45" text-anchor="middle" dominant-baseline="central">
+              YOU ARE HERE
+            </text>
+          } @else {
+            <rect class="pin-pole" [attr.x]="-size * 0.06" [attr.y]="-size * 1.6" [attr.width]="size * 0.12" [attr.height]="size * 1.6"></rect>
+            <rect
+              class="pin-flag-shadow"
+              [attr.x]="size * 0.14"
+              [attr.y]="-size * 1.5"
+              [attr.width]="size * 0.95"
+              [attr.height]="size * 0.75"
+            ></rect>
+            <rect
+              class="pin-flag"
+              [attr.x]="size * 0.06"
+              [attr.y]="-size * 1.6"
+              [attr.width]="size * 0.95"
+              [attr.height]="size * 0.75"
+              [attr.stroke-width]="size / 12"
+            ></rect>
+            <text
+              class="pin-number"
+              [attr.x]="size * 0.53"
+              [attr.y]="-size * 1.22"
+              [attr.font-size]="size * 0.55"
+              text-anchor="middle"
+              dominant-baseline="central"
+            >
+              {{ pin.number }}
+            </text>
+            <rect class="pin-base" [attr.x]="-size * 0.25" [attr.y]="-size * 0.12" [attr.width]="size * 0.5" [attr.height]="size * 0.24"></rect>
+          }
+        </g>
+      }
     </svg>
     </div>
   </div>

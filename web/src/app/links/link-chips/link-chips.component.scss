@@ -56,3 +56,11 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+.chip-verified {
+  width: 14px;
+  height: 14px;
+  font-size: 14px;
+  vertical-align: -2px;
+  color: var(--app-theme--primary, #2f6b2b);
+}

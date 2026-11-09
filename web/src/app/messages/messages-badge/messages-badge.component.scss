@@ -1,0 +1,22 @@
+:host {
+  position: absolute;
+  top: -6px;
+  right: -12px;
+  pointer-events: none;
+}
+
+.badge {
+  display: block;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 4px;
+  box-sizing: border-box;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+  color: var(--kq-accent-ink);
+  background: var(--kq-accent);
+  border: 2px solid var(--kq-border);
+  box-shadow: var(--kq-shadow-small);
+}

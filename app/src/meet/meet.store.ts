@@ -114,6 +114,28 @@ export async function searchIntros(attendeeId: string, campfireId?: string): Pro
   );
 }
 
+const LIVE_QUERY_TIMEOUT_MS = 3000;
+
+export async function searchLiveRequests(attendeeId: string, size: number): Promise<IStoredIntro[]> {
+  const response = await getEsClient().search<IIntro>(
+    {
+      index: indexNames.INTROS,
+      query: { bool: { filter: [{ term: { toId: attendeeId } }, { term: { status: 'proposed' } }, { term: { liveState: 'live' } }] } },
+      sort: [{ proposedAt: { order: 'desc' } }],
+      size,
+      seq_no_primary_term: true,
+      timeout: `${LIVE_QUERY_TIMEOUT_MS}ms`,
+    },
+    esOptions(LIVE_QUERY_TIMEOUT_MS),
+  );
+
+  return response.hits.hits.flatMap((hit) =>
+    hit._source && hit._id && hit._seq_no !== undefined && hit._primary_term !== undefined
+      ? [{ intro: { ...hit._source, id: hit._id }, seqNo: hit._seq_no, primaryTerm: hit._primary_term }]
+      : [],
+  );
+}
+
 export async function blockPlayer(attendee: IAttendee, blockedId: string): Promise<void> {
   if (attendee.blockedIds.includes(blockedId)) {
     return;

@@ -274,6 +274,21 @@
   background: var(--board-primary);
 }
 
+.near-hint {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 12px;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 2px dashed var(--kq-border, var(--app-theme--border-soft, #cfc8b6));
+
+  .mat-icon {
+    flex-shrink: 0;
+  }
+}
+
 .section-empty {
   margin: 0;
   padding: 12px;

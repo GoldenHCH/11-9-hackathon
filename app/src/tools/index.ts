@@ -11,6 +11,7 @@ import { inventoryTool } from './inventory.tool';
 import { leaderboardTool } from './leaderboard.tool';
 import { listExhibitorsTool } from './list-exhibitors.tool';
 import { listMeetsTool } from './list-meets.tool';
+import { pendingMeetRequestsTool } from './pending-meet-requests.tool';
 import { makeQuestTool } from './make-quest.tool';
 import { organizerStatsTool } from './organizer-stats.tool';
 import { proposeMeetTool } from './propose-meet.tool';
@@ -34,7 +35,9 @@ import { answerHandshakeTool } from './answer-handshake.tool';
 import { handshakeCodeTool } from './handshake-code.tool';
 import { handshakeStateTool } from './handshake-state.tool';
 import { listBoothNotesTool } from './list-booth-notes.tool';
+import { listConversationsTool } from './list-conversations.tool';
 import { listMessagesTool } from './list-messages.tool';
+import { markConversationReadTool } from './mark-conversation-read.tool';
 import { listNotificationsTool } from './list-notifications.tool';
 import { markNotificationsReadTool } from './mark-notifications-read.tool';
 import { recapTool } from './recap.tool';
@@ -75,6 +78,7 @@ export const toolRegistry = {
   propose_meet: proposeMeetTool,
   respond_meet: respondMeetTool,
   list_meets: listMeetsTool,
+  pending_meet_requests: pendingMeetRequestsTool,
   leaderboard: leaderboardTool,
   inventory: inventoryTool,
   world: worldTool,
@@ -95,6 +99,8 @@ export const toolRegistry = {
   delete_booth_photo: deleteBoothPhotoTool,
   send_message: sendMessageTool,
   list_messages: listMessagesTool,
+  list_conversations: listConversationsTool,
+  mark_conversation_read: markConversationReadTool,
   recap: recapTool,
   ...connectionToolRegistry,
   import_profile: importProfileTool,

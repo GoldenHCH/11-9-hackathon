@@ -165,6 +165,18 @@
         </p>
       }
 
+      @case ('goals') {
+        <h1 class="step-title kq-pixel">Why are you here today?</h1>
+        <p class="step-text">Your quests and the people we suggest follow your answer. Only you see it.</p>
+
+        <app-intent-picker
+          idPrefix="kq-onboarding-intent"
+          [value]="intent"
+          [(socialChosen)]="socialChosen"
+          (valueChange)="onIntentChange($event)"
+        ></app-intent-picker>
+      }
+
       @case ('handle') {
         <h1 class="step-title kq-pixel">Pick a handle</h1>
         <p class="step-text">It's your name in the game. Your pixel face is made from it.</p>
@@ -341,6 +353,45 @@
         }
       }
 
+      @case ('links') {
+        <h1 class="step-title kq-pixel">Your links</h1>
+        <p class="step-text">Optional. Add the places people can find you after you meet.</p>
+        <p class="import-consent">
+          <mat-icon aria-hidden="true">lock</mat-icon>
+          <span>Only people you connect with see these.</span>
+        </p>
+
+        <ng-container [formGroup]="linksForm">
+          @for (option of linkOptions; track option.network) {
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>{{ option.label }}</mat-label>
+              <input
+                matInput
+                autocomplete="off"
+                autocapitalize="none"
+                spellcheck="false"
+                maxlength="200"
+                data-1p-ignore
+                data-lpignore="true"
+                data-form-type="other"
+                [formControlName]="option.network"
+                [placeholder]="option.placeholder"
+              />
+              <mat-hint>{{ option.hint }}</mat-hint>
+            </mat-form-field>
+          }
+        </ng-container>
+
+        @if (githubVerifyEnabled) {
+          <button mat-stroked-button type="button" class="verify-github" [disabled]="isBusy" (click)="verifyGithub()">
+            <div class="btn-content">
+              <mat-icon aria-hidden="true">verified</mat-icon>
+              <span>Verify with GitHub</span>
+            </div>
+          </button>
+        }
+      }
+
       @case ('done') {
         @if (result) {
           <div class="done">
@@ -379,7 +430,7 @@
           </div>
         </button>
       } @else {
-        @if (stepIndex > 1) {
+        @if (stepIndex > 1 && step !== 'links') {
           <button mat-stroked-button type="button" class="action-secondary" [disabled]="isBusy" (click)="back()">Back</button>
         }
         @if (step === 'signin') {
@@ -408,9 +459,13 @@
             mat-flat-button
             type="submit"
             class="action-primary"
-            [disabled]="(step === 'handle' && !isHandleValid) || (step === 'import' && importMode === 'loading')"
+            [disabled]="(step === 'handle' && !isHandleValid) || (step === 'import' && importMode === 'loading') || isSavingLinks"
           >
-            {{ primaryLabel }}
+            @if (isSavingLinks) {
+              <mat-spinner diameter="20" aria-label="Saving your links"></mat-spinner>
+            } @else {
+              {{ primaryLabel }}
+            }
           </button>
         }
       }

@@ -40,13 +40,14 @@ export async function updateLinks(input: IUpdateLinksInput): Promise<IUpdateLink
   const before = attendee.links ?? {};
   const links = mergeLinks(before, input.links);
   const enrichment = enrichmentChanged(before, links) ? await enrich(links) : undefined;
-  await patchAttendee(attendee.id, profilePatch(attendee, links, enrichment));
+  const githubChanged = attendee.githubVerified === true && before.github !== links.github;
+  await patchAttendee(attendee.id, { ...profilePatch(attendee, links, enrichment), ...(githubChanged ? { githubVerified: false } : {}) });
   trace.getActiveSpan()?.setAttributes({
     'kubequest.links.count': Object.keys(links).length,
     'kubequest.links.enriched': (enrichment ?? []).filter((result) => result.status === 'added').length,
   });
 
-  return { links, items: linkItems(links), enrichment: enrichment ?? [] };
+  return { links, items: linkItems(links, attendee.githubVerified === true && !githubChanged), enrichment: enrichment ?? [] };
 }
 
 export async function getLinks(input: IGetLinksInput): Promise<ILinksView> {
@@ -66,7 +67,8 @@ export async function getLinks(input: IGetLinksInput): Promise<ILinksView> {
     isConnection,
     visible,
     links,
-    items: linkItems(links),
+    items: linkItems(links, visible && target.githubVerified === true),
+    githubVerified: visible && target.githubVerified === true && links.github !== undefined,
     ...(visible ? {} : { hiddenReason }),
   };
 }

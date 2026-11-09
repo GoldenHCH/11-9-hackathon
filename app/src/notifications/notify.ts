@@ -60,12 +60,12 @@ async function notifySafely(attendeeId: string, draft: INotificationDraft): Prom
   }
 }
 
-export async function notifyMeetOffer(intro: IIntro, proposer: IAttendee): Promise<void> {
+export async function notifyMeetOffer(intro: IIntro, proposerHandle: string): Promise<void> {
   await notifySafely(intro.toId, {
     type: 'meet_offer',
     title: 'Someone nearby wants to meet you',
-    body: `@${proposer.handle} wants to meet. Accept to get a time and a place.`,
-    link: notificationLinks.PEOPLE,
+    body: `@${proposerHandle} wants to meet. Accept to get a time and a place.`,
+    link: `${notificationLinks.MEET_PREFIX}${intro.id}`,
     dedupeKey: hashedKey('meet_offer', `${intro.id}|${intro.proposedAt}`),
   });
 }

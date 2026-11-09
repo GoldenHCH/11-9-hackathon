@@ -19,6 +19,16 @@ Keys (names only):
 | `DASH0_ENDPOINT` | yes, for Dash0 | the OpenTelemetry Collector's exporter |
 | `DASH0_TRACE_URL_TEMPLATE` | no | links from XP events to traces |
 | `DASH0_RUM_ENDPOINT`, `DASH0_RUM_AUTH_TOKEN` | no | browser RUM |
+| `GITHUB_OAUTH_CLIENT_ID`, `GITHUB_OAUTH_CLIENT_SECRET` | no | "Verify with GitHub" (`/auth/github/start` and `/callback`); without both, the button is hidden |
+
+## Turning on "Verify with GitHub"
+
+The onboarding "Your links" step and `/api/config` (`githubVerifyEnabled`) show the button only when both GitHub keys are set. To switch it on:
+
+1. On GitHub: Settings > Developer settings > OAuth Apps > New OAuth App. Homepage URL `https://kube-quest.cnh.radarhq.io`, Authorization callback URL `https://kube-quest.cnh.radarhq.io/auth/github/callback`. No scopes are requested; the app reads only the public login.
+2. Generate a client secret.
+3. Ask the agent to add `GITHUB_OAUTH_CLIENT_ID` and `GITHUB_OAUTH_CLIENT_SECRET` to the existing `app-credentials` Secret through Radar (read it first, keep every key, never echo the values), then restart `app`.
+4. Check: `GET /api/config` returns `"githubVerifyEnabled":true`. The callback URL is built from `PUBLIC_BASE_URL`, so it must match the one registered on GitHub.
 
 Non-secret settings (`TEAM_NAME`, `OTEL_SERVICE_NAME`, `OTEL_EXPORTER_OTLP_ENDPOINT=http://otel-collector:4318`, `DEPLOYMENT_ENVIRONMENT`, `K8S_*`) are plain `env` in `deploy/deployment.yaml`.
 

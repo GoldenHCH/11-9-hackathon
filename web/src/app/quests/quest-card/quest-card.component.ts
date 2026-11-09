@@ -60,6 +60,10 @@ export class QuestCardComponent {
     return this.quest.type === 'photo' && this.quest.locationId ? this.quest.locationId : null;
   }
 
+  public get mapLocationId(): string | null {
+    return this.quest.where?.locationId ?? this.quest.locationId ?? null;
+  }
+
   public get headingId(): string {
     return `quest-${this.quest.id}-title`;
   }

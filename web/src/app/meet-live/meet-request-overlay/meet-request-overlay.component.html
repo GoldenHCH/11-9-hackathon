@@ -1,0 +1,112 @@
+@if (request; as current) {
+  <div class="live-backdrop">
+    <section
+      class="live-dialog app-block"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="live-meet-title"
+      aria-describedby="live-meet-why"
+      cdkTrapFocus
+      [cdkTrapFocusAutoCapture]="true"
+    >
+      <p class="live-kicker kq-pixel">Let’s meet?</p>
+
+      <div class="live-ring-wrap">
+        <svg class="live-ring" viewBox="0 0 100 100" aria-hidden="true">
+          <circle class="live-ring-track" cx="50" cy="50" [attr.r]="ringRadius"></circle>
+          <circle
+            class="live-ring-bar"
+            [class.live-ring-bar--low]="requestSeconds <= 10"
+            cx="50"
+            cy="50"
+            [attr.r]="ringRadius"
+            [attr.stroke-dasharray]="ringLength"
+            [attr.stroke-dashoffset]="requestOffset"
+          ></circle>
+        </svg>
+        <div class="live-ring-face">
+          <app-pixel-face [seed]="current.requester.faceSeed" [size]="88" [label]="'Face of @' + current.requester.handle"></app-pixel-face>
+        </div>
+      </div>
+
+      <p class="live-seconds kq-pixel" aria-live="off">{{ requestSeconds }}s</p>
+      <span class="live-sr" role="timer" aria-live="polite">
+        @if (requestSeconds === 30 || requestSeconds === 20 || requestSeconds === 10) {
+          {{ requestSeconds }} seconds left to answer
+        }
+      </span>
+
+      <h2 id="live-meet-title" class="live-handle kq-pixel">&#64;{{ current.requester.handle }}</h2>
+      <p class="live-level">Level {{ current.requester.level }} · {{ current.requester.levelName }}</p>
+      @if (current.requester.headline) {
+        <p class="live-headline">{{ current.requester.headline }}</p>
+      }
+      @if (current.sharedTopics.length) {
+        <ul class="live-topics" aria-label="Shared topics">
+          @for (topic of current.sharedTopics; track topic) {
+            <li class="live-topic">{{ topic }}</li>
+          }
+        </ul>
+      }
+      <p id="live-meet-why" class="live-why">{{ current.why }}</p>
+      <p class="live-privacy">Nothing about you is shared unless you say yes.</p>
+
+      @if (respondError) {
+        <app-alert-banner [message]="respondError" (dismissed)="respondError = ''"></app-alert-banner>
+      }
+
+      <div class="live-actions">
+        <button mat-flat-button type="button" class="live-accept" [disabled]="isResponding" (click)="respond('accept')" cdkFocusInitial>
+          @if (isResponding) {
+            <mat-spinner diameter="20"></mat-spinner>
+          } @else {
+            <span class="btn-content"><mat-icon aria-hidden="true">handshake</mat-icon>Accept</span>
+          }
+        </button>
+        <div class="live-secondary">
+          <button mat-stroked-button type="button" [disabled]="isResponding" (click)="respond('later')">Later</button>
+          <button mat-button type="button" [disabled]="isResponding" (click)="respond('decline')">Decline</button>
+        </div>
+      </div>
+    </section>
+  </div>
+}
+
+@if (waiting; as current) {
+  <section class="wait-sheet app-block" role="region" aria-label="Waiting for your meet" aria-live="polite">
+    <div class="wait-ring-wrap">
+      <svg class="wait-ring" viewBox="0 0 100 100" aria-hidden="true">
+        <circle class="live-ring-track" cx="50" cy="50" [attr.r]="ringRadius"></circle>
+        <circle
+          class="live-ring-bar"
+          cx="50"
+          cy="50"
+          [attr.r]="ringRadius"
+          [attr.stroke-dasharray]="ringLength"
+          [attr.stroke-dashoffset]="waitingOffset"
+        ></circle>
+      </svg>
+      <div class="wait-ring-face">
+        <app-pixel-face [seed]="current.partner.faceSeed" [size]="40" [label]="'Face of @' + current.partner.handle"></app-pixel-face>
+      </div>
+    </div>
+    <div class="wait-text">
+      <p class="wait-title kq-pixel">&#64;{{ current.partner.handle }}</p>
+      @if (waitingLapsed) {
+        <p class="wait-line">They’ll get back to you. We’ll tell you when they’re in.</p>
+      } @else {
+        <p class="wait-line">Waiting… <span class="kq-pixel">{{ waitingSeconds }}s</span></p>
+      }
+    </div>
+    <button mat-icon-button type="button" class="wait-close" aria-label="Close" (click)="closeWaiting()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </section>
+}
+
+@if (notice) {
+  <p class="live-notice app-block" role="status">
+    <mat-icon aria-hidden="true">notifications</mat-icon>
+    <span>{{ notice }}</span>
+  </p>
+}
