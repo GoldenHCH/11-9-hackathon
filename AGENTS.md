@@ -56,7 +56,13 @@ Rules use the format `[CATEGORY-##]`. **Read only the files relevant to your tas
 
 - Always include a newline at the end of files
 - Do NOT add comments to TypeScript code (`[CMT-01]`) — code should be self-documenting
-- Only commit or push when explicitly asked (`[GIT-04]`)
+- Only commit or push when explicitly asked (`[GIT-04]`), except for the knowledge graph (`[KG-01]`)
+
+## Knowledge Graph
+
+- `[KG-01]` `knowledge-graph/` holds markdown notes about the hackathon, one topic per file, listed in `knowledge-graph/README.md`. Whenever you add or edit a file there, update the README index in the same change, then commit and push to `main` right away, without being asked. Commit only the `knowledge-graph/` files. Markdown pushes don't trigger a build.
+- `[KG-02]` `knowledge-graph/prd-kubequest.md` is a snapshot of the live Claude Doc at https://claude.ai/artifact/XS2j3JmbFNXeX3QXPqu2tm. When that doc is edited, or you're asked to refresh it, re-export it with the Claude Docs connector, overwrite the snapshot, keep the source note at its top, and push it (`[KG-01]`).
+- `[KG-03]` The repo is public. Keep secrets, credentials, and personal data about real attendees out of these notes.
 
 ---
 
