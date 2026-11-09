@@ -52,6 +52,18 @@ export const routes: Routes = [
     loadComponent: () => import('./profile/profile.component').then((module) => module.ProfileComponent),
   },
   {
+    path: 'messages',
+    title: 'Messages · KubeQuest',
+    canActivate: [meGuard],
+    loadComponent: () => import('./messages/inbox/inbox.component').then((module) => module.InboxComponent),
+  },
+  {
+    path: 'messages/:meetId',
+    title: 'Conversation · KubeQuest',
+    canActivate: [meGuard],
+    loadComponent: () => import('./messages/thread/thread.component').then((module) => module.ThreadComponent),
+  },
+  {
     path: 'me/:attendeeId',
     title: 'KubeQuest',
     loadComponent: () => import('./me/me-link.component').then((module) => module.MeLinkComponent),

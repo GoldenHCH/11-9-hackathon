@@ -33,6 +33,15 @@
           <mat-icon>storefront</mat-icon>
         </a>
         <app-notification-bell></app-notification-bell>
+        <a
+          class="brand-icon"
+          routerLink="/profile"
+          routerLinkActive="brand-icon--active"
+          ariaCurrentWhenActive="page"
+          aria-label="Your profile"
+        >
+          <mat-icon>account_circle</mat-icon>
+        </a>
       }
       <button
         mat-button
@@ -46,11 +55,6 @@
           <mat-icon aria-hidden="true">expand_more</mat-icon>
         </span>
       </button>
-      @if (isAttendee) {
-        <a class="brand-icon" routerLink="/profile" aria-label="Your profile">
-          <mat-icon>account_circle</mat-icon>
-        </a>
-      }
     </div>
   </header>
 
@@ -83,6 +87,9 @@
       >
         <span class="bottom-nav-icon">
           <mat-icon aria-hidden="true">{{ tab.icon }}</mat-icon>
+          @if (tab.badge === 'messages') {
+            <app-messages-badge></app-messages-badge>
+          }
         </span>
         <span class="bottom-nav-label kq-pixel">{{ tab.label }}</span>
       </a>

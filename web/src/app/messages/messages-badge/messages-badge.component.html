@@ -1,0 +1,5 @@
+@let unread = (unread$ | async) ?? 0;
+@if (unread > 0) {
+  <span class="badge" aria-hidden="true">{{ badgeText(unread) }}</span>
+  <span class="app-visually-hidden">, {{ unread }} unread</span>
+}

@@ -116,6 +116,13 @@ export interface IStoredMessage {
   at: IsoDateString;
 }
 
+export interface IStoredReadMarker {
+  kind: 'read_marker';
+  attendeeId: string;
+  meetId: string;
+  readAt: IsoDateString;
+}
+
 export interface IStoredNotification {
   kind: 'notification';
   attendeeId: string;

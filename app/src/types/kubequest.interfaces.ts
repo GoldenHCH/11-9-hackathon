@@ -1152,6 +1152,45 @@ export interface IListMessagesInput {
   since?: IsoDateString;
 }
 
+export interface IConversationPartner {
+  publicId: string;
+  handle: string;
+  faceSeed: string;
+  levelName: string;
+}
+
+export interface IConversationPreview {
+  text: string;
+  fromMe: boolean;
+  at: IsoDateString;
+}
+
+export interface IConversation {
+  meetId: string;
+  connectionId?: string;
+  meetStatus: MeetStatus;
+  partner: IConversationPartner;
+  lastMessage: IConversationPreview | null;
+  lastActivityAt: IsoDateString;
+  unread: number;
+}
+
+export interface IListConversationsResult {
+  conversations: IConversation[];
+  unread: number;
+}
+
+export interface IMarkConversationReadInput {
+  attendeeId: string;
+  meetId: string;
+}
+
+export interface IMarkConversationReadResult {
+  meetId: string;
+  readAt: IsoDateString;
+  unread: number;
+}
+
 export interface IRecapTalk {
   talkId: string;
   title: string;
@@ -1342,6 +1381,8 @@ export interface IToolContracts extends IConnectionToolContracts {
   delete_booth_photo: { input: IBoothPhotoActionInput; output: IDeleteBoothPhotoResult };
   send_message: { input: ISendMessageInput; output: IMessage };
   list_messages: { input: IListMessagesInput; output: IMessage[] };
+  list_conversations: { input: IAttendeeInput; output: IListConversationsResult };
+  mark_conversation_read: { input: IMarkConversationReadInput; output: IMarkConversationReadResult };
   recap: { input: IAttendeeInput; output: IRecap };
   import_profile: { input: IImportProfileInput; output: IImportedProfile };
   list_notifications: { input: IListNotificationsInput; output: IListNotificationsResult };

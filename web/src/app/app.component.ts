@@ -10,6 +10,7 @@ import { fullScreenRoutePrefixes, navigationTabs, roleViews } from './app.consta
 import { AppHelper } from './app.helper';
 import { LoadingService } from './core/services/loading.service';
 import { MeetRequestOverlayComponent } from './meet-live/meet-request-overlay/meet-request-overlay.component';
+import { MessagesBadgeComponent } from './messages/messages-badge/messages-badge.component';
 import { NotificationBellComponent } from './notifications/notification-bell/notification-bell.component';
 import { AccessibilityService } from './profile/services/accessibility.service';
 
@@ -26,6 +27,7 @@ import { AccessibilityService } from './profile/services/accessibility.service';
     MatProgressBarModule,
     NotificationBellComponent,
     MeetRequestOverlayComponent,
+    MessagesBadgeComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
