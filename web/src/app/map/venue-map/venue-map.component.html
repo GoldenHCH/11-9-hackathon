@@ -70,6 +70,15 @@
       @if (viewMode === 'map') {
         <!-- Schematic -->
         @if (selectedLevel && selectedBuilding) {
+          <app-now-next-bar
+            [isActive]="showNowNext"
+            [isLoading]="isScheduleLoading"
+            [errorMessage]="scheduleError"
+            [liveSessions]="liveSessions"
+            (toggled)="toggleNowNext()"
+            (retry)="loadRoomSchedule()"
+            (sessionPicked)="focusSession($event)"
+          ></app-now-next-bar>
           <p class="details-hint map-help">Drag to pan, scroll or pinch to zoom, double-tap to zoom in.</p>
           <app-venue-schematic
             [level]="selectedLevel"
@@ -77,6 +86,8 @@
             [highlightedAreaIds]="highlightedAreaIds"
             [booths]="levelBooths"
             [highlightedVendorId]="highlightedVendor?.id ?? null"
+            [areaTags]="showNowNext ? nowNextTags : noTags"
+            [liveAreaIds]="showNowNext ? liveAreaIds : noAreaIds"
             (areaSelected)="selectArea($event)"
             (boothSelected)="selectBooth($event)"
           ></app-venue-schematic>
@@ -175,6 +186,9 @@
               </div>
               @if (selectedArea.description) {
                 <p class="details-description">{{ selectedArea.description }}</p>
+              }
+              @if (selectedAreaSessions; as roomSessions) {
+                <app-room-session-card [sessions]="roomSessions" [day]="scheduleDay"></app-room-session-card>
               }
               @if (selectedArea.scheduleRooms?.length) {
                 <p class="details-note">On the schedule as “{{ selectedArea.scheduleRooms!.join('”, “') }}”.</p>

@@ -1,0 +1,38 @@
+<div class="now-next-bar">
+  <button
+    type="button"
+    class="now-next-toggle kq-pixel"
+    [class.now-next-toggle--active]="isActive"
+    [attr.aria-pressed]="isActive"
+    (click)="toggled.emit()"
+  >
+    <mat-icon aria-hidden="true">{{ isActive ? 'event_available' : 'event' }}</mat-icon>
+    <span>Now / Next</span>
+  </button>
+  @if (isActive) {
+    @if (isLoading) {
+      <span class="now-next-hint">Loading sessions…</span>
+    } @else if (errorMessage) {
+      <span class="now-next-hint now-next-hint--error" role="alert">Sessions didn’t load.</span>
+      <button mat-stroked-button type="button" class="now-next-retry" (click)="retry.emit()">Retry</button>
+    } @else {
+      <span class="now-next-hint">
+        <span class="now-next-live-swatch" aria-hidden="true"></span>
+        <span>Red rooms have a session on now. Tap one for details.</span>
+      </span>
+    }
+  }
+</div>
+@if (isActive && liveSessions.length) {
+  <ul class="live-strip" aria-label="On now">
+    @for (session of liveSessions; track session.id) {
+      <li>
+        <button type="button" class="live-chip" (click)="sessionPicked.emit(session)">
+          <span class="kq-swatch kq-swatch--{{ session.material }} live-chip-swatch" aria-hidden="true"></span>
+          <span class="live-chip-tag kq-pixel">Now</span>
+          <span class="live-chip-text">{{ session.title }} · {{ session.room }}</span>
+        </button>
+      </li>
+    }
+  </ul>
+}

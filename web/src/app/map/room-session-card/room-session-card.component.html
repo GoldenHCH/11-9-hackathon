@@ -1,0 +1,55 @@
+<section class="room-sessions" aria-label="Sessions in this room">
+  <h3 class="room-sessions-title kq-pixel">On stage here</h3>
+  <ul class="room-sessions-list">
+    @for (row of rows; track row.session.id) {
+      <li class="room-session kq-block" [class.room-session--live]="row.label === 'Now'">
+        <div class="room-session-head">
+          <span class="room-session-tag kq-pixel" [class.room-session-tag--live]="row.label === 'Now'">{{ row.label }}</span>
+          <span class="kq-swatch kq-swatch--{{ row.session.material }} room-session-swatch" aria-hidden="true"></span>
+          <span class="room-session-time">{{ range(row.session) }}</span>
+        </div>
+        <p class="room-session-name">{{ row.session.title }}</p>
+        @if (row.session.speakers.length) {
+          <p class="room-session-speakers">{{ row.session.speakers.join(', ') }}</p>
+        }
+        <div class="room-session-actions">
+          @if (isPlanned(row.session)) {
+            <button mat-stroked-button type="button" class="room-session-action room-session-action--done" disabled>
+              <div class="btn-content">
+                <mat-icon aria-hidden="true">check</mat-icon>
+                <span>In my plan</span>
+              </div>
+            </button>
+          } @else {
+            <button
+              mat-flat-button
+              type="button"
+              class="room-session-action"
+              [disabled]="busyIds.has(row.session.id)"
+              [attr.aria-label]="'Add to my plan: ' + row.session.title"
+              (click)="add(row.session)"
+            >
+              @if (busyIds.has(row.session.id)) {
+                <mat-spinner diameter="18"></mat-spinner>
+              } @else {
+                <div class="btn-content">
+                  <mat-icon aria-hidden="true">add</mat-icon>
+                  <span>Add to my plan</span>
+                </div>
+              }
+            </button>
+          }
+          <a mat-stroked-button class="room-session-action" routerLink="/itinerary" [queryParams]="day ? { day } : {}">
+            <div class="btn-content">
+              <mat-icon aria-hidden="true">event_note</mat-icon>
+              <span>Open in Itinerary</span>
+            </div>
+          </a>
+        </div>
+      </li>
+    }
+  </ul>
+  @if (errorMessage) {
+    <p class="room-sessions-error" role="alert">{{ errorMessage }}</p>
+  }
+</section>

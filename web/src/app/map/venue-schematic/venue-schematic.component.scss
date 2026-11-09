@@ -238,3 +238,27 @@
     opacity: 1;
   }
 }
+
+.area-live {
+  fill: var(--kq-danger, #ef5350);
+  fill-opacity: 0.38;
+  pointer-events: none;
+}
+
+.area--live .area-outline {
+  stroke: var(--kq-danger, #ef5350);
+}
+
+.area-tag {
+  font-family: var(--map-pixel);
+  fill: var(--kq-accent, #f2c14e);
+  stroke: #000;
+  paint-order: stroke;
+  stroke-linejoin: round;
+  pointer-events: none;
+  user-select: none;
+}
+
+.area-tag--live {
+  fill: #fff;
+}

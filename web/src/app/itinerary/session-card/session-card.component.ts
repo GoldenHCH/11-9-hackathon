@@ -2,12 +2,13 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { RouterLink } from '@angular/router';
 import { ItineraryHelper } from '../itinerary.helper';
 import { IScheduleSession } from '../itinerary.types';
 
 @Component({
   selector: 'app-session-card',
-  imports: [MatButtonModule, MatIconModule, MatProgressSpinnerModule],
+  imports: [MatButtonModule, MatIconModule, MatProgressSpinnerModule, RouterLink],
   templateUrl: './session-card.component.html',
   styleUrl: './session-card.component.scss',
 })
