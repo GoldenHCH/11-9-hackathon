@@ -1,0 +1,207 @@
+<section class="app-page sponsor">
+  <app-screen-toolbar [title]="name + ' · ' + tier" subtitle="Sponsor results · KubeCon NA 2026">
+    <a mat-stroked-button routerLink="/admin">
+      <div class="btn-content">
+        <mat-icon>insights</mat-icon>
+        <span>Organizer view</span>
+      </div>
+    </a>
+  </app-screen-toolbar>
+
+  <p class="sponsor-demo">
+    <mat-icon aria-hidden="true">science</mat-icon>
+    <span>Demo data. This is what a sponsor sees after the event.</span>
+  </p>
+
+  <section class="sponsor-tiles" aria-label="Results at a glance">
+    @for (kpi of kpis; track kpi.label) {
+      <app-stat-tile [label]="kpi.label" [value]="kpi.value" [detail]="kpi.detail" [icon]="kpi.icon"></app-stat-tile>
+    }
+  </section>
+
+  <div class="sponsor-grid">
+    <section class="sponsor-panel app-block" aria-labelledby="visits-heading">
+      <h2 id="visits-heading" class="sponsor-heading app-pixel">Booth visits from quests</h2>
+      <p class="sponsor-note">
+        Platinum brought {{ includedTotal | number }} visits. Quest boosts added {{ boostedTotal | number }} more.
+      </p>
+      <div class="legend" aria-hidden="true">
+        <span class="legend-item"><span class="swatch swatch--included"></span>Included with Platinum</span>
+        <span class="legend-item"><span class="swatch swatch--boosted"></span>Paid quest boosts</span>
+      </div>
+      <ul class="stack-chart" aria-label="Booth visits by day">
+        @for (day of days; track day.day) {
+          <li class="stack-col">
+            <span class="stack-total">{{ day.total | number }}</span>
+            <div class="stack-bar" [style.height.%]="(day.total / dayMax) * 100" aria-hidden="true">
+              <div class="stack-part stack-part--boosted" [style.flex-grow]="day.boosted"></div>
+              <div class="stack-part stack-part--included" [style.flex-grow]="day.included"></div>
+            </div>
+            <span class="stack-label">{{ day.day }}</span>
+            <span class="app-visually-hidden">{{ day.included }} included, {{ day.boosted }} boosted</span>
+          </li>
+        }
+      </ul>
+    </section>
+
+    <section class="sponsor-panel app-block" aria-labelledby="funnel-heading">
+      <h2 id="funnel-heading" class="sponsor-heading app-pixel">Quests to booth to sale</h2>
+      <p class="sponsor-note">Every step is a real action: a QR scan, a note, an opt-in, a closed deal in your CRM.</p>
+      <app-bar-list [items]="funnelItems" label="Quest funnel" tone="accent"></app-bar-list>
+    </section>
+  </div>
+
+  <div class="sponsor-grid">
+    <section class="sponsor-panel app-block" aria-labelledby="included-heading">
+      <h2 id="included-heading" class="sponsor-heading app-pixel">In your Platinum package</h2>
+      <ul class="package-list">
+        @for (item of included; track item.label) {
+          <li class="package-item">
+            <mat-icon class="package-icon package-icon--included" aria-hidden="true">check_box</mat-icon>
+            <div>
+              <p class="package-label">{{ item.label }}</p>
+              <p class="package-detail">{{ item.detail }}</p>
+            </div>
+          </li>
+        }
+      </ul>
+    </section>
+
+    <section class="sponsor-panel app-block" aria-labelledby="addons-heading">
+      <h2 id="addons-heading" class="sponsor-heading app-pixel">Pay extra for</h2>
+      <ul class="package-list">
+        @for (item of addOns; track item.label) {
+          <li class="package-item">
+            <mat-icon class="package-icon" aria-hidden="true">add_box</mat-icon>
+            <div class="package-text">
+              <p class="package-label">{{ item.label }}</p>
+              <p class="package-detail">{{ item.detail }}</p>
+            </div>
+            <span class="package-price">{{ item.price }}</span>
+          </li>
+        }
+      </ul>
+    </section>
+  </div>
+
+  <h2 class="sponsor-section-title app-pixel">Why it works</h2>
+
+  <section class="sponsor-panel app-block" aria-labelledby="auction-heading">
+    <h3 id="auction-heading" class="sponsor-heading app-pixel">Quest slots are an auction, like search ads</h3>
+    <p class="sponsor-note">
+      Sponsors bid what a booth visit is worth to them. Elasticsearch scores how well each sponsor fits each attendee’s goals
+      and notes. Rank is bid × fit, and the winner pays just enough to beat the next sponsor. A bigger budget can’t buy
+      quests for people who don’t care, so attendees trust the quests and keep taking them.
+    </p>
+    <p class="sponsor-context">{{ auctionContext }}</p>
+    <div class="table-scroll">
+      <table class="auction">
+        <thead>
+          <tr>
+            <th scope="col">Sponsor</th>
+            <th scope="col">Max bid</th>
+            <th scope="col">Fit</th>
+            <th scope="col">Rank</th>
+            <th scope="col">Slot</th>
+            <th scope="col">Pays</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (row of auction; track row.sponsor) {
+            <tr [class.auction-you]="row.isYou">
+              <th scope="row">{{ row.sponsor }}</th>
+              <td>{{ row.maxBid | currency }}</td>
+              <td>{{ row.relevance | percent }}</td>
+              <td>{{ row.rank | number: '1.2-2' }}</td>
+              <td>{{ row.slotWon ?? '—' }}</td>
+              <td>{{ row.pricePaid ? (row.pricePaid | currency) : 'No slot' }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+    <p class="sponsor-note sponsor-note--last">
+      AWS bid less than Cloud vendor B but won the top slot on fit, and paid $7.41 instead of $9.00.
+    </p>
+  </section>
+
+  <div class="sponsor-grid">
+    <section class="sponsor-panel app-block" aria-labelledby="touch-heading">
+      <h3 id="touch-heading" class="sponsor-heading app-pixel">Touch points before a sale</h3>
+      <p class="sponsor-note">Closed deals averaged {{ averageTouchPoints }} touch points. Share of deals with each one:</p>
+      <ol class="touch-list">
+        @for (touch of touchPoints; track touch.label) {
+          <li class="touch-item">
+            <mat-icon class="touch-icon" aria-hidden="true">{{ touch.icon }}</mat-icon>
+            <span class="touch-label">{{ touch.label }}</span>
+            <span class="touch-share">{{ touch.share }}%</span>
+          </li>
+        }
+      </ol>
+      <p class="cost-line">
+        <span class="cost-figure app-pixel">$4,465</span>
+        <span>cost per sale: $138,400 spend ÷ 31 closed deals</span>
+      </p>
+    </section>
+
+    <section class="sponsor-panel app-block" aria-labelledby="reasons-heading">
+      <h3 id="reasons-heading" class="sponsor-heading app-pixel">Why buyers chose AWS</h3>
+      <p class="sponsor-note">Grouped from what buyers wrote in their booth notes, by meaning rather than keywords.</p>
+      <app-bar-list [items]="reasons" label="Reasons buyers gave" unit="%"></app-bar-list>
+    </section>
+  </div>
+
+  <section class="sponsor-panel app-block" aria-labelledby="weeks-heading">
+    <h3 id="weeks-heading" class="sponsor-heading app-pixel">Deals tied back to this event</h3>
+    <p class="sponsor-note">
+      Closed-won deals by week after the event, matched by the buyer’s work email. {{ dealsBy30 }} closed in the first month,
+      {{ dealsBy60 }} by two months, {{ totalDeals }} by week 13.
+    </p>
+    <ul class="week-chart" aria-label="Closed deals per week after the event">
+      @for (week of weeks; track week.week) {
+        <li class="week-col" [class.week-col--marker]="week.week === 4 || week.week === 9">
+          <span class="week-value">{{ week.deals || '' }}</span>
+          <div class="week-bar" [style.height.%]="(week.deals / weekMax) * 100" aria-hidden="true"></div>
+          <span class="week-label">W{{ week.week }}</span>
+          <span class="app-visually-hidden">Week {{ week.week }}: {{ week.deals }} deals</span>
+        </li>
+      }
+    </ul>
+    <p class="week-key">Dashed lines mark 30 and 60 days.</p>
+  </section>
+
+  <h3 class="sponsor-subtitle app-pixel">Three buyers, in their own words</h3>
+  <div class="story-list">
+    @for (story of stories; track story.faceSeed) {
+      <article class="story app-block">
+        <header class="story-header">
+          <app-pixel-face [seed]="story.faceSeed" [size]="40" [label]="'Face for ' + story.role"></app-pixel-face>
+          <div class="story-who">
+            <p class="story-role">{{ story.role }}</p>
+            <p class="story-outcome">
+              Closed {{ story.daysToClose }} days after · {{ story.dealSize }}
+              <span class="story-badge" [class.story-badge--medium]="story.attribution === 'Medium'">
+                {{ story.attribution }} link
+              </span>
+            </p>
+          </div>
+        </header>
+        <dl class="story-facts">
+          <dt>Their goal for KubeCon</dt>
+          <dd>“{{ story.goal }}”</dd>
+          <dt>Their note on AWS</dt>
+          <dd>“{{ story.noteOnYou }}”</dd>
+          <dt>Their note on {{ story.competitor }}</dt>
+          <dd>“{{ story.noteOnCompetitor }}”</dd>
+          <dt>Why they went with AWS</dt>
+          <dd>{{ story.whyYou }}</dd>
+        </dl>
+        <ol class="story-path" aria-label="Their path">
+          @for (step of story.path; track $index) {
+            <li class="story-step">{{ step }}</li>
+          }
+        </ol>
+      </article>
+    }
+  </div>
+</section>

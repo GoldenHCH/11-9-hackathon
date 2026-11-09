@@ -1,5 +1,11 @@
 <section class="app-page admin">
   <app-screen-toolbar title="Organizer" subtitle="KubeCon NA 2026 · the whole event, live">
+    <a mat-stroked-button routerLink="/admin/sponsor">
+      <div class="btn-content">
+        <mat-icon>workspace_premium</mat-icon>
+        <span>Sponsor view</span>
+      </div>
+    </a>
     @if (overview) {
       <button mat-stroked-button type="button" (click)="forgetKey()">
         <div class="btn-content">
