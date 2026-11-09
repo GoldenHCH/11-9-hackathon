@@ -1,9 +1,12 @@
 export type {
   IBoothNote,
   ICheckInResult,
+  IClientConfig,
+  IDemoScanToken,
   IHandshake,
   IHandshakeCode,
   IHandshakeStateResult,
+  ILocation,
   IMatchPlayer,
   IMeet,
   IMessage,
@@ -14,5 +17,6 @@ export type {
   IRecapTalk,
   IRespondMeetResult,
   ISaveBoothNoteResult,
+  IWorld,
 } from '../../../../app/src/types/kubequest.interfaces';
 export type { MeetResponse, ToolName } from '../../../../app/src/types/kubequest.types';

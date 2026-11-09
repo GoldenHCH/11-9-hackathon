@@ -20,6 +20,7 @@ function clientConfig(): IClientConfig {
     appVersion: appConfig.appVersion,
     publicBaseUrl: appConfig.publicBaseUrl,
     conferenceTimeZone: appConfig.conferenceTimeZone,
+    demoSimulateScans: appConfig.demoSimulateScans,
     ...(traceUrlTemplate ? { traceUrlTemplate } : {}),
     ...(rumEndpoint && rumAuthToken ? { rum: { endpoint: rumEndpoint, authToken: rumAuthToken } } : {}),
   };

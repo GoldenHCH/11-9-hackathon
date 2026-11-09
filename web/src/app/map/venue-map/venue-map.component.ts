@@ -7,8 +7,14 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { ILocation } from '../../core/api.types';
+import { ApiErrorHelper } from '../../core/helpers/api-error.helper';
 import { ScreenToolbarComponent } from '../../shared/components/screen-toolbar/screen-toolbar.component';
 import { StateWrapperComponent } from '../../shared/components/state-wrapper/state-wrapper.component';
+import { DemoScanPickerComponent } from '../demo-scan-picker/demo-scan-picker.component';
+import { DemoScanHelper } from '../demo-scan.helper';
+import { DemoScanService } from '../services/demo-scan.service';
 import { VenueService } from '../services/venue.service';
 import { VenueSchematicComponent } from '../venue-schematic/venue-schematic.component';
 import { vendorTierFill, vendorTierOrder, venueAreaKindDisplay } from '../venue.constants';
@@ -27,6 +33,8 @@ const maxVendorResults = 40;
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
+    MatProgressSpinnerModule,
+    DemoScanPickerComponent,
     ScreenToolbarComponent,
     StateWrapperComponent,
     VenueSchematicComponent,
@@ -38,8 +46,10 @@ export class VenueMapComponent implements OnInit {
   private readonly _venueService = inject(VenueService);
   private readonly _destroyRef = inject(DestroyRef);
   private readonly _route = inject(ActivatedRoute);
+  private readonly _demoScanService = inject(DemoScanService);
 
   @ViewChild('mapTop') private readonly _mapTop?: ElementRef<HTMLElement>;
+  @ViewChild(VenueSchematicComponent) private readonly _schematic?: VenueSchematicComponent;
 
   public readonly kindDisplay = venueAreaKindDisplay;
   public readonly tierFill = vendorTierFill;
@@ -52,9 +62,89 @@ export class VenueMapComponent implements OnInit {
   public selectedAreaId: string | null = null;
   public highlightedVendor: IVendor | null = null;
   public vendorQuery = '';
+  public demoScansEnabled = false;
+  public demoLocations: ILocation[] = [];
+  public isDemoPickerOpen = false;
+  public isLoadingDemoLocations = false;
+  public pendingDemoLocationId: string | null = null;
+  public demoScanError = '';
 
   public ngOnInit(): void {
     this.loadSchematic();
+    this._demoScanService
+      .isEnabled()
+      .pipe(takeUntilDestroyed(this._destroyRef))
+      .subscribe((enabled) => {
+        this.demoScansEnabled = enabled;
+
+        if (enabled) {
+          this.loadDemoLocations();
+        }
+      });
+  }
+
+  public get selectedAreaDemoLocations(): ILocation[] {
+    const area = this.selectedArea;
+
+    return area ? DemoScanHelper.forArea(area, this.demoLocations) : [];
+  }
+
+  public get highlightedVendorDemoLocations(): ILocation[] {
+    return this.highlightedVendor ? DemoScanHelper.forVendor(this.highlightedVendor, this.demoLocations) : [];
+  }
+
+  public openDemoPicker(): void {
+    this.demoScanError = '';
+    this.isDemoPickerOpen = true;
+
+    if (!this.demoLocations.length) {
+      this.loadDemoLocations();
+    }
+  }
+
+  public closeDemoPicker(): void {
+    this.isDemoPickerOpen = false;
+    this.demoScanError = '';
+  }
+
+  public simulateScan(location: ILocation): void {
+    if (this.pendingDemoLocationId) {
+      return;
+    }
+
+    this.pendingDemoLocationId = location.id;
+    this.demoScanError = '';
+    this._demoScanService
+      .simulate(location.id)
+      .pipe(takeUntilDestroyed(this._destroyRef))
+      .subscribe({
+        next: () => {
+          this.pendingDemoLocationId = null;
+        },
+        error: (error: unknown) => {
+          console.error('Simulated scan failed', error);
+          this.demoScanError = ApiErrorHelper.message(error);
+          this.pendingDemoLocationId = null;
+        },
+      });
+  }
+
+  private loadDemoLocations(): void {
+    this.isLoadingDemoLocations = true;
+    this._demoScanService
+      .getLocations()
+      .pipe(takeUntilDestroyed(this._destroyRef))
+      .subscribe({
+        next: (locations) => {
+          this.demoLocations = locations;
+          this.isLoadingDemoLocations = false;
+        },
+        error: (error: unknown) => {
+          console.error('Game locations failed to load', error);
+          this.demoScanError = ApiErrorHelper.message(error);
+          this.isLoadingDemoLocations = false;
+        },
+      });
   }
 
   public loadSchematic(): void {
@@ -213,7 +303,9 @@ export class VenueMapComponent implements OnInit {
     this.selectedBuildingId = (boothLevel ?? placement).building.id;
     this.selectedLevelId = (boothLevel ?? placement).level.id;
     this.selectedAreaId = placement.area.id;
-    this._mapTop?.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const reducedMotion = typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this._mapTop?.nativeElement.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', block: 'start' });
+    setTimeout(() => this._schematic?.focusVendor(vendor));
   }
 
   public vendorLocationLabel(vendor: IVendor): string {

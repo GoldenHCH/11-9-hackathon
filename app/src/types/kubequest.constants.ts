@@ -161,6 +161,7 @@ export const toolNames = [
   'update_settings',
   'check_in',
   'screen_token',
+  'demo_scan_token',
   'whats_around_me',
   'whats_next',
   'search',

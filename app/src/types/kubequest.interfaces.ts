@@ -533,6 +533,11 @@ export interface IScreenToken {
   scanUrl: string;
 }
 
+export interface IDemoScanToken {
+  locationId: string;
+  path: string;
+}
+
 export interface IRespondQuestResult {
   quest: IQuest;
   board: IQuestBoard;
@@ -846,6 +851,7 @@ export interface IToolContracts {
   update_settings: { input: IUpdateSettingsInput; output: IProfile };
   check_in: { input: ICheckInInput; output: ICheckInResult };
   screen_token: { input: IScreenTokenInput; output: IScreenToken };
+  demo_scan_token: { input: IScreenTokenInput; output: IDemoScanToken };
   whats_around_me: { input: IAttendeeInput; output: IWhatsAroundMe };
   whats_next: { input: IAttendeeInput; output: IWhatsNext };
   search: { input: ISearchInput; output: ISearchResponse };
@@ -894,6 +900,7 @@ export interface IClientConfig {
   appVersion: string;
   publicBaseUrl: string;
   conferenceTimeZone: string;
+  demoSimulateScans: boolean;
   traceUrlTemplate?: string;
   rum?: {
     endpoint: string;

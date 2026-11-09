@@ -15,6 +15,7 @@ import { recommendTalksTool } from './recommend-talks.tool';
 import { respondMeetTool } from './respond-meet.tool';
 import { respondQuestTool } from './respond-quest.tool';
 import { screenTokenTool } from './screen-token.tool';
+import { demoScanTokenTool } from './demo-scan-token.tool';
 import { searchTool } from './search.tool';
 import { signInTool } from './sign-in.tool';
 import { signUpTool } from './sign-up.tool';
@@ -41,6 +42,7 @@ export const toolRegistry = {
   update_settings: updateSettingsTool,
   check_in: checkInTool,
   screen_token: screenTokenTool,
+  demo_scan_token: demoScanTokenTool,
   whats_around_me: whatsAroundMeTool,
   whats_next: whatsNextTool,
   search: searchTool,
