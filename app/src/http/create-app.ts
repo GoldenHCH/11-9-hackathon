@@ -16,16 +16,27 @@ const handleError: ErrorRequestHandler = (error, _request, response, next) => {
   }
 
   const isBadJson = typeof error === 'object' && error !== null && 'type' in error && error.type === 'entity.parse.failed';
+  const clientStatus = isBadJson ? 400 : readClientStatus(error);
   const body: IToolErrorResponse = {
-    error: isBadJson ? 'That request body is not valid JSON.' : 'Something went wrong on our side. Please try again in a moment.',
+    error: isBadJson
+      ? 'That request body is not valid JSON.'
+      : clientStatus
+        ? 'We could not handle that request.'
+        : 'Something went wrong on our side. Please try again in a moment.',
   };
 
-  if (!isBadJson) {
+  if (!clientStatus) {
     console.error('unhandled request error', error);
   }
 
-  response.status(isBadJson ? 400 : 500).json(body);
+  response.status(clientStatus ?? 500).json(body);
 };
+
+function readClientStatus(error: unknown): number | undefined {
+  const status = typeof error === 'object' && error !== null && 'status' in error ? error.status : undefined;
+
+  return typeof status === 'number' && status >= 400 && status < 500 ? status : undefined;
+}
 
 export function createApp(container: IContainer, registry: ToolRegistry): Express {
   const app = express();

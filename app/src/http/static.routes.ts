@@ -21,7 +21,7 @@ export function createStaticRouter(config: IAppConfig): Router {
 
   router.use(express.static(webRoot, { index: 'index.html' }));
   router.get(/^\/(?!api\/).*/, (_request, response) => {
-    response.sendFile(path.join(webRoot, 'index.html'));
+    response.sendFile('index.html', { root: webRoot });
   });
 
   return router;
