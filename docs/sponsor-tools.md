@@ -25,8 +25,10 @@ KubeQuest is built on four sponsor tools. For each one, this file says what we u
 
 **How it helped:** people matching, talk recommendations and "nearest campfire to both of you" are single queries. The two demo players rank each other first purely from what they typed at signup.
 
+**Agent Builder as the model layer.** Direct Elastic Inference chat calls return 403 on this project, but Agent Builder reaches Claude Sonnet. We created a `kubequest-writer` agent (no tools, small prompts). It wrote validated 3-question quizzes for all 25 talks, which are stored on each talk so the demo never waits on a model.
+
 **Not yet**
-- **Model calls (quiz writing, opening lines) via the Elastic Inference Service return 403** for the chat models on this project, and Agent Builder needs a Kibana privilege on our key. The game uses deterministic fallbacks today. Ask at the Elastic table to enable chat models. Details: [`ops-ai.md`](ops-ai.md).
+- **Live AI text** (meet opening lines, profile topics) needs the Kibana `agentBuilder` privilege on the app's API key. Until it has it, those use deterministic fallbacks. Details: [`ops-ai.md`](ops-ai.md).
 - **The banner Workflow** is written (`resources/workflows/banners.yaml`) but our key can't create it (`workflowsManagement:create`). Banners are computed in the app for now. Details: [`ops-xp.md`](ops-xp.md).
 
 ---
