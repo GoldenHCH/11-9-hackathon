@@ -427,3 +427,34 @@
     font-size: 12px;
   }
 }
+
+.demo-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin-bottom: 16px;
+}
+
+.demo-button {
+  border: 3px solid var(--map-border);
+  border-radius: 0;
+  background: var(--map-accent);
+  color: var(--map-text);
+  box-shadow: 4px 4px 0 var(--map-shadow);
+  font-family: var(--map-pixel);
+  text-transform: uppercase;
+}
+
+.demo-hint {
+  font-size: 13px;
+  color: var(--map-muted);
+}
+
+.demo-scan-action {
+  margin-top: 8px;
+}
+
+.map-help {
+  margin: 0 0 8px;
+}

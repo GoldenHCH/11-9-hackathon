@@ -61,3 +61,15 @@ export const vendorTierFill = {
 } as const;
 
 export const venueSchematicUrl = '/venue/schematic.json';
+
+export const vendorSearchAliases: Record<string, string> = {
+  aws: 'amazon web services',
+  gcp: 'google cloud',
+};
+
+export function expandSearchAlias(query: string): string[] {
+  const normalized = query.trim().toLowerCase();
+  const alias = vendorSearchAliases[normalized];
+
+  return alias ? [normalized, alias] : [normalized];
+}

@@ -6,11 +6,12 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { filter, map, startWith } from 'rxjs';
 import { fullScreenRoutePrefixes, navigationTabs } from './app.constants';
 import { LoadingService } from './core/services/loading.service';
+import { NotificationBellComponent } from './notifications/notification-bell/notification-bell.component';
 import { AccessibilityService } from './profile/services/accessibility.service';
 
 @Component({
   selector: 'app-root',
-  imports: [AsyncPipe, RouterOutlet, RouterLink, RouterLinkActive, MatIconModule, MatProgressBarModule],
+  imports: [AsyncPipe, RouterOutlet, RouterLink, RouterLinkActive, MatIconModule, MatProgressBarModule, NotificationBellComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

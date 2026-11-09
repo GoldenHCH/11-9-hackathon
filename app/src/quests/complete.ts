@@ -13,6 +13,8 @@ function matches(quest: IQuest, event: IXpEvent): boolean {
       return event.type === 'boss' && event.talkId !== undefined && quest.talkId === event.talkId;
     case 'chat':
       return event.type === 'handshake' && event.introId !== undefined && quest.introId === event.introId;
+    case 'photo':
+      return event.type === 'photo' && event.locationId !== undefined && quest.locationId === event.locationId;
     case 'collection':
       return event.type === 'badge' && event.banner !== undefined && quest.reward.banner === event.banner;
   }

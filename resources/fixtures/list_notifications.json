@@ -1,0 +1,49 @@
+{
+  "tool": "list_notifications",
+  "endpoint": "POST /api/tools/list_notifications",
+  "request": {
+    "attendeeId": "p_zqxtrvalqA7IoBqp"
+  },
+  "status": 200,
+  "response": {
+    "items": [
+      {
+        "id": "match:pl_b0f34ffaf6282124",
+        "type": "new_match",
+        "title": "You and @argoalpaca both work on gitops",
+        "body": "Both into gitops",
+        "link": "/people",
+        "createdAt": "2026-11-09T22:14:36.020Z",
+        "readAt": null
+      },
+      {
+        "id": "quest:8189074aa2c4fd8e",
+        "type": "new_quest",
+        "title": "New quest: Visit Dash0",
+        "body": "It covers operations.",
+        "link": "/quests",
+        "createdAt": "2026-11-09T22:14:35.202Z",
+        "readAt": null
+      },
+      {
+        "id": "meet_offer:4b1f0c2d9e8a7f61",
+        "type": "meet_offer",
+        "title": "Someone nearby wants to meet you",
+        "body": "@goroutinegecko wants to meet. Accept to get a time and a place.",
+        "link": "/people",
+        "createdAt": "2026-11-09T22:05:10.000Z",
+        "readAt": null
+      },
+      {
+        "id": "banner:explorer",
+        "type": "banner",
+        "title": "New banner: Explorer",
+        "body": "Check in at both buildings",
+        "link": "/profile",
+        "createdAt": "2026-11-09T21:50:00.000Z",
+        "readAt": "2026-11-09T21:52:00.000Z"
+      }
+    ],
+    "unread": 3
+  }
+}

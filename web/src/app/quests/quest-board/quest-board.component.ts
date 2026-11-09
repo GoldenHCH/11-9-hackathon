@@ -11,6 +11,7 @@ import { MeService } from '../../core/services/me.service';
 import { ToolsService } from '../../core/services/tools.service';
 import { AlertBannerComponent } from '../../shared/components/alert-banner/alert-banner.component';
 import { PixelFaceComponent } from '../../shared/components/pixel-face/pixel-face.component';
+import { IUploadBoothPhotoResult } from '../../photos/photos.types';
 import { BossCardComponent } from '../boss-card/boss-card.component';
 import { IQuestResponseEvent, QuestCardComponent } from '../quest-card/quest-card.component';
 import { questBoardPollMs } from '../quests.constants';
@@ -61,6 +62,7 @@ export class QuestBoardComponent implements OnInit {
   public errorMessage = '';
   public actionError = '';
   public liveMessage = '';
+  public photoMessage = '';
   public busyQuestIds = new Set<string>();
 
   public get isSignedIn(): boolean {
@@ -197,6 +199,13 @@ export class QuestBoardComponent implements OnInit {
           }
         },
       });
+  }
+
+  public onPhotoAdded(result: IUploadBoothPhotoResult): void {
+    this.photoMessage = result.message;
+    this.liveMessage = result.message;
+    this.loadBoard(true);
+    this.loadProfile();
   }
 
   public refresh(): void {

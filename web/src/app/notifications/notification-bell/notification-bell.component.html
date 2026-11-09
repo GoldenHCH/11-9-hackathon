@@ -1,0 +1,78 @@
+@if (isSignedIn) {
+  @if (state$ | async; as state) {
+    <button
+      #bellButton
+      type="button"
+      class="bell-button"
+      [class.bell-button--open]="isOpen"
+      [attr.aria-label]="'Notifications, ' + state.unread + ' unread'"
+      aria-haspopup="dialog"
+      [attr.aria-expanded]="isOpen"
+      (click)="toggle()"
+    >
+      <mat-icon aria-hidden="true">{{ state.unread > 0 ? 'notifications_active' : 'notifications' }}</mat-icon>
+      @if (state.unread > 0) {
+        <span class="bell-badge kq-pixel" aria-hidden="true">{{ badgeText(state.unread) }}</span>
+      }
+    </button>
+
+    @if (isOpen) {
+      <div class="bell-backdrop" aria-hidden="true" (click)="close()"></div>
+      <section #panel class="bell-panel" role="dialog" aria-modal="false" aria-labelledby="bell-panel-title" tabindex="-1">
+        <span class="bell-grabber" aria-hidden="true"></span>
+        <header class="bell-panel-header">
+          <h2 id="bell-panel-title" class="bell-panel-title kq-pixel">{{ copy.TITLE }}</h2>
+          <button mat-button type="button" class="bell-mark-all" [disabled]="state.unread === 0" (click)="markAllRead()">
+            {{ copy.MARK_ALL }}
+          </button>
+        </header>
+
+        @if (state.items.length === 0) {
+          <div class="bell-empty">
+            <mat-icon class="bell-empty-icon" aria-hidden="true">qr_code_scanner</mat-icon>
+            <span class="bell-empty-text">{{ copy.EMPTY }}</span>
+          </div>
+        } @else {
+          <ul class="bell-list">
+            @for (item of state.items; track item.id) {
+              <li class="bell-list-row">
+                <button type="button" class="bell-item" [class.bell-item--unread]="item.readAt === null" (click)="openItem(item)">
+                  <span class="bell-item-icon" [attr.data-type]="item.type" aria-hidden="true">
+                    <mat-icon>{{ typeLabels[item.type].icon }}</mat-icon>
+                  </span>
+                  <span class="bell-item-text">
+                    <span class="bell-item-meta">
+                      <span class="bell-item-label kq-pixel">{{ typeLabels[item.type].label }}</span>
+                      <span class="bell-item-time">{{ relativeTime(item.createdAt) }}</span>
+                    </span>
+                    <span class="bell-item-title">{{ item.title }}</span>
+                    @if (item.body) {
+                      <span class="bell-item-body">{{ item.body }}</span>
+                    }
+                  </span>
+                  @if (item.readAt === null) {
+                    <span class="bell-item-dot" aria-label="Unread"></span>
+                  }
+                </button>
+              </li>
+            }
+          </ul>
+        }
+      </section>
+    }
+  }
+
+  <div class="bell-toast-region" role="status" aria-live="polite">
+    @if (toast) {
+      <button type="button" class="bell-toast" (click)="openItem(toast)">
+        <span class="bell-item-icon" [attr.data-type]="toast.type" aria-hidden="true">
+          <mat-icon>{{ typeLabels[toast.type].icon }}</mat-icon>
+        </span>
+        <span class="bell-toast-text">
+          <span class="bell-item-label kq-pixel">{{ typeLabels[toast.type].label }}</span>
+          <span class="bell-item-title">{{ toast.title }}</span>
+        </span>
+      </button>
+    }
+  </div>
+}

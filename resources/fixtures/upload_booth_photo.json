@@ -1,0 +1,33 @@
+{
+  "tool": "upload_booth_photo",
+  "endpoint": "POST /api/tools/upload_booth_photo",
+  "request": {
+    "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+    "locationId": "outpost-dash0",
+    "image": "data:image/jpeg;base64,/9j/4AAQ…",
+    "caption": "Trace demo running on the big screen"
+  },
+  "status": 200,
+  "response": {
+    "photo": {
+      "id": "bp-788d73e24c904880a7c7017a",
+      "locationId": "outpost-dash0",
+      "boothName": "Dash0",
+      "url": "/api/booth-photos/bp-788d73e24c904880a7c7017a.jpg",
+      "width": 1024,
+      "height": 768,
+      "caption": "Trace demo running on the big screen",
+      "uploader": {
+        "publicId": "pl_a8ee82eb252c214a",
+        "handle": "otelotter",
+        "faceSeed": "3a4944e6942be021"
+      },
+      "createdAt": "2026-11-09T22:19:02.118Z",
+      "mine": true
+    },
+    "xp": 15,
+    "questCompleted": true,
+    "message": "+15 XP · photo added to the Dash0 booth on the map",
+    "newBanners": []
+  }
+}

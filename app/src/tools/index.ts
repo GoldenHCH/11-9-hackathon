@@ -15,6 +15,7 @@ import { recommendTalksTool } from './recommend-talks.tool';
 import { respondMeetTool } from './respond-meet.tool';
 import { respondQuestTool } from './respond-quest.tool';
 import { screenTokenTool } from './screen-token.tool';
+import { demoScanTokenTool } from './demo-scan-token.tool';
 import { searchTool } from './search.tool';
 import { signInTool } from './sign-in.tool';
 import { signUpTool } from './sign-up.tool';
@@ -28,10 +29,21 @@ import { handshakeCodeTool } from './handshake-code.tool';
 import { handshakeStateTool } from './handshake-state.tool';
 import { listBoothNotesTool } from './list-booth-notes.tool';
 import { listMessagesTool } from './list-messages.tool';
+import { listNotificationsTool } from './list-notifications.tool';
+import { markNotificationsReadTool } from './mark-notifications-read.tool';
 import { recapTool } from './recap.tool';
 import { saveBoothNoteTool } from './save-booth-note.tool';
 import { sendMessageTool } from './send-message.tool';
 import { startHandshakeTool } from './start-handshake.tool';
+import { importProfileTool } from './import-profile.tool';
+import { deleteBoothPhotoTool } from './delete-booth-photo.tool';
+import { listBoothPhotosTool } from './list-booth-photos.tool';
+import { reportBoothPhotoTool } from './report-booth-photo.tool';
+import { uploadBoothPhotoTool } from './upload-booth-photo.tool';
+import { addToItineraryTool } from './add-to-itinerary.tool';
+import { getItineraryTool } from './get-itinerary.tool';
+import { listScheduleTool } from './list-schedule.tool';
+import { removeFromItineraryTool } from './remove-from-itinerary.tool';
 import { IRegisteredTool } from './define-tool';
 
 export const toolRegistry = {
@@ -41,6 +53,7 @@ export const toolRegistry = {
   update_settings: updateSettingsTool,
   check_in: checkInTool,
   screen_token: screenTokenTool,
+  demo_scan_token: demoScanTokenTool,
   whats_around_me: whatsAroundMeTool,
   whats_next: whatsNextTool,
   search: searchTool,
@@ -65,9 +78,20 @@ export const toolRegistry = {
   answer_handshake: answerHandshakeTool,
   save_booth_note: saveBoothNoteTool,
   list_booth_notes: listBoothNotesTool,
+  upload_booth_photo: uploadBoothPhotoTool,
+  list_booth_photos: listBoothPhotosTool,
+  report_booth_photo: reportBoothPhotoTool,
+  delete_booth_photo: deleteBoothPhotoTool,
   send_message: sendMessageTool,
   list_messages: listMessagesTool,
   recap: recapTool,
+  import_profile: importProfileTool,
+  list_notifications: listNotificationsTool,
+  mark_notifications_read: markNotificationsReadTool,
+  list_schedule: listScheduleTool,
+  get_itinerary: getItineraryTool,
+  add_to_itinerary: addToItineraryTool,
+  remove_from_itinerary: removeFromItineraryTool,
 } satisfies { [TName in ToolName]: IRegisteredTool<TName> };
 
 export function findTool(name: string): IRegisteredTool | undefined {

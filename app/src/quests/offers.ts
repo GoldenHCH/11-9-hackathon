@@ -4,6 +4,7 @@ import { esTimeouts, indexNames } from '../es/es.constants';
 import { recommendPeopleFor } from '../match/people';
 import { recommendTalksFor } from '../match/talks';
 import { logger } from '../observability/logger';
+import { photoQuestCandidates } from '../photos/photo-quests';
 import { gameRules, materialCatalog, walkTimes, xpRewards } from '../types/kubequest.constants';
 import { IAttendee, IBannerProgress, ILocation, IPersonMatch, IQuest, ITalk, ITalkMatch, IXpEvent } from '../types/kubequest.interfaces';
 import { QuestType } from '../types/kubequest.types';
@@ -26,7 +27,7 @@ export interface ICandidate {
   priority: number;
 }
 
-const OFFER_PRIORITY: Record<QuestType, number> = { boss: 0, quiz: 1, chat: 2, attend: 3, outpost: 4, collection: 5 };
+const OFFER_PRIORITY: Record<QuestType, number> = { boss: 0, quiz: 1, chat: 2, attend: 3, outpost: 4, photo: 4, collection: 5 };
 const CANDIDATE_LIMIT = 6;
 const QUIZ_XP = xpRewards.QUIZ_CORRECT_ANSWER * gameRules.QUIZ_QUESTIONS;
 const BOSS_XP = xpRewards.BOSS_CORRECT_ANSWER * gameRules.BOSS_QUESTIONS + xpRewards.BOSS_DEFEATED_BONUS;
@@ -395,6 +396,7 @@ export async function generateCandidates(context: IOfferContext): Promise<ICandi
     ['chat', () => chatCandidates(context)],
     ['attend', () => attendCandidates(context)],
     ['outpost', () => outpostCandidates(context)],
+    ['photo', () => photoQuestCandidates(context)],
     ['collection', () => collectionCandidates(context)],
   ];
   const results = await Promise.all(sources.map(([label, run]) => safely(label, run)));

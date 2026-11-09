@@ -1,13 +1,19 @@
 export type {
   IBoothNote,
   ICheckInResult,
+  IClientConfig,
+  IDemoScanToken,
   IHandshake,
   IHandshakeCode,
   IHandshakeStateResult,
+  ILocation,
   IMatchPlayer,
   IMeet,
   IItineraryItem,
+  IListNotificationsResult,
+  IMarkNotificationsReadResult,
   IMessage,
+  INotification,
   IPersonMatch,
   IProfile,
   IRecap,
@@ -19,5 +25,6 @@ export type {
   ITalk,
   IWhatsAroundMe,
   IWhatsNext,
+  IWorld,
 } from '../../../../app/src/types/kubequest.interfaces';
-export type { MeetResponse, ToolName } from '../../../../app/src/types/kubequest.types';
+export type { MeetResponse, NotificationType, ToolName } from '../../../../app/src/types/kubequest.types';

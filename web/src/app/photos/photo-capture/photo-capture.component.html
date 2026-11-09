@@ -1,0 +1,73 @@
+<div class="capture">
+  <input
+    #fileInput
+    class="capture-input"
+    type="file"
+    accept="image/*"
+    capture="environment"
+    tabindex="-1"
+    aria-hidden="true"
+    (change)="onFileChosen($event)"
+  />
+
+  <p class="capture-safety">
+    <mat-icon aria-hidden="true">no_photography</mat-icon>
+    <span>{{ safetyLine }}</span>
+  </p>
+
+  @if (errorMessage) {
+    <app-alert-banner [message]="errorMessage" (dismissed)="errorMessage = ''"></app-alert-banner>
+  }
+
+  @switch (step) {
+    @case ('idle') {
+      <button mat-flat-button class="capture-primary" type="button" (click)="openCamera()">
+        <div class="btn-content">
+          <mat-icon>photo_camera</mat-icon>
+          <span>Take photo</span>
+        </div>
+      </button>
+    }
+    @case ('preparing') {
+      <div class="capture-busy" aria-live="polite">
+        <mat-spinner diameter="24"></mat-spinner>
+        <span class="app-visually-hidden">Preparing photo</span>
+      </div>
+    }
+    @case ('done') {
+      <p class="capture-result" role="status">
+        <mat-icon aria-hidden="true">check_circle</mat-icon>
+        <span>{{ resultMessage }}</span>
+      </p>
+    }
+    @default {
+      @if (photo) {
+        <figure class="capture-preview">
+          <img [src]="photo.dataUrl" [attr.width]="photo.width" [attr.height]="photo.height" [alt]="'Preview of your photo of ' + (boothName || 'the booth')" />
+          <figcaption class="capture-size">{{ photo.width }} × {{ photo.height }} · {{ (photo.bytes / 1024).toFixed(0) }} KB</figcaption>
+        </figure>
+
+        <mat-form-field appearance="outline" class="capture-caption">
+          <mat-label>Caption (optional)</mat-label>
+          <input matInput name="caption" [(ngModel)]="caption" [maxlength]="captionMaxChars" [disabled]="step === 'uploading'" />
+          <mat-hint align="end">{{ caption.length }}/{{ captionMaxChars }}</mat-hint>
+        </mat-form-field>
+
+        <div class="capture-actions">
+          <button mat-flat-button class="capture-primary" type="button" [disabled]="step === 'uploading'" (click)="upload()">
+            @if (step === 'uploading') {
+              <mat-spinner diameter="20"></mat-spinner>
+            } @else {
+              <div class="btn-content">
+                <mat-icon>cloud_upload</mat-icon>
+                <span>Add to the map</span>
+              </div>
+            }
+          </button>
+          <button mat-stroked-button type="button" [disabled]="step === 'uploading'" (click)="retake()">Retake</button>
+          <button mat-button type="button" [disabled]="step === 'uploading'" (click)="cancel()">Cancel</button>
+        </div>
+      }
+    }
+  }
+</div>

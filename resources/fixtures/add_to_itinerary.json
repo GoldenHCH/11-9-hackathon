@@ -1,0 +1,15 @@
+{
+  "tool": "add_to_itinerary",
+  "endpoint": "POST /api/tools/add_to_itinerary",
+  "request": {
+    "attendeeId": "p_zqxtrvalqA7IoBqp",
+    "talkId": "kc26-tue-tracing-at-scale"
+  },
+  "status": 200,
+  "response": {
+    "talkId": "kc26-tue-tracing-at-scale",
+    "inItinerary": true,
+    "plannedCount": 2,
+    "maxItems": 40
+  }
+}

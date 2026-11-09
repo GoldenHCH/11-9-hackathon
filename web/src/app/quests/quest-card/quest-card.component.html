@@ -173,6 +173,10 @@
       }
     }
 
+    @if (mode === 'active' && photoLocationId) {
+      <app-photo-capture [locationId]="photoLocationId" [boothName]="quest.where?.name ?? ''" (uploaded)="photoAdded.emit($event)"></app-photo-capture>
+    }
+
     @if (mode === 'active') {
       <div class="quest-actions">
         @if (quizTalkId) {

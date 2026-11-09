@@ -36,6 +36,7 @@ export const appConfig = {
   publicBaseUrl: readString('PUBLIC_BASE_URL', 'https://kube-quest.cnh.radarhq.io'),
   conferenceTimeZone: readString('CONFERENCE_TZ', 'America/Denver'),
   ensureIndicesOnStart: readBoolean('ENSURE_INDICES_ON_START', true),
+  demoSimulateScans: readBoolean('DEMO_SIMULATE_SCANS', false),
   elastic: {
     url: readString('ELASTIC_URL'),
     apiKey: readString('ELASTIC_API_KEY'),

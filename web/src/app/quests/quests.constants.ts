@@ -13,6 +13,7 @@ export const questTypeMeta: Record<QuestType, IQuestTypeMeta> = {
   outpost: { label: 'Outpost', icon: 'storefront', colorVar: 'var(--kq-copper, #c96a12)' },
   collection: { label: 'Collection', icon: 'collections_bookmark', colorVar: 'var(--kq-wood, #8d6e63)' },
   boss: { label: 'Boss', icon: 'local_fire_department', colorVar: 'var(--kq-danger, #c62828)' },
+  photo: { label: 'Photo', icon: 'photo_camera', colorVar: 'var(--kq-glass, #4fc3f7)' },
 };
 
 export const materialColors: Record<Material, string> = {

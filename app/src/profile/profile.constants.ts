@@ -21,6 +21,25 @@ export const topicRules: ITopicRule[] = [
   { topic: 'WebAssembly', track: 'other', keywords: ['wasm', 'webassembly', 'edge', 'serverless'] },
 ];
 
+export const topicLimits = {
+  MIN_CHARS: 2,
+  MAX_CHARS: 30,
+} as const;
+
+export const importLimits = {
+  MAX_TEXT_CHARS: 12000,
+  MIN_TEXT_CHARS: 40,
+  MAX_PDF_BYTES: 5 * 1024 * 1024,
+  MAX_CALLS_PER_WINDOW: 5,
+  WINDOW_MS: 60 * 60 * 1000,
+  MAX_SKILLS: 12,
+  MAX_LIST: 5,
+  HEADLINE_MAX_CHARS: 80,
+  WORKING_ON_MAX_CHARS: 200,
+  SUMMARY_MAX_CHARS: 600,
+  GENERIC_KEYWORDS: ['ai', 'ml', 'data', 'cost', 'learn', 'policy', 'pipeline', 'platform', 'network', 'community', 'cluster', 'edge', 'performance', 'scaling', 'metrics', 'logging', 'storage', 'security', 'agent', 'autoscal'],
+} as const;
+
 export const signupLimits = {
   HANDLE_MIN: 3,
   HANDLE_MAX: 20,
