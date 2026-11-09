@@ -111,6 +111,13 @@
       ></app-boss-card>
     }
 
+    @if (photoMessage) {
+      <p class="board-photo-added" role="status">
+        <mat-icon aria-hidden="true">photo_camera</mat-icon>
+        <span>{{ photoMessage }}</span>
+      </p>
+    }
+
     @if (actionError) {
       <app-alert-banner [message]="actionError" (dismissed)="actionError = ''"></app-alert-banner>
     }
@@ -193,6 +200,7 @@
                 mode="active"
                 [isBusy]="busyQuestIds.has(quest.id)"
                 (respond)="onRespond($event)"
+                (photoAdded)="onPhotoAdded($event)"
               ></app-quest-card>
             }
           </div>

@@ -1,0 +1,47 @@
+{
+  "tool": "list_booth_photos",
+  "endpoint": "POST /api/tools/list_booth_photos",
+  "request": {
+    "locationId": "outpost-dash0",
+    "attendeeId": "p_Ljp4ZfHC-VPDFwqx"
+  },
+  "status": 200,
+  "response": {
+    "locationId": "outpost-dash0",
+    "photos": [
+      {
+        "id": "bp-788d73e24c904880a7c7017a",
+        "locationId": "outpost-dash0",
+        "boothName": "Dash0",
+        "url": "/api/booth-photos/bp-788d73e24c904880a7c7017a.jpg",
+        "width": 1024,
+        "height": 768,
+        "caption": "Trace demo running on the big screen",
+        "uploader": {
+          "publicId": "pl_a8ee82eb252c214a",
+          "handle": "otelotter",
+          "faceSeed": "3a4944e6942be021"
+        },
+        "createdAt": "2026-11-09T22:19:02.118Z",
+        "mine": true
+      },
+      {
+        "id": "bp-75fdc11b1ccb464ab9e15173",
+        "locationId": "outpost-dash0",
+        "boothName": "Dash0",
+        "url": "/api/booth-photos/bp-75fdc11b1ccb464ab9e15173.jpg",
+        "width": 1024,
+        "height": 768,
+        "caption": "The Dash0 booth from the aisle",
+        "uploader": {
+          "publicId": "pl_5f917ee1a2a89af1",
+          "handle": "tensortapir",
+          "faceSeed": "tensortapir"
+        },
+        "createdAt": "2026-11-09T22:18:40.511Z",
+        "mine": false
+      }
+    ],
+    "count": 2
+  }
+}

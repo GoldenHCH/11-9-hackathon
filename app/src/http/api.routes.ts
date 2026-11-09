@@ -1,6 +1,8 @@
 import { Router } from 'express';
 import { appConfig } from '../config';
 import { findTool, listTools, toolRegistry } from '../tools';
+import { withToolSpan } from '../observability/tracing';
+import { boothPhotoImage, isBoothPhotoId } from '../photos/booth-photos';
 import { verifyScreenDisplayKey } from '../security/tokens';
 import { IClientConfig } from '../types/kubequest.interfaces';
 import { sendError, sendToolFailure } from './errors';
@@ -78,6 +80,30 @@ export function apiRoutes(): Router {
     try {
       const recap = await toolRegistry.recap.execute({ attendeeId: request.params.attendeeId });
       response.type('html').set('Cache-Control', 'no-store').send(recap.emailHtml);
+    } catch (error) {
+      sendToolFailure(response, error);
+    }
+  });
+
+  router.get('/api/booth-photos/:file', async (request, response) => {
+    const photoId = request.params.file.replace(/\.jpg$/, '');
+
+    if (!isBoothPhotoId(photoId)) {
+      sendError(response, 404, 'unknown_photo', 'That photo is gone.');
+
+      return;
+    }
+
+    try {
+      const image = await withToolSpan('booth_photo_image', { 'kubequest.booth_photo.id': photoId }, () => boothPhotoImage(photoId));
+
+      if (!image) {
+        sendError(response, 404, 'unknown_photo', 'That photo is gone.');
+
+        return;
+      }
+
+      response.type(image.mimeType).set('Cache-Control', 'public, max-age=3600').set('ETag', `"${photoId}"`).send(image.body);
     } catch (error) {
       sendToolFailure(response, error);
     }

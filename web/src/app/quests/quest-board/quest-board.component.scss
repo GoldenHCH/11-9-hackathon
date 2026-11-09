@@ -459,3 +459,16 @@
     transition: none;
   }
 }
+
+.board-photo-added {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 10px 12px;
+  font-weight: 700;
+  background: var(--kq-gold, #fdd835);
+  color: #1f1f1f;
+  border: 2px solid var(--kq-border, var(--app-theme--border, #2b2b2b));
+  box-shadow: 3px 3px 0 var(--kq-border, var(--app-theme--border, #2b2b2b));
+}

@@ -21,6 +21,7 @@ JSON in this doc is trimmed: long strings end in `…` and `"…N more"` stands 
 | `GET /api/screen-token/:locationId?key=<displayKey>` | The only way to run `screen_token`. Needs the location's display key as `?key=` or the `x-screen-key` header; without it, `403 bad_screen_key`. Used by the demo screen. |
 | `GET /r/:locationId?t=<token>` | Printed and on-screen QR codes open this. With the Angular build it serves the SPA (the scan-result route); without it, it returns the JSON in `fixtures/scan_route.json`. |
 | `GET /h/<token>` | A handshake QR (from `handshake_code`) opens this. With the Angular build it serves the SPA; read the token from the path segment and call `start_handshake`. Without the build it returns a JSON hint. |
+| `GET /api/booth-photos/:photoId.jpg` | The bytes of one booth photo (the `url` in `list_booth_photos`), with its real `Content-Type` and `Cache-Control: public, max-age=3600`. A hidden or deleted photo is `404 unknown_photo`. |
 | `GET /api/recap/:attendeeId/email.html` | The player's recap email (`recap.emailHtml`) as `text/html`. A mock of it is in `docs/mock/recap-email.html`; no email is sent. |
 | `GET /healthz`, `GET /readyz` | Liveness, and readiness that pings Elasticsearch: `{"status":"ok","version":"dev","elasticsearch":"reachable"}`. |
 
@@ -95,6 +96,7 @@ On a 5xx, double the interval up to 60 s, then reset after a success.
 | Meet screen | `list_meets` (one item), `respond_meet`, `send_message`, `list_messages` (once the meet is `accepted` or `met`) |
 | Handshake | `handshake_code` (show `scanUrl` as a QR), `handshake_state`, `start_handshake` (after scanning `/h/<token>`), `answer_handshake` |
 | Booth note (after an outpost scan, `noteRequired: true`) | `save_booth_note`, `list_booth_notes` |
+| Photo quest card, booth details on the map | `upload_booth_photo`, `list_booth_photos`, `report_booth_photo`, `delete_booth_photo` |
 | Recap | `recap` (or `GET /api/recap/:attendeeId/email.html`) |
 | Profile | `get_profile`, `inventory`, `leaderboard` (3 boards), `update_settings` |
 | Another player's card | `get_profile` with `targetId` |
@@ -280,7 +282,7 @@ A `campfire`, `room` or `outpost` result carries `location`, and a `player` resu
  "active":[],"doneToday":[],"maxOffers":3,"maxActive":3}
 ```
 
-Quest `type` is `attend`, `outpost` or `chat`. An `attend` or `outpost` quest also has `where`, `when`, `walkMinutes`, `talkId` and `locationId` (see `make_quest`).
+Quest `type` is `attend`, `outpost`, `chat`, `quiz`, `boss`, `collection` or `photo`. An `attend` or `outpost` quest also has `where`, `when`, `walkMinutes`, `talkId` and `locationId` (see `make_quest`). A `photo` quest ("Photograph the Dash0 booth") names a booth that matches one of the player's topics and has fewer than 3 visible photos; at most one is on the board. It has `where` and `locationId`, and completes when the player, having accepted it, uploads a photo of that booth with `upload_booth_photo`.
 
 ### respond_quest
 
@@ -471,6 +473,31 @@ A booth earns 10 XP once, only when `liked` plus `thoughts` is at least 20 chara
 ### list_booth_notes
 
 `{"attendeeId":"p_…"}` → the player's notes, newest first (`IBoothNote[]`, as in `save_booth_note`).
+
+### upload_booth_photo (awards XP)
+
+`{"attendeeId":"p_…","locationId":"outpost-dash0","image":"data:image/jpeg;base64,…","caption":"Trace demo on the big screen"}` (`caption` optional, up to 120 characters) →
+
+```json
+{"photo":{"id":"bp-788d73e24c904880a7c7017a","locationId":"outpost-dash0","boothName":"Dash0","url":"/api/booth-photos/bp-788d73e24c904880a7c7017a.jpg","width":1024,"height":768,"caption":"Trace demo on the big screen","uploader":{"publicId":"pl_a8ee82eb252c214a","handle":"otelotter","faceSeed":"3a4944e6942be021"},"createdAt":"2026-11-09T22:19:02.118Z","mine":true},
+ "xp":15,"questCompleted":true,"message":"+15 XP · photo added to the Dash0 booth on the map","newBanners":[]}
+```
+
+Fair play: the player must have scanned that booth's QR (an outpost scan, or a `check_in`/`outpost` XP event there) in the last 30 minutes, otherwise `403 not_at_booth`. At most 3 photos per player per booth (`429 photo_limit_booth`) and 10 per day (`429 photo_limit_day`). The image is a JPEG, PNG or WebP data URL of at most 400 KB, at most 2048 px on the long edge; the server reads the size from the file header (`415 unsupported_image`, `413 image_too_large`). This route alone accepts bodies up to 600 KB; the app resizes to 1024 px and JPEG quality 0.75 first. XP is 15, paid once per player per booth (`awardXpOnce` key `photo-<attendeeId>-<locationId>`); a later photo of the same booth has `xp: 0`. Photos are stored in `booth_notes` with `kind: "photo"` (the image is a `binary` field: stored, not indexed) and never appear in `list_booth_notes` or the recap. Show the line "Photograph the booth, not people. Don't capture faces or badges." before the camera opens.
+
+### list_booth_photos
+
+`{"locationId":"outpost-dash0","attendeeId":"p_…","limit":12}` (`attendeeId` and `limit` optional; `limit` 1 to 30, default 12) → `{"locationId":"outpost-dash0","photos":[IBoothPhoto…],"count":3}`, newest first, hidden photos left out. The list never includes image bytes: draw each `url`. Uploaders appear only as `publicId`, `handle` and `faceSeed`. With `attendeeId`, each photo has `mine` (show Delete instead of Report).
+
+### report_booth_photo
+
+`{"attendeeId":"p_…","photoId":"bp-…"}` → `{"photoId":"bp-…","reports":1,"hidden":false,"message":"Thanks. We noted your report."}`. Each player counts once; 2 reports hide the photo. Reporting your own photo is `409 own_photo`.
+
+### delete_booth_photo
+
+`{"attendeeId":"p_…","photoId":"bp-…"}` → `{"photoId":"bp-…","deleted":true}`. Only the uploader can delete (`404 unknown_photo` otherwise). Deleting does not take back XP, and a new photo of that booth does not pay again.
+
+Sample photos for three booths (Dash0, Elastic, Docker), clearly labelled "SAMPLE", come from `npm run seed:photos`.
 
 ### send_message
 
