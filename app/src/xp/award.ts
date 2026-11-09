@@ -2,6 +2,7 @@ import { randomUUID } from 'node:crypto';
 import { SpanStatusCode } from '@opentelemetry/api';
 import { esOptions, getEsClient } from '../es/client';
 import { esTimeouts, indexNames } from '../es/es.constants';
+import { notifyBanner } from '../notifications/notify';
 import { logger } from '../observability/logger';
 import { kubequestMetrics } from '../observability/metrics';
 import { currentTraceIds, tracer } from '../observability/tracing';
@@ -175,6 +176,7 @@ export async function awardDueBanners(attendeeId: string, known?: ILedgerSummary
       kubequestMetrics().xpAwarded.add(0, { 'kubequest.xp.type': 'badge', 'kubequest.banner': banner });
       summary.earnedBanners[banner] = badge.at;
       awarded.push(banner);
+      await notifyBanner(attendeeId, banner);
     }
   }
 

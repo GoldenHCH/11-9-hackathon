@@ -1,0 +1,48 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: nudge
+  labels:
+    app: nudge
+spec:
+  schedule: "*/10 * * * *"
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 1
+  failedJobsHistoryLimit: 2
+  jobTemplate:
+    spec:
+      activeDeadlineSeconds: 300
+      backoffLimit: 0
+      template:
+        metadata:
+          labels:
+            app: nudge
+        spec:
+          restartPolicy: Never
+          containers:
+            - name: nudge
+              image: app
+              command: ["node", "scripts/dist/nudge.js"]
+              envFrom:
+                - secretRef:
+                    name: app-credentials
+                    optional: true
+              env:
+                - name: TEAM_NAME
+                  value: "kube-quest"
+                - name: OTEL_SERVICE_NAME
+                  value: "kubequest-nudge"
+              resources:
+                requests:
+                  cpu: 50m
+                  memory: 96Mi
+                limits:
+                  cpu: 200m
+                  memory: 256Mi
+              securityContext:
+                runAsNonRoot: true
+                allowPrivilegeEscalation: false
+                seccompProfile:
+                  type: RuntimeDefault
+                capabilities:
+                  drop: ["ALL"]

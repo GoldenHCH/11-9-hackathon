@@ -4,6 +4,8 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { RouterLink } from '@angular/router';
+import { environment } from '../../environments/environment';
 import { IRecap } from '../core/api.types';
 import { ApiErrorHelper } from '../core/helpers/api-error.helper';
 import { MeService } from '../core/services/me.service';
@@ -14,7 +16,7 @@ import { StateWrapperComponent } from '../shared/components/state-wrapper/state-
 
 @Component({
   selector: 'app-recap',
-  imports: [DatePipe, MatButtonModule, MatIconModule, PixelFaceComponent, ScreenToolbarComponent, StateWrapperComponent],
+  imports: [DatePipe, RouterLink, MatButtonModule, MatIconModule, PixelFaceComponent, ScreenToolbarComponent, StateWrapperComponent],
   templateUrl: './recap.component.html',
   styleUrl: './recap.component.scss',
 })
@@ -32,6 +34,12 @@ export class RecapComponent implements OnInit {
 
   public ngOnInit(): void {
     this.loadRecap();
+  }
+
+  public get pdfUrl(): string {
+    const attendeeId = this._meService.attendeeId;
+
+    return attendeeId ? `${environment.apiBaseUrl}/recap/${encodeURIComponent(attendeeId)}.pdf` : '';
   }
 
   public get isEmpty(): boolean {

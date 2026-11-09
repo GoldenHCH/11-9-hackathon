@@ -66,6 +66,7 @@ const privateSourceFields = [
   'githubLogin',
   'avatarUrl',
   'blockedIds',
+  'itinerary',
   'settings',
   'profileText',
   'searchText',

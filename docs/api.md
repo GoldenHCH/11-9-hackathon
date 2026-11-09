@@ -16,18 +16,21 @@ JSON in this doc is trimmed: long strings end in `…` and `"…N more"` stands 
 
 | Route | Use |
 |---|---|
-| `GET /api/config` | Boot data: `{ appVersion, publicBaseUrl, conferenceTimeZone, traceUrlTemplate?, rum? }`. Call once at start. |
+| `GET /api/config` | Boot data: `{ appVersion, publicBaseUrl, conferenceTimeZone, demoSimulateScans, traceUrlTemplate?, rum? }`. Call once at start. `demoSimulateScans` is `true` only when the server runs with `DEMO_SIMULATE_SCANS=true`; the map shows its "Demo: simulate scan" button only then. |
 | `GET /api/tools` | Every tool with `name`, `description`, `awardsXp` and its JSON Schema `inputSchema`. |
 | `GET /api/screen-token/:locationId?key=<displayKey>` | The only way to run `screen_token`. Needs the location's display key as `?key=` or the `x-screen-key` header; without it, `403 bad_screen_key`. Used by the demo screen. |
 | `GET /r/:locationId?t=<token>` | Printed and on-screen QR codes open this. With the Angular build it serves the SPA (the scan-result route); without it, it returns the JSON in `fixtures/scan_route.json`. |
 | `GET /h/<token>` | A handshake QR (from `handshake_code`) opens this. With the Angular build it serves the SPA; read the token from the path segment and call `start_handshake`. Without the build it returns a JSON hint. |
+| `GET /api/booth-photos/:photoId.jpg` | The bytes of one booth photo (the `url` in `list_booth_photos`), with its real `Content-Type` and `Cache-Control: public, max-age=3600`. A hidden or deleted photo is `404 unknown_photo`. |
 | `GET /api/recap/:attendeeId/email.html` | The player's recap email (`recap.emailHtml`) as `text/html`. A mock of it is in `docs/mock/recap-email.html`; no email is sent. |
+| `GET /api/recap/:attendeeId.pdf` | The end-of-event recap as a PDF download (`application/pdf`, `Content-Disposition: attachment`). Same auth model as the email route: it takes the private `attendeeId`, so only link it from the player's own recap screen. Pages: a block-art cover (pixel face, handle, level, XP bar, totals, banners), People you met (one card per connection with where you met, the chat prompt, your private notes and clickable link annotations), Talks you attended (your talk notes, takeaways and quiz score), Booths you visited (your booth notes), the itinerary when the attendee has one, and next steps. Headings use the OFL Silkscreen font from `resources/fonts`. Unknown id: `404 unknown_attendee` as JSON. |
+| `POST /api/profile-import` | Multipart form: `attendeeId` plus a `file` field holding a resume or LinkedIn PDF (max 5 MB). Reads the text in memory and returns the same JSON as `import_profile`; the file is never written to disk or Elastic. `413 file_too_large`, `415 not_a_pdf`, `422 unreadable_pdf`, `429 rate_limited`. |
 | `GET /healthz`, `GET /readyz` | Liveness, and readiness that pings Elasticsearch: `{"status":"ok","version":"dev","elasticsearch":"reachable"}`. |
 
 `/api/config` from this server:
 
 ```json
-{"appVersion":"dev","publicBaseUrl":"https://kube-quest.cnh.radarhq.io","conferenceTimeZone":"America/Denver"}
+{"appVersion":"dev","publicBaseUrl":"https://kube-quest.cnh.radarhq.io","conferenceTimeZone":"America/Denver","demoSimulateScans":false}
 ```
 
 ## Identity
@@ -35,6 +38,10 @@ JSON in this doc is trimmed: long strings end in `…` and `"…N more"` stands 
 There are no auth headers. The demo sign-in is `sign_in` with a name and an email (no password; the live-demo account is **John Doe**, `johndoe@gmail.com`, created by `npm run seed:demo`). It returns the same `attendee.id` and `personalLink` as `sign_up`, and `needsOnboarding` tells the UI whether to run the onboarding questions, which it sends to `sign_up` with that `attendeeId`. `sign_up` without an `attendeeId` still creates a player directly. `sign_up` returns `profile.attendee.id` (for example `p_Ljp4ZfHC-VPDFwqx`) and `personalLink` (`https://kube-quest.cnh.radarhq.io/me/<id>`). Store the id in `localStorage`; if it is missing, send the player to signup or ask them to open their personal link. Every player tool takes it as `attendeeId`.
 
 The `attendeeId` is the player's only credential: anyone who has it can act as that player. Treat it like a password, and never show it to anyone but its owner. Every other player in every response (leaderboard rows, `recommend_people`, `search` player results, `whats_around_me.matchesHere`, a meet's `partner`, a quest's `partnerId`, `get_profile` with `targetId`) carries only a **public id** (`pl_` plus 16 hex characters, for example `pl_592a78e076ad8c1f`), the handle and the face. Tools that point at another player (`get_profile` `targetId`, `propose_meet` `partnerId`) take that public id and resolve it on the server. The player's own public id is `profile.publicId` (from `sign_up`, `get_profile`, `update_settings`); the leaderboard `me` row also uses it, so match rows with `isMe`, not by comparing ids. New attendee ids are random (`p_` plus 16 random base64url characters), never derived from the handle. An unknown or stale public id returns `404 unknown_player`.
+
+### Staff and organizer access keys
+
+Booth staff and organizers have no accounts either. Their views are opened with an **access key** in the link: `?k=<key>`. A key is `k.` plus a base64url HMAC-SHA256 of `k:<scope>` with the server's `QR_SECRET`, where the scope is `admin` or `exhibitor:<outpostId>`. A booth's staff link is `https://kube-quest.cnh.radarhq.io/exhibitor/<outpostId>?k=<key>` and the organizer link is `https://kube-quest.cnh.radarhq.io/admin?k=<key>`. `exhibitor_dashboard` accepts that booth's key or the admin key; `admin_overview` only the admin key. Any other key is `403 bad_key`. The UI reads `k` from the URL, keeps it per booth in `localStorage` (`AccessKeyService`) and sends it as `key`. Keys are never written to span attributes or logs, and fixtures show them as `<staff-key>` and `<admin-key>`. `npm run access-links` (with `QR_SECRET` set to the cluster's value) prints the admin link and every booth's staff link. Treat a key like a password: rotating `QR_SECRET` revokes every key and every printed QR at once.
 
 ## Errors
 
@@ -49,8 +56,8 @@ Every failure has the same envelope:
 | Status | Codes seen | UI behaviour |
 |---|---|---|
 | 400 | `invalid_input`, `invalid_json`, `self_handshake` | A UI bug, or (`self_handshake`) the player scanned their own code. Show the message. |
-| 403 | `bad_signature`, `expired_token`, `missing_token` (check_in, start_handshake), `no_screen`, `bad_screen_key` (screen token), `screen_only` (`POST /api/tools/screen_token`) | On a scan, show "scan the code on the door" with the message. |
-| 404 | `unknown_attendee`, `unknown_player`, `attendee_not_found`, `unknown_location`, `unknown_talk`, `talk_not_found`, `boss_not_found`, `unknown_meet`, `unknown_quest`, `unknown_outpost`, `unknown_handshake`, `unknown_tool`, `not_found` | For `unknown_attendee`, clear the stored id and go to signup (not for `unknown_player`, which is about the other player). Otherwise show the message. |
+| 403 | `bad_signature`, `expired_token`, `missing_token` (check_in, start_handshake), `no_screen`, `bad_screen_key` (screen token), `screen_only` (`POST /api/tools/screen_token`), `bad_key` (exhibitor_dashboard, admin_overview) | On a scan, show "scan the code on the door" with the message. For `bad_key`, forget the stored key for that view and show the message with a field to paste a staff link. |
+| 404 | `disabled` (demo_scan_token with `DEMO_SIMULATE_SCANS` off), `unknown_attendee`, `unknown_player`, `attendee_not_found`, `unknown_location`, `unknown_talk`, `talk_not_found`, `boss_not_found`, `unknown_meet`, `unknown_quest`, `unknown_outpost`, `unknown_handshake`, `unknown_connection`, `unknown_tool`, `not_found` | For `unknown_attendee`, clear the stored id and go to signup (not for `unknown_player`, which is about the other player). Otherwise show the message. |
 | 409 | `handle_taken`, `meeting_off`, `no_match`, `meet_closed`, `meet_locked`, `quest_not_open`, `quest_not_active`, `quest_done`, `quest_expired`, `too_many_active`, `code_used`, `already_shook_hands`, `already_answered`, `handshake_closed`, `meet_not_accepted`, `conflict` | An expected game state. Show the message and refetch the screen's data. |
 | 429 | `slow_down` (send_message) | Show the message; let the player try again in a few minutes. |
 | 500 | `internal_error` | Show a toast and retry once. |
@@ -78,7 +85,11 @@ There are no websockets. Poll, and stop when the tab is hidden (`document.visibi
 | Itinerary Now card | `whats_around_me` | 30 s, and right after every `check_in` | |
 | Quests tab | `quest_board` | on tab focus and after every `check_in` (offers refresh after a scan) | |
 | Demo screen leaderboard | `leaderboard` | 15 s | |
+| Notification bell (top bar) | `list_notifications` | 30 s | the tab is hidden or nobody is signed in |
 | Demo screen QR | `GET /api/screen-token/:locationId` | every 8 minutes (tokens live 10) | |
+| Booth page live counts | `get_exhibitor` | 30 s | |
+| Exhibitor dashboard | `exhibitor_dashboard` | 15 s | a `bad_key` |
+| Organizer view | `admin_overview` | 30 s | a `bad_key` |
 
 On a 5xx, double the interval up to 60 s, then reset after a success.
 
@@ -91,17 +102,27 @@ On a 5xx, double the interval up to 60 s, then reset after a success.
 | Itinerary: Now | `whats_around_me`, `boss_state` (boss rooms), `quiz_for_talk`, `submit_quiz` |
 | Itinerary: Next | `whats_next` |
 | Here: Ask the guide | `ask_guide` (call again after a few seconds while `pending` is `true`) |
+| Itinerary tab `/itinerary` | `list_schedule` (What's on), `get_itinerary` (My plan), `add_to_itinerary`, `remove_from_itinerary`, `make_quest` |
 | Search | `search`, `world` (browse by building, level and room), `make_quest` ("Make this a quest") |
 | Quests | `quest_board`, `respond_quest`, `recommend_people`, `recommend_talks`, `propose_meet` |
 | Meet screen | `list_meets` (one item), `respond_meet`, `send_message`, `list_messages` (once the meet is `accepted` or `met`) |
 | Handshake | `handshake_code` (show `scanUrl` as a QR), `handshake_state`, `start_handshake` (after scanning `/h/<token>`), `answer_handshake` |
 | Booth note (after an outpost scan, `noteRequired: true`) | `save_booth_note`, `list_booth_notes` |
-| Recap | `recap` (or `GET /api/recap/:attendeeId/email.html`) |
+| Photo quest card, booth details on the map | `upload_booth_photo`, `list_booth_photos`, `report_booth_photo`, `delete_booth_photo` |
+| Recap | `recap` (or `GET /api/recap/:attendeeId/email.html`), "Download my recap PDF" (`GET /api/recap/:attendeeId.pdf`) |
+| People met `/connections`, `/connections/:connectionId` | `list_connections`, `save_connection_note` |
+| My links `/links` | `get_profile` (own `attendee.links`), `update_links` |
+| Talk notes `/notes/talks`, and the embeddable `app-talk-notes-panel [talkId]` | `list_talk_notes`, `save_talk_note` |
 | Profile | `get_profile`, `inventory`, `leaderboard` (3 boards), `update_settings` |
 | Another player's card | `get_profile` with `targetId` |
+| Notification bell (every screen with the top bar) | `list_notifications`, `mark_notifications_read` |
 | Boss bar | `boss_state` |
 | Demo screen `/screen/:locationId` | `GET /api/screen-token/:locationId` (QR of `scanUrl`), `boss_state` with `locationId`, `leaderboard` |
-| Organizer | `organizer_stats` |
+| Booth directory `/exhibitors` (attendee, Booths tab) | `list_exhibitors` (search box sends `query`; chips send `type`, `tier`, `zone`, `topic`; pass `attendeeId` for "Visited" and topic-first order) |
+| Booth page `/exhibitors/:outpostId` | `get_exhibitor` (pass `attendeeId`), `make_quest` with `targetKind: "outpost"` ("Make this a quest"), `get_profile` with `targetId` for a player here |
+| Exhibitor home `/exhibitor` | Saved booths from `localStorage`, a field to paste a staff link; no tool until a booth is opened |
+| Exhibitor dashboard `/exhibitor/:outpostId?k=` | `exhibitor_dashboard` (draw `scanUrl` as the booth's QR) |
+| Organizer `/admin?k=` (`/organizer` redirects) | `admin_overview` (it embeds `organizer_stats`) |
 
 ### Demo screen `/screen/:locationId`
 
@@ -125,6 +146,8 @@ Enum values used below:
 - Itinerary item `kind`: `talk`, `meet`, `quest`, `gap`
 - Search `kinds`: `session`, `player`, `outpost`, `room`, `campfire`
 - Track: `ai`, `platform`, `operations`, `data`, `security`, `connectivity`, `inclusion`, `other`
+- Exhibitor `type`: `sponsor`, `project`
+- Exhibitor `tier`, in display order: `Diamond`, `Platinum`, `Gold`, `Silver`, `Start-Up`, `End User`, `Media Partner`, `Exhibitor`, `Project`
 - Handshake `status`: `waiting`, `matched`, `mismatched`, `expired`; `role`: `asker`, `answerer`; `questionSource`: `shared_topic`, `booth_note`, `talk`, `working_on`, `fallback`
 
 ### sign_in
@@ -147,7 +170,11 @@ Errors: `400 invalid_input` for a missing name or a malformed email (`"email: In
 
 ### sign_up (awards XP)
 
-Required: `handle` (3 to 20 chars, `^[a-z0-9_.-]+$`, unless `attendeeId` is sent), `workingOn`, `firstKubeCon`, `meetingOn`. Optional: `attendeeId`, `happyToWelcome`, `topics` (up to 5), `spotMe`, `githubLogin`, `realName`, `accessibleMode`, `noWalking`, `scanLocationId`, `scanToken`.
+Required: `handle` (3 to 20 chars, `^[a-z0-9_.-]+$`, unless `attendeeId` is sent), `workingOn`, `firstKubeCon`, `meetingOn`. Optional: `attendeeId`, `happyToWelcome`, `topics` (up to 5), `spotMe`, `githubLogin`, `realName`, `accessibleMode`, `noWalking`, `scanLocationId`, `scanToken`, and from a confirmed `import_profile`: `headline` (≤120), `skills` (≤20), `offers` (≤8), `asks` (≤8), `summary` (≤1200). Emails, phones and links are stripped from those again on save.
+
+`topics` may be presets or the player's own (for example `"Kueue"`). Each is trimmed and whitespace-collapsed; a preset matched case-insensitively is stored with its preset label, anything else is stripped to letters, digits, spaces and `- + . # /`, must be 2 to 30 characters, is dropped if it looks like an email or URL, and is stored lowercased (`"kueue"`). Duplicates are dropped; at most 5.
+
+`summary`, `skills`, `offers` and `asks` go into `profileText` (the semantic embedding used by `recommend_people`) and are returned only in the player's own profile. `get_profile` with `targetId`, `recommend_people`, `search`, meets, handshakes and the leaderboard never include them.
 
 ```json
 {"handle":"verify93279","workingOn":"Running GPU inference on Kubernetes with autoscaling","firstKubeCon":true,"happyToWelcome":false,"topics":["ai","gpu","autoscaling"],"meetingOn":true,"spotMe":"Green hoodie","scanLocationId":"salt-palace-level-1-150-defg","scanToken":"<signed-token>"}
@@ -164,6 +191,16 @@ Required: `handle` (3 to 20 chars, `^[a-z0-9_.-]+$`, unless `attendeeId` is sent
 `checkIn` is present only when `scanLocationId` was sent, and has the `check_in` shape. A taken handle returns `409 handle_taken`.
 
 With `attendeeId` (a player from `sign_in` finishing onboarding), `sign_up` updates that player's profile fields instead of creating one; `handle` is optional and changes the handle only when sent and free. The starter block is awarded once, on the first onboarding. An unknown `attendeeId` returns `404 unknown_attendee`. Without `attendeeId` and without `handle`, it returns `400 invalid_input` (`handle: handle is required to create a player`).
+
+### import_profile
+
+`{"attendeeId":"p_…","text":"<pasted resume or LinkedIn text>"}` returns a suggested profile. Nothing is saved: show it for review, let the player edit it, then send the confirmed fields to `sign_up` with `attendeeId`. For a PDF, use `POST /api/profile-import` (see Other routes); it returns the same shape.
+
+```json
+{"headline":"Platform Engineer scaling GitOps for 200+ services","role":"Senior Platform Engineer","seniority":"senior","skills":["Kubernetes","GitOps","Argo CD","Backstage","Helm"],"topics":["Platform engineering","GitOps","Observability"],"workingOn":"Building internal developer platforms on Kubernetes with Argo CD and Backstage","offers":["GitOps at scale","Backstage setup"],"asks":["Kueue batch scheduling","GPU inference with vLLM"],"summary":"Senior platform engineer leading internal developer platforms…","provider":"agent_builder"}
+```
+
+The text is capped at 12,000 characters; emails, phone numbers and URLs are removed before the model sees it, and the raw text is never returned or stored. `topics` come only from the preset list. The model has a 10 s budget (Agent Builder usually takes 10 to 15 s); past it you get `provider: "fallback"` (keyword skills and topics, the first two sentences as `summary`) in about 10.3 s. The model keeps running and its answer is cached for 30 minutes, so calling again with the same text (or re-uploading the same PDF) about 5 s later returns `provider: "agent_builder"` in under 0.1 s; the onboarding screen does that once automatically. Limit: 5 calls per player per hour (cached repeats are free), else `429 rate_limited`. Under 40 readable characters returns `400 not_enough_text`. Fixture: `resources/fixtures/import_profile.json`.
 
 ### get_profile
 
@@ -226,6 +263,18 @@ Not callable through `POST /api/tools/screen_token` (that returns `403 screen_on
 
 A location without a screen returns `403 {"error":{"code":"no_screen","message":"151 has no screen. Scan the printed code on its door."}}`.
 
+### demo_scan_token (demo only)
+
+Lets the venue map simulate a QR scan on stage. It is switched off unless the server runs with `DEMO_SIMULATE_SCANS=true`; otherwise every call returns `404 {"error":{"code":"disabled","message":"Simulated scans are switched off."}}`. It takes no `attendeeId` and awards nothing itself: it returns the path a printed QR code for that location encodes (token from `signLocationToken`, the same token a printed code carries), and the UI navigates there so the normal `/r/:locationId` scan-result screen runs `check_in` for the signed-in player. A player who is not signed in is sent to `/onboarding` with the scan pending, exactly like the camera scanner.
+
+`{"locationId":"outpost-amazon-web-services"}` →
+
+```json
+{"locationId":"outpost-amazon-web-services","path":"/r/outpost-amazon-web-services?t=<signed-token>"}
+```
+
+An unknown location returns `404 unknown_location`. Because the token is a printed one, anyone who can call this tool can check in anywhere: keep the flag off at a real event (see `docs/ops.md`).
+
 ### whats_around_me (Itinerary Now card)
 
 `{"attendeeId":"p_…"}` →
@@ -245,6 +294,22 @@ A location without a screen returns `403 {"error":{"code":"no_screen","message":
 `{"attendeeId":"p_…"}` → `{"now"?: IItineraryItem, "items": IItineraryItem[]}`. Each item has `{kind, title, start, end?, place?: {locationId, name, kind, building, level}, walkMinutes?, talkId?, questId?, meetId?}`.
 
 It looks 3 hours ahead, and every KubeCon talk is on Nov 10, so today it returns `{"items":[]}`. Run the server with `DEMO_NOW=2026-11-10T09:00:00-07:00` to see a full itinerary.
+
+### list_schedule (Itinerary: What's on)
+
+`{"attendeeId"?:"p_…","day"?:"2026-11-10","from"?:iso,"to"?:iso,"track"?:"platform","building"?:"Hyatt Regency","query"?:"gpu"}` → `{"day","days":["2026-11-09",…,"2026-11-12"],"now","from","to","total","buildings":[…],"slots":[{"start","end","sessions":[IScheduleSession]}]}`.
+
+Every field is optional. `day` defaults to today (conference time zone) when today is a conference day, else Tuesday 2026-11-10. `from`/`to` narrow the window (the Now filter sends now → now + 90 min); a session is included when it overlaps the window. `query` matches title, abstract, room and speakers. Slots are 30 minutes, keyed by the session start rounded down. Each session is `{id, title, speakers, sessionType, track, material, start, end, locationId, building, level, room, isBoss, checkedInCount, inItinerary?}`; `checkedInCount` is distinct players who checked in to that talk, and `inItinerary` is only present when `attendeeId` is given. Fixture: `resources/fixtures/list_schedule.json`.
+
+### get_itinerary (Itinerary: My plan)
+
+`{"attendeeId":"p_…","day"?:"2026-11-10"}` → `{"now","day"?,"plannedCount","maxItems":40,"conflictCount","items":[IPlanItem]}`.
+
+Items are in time order: planned sessions (`kind: "talk"`, with `session`), accepted meets that have a slot (`meet`), accepted quests that have a time and aren't already a planned session (`quest`), and free gaps of 30 min or more between them (`gap`, with `gapMinutes`). Each item: `{id, kind, title, start, end?, place?, walkMinutes?, walkFrom?, gapMinutes?, conflictsWith: [itemId], talkId?, questId?, meetId?, session?, quizAvailable?, isNow?}`. `walkMinutes` is from the previous item on the same day (same walk table as everywhere else). Overlapping items list each other in `conflictsWith`. `quizAvailable` is true once the session has started (open `/quiz/:talkId`). The plan is stored as `itinerary: [{talkId, addedAt}]` on the attendee doc and never appears in other players' views.
+
+### add_to_itinerary / remove_from_itinerary
+
+`{"attendeeId":"p_…","talkId":"kc26-tue-tracing-at-scale"}` → `{"talkId","inItinerary":true|false,"plannedCount","maxItems":40}`. Both are idempotent (atomic painless script on the attendee doc). Adding an unknown talk is `404 talk_not_found`; adding a 41st is `409 itinerary_full`.
 
 ### search
 
@@ -285,7 +350,7 @@ A `campfire`, `room` or `outpost` result carries `location`, and a `player` resu
  "active":[],"doneToday":[],"maxOffers":3,"maxActive":3}
 ```
 
-Quest `type` is `attend`, `outpost` or `chat`. An `attend` or `outpost` quest also has `where`, `when`, `walkMinutes`, `talkId` and `locationId` (see `make_quest`).
+Quest `type` is `attend`, `outpost`, `chat`, `quiz`, `boss`, `collection` or `photo`. An `attend` or `outpost` quest also has `where`, `when`, `walkMinutes`, `talkId` and `locationId` (see `make_quest`). A `photo` quest ("Photograph the Dash0 booth") names a booth that matches one of the player's topics and has fewer than 3 visible photos; at most one is on the board. It has `where` and `locationId`, and completes when the player, having accepted it, uploads a photo of that booth with `upload_booth_photo`.
 
 ### respond_quest
 
@@ -403,6 +468,46 @@ The banners are `observability-nerd`, `connector`, `welcomer`, `explorer`, `scou
 {"players":20,"checkInsToday":31,"xpToday":1820,"xpByType":{"check_in":310,"quiz":335,"outpost":220,"handshake":900,"badge":0,"welcome":50,"boss":5},"meets":{"accepted":2,"proposed":4,"met":0},"quests":{"offered":12,"accepted":2,"declined":1},"busiestRooms":[{"location":{"id":"salt-palace-level-1-150-defg","name":"150 DEFG","kind":"room"},"count":1},"…2 more"],"bosses":[],"generatedAt":"2026-11-09T20:20:16.769Z"}
 ```
 
+### list_exhibitors (booth directory)
+
+`{"query"?, "type"?, "tier"?, "zone"?, "topic"?, "attendeeId"?, "limit"? (1-400, default 60), "offset"? (default 0)}`. Every field is optional; `query` is at most 200 characters, `type` is `sponsor` or `project`, `topic` is a track. `{"attendeeId":"p_…","limit":60}` →
+
+```json
+{"exhibitors":[{"id":"outpost-amazon-web-services","name":"Amazon Web Services","exhibitorType":"sponsor","tier":"Diamond","boothNumber":"115","hall":"B","zone":"Astral Peak","topics":["platform","operations","ai"],"categories":["Artificial Intelligence (AI)","Platform Engineering","Observability"],"askAbout":"How EKS Auto Mode handles node upgrades for you","visitorsNow":6,"visitedByMe":true},"…59 more"],"total":320,"facets":{"types":[{"value":"sponsor","count":234},{"value":"project","count":86}],"tiers":[{"value":"Diamond","count":9},"…8 more"],"zones":[{"value":"Cosmic Canyon","count":122},"…5 more"],"topics":[{"value":"platform","count":138},"…7 more"]},"generatedAt":"2026-11-09T21:42:10.512Z"}
+```
+
+With `query` the order is relevance: one RRF query fuses BM25 on `name`, `askAbout`, `categories` and `description` with Jina semantic search on `searchText`, then the filters apply. With `query`, matches come from the top 96 relevance hits, so `total` is at most 96. Without it the order is booths matching the player's topics first (when `attendeeId` is given), then tier, then booth number. `total` counts every match, so page with `offset`. Each facet counts the matches with every other filter applied, so a chip shows how many booths it would leave. `visitorsNow` is distinct players who scanned that booth in the last 20 minutes. `visitedByMe` is only present when `attendeeId` is sent. An unknown `attendeeId` is `404 unknown_attendee`. Variants: `filtered` (`{"type":"sponsor","topic":"operations"}`, 39 booths) and `empty` (no match: `exhibitors` is `[]`, `total` 0, facets empty). Latency: about 0.2 s browsing (the booth list is cached for a minute), 0.4 to 0.8 s with `query`.
+
+### get_exhibitor (booth page)
+
+`{"outpostId":"outpost-dash0","attendeeId":"p_…"}` (`attendeeId` optional) →
+
+```json
+{"exhibitor":{"id":"outpost-dash0","name":"Dash0","exhibitorType":"sponsor","tier":"Platinum","boothNumber":"134","hall":"B","zone":"Starlight Summit","topics":["operations"],"categories":["Observability","Application Development + Developer Experience"],"askAbout":"OpenTelemetry-native observability and tracing a request end to end","visitorsNow":3,"visitedByMe":true,"building":"Salt Palace","level":"Level 1","description":"Dash0 booth in the Solutions Showcase.","mapPosition":{"x":198.8,"y":517}},"live":{"visitorsNow":3,"visitsToday":41,"uniqueVisitorsToday":37},"talks":[{"id":"kc26-wed-otel-tail-sampling","title":"Tail Sampling Without Tears: …","start":"2026-11-11T11:00:00-07:00","end":"2026-11-11T11:30:00-07:00","where":"Salt Palace · Level 2 · 250 AB","speakers":["…"],"track":"operations"},"…1 more"],"playersHere":[{"id":"pl_…","handle":"otelotter","faceSeed":"otelotter","level":4,"levelName":"Cluster","xp":610,"banners":["welcomer","scout"]},"…2 more"],"nearby":[{"id":"outpost-spectro-cloud","name":"Spectro Cloud","tier":"Platinum","boothNumber":"125","visitorsNow":0,"visitedByMe":false},"…3 more"],"me":{"visited":true,"lastVisitAt":"2026-11-09T20:14:33.208Z","questId":"q_5d0c3a9e71b24f86a1c2e0d4","questStatus":"completed"},"expoMapUrl":"https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf","generatedAt":"2026-11-09T21:42:10.512Z"}
+```
+
+`talks` (up to 6, by start time) are sessions with a speaker whose company is this exhibitor. `playersHere` (up to 6) are players who scanned this booth in the last 20 minutes and have meeting on and are not hidden from the leaderboard, as public cards; the caller is left out. It is only filled when `attendeeId` is sent and that player has meeting on, and it skips players either side has blocked; otherwise it is `[]`. `nearby` are the 4 closest other booths by `geo_distance`. `me` is only present with `attendeeId`: whether and when the player last scanned this booth, and their booth quest for it if they have one. `mapPosition` is a point on the expo hall PDF (`expoMapUrl`), in the same coordinates as `web/public/venue/schematic.json`; project kiosks also have `schedule`. Errors: `404 unknown_outpost` for a missing id or one that is not a booth, `404 unknown_attendee`. Variants: `project` (the OpenTelemetry kiosk), `not_visited` (an offered booth quest) and `unknown_outpost`. Latency: about 0.3 to 0.6 s.
+
+### exhibitor_dashboard (booth staff)
+
+`{"outpostId":"outpost-dash0","key":"<staff-key>"}` (the booth's key or the admin key) →
+
+```json
+{"exhibitor":{"id":"outpost-dash0","name":"Dash0","tier":"Platinum","boothNumber":"134","visitorsNow":3,"…":"same fields as get_exhibitor"},"scanUrl":"https://kube-quest.cnh.radarhq.io/r/outpost-dash0?t=<signed-token>","publicPageUrl":"https://kube-quest.cnh.radarhq.io/exhibitors/outpost-dash0","visits":{"now":3,"today":41,"uniqueToday":37,"conference":58,"uniqueConference":51,"firstTimersToday":12},"byHour":[{"hour":"2026-11-09T15:00:00.000Z","visits":2},"…7 more"],"visitorTopics":[{"value":"observability","count":14},"…9 more"],"visitorLevels":[{"value":"Deployment","count":19},"…4 more"],"recentVisitors":[{"player":{"id":"pl_…","handle":"otelotter","faceSeed":"otelotter","level":4,"levelName":"Cluster","xp":610,"banners":["welcomer","scout"]},"at":"2026-11-09T21:39:02.000Z","firstTimer":false},"…11 more"],"hereNow":[{"id":"pl_…","handle":"otelotter"},"…2 more"],"quests":{"offered":14,"accepted":9,"completed":6,"not_now":3,"declined":2},"rank":{"position":4,"of":61},"generatedAt":"2026-11-09T21:42:10.512Z"}
+```
+
+Draw `scanUrl` as the booth's check-in QR (the same printed token as the table QR, so a photo of it works all conference). A visit is a booth scan (`outpost` XP event, plus any `check_in` there). `now` is distinct players in the last 20 minutes; `today` starts at midnight in `conferenceTimeZone`; `byHour` buckets today's visits per hour (UTC `hour`, show it in `conferenceTimeZone`). `visitorTopics` and `visitorLevels` are counts over everyone who has visited (top 10). `recentVisitors` (newest first, one per player, up to 20) and `hereNow` only list players with meeting on who are not hidden from the leaderboard; everyone else is in the counts only. `quests` counts booth quests for this booth by status. `rank` is this booth's place by unique visitors today among booths with a visit today, or `null` before its first visit. The key is checked first: a wrong key is `403 bad_key` (`"That link doesn't open this booth's dashboard. Ask the organizers for your booth's staff link."`) even for a missing booth; then `404 unknown_outpost`. Variants: `quiet` (no visits: zeros, empty lists, `rank: null`), `bad_key` and `unknown_outpost`. Latency: about 0.4 to 0.8 s.
+
+### admin_overview (organizer)
+
+`{"key":"<admin-key>"}`, or with `"since":"2026-11-09T00:00:00Z"` →
+
+```json
+{"stats":{"players":20,"checkInsToday":31,"xpToday":1820,"…":"the organizer_stats output"},"exhibitors":{"total":320,"sponsors":234,"projects":86,"visitedToday":75,"visitsToday":760,"uniqueVisitorsToday":212},"byTier":[{"value":"Diamond","exhibitors":9,"visits":185},"…8 more"],"byZone":[{"value":"Cosmic Canyon","exhibitors":122,"visits":232},"…5 more"],"table":[{"exhibitor":{"id":"outpost-amazon-web-services","name":"Amazon Web Services","tier":"Diamond","boothNumber":"115","visitorsNow":6,"…":"an exhibitor card"},"visitsToday":63,"uniqueToday":55,"questsCompleted":9,"staffUrl":"https://kube-quest.cnh.radarhq.io/exhibitor/outpost-amazon-web-services?k=<staff-key>","scanUrl":"https://kube-quest.cnh.radarhq.io/r/outpost-amazon-web-services?t=<signed-token>"},"…318 more"],"generatedAt":"2026-11-09T21:42:10.512Z"}
+```
+
+`stats` is exactly `organizer_stats` with the same `since`. Booth visits are counted since `since`, or since midnight in `conferenceTimeZone`. `byTier` is in tier order; `byZone` is busiest first. `table` has every booth, busiest first (then tier order, then booth number); "quiet booths" are the rows with `visitsToday` 0. `questsCompleted` counts completed booth quests at that booth over the conference. `staffUrl` carries that booth's real staff key, so this view is for organizers only. A wrong key is `403 bad_key` (`"That link doesn't open the organizer view."`). Variant: `bad_key`. The full fixture is 250 KB; poll it every 30 s at most. Latency: about 0.6 to 1.2 s (`organizer_stats` plus three aggregations).
+
 ### Handshake (phone to phone)
 
 A handshake is how two players prove they met: B shows a QR, A scans it, A asks B one question out loud, and both type the answer. Matching answers complete the handshake, award XP to both and mark any accepted meet between them `met`. Campfires stay as meeting places, but scanning one completes nothing.
@@ -477,6 +582,31 @@ A booth earns 10 XP once, only when `liked` plus `thoughts` is at least 20 chara
 
 `{"attendeeId":"p_…"}` → the player's notes, newest first (`IBoothNote[]`, as in `save_booth_note`).
 
+### upload_booth_photo (awards XP)
+
+`{"attendeeId":"p_…","locationId":"outpost-dash0","image":"data:image/jpeg;base64,…","caption":"Trace demo on the big screen"}` (`caption` optional, up to 120 characters) →
+
+```json
+{"photo":{"id":"bp-788d73e24c904880a7c7017a","locationId":"outpost-dash0","boothName":"Dash0","url":"/api/booth-photos/bp-788d73e24c904880a7c7017a.jpg","width":1024,"height":768,"caption":"Trace demo on the big screen","uploader":{"publicId":"pl_a8ee82eb252c214a","handle":"otelotter","faceSeed":"3a4944e6942be021"},"createdAt":"2026-11-09T22:19:02.118Z","mine":true},
+ "xp":15,"questCompleted":true,"message":"+15 XP · photo added to the Dash0 booth on the map","newBanners":[]}
+```
+
+Fair play: the player must have scanned that booth's QR (an outpost scan, or a `check_in`/`outpost` XP event there) in the last 30 minutes, otherwise `403 not_at_booth`. At most 3 photos per player per booth (`429 photo_limit_booth`) and 10 per day (`429 photo_limit_day`). The image is a JPEG, PNG or WebP data URL of at most 400 KB, at most 2048 px on the long edge; the server reads the size from the file header (`415 unsupported_image`, `413 image_too_large`). This route alone accepts bodies up to 600 KB; the app resizes to 1024 px and JPEG quality 0.75 first. XP is 15, paid once per player per booth (`awardXpOnce` key `photo-<attendeeId>-<locationId>`); a later photo of the same booth has `xp: 0`. Photos are stored in `booth_notes` with `kind: "photo"` (the image is a `binary` field: stored, not indexed) and never appear in `list_booth_notes` or the recap. Show the line "Photograph the booth, not people. Don't capture faces or badges." before the camera opens.
+
+### list_booth_photos
+
+`{"locationId":"outpost-dash0","attendeeId":"p_…","limit":12}` (`attendeeId` and `limit` optional; `limit` 1 to 30, default 12) → `{"locationId":"outpost-dash0","photos":[IBoothPhoto…],"count":3}`, newest first, hidden photos left out. The list never includes image bytes: draw each `url`. Uploaders appear only as `publicId`, `handle` and `faceSeed`. With `attendeeId`, each photo has `mine` (show Delete instead of Report).
+
+### report_booth_photo
+
+`{"attendeeId":"p_…","photoId":"bp-…"}` → `{"photoId":"bp-…","reports":1,"hidden":false,"message":"Thanks. We noted your report."}`. Each player counts once; 2 reports hide the photo. Reporting your own photo is `409 own_photo`.
+
+### delete_booth_photo
+
+`{"attendeeId":"p_…","photoId":"bp-…"}` → `{"photoId":"bp-…","deleted":true}`. Only the uploader can delete (`404 unknown_photo` otherwise). Deleting does not take back XP, and a new photo of that booth does not pay again.
+
+Sample photos for three booths (Dash0, Elastic, Docker), clearly labelled "SAMPLE", come from `npm run seed:photos`.
+
 ### send_message
 
 `{"attendeeId":"p_…","meetId":"meet-…","text":"See you at the campfire in 5?"}` →
@@ -494,6 +624,85 @@ Only the two players in a meet that both accepted (`accepted` or `met`) can mess
 ### recap
 
 `{"attendeeId":"p_…"}` → `IRecap`: `player`, `totals` (`xp`, `talks`, `people`, `booths`, `quizCorrect`), `talks` (check-ins with the best quiz score), `people` (one per handshake partner: handle, the question, their answer, shared topics, `githubLogin` only when the two also accepted a meet), `booths` (from notes), a `nextStep` on every person and booth, an overall `nextSteps` list, and `emailSubject` plus `emailHtml` (a self-contained 600 px email). Next steps are rule-based: a follow-up booth becomes "Book a follow-up with Elastic.", a person with a shared topic becomes "Follow up with @otelotter about observability.". The full mock is `fixtures/recap.json`; the rendered email is `docs/mock/recap-email.html` (regenerate with `npx tsx scripts/render-recap-mock.ts`).
+
+### Connections, links and private notes
+
+A **connection** is created when a meet becomes `met` or a handshake completes (`answer_handshake` records it; `list_connections` also backfills any it missed). There is one per pair, stored in the `messages` index as `kind: "connection"` with a deterministic id (`conn-` plus a hash of the two attendee ids). Private notes live next to them as `kind: "connection_note"` (in `messages`) and `kind: "talk_note"` (in `booth_notes`); every query on those indices filters by `kind`, so chat messages, notifications, handle reservations, booth notes, booth photos and these never mix. No response carries another player's `attendeeId`: people are public ids (`pl_…`).
+
+**Who sees links:** the player themselves, and players they are connected with. Everyone else gets `visible: false` and empty links. Notes are only ever returned to their author.
+
+### update_links
+
+`{"attendeeId":"p_…","links":{"linkedin":"linkedin.com/in/john-doe-platform","github":"argoproj","bluesky":"bsky.app/profile/bsky.app","website":"https://kubequest.cnh.radarhq.io"}}` →
+
+```json
+{"links":{"linkedin":"https://www.linkedin.com/in/john-doe-platform","github":"https://github.com/argoproj","bluesky":"https://bsky.app/profile/bsky.app","website":"https://kubequest.cnh.radarhq.io/"},
+ "items":[{"network":"linkedin","label":"in/john-doe-platform","url":"https://www.linkedin.com/in/john-doe-platform"},"…3 more"],
+ "enrichment":[{"network":"github","status":"added","summary":"GitHub @argoproj (Argo Project). …"},{"network":"bluesky","status":"added","summary":"Bluesky @bsky.app (Bluesky). …"}]}
+```
+
+Networks: `linkedin` (`linkedin.com/in/<slug>` or a bare slug), `github` (login or `github.com/<login>`), `x` (`@handle`, `x.com/…` or `twitter.com/…`, stored as x.com), `bluesky` (a handle or `bsky.app/profile/<handle>`), `mastodon` (`@user@host` or `https://host/@user`) and `website` (`https://` only). Only keys you send change; an empty string removes that link. Anything else is `400 invalid_input` with a per-network message (`variants.invalid_link`). When the GitHub or Bluesky link changes, the server reads the public profile (GitHub REST `users/:login` plus top repo languages; Bluesky `app.bsky.actor.getProfile` on `public.api.bsky.app`; 4 s timeout each) and appends a "Public profile:" paragraph to `profileText`, so Jina matching uses it. `status` is `added`, `not_found` or `unavailable`; `enrichment` is `[]` when neither link changed (as in the fixture, captured on a re-save). LinkedIn and X are never fetched.
+
+### get_links
+
+`{"viewerId":"p_…","targetPublicId":"pl_01c88990a33676aa"}` → for the owner or a connection:
+
+```json
+{"publicId":"pl_01c88990a33676aa","handle":"johndoe","isOwner":false,"isConnection":true,"visible":true,"links":{"…":"…"},"items":[{"network":"linkedin","label":"in/john-doe-platform","url":"https://www.linkedin.com/in/john-doe-platform"},"…3 more"]}
+```
+
+For anyone else (`variants.not_connected`): `{"visible":false,"links":{},"items":[],"hiddenReason":"Links are shared only with people you have met through a meet or a handshake.", …}`.
+
+### list_connections
+
+`{"attendeeId":"p_…"}` → newest first:
+
+```json
+[{"id":"conn-e9b2965802616bd7cd20cf00",
+  "player":{"id":"pl_aeea8bd684c45f90","handle":"otelotter","faceSeed":"otelotter","level":3,"levelName":"Node","xp":255,"banners":["welcomer"],"headline":"OpenTelemetry contributor; tracing all the things.","workingOn":"…","topics":["opentelemetry","…"]},
+  "links":[{"network":"github","label":"@open-telemetry","url":"https://github.com/open-telemetry"},"…3 more"],
+  "source":"meet","where":{"id":"campfire-learning-lounge","name":"Learning Lounge"},"metAt":"2026-11-09T21:43:54.000Z",
+  "chatPrompt":"Ask @otelotter which OpenTelemetry Collector processors they would never run without.","sharedTopics":["observability"],
+  "note":{"talkedAbout":"Tail sampling in the Collector, …","nextSteps":"Try the k8sattributes processor …","followUpBy":"2026-11-12T22:23:12.000Z","updatedAt":"…"}},"…1 more"]
+```
+
+`source` is `meet` or `handshake`; `where` is the meet's campfire, or the asker's last scanned place for a handshake without a meet. `realName` appears when the other player entered one. `note` is the caller's own note and is absent until they write one.
+
+### save_connection_note
+
+`{"attendeeId":"p_…","connectionId":"conn-…","talkedAbout":"…","nextSteps":"…","followUpBy":"2026-11-12T22:23:12.000Z"}` (`talkedAbout` and `nextSteps` up to 2000 characters, `followUpBy` optional ISO date) → the connection as in `list_connections`, with the saved `note`. Saving again replaces the note. A connection the caller is not part of returns `404 unknown_connection` (`variants.not_yours`).
+
+### save_talk_note
+
+`{"attendeeId":"p_…","talkId":"kc26-tue-tracing-at-scale","note":"…","takeaways":["…"]}` (`note` up to 2000 characters, up to 10 takeaways of 280) →
+
+```json
+{"id":"tn-a1ce7976235c488945228131","talkId":"kc26-tue-tracing-at-scale","talkTitle":"Tracing at Scale: Running a 16 Billion Spans/Hour Pipeline at Nubank","speakers":["Felipe Araujo (Nubank)","Kaynan Coelho (Nubank)"],"room":"Grand Ballroom ACE","start":"2026-11-10T14:50:00-07:00","note":"Nubank runs 16B spans an hour …","takeaways":["Shard the Collector by trace id before tail sampling","…2 more"],"createdAt":"…","updatedAt":"…"}
+```
+
+One note per player and talk; saving again edits it. Unknown talk: `404 unknown_talk`.
+
+### list_talk_notes
+
+`{"attendeeId":"p_…","talkId":"…"}` (`talkId` optional) → the caller's talk notes, newest first.
+
+### list_notifications
+
+`{"attendeeId":"p_…","limit":20}` (`limit` optional, 1 to 50, default 20) → `{ items, unread }`, newest first:
+
+```json
+{"items":[{"id":"match:pl_b0f34ffaf6282124","type":"new_match","title":"You and @argoalpaca both work on gitops","body":"Both into gitops","link":"/people","createdAt":"2026-11-09T22:14:36.020Z","readAt":null},{"id":"quest:8189074aa2c4fd8e","type":"new_quest","title":"New quest: Visit Dash0","body":"It covers operations.","link":"/quests","createdAt":"2026-11-09T22:14:35.202Z","readAt":null}],"unread":2}
+```
+
+`type` is one of `new_quest` and `new_match` (written by the `nudge` CronJob every 10 minutes), `meet_offer` (someone proposed a meet to you), `meet_accepted` (both said yes; sent to both players) and `banner` (a new banner). `link` is an in-app path to open on tap. Notifications carry only handles, public ids and public text, never another player's attendee id. They live in the `messages` index with `kind: "notification"`, under the id `notif:<attendeeId>:<id>`, written create-only so a rerun never duplicates one.
+
+### mark_notifications_read
+
+`{"attendeeId":"p_…","ids":["quest:8189074aa2c4fd8e"]}` or `{"attendeeId":"p_…","all":true}` → `{"marked":1,"unread":1}`. Unknown ids are skipped. Errors: `400 invalid_input` when neither `ids` nor `all: true` is passed.
+
+### The nudge CronJob
+
+`deploy/cronjob-nudge.yaml` runs `node scripts/dist/nudge.js` every 10 minutes with the app image. For every player seen in the last 3 hours or created today it reads `quest_board` and `recommend_people` and writes up to 2 `new_quest` notifications per 30 minutes and 1 `new_match` per hour, skipping anything already sent. It prints the counts; a second run right after the first writes 0. Run it locally with `npm run build:scripts && node scripts/dist/nudge.js` (reads `.env`).
 
 ## Demo flow (curl order used for this doc)
 

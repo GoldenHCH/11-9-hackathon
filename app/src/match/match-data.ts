@@ -9,7 +9,7 @@ import { levelDefinitionForXp } from '../xp/levels';
 
 export const talkSourceExcludes = ['searchText', 'transcript', 'quiz', 'bossQuiz'];
 
-export const attendeeSourceExcludes = ['profileText', 'email', 'displayName'];
+export const attendeeSourceExcludes = ['profileText', 'email', 'displayName', 'summary', 'skills', 'offers', 'asks', 'itinerary', 'links'];
 
 export function hitSources<T>(hits: estypes.SearchHit<T>[]): T[] {
   return hits.flatMap((hit) => (hit._source ? [hit._source] : []));

@@ -43,6 +43,18 @@
         }
       </nav>
 
+      @if (demoScansEnabled) {
+        <div class="demo-bar">
+          <button mat-flat-button type="button" class="demo-button" (click)="openDemoPicker()">
+            <div class="btn-content">
+              <mat-icon>qr_code_scanner</mat-icon>
+              <span>Demo: simulate scan</span>
+            </div>
+          </button>
+          <span class="demo-hint">Checks you in as if you scanned that place’s QR code.</span>
+        </div>
+      }
+
       @if (selectedLevel) {
         <div class="level-heading">
           <h2 class="level-title">{{ selectedLevel.title }}</h2>
@@ -58,6 +70,7 @@
       @if (viewMode === 'map') {
         <!-- Schematic -->
         @if (selectedLevel && selectedBuilding) {
+          <p class="details-hint map-help">Drag to pan, scroll or pinch to zoom, double-tap to zoom in.</p>
           <app-venue-schematic
             [level]="selectedLevel"
             [selectedAreaId]="selectedAreaId"
@@ -118,6 +131,32 @@
                   }
                 </ul>
               }
+              @if (demoScansEnabled) {
+                @for (location of highlightedVendorDemoLocations; track location.id) {
+                  <button
+                    mat-stroked-button
+                    type="button"
+                    class="details-action demo-scan-action"
+                    [disabled]="!!pendingDemoLocationId"
+                    (click)="simulateScan(location)"
+                  >
+                    <div class="btn-content">
+                      @if (pendingDemoLocationId === location.id) {
+                        <mat-spinner diameter="20"></mat-spinner>
+                      } @else {
+                        <mat-icon>qr_code_scanner</mat-icon>
+                        <span>Demo: simulate scan here@if (highlightedVendorDemoLocations.length > 1) { ({{ location.name }}) }</span>
+                      }
+                    </div>
+                  </button>
+                }
+                @if (demoScanError && !isDemoPickerOpen) {
+                  <p class="details-note" role="alert">{{ demoScanError }}</p>
+                }
+              }
+              @if (highlightedVendorPhotoLocationId; as photoLocationId) {
+                <app-booth-photos [locationId]="photoLocationId"></app-booth-photos>
+              }
             </article>
           }
           @if (selectedArea) {
@@ -139,6 +178,29 @@
               }
               @if (selectedArea.scheduleRooms?.length) {
                 <p class="details-note">On the schedule as “{{ selectedArea.scheduleRooms!.join('”, “') }}”.</p>
+              }
+              @if (demoScansEnabled) {
+                @for (location of selectedAreaDemoLocations; track location.id) {
+                  <button
+                    mat-stroked-button
+                    type="button"
+                    class="details-action demo-scan-action"
+                    [disabled]="!!pendingDemoLocationId"
+                    (click)="simulateScan(location)"
+                  >
+                    <div class="btn-content">
+                      @if (pendingDemoLocationId === location.id) {
+                        <mat-spinner diameter="20"></mat-spinner>
+                      } @else {
+                        <mat-icon>qr_code_scanner</mat-icon>
+                        <span>Demo: simulate scan here@if (selectedAreaDemoLocations.length > 1) { ({{ location.name }}) }</span>
+                      }
+                    </div>
+                  </button>
+                }
+                @if (demoScanError && !isDemoPickerOpen) {
+                  <p class="details-note" role="alert">{{ demoScanError }}</p>
+                }
               }
               @if (connectedLevelLabel) {
                 <button mat-stroked-button type="button" class="details-action" (click)="followConnection()">
@@ -247,4 +309,15 @@
       </footer>
     }
   </app-state-wrapper>
+
+  @if (isDemoPickerOpen) {
+    <app-demo-scan-picker
+      [locations]="demoLocations"
+      [isLoading]="isLoadingDemoLocations"
+      [pendingLocationId]="pendingDemoLocationId"
+      [errorMessage]="demoScanError"
+      (picked)="simulateScan($event)"
+      (closed)="closeDemoPicker()"
+    ></app-demo-scan-picker>
+  }
 </section>

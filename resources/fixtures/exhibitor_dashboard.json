@@ -1,0 +1,436 @@
+{
+  "tool": "exhibitor_dashboard",
+  "endpoint": "POST /api/tools/exhibitor_dashboard",
+  "request": {
+    "outpostId": "outpost-dash0",
+    "key": "<staff-key>"
+  },
+  "status": 200,
+  "response": {
+    "exhibitor": {
+      "id": "outpost-dash0",
+      "name": "Dash0",
+      "exhibitorType": "sponsor",
+      "tier": "Platinum",
+      "boothNumber": "134",
+      "hall": "B",
+      "zone": "Starlight Summit",
+      "topics": [
+        "operations"
+      ],
+      "categories": [
+        "Observability",
+        "Application Development + Developer Experience"
+      ],
+      "askAbout": "OpenTelemetry-native observability and tracing a request end to end",
+      "visitorsNow": 3,
+      "building": "Salt Palace",
+      "level": "Level 1",
+      "description": "Dash0 booth in the Solutions Showcase.",
+      "mapPosition": {
+        "x": 198.8,
+        "y": 517
+      }
+    },
+    "scanUrl": "https://kube-quest.cnh.radarhq.io/r/outpost-dash0?t=<signed-token>",
+    "publicPageUrl": "https://kube-quest.cnh.radarhq.io/exhibitors/outpost-dash0",
+    "visits": {
+      "now": 3,
+      "today": 41,
+      "uniqueToday": 37,
+      "conference": 58,
+      "uniqueConference": 51,
+      "firstTimersToday": 12
+    },
+    "byHour": [
+      {
+        "hour": "2026-11-09T15:00:00.000Z",
+        "visits": 2
+      },
+      {
+        "hour": "2026-11-09T16:00:00.000Z",
+        "visits": 5
+      },
+      {
+        "hour": "2026-11-09T17:00:00.000Z",
+        "visits": 7
+      },
+      {
+        "hour": "2026-11-09T18:00:00.000Z",
+        "visits": 4
+      },
+      {
+        "hour": "2026-11-09T19:00:00.000Z",
+        "visits": 9
+      },
+      {
+        "hour": "2026-11-09T20:00:00.000Z",
+        "visits": 6
+      },
+      {
+        "hour": "2026-11-09T21:00:00.000Z",
+        "visits": 5
+      },
+      {
+        "hour": "2026-11-09T22:00:00.000Z",
+        "visits": 3
+      }
+    ],
+    "visitorTopics": [
+      {
+        "value": "observability",
+        "count": 14
+      },
+      {
+        "value": "opentelemetry",
+        "count": 11
+      },
+      {
+        "value": "platform-engineering",
+        "count": 9
+      },
+      {
+        "value": "tracing",
+        "count": 8
+      },
+      {
+        "value": "sre",
+        "count": 6
+      },
+      {
+        "value": "ebpf",
+        "count": 5
+      },
+      {
+        "value": "cost",
+        "count": 4
+      },
+      {
+        "value": "gitops",
+        "count": 4
+      },
+      {
+        "value": "networking",
+        "count": 3
+      },
+      {
+        "value": "ai-agents",
+        "count": 2
+      }
+    ],
+    "visitorLevels": [
+      {
+        "value": "Deployment",
+        "count": 19
+      },
+      {
+        "value": "Node",
+        "count": 14
+      },
+      {
+        "value": "Pod",
+        "count": 9
+      },
+      {
+        "value": "Cluster",
+        "count": 7
+      },
+      {
+        "value": "Control Plane",
+        "count": 2
+      }
+    ],
+    "recentVisitors": [
+      {
+        "player": {
+          "id": "pl_f9564cec0583e8b2",
+          "handle": "otelotter",
+          "faceSeed": "otelotter",
+          "level": 4,
+          "levelName": "Cluster",
+          "xp": 610,
+          "banners": [
+            "welcomer",
+            "scout"
+          ]
+        },
+        "at": "2026-11-09T21:39:02.000Z",
+        "firstTimer": false
+      },
+      {
+        "player": {
+          "id": "pl_4c2ab4d5bed0e6c1",
+          "handle": "ebpfennec",
+          "faceSeed": "ebpfennec",
+          "level": 4,
+          "levelName": "Cluster",
+          "xp": 480,
+          "banners": [
+            "scout"
+          ]
+        },
+        "at": "2026-11-09T21:33:47.000Z",
+        "firstTimer": false
+      },
+      {
+        "player": {
+          "id": "pl_1707737723367c06",
+          "handle": "chaoschinchilla",
+          "faceSeed": "chaoschinchilla",
+          "level": 3,
+          "levelName": "Node",
+          "xp": 230,
+          "banners": []
+        },
+        "at": "2026-11-09T21:27:15.000Z",
+        "firstTimer": true
+      },
+      {
+        "player": {
+          "id": "pl_4b7922086faf8133",
+          "handle": "quietgopher",
+          "faceSeed": "quietgopher",
+          "level": 2,
+          "levelName": "Deployment",
+          "xp": 120,
+          "banners": []
+        },
+        "at": "2026-11-09T21:12:40.000Z",
+        "firstTimer": true
+      },
+      {
+        "player": {
+          "id": "pl_d4a0ab933220caa5",
+          "handle": "agentaxolotl",
+          "faceSeed": "agentaxolotl",
+          "level": 5,
+          "levelName": "Control Plane",
+          "xp": 820,
+          "banners": [
+            "scout"
+          ]
+        },
+        "at": "2026-11-09T20:58:09.000Z",
+        "firstTimer": false
+      },
+      {
+        "player": {
+          "id": "pl_cdaf997eca16a7ca",
+          "handle": "kedakestrel",
+          "faceSeed": "kedakestrel",
+          "level": 2,
+          "levelName": "Deployment",
+          "xp": 175,
+          "banners": []
+        },
+        "at": "2026-11-09T20:41:55.000Z",
+        "firstTimer": false
+      },
+      {
+        "player": {
+          "id": "pl_c5238d60f2c8c9e9",
+          "handle": "ingressibis",
+          "faceSeed": "ingressibis",
+          "level": 4,
+          "levelName": "Cluster",
+          "xp": 455,
+          "banners": [
+            "scout"
+          ]
+        },
+        "at": "2026-11-09T20:20:31.000Z",
+        "firstTimer": false
+      },
+      {
+        "player": {
+          "id": "pl_cda2c9b243cc0083",
+          "handle": "datadugong",
+          "faceSeed": "datadugong",
+          "level": 2,
+          "levelName": "Deployment",
+          "xp": 150,
+          "banners": []
+        },
+        "at": "2026-11-09T19:54:18.000Z",
+        "firstTimer": false
+      },
+      {
+        "player": {
+          "id": "pl_03c2d43c7966e039",
+          "handle": "crdcrane",
+          "faceSeed": "crdcrane",
+          "level": 3,
+          "levelName": "Node",
+          "xp": 340,
+          "banners": [
+            "welcomer"
+          ]
+        },
+        "at": "2026-11-09T19:31:06.000Z",
+        "firstTimer": false
+      },
+      {
+        "player": {
+          "id": "pl_4a56a38e45affac3",
+          "handle": "meshmarmot",
+          "faceSeed": "meshmarmot",
+          "level": 3,
+          "levelName": "Node",
+          "xp": 210,
+          "banners": []
+        },
+        "at": "2026-11-09T19:10:44.000Z",
+        "firstTimer": false
+      },
+      {
+        "player": {
+          "id": "pl_8e4bac77b4a9583e",
+          "handle": "podwrangler",
+          "faceSeed": "podwrangler",
+          "level": 3,
+          "levelName": "Node",
+          "xp": 260,
+          "banners": [
+            "welcomer"
+          ]
+        },
+        "at": "2026-11-09T18:47:29.000Z",
+        "firstTimer": false
+      },
+      {
+        "player": {
+          "id": "pl_6ec69d90c02ad785",
+          "handle": "quotaquokka",
+          "faceSeed": "quotaquokka",
+          "level": 2,
+          "levelName": "Deployment",
+          "xp": 110,
+          "banners": []
+        },
+        "at": "2026-11-09T17:35:12.000Z",
+        "firstTimer": false
+      }
+    ],
+    "hereNow": [
+      {
+        "id": "pl_f9564cec0583e8b2",
+        "handle": "otelotter",
+        "faceSeed": "otelotter",
+        "level": 4,
+        "levelName": "Cluster",
+        "xp": 610,
+        "banners": [
+          "welcomer",
+          "scout"
+        ]
+      },
+      {
+        "id": "pl_4c2ab4d5bed0e6c1",
+        "handle": "ebpfennec",
+        "faceSeed": "ebpfennec",
+        "level": 4,
+        "levelName": "Cluster",
+        "xp": 480,
+        "banners": [
+          "scout"
+        ]
+      },
+      {
+        "id": "pl_1707737723367c06",
+        "handle": "chaoschinchilla",
+        "faceSeed": "chaoschinchilla",
+        "level": 3,
+        "levelName": "Node",
+        "xp": 230,
+        "banners": []
+      }
+    ],
+    "quests": {
+      "offered": 14,
+      "accepted": 9,
+      "completed": 6,
+      "not_now": 3,
+      "declined": 2
+    },
+    "rank": {
+      "position": 4,
+      "of": 61
+    },
+    "generatedAt": "2026-11-09T21:42:10.512Z"
+  },
+  "variants": {
+    "quiet": {
+      "request": {
+        "outpostId": "outpost-project-armada",
+        "key": "<staff-key>"
+      },
+      "status": 200,
+      "response": {
+        "exhibitor": {
+          "id": "outpost-project-armada",
+          "name": "Armada",
+          "exhibitorType": "project",
+          "tier": "Project",
+          "boothNumber": "P-6A",
+          "hall": "5",
+          "zone": "Cosmic Canyon",
+          "topics": [
+            "platform",
+            "ai"
+          ],
+          "categories": [],
+          "askAbout": "How to start contributing to Armada",
+          "visitorsNow": 0,
+          "building": "Salt Palace",
+          "level": "Level 1",
+          "description": "Armada project kiosk P-6A in the Project Pavilion. Staffed Wednesday 10:15 AM – 1:25 PM.",
+          "schedule": "Wednesday 10:15 AM – 1:25 PM"
+        },
+        "scanUrl": "https://kube-quest.cnh.radarhq.io/r/outpost-project-armada?t=<signed-token>",
+        "publicPageUrl": "https://kube-quest.cnh.radarhq.io/exhibitors/outpost-project-armada",
+        "visits": {
+          "now": 0,
+          "today": 0,
+          "uniqueToday": 0,
+          "conference": 0,
+          "uniqueConference": 0,
+          "firstTimersToday": 0
+        },
+        "byHour": [],
+        "visitorTopics": [],
+        "visitorLevels": [],
+        "recentVisitors": [],
+        "hereNow": [],
+        "quests": {},
+        "rank": null,
+        "generatedAt": "2026-11-09T21:42:10.512Z"
+      }
+    },
+    "bad_key": {
+      "request": {
+        "outpostId": "outpost-dash0",
+        "key": "k.not-this-booth"
+      },
+      "status": 403,
+      "response": {
+        "error": {
+          "code": "bad_key",
+          "message": "That link doesn't open this booth's dashboard. Ask the organizers for your booth's staff link."
+        }
+      }
+    },
+    "unknown_outpost": {
+      "request": {
+        "outpostId": "outpost-nope",
+        "key": "<admin-key>"
+      },
+      "status": 404,
+      "response": {
+        "error": {
+          "code": "unknown_outpost",
+          "message": "We could not find that booth. Check the booth list and try again."
+        }
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import { vendorTierOrder } from './venue.constants';
+import { expandSearchAlias, vendorTierOrder } from './venue.constants';
 import { IVendor, IVenueAreaPlacement, IVenueLevelPlacement, IVenueSchematic } from './venue.interfaces';
 
 export class VenueHelper {
@@ -29,14 +29,16 @@ export class VenueHelper {
   }
 
   public static searchVendors(vendors: IVendor[], query: string): IVendor[] {
-    const normalizedQuery = query.trim().toLowerCase();
-    const matches = normalizedQuery
-      ? vendors.filter(
-          (vendor) =>
-            vendor.name.toLowerCase().includes(normalizedQuery) ||
-            vendor.booth.toLowerCase().startsWith(normalizedQuery) ||
-            (vendor.zone ?? '').toLowerCase().includes(normalizedQuery) ||
-            (vendor.categories ?? []).some((category) => category.toLowerCase().includes(normalizedQuery)),
+    const queries = expandSearchAlias(query);
+    const matches = queries[0]
+      ? vendors.filter((vendor) =>
+          queries.some(
+            (normalizedQuery) =>
+              vendor.name.toLowerCase().includes(normalizedQuery) ||
+              vendor.booth.toLowerCase().startsWith(normalizedQuery) ||
+              (vendor.zone ?? '').toLowerCase().includes(normalizedQuery) ||
+              (vendor.categories ?? []).some((category) => category.toLowerCase().includes(normalizedQuery)),
+          ),
         )
       : vendors;
 

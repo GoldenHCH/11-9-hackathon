@@ -9,7 +9,8 @@ resources:
   - service.yaml
   - httproute.yaml
   - otel-collector.yaml
+  - cronjob-nudge.yaml
 images:
   - name: app
     newName: ghcr.io/goldenhch/11-9-hackathon
-    newTag: "afc06c5"
+    newTag: "55404ab"

@@ -24,6 +24,12 @@ export const routes: Routes = [
       import('./quests/quest-board/quest-board.component').then((module) => module.QuestBoardComponent),
   },
   {
+    path: 'itinerary',
+    title: 'Itinerary · KubeQuest',
+    canActivate: [meGuard],
+    loadComponent: () => import('./itinerary/itinerary.component').then((module) => module.ItineraryComponent),
+  },
+  {
     path: 'scan',
     title: 'Scan · KubeQuest',
     loadComponent: () => import('./scan/scanner/scanner.component').then((module) => module.ScannerComponent),
@@ -88,6 +94,33 @@ export const routes: Routes = [
     loadComponent: () => import('./booth/scan-landing/scan-landing.component').then((module) => module.ScanLandingComponent),
   },
   {
+    path: 'notes/talks',
+    title: 'Talk notes · KubeQuest',
+    canActivate: [meGuard],
+    loadComponent: () =>
+      import('./talk-notes/talk-notes-list/talk-notes-list.component').then((module) => module.TalkNotesListComponent),
+  },
+  {
+    path: 'connections',
+    title: 'People met · KubeQuest',
+    canActivate: [meGuard],
+    loadComponent: () =>
+      import('./connections/connections-list/connections-list.component').then((module) => module.ConnectionsListComponent),
+  },
+  {
+    path: 'connections/:connectionId',
+    title: 'Connection · KubeQuest',
+    canActivate: [meGuard],
+    loadComponent: () =>
+      import('./connections/connection-detail/connection-detail.component').then((module) => module.ConnectionDetailComponent),
+  },
+  {
+    path: 'links',
+    title: 'My links · KubeQuest',
+    canActivate: [meGuard],
+    loadComponent: () => import('./links/links-editor/links-editor.component').then((module) => module.LinksEditorComponent),
+  },
+  {
     path: 'notes',
     title: 'My notes · KubeQuest',
     canActivate: [meGuard],
@@ -118,11 +151,36 @@ export const routes: Routes = [
     loadComponent: () => import('./quiz/quiz.component').then((module) => module.QuizComponent),
   },
   {
-    path: 'organizer',
-    title: 'Organizer · KubeQuest',
-    loadComponent: placeholder,
-    data: { title: 'Organizer', icon: 'insights', message: 'Room occupancy and the meet funnel.' },
+    path: 'exhibitors',
+    title: 'Booths · KubeQuest',
+    loadComponent: () =>
+      import('./exhibitors/exhibitor-directory/exhibitor-directory.component').then((module) => module.ExhibitorDirectoryComponent),
   },
+  {
+    path: 'exhibitors/:outpostId',
+    title: 'Booth · KubeQuest',
+    loadComponent: () => import('./exhibitors/exhibitor-page/exhibitor-page.component').then((module) => module.ExhibitorPageComponent),
+  },
+  {
+    path: 'exhibitor',
+    title: 'Exhibitor · KubeQuest',
+    loadComponent: () =>
+      import('./exhibitor-portal/exhibitor-home/exhibitor-home.component').then((module) => module.ExhibitorHomeComponent),
+  },
+  {
+    path: 'exhibitor/:outpostId',
+    title: 'Booth dashboard · KubeQuest',
+    loadComponent: () =>
+      import('./exhibitor-portal/exhibitor-dashboard/exhibitor-dashboard.component').then(
+        (module) => module.ExhibitorDashboardComponent,
+      ),
+  },
+  {
+    path: 'admin',
+    title: 'Organizer · KubeQuest',
+    loadComponent: () => import('./admin/admin-dashboard/admin-dashboard.component').then((module) => module.AdminDashboardComponent),
+  },
+  { path: 'organizer', pathMatch: 'full', redirectTo: 'admin' },
   {
     path: 'screen/:locationId',
     title: 'KubeQuest',

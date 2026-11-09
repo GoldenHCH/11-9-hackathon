@@ -1,0 +1,126 @@
+<section class="app-page">
+  <app-screen-toolbar title="Booths" [subtitle]="subtitle"></app-screen-toolbar>
+
+  @if (staleLinkMessage) {
+    <app-alert-banner [message]="staleLinkMessage" (dismissed)="staleLinkMessage = ''"></app-alert-banner>
+  }
+
+  @if (!attendeeId) {
+    <p class="join-hint app-block">
+      <mat-icon aria-hidden="true">person_add</mat-icon>
+      <span><a routerLink="/signup">Join</a> to see which booths match you and track your visits.</span>
+    </p>
+  }
+
+  <div class="search" role="search">
+    <mat-form-field appearance="outline" class="search-field" subscriptSizing="dynamic">
+      <mat-label>Search booths</mat-label>
+      <mat-icon matPrefix aria-hidden="true">search</mat-icon>
+      <input
+        matInput
+        type="search"
+        autocomplete="off"
+        placeholder="Company, project or topic"
+        [ngModel]="query"
+        (ngModelChange)="onQueryChange($event)"
+      />
+      @if (query) {
+        <button mat-icon-button matSuffix type="button" aria-label="Clear search" (click)="clearQuery()">
+          <mat-icon>close</mat-icon>
+        </button>
+      }
+    </mat-form-field>
+  </div>
+
+  @if (facetGroups.length > 0) {
+    <button
+      mat-stroked-button
+      type="button"
+      class="filters-toggle"
+      aria-controls="booth-filters"
+      [attr.aria-expanded]="showFilters"
+      (click)="showFilters = !showFilters"
+    >
+      <span class="btn-content">
+        <mat-icon aria-hidden="true">tune</mat-icon>
+        <span>{{ showFilters ? 'Hide filters' : 'Filters' }}{{ activeFilterCount > 0 ? ' (' + activeFilterCount + ' on)' : '' }}</span>
+      </span>
+    </button>
+  }
+
+  @if (facetGroups.length > 0 && showFilters) {
+    <div id="booth-filters" class="filters" aria-label="Filters" role="region">
+      @for (group of facetGroups; track group.key) {
+        <div class="filter-group" role="group" [attr.aria-labelledby]="'filter-label-' + group.key">
+          <span class="filter-label app-pixel" [id]="'filter-label-' + group.key">{{ group.label }}</span>
+          <div class="filter-chips">
+            @for (option of group.options; track option.value) {
+              <button
+                type="button"
+                class="filter-chip"
+                [class.filter-chip--on]="isSelected(group.key, option)"
+                [attr.aria-pressed]="isSelected(group.key, option)"
+                (click)="toggleFilter(group.key, option)"
+              >
+                @if (isSelected(group.key, option)) {
+                  <mat-icon aria-hidden="true">check</mat-icon>
+                }
+                <span>{{ option.label }}</span>
+                <span class="filter-count">{{ option.count }}</span>
+              </button>
+            }
+          </div>
+        </div>
+      }
+      @if (hasFilters) {
+        <button mat-stroked-button type="button" class="clear-filters" (click)="clearFilters()">
+          <span class="btn-content">
+            <mat-icon aria-hidden="true">filter_alt_off</mat-icon>
+            <span>Clear filters</span>
+          </span>
+        </button>
+      }
+    </div>
+  }
+
+  <app-state-wrapper
+    [isLoading]="!hasLoaded"
+    [errorMessage]="errorMessage"
+    [isEmpty]="exhibitors.length === 0"
+    emptyIcon="storefront"
+    emptyMessage="No booths match. Try fewer filters."
+    [emptyActionLabel]="hasFilters ? 'Clear filters' : ''"
+    [skeletonRows]="5"
+    (retry)="reload()"
+    (emptyAction)="clearFilters()"
+  >
+    <h2 class="app-visually-hidden">Results</h2>
+    <ul class="booth-grid">
+      @for (exhibitor of exhibitors; track exhibitor.id) {
+        <li class="booth-grid-item">
+          <app-booth-card [exhibitor]="exhibitor"></app-booth-card>
+        </li>
+      }
+    </ul>
+
+    @if (loadMoreError) {
+      <app-alert-banner [message]="loadMoreError" (dismissed)="loadMoreError = ''"></app-alert-banner>
+    }
+
+    @if (hasMore) {
+      <div class="more">
+        <p class="more-count">Showing {{ exhibitors.length }} of {{ total }}</p>
+        <button mat-flat-button type="button" [disabled]="isLoadingMore" (click)="loadMore()">
+          @if (isLoadingMore) {
+            <mat-spinner diameter="20" aria-label="Loading more booths"></mat-spinner>
+          } @else {
+            <span class="btn-content">
+              <mat-icon aria-hidden="true">expand_more</mat-icon>
+              <span>Show more</span>
+            </span>
+          }
+        </button>
+      </div>
+    }
+  </app-state-wrapper>
+</section>

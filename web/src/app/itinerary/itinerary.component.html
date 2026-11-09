@@ -1,0 +1,283 @@
+<section class="itinerary app-page">
+  <p class="app-visually-hidden" aria-live="polite" aria-atomic="true">{{ liveMessage }}</p>
+
+  <app-screen-toolbar title="Itinerary" subtitle="What's on, and your plan for the day"></app-screen-toolbar>
+
+  <div class="days" role="group" aria-label="Conference day">
+    @for (option of days; track option.day) {
+      <button
+        type="button"
+        class="day"
+        [class.day--active]="option.day === selectedDay"
+        [attr.aria-pressed]="option.day === selectedDay"
+        [attr.aria-label]="option.label + ' November ' + option.date + (option.day === today ? ', today' : '')"
+        (click)="selectDay(option.day)"
+      >
+        <span class="day-label kq-pixel">{{ option.label }}</span>
+        <span class="day-date">{{ option.date }}</span>
+        @if (option.day === today) {
+          <span class="day-today" aria-hidden="true"></span>
+        }
+      </button>
+    }
+  </div>
+
+  <div class="panes-toggle" role="group" aria-label="Show">
+    <button
+      type="button"
+      class="panes-toggle-option"
+      [class.panes-toggle-option--active]="pane === 'schedule'"
+      [attr.aria-pressed]="pane === 'schedule'"
+      (click)="showPane('schedule')"
+    >
+      What's on
+    </button>
+    <button
+      type="button"
+      class="panes-toggle-option"
+      [class.panes-toggle-option--active]="pane === 'plan'"
+      [attr.aria-pressed]="pane === 'plan'"
+      (click)="showPane('plan')"
+    >
+      My plan
+      @if (plannedCount) {
+        <span class="panes-toggle-count">{{ plannedCount }}</span>
+      }
+    </button>
+  </div>
+
+  @if (actionError) {
+    <app-alert-banner [message]="actionError" (dismissed)="actionError = ''"></app-alert-banner>
+  }
+
+  <div class="panes">
+    <!-- What's on -->
+    <section class="pane pane--schedule" [class.pane--hidden]="pane !== 'schedule'" aria-labelledby="schedule-heading">
+      <h2 class="pane-title kq-pixel" id="schedule-heading">What's on</h2>
+
+      <div class="filters">
+        <button
+          type="button"
+          class="chip"
+          [class.chip--active]="nowOnly"
+          [attr.aria-pressed]="nowOnly"
+          [disabled]="!isToday"
+          (click)="toggleNow()"
+        >
+          <mat-icon aria-hidden="true">schedule</mat-icon>
+          <span>Now</span>
+        </button>
+
+        <mat-form-field appearance="outline" class="filter filter--select" subscriptSizing="dynamic">
+          <mat-label>Track</mat-label>
+          <mat-select [(ngModel)]="track" (selectionChange)="onFilterChange()">
+            <mat-option value="">All tracks</mat-option>
+            @for (option of tracks; track option.id) {
+              <mat-option [value]="option.id">{{ option.label }}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="filter filter--select" subscriptSizing="dynamic">
+          <mat-label>Building</mat-label>
+          <mat-select [(ngModel)]="building" (selectionChange)="onFilterChange()">
+            <mat-option value="">Both buildings</mat-option>
+            @for (name of buildings; track name) {
+              <mat-option [value]="name">{{ name }}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="filter filter--search" subscriptSizing="dynamic">
+          <mat-label>Search sessions or speakers</mat-label>
+          <mat-icon matPrefix aria-hidden="true">search</mat-icon>
+          <input matInput type="search" [ngModel]="query" (ngModelChange)="onQueryChange($event)" autocomplete="off" />
+        </mat-form-field>
+      </div>
+
+      <div class="pane-scroll" tabindex="0" aria-label="Sessions by time">
+        <app-state-wrapper
+          [isLoading]="isScheduleLoading && !schedule"
+          [errorMessage]="schedule ? '' : scheduleError"
+          [isEmpty]="!!schedule && slots.length === 0"
+          emptyIcon="event_busy"
+          [emptyMessage]="hasFilters ? 'Nothing matches those filters.' : 'Nothing on the schedule this day yet.'"
+          [emptyActionLabel]="hasFilters ? 'Clear filters' : ''"
+          [skeletonRows]="5"
+          (retry)="loadSchedule()"
+          (emptyAction)="clearFilters()"
+        >
+          @if (schedule && scheduleError) {
+            <app-alert-banner [message]="scheduleError" actionLabel="Try again" [dismissible]="false" (action)="loadSchedule()"></app-alert-banner>
+          }
+          <ol class="timeline" [class.timeline--busy]="isScheduleLoading">
+            @for (slot of slots; track slot.start; let slotIndex = $index) {
+              @if (slotIndex === scheduleNowIndex) {
+                <li class="now-line" aria-label="Now">
+                  <span class="now-line-label kq-pixel">Now {{ nowLabel }}</span>
+                </li>
+              }
+              <li class="slot">
+                <div class="slot-time">
+                  <span class="slot-time-label kq-pixel">{{ time(slot.start) }}</span>
+                </div>
+                <div class="slot-sessions">
+                  @for (session of slot.sessions; track session.id) {
+                    <app-session-card
+                      [session]="session"
+                      [isPlanned]="isPlanned(session.id)"
+                      [isBusy]="busyIds.has(session.id)"
+                      [isQuestBusy]="questBusyIds.has(session.id)"
+                      [isQuestMade]="questMadeIds.has(session.id)"
+                      [isLive]="isLive(session)"
+                      (togglePlan)="togglePlan($event)"
+                      (makeQuest)="makeQuest($event)"
+                    ></app-session-card>
+                  }
+                </div>
+              </li>
+            }
+            @if (scheduleNowIndex === slots.length && slots.length > 0) {
+              <li class="now-line" aria-label="Now">
+                <span class="now-line-label kq-pixel">Now {{ nowLabel }}</span>
+              </li>
+            }
+          </ol>
+        </app-state-wrapper>
+      </div>
+    </section>
+
+    <!-- My plan -->
+    <section class="pane pane--plan" [class.pane--hidden]="pane !== 'plan'" aria-labelledby="plan-heading">
+      <h2 class="pane-title kq-pixel" id="plan-heading">
+        My plan
+        @if (conflictCount > 0) {
+          <span class="pane-warning">
+            <mat-icon aria-hidden="true">warning</mat-icon>
+            {{ conflictCount }} overlapping
+          </span>
+        }
+      </h2>
+
+      <div class="pane-scroll" tabindex="0" aria-label="My plan in time order">
+        <app-state-wrapper
+          [isLoading]="isPlanLoading && !itinerary"
+          [errorMessage]="itinerary ? '' : planError"
+          [isEmpty]="!!itinerary && planItems.length === 0"
+          emptyIcon="event_note"
+          emptyMessage="Nothing planned for this day. Tap Add on a session to build your plan."
+          [emptyActionLabel]="pane === 'plan' ? 'See what’s on' : ''"
+          [skeletonRows]="3"
+          (retry)="loadPlan()"
+          (emptyAction)="showPane('schedule')"
+        >
+          @if (itinerary && planError) {
+            <app-alert-banner [message]="planError" actionLabel="Try again" [dismissible]="false" (action)="loadPlan()"></app-alert-banner>
+          }
+          <ol class="plan">
+            @for (item of planItems; track item.id; let itemIndex = $index) {
+              @if (itemIndex === planNowIndex) {
+                <li class="now-line" aria-label="Now">
+                  <span class="now-line-label kq-pixel">Now {{ nowLabel }}</span>
+                </li>
+              }
+
+              @if (item.kind === 'gap') {
+                <li class="plan-gap">
+                  <mat-icon aria-hidden="true">free_breakfast</mat-icon>
+                  <span>{{ item.gapMinutes }} min free:</span>
+                  <a class="plan-gap-link" routerLink="/people">see who's around</a>
+                </li>
+              } @else {
+                @if (item.walkMinutes !== undefined && itemIndex > 0) {
+                  <li class="plan-walk">
+                    <mat-icon aria-hidden="true">directions_walk</mat-icon>
+                    <span>{{ walkLabel(item) }}</span>
+                  </li>
+                }
+                <li
+                  class="plan-item kq-block"
+                  [class.plan-item--conflict]="item.conflictsWith.length > 0"
+                  [class.plan-item--now]="item.isNow"
+                  [class.plan-item--provisional]="!!item.talkId && busyIds.has(item.talkId)"
+                >
+                  <div class="plan-item-head">
+                    @if (item.session) {
+                      <span class="kq-swatch kq-swatch--{{ item.session.material }} plan-swatch" aria-hidden="true"></span>
+                    } @else {
+                      <mat-icon class="plan-kind" aria-hidden="true">{{ kindIcon(item) }}</mat-icon>
+                    }
+                    <span class="plan-time">{{ range(item.start, item.end) }}</span>
+                    @if (item.kind !== 'talk') {
+                      <span class="plan-tag kq-pixel">{{ item.kind }}</span>
+                    }
+                    @if (item.session?.isBoss) {
+                      <span class="plan-tag plan-tag--boss kq-pixel">Boss</span>
+                    }
+                  </div>
+                  <h3 class="plan-title">{{ item.title }}</h3>
+                  @if (placeLabel(item)) {
+                    <p class="plan-line">
+                      <mat-icon aria-hidden="true">place</mat-icon>
+                      <span>{{ placeLabel(item) }}</span>
+                    </p>
+                  }
+                  @if (item.conflictsWith.length > 0) {
+                    <p class="plan-conflict" role="note">
+                      <mat-icon aria-hidden="true">warning</mat-icon>
+                      <span>{{ conflictLabel(item) }}</span>
+                    </p>
+                  }
+                  <div class="plan-actions">
+                    @if (item.kind === 'talk' && item.session) {
+                      @if (item.quizAvailable) {
+                        <a mat-flat-button class="plan-action" [routerLink]="['/quiz', item.talkId]">
+                          <div class="btn-content">
+                            <mat-icon aria-hidden="true">quiz</mat-icon>
+                            <span>Open quiz</span>
+                          </div>
+                        </a>
+                      }
+                      <button
+                        mat-stroked-button
+                        class="plan-action"
+                        type="button"
+                        [disabled]="!!item.talkId && busyIds.has(item.talkId)"
+                        [attr.aria-label]="'Remove from my plan: ' + item.title"
+                        (click)="removeItem(item)"
+                      >
+                        <div class="btn-content">
+                          <mat-icon aria-hidden="true">close</mat-icon>
+                          <span>Remove</span>
+                        </div>
+                      </button>
+                    } @else if (item.kind === 'meet' && item.meetId) {
+                      <a mat-stroked-button class="plan-action" [routerLink]="['/intro', item.meetId]">
+                        <div class="btn-content">
+                          <mat-icon aria-hidden="true">handshake</mat-icon>
+                          <span>Open meet</span>
+                        </div>
+                      </a>
+                    } @else if (item.kind === 'quest') {
+                      <a mat-stroked-button class="plan-action" routerLink="/quests">
+                        <div class="btn-content">
+                          <mat-icon aria-hidden="true">flag</mat-icon>
+                          <span>Open quest</span>
+                        </div>
+                      </a>
+                    }
+                  </div>
+                </li>
+              }
+            }
+            @if (planNowIndex === planItems.length && planItems.length > 0) {
+              <li class="now-line" aria-label="Now">
+                <span class="now-line-label kq-pixel">Now {{ nowLabel }}</span>
+              </li>
+            }
+          </ol>
+        </app-state-wrapper>
+      </div>
+    </section>
+  </div>
+</section>

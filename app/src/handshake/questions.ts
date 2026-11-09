@@ -1,7 +1,9 @@
 import { createHash } from 'node:crypto';
 import { phraseHandshakeQuestion } from '../ai/handshake';
 import { esOptions, getEsClient } from '../es/client';
+import { kindIsOrLegacy } from '../es/doc-kind.helper';
 import { esTimeouts, indexNames } from '../es/es.constants';
+import { docKinds } from '../types/connections.constants';
 import { IHandshakeQuestion } from '../types/internal.interfaces';
 import { IAttendee } from '../types/kubequest.interfaces';
 
@@ -39,7 +41,7 @@ async function countBoothNotes(attendeeId: string): Promise<number> {
   const response = await getEsClient().count(
     {
       index: indexNames.BOOTH_NOTES,
-      query: { bool: { filter: [{ term: { attendeeId } }, { range: { xpAwarded: { gt: 0 } } }] } },
+      query: { bool: { filter: [{ term: { attendeeId } }, kindIsOrLegacy(docKinds.BOOTH_NOTE), { range: { xpAwarded: { gt: 0 } } }] } },
     },
     { ...esOptions(esTimeouts.SEARCH_MS), ignore: [404] },
   );

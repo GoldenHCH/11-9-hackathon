@@ -1,0 +1,34 @@
+{
+  "tool": "save_talk_note",
+  "endpoint": "POST /api/tools/save_talk_note",
+  "request": {
+    "attendeeId": "p_<attendeeId>",
+    "talkId": "kc26-tue-tracing-at-scale",
+    "note": "Nubank runs 16B spans an hour through a Collector fleet. Load-balancing exporter by trace id, then tail sampling on errors and slow spans.",
+    "takeaways": [
+      "Shard the Collector by trace id before tail sampling",
+      "Keep 100% of error traces, sample the rest",
+      "Budget memory per Collector pod and alert on refused spans"
+    ]
+  },
+  "status": 200,
+  "response": {
+    "id": "tn-a1ce7976235c488945228131",
+    "talkId": "kc26-tue-tracing-at-scale",
+    "talkTitle": "Tracing at Scale: Running a 16 Billion Spans/Hour Pipeline at Nubank",
+    "speakers": [
+      "Felipe Araujo (Nubank)",
+      "Kaynan Coelho (Nubank)"
+    ],
+    "room": "Grand Ballroom ACE",
+    "start": "2026-11-10T14:50:00-07:00",
+    "note": "Nubank runs 16B spans an hour through a Collector fleet. Load-balancing exporter by trace id, then tail sampling on errors and slow spans.",
+    "takeaways": [
+      "Shard the Collector by trace id before tail sampling",
+      "Keep 100% of error traces, sample the rest",
+      "Budget memory per Collector pod and alert on refused spans"
+    ],
+    "createdAt": "2026-11-09T22:24:05.160Z",
+    "updatedAt": "2026-11-09T22:29:19.733Z"
+  }
+}

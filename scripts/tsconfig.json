@@ -3,7 +3,8 @@
   "compilerOptions": {
     "rootDir": "..",
     "noEmit": true,
-    "typeRoots": ["../app/node_modules/@types"]
+    "typeRoots": ["../app/node_modules/@types", "../node_modules/@types"]
   },
-  "include": ["*.ts", "../app/src/**/*.ts"]
+  "include": ["*.ts", "../app/src/**/*.ts"],
+  "exclude": ["build-fixtures.ts"]
 }
