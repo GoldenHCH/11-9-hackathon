@@ -1,0 +1,5247 @@
+[
+  {
+    "id": "xp-check-in-105-1",
+    "attendeeId": "att-105",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "cnh-kickoff-dash0",
+    "locationId": "the-shop-workspace-hackathon-floor",
+    "at": "2026-11-09T10:01:00-07:00"
+  },
+  {
+    "id": "xp-check-in-060-1",
+    "attendeeId": "att-060",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "cnh-kickoff-dash0",
+    "locationId": "the-shop-workspace-hackathon-floor",
+    "at": "2026-11-09T10:02:00-07:00"
+  },
+  {
+    "id": "xp-check-in-070-1",
+    "attendeeId": "att-070",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "cnh-kickoff-dash0",
+    "locationId": "the-shop-workspace-hackathon-floor",
+    "at": "2026-11-09T10:09:00-07:00"
+  },
+  {
+    "id": "xp-check-in-124-1",
+    "attendeeId": "att-124",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "cnh-kickoff-dash0",
+    "locationId": "the-shop-workspace-hackathon-floor",
+    "at": "2026-11-09T10:11:00-07:00"
+  },
+  {
+    "id": "xp-handshake-005-2",
+    "attendeeId": "att-005",
+    "type": "handshake",
+    "xp": 50,
+    "locationId": "mp-network-nook",
+    "introId": "intro-003",
+    "at": "2026-11-10T10:01:00-07:00"
+  },
+  {
+    "id": "xp-welcome-005-2",
+    "attendeeId": "att-005",
+    "type": "welcome",
+    "xp": 25,
+    "locationId": "mp-network-nook",
+    "introId": "intro-003",
+    "at": "2026-11-10T10:01:00-07:00"
+  },
+  {
+    "id": "xp-handshake-072-1",
+    "attendeeId": "att-072",
+    "type": "handshake",
+    "xp": 50,
+    "locationId": "mp-network-nook",
+    "introId": "intro-003",
+    "at": "2026-11-10T10:01:00-07:00"
+  },
+  {
+    "id": "xp-check-in-010-1",
+    "attendeeId": "att-010",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1349401",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:06:00-07:00"
+  },
+  {
+    "id": "xp-check-in-127-1",
+    "attendeeId": "att-127",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1349401",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:06:00-07:00"
+  },
+  {
+    "id": "xp-check-in-077-1",
+    "attendeeId": "att-077",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1349401",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:07:00-07:00"
+  },
+  {
+    "id": "xp-check-in-095-1",
+    "attendeeId": "att-095",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1349401",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:07:00-07:00"
+  },
+  {
+    "id": "xp-check-in-026-1",
+    "attendeeId": "att-026",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1349401",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:08:00-07:00"
+  },
+  {
+    "id": "xp-check-in-085-1",
+    "attendeeId": "att-085",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1349401",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:08:00-07:00"
+  },
+  {
+    "id": "xp-check-in-098-1",
+    "attendeeId": "att-098",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1349401",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:08:00-07:00"
+  },
+  {
+    "id": "xp-check-in-142-1",
+    "attendeeId": "att-142",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1349401",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:08:00-07:00"
+  },
+  {
+    "id": "xp-check-in-017-1",
+    "attendeeId": "att-017",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1349401",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:09:00-07:00"
+  },
+  {
+    "id": "xp-check-in-036-1",
+    "attendeeId": "att-036",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1349401",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:09:00-07:00"
+  },
+  {
+    "id": "xp-check-in-086-1",
+    "attendeeId": "att-086",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1349401",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:09:00-07:00"
+  },
+  {
+    "id": "xp-check-in-140-1",
+    "attendeeId": "att-140",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1349401",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:09:00-07:00"
+  },
+  {
+    "id": "xp-check-in-134-1",
+    "attendeeId": "att-134",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1349401",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:10:00-07:00"
+  },
+  {
+    "id": "xp-check-in-143-1",
+    "attendeeId": "att-143",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1349401",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:10:00-07:00"
+  },
+  {
+    "id": "xp-check-in-064-1",
+    "attendeeId": "att-064",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1349401",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:11:00-07:00"
+  },
+  {
+    "id": "xp-check-in-069-1",
+    "attendeeId": "att-069",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1349401",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:11:00-07:00"
+  },
+  {
+    "id": "xp-check-in-092-1",
+    "attendeeId": "att-092",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1349401",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:11:00-07:00"
+  },
+  {
+    "id": "xp-quiz-092-1",
+    "attendeeId": "att-092",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1349401",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:25:00-07:00"
+  },
+  {
+    "id": "xp-quiz-143-1",
+    "attendeeId": "att-143",
+    "type": "quiz",
+    "xp": 15,
+    "talkId": "talk-1349401",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:25:00-07:00"
+  },
+  {
+    "id": "xp-check-in-013-1",
+    "attendeeId": "att-013",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1309267",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:30:00-07:00"
+  },
+  {
+    "id": "xp-check-in-055-1",
+    "attendeeId": "att-055",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1309267",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:30:00-07:00"
+  },
+  {
+    "id": "xp-check-in-045-1",
+    "attendeeId": "att-045",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1309267",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:31:00-07:00"
+  },
+  {
+    "id": "xp-check-in-081-1",
+    "attendeeId": "att-081",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1309267",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:31:00-07:00"
+  },
+  {
+    "id": "xp-check-in-083-1",
+    "attendeeId": "att-083",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1309267",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:31:00-07:00"
+  },
+  {
+    "id": "xp-check-in-097-1",
+    "attendeeId": "att-097",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1309267",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:31:00-07:00"
+  },
+  {
+    "id": "xp-check-in-148-1",
+    "attendeeId": "att-148",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1309267",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:31:00-07:00"
+  },
+  {
+    "id": "xp-check-in-031-1",
+    "attendeeId": "att-031",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1309267",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:32:00-07:00"
+  },
+  {
+    "id": "xp-quiz-069-1",
+    "attendeeId": "att-069",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1349401",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:32:00-07:00"
+  },
+  {
+    "id": "xp-check-in-139-1",
+    "attendeeId": "att-139",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1309267",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:32:00-07:00"
+  },
+  {
+    "id": "xp-check-in-063-1",
+    "attendeeId": "att-063",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1309267",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:33:00-07:00"
+  },
+  {
+    "id": "xp-check-in-065-1",
+    "attendeeId": "att-065",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1309267",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:33:00-07:00"
+  },
+  {
+    "id": "xp-check-in-034-1",
+    "attendeeId": "att-034",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1309267",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:34:00-07:00"
+  },
+  {
+    "id": "xp-check-in-041-1",
+    "attendeeId": "att-041",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1309267",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:34:00-07:00"
+  },
+  {
+    "id": "xp-check-in-112-1",
+    "attendeeId": "att-112",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1309267",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:34:00-07:00"
+  },
+  {
+    "id": "xp-check-in-147-1",
+    "attendeeId": "att-147",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1309267",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:34:00-07:00"
+  },
+  {
+    "id": "xp-check-in-061-1",
+    "attendeeId": "att-061",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1309267",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:35:00-07:00"
+  },
+  {
+    "id": "xp-check-in-130-1",
+    "attendeeId": "att-130",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1309267",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:35:00-07:00"
+  },
+  {
+    "id": "xp-check-in-054-1",
+    "attendeeId": "att-054",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1309267",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:36:00-07:00"
+  },
+  {
+    "id": "xp-check-in-102-1",
+    "attendeeId": "att-102",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1309267",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:36:00-07:00"
+  },
+  {
+    "id": "xp-quiz-134-1",
+    "attendeeId": "att-134",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1349401",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:36:00-07:00"
+  },
+  {
+    "id": "xp-check-in-004-1",
+    "attendeeId": "att-004",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1309267",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:37:00-07:00"
+  },
+  {
+    "id": "xp-check-in-059-1",
+    "attendeeId": "att-059",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1309267",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:37:00-07:00"
+  },
+  {
+    "id": "xp-check-in-117-1",
+    "attendeeId": "att-117",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1309267",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:37:00-07:00"
+  },
+  {
+    "id": "xp-quiz-064-1",
+    "attendeeId": "att-064",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1349401",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:39:00-07:00"
+  },
+  {
+    "id": "xp-quiz-013-1",
+    "attendeeId": "att-013",
+    "type": "quiz",
+    "xp": 15,
+    "talkId": "talk-1309267",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:41:00-07:00"
+  },
+  {
+    "id": "xp-quiz-045-1",
+    "attendeeId": "att-045",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1309267",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:44:00-07:00"
+  },
+  {
+    "id": "xp-quiz-148-1",
+    "attendeeId": "att-148",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1309267",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:44:00-07:00"
+  },
+  {
+    "id": "xp-quiz-083-1",
+    "attendeeId": "att-083",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1309267",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:47:00-07:00"
+  },
+  {
+    "id": "xp-check-in-029-1",
+    "attendeeId": "att-029",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1374035",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T10:51:00-07:00"
+  },
+  {
+    "id": "xp-check-in-017-2",
+    "attendeeId": "att-017",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1374035",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T10:54:00-07:00"
+  },
+  {
+    "id": "xp-check-in-064-2",
+    "attendeeId": "att-064",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1374035",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T10:55:00-07:00"
+  },
+  {
+    "id": "xp-check-in-111-1",
+    "attendeeId": "att-111",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1374035",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T10:56:00-07:00"
+  },
+  {
+    "id": "xp-quiz-130-1",
+    "attendeeId": "att-130",
+    "type": "quiz",
+    "xp": 15,
+    "talkId": "talk-1309267",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T10:56:00-07:00"
+  },
+  {
+    "id": "xp-check-in-127-2",
+    "attendeeId": "att-127",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1374035",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T10:57:00-07:00"
+  },
+  {
+    "id": "xp-check-in-030-1",
+    "attendeeId": "att-030",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1374035",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T11:00:00-07:00"
+  },
+  {
+    "id": "xp-check-in-009-1",
+    "attendeeId": "att-009",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1371070",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T11:01:00-07:00"
+  },
+  {
+    "id": "xp-check-in-021-1",
+    "attendeeId": "att-021",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1371070",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T11:01:00-07:00"
+  },
+  {
+    "id": "xp-check-in-071-1",
+    "attendeeId": "att-071",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1371070",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T11:01:00-07:00"
+  },
+  {
+    "id": "xp-check-in-085-2",
+    "attendeeId": "att-085",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1371070",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T11:02:00-07:00"
+  },
+  {
+    "id": "xp-check-in-103-1",
+    "attendeeId": "att-103",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1374035",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T11:02:00-07:00"
+  },
+  {
+    "id": "xp-quiz-117-1",
+    "attendeeId": "att-117",
+    "type": "quiz",
+    "xp": 15,
+    "talkId": "talk-1309267",
+    "locationId": "salt-palace-hall-de",
+    "at": "2026-11-10T11:03:00-07:00"
+  },
+  {
+    "id": "xp-check-in-086-2",
+    "attendeeId": "att-086",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1382533",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T11:04:00-07:00"
+  },
+  {
+    "id": "xp-check-in-143-2",
+    "attendeeId": "att-143",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1371070",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T11:04:00-07:00"
+  },
+  {
+    "id": "xp-check-in-010-2",
+    "attendeeId": "att-010",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1371070",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T11:05:00-07:00"
+  },
+  {
+    "id": "xp-check-in-116-1",
+    "attendeeId": "att-116",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1374035",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T11:06:00-07:00"
+  },
+  {
+    "id": "xp-check-in-125-1",
+    "attendeeId": "att-125",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1374035",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T11:06:00-07:00"
+  },
+  {
+    "id": "xp-handshake-005-1",
+    "attendeeId": "att-005",
+    "type": "handshake",
+    "xp": 50,
+    "locationId": "mp-salt-palace-coffee",
+    "introId": "intro-001",
+    "at": "2026-11-10T11:07:00-07:00"
+  },
+  {
+    "id": "xp-welcome-005-1",
+    "attendeeId": "att-005",
+    "type": "welcome",
+    "xp": 25,
+    "locationId": "mp-salt-palace-coffee",
+    "introId": "intro-001",
+    "at": "2026-11-10T11:07:00-07:00"
+  },
+  {
+    "id": "xp-handshake-013-1",
+    "attendeeId": "att-013",
+    "type": "handshake",
+    "xp": 50,
+    "locationId": "mp-salt-palace-coffee",
+    "introId": "intro-001",
+    "at": "2026-11-10T11:07:00-07:00"
+  },
+  {
+    "id": "xp-check-in-087-1",
+    "attendeeId": "att-087",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1371070",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T11:07:00-07:00"
+  },
+  {
+    "id": "xp-badge-005-welcomer",
+    "attendeeId": "att-005",
+    "type": "badge",
+    "xp": 20,
+    "at": "2026-11-10T11:08:00-07:00"
+  },
+  {
+    "id": "xp-check-in-057-1",
+    "attendeeId": "att-057",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1382533",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T11:08:00-07:00"
+  },
+  {
+    "id": "xp-check-in-095-2",
+    "attendeeId": "att-095",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1371070",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T11:08:00-07:00"
+  },
+  {
+    "id": "xp-check-in-096-1",
+    "attendeeId": "att-096",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1374035",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T11:08:00-07:00"
+  },
+  {
+    "id": "xp-check-in-041-2",
+    "attendeeId": "att-041",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1382533",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T11:10:00-07:00"
+  },
+  {
+    "id": "xp-check-in-049-1",
+    "attendeeId": "att-049",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1371070",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T11:10:00-07:00"
+  },
+  {
+    "id": "xp-check-in-026-2",
+    "attendeeId": "att-026",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1371070",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T11:11:00-07:00"
+  },
+  {
+    "id": "xp-quiz-064-2",
+    "attendeeId": "att-064",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1374035",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T11:11:00-07:00"
+  },
+  {
+    "id": "xp-check-in-008-1",
+    "attendeeId": "att-008",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1371070",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T11:13:00-07:00"
+  },
+  {
+    "id": "xp-quiz-021-1",
+    "attendeeId": "att-021",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1371070",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T11:13:00-07:00"
+  },
+  {
+    "id": "xp-check-in-133-1",
+    "attendeeId": "att-133",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1371070",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T11:13:00-07:00"
+  },
+  {
+    "id": "xp-quiz-111-1",
+    "attendeeId": "att-111",
+    "type": "quiz",
+    "xp": 15,
+    "talkId": "talk-1374035",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T11:14:00-07:00"
+  },
+  {
+    "id": "xp-check-in-002-1",
+    "attendeeId": "att-002",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1361484",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T11:16:00-07:00"
+  },
+  {
+    "id": "xp-check-in-083-2",
+    "attendeeId": "att-083",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1361484",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T11:16:00-07:00"
+  },
+  {
+    "id": "xp-check-in-139-2",
+    "attendeeId": "att-139",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1361484",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T11:16:00-07:00"
+  },
+  {
+    "id": "xp-check-in-098-2",
+    "attendeeId": "att-098",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1361484",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T11:17:00-07:00"
+  },
+  {
+    "id": "xp-check-in-112-2",
+    "attendeeId": "att-112",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1361484",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T11:17:00-07:00"
+  },
+  {
+    "id": "xp-check-in-022-1",
+    "attendeeId": "att-022",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1361484",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T11:18:00-07:00"
+  },
+  {
+    "id": "xp-check-in-046-1",
+    "attendeeId": "att-046",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1333734",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T11:18:00-07:00"
+  },
+  {
+    "id": "xp-check-in-004-2",
+    "attendeeId": "att-004",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1361484",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T11:19:00-07:00"
+  },
+  {
+    "id": "xp-check-in-130-2",
+    "attendeeId": "att-130",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1361484",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T11:19:00-07:00"
+  },
+  {
+    "id": "xp-quiz-017-1",
+    "attendeeId": "att-017",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1374035",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T11:20:00-07:00"
+  },
+  {
+    "id": "xp-quiz-127-1",
+    "attendeeId": "att-127",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1374035",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T11:20:00-07:00"
+  },
+  {
+    "id": "xp-check-in-081-2",
+    "attendeeId": "att-081",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1361484",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T11:21:00-07:00"
+  },
+  {
+    "id": "xp-check-in-107-1",
+    "attendeeId": "att-107",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1361484",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T11:21:00-07:00"
+  },
+  {
+    "id": "xp-check-in-148-2",
+    "attendeeId": "att-148",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1361484",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T11:21:00-07:00"
+  },
+  {
+    "id": "xp-check-in-092-2",
+    "attendeeId": "att-092",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1333734",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T11:22:00-07:00"
+  },
+  {
+    "id": "xp-check-in-036-2",
+    "attendeeId": "att-036",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1361484",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T11:25:00-07:00"
+  },
+  {
+    "id": "xp-quiz-086-1",
+    "attendeeId": "att-086",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1382533",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T11:25:00-07:00"
+  },
+  {
+    "id": "xp-check-in-093-1",
+    "attendeeId": "att-093",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1333734",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T11:25:00-07:00"
+  },
+  {
+    "id": "xp-quiz-103-1",
+    "attendeeId": "att-103",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1374035",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T11:26:00-07:00"
+  },
+  {
+    "id": "xp-quiz-009-1",
+    "attendeeId": "att-009",
+    "type": "quiz",
+    "xp": 15,
+    "talkId": "talk-1371070",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T11:27:00-07:00"
+  },
+  {
+    "id": "xp-check-in-106-1",
+    "attendeeId": "att-106",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1333734",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T11:27:00-07:00"
+  },
+  {
+    "id": "xp-quiz-133-1",
+    "attendeeId": "att-133",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1371070",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T11:27:00-07:00"
+  },
+  {
+    "id": "xp-check-in-072-1",
+    "attendeeId": "att-072",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1361484",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T11:29:00-07:00"
+  },
+  {
+    "id": "xp-check-in-134-2",
+    "attendeeId": "att-134",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1361484",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T11:29:00-07:00"
+  },
+  {
+    "id": "xp-quiz-008-1",
+    "attendeeId": "att-008",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1371070",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T11:30:00-07:00"
+  },
+  {
+    "id": "xp-quiz-083-2",
+    "attendeeId": "att-083",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1361484",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T11:30:00-07:00"
+  },
+  {
+    "id": "xp-check-in-051-1",
+    "attendeeId": "att-051",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1227395",
+    "locationId": "salt-palace-151",
+    "at": "2026-11-10T11:31:00-07:00"
+  },
+  {
+    "id": "xp-quiz-112-1",
+    "attendeeId": "att-112",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1361484",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T11:31:00-07:00"
+  },
+  {
+    "id": "xp-check-in-053-1",
+    "attendeeId": "att-053",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289730",
+    "locationId": "salt-palace-250-d-f",
+    "at": "2026-11-10T11:32:00-07:00"
+  },
+  {
+    "id": "xp-check-in-059-2",
+    "attendeeId": "att-059",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1250350",
+    "locationId": "salt-palace-grand-ballroom-ace",
+    "at": "2026-11-10T11:32:00-07:00"
+  },
+  {
+    "id": "xp-check-in-077-2",
+    "attendeeId": "att-077",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1294771",
+    "locationId": "salt-palace-255-d",
+    "at": "2026-11-10T11:32:00-07:00"
+  },
+  {
+    "id": "xp-check-in-136-1",
+    "attendeeId": "att-136",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289730",
+    "locationId": "salt-palace-250-d-f",
+    "at": "2026-11-10T11:32:00-07:00"
+  },
+  {
+    "id": "xp-quiz-022-1",
+    "attendeeId": "att-022",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1361484",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T11:33:00-07:00"
+  },
+  {
+    "id": "xp-check-in-060-2",
+    "attendeeId": "att-060",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1294771",
+    "locationId": "salt-palace-255-d",
+    "at": "2026-11-10T11:33:00-07:00"
+  },
+  {
+    "id": "xp-quiz-095-1",
+    "attendeeId": "att-095",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1371070",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T11:33:00-07:00"
+  },
+  {
+    "id": "xp-check-in-034-2",
+    "attendeeId": "att-034",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1249749",
+    "locationId": "salt-palace-grand-ballroom-gi",
+    "at": "2026-11-10T11:34:00-07:00"
+  },
+  {
+    "id": "xp-check-in-018-1",
+    "attendeeId": "att-018",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1233585",
+    "locationId": "salt-palace-255-bc",
+    "at": "2026-11-10T11:36:00-07:00"
+  },
+  {
+    "id": "xp-quiz-098-1",
+    "attendeeId": "att-098",
+    "type": "quiz",
+    "xp": 15,
+    "talkId": "talk-1361484",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T11:36:00-07:00"
+  },
+  {
+    "id": "xp-handshake-008-1",
+    "attendeeId": "att-008",
+    "type": "handshake",
+    "xp": 50,
+    "locationId": "mp-network-nook",
+    "introId": "intro-002",
+    "at": "2026-11-10T11:37:00-07:00"
+  },
+  {
+    "id": "xp-handshake-025-1",
+    "attendeeId": "att-025",
+    "type": "handshake",
+    "xp": 50,
+    "locationId": "mp-network-nook",
+    "introId": "intro-002",
+    "at": "2026-11-10T11:37:00-07:00"
+  },
+  {
+    "id": "xp-quiz-049-1",
+    "attendeeId": "att-049",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1371070",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T11:37:00-07:00"
+  },
+  {
+    "id": "xp-check-in-124-2",
+    "attendeeId": "att-124",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1335605",
+    "locationId": "salt-palace-250-a-c",
+    "at": "2026-11-10T11:38:00-07:00"
+  },
+  {
+    "id": "xp-check-in-137-1",
+    "attendeeId": "att-137",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1335605",
+    "locationId": "salt-palace-250-a-c",
+    "at": "2026-11-10T11:38:00-07:00"
+  },
+  {
+    "id": "xp-check-in-024-1",
+    "attendeeId": "att-024",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1294771",
+    "locationId": "salt-palace-255-d",
+    "at": "2026-11-10T11:39:00-07:00"
+  },
+  {
+    "id": "xp-quiz-026-1",
+    "attendeeId": "att-026",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1371070",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T11:39:00-07:00"
+  },
+  {
+    "id": "xp-quiz-046-1",
+    "attendeeId": "att-046",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1333734",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T11:39:00-07:00"
+  },
+  {
+    "id": "xp-quiz-081-1",
+    "attendeeId": "att-081",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1361484",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T11:39:00-07:00"
+  },
+  {
+    "id": "xp-check-in-069-2",
+    "attendeeId": "att-069",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1250350",
+    "locationId": "salt-palace-grand-ballroom-ace",
+    "at": "2026-11-10T11:40:00-07:00"
+  },
+  {
+    "id": "xp-quiz-139-1",
+    "attendeeId": "att-139",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1361484",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T11:40:00-07:00"
+  },
+  {
+    "id": "xp-quiz-004-1",
+    "attendeeId": "att-004",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1361484",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T11:41:00-07:00"
+  },
+  {
+    "id": "xp-check-in-063-2",
+    "attendeeId": "att-063",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1335605",
+    "locationId": "salt-palace-250-a-c",
+    "at": "2026-11-10T11:41:00-07:00"
+  },
+  {
+    "id": "xp-check-in-071-2",
+    "attendeeId": "att-071",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1249351",
+    "locationId": "hyatt-regency-regency-ballroom-cd",
+    "at": "2026-11-10T11:42:00-07:00"
+  },
+  {
+    "id": "xp-check-in-070-2",
+    "attendeeId": "att-070",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1335605",
+    "locationId": "salt-palace-250-a-c",
+    "at": "2026-11-10T11:43:00-07:00"
+  },
+  {
+    "id": "xp-quiz-092-2",
+    "attendeeId": "att-092",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1333734",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T11:45:00-07:00"
+  },
+  {
+    "id": "xp-check-in-117-2",
+    "attendeeId": "att-117",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1233585",
+    "locationId": "salt-palace-255-bc",
+    "at": "2026-11-10T11:45:00-07:00"
+  },
+  {
+    "id": "xp-check-in-140-2",
+    "attendeeId": "att-140",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289709",
+    "locationId": "salt-palace-254",
+    "at": "2026-11-10T11:45:00-07:00"
+  },
+  {
+    "id": "xp-quiz-148-2",
+    "attendeeId": "att-148",
+    "type": "quiz",
+    "xp": 15,
+    "talkId": "talk-1361484",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T11:45:00-07:00"
+  },
+  {
+    "id": "xp-check-in-054-2",
+    "attendeeId": "att-054",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1294771",
+    "locationId": "salt-palace-255-d",
+    "at": "2026-11-10T11:47:00-07:00"
+  },
+  {
+    "id": "xp-check-in-095-3",
+    "attendeeId": "att-095",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1250350",
+    "locationId": "salt-palace-grand-ballroom-ace",
+    "at": "2026-11-10T11:47:00-07:00"
+  },
+  {
+    "id": "xp-check-in-109-1",
+    "attendeeId": "att-109",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289709",
+    "locationId": "salt-palace-254",
+    "at": "2026-11-10T11:47:00-07:00"
+  },
+  {
+    "id": "xp-quiz-018-1",
+    "attendeeId": "att-018",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1233585",
+    "locationId": "salt-palace-255-bc",
+    "at": "2026-11-10T11:48:00-07:00"
+  },
+  {
+    "id": "xp-quiz-072-1",
+    "attendeeId": "att-072",
+    "type": "quiz",
+    "xp": 15,
+    "talkId": "talk-1361484",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T11:48:00-07:00"
+  },
+  {
+    "id": "xp-check-in-125-2",
+    "attendeeId": "att-125",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289709",
+    "locationId": "salt-palace-254",
+    "at": "2026-11-10T11:48:00-07:00"
+  },
+  {
+    "id": "xp-quiz-134-2",
+    "attendeeId": "att-134",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1361484",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T11:48:00-07:00"
+  },
+  {
+    "id": "xp-check-in-049-2",
+    "attendeeId": "att-049",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289709",
+    "locationId": "salt-palace-254",
+    "at": "2026-11-10T11:49:00-07:00"
+  },
+  {
+    "id": "xp-check-in-132-1",
+    "attendeeId": "att-132",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1335605",
+    "locationId": "salt-palace-250-a-c",
+    "at": "2026-11-10T11:51:00-07:00"
+  },
+  {
+    "id": "xp-check-in-102-2",
+    "attendeeId": "att-102",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1250350",
+    "locationId": "salt-palace-grand-ballroom-ace",
+    "at": "2026-11-10T11:52:00-07:00"
+  },
+  {
+    "id": "xp-quiz-070-1",
+    "attendeeId": "att-070",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1335605",
+    "locationId": "salt-palace-250-a-c",
+    "at": "2026-11-10T11:53:00-07:00"
+  },
+  {
+    "id": "xp-check-in-014-1",
+    "attendeeId": "att-014",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289716",
+    "locationId": "salt-palace-251-d-f",
+    "at": "2026-11-10T11:54:00-07:00"
+  },
+  {
+    "id": "xp-quiz-059-1",
+    "attendeeId": "att-059",
+    "type": "quiz",
+    "xp": 15,
+    "talkId": "talk-1250350",
+    "locationId": "salt-palace-grand-ballroom-ace",
+    "at": "2026-11-10T11:54:00-07:00"
+  },
+  {
+    "id": "xp-check-in-142-2",
+    "attendeeId": "att-142",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1378907",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T11:54:00-07:00"
+  },
+  {
+    "id": "xp-check-in-007-1",
+    "attendeeId": "att-007",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1250326",
+    "locationId": "hyatt-regency-regency-ballroom-a",
+    "at": "2026-11-10T11:55:00-07:00"
+  },
+  {
+    "id": "xp-check-in-038-1",
+    "attendeeId": "att-038",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1227395",
+    "locationId": "salt-palace-151",
+    "at": "2026-11-10T11:55:00-07:00"
+  },
+  {
+    "id": "xp-check-in-085-3",
+    "attendeeId": "att-085",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1246200",
+    "locationId": "salt-palace-grand-ballroom-h",
+    "at": "2026-11-10T11:55:00-07:00"
+  },
+  {
+    "id": "xp-check-in-103-2",
+    "attendeeId": "att-103",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1249351",
+    "locationId": "hyatt-regency-regency-ballroom-cd",
+    "at": "2026-11-10T11:55:00-07:00"
+  },
+  {
+    "id": "xp-check-in-120-1",
+    "attendeeId": "att-120",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289694",
+    "locationId": "salt-palace-251-a-c",
+    "at": "2026-11-10T11:55:00-07:00"
+  },
+  {
+    "id": "xp-check-in-061-2",
+    "attendeeId": "att-061",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1294771",
+    "locationId": "salt-palace-255-d",
+    "at": "2026-11-10T11:56:00-07:00"
+  },
+  {
+    "id": "xp-check-in-111-2",
+    "attendeeId": "att-111",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289709",
+    "locationId": "salt-palace-254",
+    "at": "2026-11-10T11:56:00-07:00"
+  },
+  {
+    "id": "xp-quiz-109-1",
+    "attendeeId": "att-109",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1289709",
+    "locationId": "salt-palace-254",
+    "at": "2026-11-10T11:57:00-07:00"
+  },
+  {
+    "id": "xp-check-in-013-2",
+    "attendeeId": "att-013",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1246765",
+    "locationId": "hyatt-regency-salt-lake-ballroom-c",
+    "at": "2026-11-10T11:58:00-07:00"
+  },
+  {
+    "id": "xp-check-in-126-1",
+    "attendeeId": "att-126",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1249749",
+    "locationId": "salt-palace-grand-ballroom-gi",
+    "at": "2026-11-10T11:58:00-07:00"
+  },
+  {
+    "id": "xp-quiz-077-1",
+    "attendeeId": "att-077",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1294771",
+    "locationId": "salt-palace-255-d",
+    "at": "2026-11-10T11:59:00-07:00"
+  },
+  {
+    "id": "xp-check-in-101-1",
+    "attendeeId": "att-101",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1294764",
+    "locationId": "salt-palace-255-a",
+    "at": "2026-11-10T12:00:00-07:00"
+  },
+  {
+    "id": "xp-check-in-006-1",
+    "attendeeId": "att-006",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1250326",
+    "locationId": "hyatt-regency-regency-ballroom-a",
+    "at": "2026-11-10T12:01:00-07:00"
+  },
+  {
+    "id": "xp-check-in-031-2",
+    "attendeeId": "att-031",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1250326",
+    "locationId": "hyatt-regency-regency-ballroom-a",
+    "at": "2026-11-10T12:01:00-07:00"
+  },
+  {
+    "id": "xp-check-in-092-3",
+    "attendeeId": "att-092",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1250326",
+    "locationId": "hyatt-regency-regency-ballroom-a",
+    "at": "2026-11-10T12:01:00-07:00"
+  },
+  {
+    "id": "xp-check-in-004-3",
+    "attendeeId": "att-004",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1294771",
+    "locationId": "salt-palace-255-d",
+    "at": "2026-11-10T12:02:00-07:00"
+  },
+  {
+    "id": "xp-quiz-034-1",
+    "attendeeId": "att-034",
+    "type": "quiz",
+    "xp": 15,
+    "talkId": "talk-1249749",
+    "locationId": "salt-palace-grand-ballroom-gi",
+    "at": "2026-11-10T12:02:00-07:00"
+  },
+  {
+    "id": "xp-check-in-036-3",
+    "attendeeId": "att-036",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1294764",
+    "locationId": "salt-palace-255-a",
+    "at": "2026-11-10T12:02:00-07:00"
+  },
+  {
+    "id": "xp-check-in-045-2",
+    "attendeeId": "att-045",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1334787",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T12:03:00-07:00"
+  },
+  {
+    "id": "xp-quiz-095-2",
+    "attendeeId": "att-095",
+    "type": "quiz",
+    "xp": 15,
+    "talkId": "talk-1250350",
+    "locationId": "salt-palace-grand-ballroom-ace",
+    "at": "2026-11-10T12:03:00-07:00"
+  },
+  {
+    "id": "xp-quiz-117-2",
+    "attendeeId": "att-117",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1233585",
+    "locationId": "salt-palace-255-bc",
+    "at": "2026-11-10T12:04:00-07:00"
+  },
+  {
+    "id": "xp-quiz-132-1",
+    "attendeeId": "att-132",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1335605",
+    "locationId": "salt-palace-250-a-c",
+    "at": "2026-11-10T12:04:00-07:00"
+  },
+  {
+    "id": "xp-quiz-142-1",
+    "attendeeId": "att-142",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1378907",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T12:04:00-07:00"
+  },
+  {
+    "id": "xp-quiz-014-1",
+    "attendeeId": "att-014",
+    "type": "quiz",
+    "xp": 15,
+    "talkId": "talk-1289716",
+    "locationId": "salt-palace-251-d-f",
+    "at": "2026-11-10T12:06:00-07:00"
+  },
+  {
+    "id": "xp-check-in-065-2",
+    "attendeeId": "att-065",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1250326",
+    "locationId": "hyatt-regency-regency-ballroom-a",
+    "at": "2026-11-10T12:06:00-07:00"
+  },
+  {
+    "id": "xp-check-in-066-1",
+    "attendeeId": "att-066",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1294764",
+    "locationId": "salt-palace-255-a",
+    "at": "2026-11-10T12:07:00-07:00"
+  },
+  {
+    "id": "xp-check-in-096-2",
+    "attendeeId": "att-096",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1334787",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T12:07:00-07:00"
+  },
+  {
+    "id": "xp-quiz-140-1",
+    "attendeeId": "att-140",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1289709",
+    "locationId": "salt-palace-254",
+    "at": "2026-11-10T12:07:00-07:00"
+  },
+  {
+    "id": "xp-check-in-048-1",
+    "attendeeId": "att-048",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1250326",
+    "locationId": "hyatt-regency-regency-ballroom-a",
+    "at": "2026-11-10T12:08:00-07:00"
+  },
+  {
+    "id": "xp-check-in-118-1",
+    "attendeeId": "att-118",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1250326",
+    "locationId": "hyatt-regency-regency-ballroom-a",
+    "at": "2026-11-10T12:09:00-07:00"
+  },
+  {
+    "id": "xp-quiz-007-1",
+    "attendeeId": "att-007",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1250326",
+    "locationId": "hyatt-regency-regency-ballroom-a",
+    "at": "2026-11-10T12:10:00-07:00"
+  },
+  {
+    "id": "xp-check-in-143-3",
+    "attendeeId": "att-143",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1250326",
+    "locationId": "hyatt-regency-regency-ballroom-a",
+    "at": "2026-11-10T12:10:00-07:00"
+  },
+  {
+    "id": "xp-check-in-059-3",
+    "attendeeId": "att-059",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1294764",
+    "locationId": "salt-palace-255-a",
+    "at": "2026-11-10T12:12:00-07:00"
+  },
+  {
+    "id": "xp-check-in-055-2",
+    "attendeeId": "att-055",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1294771",
+    "locationId": "salt-palace-255-d",
+    "at": "2026-11-10T12:13:00-07:00"
+  },
+  {
+    "id": "xp-check-in-067-1",
+    "attendeeId": "att-067",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1361493",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T12:13:00-07:00"
+  },
+  {
+    "id": "xp-quiz-103-2",
+    "attendeeId": "att-103",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1249351",
+    "locationId": "hyatt-regency-regency-ballroom-cd",
+    "at": "2026-11-10T12:13:00-07:00"
+  },
+  {
+    "id": "xp-check-in-093-2",
+    "attendeeId": "att-093",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1250326",
+    "locationId": "hyatt-regency-regency-ballroom-a",
+    "at": "2026-11-10T12:14:00-07:00"
+  },
+  {
+    "id": "xp-check-in-097-2",
+    "attendeeId": "att-097",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1250326",
+    "locationId": "hyatt-regency-regency-ballroom-a",
+    "at": "2026-11-10T12:15:00-07:00"
+  },
+  {
+    "id": "xp-quiz-092-3",
+    "attendeeId": "att-092",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1250326",
+    "locationId": "hyatt-regency-regency-ballroom-a",
+    "at": "2026-11-10T12:16:00-07:00"
+  },
+  {
+    "id": "xp-check-in-099-1",
+    "attendeeId": "att-099",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1294764",
+    "locationId": "salt-palace-255-a",
+    "at": "2026-11-10T12:16:00-07:00"
+  },
+  {
+    "id": "xp-quiz-085-1",
+    "attendeeId": "att-085",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1246200",
+    "locationId": "salt-palace-grand-ballroom-h",
+    "at": "2026-11-10T12:17:00-07:00"
+  },
+  {
+    "id": "xp-check-in-132-2",
+    "attendeeId": "att-132",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1294771",
+    "locationId": "salt-palace-255-d",
+    "at": "2026-11-10T12:17:00-07:00"
+  },
+  {
+    "id": "xp-quiz-038-1",
+    "attendeeId": "att-038",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1227395",
+    "locationId": "salt-palace-151",
+    "at": "2026-11-10T12:19:00-07:00"
+  },
+  {
+    "id": "xp-check-in-139-3",
+    "attendeeId": "att-139",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1294771",
+    "locationId": "salt-palace-255-d",
+    "at": "2026-11-10T12:19:00-07:00"
+  },
+  {
+    "id": "xp-check-in-148-3",
+    "attendeeId": "att-148",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1334788",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T12:19:00-07:00"
+  },
+  {
+    "id": "xp-check-in-041-3",
+    "attendeeId": "att-041",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1250326",
+    "locationId": "hyatt-regency-regency-ballroom-a",
+    "at": "2026-11-10T12:20:00-07:00"
+  },
+  {
+    "id": "xp-check-in-069-3",
+    "attendeeId": "att-069",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1250326",
+    "locationId": "hyatt-regency-regency-ballroom-a",
+    "at": "2026-11-10T12:20:00-07:00"
+  },
+  {
+    "id": "xp-check-in-083-3",
+    "attendeeId": "att-083",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1250326",
+    "locationId": "hyatt-regency-regency-ballroom-a",
+    "at": "2026-11-10T12:20:00-07:00"
+  },
+  {
+    "id": "xp-quiz-102-1",
+    "attendeeId": "att-102",
+    "type": "quiz",
+    "xp": 15,
+    "talkId": "talk-1250350",
+    "locationId": "salt-palace-grand-ballroom-ace",
+    "at": "2026-11-10T12:20:00-07:00"
+  },
+  {
+    "id": "xp-quiz-101-1",
+    "attendeeId": "att-101",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1294764",
+    "locationId": "salt-palace-255-a",
+    "at": "2026-11-10T12:21:00-07:00"
+  },
+  {
+    "id": "xp-check-in-134-3",
+    "attendeeId": "att-134",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289670",
+    "locationId": "salt-palace-250-a-c",
+    "at": "2026-11-10T12:21:00-07:00"
+  },
+  {
+    "id": "xp-check-in-122-1",
+    "attendeeId": "att-122",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1249997",
+    "locationId": "salt-palace-grand-ballroom-ace",
+    "at": "2026-11-10T12:22:00-07:00"
+  },
+  {
+    "id": "xp-check-in-002-2",
+    "attendeeId": "att-002",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1250838",
+    "locationId": "hyatt-regency-salt-lake-ballroom-de",
+    "at": "2026-11-10T12:23:00-07:00"
+  },
+  {
+    "id": "xp-check-in-021-2",
+    "attendeeId": "att-021",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289675",
+    "locationId": "salt-palace-251-a-c",
+    "at": "2026-11-10T12:23:00-07:00"
+  },
+  {
+    "id": "xp-check-in-024-2",
+    "attendeeId": "att-024",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1251252",
+    "locationId": "salt-palace-grand-ballroom-bdf",
+    "at": "2026-11-10T12:23:00-07:00"
+  },
+  {
+    "id": "xp-check-in-147-2",
+    "attendeeId": "att-147",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1250326",
+    "locationId": "hyatt-regency-regency-ballroom-a",
+    "at": "2026-11-10T12:23:00-07:00"
+  },
+  {
+    "id": "xp-check-in-072-2",
+    "attendeeId": "att-072",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1251252",
+    "locationId": "salt-palace-grand-ballroom-bdf",
+    "at": "2026-11-10T12:24:00-07:00"
+  },
+  {
+    "id": "xp-check-in-047-1",
+    "attendeeId": "att-047",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1246033",
+    "locationId": "salt-palace-grand-ballroom-gi",
+    "at": "2026-11-10T12:25:00-07:00"
+  },
+  {
+    "id": "xp-quiz-048-1",
+    "attendeeId": "att-048",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1250326",
+    "locationId": "hyatt-regency-regency-ballroom-a",
+    "at": "2026-11-10T12:25:00-07:00"
+  },
+  {
+    "id": "xp-quiz-096-1",
+    "attendeeId": "att-096",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1334787",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T12:25:00-07:00"
+  },
+  {
+    "id": "xp-check-in-046-2",
+    "attendeeId": "att-046",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1251252",
+    "locationId": "salt-palace-grand-ballroom-bdf",
+    "at": "2026-11-10T12:26:00-07:00"
+  },
+  {
+    "id": "xp-check-in-063-3",
+    "attendeeId": "att-063",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1334788",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T12:26:00-07:00"
+  },
+  {
+    "id": "xp-check-in-080-1",
+    "attendeeId": "att-080",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1246033",
+    "locationId": "salt-palace-grand-ballroom-gi",
+    "at": "2026-11-10T12:26:00-07:00"
+  },
+  {
+    "id": "xp-check-in-029-2",
+    "attendeeId": "att-029",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1250838",
+    "locationId": "hyatt-regency-salt-lake-ballroom-de",
+    "at": "2026-11-10T12:27:00-07:00"
+  },
+  {
+    "id": "xp-check-in-102-3",
+    "attendeeId": "att-102",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1241594",
+    "locationId": "salt-palace-255-ef",
+    "at": "2026-11-10T12:27:00-07:00"
+  },
+  {
+    "id": "xp-check-in-107-2",
+    "attendeeId": "att-107",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289704",
+    "locationId": "salt-palace-250-d-f",
+    "at": "2026-11-10T12:27:00-07:00"
+  },
+  {
+    "id": "xp-quiz-143-2",
+    "attendeeId": "att-143",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1250326",
+    "locationId": "hyatt-regency-regency-ballroom-a",
+    "at": "2026-11-10T12:27:00-07:00"
+  },
+  {
+    "id": "xp-check-in-087-2",
+    "attendeeId": "att-087",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1248038",
+    "locationId": "salt-palace-255-bc",
+    "at": "2026-11-10T12:28:00-07:00"
+  },
+  {
+    "id": "xp-check-in-131-1",
+    "attendeeId": "att-131",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1294771",
+    "locationId": "salt-palace-255-d",
+    "at": "2026-11-10T12:28:00-07:00"
+  },
+  {
+    "id": "xp-quiz-067-1",
+    "attendeeId": "att-067",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1361493",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T12:29:00-07:00"
+  },
+  {
+    "id": "xp-check-in-007-2",
+    "attendeeId": "att-007",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289647",
+    "locationId": "salt-palace-254",
+    "at": "2026-11-10T12:30:00-07:00"
+  },
+  {
+    "id": "xp-check-in-095-4",
+    "attendeeId": "att-095",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289704",
+    "locationId": "salt-palace-250-d-f",
+    "at": "2026-11-10T12:30:00-07:00"
+  },
+  {
+    "id": "xp-check-in-112-3",
+    "attendeeId": "att-112",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289704",
+    "locationId": "salt-palace-250-d-f",
+    "at": "2026-11-10T12:30:00-07:00"
+  },
+  {
+    "id": "xp-quiz-069-2",
+    "attendeeId": "att-069",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1250326",
+    "locationId": "hyatt-regency-regency-ballroom-a",
+    "at": "2026-11-10T12:31:00-07:00"
+  },
+  {
+    "id": "xp-check-in-008-2",
+    "attendeeId": "att-008",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1250326",
+    "locationId": "hyatt-regency-regency-ballroom-a",
+    "at": "2026-11-10T12:33:00-07:00"
+  },
+  {
+    "id": "xp-check-in-014-2",
+    "attendeeId": "att-014",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1361545",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T12:33:00-07:00"
+  },
+  {
+    "id": "xp-check-in-010-3",
+    "attendeeId": "att-010",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289647",
+    "locationId": "salt-palace-254",
+    "at": "2026-11-10T12:34:00-07:00"
+  },
+  {
+    "id": "xp-quiz-024-1",
+    "attendeeId": "att-024",
+    "type": "quiz",
+    "xp": 15,
+    "talkId": "talk-1251252",
+    "locationId": "salt-palace-grand-ballroom-bdf",
+    "at": "2026-11-10T12:34:00-07:00"
+  },
+  {
+    "id": "xp-check-in-094-1",
+    "attendeeId": "att-094",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1333738",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T12:34:00-07:00"
+  },
+  {
+    "id": "xp-quiz-099-1",
+    "attendeeId": "att-099",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1294764",
+    "locationId": "salt-palace-255-a",
+    "at": "2026-11-10T12:34:00-07:00"
+  },
+  {
+    "id": "xp-quiz-041-1",
+    "attendeeId": "att-041",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1250326",
+    "locationId": "hyatt-regency-regency-ballroom-a",
+    "at": "2026-11-10T12:35:00-07:00"
+  },
+  {
+    "id": "xp-check-in-098-3",
+    "attendeeId": "att-098",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1250838",
+    "locationId": "hyatt-regency-salt-lake-ballroom-de",
+    "at": "2026-11-10T12:35:00-07:00"
+  },
+  {
+    "id": "xp-check-in-124-3",
+    "attendeeId": "att-124",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1361545",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T12:35:00-07:00"
+  },
+  {
+    "id": "xp-quiz-132-2",
+    "attendeeId": "att-132",
+    "type": "quiz",
+    "xp": 15,
+    "talkId": "talk-1294771",
+    "locationId": "salt-palace-255-d",
+    "at": "2026-11-10T12:35:00-07:00"
+  },
+  {
+    "id": "xp-check-in-137-2",
+    "attendeeId": "att-137",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1294771",
+    "locationId": "salt-palace-255-d",
+    "at": "2026-11-10T12:35:00-07:00"
+  },
+  {
+    "id": "xp-check-in-018-2",
+    "attendeeId": "att-018",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1241594",
+    "locationId": "salt-palace-255-ef",
+    "at": "2026-11-10T12:36:00-07:00"
+  },
+  {
+    "id": "xp-quiz-021-2",
+    "attendeeId": "att-021",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1289675",
+    "locationId": "salt-palace-251-a-c",
+    "at": "2026-11-10T12:36:00-07:00"
+  },
+  {
+    "id": "xp-check-in-109-2",
+    "attendeeId": "att-109",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1247300",
+    "locationId": "salt-palace-151",
+    "at": "2026-11-10T12:36:00-07:00"
+  },
+  {
+    "id": "xp-badge-124-observability-nerd",
+    "attendeeId": "att-124",
+    "type": "badge",
+    "xp": 20,
+    "at": "2026-11-10T12:36:00-07:00"
+  },
+  {
+    "id": "xp-check-in-044-1",
+    "attendeeId": "att-044",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289670",
+    "locationId": "salt-palace-250-a-c",
+    "at": "2026-11-10T12:37:00-07:00"
+  },
+  {
+    "id": "xp-quiz-046-2",
+    "attendeeId": "att-046",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1251252",
+    "locationId": "salt-palace-grand-ballroom-bdf",
+    "at": "2026-11-10T12:37:00-07:00"
+  },
+  {
+    "id": "xp-check-in-106-2",
+    "attendeeId": "att-106",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1249997",
+    "locationId": "salt-palace-grand-ballroom-ace",
+    "at": "2026-11-10T12:38:00-07:00"
+  },
+  {
+    "id": "xp-check-in-146-1",
+    "attendeeId": "att-146",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289675",
+    "locationId": "salt-palace-251-a-c",
+    "at": "2026-11-10T12:38:00-07:00"
+  },
+  {
+    "id": "xp-check-in-089-1",
+    "attendeeId": "att-089",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1247300",
+    "locationId": "salt-palace-151",
+    "at": "2026-11-10T12:39:00-07:00"
+  },
+  {
+    "id": "xp-quiz-055-1",
+    "attendeeId": "att-055",
+    "type": "quiz",
+    "xp": 15,
+    "talkId": "talk-1294771",
+    "locationId": "salt-palace-255-d",
+    "at": "2026-11-10T12:41:00-07:00"
+  },
+  {
+    "id": "xp-quiz-080-1",
+    "attendeeId": "att-080",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1246033",
+    "locationId": "salt-palace-grand-ballroom-gi",
+    "at": "2026-11-10T12:41:00-07:00"
+  },
+  {
+    "id": "xp-check-in-086-3",
+    "attendeeId": "att-086",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289670",
+    "locationId": "salt-palace-250-a-c",
+    "at": "2026-11-10T12:42:00-07:00"
+  },
+  {
+    "id": "xp-check-in-120-2",
+    "attendeeId": "att-120",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1241594",
+    "locationId": "salt-palace-255-ef",
+    "at": "2026-11-10T12:42:00-07:00"
+  },
+  {
+    "id": "xp-quiz-112-2",
+    "attendeeId": "att-112",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1289704",
+    "locationId": "salt-palace-250-d-f",
+    "at": "2026-11-10T12:43:00-07:00"
+  },
+  {
+    "id": "xp-check-in-133-2",
+    "attendeeId": "att-133",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1202627",
+    "locationId": "hyatt-regency-regency-ballroom-cd",
+    "at": "2026-11-10T12:44:00-07:00"
+  },
+  {
+    "id": "xp-quiz-094-1",
+    "attendeeId": "att-094",
+    "type": "quiz",
+    "xp": 15,
+    "talkId": "talk-1333738",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T12:45:00-07:00"
+  },
+  {
+    "id": "xp-quiz-098-2",
+    "attendeeId": "att-098",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1250838",
+    "locationId": "hyatt-regency-salt-lake-ballroom-de",
+    "at": "2026-11-10T12:45:00-07:00"
+  },
+  {
+    "id": "xp-check-in-144-1",
+    "attendeeId": "att-144",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289732",
+    "locationId": "salt-palace-251-d-f",
+    "at": "2026-11-10T12:46:00-07:00"
+  },
+  {
+    "id": "xp-quiz-148-3",
+    "attendeeId": "att-148",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1334788",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T12:47:00-07:00"
+  },
+  {
+    "id": "xp-quiz-002-1",
+    "attendeeId": "att-002",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1250838",
+    "locationId": "hyatt-regency-salt-lake-ballroom-de",
+    "at": "2026-11-10T12:48:00-07:00"
+  },
+  {
+    "id": "xp-check-in-009-2",
+    "attendeeId": "att-009",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1294764",
+    "locationId": "salt-palace-255-a",
+    "at": "2026-11-10T12:48:00-07:00"
+  },
+  {
+    "id": "xp-quiz-018-2",
+    "attendeeId": "att-018",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1241594",
+    "locationId": "salt-palace-255-ef",
+    "at": "2026-11-10T12:48:00-07:00"
+  },
+  {
+    "id": "xp-quiz-083-3",
+    "attendeeId": "att-083",
+    "type": "quiz",
+    "xp": 15,
+    "talkId": "talk-1250326",
+    "locationId": "hyatt-regency-regency-ballroom-a",
+    "at": "2026-11-10T12:48:00-07:00"
+  },
+  {
+    "id": "xp-check-in-132-3",
+    "attendeeId": "att-132",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1361545",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T12:48:00-07:00"
+  },
+  {
+    "id": "xp-quiz-122-1",
+    "attendeeId": "att-122",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1249997",
+    "locationId": "salt-palace-grand-ballroom-ace",
+    "at": "2026-11-10T12:49:00-07:00"
+  },
+  {
+    "id": "xp-badge-132-observability-nerd",
+    "attendeeId": "att-132",
+    "type": "badge",
+    "xp": 20,
+    "at": "2026-11-10T12:49:00-07:00"
+  },
+  {
+    "id": "xp-quiz-131-1",
+    "attendeeId": "att-131",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1294771",
+    "locationId": "salt-palace-255-d",
+    "at": "2026-11-10T12:50:00-07:00"
+  },
+  {
+    "id": "xp-quiz-102-2",
+    "attendeeId": "att-102",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1241594",
+    "locationId": "salt-palace-255-ef",
+    "at": "2026-11-10T12:51:00-07:00"
+  },
+  {
+    "id": "xp-quiz-089-1",
+    "attendeeId": "att-089",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1247300",
+    "locationId": "salt-palace-151",
+    "at": "2026-11-10T12:52:00-07:00"
+  },
+  {
+    "id": "xp-quiz-044-1",
+    "attendeeId": "att-044",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1289670",
+    "locationId": "salt-palace-250-a-c",
+    "at": "2026-11-10T12:53:00-07:00"
+  },
+  {
+    "id": "xp-quiz-095-3",
+    "attendeeId": "att-095",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1289704",
+    "locationId": "salt-palace-250-d-f",
+    "at": "2026-11-10T12:53:00-07:00"
+  },
+  {
+    "id": "xp-quiz-029-1",
+    "attendeeId": "att-029",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1250838",
+    "locationId": "hyatt-regency-salt-lake-ballroom-de",
+    "at": "2026-11-10T12:55:00-07:00"
+  },
+  {
+    "id": "xp-check-in-045-3",
+    "attendeeId": "att-045",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1362463",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T12:56:00-07:00"
+  },
+  {
+    "id": "xp-check-in-070-3",
+    "attendeeId": "att-070",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1362463",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T12:56:00-07:00"
+  },
+  {
+    "id": "xp-check-in-114-1",
+    "attendeeId": "att-114",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1362463",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T12:56:00-07:00"
+  },
+  {
+    "id": "xp-badge-070-observability-nerd",
+    "attendeeId": "att-070",
+    "type": "badge",
+    "xp": 20,
+    "at": "2026-11-10T12:57:00-07:00"
+  },
+  {
+    "id": "xp-check-in-053-2",
+    "attendeeId": "att-053",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1362463",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:00:00-07:00"
+  },
+  {
+    "id": "xp-check-in-073-1",
+    "attendeeId": "att-073",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1362463",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:01:00-07:00"
+  },
+  {
+    "id": "xp-check-in-102-4",
+    "attendeeId": "att-102",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1362463",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:03:00-07:00"
+  },
+  {
+    "id": "xp-check-in-012-1",
+    "attendeeId": "att-012",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1362463",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:04:00-07:00"
+  },
+  {
+    "id": "xp-check-in-049-3",
+    "attendeeId": "att-049",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1362463",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:04:00-07:00"
+  },
+  {
+    "id": "xp-check-in-101-2",
+    "attendeeId": "att-101",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1362463",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:04:00-07:00"
+  },
+  {
+    "id": "xp-check-in-104-1",
+    "attendeeId": "att-104",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1362463",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:04:00-07:00"
+  },
+  {
+    "id": "xp-check-in-137-3",
+    "attendeeId": "att-137",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1362463",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:04:00-07:00"
+  },
+  {
+    "id": "xp-check-in-071-3",
+    "attendeeId": "att-071",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1362463",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:05:00-07:00"
+  },
+  {
+    "id": "xp-badge-137-observability-nerd",
+    "attendeeId": "att-137",
+    "type": "badge",
+    "xp": 20,
+    "at": "2026-11-10T13:05:00-07:00"
+  },
+  {
+    "id": "xp-check-in-037-1",
+    "attendeeId": "att-037",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1362463",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:06:00-07:00"
+  },
+  {
+    "id": "xp-check-in-117-3",
+    "attendeeId": "att-117",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1334794",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T13:06:00-07:00"
+  },
+  {
+    "id": "xp-check-in-demo-platform-1",
+    "attendeeId": "att-demo-platform",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1334794",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T13:06:00-07:00"
+  },
+  {
+    "id": "xp-check-in-105-2",
+    "attendeeId": "att-105",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1362463",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:07:00-07:00"
+  },
+  {
+    "id": "xp-quiz-144-1",
+    "attendeeId": "att-144",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1289732",
+    "locationId": "salt-palace-251-d-f",
+    "at": "2026-11-10T13:08:00-07:00"
+  },
+  {
+    "id": "xp-check-in-130-3",
+    "attendeeId": "att-130",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1334794",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T13:09:00-07:00"
+  },
+  {
+    "id": "xp-quiz-053-1",
+    "attendeeId": "att-053",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1362463",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:10:00-07:00"
+  },
+  {
+    "id": "xp-check-in-143-4",
+    "attendeeId": "att-143",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1362463",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:10:00-07:00"
+  },
+  {
+    "id": "xp-check-in-136-2",
+    "attendeeId": "att-136",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1362463",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:11:00-07:00"
+  },
+  {
+    "id": "xp-check-in-023-1",
+    "attendeeId": "att-023",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1362463",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:12:00-07:00"
+  },
+  {
+    "id": "xp-check-in-034-3",
+    "attendeeId": "att-034",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1334794",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T13:12:00-07:00"
+  },
+  {
+    "id": "xp-check-in-035-1",
+    "attendeeId": "att-035",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1334794",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T13:12:00-07:00"
+  },
+  {
+    "id": "xp-check-in-118-2",
+    "attendeeId": "att-118",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1334794",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T13:12:00-07:00"
+  },
+  {
+    "id": "xp-check-in-048-2",
+    "attendeeId": "att-048",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1362463",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:13:00-07:00"
+  },
+  {
+    "id": "xp-check-in-093-3",
+    "attendeeId": "att-093",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1371071",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T13:16:00-07:00"
+  },
+  {
+    "id": "xp-check-in-126-2",
+    "attendeeId": "att-126",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1371071",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T13:16:00-07:00"
+  },
+  {
+    "id": "xp-check-in-148-4",
+    "attendeeId": "att-148",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1371071",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T13:16:00-07:00"
+  },
+  {
+    "id": "xp-quiz-demo-platform-1",
+    "attendeeId": "att-demo-platform",
+    "type": "quiz",
+    "xp": 15,
+    "talkId": "talk-1334794",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T13:16:00-07:00"
+  },
+  {
+    "id": "xp-quiz-105-1",
+    "attendeeId": "att-105",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1362463",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:17:00-07:00"
+  },
+  {
+    "id": "xp-check-in-112-4",
+    "attendeeId": "att-112",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1371071",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T13:17:00-07:00"
+  },
+  {
+    "id": "xp-check-in-058-1",
+    "attendeeId": "att-058",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1334795",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T13:18:00-07:00"
+  },
+  {
+    "id": "xp-check-in-013-3",
+    "attendeeId": "att-013",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1334795",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T13:19:00-07:00"
+  },
+  {
+    "id": "xp-quiz-049-2",
+    "attendeeId": "att-049",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1362463",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:19:00-07:00"
+  },
+  {
+    "id": "xp-quiz-101-2",
+    "attendeeId": "att-101",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1362463",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:19:00-07:00"
+  },
+  {
+    "id": "xp-check-in-066-2",
+    "attendeeId": "att-066",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1371071",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T13:20:00-07:00"
+  },
+  {
+    "id": "xp-quiz-114-1",
+    "attendeeId": "att-114",
+    "type": "quiz",
+    "xp": 15,
+    "talkId": "talk-1362463",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:20:00-07:00"
+  },
+  {
+    "id": "xp-check-in-125-3",
+    "attendeeId": "att-125",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1334795",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T13:20:00-07:00"
+  },
+  {
+    "id": "xp-quiz-104-1",
+    "attendeeId": "att-104",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1362463",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:21:00-07:00"
+  },
+  {
+    "id": "xp-check-in-061-3",
+    "attendeeId": "att-061",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1371071",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T13:22:00-07:00"
+  },
+  {
+    "id": "xp-check-in-068-1",
+    "attendeeId": "att-068",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1362466",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:22:00-07:00"
+  },
+  {
+    "id": "xp-check-in-038-2",
+    "attendeeId": "att-038",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1371071",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T13:23:00-07:00"
+  },
+  {
+    "id": "xp-check-in-043-1",
+    "attendeeId": "att-043",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1334795",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T13:23:00-07:00"
+  },
+  {
+    "id": "xp-check-in-087-3",
+    "attendeeId": "att-087",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1334795",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T13:23:00-07:00"
+  },
+  {
+    "id": "xp-check-in-109-3",
+    "attendeeId": "att-109",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1362466",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:25:00-07:00"
+  },
+  {
+    "id": "xp-handshake-013-2",
+    "attendeeId": "att-013",
+    "type": "handshake",
+    "xp": 50,
+    "locationId": "mp-hyatt-l4-foyer",
+    "introId": "intro-006",
+    "at": "2026-11-10T13:26:00-07:00"
+  },
+  {
+    "id": "xp-check-in-044-2",
+    "attendeeId": "att-044",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1371071",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T13:26:00-07:00"
+  },
+  {
+    "id": "xp-handshake-097-1",
+    "attendeeId": "att-097",
+    "type": "handshake",
+    "xp": 50,
+    "locationId": "mp-hyatt-l4-foyer",
+    "introId": "intro-006",
+    "at": "2026-11-10T13:26:00-07:00"
+  },
+  {
+    "id": "xp-welcome-097-1",
+    "attendeeId": "att-097",
+    "type": "welcome",
+    "xp": 25,
+    "locationId": "mp-hyatt-l4-foyer",
+    "introId": "intro-006",
+    "at": "2026-11-10T13:26:00-07:00"
+  },
+  {
+    "id": "xp-check-in-103-3",
+    "attendeeId": "att-103",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1371071",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T13:26:00-07:00"
+  },
+  {
+    "id": "xp-check-in-076-1",
+    "attendeeId": "att-076",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1362466",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:27:00-07:00"
+  },
+  {
+    "id": "xp-check-in-107-3",
+    "attendeeId": "att-107",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1371071",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T13:27:00-07:00"
+  },
+  {
+    "id": "xp-quiz-112-3",
+    "attendeeId": "att-112",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1371071",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T13:27:00-07:00"
+  },
+  {
+    "id": "xp-check-in-121-1",
+    "attendeeId": "att-121",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1371071",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T13:27:00-07:00"
+  },
+  {
+    "id": "xp-quiz-034-2",
+    "attendeeId": "att-034",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1334794",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T13:28:00-07:00"
+  },
+  {
+    "id": "xp-quiz-073-1",
+    "attendeeId": "att-073",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1362463",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:28:00-07:00"
+  },
+  {
+    "id": "xp-quiz-136-1",
+    "attendeeId": "att-136",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1362463",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:28:00-07:00"
+  },
+  {
+    "id": "xp-quiz-137-1",
+    "attendeeId": "att-137",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1362463",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:28:00-07:00"
+  },
+  {
+    "id": "xp-check-in-140-3",
+    "attendeeId": "att-140",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1362466",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:28:00-07:00"
+  },
+  {
+    "id": "xp-check-in-033-1",
+    "attendeeId": "att-033",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1362466",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:29:00-07:00"
+  },
+  {
+    "id": "xp-quiz-102-3",
+    "attendeeId": "att-102",
+    "type": "quiz",
+    "xp": 15,
+    "talkId": "talk-1362463",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:29:00-07:00"
+  },
+  {
+    "id": "xp-check-in-004-4",
+    "attendeeId": "att-004",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1334796",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T13:30:00-07:00"
+  },
+  {
+    "id": "xp-check-in-111-3",
+    "attendeeId": "att-111",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1334796",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T13:30:00-07:00"
+  },
+  {
+    "id": "xp-quiz-023-1",
+    "attendeeId": "att-023",
+    "type": "quiz",
+    "xp": 15,
+    "talkId": "talk-1362463",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:31:00-07:00"
+  },
+  {
+    "id": "xp-check-in-011-1",
+    "attendeeId": "att-011",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1362466",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:32:00-07:00"
+  },
+  {
+    "id": "xp-check-in-144-2",
+    "attendeeId": "att-144",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1334796",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T13:32:00-07:00"
+  },
+  {
+    "id": "xp-check-in-050-1",
+    "attendeeId": "att-050",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1362466",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:33:00-07:00"
+  },
+  {
+    "id": "xp-check-in-008-3",
+    "attendeeId": "att-008",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1334796",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T13:35:00-07:00"
+  },
+  {
+    "id": "xp-check-in-092-4",
+    "attendeeId": "att-092",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1362466",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:36:00-07:00"
+  },
+  {
+    "id": "xp-check-in-147-3",
+    "attendeeId": "att-147",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1362466",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:36:00-07:00"
+  },
+  {
+    "id": "xp-check-in-014-3",
+    "attendeeId": "att-014",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1334796",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T13:37:00-07:00"
+  },
+  {
+    "id": "xp-check-in-024-3",
+    "attendeeId": "att-024",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1362466",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:37:00-07:00"
+  },
+  {
+    "id": "xp-quiz-038-2",
+    "attendeeId": "att-038",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1371071",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T13:37:00-07:00"
+  },
+  {
+    "id": "xp-check-in-080-2",
+    "attendeeId": "att-080",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1362466",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:37:00-07:00"
+  },
+  {
+    "id": "xp-check-in-086-4",
+    "attendeeId": "att-086",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1362466",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:37:00-07:00"
+  },
+  {
+    "id": "xp-quiz-033-1",
+    "attendeeId": "att-033",
+    "type": "quiz",
+    "xp": 15,
+    "talkId": "talk-1362466",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:39:00-07:00"
+  },
+  {
+    "id": "xp-check-in-006-2",
+    "attendeeId": "att-006",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1370500",
+    "locationId": "salt-palace-solutions-showcase-hall-5-cosmic-canyon-zone-project-pavilion",
+    "at": "2026-11-10T13:41:00-07:00"
+  },
+  {
+    "id": "xp-quiz-058-1",
+    "attendeeId": "att-058",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1334795",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T13:41:00-07:00"
+  },
+  {
+    "id": "xp-check-in-099-2",
+    "attendeeId": "att-099",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1370500",
+    "locationId": "salt-palace-solutions-showcase-hall-5-cosmic-canyon-zone-project-pavilion",
+    "at": "2026-11-10T13:41:00-07:00"
+  },
+  {
+    "id": "xp-check-in-010-4",
+    "attendeeId": "att-010",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1334797",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T13:42:00-07:00"
+  },
+  {
+    "id": "xp-check-in-055-3",
+    "attendeeId": "att-055",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1334797",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T13:42:00-07:00"
+  },
+  {
+    "id": "xp-check-in-056-1",
+    "attendeeId": "att-056",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1370500",
+    "locationId": "salt-palace-solutions-showcase-hall-5-cosmic-canyon-zone-project-pavilion",
+    "at": "2026-11-10T13:43:00-07:00"
+  },
+  {
+    "id": "xp-check-in-072-3",
+    "attendeeId": "att-072",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1370500",
+    "locationId": "salt-palace-solutions-showcase-hall-5-cosmic-canyon-zone-project-pavilion",
+    "at": "2026-11-10T13:43:00-07:00"
+  },
+  {
+    "id": "xp-check-in-090-1",
+    "attendeeId": "att-090",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1370500",
+    "locationId": "salt-palace-solutions-showcase-hall-5-cosmic-canyon-zone-project-pavilion",
+    "at": "2026-11-10T13:43:00-07:00"
+  },
+  {
+    "id": "xp-check-in-095-5",
+    "attendeeId": "att-095",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1370500",
+    "locationId": "salt-palace-solutions-showcase-hall-5-cosmic-canyon-zone-project-pavilion",
+    "at": "2026-11-10T13:43:00-07:00"
+  },
+  {
+    "id": "xp-check-in-122-2",
+    "attendeeId": "att-122",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1334797",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T13:43:00-07:00"
+  },
+  {
+    "id": "xp-check-in-020-1",
+    "attendeeId": "att-020",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1370500",
+    "locationId": "salt-palace-solutions-showcase-hall-5-cosmic-canyon-zone-project-pavilion",
+    "at": "2026-11-10T13:45:00-07:00"
+  },
+  {
+    "id": "xp-check-in-101-3",
+    "attendeeId": "att-101",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1370500",
+    "locationId": "salt-palace-solutions-showcase-hall-5-cosmic-canyon-zone-project-pavilion",
+    "at": "2026-11-10T13:45:00-07:00"
+  },
+  {
+    "id": "xp-check-in-047-2",
+    "attendeeId": "att-047",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1334797",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T13:46:00-07:00"
+  },
+  {
+    "id": "xp-check-in-084-1",
+    "attendeeId": "att-084",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1334797",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T13:47:00-07:00"
+  },
+  {
+    "id": "xp-check-in-041-4",
+    "attendeeId": "att-041",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1369612",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:48:00-07:00"
+  },
+  {
+    "id": "xp-quiz-103-3",
+    "attendeeId": "att-103",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1371071",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T13:48:00-07:00"
+  },
+  {
+    "id": "xp-check-in-133-3",
+    "attendeeId": "att-133",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1370500",
+    "locationId": "salt-palace-solutions-showcase-hall-5-cosmic-canyon-zone-project-pavilion",
+    "at": "2026-11-10T13:48:00-07:00"
+  },
+  {
+    "id": "xp-quiz-144-2",
+    "attendeeId": "att-144",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1334796",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T13:48:00-07:00"
+  },
+  {
+    "id": "xp-check-in-002-3",
+    "attendeeId": "att-002",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1334797",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T13:49:00-07:00"
+  },
+  {
+    "id": "xp-check-in-035-2",
+    "attendeeId": "att-035",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1370500",
+    "locationId": "salt-palace-solutions-showcase-hall-5-cosmic-canyon-zone-project-pavilion",
+    "at": "2026-11-10T13:49:00-07:00"
+  },
+  {
+    "id": "xp-quiz-061-1",
+    "attendeeId": "att-061",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1371071",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T13:49:00-07:00"
+  },
+  {
+    "id": "xp-check-in-009-3",
+    "attendeeId": "att-009",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1369612",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:51:00-07:00"
+  },
+  {
+    "id": "xp-quiz-080-2",
+    "attendeeId": "att-080",
+    "type": "quiz",
+    "xp": 15,
+    "talkId": "talk-1362466",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:52:00-07:00"
+  },
+  {
+    "id": "xp-quiz-109-2",
+    "attendeeId": "att-109",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1362466",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:52:00-07:00"
+  },
+  {
+    "id": "xp-quiz-044-2",
+    "attendeeId": "att-044",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1371071",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T13:53:00-07:00"
+  },
+  {
+    "id": "xp-check-in-128-1",
+    "attendeeId": "att-128",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1370500",
+    "locationId": "salt-palace-solutions-showcase-hall-5-cosmic-canyon-zone-project-pavilion",
+    "at": "2026-11-10T13:53:00-07:00"
+  },
+  {
+    "id": "xp-check-in-007-3",
+    "attendeeId": "att-007",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1369612",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:54:00-07:00"
+  },
+  {
+    "id": "xp-check-in-067-2",
+    "attendeeId": "att-067",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1370500",
+    "locationId": "salt-palace-solutions-showcase-hall-5-cosmic-canyon-zone-project-pavilion",
+    "at": "2026-11-10T13:55:00-07:00"
+  },
+  {
+    "id": "xp-check-in-059-4",
+    "attendeeId": "att-059",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1369612",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:56:00-07:00"
+  },
+  {
+    "id": "xp-check-in-114-2",
+    "attendeeId": "att-114",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1336019",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T13:56:00-07:00"
+  },
+  {
+    "id": "xp-check-in-138-1",
+    "attendeeId": "att-138",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1370500",
+    "locationId": "salt-palace-solutions-showcase-hall-5-cosmic-canyon-zone-project-pavilion",
+    "at": "2026-11-10T13:56:00-07:00"
+  },
+  {
+    "id": "xp-check-in-016-1",
+    "attendeeId": "att-016",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1370500",
+    "locationId": "salt-palace-solutions-showcase-hall-5-cosmic-canyon-zone-project-pavilion",
+    "at": "2026-11-10T13:57:00-07:00"
+  },
+  {
+    "id": "xp-check-in-048-3",
+    "attendeeId": "att-048",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1336019",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T13:57:00-07:00"
+  },
+  {
+    "id": "xp-quiz-050-1",
+    "attendeeId": "att-050",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1362466",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:57:00-07:00"
+  },
+  {
+    "id": "xp-check-in-069-4",
+    "attendeeId": "att-069",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1369612",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:57:00-07:00"
+  },
+  {
+    "id": "xp-quiz-092-4",
+    "attendeeId": "att-092",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1362466",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:57:00-07:00"
+  },
+  {
+    "id": "xp-quiz-011-1",
+    "attendeeId": "att-011",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1362466",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T13:58:00-07:00"
+  },
+  {
+    "id": "xp-check-in-046-3",
+    "attendeeId": "att-046",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1369612",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T14:01:00-07:00"
+  },
+  {
+    "id": "xp-quiz-055-2",
+    "attendeeId": "att-055",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1334797",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T14:01:00-07:00"
+  },
+  {
+    "id": "xp-check-in-126-3",
+    "attendeeId": "att-126",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1369612",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T14:01:00-07:00"
+  },
+  {
+    "id": "xp-check-in-141-1",
+    "attendeeId": "att-141",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1371074",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T14:01:00-07:00"
+  },
+  {
+    "id": "xp-check-in-045-4",
+    "attendeeId": "att-045",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1370500",
+    "locationId": "salt-palace-solutions-showcase-hall-5-cosmic-canyon-zone-project-pavilion",
+    "at": "2026-11-10T14:02:00-07:00"
+  },
+  {
+    "id": "xp-check-in-003-1",
+    "attendeeId": "att-003",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1369612",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T14:03:00-07:00"
+  },
+  {
+    "id": "xp-check-in-021-3",
+    "attendeeId": "att-021",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1369612",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T14:03:00-07:00"
+  },
+  {
+    "id": "xp-quiz-099-2",
+    "attendeeId": "att-099",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1370500",
+    "locationId": "salt-palace-solutions-showcase-hall-5-cosmic-canyon-zone-project-pavilion",
+    "at": "2026-11-10T14:04:00-07:00"
+  },
+  {
+    "id": "xp-check-in-100-1",
+    "attendeeId": "att-100",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1371074",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T14:04:00-07:00"
+  },
+  {
+    "id": "xp-check-in-108-1",
+    "attendeeId": "att-108",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1371074",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T14:04:00-07:00"
+  },
+  {
+    "id": "xp-check-in-131-2",
+    "attendeeId": "att-131",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1371074",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T14:04:00-07:00"
+  },
+  {
+    "id": "xp-check-in-012-2",
+    "attendeeId": "att-012",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1371074",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T14:05:00-07:00"
+  },
+  {
+    "id": "xp-check-in-117-4",
+    "attendeeId": "att-117",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1371074",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T14:05:00-07:00"
+  },
+  {
+    "id": "xp-quiz-006-1",
+    "attendeeId": "att-006",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1370500",
+    "locationId": "salt-palace-solutions-showcase-hall-5-cosmic-canyon-zone-project-pavilion",
+    "at": "2026-11-10T14:06:00-07:00"
+  },
+  {
+    "id": "xp-check-in-078-1",
+    "attendeeId": "att-078",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1371074",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T14:06:00-07:00"
+  },
+  {
+    "id": "xp-check-in-145-1",
+    "attendeeId": "att-145",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1334800",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T14:06:00-07:00"
+  },
+  {
+    "id": "xp-quiz-072-2",
+    "attendeeId": "att-072",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1370500",
+    "locationId": "salt-palace-solutions-showcase-hall-5-cosmic-canyon-zone-project-pavilion",
+    "at": "2026-11-10T14:07:00-07:00"
+  },
+  {
+    "id": "xp-check-in-088-1",
+    "attendeeId": "att-088",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1334800",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T14:07:00-07:00"
+  },
+  {
+    "id": "xp-check-in-129-1",
+    "attendeeId": "att-129",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1334800",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T14:07:00-07:00"
+  },
+  {
+    "id": "xp-quiz-059-2",
+    "attendeeId": "att-059",
+    "type": "quiz",
+    "xp": 15,
+    "talkId": "talk-1369612",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T14:08:00-07:00"
+  },
+  {
+    "id": "xp-check-in-049-4",
+    "attendeeId": "att-049",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1334800",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T14:09:00-07:00"
+  },
+  {
+    "id": "xp-check-in-082-1",
+    "attendeeId": "att-082",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1334800",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T14:09:00-07:00"
+  },
+  {
+    "id": "xp-quiz-090-1",
+    "attendeeId": "att-090",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1370500",
+    "locationId": "salt-palace-solutions-showcase-hall-5-cosmic-canyon-zone-project-pavilion",
+    "at": "2026-11-10T14:09:00-07:00"
+  },
+  {
+    "id": "xp-quiz-138-1",
+    "attendeeId": "att-138",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1370500",
+    "locationId": "salt-palace-solutions-showcase-hall-5-cosmic-canyon-zone-project-pavilion",
+    "at": "2026-11-10T14:09:00-07:00"
+  },
+  {
+    "id": "xp-handshake-005-3",
+    "attendeeId": "att-005",
+    "type": "handshake",
+    "xp": 50,
+    "locationId": "mp-network-nook",
+    "introId": "intro-005",
+    "at": "2026-11-10T14:11:00-07:00"
+  },
+  {
+    "id": "xp-handshake-008-2",
+    "attendeeId": "att-008",
+    "type": "handshake",
+    "xp": 50,
+    "locationId": "mp-network-nook",
+    "introId": "intro-005",
+    "at": "2026-11-10T14:11:00-07:00"
+  },
+  {
+    "id": "xp-check-in-073-2",
+    "attendeeId": "att-073",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1371074",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T14:11:00-07:00"
+  },
+  {
+    "id": "xp-badge-005-connector",
+    "attendeeId": "att-005",
+    "type": "badge",
+    "xp": 20,
+    "at": "2026-11-10T14:12:00-07:00"
+  },
+  {
+    "id": "xp-check-in-042-1",
+    "attendeeId": "att-042",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1362469",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T14:12:00-07:00"
+  },
+  {
+    "id": "xp-handshake-008-3",
+    "attendeeId": "att-008",
+    "type": "handshake",
+    "xp": 50,
+    "locationId": "mp-network-nook",
+    "introId": "intro-008",
+    "at": "2026-11-10T14:13:00-07:00"
+  },
+  {
+    "id": "xp-check-in-018-3",
+    "attendeeId": "att-018",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1371074",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T14:13:00-07:00"
+  },
+  {
+    "id": "xp-handshake-026-1",
+    "attendeeId": "att-026",
+    "type": "handshake",
+    "xp": 50,
+    "locationId": "mp-network-nook",
+    "introId": "intro-008",
+    "at": "2026-11-10T14:13:00-07:00"
+  },
+  {
+    "id": "xp-check-in-034-4",
+    "attendeeId": "att-034",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1362469",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T14:13:00-07:00"
+  },
+  {
+    "id": "xp-quiz-114-2",
+    "attendeeId": "att-114",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1336019",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T14:13:00-07:00"
+  },
+  {
+    "id": "xp-badge-008-connector",
+    "attendeeId": "att-008",
+    "type": "badge",
+    "xp": 20,
+    "at": "2026-11-10T14:14:00-07:00"
+  },
+  {
+    "id": "xp-check-in-125-4",
+    "attendeeId": "att-125",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1370912",
+    "locationId": "salt-palace-solutions-showcase-hall-5-cosmic-canyon-zone-project-pavilion",
+    "at": "2026-11-10T14:16:00-07:00"
+  },
+  {
+    "id": "xp-check-in-146-2",
+    "attendeeId": "att-146",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1334800",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T14:16:00-07:00"
+  },
+  {
+    "id": "xp-check-in-094-2",
+    "attendeeId": "att-094",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1370912",
+    "locationId": "salt-palace-solutions-showcase-hall-5-cosmic-canyon-zone-project-pavilion",
+    "at": "2026-11-10T14:18:00-07:00"
+  },
+  {
+    "id": "xp-quiz-012-1",
+    "attendeeId": "att-012",
+    "type": "quiz",
+    "xp": 15,
+    "talkId": "talk-1371074",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T14:19:00-07:00"
+  },
+  {
+    "id": "xp-check-in-098-4",
+    "attendeeId": "att-098",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1370912",
+    "locationId": "salt-palace-solutions-showcase-hall-5-cosmic-canyon-zone-project-pavilion",
+    "at": "2026-11-10T14:19:00-07:00"
+  },
+  {
+    "id": "xp-check-in-demo-frontend-1",
+    "attendeeId": "att-demo-frontend",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1362469",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T14:19:00-07:00"
+  },
+  {
+    "id": "xp-quiz-082-1",
+    "attendeeId": "att-082",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1334800",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T14:20:00-07:00"
+  },
+  {
+    "id": "xp-quiz-145-1",
+    "attendeeId": "att-145",
+    "type": "quiz",
+    "xp": 15,
+    "talkId": "talk-1334800",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T14:20:00-07:00"
+  },
+  {
+    "id": "xp-quiz-046-3",
+    "attendeeId": "att-046",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1369612",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T14:21:00-07:00"
+  },
+  {
+    "id": "xp-check-in-013-4",
+    "attendeeId": "att-013",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1362469",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T14:22:00-07:00"
+  },
+  {
+    "id": "xp-quiz-049-3",
+    "attendeeId": "att-049",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1334800",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T14:23:00-07:00"
+  },
+  {
+    "id": "xp-quiz-126-1",
+    "attendeeId": "att-126",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1369612",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T14:23:00-07:00"
+  },
+  {
+    "id": "xp-check-in-demo-platform-2",
+    "attendeeId": "att-demo-platform",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1370912",
+    "locationId": "salt-palace-solutions-showcase-hall-5-cosmic-canyon-zone-project-pavilion",
+    "at": "2026-11-10T14:23:00-07:00"
+  },
+  {
+    "id": "xp-check-in-050-2",
+    "attendeeId": "att-050",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1334801",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T14:26:00-07:00"
+  },
+  {
+    "id": "xp-check-in-053-3",
+    "attendeeId": "att-053",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1334801",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T14:26:00-07:00"
+  },
+  {
+    "id": "xp-quiz-100-1",
+    "attendeeId": "att-100",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1371074",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T14:26:00-07:00"
+  },
+  {
+    "id": "xp-check-in-106-3",
+    "attendeeId": "att-106",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1362469",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T14:27:00-07:00"
+  },
+  {
+    "id": "xp-quiz-131-2",
+    "attendeeId": "att-131",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1371074",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T14:29:00-07:00"
+  },
+  {
+    "id": "xp-check-in-025-1",
+    "attendeeId": "att-025",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1334801",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T14:30:00-07:00"
+  },
+  {
+    "id": "xp-check-in-009-4",
+    "attendeeId": "att-009",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1370912",
+    "locationId": "salt-palace-solutions-showcase-hall-5-cosmic-canyon-zone-project-pavilion",
+    "at": "2026-11-10T14:32:00-07:00"
+  },
+  {
+    "id": "xp-check-in-037-2",
+    "attendeeId": "att-037",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1370912",
+    "locationId": "salt-palace-solutions-showcase-hall-5-cosmic-canyon-zone-project-pavilion",
+    "at": "2026-11-10T14:32:00-07:00"
+  },
+  {
+    "id": "xp-check-in-079-1",
+    "attendeeId": "att-079",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1370912",
+    "locationId": "salt-palace-solutions-showcase-hall-5-cosmic-canyon-zone-project-pavilion",
+    "at": "2026-11-10T14:35:00-07:00"
+  },
+  {
+    "id": "xp-quiz-053-2",
+    "attendeeId": "att-053",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1334801",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T14:36:00-07:00"
+  },
+  {
+    "id": "xp-check-in-126-4",
+    "attendeeId": "att-126",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1370912",
+    "locationId": "salt-palace-solutions-showcase-hall-5-cosmic-canyon-zone-project-pavilion",
+    "at": "2026-11-10T14:36:00-07:00"
+  },
+  {
+    "id": "xp-quiz-013-2",
+    "attendeeId": "att-013",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1362469",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T14:37:00-07:00"
+  },
+  {
+    "id": "xp-check-in-062-1",
+    "attendeeId": "att-062",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1362546",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T14:37:00-07:00"
+  },
+  {
+    "id": "xp-handshake-097-2",
+    "attendeeId": "att-097",
+    "type": "handshake",
+    "xp": 50,
+    "locationId": "mp-salt-palace-coffee",
+    "introId": "intro-009",
+    "at": "2026-11-10T14:38:00-07:00"
+  },
+  {
+    "id": "xp-welcome-097-2",
+    "attendeeId": "att-097",
+    "type": "welcome",
+    "xp": 25,
+    "locationId": "mp-salt-palace-coffee",
+    "introId": "intro-009",
+    "at": "2026-11-10T14:38:00-07:00"
+  },
+  {
+    "id": "xp-handshake-117-1",
+    "attendeeId": "att-117",
+    "type": "handshake",
+    "xp": 50,
+    "locationId": "mp-salt-palace-coffee",
+    "introId": "intro-009",
+    "at": "2026-11-10T14:38:00-07:00"
+  },
+  {
+    "id": "xp-badge-097-welcomer",
+    "attendeeId": "att-097",
+    "type": "badge",
+    "xp": 20,
+    "at": "2026-11-10T14:39:00-07:00"
+  },
+  {
+    "id": "xp-quiz-018-3",
+    "attendeeId": "att-018",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1371074",
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "at": "2026-11-10T14:40:00-07:00"
+  },
+  {
+    "id": "xp-quiz-025-1",
+    "attendeeId": "att-025",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1334801",
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "at": "2026-11-10T14:48:00-07:00"
+  },
+  {
+    "id": "xp-quiz-demo-platform-2",
+    "attendeeId": "att-demo-platform",
+    "type": "quiz",
+    "xp": 15,
+    "talkId": "talk-1370912",
+    "locationId": "salt-palace-solutions-showcase-hall-5-cosmic-canyon-zone-project-pavilion",
+    "at": "2026-11-10T14:48:00-07:00"
+  },
+  {
+    "id": "xp-check-in-006-3",
+    "attendeeId": "att-006",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1243089",
+    "locationId": "hyatt-regency-salt-lake-ballroom-c",
+    "at": "2026-11-10T14:51:00-07:00"
+  },
+  {
+    "id": "xp-check-in-016-2",
+    "attendeeId": "att-016",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1306051",
+    "locationId": "hyatt-regency-capitol-reef",
+    "at": "2026-11-10T14:51:00-07:00"
+  },
+  {
+    "id": "xp-check-in-034-5",
+    "attendeeId": "att-034",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1250961",
+    "locationId": "salt-palace-grand-ballroom-bdf",
+    "at": "2026-11-10T14:51:00-07:00"
+  },
+  {
+    "id": "xp-check-in-114-3",
+    "attendeeId": "att-114",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1247376",
+    "locationId": "salt-palace-151",
+    "at": "2026-11-10T14:51:00-07:00"
+  },
+  {
+    "id": "xp-check-in-145-2",
+    "attendeeId": "att-145",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289636",
+    "locationId": "salt-palace-251-d-f",
+    "at": "2026-11-10T14:51:00-07:00"
+  },
+  {
+    "id": "xp-check-in-146-3",
+    "attendeeId": "att-146",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1236746",
+    "locationId": "hyatt-regency-salt-lake-ballroom-de",
+    "at": "2026-11-10T14:51:00-07:00"
+  },
+  {
+    "id": "xp-check-in-014-4",
+    "attendeeId": "att-014",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1294759",
+    "locationId": "salt-palace-255-d",
+    "at": "2026-11-10T14:52:00-07:00"
+  },
+  {
+    "id": "xp-check-in-045-5",
+    "attendeeId": "att-045",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1243089",
+    "locationId": "hyatt-regency-salt-lake-ballroom-c",
+    "at": "2026-11-10T14:52:00-07:00"
+  },
+  {
+    "id": "xp-check-in-067-3",
+    "attendeeId": "att-067",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289636",
+    "locationId": "salt-palace-251-d-f",
+    "at": "2026-11-10T14:52:00-07:00"
+  },
+  {
+    "id": "xp-check-in-140-4",
+    "attendeeId": "att-140",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289635",
+    "locationId": "salt-palace-250-d-f",
+    "at": "2026-11-10T14:52:00-07:00"
+  },
+  {
+    "id": "xp-check-in-024-4",
+    "attendeeId": "att-024",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1250487",
+    "locationId": "salt-palace-grand-ballroom-gi",
+    "at": "2026-11-10T14:53:00-07:00"
+  },
+  {
+    "id": "xp-check-in-028-1",
+    "attendeeId": "att-028",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1243089",
+    "locationId": "hyatt-regency-salt-lake-ballroom-c",
+    "at": "2026-11-10T14:53:00-07:00"
+  },
+  {
+    "id": "xp-check-in-099-3",
+    "attendeeId": "att-099",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1294759",
+    "locationId": "salt-palace-255-d",
+    "at": "2026-11-10T14:53:00-07:00"
+  },
+  {
+    "id": "xp-check-in-119-1",
+    "attendeeId": "att-119",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1250961",
+    "locationId": "salt-palace-grand-ballroom-bdf",
+    "at": "2026-11-10T14:53:00-07:00"
+  },
+  {
+    "id": "xp-check-in-058-2",
+    "attendeeId": "att-058",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1246044",
+    "locationId": "hyatt-regency-regency-ballroom-b",
+    "at": "2026-11-10T14:54:00-07:00"
+  },
+  {
+    "id": "xp-check-in-092-5",
+    "attendeeId": "att-092",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1223002",
+    "locationId": "salt-palace-255-bc",
+    "at": "2026-11-10T14:54:00-07:00"
+  },
+  {
+    "id": "xp-check-in-104-2",
+    "attendeeId": "att-104",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1370503",
+    "locationId": "salt-palace-solutions-showcase-hall-5-cosmic-canyon-zone-project-pavilion",
+    "at": "2026-11-10T14:54:00-07:00"
+  },
+  {
+    "id": "xp-check-in-141-2",
+    "attendeeId": "att-141",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289635",
+    "locationId": "salt-palace-250-d-f",
+    "at": "2026-11-10T14:54:00-07:00"
+  },
+  {
+    "id": "xp-check-in-003-2",
+    "attendeeId": "att-003",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1250487",
+    "locationId": "salt-palace-grand-ballroom-gi",
+    "at": "2026-11-10T14:55:00-07:00"
+  },
+  {
+    "id": "xp-check-in-052-1",
+    "attendeeId": "att-052",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289634",
+    "locationId": "salt-palace-250-a-c",
+    "at": "2026-11-10T14:55:00-07:00"
+  },
+  {
+    "id": "xp-check-in-073-3",
+    "attendeeId": "att-073",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1223002",
+    "locationId": "salt-palace-255-bc",
+    "at": "2026-11-10T14:55:00-07:00"
+  },
+  {
+    "id": "xp-check-in-093-4",
+    "attendeeId": "att-093",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289634",
+    "locationId": "salt-palace-250-a-c",
+    "at": "2026-11-10T14:55:00-07:00"
+  },
+  {
+    "id": "xp-check-in-069-5",
+    "attendeeId": "att-069",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1294759",
+    "locationId": "salt-palace-255-d",
+    "at": "2026-11-10T14:56:00-07:00"
+  },
+  {
+    "id": "xp-check-in-075-1",
+    "attendeeId": "att-075",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289637",
+    "locationId": "salt-palace-254",
+    "at": "2026-11-10T14:56:00-07:00"
+  },
+  {
+    "id": "xp-check-in-088-2",
+    "attendeeId": "att-088",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289635",
+    "locationId": "salt-palace-250-d-f",
+    "at": "2026-11-10T14:56:00-07:00"
+  },
+  {
+    "id": "xp-check-in-098-5",
+    "attendeeId": "att-098",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1294760",
+    "locationId": "salt-palace-255-a",
+    "at": "2026-11-10T14:56:00-07:00"
+  },
+  {
+    "id": "xp-check-in-101-4",
+    "attendeeId": "att-101",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1250324",
+    "locationId": "hyatt-regency-regency-ballroom-a",
+    "at": "2026-11-10T14:56:00-07:00"
+  },
+  {
+    "id": "xp-check-in-087-4",
+    "attendeeId": "att-087",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1247277",
+    "locationId": "salt-palace-255-ef",
+    "at": "2026-11-10T14:57:00-07:00"
+  },
+  {
+    "id": "xp-check-in-095-6",
+    "attendeeId": "att-095",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1223002",
+    "locationId": "salt-palace-255-bc",
+    "at": "2026-11-10T14:57:00-07:00"
+  },
+  {
+    "id": "xp-check-in-143-5",
+    "attendeeId": "att-143",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1223002",
+    "locationId": "salt-palace-255-bc",
+    "at": "2026-11-10T14:57:00-07:00"
+  },
+  {
+    "id": "xp-check-in-080-3",
+    "attendeeId": "att-080",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1239823",
+    "locationId": "salt-palace-grand-ballroom-ace",
+    "at": "2026-11-10T14:58:00-07:00"
+  },
+  {
+    "id": "xp-check-in-113-1",
+    "attendeeId": "att-113",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289633",
+    "locationId": "salt-palace-251-a-c",
+    "at": "2026-11-10T14:58:00-07:00"
+  },
+  {
+    "id": "xp-check-in-020-2",
+    "attendeeId": "att-020",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289637",
+    "locationId": "salt-palace-254",
+    "at": "2026-11-10T14:59:00-07:00"
+  },
+  {
+    "id": "xp-check-in-046-4",
+    "attendeeId": "att-046",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1239823",
+    "locationId": "salt-palace-grand-ballroom-ace",
+    "at": "2026-11-10T14:59:00-07:00"
+  },
+  {
+    "id": "xp-check-in-068-2",
+    "attendeeId": "att-068",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289634",
+    "locationId": "salt-palace-250-a-c",
+    "at": "2026-11-10T14:59:00-07:00"
+  },
+  {
+    "id": "xp-check-in-076-2",
+    "attendeeId": "att-076",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289637",
+    "locationId": "salt-palace-254",
+    "at": "2026-11-10T14:59:00-07:00"
+  },
+  {
+    "id": "xp-check-in-109-4",
+    "attendeeId": "att-109",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289633",
+    "locationId": "salt-palace-251-a-c",
+    "at": "2026-11-10T14:59:00-07:00"
+  },
+  {
+    "id": "xp-quiz-037-1",
+    "attendeeId": "att-037",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1370912",
+    "locationId": "salt-palace-solutions-showcase-hall-5-cosmic-canyon-zone-project-pavilion",
+    "at": "2026-11-10T15:00:00-07:00"
+  },
+  {
+    "id": "xp-check-in-084-2",
+    "attendeeId": "att-084",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1370503",
+    "locationId": "salt-palace-solutions-showcase-hall-5-cosmic-canyon-zone-project-pavilion",
+    "at": "2026-11-10T15:00:00-07:00"
+  },
+  {
+    "id": "xp-check-in-118-3",
+    "attendeeId": "att-118",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289636",
+    "locationId": "salt-palace-251-d-f",
+    "at": "2026-11-10T15:00:00-07:00"
+  },
+  {
+    "id": "xp-check-in-136-3",
+    "attendeeId": "att-136",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289634",
+    "locationId": "salt-palace-250-a-c",
+    "at": "2026-11-10T15:00:00-07:00"
+  },
+  {
+    "id": "xp-check-in-005-1",
+    "attendeeId": "att-005",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1223002",
+    "locationId": "salt-palace-255-bc",
+    "at": "2026-11-10T15:01:00-07:00"
+  },
+  {
+    "id": "xp-check-in-007-4",
+    "attendeeId": "att-007",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1247277",
+    "locationId": "salt-palace-255-ef",
+    "at": "2026-11-10T15:01:00-07:00"
+  },
+  {
+    "id": "xp-check-in-032-1",
+    "attendeeId": "att-032",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289633",
+    "locationId": "salt-palace-251-a-c",
+    "at": "2026-11-10T15:01:00-07:00"
+  },
+  {
+    "id": "xp-check-in-035-3",
+    "attendeeId": "att-035",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1223002",
+    "locationId": "salt-palace-255-bc",
+    "at": "2026-11-10T15:01:00-07:00"
+  },
+  {
+    "id": "xp-check-in-060-3",
+    "attendeeId": "att-060",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1239823",
+    "locationId": "salt-palace-grand-ballroom-ace",
+    "at": "2026-11-10T15:01:00-07:00"
+  },
+  {
+    "id": "xp-check-in-105-3",
+    "attendeeId": "att-105",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1247277",
+    "locationId": "salt-palace-255-ef",
+    "at": "2026-11-10T15:01:00-07:00"
+  },
+  {
+    "id": "xp-check-in-128-2",
+    "attendeeId": "att-128",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1236746",
+    "locationId": "hyatt-regency-salt-lake-ballroom-de",
+    "at": "2026-11-10T15:01:00-07:00"
+  },
+  {
+    "id": "xp-check-in-023-2",
+    "attendeeId": "att-023",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1250961",
+    "locationId": "salt-palace-grand-ballroom-bdf",
+    "at": "2026-11-10T15:02:00-07:00"
+  },
+  {
+    "id": "xp-check-in-044-3",
+    "attendeeId": "att-044",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1246044",
+    "locationId": "hyatt-regency-regency-ballroom-b",
+    "at": "2026-11-10T15:02:00-07:00"
+  },
+  {
+    "id": "xp-badge-060-observability-nerd",
+    "attendeeId": "att-060",
+    "type": "badge",
+    "xp": 20,
+    "at": "2026-11-10T15:02:00-07:00"
+  },
+  {
+    "id": "xp-check-in-082-2",
+    "attendeeId": "att-082",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1250961",
+    "locationId": "salt-palace-grand-ballroom-bdf",
+    "at": "2026-11-10T15:02:00-07:00"
+  },
+  {
+    "id": "xp-badge-105-observability-nerd",
+    "attendeeId": "att-105",
+    "type": "badge",
+    "xp": 20,
+    "at": "2026-11-10T15:02:00-07:00"
+  },
+  {
+    "id": "xp-check-in-010-5",
+    "attendeeId": "att-010",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1243089",
+    "locationId": "hyatt-regency-salt-lake-ballroom-c",
+    "at": "2026-11-10T15:03:00-07:00"
+  },
+  {
+    "id": "xp-check-in-012-3",
+    "attendeeId": "att-012",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1294760",
+    "locationId": "salt-palace-255-a",
+    "at": "2026-11-10T15:03:00-07:00"
+  },
+  {
+    "id": "xp-check-in-013-5",
+    "attendeeId": "att-013",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1246044",
+    "locationId": "hyatt-regency-regency-ballroom-b",
+    "at": "2026-11-10T15:03:00-07:00"
+  },
+  {
+    "id": "xp-check-in-053-4",
+    "attendeeId": "att-053",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289637",
+    "locationId": "salt-palace-254",
+    "at": "2026-11-10T15:03:00-07:00"
+  },
+  {
+    "id": "xp-quiz-145-2",
+    "attendeeId": "att-145",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1289636",
+    "locationId": "salt-palace-251-d-f",
+    "at": "2026-11-10T15:03:00-07:00"
+  },
+  {
+    "id": "xp-check-in-018-4",
+    "attendeeId": "att-018",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1362558",
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "at": "2026-11-10T15:04:00-07:00"
+  },
+  {
+    "id": "xp-check-in-043-2",
+    "attendeeId": "att-043",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1250487",
+    "locationId": "salt-palace-grand-ballroom-gi",
+    "at": "2026-11-10T15:04:00-07:00"
+  },
+  {
+    "id": "xp-check-in-094-3",
+    "attendeeId": "att-094",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1250980",
+    "locationId": "hyatt-regency-regency-ballroom-cd",
+    "at": "2026-11-10T15:04:00-07:00"
+  },
+  {
+    "id": "xp-check-in-100-2",
+    "attendeeId": "att-100",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1243089",
+    "locationId": "hyatt-regency-salt-lake-ballroom-c",
+    "at": "2026-11-10T15:04:00-07:00"
+  },
+  {
+    "id": "xp-check-in-103-4",
+    "attendeeId": "att-103",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1246044",
+    "locationId": "hyatt-regency-regency-ballroom-b",
+    "at": "2026-11-10T15:04:00-07:00"
+  },
+  {
+    "id": "xp-check-in-125-5",
+    "attendeeId": "att-125",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289634",
+    "locationId": "salt-palace-250-a-c",
+    "at": "2026-11-10T15:04:00-07:00"
+  },
+  {
+    "id": "xp-check-in-129-2",
+    "attendeeId": "att-129",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1205589",
+    "locationId": "salt-palace-grand-ballroom-h",
+    "at": "2026-11-10T15:04:00-07:00"
+  },
+  {
+    "id": "xp-check-in-019-1",
+    "attendeeId": "att-019",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1247277",
+    "locationId": "salt-palace-255-ef",
+    "at": "2026-11-10T15:05:00-07:00"
+  },
+  {
+    "id": "xp-check-in-115-1",
+    "attendeeId": "att-115",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1223002",
+    "locationId": "salt-palace-255-bc",
+    "at": "2026-11-10T15:05:00-07:00"
+  },
+  {
+    "id": "xp-check-in-148-5",
+    "attendeeId": "att-148",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1223002",
+    "locationId": "salt-palace-255-bc",
+    "at": "2026-11-10T15:05:00-07:00"
+  },
+  {
+    "id": "xp-check-in-090-2",
+    "attendeeId": "att-090",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1246044",
+    "locationId": "hyatt-regency-regency-ballroom-b",
+    "at": "2026-11-10T15:06:00-07:00"
+  },
+  {
+    "id": "xp-check-in-108-2",
+    "attendeeId": "att-108",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1370503",
+    "locationId": "salt-palace-solutions-showcase-hall-5-cosmic-canyon-zone-project-pavilion",
+    "at": "2026-11-10T15:06:00-07:00"
+  },
+  {
+    "id": "xp-check-in-121-2",
+    "attendeeId": "att-121",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1236746",
+    "locationId": "hyatt-regency-salt-lake-ballroom-de",
+    "at": "2026-11-10T15:06:00-07:00"
+  },
+  {
+    "id": "xp-check-in-demo-platform-3",
+    "attendeeId": "att-demo-platform",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1247376",
+    "locationId": "salt-palace-151",
+    "at": "2026-11-10T15:06:00-07:00"
+  },
+  {
+    "id": "xp-check-in-037-3",
+    "attendeeId": "att-037",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1250980",
+    "locationId": "hyatt-regency-regency-ballroom-cd",
+    "at": "2026-11-10T15:07:00-07:00"
+  },
+  {
+    "id": "xp-check-in-039-1",
+    "attendeeId": "att-039",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1247277",
+    "locationId": "salt-palace-255-ef",
+    "at": "2026-11-10T15:07:00-07:00"
+  },
+  {
+    "id": "xp-check-in-042-2",
+    "attendeeId": "att-042",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289633",
+    "locationId": "salt-palace-251-a-c",
+    "at": "2026-11-10T15:07:00-07:00"
+  },
+  {
+    "id": "xp-quiz-006-2",
+    "attendeeId": "att-006",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1243089",
+    "locationId": "hyatt-regency-salt-lake-ballroom-c",
+    "at": "2026-11-10T15:08:00-07:00"
+  },
+  {
+    "id": "xp-check-in-110-1",
+    "attendeeId": "att-110",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289634",
+    "locationId": "salt-palace-250-a-c",
+    "at": "2026-11-10T15:08:00-07:00"
+  },
+  {
+    "id": "xp-check-in-131-3",
+    "attendeeId": "att-131",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1205589",
+    "locationId": "salt-palace-grand-ballroom-h",
+    "at": "2026-11-10T15:08:00-07:00"
+  },
+  {
+    "id": "xp-check-in-048-4",
+    "attendeeId": "att-048",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289636",
+    "locationId": "salt-palace-251-d-f",
+    "at": "2026-11-10T15:09:00-07:00"
+  },
+  {
+    "id": "xp-quiz-052-1",
+    "attendeeId": "att-052",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1289634",
+    "locationId": "salt-palace-250-a-c",
+    "at": "2026-11-10T15:09:00-07:00"
+  },
+  {
+    "id": "xp-check-in-124-4",
+    "attendeeId": "att-124",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1239823",
+    "locationId": "salt-palace-grand-ballroom-ace",
+    "at": "2026-11-10T15:09:00-07:00"
+  },
+  {
+    "id": "xp-check-in-050-3",
+    "attendeeId": "att-050",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1250961",
+    "locationId": "salt-palace-grand-ballroom-bdf",
+    "at": "2026-11-10T15:10:00-07:00"
+  },
+  {
+    "id": "xp-check-in-079-2",
+    "attendeeId": "att-079",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1250961",
+    "locationId": "salt-palace-grand-ballroom-bdf",
+    "at": "2026-11-10T15:10:00-07:00"
+  },
+  {
+    "id": "xp-check-in-132-4",
+    "attendeeId": "att-132",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1239823",
+    "locationId": "salt-palace-grand-ballroom-ace",
+    "at": "2026-11-10T15:10:00-07:00"
+  },
+  {
+    "id": "xp-check-in-demo-frontend-2",
+    "attendeeId": "att-demo-frontend",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1247376",
+    "locationId": "salt-palace-151",
+    "at": "2026-11-10T15:10:00-07:00"
+  },
+  {
+    "id": "xp-check-in-008-4",
+    "attendeeId": "att-008",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289634",
+    "locationId": "salt-palace-250-a-c",
+    "at": "2026-11-10T15:11:00-07:00"
+  },
+  {
+    "id": "xp-check-in-011-2",
+    "attendeeId": "att-011",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1246044",
+    "locationId": "hyatt-regency-regency-ballroom-b",
+    "at": "2026-11-10T15:11:00-07:00"
+  },
+  {
+    "id": "xp-check-in-021-4",
+    "attendeeId": "att-021",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1294759",
+    "locationId": "salt-palace-255-d",
+    "at": "2026-11-10T15:11:00-07:00"
+  },
+  {
+    "id": "xp-check-in-025-2",
+    "attendeeId": "att-025",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1370503",
+    "locationId": "salt-palace-solutions-showcase-hall-5-cosmic-canyon-zone-project-pavilion",
+    "at": "2026-11-10T15:11:00-07:00"
+  },
+  {
+    "id": "xp-check-in-078-2",
+    "attendeeId": "att-078",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289634",
+    "locationId": "salt-palace-250-a-c",
+    "at": "2026-11-10T15:11:00-07:00"
+  },
+  {
+    "id": "xp-check-in-106-4",
+    "attendeeId": "att-106",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1243089",
+    "locationId": "hyatt-regency-salt-lake-ballroom-c",
+    "at": "2026-11-10T15:11:00-07:00"
+  },
+  {
+    "id": "xp-check-in-122-3",
+    "attendeeId": "att-122",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1250961",
+    "locationId": "salt-palace-grand-ballroom-bdf",
+    "at": "2026-11-10T15:11:00-07:00"
+  },
+  {
+    "id": "xp-check-in-040-1",
+    "attendeeId": "att-040",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1250980",
+    "locationId": "hyatt-regency-regency-ballroom-cd",
+    "at": "2026-11-10T15:12:00-07:00"
+  },
+  {
+    "id": "xp-check-in-062-2",
+    "attendeeId": "att-062",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1289633",
+    "locationId": "salt-palace-251-a-c",
+    "at": "2026-11-10T15:12:00-07:00"
+  },
+  {
+    "id": "xp-check-in-138-2",
+    "attendeeId": "att-138",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1239823",
+    "locationId": "salt-palace-grand-ballroom-ace",
+    "at": "2026-11-10T15:12:00-07:00"
+  },
+  {
+    "id": "xp-check-in-009-5",
+    "attendeeId": "att-009",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1205589",
+    "locationId": "salt-palace-grand-ballroom-h",
+    "at": "2026-11-10T15:13:00-07:00"
+  },
+  {
+    "id": "xp-check-in-070-4",
+    "attendeeId": "att-070",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1247277",
+    "locationId": "salt-palace-255-ef",
+    "at": "2026-11-10T15:13:00-07:00"
+  },
+  {
+    "id": "xp-quiz-101-3",
+    "attendeeId": "att-101",
+    "type": "quiz",
+    "xp": 15,
+    "talkId": "talk-1250324",
+    "locationId": "hyatt-regency-regency-ballroom-a",
+    "at": "2026-11-10T15:13:00-07:00"
+  },
+  {
+    "id": "xp-quiz-114-3",
+    "attendeeId": "att-114",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1247376",
+    "locationId": "salt-palace-151",
+    "at": "2026-11-10T15:13:00-07:00"
+  },
+  {
+    "id": "xp-check-in-126-5",
+    "attendeeId": "att-126",
+    "type": "check_in",
+    "xp": 10,
+    "talkId": "talk-1223002",
+    "locationId": "salt-palace-255-bc",
+    "at": "2026-11-10T15:13:00-07:00"
+  },
+  {
+    "id": "xp-quiz-003-1",
+    "attendeeId": "att-003",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1250487",
+    "locationId": "salt-palace-grand-ballroom-gi",
+    "at": "2026-11-10T15:14:00-07:00"
+  },
+  {
+    "id": "xp-quiz-005-1",
+    "attendeeId": "att-005",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1223002",
+    "locationId": "salt-palace-255-bc",
+    "at": "2026-11-10T15:14:00-07:00"
+  },
+  {
+    "id": "xp-quiz-007-2",
+    "attendeeId": "att-007",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1247277",
+    "locationId": "salt-palace-255-ef",
+    "at": "2026-11-10T15:14:00-07:00"
+  },
+  {
+    "id": "xp-quiz-011-2",
+    "attendeeId": "att-011",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1246044",
+    "locationId": "hyatt-regency-regency-ballroom-b",
+    "at": "2026-11-10T15:14:00-07:00"
+  },
+  {
+    "id": "xp-quiz-020-1",
+    "attendeeId": "att-020",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1289637",
+    "locationId": "salt-palace-254",
+    "at": "2026-11-10T15:14:00-07:00"
+  },
+  {
+    "id": "xp-quiz-023-2",
+    "attendeeId": "att-023",
+    "type": "quiz",
+    "xp": 15,
+    "talkId": "talk-1250961",
+    "locationId": "salt-palace-grand-ballroom-bdf",
+    "at": "2026-11-10T15:14:00-07:00"
+  },
+  {
+    "id": "xp-quiz-037-2",
+    "attendeeId": "att-037",
+    "type": "quiz",
+    "xp": 15,
+    "talkId": "talk-1250980",
+    "locationId": "hyatt-regency-regency-ballroom-cd",
+    "at": "2026-11-10T15:14:00-07:00"
+  },
+  {
+    "id": "xp-quiz-044-3",
+    "attendeeId": "att-044",
+    "type": "quiz",
+    "xp": 15,
+    "talkId": "talk-1246044",
+    "locationId": "hyatt-regency-regency-ballroom-b",
+    "at": "2026-11-10T15:14:00-07:00"
+  },
+  {
+    "id": "xp-quiz-046-4",
+    "attendeeId": "att-046",
+    "type": "quiz",
+    "xp": 15,
+    "talkId": "talk-1239823",
+    "locationId": "salt-palace-grand-ballroom-ace",
+    "at": "2026-11-10T15:14:00-07:00"
+  },
+  {
+    "id": "xp-quiz-048-2",
+    "attendeeId": "att-048",
+    "type": "quiz",
+    "xp": 15,
+    "talkId": "talk-1289636",
+    "locationId": "salt-palace-251-d-f",
+    "at": "2026-11-10T15:14:00-07:00"
+  },
+  {
+    "id": "xp-quiz-067-2",
+    "attendeeId": "att-067",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1289636",
+    "locationId": "salt-palace-251-d-f",
+    "at": "2026-11-10T15:14:00-07:00"
+  },
+  {
+    "id": "xp-quiz-070-2",
+    "attendeeId": "att-070",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1247277",
+    "locationId": "salt-palace-255-ef",
+    "at": "2026-11-10T15:14:00-07:00"
+  },
+  {
+    "id": "xp-quiz-075-1",
+    "attendeeId": "att-075",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1289637",
+    "locationId": "salt-palace-254",
+    "at": "2026-11-10T15:14:00-07:00"
+  },
+  {
+    "id": "xp-quiz-082-2",
+    "attendeeId": "att-082",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1250961",
+    "locationId": "salt-palace-grand-ballroom-bdf",
+    "at": "2026-11-10T15:14:00-07:00"
+  },
+  {
+    "id": "xp-quiz-088-1",
+    "attendeeId": "att-088",
+    "type": "quiz",
+    "xp": 15,
+    "talkId": "talk-1289635",
+    "locationId": "salt-palace-250-d-f",
+    "at": "2026-11-10T15:14:00-07:00"
+  },
+  {
+    "id": "xp-quiz-099-3",
+    "attendeeId": "att-099",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1294759",
+    "locationId": "salt-palace-255-d",
+    "at": "2026-11-10T15:14:00-07:00"
+  },
+  {
+    "id": "xp-quiz-105-2",
+    "attendeeId": "att-105",
+    "type": "quiz",
+    "xp": 15,
+    "talkId": "talk-1247277",
+    "locationId": "salt-palace-255-ef",
+    "at": "2026-11-10T15:14:00-07:00"
+  },
+  {
+    "id": "xp-quiz-115-1",
+    "attendeeId": "att-115",
+    "type": "quiz",
+    "xp": 5,
+    "talkId": "talk-1223002",
+    "locationId": "salt-palace-255-bc",
+    "at": "2026-11-10T15:14:00-07:00"
+  },
+  {
+    "id": "xp-quiz-119-1",
+    "attendeeId": "att-119",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1250961",
+    "locationId": "salt-palace-grand-ballroom-bdf",
+    "at": "2026-11-10T15:14:00-07:00"
+  },
+  {
+    "id": "xp-quiz-122-2",
+    "attendeeId": "att-122",
+    "type": "quiz",
+    "xp": 15,
+    "talkId": "talk-1250961",
+    "locationId": "salt-palace-grand-ballroom-bdf",
+    "at": "2026-11-10T15:14:00-07:00"
+  },
+  {
+    "id": "xp-quiz-124-1",
+    "attendeeId": "att-124",
+    "type": "quiz",
+    "xp": 15,
+    "talkId": "talk-1239823",
+    "locationId": "salt-palace-grand-ballroom-ace",
+    "at": "2026-11-10T15:14:00-07:00"
+  },
+  {
+    "id": "xp-quiz-128-1",
+    "attendeeId": "att-128",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1236746",
+    "locationId": "hyatt-regency-salt-lake-ballroom-de",
+    "at": "2026-11-10T15:14:00-07:00"
+  },
+  {
+    "id": "xp-quiz-131-3",
+    "attendeeId": "att-131",
+    "type": "quiz",
+    "xp": 10,
+    "talkId": "talk-1205589",
+    "locationId": "salt-palace-grand-ballroom-h",
+    "at": "2026-11-10T15:14:00-07:00"
+  },
+  {
+    "id": "xp-quiz-140-2",
+    "attendeeId": "att-140",
+    "type": "quiz",
+    "xp": 15,
+    "talkId": "talk-1289635",
+    "locationId": "salt-palace-250-d-f",
+    "at": "2026-11-10T15:14:00-07:00"
+  }
+]

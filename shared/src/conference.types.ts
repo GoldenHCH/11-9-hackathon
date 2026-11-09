@@ -1,0 +1,10 @@
+export type LocationKind = 'room' | 'meeting-point' | 'booth';
+export type TalkTrack = 'ai' | 'security' | 'networking' | 'observability' | 'platform' | 'storage' | 'other';
+export type TalkLevel = 1 | 2 | 3;
+export type Seniority = 'student' | 'junior' | 'mid' | 'senior' | 'staff' | 'principal';
+export type XpEventType = 'check_in' | 'quiz' | 'handshake' | 'welcome' | 'badge';
+export type IntroStatus = 'proposed' | 'accepted' | 'declined' | 'met';
+export type IntroResponse = 'accept' | 'decline';
+export type QuizSource = 'transcript' | 'abstract';
+export type IndexName = 'talks' | 'attendees' | 'locations' | 'xp_events' | 'intros';
+export type HealthStatus = 'ok' | 'degraded';

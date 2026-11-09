@@ -1,6 +1,10 @@
 # Kept out of the image build context.
 .git
+.claude
 **/node_modules
+**/dist
+**/.angular
+**/*.tsbuildinfo
 **/*kubeconfig*
 **/.env
 **/.env.*

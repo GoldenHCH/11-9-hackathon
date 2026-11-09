@@ -1,0 +1,188 @@
+[
+  {
+    "locationId": "hyatt-regency-capitol-reef",
+    "name": "Capitol Reef",
+    "venue": "Hyatt Regency",
+    "floor": "Level 5"
+  },
+  {
+    "locationId": "hyatt-regency-regency-ballroom-a",
+    "name": "Regency Ballroom A",
+    "venue": "Hyatt Regency",
+    "floor": "Level 4"
+  },
+  {
+    "locationId": "hyatt-regency-regency-ballroom-b",
+    "name": "Regency Ballroom B",
+    "venue": "Hyatt Regency",
+    "floor": "Level 4"
+  },
+  {
+    "locationId": "hyatt-regency-regency-ballroom-b-d",
+    "name": "Regency Ballroom B-D",
+    "venue": "Hyatt Regency",
+    "floor": "Level 4"
+  },
+  {
+    "locationId": "hyatt-regency-regency-ballroom-cd",
+    "name": "Regency Ballroom CD",
+    "venue": "Hyatt Regency",
+    "floor": "Level 4"
+  },
+  {
+    "locationId": "hyatt-regency-salt-lake-ballroom-c",
+    "name": "Salt Lake Ballroom C",
+    "venue": "Hyatt Regency",
+    "floor": "Level 2"
+  },
+  {
+    "locationId": "hyatt-regency-salt-lake-ballroom-de",
+    "name": "Salt Lake Ballroom DE",
+    "venue": "Hyatt Regency",
+    "floor": "Level 2"
+  },
+  {
+    "locationId": "off-site-off-site-location",
+    "name": "Off-Site Location",
+    "venue": "Off-Site",
+    "floor": "Ground"
+  },
+  {
+    "locationId": "salt-palace-151",
+    "name": "Room 151",
+    "venue": "Salt Palace",
+    "floor": "Level 1"
+  },
+  {
+    "locationId": "salt-palace-250-a-c",
+    "name": "Room 250 A-C",
+    "venue": "Salt Palace",
+    "floor": "Level 2"
+  },
+  {
+    "locationId": "salt-palace-250-d-f",
+    "name": "Room 250 D-F",
+    "venue": "Salt Palace",
+    "floor": "Level 2"
+  },
+  {
+    "locationId": "salt-palace-251-a-c",
+    "name": "Room 251 A-C",
+    "venue": "Salt Palace",
+    "floor": "Level 2"
+  },
+  {
+    "locationId": "salt-palace-251-d-f",
+    "name": "Room 251 D-F",
+    "venue": "Salt Palace",
+    "floor": "Level 2"
+  },
+  {
+    "locationId": "salt-palace-254",
+    "name": "Room 254",
+    "venue": "Salt Palace",
+    "floor": "Level 2"
+  },
+  {
+    "locationId": "salt-palace-255-a",
+    "name": "Room 255 A",
+    "venue": "Salt Palace",
+    "floor": "Level 2"
+  },
+  {
+    "locationId": "salt-palace-255-bc",
+    "name": "Room 255 BC",
+    "venue": "Salt Palace",
+    "floor": "Level 2"
+  },
+  {
+    "locationId": "salt-palace-255-d",
+    "name": "Room 255 D",
+    "venue": "Salt Palace",
+    "floor": "Level 2"
+  },
+  {
+    "locationId": "salt-palace-255-ef",
+    "name": "Room 255 EF",
+    "venue": "Salt Palace",
+    "floor": "Level 2"
+  },
+  {
+    "locationId": "salt-palace-grand-ballroom-ace",
+    "name": "Grand Ballroom ACE",
+    "venue": "Salt Palace",
+    "floor": "Level 1"
+  },
+  {
+    "locationId": "salt-palace-grand-ballroom-bdf",
+    "name": "Grand Ballroom BDF",
+    "venue": "Salt Palace",
+    "floor": "Level 1"
+  },
+  {
+    "locationId": "salt-palace-grand-ballroom-gi",
+    "name": "Grand Ballroom GI",
+    "venue": "Salt Palace",
+    "floor": "Level 1"
+  },
+  {
+    "locationId": "salt-palace-grand-ballroom-h",
+    "name": "Grand Ballroom H",
+    "venue": "Salt Palace",
+    "floor": "Level 1"
+  },
+  {
+    "locationId": "salt-palace-grand-ballroom-j",
+    "name": "Grand Ballroom J",
+    "venue": "Salt Palace",
+    "floor": "Level 1"
+  },
+  {
+    "locationId": "salt-palace-hall-de",
+    "name": "Hall DE",
+    "venue": "Salt Palace",
+    "floor": "Level 1"
+  },
+  {
+    "locationId": "salt-palace-halls-a-c-halls-1-5",
+    "name": "Halls A-C, Halls 1-5",
+    "venue": "Salt Palace",
+    "floor": "Level 1"
+  },
+  {
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-demo-theater",
+    "name": "Solutions Showcase · Hall 1 · Alpine Overlook Zone · Demo Theater",
+    "venue": "Salt Palace",
+    "floor": "Level 1"
+  },
+  {
+    "locationId": "salt-palace-solutions-showcase-hall-1-alpine-overlook-zone-network-nook",
+    "name": "Solutions Showcase · Hall 1 · Alpine Overlook Zone · Network Nook",
+    "venue": "Salt Palace",
+    "floor": "Level 1"
+  },
+  {
+    "locationId": "salt-palace-solutions-showcase-hall-5-cosmic-canyon-zone-project-pavilion",
+    "name": "Solutions Showcase · Hall 5 · Cosmic Canyon Zone · Project Pavilion",
+    "venue": "Salt Palace",
+    "floor": "Level 1"
+  },
+  {
+    "locationId": "salt-palace-solutions-showcase-hall-b-starlight-summit-zone",
+    "name": "Solutions Showcase · Hall B · Starlight Summit Zone",
+    "venue": "Salt Palace",
+    "floor": "Level 1"
+  },
+  {
+    "locationId": "salt-palace-solutions-showcase-halls-5-cosmic-canyon-zone-cloud-native-theater",
+    "name": "Solutions Showcase · Halls 5 · Cosmic Canyon Zone · Cloud Native Theater",
+    "venue": "Salt Palace",
+    "floor": "Level 1"
+  },
+  {
+    "locationId": "the-shop-workspace-hackathon-floor",
+    "name": "Hackathon Floor",
+    "venue": "The Shop Workspace",
+    "floor": "Level 1"
+  }
+]

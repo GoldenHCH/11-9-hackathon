@@ -1,0 +1,12 @@
+<div class="alert-banner" role="alert">
+  <mat-icon class="alert-banner-icon">error_outline</mat-icon>
+  <p class="alert-banner-message">
+    <span class="alert-banner-label">Error:</span>
+    {{ message }}
+  </p>
+  @if (dismissible) {
+    <button mat-icon-button type="button" class="alert-banner-dismiss" aria-label="Dismiss error" (click)="onDismiss()">
+      <mat-icon>close</mat-icon>
+    </button>
+  }
+</div>

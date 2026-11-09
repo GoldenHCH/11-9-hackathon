@@ -1,0 +1,38 @@
+:host {
+  display: block;
+}
+
+.alert-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 16px;
+  border: 1px solid var(--app-theme--error, #d32f2f);
+  border-inline-start-width: 6px;
+  border-radius: 8px;
+  background: var(--app-theme--error-bg, #ffebee);
+  color: var(--app-theme--error-dark, #ba1a1a);
+}
+
+.alert-banner-icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.alert-banner-message {
+  flex: 1;
+  margin: 0;
+  padding-top: 2px;
+  color: var(--app-theme--text, #1b1f2a);
+  line-height: 1.5;
+}
+
+.alert-banner-label {
+  color: var(--app-theme--error-dark, #ba1a1a);
+  font-weight: 700;
+}
+
+.alert-banner-dismiss {
+  flex-shrink: 0;
+  margin: -8px -8px -8px 0;
+}
