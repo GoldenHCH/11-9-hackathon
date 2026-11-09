@@ -1,0 +1,39 @@
+{
+  "tool": "propose_meet",
+  "endpoint": "POST /api/tools/propose_meet",
+  "request": {
+    "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+    "partnerId": "pl_592a78e076ad8c1f"
+  },
+  "status": 200,
+  "response": {
+    "id": "meet-4d7c25c123e592d61a6e986e",
+    "status": "proposed",
+    "role": "proposer",
+    "statusLine": "Waiting to hear back. We'll tell you if @podwrangler is in.",
+    "partner": {
+      "id": "pl_592a78e076ad8c1f",
+      "handle": "podwrangler",
+      "faceSeed": "podwrangler",
+      "level": 2,
+      "levelName": "Deployment",
+      "xp": 110,
+      "banners": [
+        "welcomer"
+      ],
+      "topics": [
+        "gpus",
+        "gpu-sharing",
+        "cluster-allocation",
+        "platform-engineering",
+        "kueue"
+      ],
+      "workingOn": "Runs GPU cluster allocation for ML teams; happy to help first-timers find their feet.",
+      "firstTimer": false
+    },
+    "sharedTopics": [],
+    "iAccepted": true,
+    "partnerArrived": false,
+    "expiresAt": "2026-11-09T20:40:13.391Z"
+  }
+}

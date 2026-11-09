@@ -1,0 +1,239 @@
+{
+  "tool": "whats_around_me",
+  "endpoint": "POST /api/tools/whats_around_me",
+  "request": {
+    "attendeeId": "p_Ljp4ZfHC-VPDFwqx"
+  },
+  "status": 200,
+  "response": {
+    "location": {
+      "id": "salt-palace-level-1-151",
+      "name": "151",
+      "kind": "room",
+      "building": "Salt Palace",
+      "level": "Level 1",
+      "room": "151",
+      "description": "Session room. Check in during a session, then take its quiz.",
+      "hasScreen": false,
+      "geo": {
+        "lat": 40.76645,
+        "lon": -111.89445
+      }
+    },
+    "next": {
+      "id": "kc26-tue-data-platform-panel",
+      "title": "Why We Bet the Data Platform on Kubernetes",
+      "abstract": "A panel on running large-scale data platforms on Kubernetes and how AI agents are changing day-2 operations for data teams.",
+      "sessionType": "panel",
+      "track": "data",
+      "material": "crate",
+      "speakers": [
+        "Vara Bonthu",
+        "Ying Xiong",
+        "Rainie Li",
+        "Damon Cortesi",
+        "Padma Aradhyula"
+      ],
+      "speakerDetails": [
+        {
+          "name": "Vara Bonthu"
+        },
+        {
+          "name": "Ying Xiong"
+        },
+        {
+          "name": "Rainie Li"
+        },
+        {
+          "name": "Damon Cortesi"
+        },
+        {
+          "name": "Padma Aradhyula"
+        }
+      ],
+      "start": "2026-11-10T11:30:00-07:00",
+      "end": "2026-11-10T12:00:00-07:00",
+      "locationId": "salt-palace-level-1-151",
+      "building": "Salt Palace",
+      "level": "Level 1",
+      "room": "151",
+      "isBoss": false,
+      "hasTranscript": false,
+      "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+      "sample": false,
+      "geo": {
+        "lat": 40.7665,
+        "lon": -111.8945
+      }
+    },
+    "playersHere": 1,
+    "quizAvailable": false,
+    "nearestCampfire": {
+      "location": {
+        "id": "campfire-network-nook",
+        "name": "Network Nook",
+        "kind": "campfire",
+        "building": "Salt Palace",
+        "level": "Level 1",
+        "room": "Network Nook",
+        "zone": "Solutions Showcase",
+        "description": "Hosts the scheduled meetups, next to the outposts.",
+        "hasScreen": false,
+        "geo": {
+          "lat": 40.76645,
+          "lon": -111.89475
+        }
+      },
+      "walkMinutes": 2,
+      "distanceMeters": 25
+    },
+    "matchesHere": [
+      {
+        "player": {
+          "id": "pl_592a78e076ad8c1f",
+          "handle": "podwrangler",
+          "faceSeed": "podwrangler",
+          "level": 2,
+          "levelName": "Deployment",
+          "xp": 110,
+          "banners": [
+            "welcomer"
+          ],
+          "topics": [
+            "gpus",
+            "gpu-sharing",
+            "cluster-allocation",
+            "platform-engineering",
+            "kueue"
+          ],
+          "workingOn": "Runs GPU cluster allocation for ML teams; happy to help first-timers find their feet.",
+          "firstTimer": false
+        },
+        "score": 0.0952381,
+        "sharedTopics": [],
+        "reason": "Happy to welcome a first-timer. Working on Runs GPU cluster allocation for ML teams; happy to help first-timers find their . In the same room right now",
+        "sameRoom": true
+      },
+      {
+        "player": {
+          "id": "pl_1cef692d84e1d933",
+          "handle": "agentaxolotl",
+          "faceSeed": "agentaxolotl",
+          "level": 2,
+          "levelName": "Deployment",
+          "xp": 160,
+          "banners": [],
+          "topics": [
+            "ai-agents",
+            "llm-inference",
+            "mcp",
+            "platform-engineering"
+          ],
+          "workingOn": "Building AI agents that operate clusters (with guardrails).",
+          "firstTimer": false
+        },
+        "score": 0.09090909,
+        "sharedTopics": [],
+        "reason": "Working on Building AI agents that operate clusters (with guardrails).. In the same room right now",
+        "sameRoom": true
+      },
+      {
+        "player": {
+          "id": "pl_951f088072cdd824",
+          "handle": "ingressibis",
+          "faceSeed": "ingressibis",
+          "level": 2,
+          "levelName": "Deployment",
+          "xp": 110,
+          "banners": [],
+          "topics": [
+            "gateway-api",
+            "networking",
+            "ingress",
+            "envoy"
+          ],
+          "workingOn": "Gateway API convert.",
+          "firstTimer": false
+        },
+        "score": 0.08514493,
+        "sharedTopics": [],
+        "reason": "Working on Gateway API convert.. In the same room right now",
+        "sameRoom": true
+      }
+    ]
+  },
+  "variants": {
+    "whats_around_me_after": {
+      "request": {
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx"
+      },
+      "status": 200,
+      "response": {
+        "location": {
+          "id": "campfire-network-nook",
+          "name": "Network Nook",
+          "kind": "campfire",
+          "building": "Salt Palace",
+          "level": "Level 1",
+          "room": "Network Nook",
+          "zone": "Solutions Showcase",
+          "description": "Hosts the scheduled meetups, next to the outposts.",
+          "hasScreen": false,
+          "geo": {
+            "lat": 40.76645,
+            "lon": -111.89475
+          }
+        },
+        "playersHere": 3,
+        "quizAvailable": false,
+        "nearestCampfire": {
+          "location": {
+            "id": "campfire-network-nook",
+            "name": "Network Nook",
+            "kind": "campfire",
+            "building": "Salt Palace",
+            "level": "Level 1",
+            "room": "Network Nook",
+            "zone": "Solutions Showcase",
+            "description": "Hosts the scheduled meetups, next to the outposts.",
+            "hasScreen": false,
+            "geo": {
+              "lat": 40.76645,
+              "lon": -111.89475
+            }
+          },
+          "walkMinutes": 0,
+          "distanceMeters": 0
+        },
+        "matchesHere": [
+          {
+            "player": {
+              "id": "pl_592a78e076ad8c1f",
+              "handle": "podwrangler",
+              "faceSeed": "podwrangler",
+              "level": 3,
+              "levelName": "Node",
+              "xp": 260,
+              "banners": [
+                "welcomer"
+              ],
+              "topics": [
+                "gpus",
+                "gpu-sharing",
+                "cluster-allocation",
+                "platform-engineering",
+                "kueue"
+              ],
+              "workingOn": "Runs GPU cluster allocation for ML teams; happy to help first-timers find their feet.",
+              "firstTimer": false
+            },
+            "score": 0.0952381,
+            "sharedTopics": [],
+            "reason": "Happy to welcome a first-timer. Working on Runs GPU cluster allocation for ML teams; happy to help first-timers find their . In the same room right now",
+            "sameRoom": true
+          }
+        ]
+      }
+    }
+  }
+}

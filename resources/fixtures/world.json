@@ -1,0 +1,1244 @@
+{
+  "tool": "world",
+  "endpoint": "POST /api/tools/world",
+  "request": {
+    "attendeeId": "p_Ljp4ZfHC-VPDFwqx"
+  },
+  "status": 200,
+  "response": {
+    "buildings": [
+      {
+        "name": "Salt Palace",
+        "levels": [
+          {
+            "name": "Level 1",
+            "rooms": [
+              {
+                "location": {
+                  "id": "salt-palace-level-1-hall-de",
+                  "name": "Hall DE",
+                  "kind": "boss-room",
+                  "building": "Salt Palace",
+                  "level": "Level 1",
+                  "room": "Hall DE",
+                  "description": "Keynote hall. Check in during a keynote, then beat the boss with everyone in the room.",
+                  "hasScreen": true,
+                  "geo": {
+                    "lat": 40.76609,
+                    "lon": -111.89475
+                  }
+                },
+                "next": {
+                  "id": "kc26-tue-keynote-welcome",
+                  "title": "Welcome + Opening Remarks",
+                  "abstract": "The opening keynote of KubeCon + CloudNativeCon North America 2026: welcome, community news and the state of cloud native from the CNCF and the Linux Foundation.",
+                  "sessionType": "keynote",
+                  "track": "other",
+                  "material": "wood",
+                  "speakers": [
+                    "Jonathan Bryce",
+                    "Chris Aniszczyk",
+                    "Robert Nishihara",
+                    "Rita Zhang",
+                    "Kevin Cochrane",
+                    "Bassam Tabbara"
+                  ],
+                  "speakerDetails": [
+                    {
+                      "name": "Jonathan Bryce"
+                    },
+                    {
+                      "name": "Chris Aniszczyk"
+                    },
+                    {
+                      "name": "Robert Nishihara"
+                    },
+                    {
+                      "name": "Rita Zhang"
+                    },
+                    {
+                      "name": "Kevin Cochrane"
+                    },
+                    {
+                      "name": "Bassam Tabbara"
+                    }
+                  ],
+                  "start": "2026-11-10T09:00:00-07:00",
+                  "end": "2026-11-10T09:31:00-07:00",
+                  "locationId": "salt-palace-level-1-hall-de",
+                  "building": "Salt Palace",
+                  "level": "Level 1",
+                  "room": "Hall DE",
+                  "isBoss": true,
+                  "hasTranscript": false,
+                  "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+                  "geo": {
+                    "lat": 40.7665,
+                    "lon": -111.8945
+                  }
+                },
+                "busyness": 0,
+                "walkMinutes": 2
+              },
+              {
+                "location": {
+                  "id": "salt-palace-level-1-150-defg",
+                  "name": "150 DEFG",
+                  "kind": "room",
+                  "building": "Salt Palace",
+                  "level": "Level 1",
+                  "room": "150 DEFG",
+                  "description": "Session room. Check in during a session, then take its quiz.",
+                  "hasScreen": false,
+                  "geo": {
+                    "lat": 40.76633,
+                    "lon": -111.89445
+                  }
+                },
+                "busyness": 1,
+                "walkMinutes": 2
+              },
+              {
+                "location": {
+                  "id": "salt-palace-level-1-151",
+                  "name": "151",
+                  "kind": "room",
+                  "building": "Salt Palace",
+                  "level": "Level 1",
+                  "room": "151",
+                  "description": "Session room. Check in during a session, then take its quiz.",
+                  "hasScreen": false,
+                  "geo": {
+                    "lat": 40.76645,
+                    "lon": -111.89445
+                  }
+                },
+                "next": {
+                  "id": "kc26-tue-data-platform-panel",
+                  "title": "Why We Bet the Data Platform on Kubernetes",
+                  "abstract": "A panel on running large-scale data platforms on Kubernetes and how AI agents are changing day-2 operations for data teams.",
+                  "sessionType": "panel",
+                  "track": "data",
+                  "material": "crate",
+                  "speakers": [
+                    "Vara Bonthu",
+                    "Ying Xiong",
+                    "Rainie Li",
+                    "Damon Cortesi",
+                    "Padma Aradhyula"
+                  ],
+                  "speakerDetails": [
+                    {
+                      "name": "Vara Bonthu"
+                    },
+                    {
+                      "name": "Ying Xiong"
+                    },
+                    {
+                      "name": "Rainie Li"
+                    },
+                    {
+                      "name": "Damon Cortesi"
+                    },
+                    {
+                      "name": "Padma Aradhyula"
+                    }
+                  ],
+                  "start": "2026-11-10T11:30:00-07:00",
+                  "end": "2026-11-10T12:00:00-07:00",
+                  "locationId": "salt-palace-level-1-151",
+                  "building": "Salt Palace",
+                  "level": "Level 1",
+                  "room": "151",
+                  "isBoss": false,
+                  "hasTranscript": false,
+                  "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+                  "geo": {
+                    "lat": 40.7665,
+                    "lon": -111.8945
+                  }
+                },
+                "busyness": 1,
+                "walkMinutes": 0
+              },
+              {
+                "location": {
+                  "id": "salt-palace-level-1-151-g",
+                  "name": "151 G",
+                  "kind": "room",
+                  "building": "Salt Palace",
+                  "level": "Level 1",
+                  "room": "151 G",
+                  "description": "Session room. Check in during a session, then take its quiz.",
+                  "hasScreen": false,
+                  "geo": {
+                    "lat": 40.76657,
+                    "lon": -111.89445
+                  }
+                },
+                "busyness": 1,
+                "walkMinutes": 2
+              },
+              {
+                "location": {
+                  "id": "salt-palace-level-1-155-e",
+                  "name": "155 E",
+                  "kind": "room",
+                  "building": "Salt Palace",
+                  "level": "Level 1",
+                  "room": "155 E",
+                  "description": "Session room. Check in during a session, then take its quiz.",
+                  "hasScreen": false,
+                  "geo": {
+                    "lat": 40.76609,
+                    "lon": -111.8943
+                  }
+                },
+                "busyness": 0,
+                "walkMinutes": 2
+              },
+              {
+                "location": {
+                  "id": "salt-palace-level-1-grand-ballroom-ace",
+                  "name": "Grand Ballroom ACE",
+                  "kind": "room",
+                  "building": "Salt Palace",
+                  "level": "Level 1",
+                  "room": "Grand Ballroom ACE",
+                  "description": "Session room. Check in during a session, then take its quiz.",
+                  "hasScreen": false,
+                  "geo": {
+                    "lat": 40.76621,
+                    "lon": -111.8943
+                  }
+                },
+                "next": {
+                  "id": "kc26-tue-saturated-by-design",
+                  "title": "Saturated by Design: Maximizing Cluster Allocation in On-Premises Kubernetes",
+                  "abstract": "How The Trade Desk scales workloads to fit on-premises clusters using custom scheduler plugins, pushing allocation up without starving critical services.",
+                  "sessionType": "breakout",
+                  "track": "operations",
+                  "material": "glass",
+                  "speakers": [
+                    "Dakota Sullivan",
+                    "Isaac Wilson"
+                  ],
+                  "speakerDetails": [
+                    {
+                      "name": "Dakota Sullivan",
+                      "company": "The Trade Desk"
+                    },
+                    {
+                      "name": "Isaac Wilson",
+                      "company": "The Trade Desk"
+                    }
+                  ],
+                  "start": "2026-11-10T11:30:00-07:00",
+                  "end": "2026-11-10T12:00:00-07:00",
+                  "locationId": "salt-palace-level-1-grand-ballroom-ace",
+                  "building": "Salt Palace",
+                  "level": "Level 1",
+                  "room": "Grand Ballroom ACE",
+                  "isBoss": false,
+                  "hasTranscript": false,
+                  "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+                  "geo": {
+                    "lat": 40.7665,
+                    "lon": -111.8945
+                  }
+                },
+                "busyness": 0,
+                "walkMinutes": 2
+              },
+              {
+                "location": {
+                  "id": "salt-palace-level-1-grand-ballroom-bdf",
+                  "name": "Grand Ballroom BDF",
+                  "kind": "room",
+                  "building": "Salt Palace",
+                  "level": "Level 1",
+                  "room": "Grand Ballroom BDF",
+                  "description": "Session room. Check in during a session, then take its quiz.",
+                  "hasScreen": false,
+                  "geo": {
+                    "lat": 40.76633,
+                    "lon": -111.8943
+                  }
+                },
+                "next": {
+                  "id": "kc26-tue-student-soc",
+                  "title": "Securing Rural Colorado with Open Source: Student-Led SOC on Kubernetes",
+                  "abstract": "Building a student-run security operations center on a multi-cluster Kubernetes platform to protect rural Colorado organizations with open source tools.",
+                  "sessionType": "breakout",
+                  "track": "other",
+                  "material": "wood",
+                  "speakers": [
+                    "Maciej Wal"
+                  ],
+                  "speakerDetails": [
+                    {
+                      "name": "Maciej Wal"
+                    }
+                  ],
+                  "start": "2026-11-10T11:30:00-07:00",
+                  "end": "2026-11-10T12:00:00-07:00",
+                  "locationId": "salt-palace-level-1-grand-ballroom-bdf",
+                  "building": "Salt Palace",
+                  "level": "Level 1",
+                  "room": "Grand Ballroom BDF",
+                  "isBoss": false,
+                  "hasTranscript": false,
+                  "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+                  "geo": {
+                    "lat": 40.7665,
+                    "lon": -111.8945
+                  }
+                },
+                "busyness": 0,
+                "walkMinutes": 2
+              },
+              {
+                "location": {
+                  "id": "salt-palace-level-1-grand-ballroom-gi",
+                  "name": "Grand Ballroom GI",
+                  "kind": "room",
+                  "building": "Salt Palace",
+                  "level": "Level 1",
+                  "room": "Grand Ballroom GI",
+                  "description": "Session room. Check in during a session, then take its quiz.",
+                  "hasScreen": false,
+                  "geo": {
+                    "lat": 40.76645,
+                    "lon": -111.8943
+                  }
+                },
+                "next": {
+                  "id": "kc26-tue-already-have-a-platform",
+                  "title": "So You Want to Build a Platform? You Probably Already Have One",
+                  "abstract": "Turning fragmented existing tooling into a productized internal developer platform instead of starting from scratch.",
+                  "sessionType": "breakout",
+                  "track": "platform",
+                  "material": "stone",
+                  "speakers": [
+                    "Juho Syrjänen"
+                  ],
+                  "speakerDetails": [
+                    {
+                      "name": "Juho Syrjänen"
+                    }
+                  ],
+                  "start": "2026-11-10T11:30:00-07:00",
+                  "end": "2026-11-10T12:00:00-07:00",
+                  "locationId": "salt-palace-level-1-grand-ballroom-gi",
+                  "building": "Salt Palace",
+                  "level": "Level 1",
+                  "room": "Grand Ballroom GI",
+                  "isBoss": false,
+                  "hasTranscript": false,
+                  "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+                  "geo": {
+                    "lat": 40.7665,
+                    "lon": -111.8945
+                  }
+                },
+                "busyness": 0,
+                "walkMinutes": 2
+              },
+              {
+                "location": {
+                  "id": "salt-palace-level-1-grand-ballroom-h",
+                  "name": "Grand Ballroom H",
+                  "kind": "room",
+                  "building": "Salt Palace",
+                  "level": "Level 1",
+                  "room": "Grand Ballroom H",
+                  "description": "Session room. Check in during a session, then take its quiz.",
+                  "hasScreen": false,
+                  "geo": {
+                    "lat": 40.76657,
+                    "lon": -111.8943
+                  }
+                },
+                "next": {
+                  "id": "kc26-tue-ask-your-platform",
+                  "title": "Ask Your Platform: Putting AI to Work Where the Questions Live",
+                  "abstract": "Applying AI to the common questions platform teams answer every day, with no AI background needed.",
+                  "sessionType": "breakout",
+                  "track": "ai",
+                  "material": "circuit",
+                  "speakers": [
+                    "Anton Alexander",
+                    "Scott Adams"
+                  ],
+                  "speakerDetails": [
+                    {
+                      "name": "Anton Alexander"
+                    },
+                    {
+                      "name": "Scott Adams"
+                    }
+                  ],
+                  "start": "2026-11-10T11:30:00-07:00",
+                  "end": "2026-11-10T12:00:00-07:00",
+                  "locationId": "salt-palace-level-1-grand-ballroom-h",
+                  "building": "Salt Palace",
+                  "level": "Level 1",
+                  "room": "Grand Ballroom H",
+                  "isBoss": false,
+                  "hasTranscript": false,
+                  "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+                  "geo": {
+                    "lat": 40.7665,
+                    "lon": -111.8945
+                  }
+                },
+                "busyness": 0,
+                "walkMinutes": 2
+              },
+              {
+                "location": {
+                  "id": "salt-palace-level-1-cloud-native-theater",
+                  "name": "Cloud Native Theater",
+                  "kind": "theater",
+                  "building": "Salt Palace",
+                  "level": "Level 1",
+                  "room": "Cloud Native Theater",
+                  "zone": "Project Pavilion",
+                  "description": "Project updates and community talks, scheduled like a room, inside the halls.",
+                  "hasScreen": true,
+                  "geo": {
+                    "lat": 40.76609,
+                    "lon": -111.89415
+                  }
+                },
+                "busyness": 0,
+                "walkMinutes": 2
+              },
+              {
+                "location": {
+                  "id": "salt-palace-level-1-demo-theater",
+                  "name": "Demo Theater",
+                  "kind": "theater",
+                  "building": "Salt Palace",
+                  "level": "Level 1",
+                  "room": "Demo Theater",
+                  "zone": "Solutions Showcase",
+                  "description": "Short sponsor and project demos, scheduled like a room, inside the Solutions Showcase halls.",
+                  "hasScreen": true,
+                  "geo": {
+                    "lat": 40.76621,
+                    "lon": -111.89415
+                  }
+                },
+                "busyness": 0,
+                "walkMinutes": 2
+              },
+              {
+                "location": {
+                  "id": "outpost-amazon-web-services",
+                  "name": "Amazon Web Services",
+                  "kind": "outpost",
+                  "building": "Salt Palace",
+                  "level": "Level 1",
+                  "room": "Amazon Web Services",
+                  "zone": "Solutions Showcase",
+                  "description": "AWS booth in the Solutions Showcase.",
+                  "boothNumber": "115",
+                  "sponsorTier": "Diamond",
+                  "askAbout": "How EKS Auto Mode handles node upgrades for you",
+                  "topics": [
+                    "platform",
+                    "operations",
+                    "ai"
+                  ],
+                  "hasScreen": false,
+                  "geo": {
+                    "lat": 40.76609,
+                    "lon": -111.8946
+                  }
+                },
+                "busyness": 0,
+                "walkMinutes": 2
+              },
+              {
+                "location": {
+                  "id": "outpost-dash0",
+                  "name": "Dash0",
+                  "kind": "outpost",
+                  "building": "Salt Palace",
+                  "level": "Level 1",
+                  "room": "Dash0",
+                  "zone": "Solutions Showcase",
+                  "description": "Dash0 booth in the Solutions Showcase.",
+                  "boothNumber": "134",
+                  "sponsorTier": "Platinum",
+                  "askAbout": "OpenTelemetry-native observability and tracing a request end to end",
+                  "topics": [
+                    "operations"
+                  ],
+                  "hasScreen": false,
+                  "geo": {
+                    "lat": 40.76621,
+                    "lon": -111.8946
+                  }
+                },
+                "busyness": 0,
+                "walkMinutes": 2
+              },
+              {
+                "location": {
+                  "id": "outpost-datadog",
+                  "name": "Datadog",
+                  "kind": "outpost",
+                  "building": "Salt Palace",
+                  "level": "Level 1",
+                  "room": "Datadog",
+                  "zone": "Solutions Showcase",
+                  "description": "Datadog booth in the Solutions Showcase.",
+                  "boothNumber": "152",
+                  "sponsorTier": "Platinum",
+                  "askAbout": "Watching Kubernetes cost and performance together",
+                  "topics": [
+                    "operations",
+                    "data"
+                  ],
+                  "hasScreen": false,
+                  "geo": {
+                    "lat": 40.76633,
+                    "lon": -111.8946
+                  }
+                },
+                "busyness": 0,
+                "walkMinutes": 2
+              },
+              {
+                "location": {
+                  "id": "outpost-docker",
+                  "name": "Docker",
+                  "kind": "outpost",
+                  "building": "Salt Palace",
+                  "level": "Level 1",
+                  "room": "Docker",
+                  "zone": "Solutions Showcase",
+                  "description": "Docker booth in the Solutions Showcase.",
+                  "boothNumber": "141",
+                  "sponsorTier": "Platinum",
+                  "askAbout": "Hardened images and faster container builds",
+                  "topics": [
+                    "platform",
+                    "security"
+                  ],
+                  "hasScreen": false,
+                  "geo": {
+                    "lat": 40.76645,
+                    "lon": -111.8946
+                  }
+                },
+                "busyness": 0,
+                "walkMinutes": 2
+              },
+              {
+                "location": {
+                  "id": "outpost-elastic",
+                  "name": "Elastic",
+                  "kind": "outpost",
+                  "building": "Salt Palace",
+                  "level": "Level 1",
+                  "room": "Elastic",
+                  "zone": "Solutions Showcase",
+                  "description": "Elastic booth in the Solutions Showcase.",
+                  "boothNumber": "196",
+                  "sponsorTier": "Gold",
+                  "askAbout": "Hybrid search with semantic_text and Agent Builder",
+                  "topics": [
+                    "ai",
+                    "data",
+                    "operations"
+                  ],
+                  "hasScreen": false,
+                  "geo": {
+                    "lat": 40.76657,
+                    "lon": -111.8946
+                  }
+                },
+                "busyness": 0,
+                "walkMinutes": 2
+              },
+              {
+                "location": {
+                  "id": "outpost-google-cloud",
+                  "name": "Google Cloud",
+                  "kind": "outpost",
+                  "building": "Salt Palace",
+                  "level": "Level 1",
+                  "room": "Google Cloud",
+                  "zone": "Solutions Showcase",
+                  "description": "Google Cloud booth in the Solutions Showcase.",
+                  "boothNumber": "122",
+                  "sponsorTier": "Diamond",
+                  "askAbout": "Serving LLM inference on GKE with GPUs and TPUs",
+                  "topics": [
+                    "ai",
+                    "platform"
+                  ],
+                  "hasScreen": false,
+                  "geo": {
+                    "lat": 40.76609,
+                    "lon": -111.89445
+                  }
+                },
+                "busyness": 0,
+                "walkMinutes": 2
+              },
+              {
+                "location": {
+                  "id": "outpost-haproxy-technologies",
+                  "name": "HAProxy Technologies",
+                  "kind": "outpost",
+                  "building": "Salt Palace",
+                  "level": "Level 1",
+                  "room": "HAProxy Technologies",
+                  "zone": "Solutions Showcase",
+                  "description": "HAProxy booth in the Solutions Showcase.",
+                  "boothNumber": "124",
+                  "sponsorTier": "Diamond",
+                  "askAbout": "Moving from Ingress to Gateway API without downtime",
+                  "topics": [
+                    "connectivity",
+                    "security"
+                  ],
+                  "hasScreen": false,
+                  "geo": {
+                    "lat": 40.76621,
+                    "lon": -111.89445
+                  }
+                },
+                "busyness": 0,
+                "walkMinutes": 2
+              },
+              {
+                "location": {
+                  "id": "campfire-community-hub",
+                  "name": "Community Hub",
+                  "kind": "campfire",
+                  "building": "Salt Palace",
+                  "level": "Level 1",
+                  "room": "Community Hub",
+                  "description": "Open seating meant for conversation. Meet your quest partner here.",
+                  "hasScreen": false,
+                  "geo": {
+                    "lat": 40.76621,
+                    "lon": -111.89475
+                  }
+                },
+                "busyness": 0,
+                "walkMinutes": 2
+              },
+              {
+                "location": {
+                  "id": "campfire-learning-lounge",
+                  "name": "Learning Lounge",
+                  "kind": "campfire",
+                  "building": "Salt Palace",
+                  "level": "Level 1",
+                  "room": "Learning Lounge",
+                  "zone": "Hall B, Starlight Summit Zone",
+                  "description": "Named in the schedule and easy to find in the showcase.",
+                  "hasScreen": false,
+                  "geo": {
+                    "lat": 40.76633,
+                    "lon": -111.89475
+                  }
+                },
+                "busyness": 0,
+                "walkMinutes": 2
+              },
+              {
+                "location": {
+                  "id": "campfire-network-nook",
+                  "name": "Network Nook",
+                  "kind": "campfire",
+                  "building": "Salt Palace",
+                  "level": "Level 1",
+                  "room": "Network Nook",
+                  "zone": "Solutions Showcase",
+                  "description": "Hosts the scheduled meetups, next to the outposts.",
+                  "hasScreen": false,
+                  "geo": {
+                    "lat": 40.76645,
+                    "lon": -111.89475
+                  }
+                },
+                "busyness": 0,
+                "walkMinutes": 2
+              },
+              {
+                "location": {
+                  "id": "campfire-the-meeting-point",
+                  "name": "The Meeting Point",
+                  "kind": "campfire",
+                  "building": "Salt Palace",
+                  "level": "Level 1",
+                  "room": "The Meeting Point",
+                  "description": "The venue's own named meeting spot. Meet your quest partner here.",
+                  "hasScreen": false,
+                  "geo": {
+                    "lat": 40.76657,
+                    "lon": -111.89475
+                  }
+                },
+                "busyness": 0,
+                "walkMinutes": 2
+              }
+            ]
+          },
+          {
+            "name": "Level 2",
+            "rooms": [
+              {
+                "location": {
+                  "id": "cloud-native-hackathon",
+                  "name": "Cloud Native Hackathon",
+                  "kind": "boss-room",
+                  "building": "Salt Palace",
+                  "level": "Level 2",
+                  "room": "Cloud Native Hackathon",
+                  "description": "The WeMakeDevs Cloud Native Hackathon venue. Judges and hackers check in here and fight the boss together.",
+                  "hasScreen": true,
+                  "geo": {
+                    "lat": 40.76612,
+                    "lon": -111.89475
+                  }
+                },
+                "busyness": 0,
+                "walkMinutes": 4
+              },
+              {
+                "location": {
+                  "id": "salt-palace-level-2-250-a-c",
+                  "name": "250 A-C",
+                  "kind": "room",
+                  "building": "Salt Palace",
+                  "level": "Level 2",
+                  "room": "250 A-C",
+                  "description": "Session room. Check in during a session, then take its quiz.",
+                  "hasScreen": false,
+                  "geo": {
+                    "lat": 40.76624,
+                    "lon": -111.89475
+                  }
+                },
+                "next": {
+                  "id": "kc26-tue-kserve-production-llms",
+                  "title": "Beyond Model Serving: Running Production LLMs on Kubernetes with KServe",
+                  "abstract": "Scheduling, routing and autoscaling large language model workloads in production with KServe.",
+                  "sessionType": "breakout",
+                  "track": "ai",
+                  "material": "circuit",
+                  "speakers": [
+                    "Johnu George",
+                    "Jooho Lee"
+                  ],
+                  "speakerDetails": [
+                    {
+                      "name": "Johnu George"
+                    },
+                    {
+                      "name": "Jooho Lee"
+                    }
+                  ],
+                  "start": "2026-11-10T12:20:00-07:00",
+                  "end": "2026-11-10T12:50:00-07:00",
+                  "locationId": "salt-palace-level-2-250-a-c",
+                  "building": "Salt Palace",
+                  "level": "Level 2",
+                  "room": "250 A-C",
+                  "isBoss": false,
+                  "hasTranscript": false,
+                  "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+                  "geo": {
+                    "lat": 40.7665,
+                    "lon": -111.8945
+                  }
+                },
+                "busyness": 0,
+                "walkMinutes": 4
+              },
+              {
+                "location": {
+                  "id": "salt-palace-level-2-250-ab",
+                  "name": "250 AB",
+                  "kind": "room",
+                  "building": "Salt Palace",
+                  "level": "Level 2",
+                  "room": "250 AB",
+                  "description": "Session room. Check in during a session, then take its quiz.",
+                  "hasScreen": false,
+                  "geo": {
+                    "lat": 40.76636,
+                    "lon": -111.89475
+                  }
+                },
+                "busyness": 0,
+                "walkMinutes": 4
+              },
+              {
+                "location": {
+                  "id": "salt-palace-level-2-251-abc",
+                  "name": "251 ABC",
+                  "kind": "room",
+                  "building": "Salt Palace",
+                  "level": "Level 2",
+                  "room": "251 ABC",
+                  "description": "Session room. Check in during a session, then take its quiz.",
+                  "hasScreen": false,
+                  "geo": {
+                    "lat": 40.76648,
+                    "lon": -111.89475
+                  }
+                },
+                "busyness": 0,
+                "walkMinutes": 4
+              },
+              {
+                "location": {
+                  "id": "salt-palace-level-2-251-def",
+                  "name": "251 DEF",
+                  "kind": "room",
+                  "building": "Salt Palace",
+                  "level": "Level 2",
+                  "room": "251 DEF",
+                  "description": "Session room. Check in during a session, then take its quiz.",
+                  "hasScreen": false,
+                  "geo": {
+                    "lat": 40.7666,
+                    "lon": -111.89475
+                  }
+                },
+                "busyness": 0,
+                "walkMinutes": 4
+              },
+              {
+                "location": {
+                  "id": "salt-palace-level-2-254-ab",
+                  "name": "254 AB",
+                  "kind": "room",
+                  "building": "Salt Palace",
+                  "level": "Level 2",
+                  "room": "254 AB",
+                  "description": "Session room. Check in during a session, then take its quiz.",
+                  "hasScreen": false,
+                  "geo": {
+                    "lat": 40.76612,
+                    "lon": -111.8946
+                  }
+                },
+                "busyness": 0,
+                "walkMinutes": 4
+              },
+              {
+                "location": {
+                  "id": "salt-palace-level-2-255-bc",
+                  "name": "255 BC",
+                  "kind": "room",
+                  "building": "Salt Palace",
+                  "level": "Level 2",
+                  "room": "255 BC",
+                  "description": "Session room. Check in during a session, then take its quiz.",
+                  "hasScreen": false,
+                  "geo": {
+                    "lat": 40.76624,
+                    "lon": -111.8946
+                  }
+                },
+                "next": {
+                  "id": "kc26-tue-agent-needs-a-platform",
+                  "title": "Your Agent Needs a Platform: Cloud Native Infrastructure for Multi-Agent AI Systems",
+                  "abstract": "Modeling AI agents as Kubernetes custom resources, with Dapr for workflows, NATS for messaging and OpenTelemetry for tracing agent conversations.",
+                  "sessionType": "breakout",
+                  "track": "ai",
+                  "material": "circuit",
+                  "speakers": [
+                    "Soham Ghadge"
+                  ],
+                  "speakerDetails": [
+                    {
+                      "name": "Soham Ghadge"
+                    }
+                  ],
+                  "start": "2026-11-10T11:30:00-07:00",
+                  "end": "2026-11-10T12:00:00-07:00",
+                  "locationId": "salt-palace-level-2-255-bc",
+                  "building": "Salt Palace",
+                  "level": "Level 2",
+                  "room": "255 BC",
+                  "isBoss": false,
+                  "hasTranscript": false,
+                  "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+                  "geo": {
+                    "lat": 40.7665,
+                    "lon": -111.8945
+                  }
+                },
+                "busyness": 0,
+                "walkMinutes": 4
+              },
+              {
+                "location": {
+                  "id": "salt-palace-level-2-255-ef",
+                  "name": "255 EF",
+                  "kind": "room",
+                  "building": "Salt Palace",
+                  "level": "Level 2",
+                  "room": "255 EF",
+                  "description": "Session room. Check in during a session, then take its quiz.",
+                  "hasScreen": false,
+                  "geo": {
+                    "lat": 40.76636,
+                    "lon": -111.8946
+                  }
+                },
+                "next": {
+                  "id": "kc26-tue-gateway-high-and-dry",
+                  "title": "Will Your Gateway Leave You High and Dry?",
+                  "abstract": "Benchmarks of Gateway API controllers under production-like route churn and load, and what the results mean when choosing one.",
+                  "sessionType": "breakout",
+                  "track": "connectivity",
+                  "material": "copper",
+                  "speakers": [
+                    "John Howard",
+                    "Mitch Connors"
+                  ],
+                  "speakerDetails": [
+                    {
+                      "name": "John Howard"
+                    },
+                    {
+                      "name": "Mitch Connors"
+                    }
+                  ],
+                  "start": "2026-11-10T11:30:00-07:00",
+                  "end": "2026-11-10T12:00:00-07:00",
+                  "locationId": "salt-palace-level-2-255-ef",
+                  "building": "Salt Palace",
+                  "level": "Level 2",
+                  "room": "255 EF",
+                  "isBoss": false,
+                  "hasTranscript": false,
+                  "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+                  "geo": {
+                    "lat": 40.7665,
+                    "lon": -111.8945
+                  }
+                },
+                "busyness": 0,
+                "walkMinutes": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Hyatt Regency",
+        "levels": [
+          {
+            "name": "Level 2",
+            "rooms": [
+              {
+                "location": {
+                  "id": "hyatt-regency-level-2-salt-lake-ballroom-a",
+                  "name": "Salt Lake Ballroom A",
+                  "kind": "room",
+                  "building": "Hyatt Regency",
+                  "level": "Level 2",
+                  "room": "Salt Lake Ballroom A",
+                  "description": "Session room. Check in during a session, then take its quiz.",
+                  "hasScreen": false,
+                  "geo": {
+                    "lat": 40.76714,
+                    "lon": -111.89385
+                  }
+                },
+                "busyness": 0,
+                "walkMinutes": 8
+              },
+              {
+                "location": {
+                  "id": "hyatt-regency-level-2-salt-lake-ballroom-b",
+                  "name": "Salt Lake Ballroom B",
+                  "kind": "room",
+                  "building": "Hyatt Regency",
+                  "level": "Level 2",
+                  "room": "Salt Lake Ballroom B",
+                  "description": "Session room. Check in during a session, then take its quiz.",
+                  "hasScreen": false,
+                  "geo": {
+                    "lat": 40.76726,
+                    "lon": -111.89385
+                  }
+                },
+                "busyness": 0,
+                "walkMinutes": 8
+              },
+              {
+                "location": {
+                  "id": "hyatt-regency-level-2-salt-lake-ballroom-c",
+                  "name": "Salt Lake Ballroom C",
+                  "kind": "room",
+                  "building": "Hyatt Regency",
+                  "level": "Level 2",
+                  "room": "Salt Lake Ballroom C",
+                  "description": "Session room. Check in during a session, then take its quiz.",
+                  "hasScreen": false,
+                  "geo": {
+                    "lat": 40.76738,
+                    "lon": -111.89385
+                  }
+                },
+                "next": {
+                  "id": "kc26-tue-portable-gpu-config",
+                  "title": "One Recipe, Five Clouds, One Query: Portable GPU Configuration",
+                  "abstract": "Generating portable GPU Helm bundles for multiple clouds, with a queryable audit layer that shows what was configured where.",
+                  "sessionType": "breakout",
+                  "track": "platform",
+                  "material": "stone",
+                  "speakers": [
+                    "Christopher Haar",
+                    "Yuan Chen"
+                  ],
+                  "speakerDetails": [
+                    {
+                      "name": "Christopher Haar"
+                    },
+                    {
+                      "name": "Yuan Chen"
+                    }
+                  ],
+                  "start": "2026-11-10T11:30:00-07:00",
+                  "end": "2026-11-10T12:00:00-07:00",
+                  "locationId": "hyatt-regency-level-2-salt-lake-ballroom-c",
+                  "building": "Hyatt Regency",
+                  "level": "Level 2",
+                  "room": "Salt Lake Ballroom C",
+                  "isBoss": false,
+                  "hasTranscript": false,
+                  "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+                  "geo": {
+                    "lat": 40.7683,
+                    "lon": -111.8962
+                  }
+                },
+                "busyness": 0,
+                "walkMinutes": 8
+              },
+              {
+                "location": {
+                  "id": "hyatt-regency-level-2-salt-lake-ballroom-de",
+                  "name": "Salt Lake Ballroom DE",
+                  "kind": "room",
+                  "building": "Hyatt Regency",
+                  "level": "Level 2",
+                  "room": "Salt Lake Ballroom DE",
+                  "description": "Session room. Check in during a session, then take its quiz.",
+                  "hasScreen": false,
+                  "geo": {
+                    "lat": 40.7675,
+                    "lon": -111.89385
+                  }
+                },
+                "next": {
+                  "id": "kc26-tue-vulnerability-tsunami",
+                  "title": "Mythos vs Maintainers: Drowning in the Vulnerability Tsunami",
+                  "abstract": "Offensive and defensive perspectives on the flood of AI-driven vulnerability reports and what it does to open source maintainers.",
+                  "sessionType": "breakout",
+                  "track": "security",
+                  "material": "iron",
+                  "speakers": [
+                    "Fabian Kammel",
+                    "John Kjell"
+                  ],
+                  "speakerDetails": [
+                    {
+                      "name": "Fabian Kammel"
+                    },
+                    {
+                      "name": "John Kjell"
+                    }
+                  ],
+                  "start": "2026-11-10T11:30:00-07:00",
+                  "end": "2026-11-10T12:00:00-07:00",
+                  "locationId": "hyatt-regency-level-2-salt-lake-ballroom-de",
+                  "building": "Hyatt Regency",
+                  "level": "Level 2",
+                  "room": "Salt Lake Ballroom DE",
+                  "isBoss": false,
+                  "hasTranscript": false,
+                  "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+                  "geo": {
+                    "lat": 40.7683,
+                    "lon": -111.8962
+                  }
+                },
+                "busyness": 0,
+                "walkMinutes": 8
+              },
+              {
+                "location": {
+                  "id": "campfire-salt-lake-foyer",
+                  "name": "Salt Lake Foyer",
+                  "kind": "campfire",
+                  "building": "Hyatt Regency",
+                  "level": "Level 2",
+                  "room": "Salt Lake Foyer",
+                  "description": "Outside the Salt Lake Ballrooms.",
+                  "hasScreen": false,
+                  "geo": {
+                    "lat": 40.76702,
+                    "lon": -111.89385
+                  }
+                },
+                "busyness": 0,
+                "walkMinutes": 8
+              }
+            ]
+          },
+          {
+            "name": "Level 4",
+            "rooms": [
+              {
+                "location": {
+                  "id": "hyatt-regency-level-4-regency-ballroom-a",
+                  "name": "Regency Ballroom A",
+                  "kind": "room",
+                  "building": "Hyatt Regency",
+                  "level": "Level 4",
+                  "room": "Regency Ballroom A",
+                  "description": "Session room. Check in during a session, then take its quiz.",
+                  "hasScreen": false,
+                  "geo": {
+                    "lat": 40.7672,
+                    "lon": -111.89385
+                  }
+                },
+                "next": {
+                  "id": "kc26-tue-autoscaling-reality-check",
+                  "title": "Autoscaling Reality Check: The Hands-On HTTP Optimization Challenge",
+                  "abstract": "A hands-on tutorial in benchmark rounds: tune pod-level autoscaling for an HTTP app and see which settings actually hold up under load.",
+                  "sessionType": "tutorial",
+                  "track": "operations",
+                  "material": "glass",
+                  "speakers": [
+                    "David Pech"
+                  ],
+                  "speakerDetails": [
+                    {
+                      "name": "David Pech"
+                    }
+                  ],
+                  "start": "2026-11-10T11:30:00-07:00",
+                  "end": "2026-11-10T12:50:00-07:00",
+                  "locationId": "hyatt-regency-level-4-regency-ballroom-a",
+                  "building": "Hyatt Regency",
+                  "level": "Level 4",
+                  "room": "Regency Ballroom A",
+                  "isBoss": false,
+                  "hasTranscript": false,
+                  "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+                  "geo": {
+                    "lat": 40.7683,
+                    "lon": -111.8962
+                  }
+                },
+                "busyness": 0,
+                "walkMinutes": 8
+              },
+              {
+                "location": {
+                  "id": "hyatt-regency-level-4-regency-ballroom-b-d",
+                  "name": "Regency Ballroom B-D",
+                  "kind": "room",
+                  "building": "Hyatt Regency",
+                  "level": "Level 4",
+                  "room": "Regency Ballroom B-D",
+                  "description": "Session room. Check in during a session, then take its quiz.",
+                  "hasScreen": false,
+                  "geo": {
+                    "lat": 40.76732,
+                    "lon": -111.89385
+                  }
+                },
+                "busyness": 0,
+                "walkMinutes": 8
+              },
+              {
+                "location": {
+                  "id": "hyatt-regency-level-4-regency-ballroom-cd",
+                  "name": "Regency Ballroom CD",
+                  "kind": "room",
+                  "building": "Hyatt Regency",
+                  "level": "Level 4",
+                  "room": "Regency Ballroom CD",
+                  "description": "Session room. Check in during a session, then take its quiz.",
+                  "hasScreen": false,
+                  "geo": {
+                    "lat": 40.76744,
+                    "lon": -111.89385
+                  }
+                },
+                "busyness": 0,
+                "walkMinutes": 8
+              },
+              {
+                "location": {
+                  "id": "campfire-regency-foyer",
+                  "name": "Regency Foyer",
+                  "kind": "campfire",
+                  "building": "Hyatt Regency",
+                  "level": "Level 4",
+                  "room": "Regency Foyer",
+                  "description": "By the Regency Ballrooms, outside the lightning-talk room.",
+                  "hasScreen": false,
+                  "geo": {
+                    "lat": 40.76708,
+                    "lon": -111.89385
+                  }
+                },
+                "busyness": 0,
+                "walkMinutes": 8
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Cloud Native Hackathon",
+        "levels": [
+          {
+            "name": "Level 1",
+            "rooms": [
+              {
+                "location": {
+                  "id": "cloud-native-hackathon-level-1-cloud-native-hackathon",
+                  "name": "Cloud Native Hackathon",
+                  "kind": "room",
+                  "building": "Cloud Native Hackathon",
+                  "level": "Level 1",
+                  "room": "Cloud Native Hackathon",
+                  "description": "Session room. Check in during a session, then take its quiz.",
+                  "hasScreen": false,
+                  "geo": {
+                    "lat": 40.76609,
+                    "lon": -111.89475
+                  }
+                },
+                "busyness": 0,
+                "walkMinutes": 8
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "generatedAt": "2026-11-09T20:20:16.336Z"
+  }
+}

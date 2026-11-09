@@ -1,0 +1,11 @@
+{
+  "tool": "whats_next",
+  "endpoint": "POST /api/tools/whats_next",
+  "request": {
+    "attendeeId": "p_Ljp4ZfHC-VPDFwqx"
+  },
+  "status": 200,
+  "response": {
+    "items": []
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "tool": "screen_token",
+  "endpoint": "POST /api/tools/screen_token",
+  "request": {
+    "locationId": "cloud-native-hackathon"
+  },
+  "status": 200,
+  "response": {
+    "locationId": "cloud-native-hackathon",
+    "token": "<signed-token>",
+    "expiresAt": "2026-11-09T20:30:00.944Z",
+    "scanUrl": "https://kube-quest.cnh.radarhq.io/r/cloud-native-hackathon?t=<signed-token>"
+  },
+  "variants": {
+    "screen_token_get": {
+      "status": 200,
+      "response": {
+        "locationId": "cloud-native-hackathon",
+        "token": "<signed-token>",
+        "expiresAt": "2026-11-09T20:30:01.013Z",
+        "scanUrl": "https://kube-quest.cnh.radarhq.io/r/cloud-native-hackathon?t=<signed-token>"
+      }
+    },
+    "screen_token_fresh": {
+      "request": {
+        "locationId": "cloud-native-hackathon"
+      },
+      "status": 200,
+      "response": {
+        "locationId": "cloud-native-hackathon",
+        "token": "<signed-token>",
+        "expiresAt": "2026-11-09T20:30:55.254Z",
+        "scanUrl": "https://kube-quest.cnh.radarhq.io/r/cloud-native-hackathon?t=<signed-token>"
+      }
+    },
+    "screen_token_no_screen": {
+      "request": {
+        "locationId": "salt-palace-level-1-151"
+      },
+      "status": 403,
+      "response": {
+        "error": {
+          "code": "no_screen",
+          "message": "151 has no screen. Scan the printed code on its door."
+        }
+      }
+    }
+  }
+}

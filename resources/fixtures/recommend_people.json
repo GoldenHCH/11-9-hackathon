@@ -1,0 +1,86 @@
+{
+  "tool": "recommend_people",
+  "endpoint": "POST /api/tools/recommend_people",
+  "request": {
+    "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+    "limit": 3
+  },
+  "status": 200,
+  "response": [
+    {
+      "player": {
+        "id": "pl_592a78e076ad8c1f",
+        "handle": "podwrangler",
+        "faceSeed": "podwrangler",
+        "level": 2,
+        "levelName": "Deployment",
+        "xp": 110,
+        "banners": [
+          "welcomer"
+        ],
+        "topics": [
+          "gpus",
+          "gpu-sharing",
+          "cluster-allocation",
+          "platform-engineering",
+          "kueue"
+        ],
+        "workingOn": "Runs GPU cluster allocation for ML teams; happy to help first-timers find their feet.",
+        "firstTimer": false
+      },
+      "score": 0.09307359,
+      "sharedTopics": [],
+      "reason": "Happy to welcome a first-timer. Working on Runs GPU cluster allocation for ML teams; happy to help first-timers find their . In the same room right now",
+      "sameRoom": true
+    },
+    {
+      "player": {
+        "id": "pl_35d0cb4d4cbe5bda",
+        "handle": "kedakestrel",
+        "faceSeed": "kedakestrel",
+        "level": 2,
+        "levelName": "Deployment",
+        "xp": 100,
+        "banners": [],
+        "topics": [
+          "autoscaling",
+          "keda",
+          "serverless",
+          "cost"
+        ],
+        "workingOn": "Event-driven autoscaling enthusiast.",
+        "firstTimer": false
+      },
+      "score": 0.08928572,
+      "sharedTopics": [
+        "autoscaling"
+      ],
+      "reason": "Both into autoscaling",
+      "sameRoom": false
+    },
+    {
+      "player": {
+        "id": "pl_5f917ee1a2a89af1",
+        "handle": "quietgopher",
+        "faceSeed": "quietgopher",
+        "level": 1,
+        "levelName": "Pod",
+        "xp": 10,
+        "banners": [],
+        "topics": [
+          "platform-engineering",
+          "gpus",
+          "gpu-sharing",
+          "internal-developer-platforms",
+          "go"
+        ],
+        "workingOn": "Platform engineer, first KubeCon, figuring out how to share a small GPU pool fairly across teams.",
+        "firstTimer": true
+      },
+      "score": 0.08893281,
+      "sharedTopics": [],
+      "reason": "Working on Platform engineer, first KubeCon, figuring out how to share a small GPU pool fai",
+      "sameRoom": false
+    }
+  ]
+}

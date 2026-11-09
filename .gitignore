@@ -44,3 +44,9 @@ yarn-error.log*
 *.pem
 *.key
 node_modules/
+
+# KubeQuest build output
+/app/public/
+
+# Printed QR tokens (signed with QR_SECRET)
+resources/qr-links.local.txt

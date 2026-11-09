@@ -1,0 +1,221 @@
+{
+  "tool": "leaderboard",
+  "endpoint": "POST /api/tools/leaderboard",
+  "request": {
+    "board": "overall",
+    "period": "conference",
+    "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+    "limit": 5
+  },
+  "status": 200,
+  "response": {
+    "board": "overall",
+    "period": "conference",
+    "rows": [
+      {
+        "rank": 1,
+        "player": {
+          "id": "pl_aeea8bd684c45f90",
+          "handle": "otelotter",
+          "faceSeed": "otelotter",
+          "level": 3,
+          "levelName": "Node",
+          "xp": 255,
+          "banners": [
+            "welcomer"
+          ]
+        },
+        "score": 255,
+        "latestTraceId": "90e2360060c52e00dbf8c60099407e00",
+        "latestEventAt": "2026-11-09T20:09:18.482Z",
+        "isMe": false
+      },
+      {
+        "rank": 2,
+        "player": {
+          "id": "pl_9a347291c56fda88",
+          "handle": "sigstoresloth",
+          "faceSeed": "sigstoresloth",
+          "level": 2,
+          "levelName": "Deployment",
+          "xp": 190,
+          "banners": [
+            "welcomer"
+          ]
+        },
+        "score": 190,
+        "latestTraceId": "b94793006443c80007cc5800a4d1a840",
+        "latestEventAt": "2026-11-09T19:58:18.482Z",
+        "isMe": false
+      },
+      {
+        "rank": 3,
+        "player": {
+          "id": "pl_64681ccfcf5ca8a7",
+          "handle": "crdcrane",
+          "faceSeed": "crdcrane",
+          "level": 2,
+          "levelName": "Deployment",
+          "xp": 180,
+          "banners": [
+            "welcomer"
+          ]
+        },
+        "score": 180,
+        "latestTraceId": "7cfe4b00b5202000a86dd0000c21c000",
+        "latestEventAt": "2026-11-09T20:04:18.482Z",
+        "isMe": false
+      },
+      {
+        "rank": 4,
+        "player": {
+          "id": "pl_f2271988aa64235b",
+          "handle": "ebpfennec",
+          "faceSeed": "ebpfennec",
+          "level": 2,
+          "levelName": "Deployment",
+          "xp": 180,
+          "banners": []
+        },
+        "score": 180,
+        "latestTraceId": "4df79f8082081a00f15f4200d7ab4a00",
+        "latestEventAt": "2026-11-09T20:02:18.482Z",
+        "isMe": false
+      },
+      {
+        "rank": 5,
+        "player": {
+          "id": "pl_1cef692d84e1d933",
+          "handle": "agentaxolotl",
+          "faceSeed": "agentaxolotl",
+          "level": 2,
+          "levelName": "Deployment",
+          "xp": 160,
+          "banners": []
+        },
+        "score": 160,
+        "latestTraceId": "7892c0f036e576008da76e0067ce0600",
+        "latestEventAt": "2026-11-09T19:35:18.482Z",
+        "isMe": false
+      }
+    ],
+    "me": {
+      "rank": 19,
+      "player": {
+        "id": "pl_4451cf61b8914498",
+        "handle": "verify93279",
+        "faceSeed": "cbd1b4ac2fe4ff69",
+        "level": 1,
+        "levelName": "Pod",
+        "xp": 10,
+        "banners": []
+      },
+      "score": 10,
+      "latestTraceId": "62975e06703755f25f14049bfa8d19ab",
+      "latestEventAt": "2026-11-09T20:20:11.563Z",
+      "isMe": true
+    }
+  },
+  "variants": {
+    "leaderboard_connectors": {
+      "request": {
+        "board": "connectors",
+        "period": "today",
+        "limit": 5
+      },
+      "status": 200,
+      "response": {
+        "board": "connectors",
+        "period": "today",
+        "rows": [
+          {
+            "rank": 1,
+            "player": {
+              "id": "pl_aeea8bd684c45f90",
+              "handle": "otelotter",
+              "faceSeed": "otelotter",
+              "level": 3,
+              "levelName": "Node",
+              "xp": 255,
+              "banners": [
+                "welcomer"
+              ]
+            },
+            "score": 150,
+            "latestTraceId": "978385c0c840a20040e12a00b6ab1200",
+            "latestEventAt": "2026-11-09T18:47:18.482Z",
+            "isMe": false
+          },
+          {
+            "rank": 2,
+            "player": {
+              "id": "pl_1cef692d84e1d933",
+              "handle": "agentaxolotl",
+              "faceSeed": "agentaxolotl",
+              "level": 2,
+              "levelName": "Deployment",
+              "xp": 160,
+              "banners": []
+            },
+            "score": 100,
+            "latestTraceId": "765cfc00a25f7c00226ffc00b0767c00",
+            "latestEventAt": "2026-11-09T18:26:18.482Z",
+            "isMe": false
+          },
+          {
+            "rank": 3,
+            "player": {
+              "id": "pl_64681ccfcf5ca8a7",
+              "handle": "crdcrane",
+              "faceSeed": "crdcrane",
+              "level": 2,
+              "levelName": "Deployment",
+              "xp": 180,
+              "banners": [
+                "welcomer"
+              ]
+            },
+            "score": 100,
+            "latestTraceId": "2cd11400411db400fe7dd400aa2b7400",
+            "latestEventAt": "2026-11-09T18:32:18.482Z",
+            "isMe": false
+          },
+          {
+            "rank": 4,
+            "player": {
+              "id": "pl_f2271988aa64235b",
+              "handle": "ebpfennec",
+              "faceSeed": "ebpfennec",
+              "level": 2,
+              "levelName": "Deployment",
+              "xp": 180,
+              "banners": []
+            },
+            "score": 100,
+            "latestTraceId": "4bc1db00b4446f0074f574004dda9400",
+            "latestEventAt": "2026-11-09T18:53:18.482Z",
+            "isMe": false
+          },
+          {
+            "rank": 5,
+            "player": {
+              "id": "pl_9a347291c56fda88",
+              "handle": "sigstoresloth",
+              "faceSeed": "sigstoresloth",
+              "level": 2,
+              "levelName": "Deployment",
+              "xp": 190,
+              "banners": [
+                "welcomer"
+              ]
+            },
+            "score": 100,
+            "latestTraceId": "1481a000f9f1504043b2dc007a2fdc00",
+            "latestEventAt": "2026-11-09T18:14:18.482Z",
+            "isMe": false
+          }
+        ]
+      }
+    }
+  }
+}

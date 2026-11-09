@@ -1,0 +1,258 @@
+{
+  "tool": "respond_quest",
+  "endpoint": "POST /api/tools/respond_quest",
+  "request": {
+    "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+    "questId": "q_09012f7849878be86dedf78a",
+    "response": "accept"
+  },
+  "status": 200,
+  "response": {
+    "quest": {
+      "id": "q_09012f7849878be86dedf78a",
+      "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+      "type": "chat",
+      "status": "accepted",
+      "source": "board",
+      "offeredAt": "2026-11-09T20:19:56.010Z",
+      "title": "Meet @quietgopher",
+      "reason": "Working on Platform engineer, first KubeCon, figuring out how to share a small GPU pool fai",
+      "nextStep": "Waiting to hear back. We'll tell you if @quietgopher is in.",
+      "reward": {
+        "xp": 75,
+        "gems": 1,
+        "label": "75 XP + 1 gem each"
+      },
+      "partnerId": "pl_5f917ee1a2a89af1",
+      "expiresAt": "2026-11-09T20:40:05.092Z",
+      "respondedAt": "2026-11-09T20:20:04.865Z",
+      "introId": "meet-a08d179265d6e711506c8723"
+    },
+    "board": {
+      "offers": [
+        {
+          "id": "q_c9fcf1af3bb1cce9e85b3b3a",
+          "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+          "type": "chat",
+          "status": "offered",
+          "source": "board",
+          "offeredAt": "2026-11-09T20:20:04.865Z",
+          "title": "Meet @podwrangler",
+          "reason": "Happy to welcome a first-timer. Working on Runs GPU cluster allocation for ML teams; happy to help first-timers find their . In the same room right now",
+          "nextStep": "Accept, then meet at the campfire. Ask @podwrangler about Runs GPU cluster allocation for ML teams; happy to help first-timers find their feet..",
+          "reward": {
+            "xp": 75,
+            "gems": 1,
+            "label": "75 XP + 1 gem each"
+          },
+          "walkMinutes": 0,
+          "partnerId": "pl_592a78e076ad8c1f",
+          "expiresAt": "2026-11-09T20:40:04.865Z"
+        },
+        {
+          "id": "q_515b7434bbba1f5bc63432e3",
+          "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+          "type": "outpost",
+          "status": "offered",
+          "source": "board",
+          "offeredAt": "2026-11-09T20:19:56.010Z",
+          "title": "Visit Google Cloud",
+          "reason": "It covers ai and platform.",
+          "nextStep": "Find Google Cloud at booth 122 and scan the QR block on its table. Ask them about Serving LLM inference on GKE with GPUs and TPUs.",
+          "reward": {
+            "xp": 10,
+            "label": "10 XP"
+          },
+          "where": {
+            "locationId": "outpost-google-cloud",
+            "name": "Google Cloud",
+            "kind": "outpost",
+            "building": "Salt Palace",
+            "level": "Level 1"
+          },
+          "walkMinutes": 2,
+          "locationId": "outpost-google-cloud",
+          "expiresAt": "2026-11-10T06:59:59.000Z"
+        },
+        {
+          "id": "q_e66e5eb65ac5319a50610ada",
+          "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+          "type": "collection",
+          "status": "offered",
+          "source": "board",
+          "offeredAt": "2026-11-09T20:19:56.010Z",
+          "title": "Banner: Observability Nerd",
+          "reason": "You are 0 of 3 of the way there.",
+          "nextStep": "Collect 3 glass blocks from Operations + Performance talks",
+          "reward": {
+            "xp": 0,
+            "banner": "observability-nerd",
+            "label": "The Observability Nerd banner"
+          },
+          "progress": {
+            "current": 0,
+            "target": 3
+          }
+        }
+      ],
+      "active": [
+        {
+          "id": "q_09012f7849878be86dedf78a",
+          "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+          "type": "chat",
+          "status": "accepted",
+          "source": "board",
+          "offeredAt": "2026-11-09T20:19:56.010Z",
+          "title": "Meet @quietgopher",
+          "reason": "Working on Platform engineer, first KubeCon, figuring out how to share a small GPU pool fai",
+          "nextStep": "Waiting to hear back. We'll tell you if @quietgopher is in.",
+          "reward": {
+            "xp": 75,
+            "gems": 1,
+            "label": "75 XP + 1 gem each"
+          },
+          "partnerId": "pl_5f917ee1a2a89af1",
+          "expiresAt": "2026-11-09T20:40:05.092Z",
+          "respondedAt": "2026-11-09T20:20:04.865Z",
+          "introId": "meet-a08d179265d6e711506c8723"
+        }
+      ],
+      "doneToday": [],
+      "maxOffers": 3,
+      "maxActive": 3
+    }
+  },
+  "variants": {
+    "respond_quest_not_for_me": {
+      "request": {
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+        "questId": "q_515b7434bbba1f5bc63432e3",
+        "response": "not_for_me",
+        "reason": "too_far"
+      },
+      "status": 200,
+      "response": {
+        "quest": {
+          "id": "q_515b7434bbba1f5bc63432e3",
+          "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+          "type": "outpost",
+          "status": "declined",
+          "source": "board",
+          "offeredAt": "2026-11-09T20:19:56.010Z",
+          "title": "Visit Google Cloud",
+          "reason": "It covers ai and platform.",
+          "nextStep": "Find Google Cloud at booth 122 and scan the QR block on its table. Ask them about Serving LLM inference on GKE with GPUs and TPUs.",
+          "reward": {
+            "xp": 10,
+            "label": "10 XP"
+          },
+          "where": {
+            "locationId": "outpost-google-cloud",
+            "name": "Google Cloud",
+            "kind": "outpost",
+            "building": "Salt Palace",
+            "level": "Level 1"
+          },
+          "walkMinutes": 2,
+          "locationId": "outpost-google-cloud",
+          "expiresAt": "2026-11-10T06:59:59.000Z",
+          "respondedAt": "2026-11-09T20:20:06.946Z",
+          "declineReason": "too_far"
+        },
+        "board": {
+          "offers": [
+            {
+              "id": "q_c9fcf1af3bb1cce9e85b3b3a",
+              "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+              "type": "chat",
+              "status": "offered",
+              "source": "board",
+              "offeredAt": "2026-11-09T20:20:04.865Z",
+              "title": "Meet @podwrangler",
+              "reason": "Happy to welcome a first-timer. Working on Runs GPU cluster allocation for ML teams; happy to help first-timers find their . In the same room right now",
+              "nextStep": "Accept, then meet at the campfire. Ask @podwrangler about Runs GPU cluster allocation for ML teams; happy to help first-timers find their feet..",
+              "reward": {
+                "xp": 75,
+                "gems": 1,
+                "label": "75 XP + 1 gem each"
+              },
+              "walkMinutes": 0,
+              "partnerId": "pl_592a78e076ad8c1f",
+              "expiresAt": "2026-11-09T20:40:06.946Z"
+            },
+            {
+              "id": "q_63d9822d61e8de55f416894c",
+              "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+              "type": "outpost",
+              "status": "offered",
+              "source": "board",
+              "offeredAt": "2026-11-09T20:20:06.946Z",
+              "title": "Visit Elastic",
+              "reason": "It covers ai and data.",
+              "nextStep": "Find Elastic at booth 196 and scan the QR block on its table. Ask them about Hybrid search with semantic_text and Agent Builder.",
+              "reward": {
+                "xp": 10,
+                "label": "10 XP"
+              },
+              "where": {
+                "locationId": "outpost-elastic",
+                "name": "Elastic",
+                "kind": "outpost",
+                "building": "Salt Palace",
+                "level": "Level 1"
+              },
+              "walkMinutes": 2,
+              "locationId": "outpost-elastic",
+              "expiresAt": "2026-11-10T06:59:59.000Z"
+            },
+            {
+              "id": "q_e66e5eb65ac5319a50610ada",
+              "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+              "type": "collection",
+              "status": "offered",
+              "source": "board",
+              "offeredAt": "2026-11-09T20:19:56.010Z",
+              "title": "Banner: Observability Nerd",
+              "reason": "You are 0 of 3 of the way there.",
+              "nextStep": "Collect 3 glass blocks from Operations + Performance talks",
+              "reward": {
+                "xp": 0,
+                "banner": "observability-nerd",
+                "label": "The Observability Nerd banner"
+              },
+              "progress": {
+                "current": 0,
+                "target": 3
+              }
+            }
+          ],
+          "active": [
+            {
+              "id": "q_09012f7849878be86dedf78a",
+              "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+              "type": "chat",
+              "status": "accepted",
+              "source": "board",
+              "offeredAt": "2026-11-09T20:19:56.010Z",
+              "title": "Meet @quietgopher",
+              "reason": "Working on Platform engineer, first KubeCon, figuring out how to share a small GPU pool fai",
+              "nextStep": "Waiting to hear back. We'll tell you if @quietgopher is in.",
+              "reward": {
+                "xp": 75,
+                "gems": 1,
+                "label": "75 XP + 1 gem each"
+              },
+              "partnerId": "pl_5f917ee1a2a89af1",
+              "expiresAt": "2026-11-09T20:40:05.092Z",
+              "respondedAt": "2026-11-09T20:20:04.865Z",
+              "introId": "meet-a08d179265d6e711506c8723"
+            }
+          ],
+          "doneToday": [],
+          "maxOffers": 3,
+          "maxActive": 3
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "tool": "quiz_for_talk",
+  "endpoint": "POST /api/tools/quiz_for_talk",
+  "request": {
+    "talkId": "kc26-tue-keynote-welcome",
+    "attendeeId": "p_Ljp4ZfHC-VPDFwqx"
+  },
+  "status": 200,
+  "response": {
+    "talkId": "kc26-tue-keynote-welcome",
+    "talkTitle": "Welcome + Opening Remarks",
+    "source": "abstract",
+    "isBoss": true,
+    "questions": [
+      {
+        "id": "kc26-tue-keynote-welcome-q1",
+        "prompt": "Which track does \"Welcome + Opening Remarks\" belong to?",
+        "choices": [
+          "ai",
+          "platform",
+          "operations",
+          "other"
+        ]
+      },
+      {
+        "id": "kc26-tue-keynote-welcome-q2",
+        "prompt": "Who presented \"Welcome + Opening Remarks\"?",
+        "choices": [
+          "Jonathan Bryce",
+          "Kelsey Hightower",
+          "Liz Rice",
+          "Brendan Burns"
+        ]
+      },
+      {
+        "id": "kc26-tue-keynote-welcome-q3",
+        "prompt": "Which of these does the talk abstract mention?",
+        "choices": [
+          "Mainframes",
+          "Spreadsheets",
+          "opening",
+          "Fax machines"
+        ]
+      },
+      {
+        "id": "kc26-tue-keynote-welcome-q4",
+        "prompt": "Where did this session take place?",
+        "choices": [
+          "Hall A",
+          "Hall DE",
+          "Ballroom B",
+          "Room 151"
+        ]
+      },
+      {
+        "id": "kc26-tue-keynote-welcome-q5",
+        "prompt": "What kind of session was this?",
+        "choices": [
+          "breakout",
+          "lightning",
+          "tutorial",
+          "keynote"
+        ]
+      }
+    ]
+  }
+}

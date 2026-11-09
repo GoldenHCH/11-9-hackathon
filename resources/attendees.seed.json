@@ -1,0 +1,658 @@
+[
+  {
+    "id": "att-quietgopher",
+    "handle": "quietgopher",
+    "faceSeed": "quietgopher",
+    "workingOn": "Platform engineer, first KubeCon, figuring out how to share a small GPU pool fairly across teams.",
+    "headline": "Platform engineer, first KubeCon, figuring out how to share a small GPU pool fairly across teams.",
+    "profileText": "First KubeCon. I'm a platform engineer on a four-person team that runs the internal developer platform for about 60 product engineers. We just got our first small pool of NVIDIA GPUs and nobody agrees how to share it: whole-node allocation wastes most of it, and teams fight over who gets the cards. I want to learn how other platform teams do GPU sharing, time-slicing, MIG and quota-based allocation in Kubernetes, and how they expose it through a self-service platform. I write Go and I'm a bit shy, so a guided intro would help.",
+    "profile": {
+      "topics": [
+        "platform-engineering",
+        "gpus",
+        "gpu-sharing",
+        "internal-developer-platforms",
+        "go"
+      ],
+      "firstTimer": true,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-1-grand-ballroom-ace",
+    "lastLocation": {
+      "lat": 40.76621,
+      "lon": -111.8943
+    },
+    "lastSeenAt": "2026-11-09T17:57:00.000Z",
+    "visible": true,
+    "xp": 0,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T13:00:00.000Z"
+  },
+  {
+    "id": "att-podwrangler",
+    "handle": "podwrangler",
+    "faceSeed": "podwrangler",
+    "workingOn": "Runs GPU cluster allocation for ML teams; happy to help first-timers find their feet.",
+    "headline": "Runs GPU cluster allocation for ML teams; happy to help first-timers find their feet.",
+    "profileText": "Seventh KubeCon, and I volunteer as a welcomer because my first one was overwhelming. I lead the platform team that wrangles a 400-GPU Kubernetes fleet shared by a dozen ML teams. Day to day that means GPU sharing with MIG and time-slicing, fair-share cluster allocation with Kueue quotas, and making the whole thing self-service so platform engineers aren't a ticket queue. Ask me how we split GPUs between teams without anyone hoarding them; I love helping someone who is setting this up for the first time.",
+    "profile": {
+      "topics": [
+        "gpus",
+        "gpu-sharing",
+        "cluster-allocation",
+        "platform-engineering",
+        "kueue"
+      ],
+      "firstTimer": false,
+      "welcomer": true
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-2-255-bc",
+    "lastLocation": {
+      "lat": 40.76624,
+      "lon": -111.8946
+    },
+    "lastSeenAt": "2026-11-09T17:53:00.000Z",
+    "visible": true,
+    "xp": 0,
+    "level": 1,
+    "banners": [
+      "welcomer"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T12:53:00.000Z"
+  },
+  {
+    "id": "att-ebpfennec",
+    "handle": "ebpfennec",
+    "faceSeed": "ebpfennec",
+    "workingOn": "Kernel-curious SRE tracing everything with eBPF.",
+    "headline": "Kernel-curious SRE tracing everything with eBPF.",
+    "profileText": "SRE at a payments company. I spend most of my time with eBPF-based tooling: Cilium for networking, Tetragon for runtime events, and custom probes when the dashboards lie. Looking for people who have pushed eBPF observability into production at scale and want to compare notes on overhead and kernel versions.",
+    "profile": {
+      "topics": [
+        "ebpf",
+        "observability",
+        "networking",
+        "cilium"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-1-grand-ballroom-ace",
+    "lastLocation": {
+      "lat": 40.76621,
+      "lon": -111.8943
+    },
+    "lastSeenAt": "2026-11-09T17:49:00.000Z",
+    "visible": true,
+    "xp": 0,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T12:46:00.000Z"
+  },
+  {
+    "id": "att-helmsmith",
+    "handle": "helmsmith",
+    "faceSeed": "helmsmith",
+    "workingOn": "Maintains far too many Helm charts. Trying to stop.",
+    "headline": "Maintains far too many Helm charts. Trying to stop.",
+    "profileText": "I maintain the Helm charts for our internal platform, roughly 80 of them, and I'm slowly moving us to a GitOps model with Argo CD and fewer, smarter charts. Interested in chart testing, OCI registries for charts, and how people keep values files from turning into a second programming language.",
+    "profile": {
+      "topics": [
+        "helm",
+        "gitops",
+        "argo-cd",
+        "packaging"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": false,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-1-151",
+    "lastLocation": {
+      "lat": 40.76645,
+      "lon": -111.89445
+    },
+    "lastSeenAt": "2026-11-09T17:45:00.000Z",
+    "visible": true,
+    "xp": 0,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T12:39:00.000Z"
+  },
+  {
+    "id": "att-otelotter",
+    "handle": "otelotter",
+    "faceSeed": "otelotter",
+    "workingOn": "OpenTelemetry contributor; tracing all the things.",
+    "headline": "OpenTelemetry contributor; tracing all the things.",
+    "profileText": "Contributor to the OpenTelemetry Collector and part of a small observability team. I care about getting traces, metrics and logs to share context so an on-call engineer can go from an alert to the exact span in one click. Happy to talk tail sampling, collector pipelines, or how to get a team started with OTel.",
+    "profile": {
+      "topics": [
+        "opentelemetry",
+        "observability",
+        "tracing",
+        "collector"
+      ],
+      "firstTimer": false,
+      "welcomer": true
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-2-255-bc",
+    "lastLocation": {
+      "lat": 40.76624,
+      "lon": -111.8946
+    },
+    "lastSeenAt": "2026-11-09T17:41:00.000Z",
+    "visible": true,
+    "xp": 0,
+    "level": 1,
+    "banners": [
+      "welcomer"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T12:32:00.000Z"
+  },
+  {
+    "id": "att-meshmarmot",
+    "handle": "meshmarmot",
+    "faceSeed": "meshmarmot",
+    "workingOn": "Service mesh skeptic turned ambient mode fan.",
+    "headline": "Service mesh skeptic turned ambient mode fan.",
+    "profileText": "Network engineer turned platform engineer. We ran sidecar Istio for two years and are now moving to ambient mode to cut resource overhead. I want to hear real migration stories, mTLS rollout pain, and how people handle multi-cluster traffic without a giant control plane.",
+    "profile": {
+      "topics": [
+        "service-mesh",
+        "istio",
+        "networking",
+        "security"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "hyatt-regency-level-2-salt-lake-ballroom-de",
+    "lastLocation": {
+      "lat": 40.7675,
+      "lon": -111.89385
+    },
+    "lastSeenAt": "2026-11-09T17:37:00.000Z",
+    "visible": true,
+    "xp": 0,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T12:25:00.000Z"
+  },
+  {
+    "id": "att-policypuffin",
+    "handle": "policypuffin",
+    "faceSeed": "policypuffin",
+    "workingOn": "Writes admission policies so nobody has to read the runbook.",
+    "headline": "Writes admission policies so nobody has to read the runbook.",
+    "profileText": "First time at KubeCon, sent by a security team that just inherited three clusters. I'm learning Kyverno and admission policies, image signing with Sigstore and SBOMs for supply chain security. Looking for practical advice on rolling policies out in audit mode first without breaking every deploy.",
+    "profile": {
+      "topics": [
+        "security",
+        "policy-as-code",
+        "kyverno",
+        "supply-chain"
+      ],
+      "firstTimer": true,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": false,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-1-151",
+    "lastLocation": {
+      "lat": 40.76645,
+      "lon": -111.89445
+    },
+    "lastSeenAt": "2026-11-09T17:33:00.000Z",
+    "visible": true,
+    "xp": 0,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T12:18:00.000Z"
+  },
+  {
+    "id": "att-kedakestrel",
+    "handle": "kedakestrel",
+    "faceSeed": "kedakestrel",
+    "workingOn": "Event-driven autoscaling enthusiast.",
+    "headline": "Event-driven autoscaling enthusiast.",
+    "profileText": "Backend engineer who ended up owning autoscaling. We use KEDA to scale consumers off Kafka lag and are experimenting with scale-to-zero for internal tools to save cost. Curious about Karpenter for node autoscaling and how people combine the two without flapping.",
+    "profile": {
+      "topics": [
+        "autoscaling",
+        "keda",
+        "serverless",
+        "cost"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-2-255-ef",
+    "lastLocation": {
+      "lat": 40.76636,
+      "lon": -111.8946
+    },
+    "lastSeenAt": "2026-11-09T17:29:00.000Z",
+    "visible": true,
+    "xp": 0,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T12:11:00.000Z"
+  },
+  {
+    "id": "att-wasmwalrus",
+    "handle": "wasmwalrus",
+    "faceSeed": "wasmwalrus",
+    "workingOn": "Running WebAssembly next to containers, on purpose.",
+    "headline": "Running WebAssembly next to containers, on purpose.",
+    "profileText": "Rust developer exploring WebAssembly workloads on Kubernetes with SpinKube and runwasi. I'm interested in cold starts at the edge, small footprints, and whether Wasm and containers can share a cluster cleanly. Would love to meet anyone running Wasm in production.",
+    "profile": {
+      "topics": [
+        "webassembly",
+        "edge",
+        "runtimes",
+        "rust"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": false,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "hyatt-regency-level-2-salt-lake-ballroom-de",
+    "lastLocation": {
+      "lat": 40.7675,
+      "lon": -111.89385
+    },
+    "lastSeenAt": "2026-11-09T17:25:00.000Z",
+    "visible": true,
+    "xp": 0,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T12:04:00.000Z"
+  },
+  {
+    "id": "att-crdcrane",
+    "handle": "crdcrane",
+    "faceSeed": "crdcrane",
+    "workingOn": "Operator author. Reconcile loops are my love language.",
+    "headline": "Operator author. Reconcile loops are my love language.",
+    "profileText": "I build Kubernetes operators in Go with controller-runtime for a database company. I like talking about reconcile loop design, status conditions, finalizers and testing controllers with envtest. Happy to help anyone writing their first operator.",
+    "profile": {
+      "topics": [
+        "operators",
+        "controllers",
+        "go",
+        "crds"
+      ],
+      "firstTimer": false,
+      "welcomer": true
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-1-grand-ballroom-ace",
+    "lastLocation": {
+      "lat": 40.76621,
+      "lon": -111.8943
+    },
+    "lastSeenAt": "2026-11-09T17:21:00.000Z",
+    "visible": true,
+    "xp": 0,
+    "level": 1,
+    "banners": [
+      "welcomer"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T11:57:00.000Z"
+  },
+  {
+    "id": "att-datadugong",
+    "handle": "datadugong",
+    "faceSeed": "datadugong",
+    "workingOn": "Moving stateful data workloads onto Kubernetes, carefully.",
+    "headline": "Moving stateful data workloads onto Kubernetes, carefully.",
+    "profileText": "Data platform engineer migrating Postgres to Kubernetes with CloudNativePG. My questions are about storage classes, backups to object storage, failover testing, and convincing DBAs that operators can be trusted with their data.",
+    "profile": {
+      "topics": [
+        "databases",
+        "storage",
+        "cloudnativepg",
+        "backups"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-2-255-ef",
+    "lastLocation": {
+      "lat": 40.76636,
+      "lon": -111.8946
+    },
+    "lastSeenAt": "2026-11-09T17:17:00.000Z",
+    "visible": true,
+    "xp": 0,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T11:50:00.000Z"
+  },
+  {
+    "id": "att-agentaxolotl",
+    "handle": "agentaxolotl",
+    "faceSeed": "agentaxolotl",
+    "workingOn": "Building AI agents that operate clusters (with guardrails).",
+    "headline": "Building AI agents that operate clusters (with guardrails).",
+    "profileText": "ML engineer working on AI agents that help on-call engineers investigate Kubernetes incidents through MCP tools. I'm interested in LLM inference serving, guardrails for agents that can change clusters, and evaluation. Inference cost is our biggest problem right now.",
+    "profile": {
+      "topics": [
+        "ai-agents",
+        "llm-inference",
+        "mcp",
+        "platform-engineering"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-2-255-bc",
+    "lastLocation": {
+      "lat": 40.76624,
+      "lon": -111.8946
+    },
+    "lastSeenAt": "2026-11-09T17:13:00.000Z",
+    "visible": true,
+    "xp": 0,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T11:43:00.000Z"
+  },
+  {
+    "id": "att-fluxfalcon",
+    "handle": "fluxfalcon",
+    "faceSeed": "fluxfalcon",
+    "workingOn": "GitOps at fleet scale.",
+    "headline": "GitOps at fleet scale.",
+    "profileText": "I manage 120 edge clusters with Flux and a monorepo of Kustomize overlays. Interested in fleet management, progressive delivery across many clusters, and how people keep drift under control when clusters go offline for days.",
+    "profile": {
+      "topics": [
+        "gitops",
+        "flux",
+        "multi-cluster",
+        "fleet-management"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": false,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-1-151",
+    "lastLocation": {
+      "lat": 40.76645,
+      "lon": -111.89445
+    },
+    "lastSeenAt": "2026-11-09T17:09:00.000Z",
+    "visible": true,
+    "xp": 0,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T11:36:00.000Z"
+  },
+  {
+    "id": "att-chaoschinchilla",
+    "handle": "chaoschinchilla",
+    "faceSeed": "chaoschinchilla",
+    "workingOn": "Breaks things on purpose, with permission.",
+    "headline": "Breaks things on purpose, with permission.",
+    "profileText": "First KubeCon. I'm an SRE starting a chaos engineering practice with LitmusChaos and game days. I want to learn how to sell resilience testing to product teams and how to keep the blast radius small. Big fan of good postmortems.",
+    "profile": {
+      "topics": [
+        "chaos-engineering",
+        "reliability",
+        "sre",
+        "litmus"
+      ],
+      "firstTimer": true,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "hyatt-regency-level-2-salt-lake-ballroom-de",
+    "lastLocation": {
+      "lat": 40.7675,
+      "lon": -111.89385
+    },
+    "lastSeenAt": "2026-11-09T17:05:00.000Z",
+    "visible": true,
+    "xp": 0,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T11:29:00.000Z"
+  },
+  {
+    "id": "att-quotaquokka",
+    "handle": "quotaquokka",
+    "faceSeed": "quotaquokka",
+    "workingOn": "FinOps for Kubernetes: who is paying for that namespace?",
+    "headline": "FinOps for Kubernetes: who is paying for that namespace?",
+    "profileText": "FinOps engineer. I use OpenCost to show teams what their namespaces cost and set resource quotas and limit ranges so nobody gets surprised. Interested in rightsizing, spot instances and chargeback models that engineers don't hate.",
+    "profile": {
+      "topics": [
+        "finops",
+        "cost",
+        "resource-quotas",
+        "opencost"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-2-255-ef",
+    "lastLocation": {
+      "lat": 40.76636,
+      "lon": -111.8946
+    },
+    "lastSeenAt": "2026-11-09T17:01:00.000Z",
+    "visible": true,
+    "xp": 0,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T11:22:00.000Z"
+  },
+  {
+    "id": "att-sigstoresloth",
+    "handle": "sigstoresloth",
+    "faceSeed": "sigstoresloth",
+    "workingOn": "Signing every image, slowly but surely.",
+    "headline": "Signing every image, slowly but surely.",
+    "profileText": "Security engineer focused on software supply chain. We sign every image with cosign, generate SBOMs in CI and verify them at admission. I enjoy helping teams adopt SLSA levels step by step and I'm always up for a hallway chat about provenance.",
+    "profile": {
+      "topics": [
+        "supply-chain",
+        "sigstore",
+        "security",
+        "sbom"
+      ],
+      "firstTimer": false,
+      "welcomer": true
+    },
+    "settings": {
+      "meetingOn": false,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-1-grand-ballroom-ace",
+    "lastLocation": {
+      "lat": 40.76621,
+      "lon": -111.8943
+    },
+    "lastSeenAt": "2026-11-09T16:57:00.000Z",
+    "visible": true,
+    "xp": 0,
+    "level": 1,
+    "banners": [
+      "welcomer"
+    ],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T11:15:00.000Z"
+  },
+  {
+    "id": "att-ingressibis",
+    "handle": "ingressibis",
+    "faceSeed": "ingressibis",
+    "workingOn": "Gateway API convert.",
+    "headline": "Gateway API convert.",
+    "profileText": "Platform networking engineer moving our clusters from Ingress to Gateway API with Envoy Gateway. Interested in multi-tenant routing, rate limiting and how teams share a gateway safely.",
+    "profile": {
+      "topics": [
+        "gateway-api",
+        "networking",
+        "ingress",
+        "envoy"
+      ],
+      "firstTimer": false,
+      "welcomer": false
+    },
+    "settings": {
+      "meetingOn": true,
+      "accessibleMode": false,
+      "noWalking": false,
+      "locationOn": true,
+      "language": "en",
+      "hideFromLeaderboard": false
+    },
+    "lastLocationId": "salt-palace-level-2-255-bc",
+    "lastLocation": {
+      "lat": 40.76624,
+      "lon": -111.8946
+    },
+    "lastSeenAt": "2026-11-09T16:53:00.000Z",
+    "visible": true,
+    "xp": 0,
+    "level": 1,
+    "banners": [],
+    "blockedIds": [],
+    "createdAt": "2026-11-09T11:08:00.000Z"
+  }
+]

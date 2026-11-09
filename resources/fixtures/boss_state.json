@@ -1,0 +1,130 @@
+{
+  "tool": "boss_state",
+  "endpoint": "POST /api/tools/boss_state",
+  "request": {
+    "talkId": "cnh-kickoff-2026",
+    "attendeeId": "p_Ljp4ZfHC-VPDFwqx"
+  },
+  "status": 200,
+  "response": {
+    "talkId": "cnh-kickoff-2026",
+    "title": "Cloud Native Hackathon Kickoff: Make Conferences Easier",
+    "locationId": "cloud-native-hackathon",
+    "status": "escaped",
+    "maxHealth": 10,
+    "health": 10,
+    "damage": 0,
+    "playersInRoom": 0,
+    "participants": 0,
+    "endsAt": "2026-11-09T11:00:00-07:00",
+    "deadline": "2026-11-09T18:15:00.000Z",
+    "bonusXp": 25,
+    "questions": [
+      {
+        "id": "q1",
+        "prompt": "What challenge did the kickoff set for teams?",
+        "choices": [
+          "Make conferences easier to navigate",
+          "Build the fastest Kubernetes scheduler",
+          "Replace YAML with a new language",
+          "Port a game to WebAssembly"
+        ]
+      },
+      {
+        "id": "q2",
+        "prompt": "How does each team deploy to its cluster?",
+        "choices": [
+          "kubectl apply from a laptop",
+          "GitOps: push to main and Argo CD syncs",
+          "Uploading a zip to a web form",
+          "SSH into the nodes"
+        ]
+      },
+      {
+        "id": "q3",
+        "prompt": "Which sponsor provides OpenTelemetry-based observability?",
+        "choices": [
+          "Elastic",
+          "Radar",
+          "Dash0",
+          "Gitar"
+        ]
+      }
+    ]
+  },
+  "variants": {
+    "boss_state_by_location": {
+      "request": {
+        "locationId": "salt-palace-level-1-hall-de"
+      },
+      "status": 200,
+      "response": {
+        "talkId": "kc26-tue-keynote-welcome",
+        "title": "Welcome + Opening Remarks",
+        "locationId": "salt-palace-level-1-hall-de",
+        "status": "waiting",
+        "maxHealth": 10,
+        "health": 9,
+        "damage": 1,
+        "playersInRoom": 0,
+        "participants": 1,
+        "endsAt": "2026-11-10T09:31:00-07:00",
+        "deadline": "2026-11-10T16:46:00.000Z",
+        "bonusXp": 25
+      }
+    },
+    "boss_state_cnh": {
+      "request": {
+        "locationId": "cloud-native-hackathon",
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx"
+      },
+      "status": 200,
+      "response": {
+        "talkId": "cnh-kickoff-2026",
+        "title": "Cloud Native Hackathon Kickoff: Make Conferences Easier",
+        "locationId": "cloud-native-hackathon",
+        "status": "escaped",
+        "maxHealth": 10,
+        "health": 10,
+        "damage": 0,
+        "playersInRoom": 0,
+        "participants": 0,
+        "endsAt": "2026-11-09T11:00:00-07:00",
+        "deadline": "2026-11-09T18:15:00.000Z",
+        "bonusXp": 25,
+        "questions": [
+          {
+            "id": "q1",
+            "prompt": "What challenge did the kickoff set for teams?",
+            "choices": [
+              "Make conferences easier to navigate",
+              "Build the fastest Kubernetes scheduler",
+              "Replace YAML with a new language",
+              "Port a game to WebAssembly"
+            ]
+          },
+          {
+            "id": "q2",
+            "prompt": "How does each team deploy to its cluster?",
+            "choices": [
+              "kubectl apply from a laptop",
+              "GitOps: push to main and Argo CD syncs",
+              "Uploading a zip to a web form",
+              "SSH into the nodes"
+            ]
+          },
+          {
+            "id": "q3",
+            "prompt": "Which sponsor provides OpenTelemetry-based observability?",
+            "choices": [
+              "Elastic",
+              "Radar",
+              "Dash0",
+              "Gitar"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

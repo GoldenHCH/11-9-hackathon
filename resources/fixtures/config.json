@@ -1,0 +1,5 @@
+{
+  "endpoint": "GET /api/config",
+  "status": 200,
+  "response": {"appVersion":"dev","publicBaseUrl":"https://kube-quest.cnh.radarhq.io","conferenceTimeZone":"America/Denver"}
+}

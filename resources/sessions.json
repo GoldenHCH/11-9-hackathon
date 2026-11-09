@@ -1,0 +1,1157 @@
+[
+  {
+    "id": "cnh-kickoff-2026",
+    "title": "Cloud Native Hackathon Kickoff: Make Conferences Easier",
+    "abstract": "The kickoff for the WeMakeDevs Cloud Native Hackathon in Salt Lake City. The challenge is to make a huge conference like KubeCon easier to navigate: find the right talk, find the right people and actually meet them. Every team ships to its own Kubernetes cluster through GitOps, within a fixed resource budget, using sponsor technology from Elastic (search and AI on Elasticsearch), Dash0 (OpenTelemetry observability), Radar (cluster visibility and an MCP server for agents) and Gitar and Sonar (code review and quality).",
+    "sessionType": "keynote",
+    "track": "other",
+    "material": "wood",
+    "speakers": [
+      "Cloud Native Hackathon organizers"
+    ],
+    "speakerDetails": [
+      {
+        "name": "Cloud Native Hackathon organizers"
+      }
+    ],
+    "start": "2026-11-09T10:00:00-07:00",
+    "end": "2026-11-09T11:00:00-07:00",
+    "locationId": "cloud-native-hackathon",
+    "building": "Salt Palace",
+    "level": "Level 2",
+    "room": "Cloud Native Hackathon",
+    "isBoss": true,
+    "hasTranscript": true,
+    "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+    "sample": true,
+    "searchText": "Cloud Native Hackathon Kickoff: Make Conferences Easier\nThe kickoff for the WeMakeDevs Cloud Native Hackathon in Salt Lake City. The challenge is to make a huge conference like KubeCon easier to navigate: find the right talk, find the right people and actually meet them. Every team ships to its own Kubernetes cluster through GitOps, within a fixed resource budget, using sponsor technology from Elastic (search and AI on Elasticsearch), Dash0 (OpenTelemetry observability), Radar (cluster visibility and an MCP server for agents) and Gitar and Sonar (code review and quality).\nCloud Native Hackathon organizers\nEverything else\nCloud Native Hackathon\nSalt Palace",
+    "transcript": "# Cloud Native Hackathon kickoff (summary)\n\nOur own short summary of the kickoff themes for the WeMakeDevs Cloud Native Hackathon, Monday 9 November 2026, Salt Lake City, the day before KubeCon + CloudNativeCon North America 2026 opens. It is not a verbatim transcript.\n\n## The challenge: make conferences easier\n\nKubeCon is huge. A first-timer faces hundreds of sessions across two buildings, a showcase hall full of booths, and thousands of people they have never met. The kickoff asked teams to build something that makes the conference easier to navigate: finding the right talk, finding the right people, and actually meeting them. The best entries help someone on day one, not only power users.\n\n## One day, one cluster per team\n\nEvery team gets its own Kubernetes cluster, a virtual cluster on shared hosts, where the team is cluster-admin. Deploys are GitOps: push to main and Argo CD syncs the team namespace. Each team has a fixed resource budget (2 CPU and 4 GiB of requests), so efficient workloads matter. The public URL for every team is routed to a single Service on port 80.\n\n## The sponsors and what they bring\n\n- **Elastic**: Elasticsearch on Elastic Cloud Serverless as the data layer. Semantic search with `semantic_text` and Jina embeddings, hybrid search that fuses keyword and vector results with reciprocal rank fusion (RRF), geo queries, aggregations, the inference API for language models, Agent Builder and Workflows.\n- **Dash0**: observability built on OpenTelemetry. Send traces, metrics and logs over OTLP and follow a single request across services.\n- **Radar**: Radar Cloud shows every team's cluster, its workloads, GitOps state, events and health checks, and exposes an MCP server so coding agents can observe and operate the cluster safely.\n- **Gitar and Sonar**: code quality and AI code review on every pull request, with team-defined review rules.\n\n## How projects are judged\n\nJudges look for a working demo on the live URL, real use of the sponsor technologies rather than logos, clear observability of what the app is doing, and something an attendee would actually want to use tomorrow morning. Teams should show the deploy story: a commit, a sync, a healthy rollout.\n\n## Practical advice from the kickoff\n\nShip the smallest end-to-end slice early, deploy it, then improve it. Keep secrets out of the public repo. Watch the resource budget: a pod over quota stays Pending. Demos are short, so rehearse the path a judge will take from scanning a QR code to seeing a result.\n",
+    "quiz": {
+      "talkId": "cnh-kickoff-2026",
+      "source": "transcript",
+      "generatedBy": "fallback",
+      "createdAt": "2026-11-09T09:00:00-07:00",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What challenge did the kickoff set for teams?",
+          "choices": [
+            "Make conferences easier to navigate",
+            "Build the fastest Kubernetes scheduler",
+            "Replace YAML with a new language",
+            "Port a game to WebAssembly"
+          ],
+          "answerIndex": 0,
+          "explanation": "Teams build something that helps attendees find the right talks and people and actually meet them."
+        },
+        {
+          "id": "q2",
+          "prompt": "How does each team deploy to its cluster?",
+          "choices": [
+            "kubectl apply from a laptop",
+            "GitOps: push to main and Argo CD syncs",
+            "Uploading a zip to a web form",
+            "SSH into the nodes"
+          ],
+          "answerIndex": 1,
+          "explanation": "Pushing to main is the deploy; Argo CD syncs the team namespace."
+        },
+        {
+          "id": "q3",
+          "prompt": "Which sponsor provides OpenTelemetry-based observability?",
+          "choices": [
+            "Elastic",
+            "Radar",
+            "Dash0",
+            "Gitar"
+          ],
+          "answerIndex": 2,
+          "explanation": "Dash0 receives traces, metrics and logs over OTLP."
+        }
+      ]
+    },
+    "bossQuiz": {
+      "talkId": "cnh-kickoff-2026",
+      "source": "transcript",
+      "generatedBy": "fallback",
+      "createdAt": "2026-11-09T09:00:00-07:00",
+      "questions": [
+        {
+          "id": "b1",
+          "prompt": "Which Elasticsearch field type gives semantic search with Jina embeddings?",
+          "choices": [
+            "keyword",
+            "semantic_text",
+            "geo_point",
+            "flattened"
+          ],
+          "answerIndex": 1,
+          "explanation": "semantic_text embeds text at index time through an inference endpoint."
+        },
+        {
+          "id": "b2",
+          "prompt": "What does RRF do in an Elasticsearch hybrid search?",
+          "choices": [
+            "Compresses the index",
+            "Fuses keyword and vector rankings into one list",
+            "Replicates shards",
+            "Rate-limits queries"
+          ],
+          "answerIndex": 1,
+          "explanation": "Reciprocal rank fusion merges the rankings of several retrievers."
+        },
+        {
+          "id": "b3",
+          "prompt": "What happens to a pod that goes over the team resource budget?",
+          "choices": [
+            "It runs on a bigger node",
+            "It is billed extra",
+            "It stays Pending",
+            "It restarts every minute"
+          ],
+          "answerIndex": 2,
+          "explanation": "The quota refuses it, so it stays Pending with an exceeded quota event."
+        },
+        {
+          "id": "b4",
+          "prompt": "What does Radar expose so coding agents can operate the cluster?",
+          "choices": [
+            "An MCP server",
+            "A root SSH key",
+            "A public kubeconfig",
+            "A Slack bot only"
+          ],
+          "answerIndex": 0,
+          "explanation": "Radar Cloud's MCP server lets agents observe and change the team's cluster."
+        },
+        {
+          "id": "b5",
+          "prompt": "What do Gitar and Sonar bring to the hackathon?",
+          "choices": [
+            "GPU credits",
+            "Venue Wi-Fi",
+            "Code review and code quality on pull requests",
+            "Conference badges"
+          ],
+          "answerIndex": 2,
+          "explanation": "They review every pull request against team-defined rules."
+        }
+      ]
+    }
+  },
+  {
+    "id": "cnh-demo-boss-2026",
+    "title": "KubeQuest live: beat the kickoff boss",
+    "abstract": "The kickoff boss stays open all afternoon in the Cloud Native Hackathon room. Check in here, take the kickoff quiz, then team up with everyone in the room to beat the boss: questions on Elastic hybrid search, the team resource budget, Radar MCP and code review with Gitar and Sonar.",
+    "sessionType": "keynote",
+    "track": "other",
+    "material": "wood",
+    "speakers": [
+      "Cloud Native Hackathon organizers"
+    ],
+    "speakerDetails": [
+      {
+        "name": "Cloud Native Hackathon organizers"
+      }
+    ],
+    "start": "2026-11-09T13:00:00-07:00",
+    "end": "2026-11-09T18:30:00-07:00",
+    "locationId": "cloud-native-hackathon",
+    "building": "Salt Palace",
+    "level": "Level 2",
+    "room": "Cloud Native Hackathon",
+    "isBoss": true,
+    "hasTranscript": true,
+    "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+    "sample": true,
+    "searchText": "KubeQuest live: beat the kickoff boss\nThe kickoff boss stays open all afternoon in the Cloud Native Hackathon room. Check in here, take the kickoff quiz, then team up with everyone in the room to beat the boss: questions on Elastic hybrid search, the team resource budget, Radar MCP and code review with Gitar and Sonar.\nCloud Native Hackathon organizers\nEverything else\nCloud Native Hackathon\nSalt Palace",
+    "transcript": "# Cloud Native Hackathon kickoff (summary)\n\nOur own short summary of the kickoff themes for the WeMakeDevs Cloud Native Hackathon, Monday 9 November 2026, Salt Lake City, the day before KubeCon + CloudNativeCon North America 2026 opens. It is not a verbatim transcript.\n\n## The challenge: make conferences easier\n\nKubeCon is huge. A first-timer faces hundreds of sessions across two buildings, a showcase hall full of booths, and thousands of people they have never met. The kickoff asked teams to build something that makes the conference easier to navigate: finding the right talk, finding the right people, and actually meeting them. The best entries help someone on day one, not only power users.\n\n## One day, one cluster per team\n\nEvery team gets its own Kubernetes cluster, a virtual cluster on shared hosts, where the team is cluster-admin. Deploys are GitOps: push to main and Argo CD syncs the team namespace. Each team has a fixed resource budget (2 CPU and 4 GiB of requests), so efficient workloads matter. The public URL for every team is routed to a single Service on port 80.\n\n## The sponsors and what they bring\n\n- **Elastic**: Elasticsearch on Elastic Cloud Serverless as the data layer. Semantic search with `semantic_text` and Jina embeddings, hybrid search that fuses keyword and vector results with reciprocal rank fusion (RRF), geo queries, aggregations, the inference API for language models, Agent Builder and Workflows.\n- **Dash0**: observability built on OpenTelemetry. Send traces, metrics and logs over OTLP and follow a single request across services.\n- **Radar**: Radar Cloud shows every team's cluster, its workloads, GitOps state, events and health checks, and exposes an MCP server so coding agents can observe and operate the cluster safely.\n- **Gitar and Sonar**: code quality and AI code review on every pull request, with team-defined review rules.\n\n## How projects are judged\n\nJudges look for a working demo on the live URL, real use of the sponsor technologies rather than logos, clear observability of what the app is doing, and something an attendee would actually want to use tomorrow morning. Teams should show the deploy story: a commit, a sync, a healthy rollout.\n\n## Practical advice from the kickoff\n\nShip the smallest end-to-end slice early, deploy it, then improve it. Keep secrets out of the public repo. Watch the resource budget: a pod over quota stays Pending. Demos are short, so rehearse the path a judge will take from scanning a QR code to seeing a result.\n",
+    "quiz": {
+      "talkId": "cnh-demo-boss-2026",
+      "source": "transcript",
+      "generatedBy": "fallback",
+      "createdAt": "2026-11-09T09:00:00-07:00",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What challenge did the kickoff set for teams?",
+          "choices": [
+            "Make conferences easier to navigate",
+            "Build the fastest Kubernetes scheduler",
+            "Replace YAML with a new language",
+            "Port a game to WebAssembly"
+          ],
+          "answerIndex": 0,
+          "explanation": "Teams build something that helps attendees find the right talks and people and actually meet them."
+        },
+        {
+          "id": "q2",
+          "prompt": "How does each team deploy to its cluster?",
+          "choices": [
+            "kubectl apply from a laptop",
+            "GitOps: push to main and Argo CD syncs",
+            "Uploading a zip to a web form",
+            "SSH into the nodes"
+          ],
+          "answerIndex": 1,
+          "explanation": "Pushing to main is the deploy; Argo CD syncs the team namespace."
+        },
+        {
+          "id": "q3",
+          "prompt": "Which sponsor provides OpenTelemetry-based observability?",
+          "choices": [
+            "Elastic",
+            "Radar",
+            "Dash0",
+            "Gitar"
+          ],
+          "answerIndex": 2,
+          "explanation": "Dash0 receives traces, metrics and logs over OTLP."
+        }
+      ]
+    },
+    "bossQuiz": {
+      "talkId": "cnh-demo-boss-2026",
+      "source": "transcript",
+      "generatedBy": "fallback",
+      "createdAt": "2026-11-09T09:00:00-07:00",
+      "questions": [
+        {
+          "id": "b1",
+          "prompt": "Which Elasticsearch field type gives semantic search with Jina embeddings?",
+          "choices": [
+            "keyword",
+            "semantic_text",
+            "geo_point",
+            "flattened"
+          ],
+          "answerIndex": 1,
+          "explanation": "semantic_text embeds text at index time through an inference endpoint."
+        },
+        {
+          "id": "b2",
+          "prompt": "What does RRF do in an Elasticsearch hybrid search?",
+          "choices": [
+            "Compresses the index",
+            "Fuses keyword and vector rankings into one list",
+            "Replicates shards",
+            "Rate-limits queries"
+          ],
+          "answerIndex": 1,
+          "explanation": "Reciprocal rank fusion merges the rankings of several retrievers."
+        },
+        {
+          "id": "b3",
+          "prompt": "What happens to a pod that goes over the team resource budget?",
+          "choices": [
+            "It runs on a bigger node",
+            "It is billed extra",
+            "It stays Pending",
+            "It restarts every minute"
+          ],
+          "answerIndex": 2,
+          "explanation": "The quota refuses it, so it stays Pending with an exceeded quota event."
+        },
+        {
+          "id": "b4",
+          "prompt": "What does Radar expose so coding agents can operate the cluster?",
+          "choices": [
+            "An MCP server",
+            "A root SSH key",
+            "A public kubeconfig",
+            "A Slack bot only"
+          ],
+          "answerIndex": 0,
+          "explanation": "Radar Cloud's MCP server lets agents observe and change the team's cluster."
+        },
+        {
+          "id": "b5",
+          "prompt": "What do Gitar and Sonar bring to the hackathon?",
+          "choices": [
+            "GPU credits",
+            "Venue Wi-Fi",
+            "Code review and code quality on pull requests",
+            "Conference badges"
+          ],
+          "answerIndex": 2,
+          "explanation": "They review every pull request against team-defined rules."
+        }
+      ]
+    }
+  },
+  {
+    "id": "kc26-tue-keynote-welcome",
+    "title": "Welcome + Opening Remarks",
+    "abstract": "The opening keynote of KubeCon + CloudNativeCon North America 2026: welcome, community news and the state of cloud native from the CNCF and the Linux Foundation.",
+    "sessionType": "keynote",
+    "track": "other",
+    "material": "wood",
+    "speakers": [
+      "Jonathan Bryce",
+      "Chris Aniszczyk",
+      "Robert Nishihara",
+      "Rita Zhang",
+      "Kevin Cochrane",
+      "Bassam Tabbara"
+    ],
+    "speakerDetails": [
+      {
+        "name": "Jonathan Bryce"
+      },
+      {
+        "name": "Chris Aniszczyk"
+      },
+      {
+        "name": "Robert Nishihara"
+      },
+      {
+        "name": "Rita Zhang"
+      },
+      {
+        "name": "Kevin Cochrane"
+      },
+      {
+        "name": "Bassam Tabbara"
+      }
+    ],
+    "start": "2026-11-10T09:00:00-07:00",
+    "end": "2026-11-10T09:31:00-07:00",
+    "locationId": "salt-palace-level-1-hall-de",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "Hall DE",
+    "isBoss": true,
+    "hasTranscript": false,
+    "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+    "sample": false,
+    "searchText": "Welcome + Opening Remarks\nThe opening keynote of KubeCon + CloudNativeCon North America 2026: welcome, community news and the state of cloud native from the CNCF and the Linux Foundation.\nJonathan Bryce, Chris Aniszczyk, Robert Nishihara, Rita Zhang, Kevin Cochrane, Bassam Tabbara\nEverything else\nHall DE\nSalt Palace",
+    "geo": {
+      "lat": 40.7665,
+      "lon": -111.8945
+    }
+  },
+  {
+    "id": "kc26-tue-keynote-agent-substrate",
+    "title": "Agent Substrate: Open Layers for Agentic Systems",
+    "abstract": "A keynote on the open layers that agentic AI systems need underneath them, and how Kubernetes and cloud native projects can become the substrate that agents run on.",
+    "sessionType": "keynote",
+    "track": "ai",
+    "material": "circuit",
+    "speakers": [
+      "Jaana Dogan",
+      "Dmitry Berkovich",
+      "Tim Hockin",
+      "Eitan Yarmush",
+      "Luiz Scheidegger"
+    ],
+    "speakerDetails": [
+      {
+        "name": "Jaana Dogan"
+      },
+      {
+        "name": "Dmitry Berkovich"
+      },
+      {
+        "name": "Tim Hockin"
+      },
+      {
+        "name": "Eitan Yarmush"
+      },
+      {
+        "name": "Luiz Scheidegger"
+      }
+    ],
+    "start": "2026-11-10T09:33:00-07:00",
+    "end": "2026-11-10T09:40:00-07:00",
+    "locationId": "salt-palace-level-1-hall-de",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "Hall DE",
+    "isBoss": true,
+    "hasTranscript": false,
+    "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+    "sample": false,
+    "searchText": "Agent Substrate: Open Layers for Agentic Systems\nA keynote on the open layers that agentic AI systems need underneath them, and how Kubernetes and cloud native projects can become the substrate that agents run on.\nJaana Dogan, Dmitry Berkovich, Tim Hockin, Eitan Yarmush, Luiz Scheidegger\nAI Inference + Agentic\nHall DE\nSalt Palace",
+    "geo": {
+      "lat": 40.7665,
+      "lon": -111.8945
+    }
+  },
+  {
+    "id": "kc26-tue-keynote-openrl",
+    "title": "Pods in the Wild: Reinforcement Learning on Kubernetes with OpenRL",
+    "abstract": "A keynote on running reinforcement learning workloads on Kubernetes with OpenRL, from rollout pods to training loops.",
+    "sessionType": "keynote",
+    "track": "ai",
+    "material": "circuit",
+    "speakers": [
+      "Sunil Arora",
+      "Ravin Kumar"
+    ],
+    "speakerDetails": [
+      {
+        "name": "Sunil Arora"
+      },
+      {
+        "name": "Ravin Kumar"
+      }
+    ],
+    "start": "2026-11-10T10:05:00-07:00",
+    "end": "2026-11-10T10:13:00-07:00",
+    "locationId": "salt-palace-level-1-hall-de",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "Hall DE",
+    "isBoss": true,
+    "hasTranscript": false,
+    "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+    "sample": false,
+    "searchText": "Pods in the Wild: Reinforcement Learning on Kubernetes with OpenRL\nA keynote on running reinforcement learning workloads on Kubernetes with OpenRL, from rollout pods to training loops.\nSunil Arora, Ravin Kumar\nAI Inference + Agentic\nHall DE\nSalt Palace",
+    "geo": {
+      "lat": 40.7665,
+      "lon": -111.8945
+    }
+  },
+  {
+    "id": "kc26-tue-keynote-identity-crisis",
+    "title": "The Identity Crisis: Who is the AI Agent in Your Cluster?",
+    "abstract": "A keynote on workload identity for AI agents: how a cluster knows which agent is acting, on whose behalf, and with what permissions.",
+    "sessionType": "keynote",
+    "track": "security",
+    "material": "iron",
+    "speakers": [
+      "Abdel Sghiouar"
+    ],
+    "speakerDetails": [
+      {
+        "name": "Abdel Sghiouar"
+      }
+    ],
+    "start": "2026-11-10T10:29:00-07:00",
+    "end": "2026-11-10T10:39:00-07:00",
+    "locationId": "salt-palace-level-1-hall-de",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "Hall DE",
+    "isBoss": true,
+    "hasTranscript": false,
+    "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+    "sample": false,
+    "searchText": "The Identity Crisis: Who is the AI Agent in Your Cluster?\nA keynote on workload identity for AI agents: how a cluster knows which agent is acting, on whose behalf, and with what permissions.\nAbdel Sghiouar\nSecurity\nHall DE\nSalt Palace",
+    "geo": {
+      "lat": 40.7665,
+      "lon": -111.8945
+    }
+  },
+  {
+    "id": "kc26-tue-keynote-physical-ai",
+    "title": "From Pod to Actuator: Physical AI and the Future of Kubernetes",
+    "abstract": "A keynote on physical AI, robots and edge devices, and what Kubernetes must become to orchestrate workloads that move things in the real world.",
+    "sessionType": "keynote",
+    "track": "ai",
+    "material": "circuit",
+    "speakers": [
+      "Abhilash Somasamudramath"
+    ],
+    "speakerDetails": [
+      {
+        "name": "Abhilash Somasamudramath"
+      }
+    ],
+    "start": "2026-11-10T10:41:00-07:00",
+    "end": "2026-11-10T10:46:00-07:00",
+    "locationId": "salt-palace-level-1-hall-de",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "Hall DE",
+    "isBoss": true,
+    "hasTranscript": false,
+    "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+    "sample": false,
+    "searchText": "From Pod to Actuator: Physical AI and the Future of Kubernetes\nA keynote on physical AI, robots and edge devices, and what Kubernetes must become to orchestrate workloads that move things in the real world.\nAbhilash Somasamudramath\nAI Inference + Agentic\nHall DE\nSalt Palace",
+    "geo": {
+      "lat": 40.7665,
+      "lon": -111.8945
+    }
+  },
+  {
+    "id": "kc26-tue-saturated-by-design",
+    "title": "Saturated by Design: Maximizing Cluster Allocation in On-Premises Kubernetes",
+    "abstract": "How The Trade Desk scales workloads to fit on-premises clusters using custom scheduler plugins, pushing allocation up without starving critical services.",
+    "sessionType": "breakout",
+    "track": "operations",
+    "material": "glass",
+    "speakers": [
+      "Dakota Sullivan",
+      "Isaac Wilson"
+    ],
+    "speakerDetails": [
+      {
+        "name": "Dakota Sullivan",
+        "company": "The Trade Desk"
+      },
+      {
+        "name": "Isaac Wilson",
+        "company": "The Trade Desk"
+      }
+    ],
+    "start": "2026-11-10T11:30:00-07:00",
+    "end": "2026-11-10T12:00:00-07:00",
+    "locationId": "salt-palace-level-1-grand-ballroom-ace",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "Grand Ballroom ACE",
+    "isBoss": false,
+    "hasTranscript": false,
+    "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+    "sample": false,
+    "searchText": "Saturated by Design: Maximizing Cluster Allocation in On-Premises Kubernetes\nHow The Trade Desk scales workloads to fit on-premises clusters using custom scheduler plugins, pushing allocation up without starving critical services.\nDakota Sullivan, Isaac Wilson\nOperations + Performance\nGrand Ballroom ACE\nSalt Palace",
+    "geo": {
+      "lat": 40.7665,
+      "lon": -111.8945
+    }
+  },
+  {
+    "id": "kc26-tue-student-soc",
+    "title": "Securing Rural Colorado with Open Source: Student-Led SOC on Kubernetes",
+    "abstract": "Building a student-run security operations center on a multi-cluster Kubernetes platform to protect rural Colorado organizations with open source tools.",
+    "sessionType": "breakout",
+    "track": "other",
+    "material": "wood",
+    "speakers": [
+      "Maciej Wal"
+    ],
+    "speakerDetails": [
+      {
+        "name": "Maciej Wal"
+      }
+    ],
+    "start": "2026-11-10T11:30:00-07:00",
+    "end": "2026-11-10T12:00:00-07:00",
+    "locationId": "salt-palace-level-1-grand-ballroom-bdf",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "Grand Ballroom BDF",
+    "isBoss": false,
+    "hasTranscript": false,
+    "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+    "sample": false,
+    "searchText": "Securing Rural Colorado with Open Source: Student-Led SOC on Kubernetes\nBuilding a student-run security operations center on a multi-cluster Kubernetes platform to protect rural Colorado organizations with open source tools.\nMaciej Wal\nEverything else\nGrand Ballroom BDF\nSalt Palace",
+    "geo": {
+      "lat": 40.7665,
+      "lon": -111.8945
+    }
+  },
+  {
+    "id": "kc26-tue-ask-your-platform",
+    "title": "Ask Your Platform: Putting AI to Work Where the Questions Live",
+    "abstract": "Applying AI to the common questions platform teams answer every day, with no AI background needed.",
+    "sessionType": "breakout",
+    "track": "ai",
+    "material": "circuit",
+    "speakers": [
+      "Anton Alexander",
+      "Scott Adams"
+    ],
+    "speakerDetails": [
+      {
+        "name": "Anton Alexander"
+      },
+      {
+        "name": "Scott Adams"
+      }
+    ],
+    "start": "2026-11-10T11:30:00-07:00",
+    "end": "2026-11-10T12:00:00-07:00",
+    "locationId": "salt-palace-level-1-grand-ballroom-h",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "Grand Ballroom H",
+    "isBoss": false,
+    "hasTranscript": false,
+    "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+    "sample": false,
+    "searchText": "Ask Your Platform: Putting AI to Work Where the Questions Live\nApplying AI to the common questions platform teams answer every day, with no AI background needed.\nAnton Alexander, Scott Adams\nAI Inference + Agentic\nGrand Ballroom H\nSalt Palace",
+    "geo": {
+      "lat": 40.7665,
+      "lon": -111.8945
+    }
+  },
+  {
+    "id": "kc26-tue-already-have-a-platform",
+    "title": "So You Want to Build a Platform? You Probably Already Have One",
+    "abstract": "Turning fragmented existing tooling into a productized internal developer platform instead of starting from scratch.",
+    "sessionType": "breakout",
+    "track": "platform",
+    "material": "stone",
+    "speakers": [
+      "Juho Syrjänen"
+    ],
+    "speakerDetails": [
+      {
+        "name": "Juho Syrjänen"
+      }
+    ],
+    "start": "2026-11-10T11:30:00-07:00",
+    "end": "2026-11-10T12:00:00-07:00",
+    "locationId": "salt-palace-level-1-grand-ballroom-gi",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "Grand Ballroom GI",
+    "isBoss": false,
+    "hasTranscript": false,
+    "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+    "sample": false,
+    "searchText": "So You Want to Build a Platform? You Probably Already Have One\nTurning fragmented existing tooling into a productized internal developer platform instead of starting from scratch.\nJuho Syrjänen\nPlatform Engineering\nGrand Ballroom GI\nSalt Palace",
+    "geo": {
+      "lat": 40.7665,
+      "lon": -111.8945
+    }
+  },
+  {
+    "id": "kc26-tue-data-platform-panel",
+    "title": "Why We Bet the Data Platform on Kubernetes",
+    "abstract": "A panel on running large-scale data platforms on Kubernetes and how AI agents are changing day-2 operations for data teams.",
+    "sessionType": "panel",
+    "track": "data",
+    "material": "crate",
+    "speakers": [
+      "Vara Bonthu",
+      "Ying Xiong",
+      "Rainie Li",
+      "Damon Cortesi",
+      "Padma Aradhyula"
+    ],
+    "speakerDetails": [
+      {
+        "name": "Vara Bonthu"
+      },
+      {
+        "name": "Ying Xiong"
+      },
+      {
+        "name": "Rainie Li"
+      },
+      {
+        "name": "Damon Cortesi"
+      },
+      {
+        "name": "Padma Aradhyula"
+      }
+    ],
+    "start": "2026-11-10T11:30:00-07:00",
+    "end": "2026-11-10T12:00:00-07:00",
+    "locationId": "salt-palace-level-1-151",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "151",
+    "isBoss": false,
+    "hasTranscript": false,
+    "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+    "sample": false,
+    "searchText": "Why We Bet the Data Platform on Kubernetes\nA panel on running large-scale data platforms on Kubernetes and how AI agents are changing day-2 operations for data teams.\nVara Bonthu, Ying Xiong, Rainie Li, Damon Cortesi, Padma Aradhyula\nData Processing + Storage\n151\nSalt Palace",
+    "geo": {
+      "lat": 40.7665,
+      "lon": -111.8945
+    }
+  },
+  {
+    "id": "kc26-tue-agent-needs-a-platform",
+    "title": "Your Agent Needs a Platform: Cloud Native Infrastructure for Multi-Agent AI Systems",
+    "abstract": "Modeling AI agents as Kubernetes custom resources, with Dapr for workflows, NATS for messaging and OpenTelemetry for tracing agent conversations.",
+    "sessionType": "breakout",
+    "track": "ai",
+    "material": "circuit",
+    "speakers": [
+      "Soham Ghadge"
+    ],
+    "speakerDetails": [
+      {
+        "name": "Soham Ghadge"
+      }
+    ],
+    "start": "2026-11-10T11:30:00-07:00",
+    "end": "2026-11-10T12:00:00-07:00",
+    "locationId": "salt-palace-level-2-255-bc",
+    "building": "Salt Palace",
+    "level": "Level 2",
+    "room": "255 BC",
+    "isBoss": false,
+    "hasTranscript": false,
+    "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+    "sample": false,
+    "searchText": "Your Agent Needs a Platform: Cloud Native Infrastructure for Multi-Agent AI Systems\nModeling AI agents as Kubernetes custom resources, with Dapr for workflows, NATS for messaging and OpenTelemetry for tracing agent conversations.\nSoham Ghadge\nAI Inference + Agentic\n255 BC\nSalt Palace",
+    "geo": {
+      "lat": 40.7665,
+      "lon": -111.8945
+    }
+  },
+  {
+    "id": "kc26-tue-gateway-high-and-dry",
+    "title": "Will Your Gateway Leave You High and Dry?",
+    "abstract": "Benchmarks of Gateway API controllers under production-like route churn and load, and what the results mean when choosing one.",
+    "sessionType": "breakout",
+    "track": "connectivity",
+    "material": "copper",
+    "speakers": [
+      "John Howard",
+      "Mitch Connors"
+    ],
+    "speakerDetails": [
+      {
+        "name": "John Howard"
+      },
+      {
+        "name": "Mitch Connors"
+      }
+    ],
+    "start": "2026-11-10T11:30:00-07:00",
+    "end": "2026-11-10T12:00:00-07:00",
+    "locationId": "salt-palace-level-2-255-ef",
+    "building": "Salt Palace",
+    "level": "Level 2",
+    "room": "255 EF",
+    "isBoss": false,
+    "hasTranscript": false,
+    "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+    "sample": false,
+    "searchText": "Will Your Gateway Leave You High and Dry?\nBenchmarks of Gateway API controllers under production-like route churn and load, and what the results mean when choosing one.\nJohn Howard, Mitch Connors\nConnectivity\n255 EF\nSalt Palace",
+    "geo": {
+      "lat": 40.7665,
+      "lon": -111.8945
+    }
+  },
+  {
+    "id": "kc26-tue-vulnerability-tsunami",
+    "title": "Mythos vs Maintainers: Drowning in the Vulnerability Tsunami",
+    "abstract": "Offensive and defensive perspectives on the flood of AI-driven vulnerability reports and what it does to open source maintainers.",
+    "sessionType": "breakout",
+    "track": "security",
+    "material": "iron",
+    "speakers": [
+      "Fabian Kammel",
+      "John Kjell"
+    ],
+    "speakerDetails": [
+      {
+        "name": "Fabian Kammel"
+      },
+      {
+        "name": "John Kjell"
+      }
+    ],
+    "start": "2026-11-10T11:30:00-07:00",
+    "end": "2026-11-10T12:00:00-07:00",
+    "locationId": "hyatt-regency-level-2-salt-lake-ballroom-de",
+    "building": "Hyatt Regency",
+    "level": "Level 2",
+    "room": "Salt Lake Ballroom DE",
+    "isBoss": false,
+    "hasTranscript": false,
+    "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+    "sample": false,
+    "searchText": "Mythos vs Maintainers: Drowning in the Vulnerability Tsunami\nOffensive and defensive perspectives on the flood of AI-driven vulnerability reports and what it does to open source maintainers.\nFabian Kammel, John Kjell\nSecurity\nSalt Lake Ballroom DE\nHyatt Regency",
+    "geo": {
+      "lat": 40.7683,
+      "lon": -111.8962
+    }
+  },
+  {
+    "id": "kc26-tue-portable-gpu-config",
+    "title": "One Recipe, Five Clouds, One Query: Portable GPU Configuration",
+    "abstract": "Generating portable GPU Helm bundles for multiple clouds, with a queryable audit layer that shows what was configured where.",
+    "sessionType": "breakout",
+    "track": "platform",
+    "material": "stone",
+    "speakers": [
+      "Christopher Haar",
+      "Yuan Chen"
+    ],
+    "speakerDetails": [
+      {
+        "name": "Christopher Haar"
+      },
+      {
+        "name": "Yuan Chen"
+      }
+    ],
+    "start": "2026-11-10T11:30:00-07:00",
+    "end": "2026-11-10T12:00:00-07:00",
+    "locationId": "hyatt-regency-level-2-salt-lake-ballroom-c",
+    "building": "Hyatt Regency",
+    "level": "Level 2",
+    "room": "Salt Lake Ballroom C",
+    "isBoss": false,
+    "hasTranscript": false,
+    "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+    "sample": false,
+    "searchText": "One Recipe, Five Clouds, One Query: Portable GPU Configuration\nGenerating portable GPU Helm bundles for multiple clouds, with a queryable audit layer that shows what was configured where.\nChristopher Haar, Yuan Chen\nPlatform Engineering\nSalt Lake Ballroom C\nHyatt Regency",
+    "geo": {
+      "lat": 40.7683,
+      "lon": -111.8962
+    }
+  },
+  {
+    "id": "kc26-tue-autoscaling-reality-check",
+    "title": "Autoscaling Reality Check: The Hands-On HTTP Optimization Challenge",
+    "abstract": "A hands-on tutorial in benchmark rounds: tune pod-level autoscaling for an HTTP app and see which settings actually hold up under load.",
+    "sessionType": "tutorial",
+    "track": "operations",
+    "material": "glass",
+    "speakers": [
+      "David Pech"
+    ],
+    "speakerDetails": [
+      {
+        "name": "David Pech"
+      }
+    ],
+    "start": "2026-11-10T11:30:00-07:00",
+    "end": "2026-11-10T12:50:00-07:00",
+    "locationId": "hyatt-regency-level-4-regency-ballroom-a",
+    "building": "Hyatt Regency",
+    "level": "Level 4",
+    "room": "Regency Ballroom A",
+    "isBoss": false,
+    "hasTranscript": false,
+    "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+    "sample": false,
+    "searchText": "Autoscaling Reality Check: The Hands-On HTTP Optimization Challenge\nA hands-on tutorial in benchmark rounds: tune pod-level autoscaling for an HTTP app and see which settings actually hold up under load.\nDavid Pech\nOperations + Performance\nRegency Ballroom A\nHyatt Regency",
+    "geo": {
+      "lat": 40.7683,
+      "lon": -111.8962
+    }
+  },
+  {
+    "id": "kc26-tue-surviving-the-churn",
+    "title": "Surviving the Churn: Read Replicas and Controllers for Busy Clusters",
+    "abstract": "Offloading LIST and WATCH traffic from the Kubernetes API server with in-cluster read replicas so busy controllers stop hurting the control plane.",
+    "sessionType": "breakout",
+    "track": "operations",
+    "material": "glass",
+    "speakers": [
+      "Ryan Brewster"
+    ],
+    "speakerDetails": [
+      {
+        "name": "Ryan Brewster"
+      }
+    ],
+    "start": "2026-11-10T12:20:00-07:00",
+    "end": "2026-11-10T12:50:00-07:00",
+    "locationId": "salt-palace-level-1-grand-ballroom-ace",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "Grand Ballroom ACE",
+    "isBoss": false,
+    "hasTranscript": false,
+    "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+    "sample": false,
+    "searchText": "Surviving the Churn: Read Replicas and Controllers for Busy Clusters\nOffloading LIST and WATCH traffic from the Kubernetes API server with in-cluster read replicas so busy controllers stop hurting the control plane.\nRyan Brewster\nOperations + Performance\nGrand Ballroom ACE\nSalt Palace",
+    "geo": {
+      "lat": 40.7665,
+      "lon": -111.8945
+    }
+  },
+  {
+    "id": "kc26-tue-cache-aware-inference",
+    "title": "What the Docs Don't Tell You: A Telecom's Year Operating Cache-Aware LLM Inference",
+    "abstract": "Production lessons from a year of running cache-aware inference routing for large language models at a telecom.",
+    "sessionType": "breakout",
+    "track": "ai",
+    "material": "circuit",
+    "speakers": [
+      "YoungJoon Jeong",
+      "Seol Heo"
+    ],
+    "speakerDetails": [
+      {
+        "name": "YoungJoon Jeong"
+      },
+      {
+        "name": "Seol Heo"
+      }
+    ],
+    "start": "2026-11-10T12:20:00-07:00",
+    "end": "2026-11-10T12:50:00-07:00",
+    "locationId": "salt-palace-level-1-grand-ballroom-h",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "Grand Ballroom H",
+    "isBoss": false,
+    "hasTranscript": false,
+    "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+    "sample": false,
+    "searchText": "What the Docs Don't Tell You: A Telecom's Year Operating Cache-Aware LLM Inference\nProduction lessons from a year of running cache-aware inference routing for large language models at a telecom.\nYoungJoon Jeong, Seol Heo\nAI Inference + Agentic\nGrand Ballroom H\nSalt Palace",
+    "geo": {
+      "lat": 40.7665,
+      "lon": -111.8945
+    }
+  },
+  {
+    "id": "kc26-tue-testing-cncf-stack",
+    "title": "When Infrastructure Breaks in Production: Testing the Full CNCF Stack",
+    "abstract": "Testing CNCF add-ons inside the cluster with Testkube, wired into Flux GitOps, so platform upgrades are verified before they break production.",
+    "sessionType": "breakout",
+    "track": "platform",
+    "material": "stone",
+    "speakers": [
+      "Priya Namasivayam"
+    ],
+    "speakerDetails": [
+      {
+        "name": "Priya Namasivayam"
+      }
+    ],
+    "start": "2026-11-10T12:20:00-07:00",
+    "end": "2026-11-10T12:50:00-07:00",
+    "locationId": "salt-palace-level-1-grand-ballroom-gi",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "Grand Ballroom GI",
+    "isBoss": false,
+    "hasTranscript": false,
+    "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+    "sample": false,
+    "searchText": "When Infrastructure Breaks in Production: Testing the Full CNCF Stack\nTesting CNCF add-ons inside the cluster with Testkube, wired into Flux GitOps, so platform upgrades are verified before they break production.\nPriya Namasivayam\nPlatform Engineering\nGrand Ballroom GI\nSalt Palace",
+    "geo": {
+      "lat": 40.7665,
+      "lon": -111.8945
+    }
+  },
+  {
+    "id": "kc26-tue-signed-sealed-denied",
+    "title": "Signed, Sealed, Denied: Attestation-Driven Admission with Kyverno + CEL",
+    "abstract": "Enforcing image attestation policies at admission time with Kyverno and CEL, leaving an auditable evidence trail for every decision.",
+    "sessionType": "breakout",
+    "track": "security",
+    "material": "iron",
+    "speakers": [
+      "Chad Swenson",
+      "Sagar Kundral"
+    ],
+    "speakerDetails": [
+      {
+        "name": "Chad Swenson"
+      },
+      {
+        "name": "Sagar Kundral"
+      }
+    ],
+    "start": "2026-11-10T12:20:00-07:00",
+    "end": "2026-11-10T12:50:00-07:00",
+    "locationId": "salt-palace-level-1-151",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "151",
+    "isBoss": false,
+    "hasTranscript": false,
+    "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+    "sample": false,
+    "searchText": "Signed, Sealed, Denied: Attestation-Driven Admission with Kyverno + CEL\nEnforcing image attestation policies at admission time with Kyverno and CEL, leaving an auditable evidence trail for every decision.\nChad Swenson, Sagar Kundral\nSecurity\n151\nSalt Palace",
+    "geo": {
+      "lat": 40.7665,
+      "lon": -111.8945
+    }
+  },
+  {
+    "id": "kc26-tue-air-gapped-nodes",
+    "title": "No Network? No Problem: Kubernetes Nodes in Air-Gapped VPCs",
+    "abstract": "Replacing Konnectivity's gRPC link with cloud object storage so Kubernetes nodes can run in VPCs with zero egress.",
+    "sessionType": "breakout",
+    "track": "connectivity",
+    "material": "copper",
+    "speakers": [
+      "Shachar Tal"
+    ],
+    "speakerDetails": [
+      {
+        "name": "Shachar Tal"
+      }
+    ],
+    "start": "2026-11-10T12:20:00-07:00",
+    "end": "2026-11-10T12:50:00-07:00",
+    "locationId": "salt-palace-level-2-255-ef",
+    "building": "Salt Palace",
+    "level": "Level 2",
+    "room": "255 EF",
+    "isBoss": false,
+    "hasTranscript": false,
+    "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+    "sample": false,
+    "searchText": "No Network? No Problem: Kubernetes Nodes in Air-Gapped VPCs\nReplacing Konnectivity's gRPC link with cloud object storage so Kubernetes nodes can run in VPCs with zero egress.\nShachar Tal\nConnectivity\n255 EF\nSalt Palace",
+    "geo": {
+      "lat": 40.7665,
+      "lon": -111.8945
+    }
+  },
+  {
+    "id": "kc26-tue-intent-driven-idps",
+    "title": "Platform Engineering after the AI Hype: Why IDPs Must Become Intent-Driven",
+    "abstract": "Evolving internal developer platforms toward intent-driven capabilities that serve both humans and AI agents.",
+    "sessionType": "breakout",
+    "track": "platform",
+    "material": "stone",
+    "speakers": [
+      "Daniel Bryant"
+    ],
+    "speakerDetails": [
+      {
+        "name": "Daniel Bryant"
+      }
+    ],
+    "start": "2026-11-10T12:20:00-07:00",
+    "end": "2026-11-10T12:50:00-07:00",
+    "locationId": "hyatt-regency-level-2-salt-lake-ballroom-c",
+    "building": "Hyatt Regency",
+    "level": "Level 2",
+    "room": "Salt Lake Ballroom C",
+    "isBoss": false,
+    "hasTranscript": false,
+    "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+    "sample": false,
+    "searchText": "Platform Engineering after the AI Hype: Why IDPs Must Become Intent-Driven\nEvolving internal developer platforms toward intent-driven capabilities that serve both humans and AI agents.\nDaniel Bryant\nPlatform Engineering\nSalt Lake Ballroom C\nHyatt Regency",
+    "geo": {
+      "lat": 40.7683,
+      "lon": -111.8962
+    }
+  },
+  {
+    "id": "kc26-tue-kserve-production-llms",
+    "title": "Beyond Model Serving: Running Production LLMs on Kubernetes with KServe",
+    "abstract": "Scheduling, routing and autoscaling large language model workloads in production with KServe.",
+    "sessionType": "breakout",
+    "track": "ai",
+    "material": "circuit",
+    "speakers": [
+      "Johnu George",
+      "Jooho Lee"
+    ],
+    "speakerDetails": [
+      {
+        "name": "Johnu George"
+      },
+      {
+        "name": "Jooho Lee"
+      }
+    ],
+    "start": "2026-11-10T12:20:00-07:00",
+    "end": "2026-11-10T12:50:00-07:00",
+    "locationId": "salt-palace-level-2-250-a-c",
+    "building": "Salt Palace",
+    "level": "Level 2",
+    "room": "250 A-C",
+    "isBoss": false,
+    "hasTranscript": false,
+    "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+    "sample": false,
+    "searchText": "Beyond Model Serving: Running Production LLMs on Kubernetes with KServe\nScheduling, routing and autoscaling large language model workloads in production with KServe.\nJohnu George, Jooho Lee\nAI Inference + Agentic\n250 A-C\nSalt Palace",
+    "geo": {
+      "lat": 40.7665,
+      "lon": -111.8945
+    }
+  },
+  {
+    "id": "kc26-tue-tracing-at-scale",
+    "title": "Tracing at Scale: Running a 16 Billion Spans/Hour Pipeline at Nubank",
+    "abstract": "Building and operating a petabyte-scale tracing pipeline on the OpenTelemetry Collector at Nubank, at 16 billion spans per hour.",
+    "sessionType": "breakout",
+    "track": "operations",
+    "material": "glass",
+    "speakers": [
+      "Felipe Araujo",
+      "Kaynan Coelho"
+    ],
+    "speakerDetails": [
+      {
+        "name": "Felipe Araujo",
+        "company": "Nubank"
+      },
+      {
+        "name": "Kaynan Coelho",
+        "company": "Nubank"
+      }
+    ],
+    "start": "2026-11-10T14:50:00-07:00",
+    "end": "2026-11-10T15:20:00-07:00",
+    "locationId": "salt-palace-level-1-grand-ballroom-ace",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "Grand Ballroom ACE",
+    "isBoss": false,
+    "hasTranscript": false,
+    "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+    "sample": false,
+    "searchText": "Tracing at Scale: Running a 16 Billion Spans/Hour Pipeline at Nubank\nBuilding and operating a petabyte-scale tracing pipeline on the OpenTelemetry Collector at Nubank, at 16 billion spans per hour.\nFelipe Araujo, Kaynan Coelho\nOperations + Performance\nGrand Ballroom ACE\nSalt Palace",
+    "geo": {
+      "lat": 40.7665,
+      "lon": -111.8945
+    }
+  },
+  {
+    "id": "kc26-tue-operator-confused-deputy",
+    "title": "The Operator Calls Are Coming from Inside the Namespace",
+    "abstract": "Confused-deputy flaws in Kubernetes operators that let namespace users escalate all the way to cloud admin, and how to close them.",
+    "sessionType": "breakout",
+    "track": "security",
+    "material": "iron",
+    "speakers": [
+      "Justin O'Leary"
+    ],
+    "speakerDetails": [
+      {
+        "name": "Justin O'Leary"
+      }
+    ],
+    "start": "2026-11-10T14:50:00-07:00",
+    "end": "2026-11-10T15:20:00-07:00",
+    "locationId": "salt-palace-level-1-151",
+    "building": "Salt Palace",
+    "level": "Level 1",
+    "room": "151",
+    "isBoss": false,
+    "hasTranscript": false,
+    "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+    "sample": false,
+    "searchText": "The Operator Calls Are Coming from Inside the Namespace\nConfused-deputy flaws in Kubernetes operators that let namespace users escalate all the way to cloud admin, and how to close them.\nJustin O'Leary\nSecurity\n151\nSalt Palace",
+    "geo": {
+      "lat": 40.7665,
+      "lon": -111.8945
+    }
+  },
+  {
+    "id": "kc26-tue-feeding-the-gpu",
+    "title": "Feeding the GPU: Streaming Data into Training, Lakehouse, and Serving",
+    "abstract": "Moving columnar data once over Arrow Flight to GPUs, lakehouse tables and serving systems instead of copying it for each.",
+    "sessionType": "breakout",
+    "track": "data",
+    "material": "crate",
+    "speakers": [
+      "Dheeraj Kapur",
+      "Deepak Choudhary"
+    ],
+    "speakerDetails": [
+      {
+        "name": "Dheeraj Kapur"
+      },
+      {
+        "name": "Deepak Choudhary"
+      }
+    ],
+    "start": "2026-11-10T14:50:00-07:00",
+    "end": "2026-11-10T15:20:00-07:00",
+    "locationId": "hyatt-regency-level-4-regency-ballroom-cd",
+    "building": "Hyatt Regency",
+    "level": "Level 4",
+    "room": "Regency Ballroom CD",
+    "isBoss": false,
+    "hasTranscript": false,
+    "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/",
+    "sample": false,
+    "searchText": "Feeding the GPU: Streaming Data into Training, Lakehouse, and Serving\nMoving columnar data once over Arrow Flight to GPUs, lakehouse tables and serving systems instead of copying it for each.\nDheeraj Kapur, Deepak Choudhary\nData Processing + Storage\nRegency Ballroom CD\nHyatt Regency",
+    "geo": {
+      "lat": 40.7683,
+      "lon": -111.8962
+    }
+  }
+]

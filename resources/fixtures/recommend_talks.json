@@ -1,0 +1,11 @@
+{
+  "tool": "recommend_talks",
+  "endpoint": "POST /api/tools/recommend_talks",
+  "request": {
+    "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+    "limit": 3,
+    "withinMinutes": 720
+  },
+  "status": 200,
+  "response": []
+}

@@ -1,0 +1,136 @@
+{
+  "tool": "submit_quiz",
+  "endpoint": "POST /api/tools/submit_quiz",
+  "request": {
+    "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+    "talkId": "kc26-tue-keynote-welcome",
+    "answers": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "startedAt": "2026-11-09T20:19:25.087Z"
+  },
+  "status": 200,
+  "response": {
+    "talkId": "kc26-tue-keynote-welcome",
+    "correct": 1,
+    "total": 5,
+    "xpAwarded": 5,
+    "alreadySubmitted": false,
+    "results": [
+      {
+        "questionId": "kc26-tue-keynote-welcome-q1",
+        "chosenIndex": 0,
+        "correctIndex": 3,
+        "correct": false,
+        "explanation": "It is in the other track."
+      },
+      {
+        "questionId": "kc26-tue-keynote-welcome-q2",
+        "chosenIndex": 0,
+        "correctIndex": 0,
+        "correct": true,
+        "explanation": "Jonathan Bryce gave this talk."
+      },
+      {
+        "questionId": "kc26-tue-keynote-welcome-q3",
+        "chosenIndex": 0,
+        "correctIndex": 2,
+        "correct": false,
+        "explanation": "The abstract mentions opening."
+      },
+      {
+        "questionId": "kc26-tue-keynote-welcome-q4",
+        "chosenIndex": 0,
+        "correctIndex": 1,
+        "correct": false,
+        "explanation": "It was in Hall DE."
+      },
+      {
+        "questionId": "kc26-tue-keynote-welcome-q5",
+        "chosenIndex": 0,
+        "correctIndex": 3,
+        "correct": false,
+        "explanation": "It was a keynote."
+      }
+    ],
+    "boss": {
+      "talkId": "kc26-tue-keynote-welcome",
+      "title": "Welcome + Opening Remarks",
+      "locationId": "salt-palace-level-1-hall-de",
+      "status": "waiting",
+      "maxHealth": 10,
+      "health": 9,
+      "damage": 1,
+      "playersInRoom": 0,
+      "participants": 1,
+      "endsAt": "2026-11-10T09:31:00-07:00",
+      "deadline": "2026-11-10T16:46:00.000Z",
+      "bonusXp": 25
+    }
+  },
+  "variants": {
+    "submit_quiz_again": {
+      "request": {
+        "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+        "talkId": "kc26-tue-keynote-welcome",
+        "answers": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "startedAt": "2026-11-09T20:19:25.087Z"
+      },
+      "status": 200,
+      "response": {
+        "talkId": "kc26-tue-keynote-welcome",
+        "correct": 1,
+        "total": 5,
+        "xpAwarded": 0,
+        "alreadySubmitted": true,
+        "results": [
+          {
+            "questionId": "kc26-tue-keynote-welcome-q1",
+            "chosenIndex": 0,
+            "correctIndex": 3,
+            "correct": false,
+            "explanation": "It is in the other track."
+          },
+          {
+            "questionId": "kc26-tue-keynote-welcome-q2",
+            "chosenIndex": 0,
+            "correctIndex": 0,
+            "correct": true,
+            "explanation": "Jonathan Bryce gave this talk."
+          },
+          {
+            "questionId": "kc26-tue-keynote-welcome-q3",
+            "chosenIndex": 0,
+            "correctIndex": 2,
+            "correct": false,
+            "explanation": "The abstract mentions opening."
+          },
+          {
+            "questionId": "kc26-tue-keynote-welcome-q4",
+            "chosenIndex": 0,
+            "correctIndex": 1,
+            "correct": false,
+            "explanation": "It was in Hall DE."
+          },
+          {
+            "questionId": "kc26-tue-keynote-welcome-q5",
+            "chosenIndex": 0,
+            "correctIndex": 3,
+            "correct": false,
+            "explanation": "It was a keynote."
+          }
+        ]
+      }
+    }
+  }
+}
