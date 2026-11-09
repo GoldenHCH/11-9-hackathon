@@ -166,6 +166,12 @@
           </h2>
           <span class="section-note">Saying no never costs anything</span>
         </div>
+        @if (board?.nearHint) {
+          <p class="near-hint">
+            <mat-icon aria-hidden="true">qr_code_scanner</mat-icon>
+            <span>{{ board?.nearHint }}</span>
+          </p>
+        }
         @if (offers.length) {
           <div class="card-list">
             @for (quest of offers; track quest.id) {

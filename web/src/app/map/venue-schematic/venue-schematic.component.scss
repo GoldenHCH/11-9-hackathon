@@ -262,3 +262,95 @@
 .area-tag--live {
   fill: #fff;
 }
+
+.route-line {
+  fill: none;
+  stroke: var(--map-primary);
+  stroke-linecap: square;
+  pointer-events: none;
+}
+
+.pin {
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: none;
+
+    .pin-flag,
+    .pin-you-dot {
+      stroke: var(--map-primary);
+    }
+  }
+}
+
+.pin-pole,
+.pin-base {
+  fill: var(--map-border);
+}
+
+.pin-flag-shadow {
+  fill: var(--map-shadow);
+}
+
+.pin-flag {
+  fill: var(--map-accent);
+  stroke: var(--map-border);
+}
+
+.pin--selected .pin-flag {
+  fill: var(--map-primary);
+}
+
+.pin-number {
+  fill: #1c1b22;
+  font-family: var(--map-pixel);
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.pin--selected .pin-number {
+  fill: #ffffff;
+}
+
+.pin-you-dot {
+  fill: var(--map-primary);
+  stroke: #ffffff;
+}
+
+.pin-pulse {
+  fill: none;
+  stroke: var(--map-primary);
+  opacity: 0.45;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: pin-pulse 1.8s ease-out infinite;
+}
+
+.pin-tag {
+  fill: var(--map-surface);
+  stroke: var(--map-border);
+}
+
+.pin-tag-text {
+  fill: var(--map-ink);
+  font-family: var(--map-pixel);
+  pointer-events: none;
+}
+
+@keyframes pin-pulse {
+  from {
+    transform: scale(0.6);
+    opacity: 0.6;
+  }
+
+  to {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pin-pulse {
+    animation: none;
+  }
+}

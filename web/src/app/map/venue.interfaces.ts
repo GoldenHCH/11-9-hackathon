@@ -1,4 +1,4 @@
-import { VendorKind, VendorTier, VenueAreaKind } from './venue.types';
+import { MapPinKind, VendorKind, VendorTier, VenueAreaKind } from './venue.types';
 
 export interface IVenueRect {
   x: number;
@@ -103,4 +103,22 @@ export interface IVenueLevelPlacement {
 
 export interface IVenueAreaPlacement extends IVenueLevelPlacement {
   area: IVenueArea;
+}
+
+export interface IMapPlace {
+  buildingId: string;
+  levelId: string;
+  point: IVenuePoint;
+  areaId?: string;
+  vendorId?: string;
+}
+
+export interface IMapPin extends IMapPlace {
+  id: string;
+  kind: MapPinKind;
+  label: string;
+  title: string;
+  locationId: string;
+  number?: number;
+  questId?: string;
 }
