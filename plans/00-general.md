@@ -27,7 +27,7 @@ brief/ plans/ rules/ prompts/   this kit
 
 | Time | Golden (product) | Collin (platform → UI) |
 |------|------------------|------------------------|
-| 11:30–11:50 | Elastic Serverless project; inference endpoint (Jina if offered, E5 otherwise); start Phase 01 in a local folder | Create `kubequest` from cnh-starter (public), copy the kit in, add Golden; join code at the Radar table; `scripts/setup.sh kubequest`; GHCR package public; apply `argocd/application.yaml` via Radar MCP. **Hello app live by 12:00** |
+| 11:30–11:50 | Elastic Serverless project; inference endpoint (Jina if offered, E5 otherwise); start Phase 01 in a local folder | Create `kube-quest` from cnh-starter (public), copy the kit in, add Golden; join code at the Radar table; `scripts/setup.sh kubequest`; GHCR package public; apply `argocd/application.yaml` via Radar MCP. **Hello app live by 12:00** |
 | 11:45 | Ask Sophia: Jina model ids, Agent Builder, Workflows on the trial | Install Gitar, write `.gitar/review/`, throwaway PR to confirm it comments |
 | 11:50–12:40 | **Phase 01:** types, five indices, ingest talks, locations, seed, tool signatures + stubs, check-in **v1 (unsigned, on purpose)**. PR → Gitar | **Phase 04:** OTel Collector + config, SDK in `app/`, JSON logs with trace ids, RUM, `docs/radar-log.md` first entry. PR → Gitar |
 | 12:40–13:00 | **Phase 02 starts:** signed tokens (v2, the Gitar security story), XP ledger, leaderboard agg, `recommend_people` hybrid + nearby | **Phase 03 starts:** signup, Here, leaderboard on fixtures |

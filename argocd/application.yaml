@@ -5,16 +5,16 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: app
-  namespace: team-kubequest
+  namespace: team-kube-quest
 spec:
-  project: team-kubequest
+  project: team-kube-quest
   source:
     repoURL: https://github.com/GoldenHCH/11-9-hackathon.git
     targetRevision: main
     path: deploy
   destination:
     server: https://kubernetes.default.svc
-    namespace: team-kubequest
+    namespace: team-kube-quest
   syncPolicy:
     automated:
       prune: true

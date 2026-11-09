@@ -3,7 +3,7 @@
 # by hand.
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: team-kubequest
+namespace: team-kube-quest
 resources:
   - deployment.yaml
   - service.yaml

@@ -1,6 +1,6 @@
 # Phase 00 + 04 — Platform: cnh-starter, Argo CD, OTel Collector, Gitar, Radar
 
-**Goal:** the hello app is live at `https://kubequest.cnh.radarhq.io` through Argo CD by 12:00, every PR gets a Gitar review, every span and log reaches Dash0 through a collector whose config is in the repo, and Radar is part of how we work from the first deploy.
+**Goal:** the hello app is live at `https://kube-quest.cnh.radarhq.io` through Argo CD by 12:00, every PR gets a Gitar review, every span and log reaches Dash0 through a collector whose config is in the repo, and Radar is part of how we work from the first deploy.
 **Brief requirements covered:** Radar (runs on Kubernetes, Radar MCP while building and operating, decision log); Dash0 (collector config, semantic conventions, logs correlated with traces, RUM); Sonar (review instructions, repo rules, PRs from hour one); public repo.
 **Depends on:** nothing. Golden's Phase 01 waits only for the repo to exist (step 1 below).
 **Owner:** Collin. **Budget:** 11:30–12:40.
@@ -10,11 +10,11 @@
 
 - [x] cnh-starter merged into `GoldenHCH/11-9-hackathon` in place instead of a new repo: starter files copied in, our `AGENTS.md` index kept with the starter's notes appended, kit README moved to `docs/starter-kit.md`
 - [ ] Make `GoldenHCH/11-9-hackathon` **public** (Argo CD reads it without credentials) and add Collin as admin
-- [ ] Join code from the Radar table → `join.cnh.radarhq.io`; team name `kubequest`; progress at `join.cnh.radarhq.io/status/kubequest`
+- [ ] Join code from the Radar table → `join.cnh.radarhq.io`; team name `kube-quest`; progress at `join.cnh.radarhq.io/status/kube-quest (first cluster `kubequest` failed setup on Radar's side)`
 - [x] `./scripts/setup.sh kubequest` (done locally); still to do: `git commit -am "Set up team kubequest" && git pull --rebase && git push`
 - [ ] GitHub → Packages → the image → Package settings → Change visibility → **Public** (the cluster can't pull private images)
 - [ ] Radar MCP: `claude mcp add --scope user radar-cloud --transport http https://api.radarhq.io/mcp`, then `/mcp` → radar-cloud → Authenticate → organization "Cloud Native Hackathon". Note the team's `cluster` id; every Radar MCP call needs it
-- [ ] Ask the agent to apply `argocd/application.yaml` through Radar MCP. Confirm the pod is Ready in Radar and `https://kubequest.cnh.radarhq.io/healthz` answers
+- [ ] Ask the agent to apply `argocd/application.yaml` through Radar MCP. Confirm the pod is Ready in Radar and `https://kube-quest.cnh.radarhq.io/healthz` answers
 - [ ] First line in `docs/radar-log.md`: time, "applied Argo app via Radar MCP, rollout healthy"
 - [ ] Keep the Service named `app` on port 80; the platform routes the team URL to it. Leave `httproute.yaml` alone
 
@@ -50,7 +50,7 @@
 
 ### Secrets (5 min)
 
-- [ ] `kubectl create secret generic app-credentials -n team-kubequest --from-literal=ELASTIC_URL=… --from-literal=ELASTIC_API_KEY=… --from-literal=OPENAI_API_KEY=… --from-literal=GITHUB_TOKEN=… --from-literal=DASH0_AUTH_TOKEN=… --from-literal=QR_SECRET=…` (or through Radar MCP `apply_resource`). Never committed; the command lives in `docs/ops.md` with the values blanked
+- [ ] `kubectl create secret generic app-credentials -n team-kube-quest --from-literal=ELASTIC_URL=… --from-literal=ELASTIC_API_KEY=… --from-literal=OPENAI_API_KEY=… --from-literal=GITHUB_TOKEN=… --from-literal=DASH0_AUTH_TOKEN=… --from-literal=QR_SECRET=…` (or through Radar MCP `apply_resource`). Never committed; the command lives in `docs/ops.md` with the values blanked
 - [ ] `deploy/deployment.yaml` reads them with `envFrom`
 
 ### Radar in the workflow (ongoing)
@@ -65,7 +65,7 @@
 
 ## Done when
 
-- [ ] `https://kubequest.cnh.radarhq.io/healthz` answers from the Argo CD-deployed app; Radar shows the Deployment healthy
+- [ ] `https://kube-quest.cnh.radarhq.io/healthz` answers from the Argo CD-deployed app; Radar shows the Deployment healthy
 - [ ] A test PR shows a Gitar comment and a CI check; `main` is protected
 - [ ] A request to `/healthz` appears as a trace in Dash0 with `service.name=kubequest-app` and a correlated log line
 - [ ] `docs/radar-log.md` has at least two entries; `docs/ops.md` says how to deploy, where secrets live, how to re-run setup

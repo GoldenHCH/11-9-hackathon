@@ -34,7 +34,7 @@ spec:
               containerPort: 8080
           env:
             - name: TEAM_NAME
-              value: "kubequest"
+              value: "kube-quest"
           resources:
             requests:
               cpu: 100m
