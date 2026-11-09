@@ -52,7 +52,7 @@
 ### SDK, logs, metrics, RUM (15 min) — in `app/`
 
 - [x] OTel Node SDK with auto-instrumentation (`app/src/otel.ts`), exporting OTLP to the collector Service
-- [x] Custom span attributes under `kubequest.*`: `kubequest.tool`, `kubequest.xp.awarded`, `kubequest.talk.id`, `kubequest.location.id`, `kubequest.checkin.rejected_reason` (meets replaced intros, so no `kubequest.intro.id`)
+- [x] Custom span attributes under `kubequest.*`: `kubequest.tool`, `kubequest.xp.awarded`, `kubequest.talk.id`, `kubequest.location.id`, `kubequest.checkin.rejected_reason`, plus the input attributes from `app/src/tools/define-tool.ts`: `kubequest.attendee.id`, `kubequest.quest.id`, `kubequest.partner.id` and `kubequest.intro.id` (it still carries the meet id: meets replaced intros, the attribute name stayed)
 - [x] pino JSON logs with `trace_id` and `span_id` on every line (`app/src/observability/logger.ts`)
 - [x] Metrics (`app/src/observability/metrics.ts`): `kubequest.xp.awarded` counter, `kubequest.checkins` counter by location and outcome, `kubequest.handshakes` counter (meets verified at a campfire), `kubequest.quiz.duration` histogram
 - [ ] Browser RUM in the Angular app ([Dash0 guide](https://dash0.com/guides/website-monitoring-with-opentelemetry-and-dash0)); Phase 03 section 8 initializes it from `/api/config`
