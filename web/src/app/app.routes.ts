@@ -202,6 +202,11 @@ export const routes: Routes = [
     title: 'Sponsor · KubeQuest',
     loadComponent: () => import('./admin/sponsor/sponsor.component').then((module) => module.SponsorComponent),
   },
+  {
+    path: 'admin/sponsor/why',
+    title: 'Why sponsor · KubeQuest',
+    loadComponent: () => import('./admin/sponsor/why/sponsor-why.component').then((module) => module.SponsorWhyComponent),
+  },
   { path: 'organizer', pathMatch: 'full', redirectTo: 'admin' },
   {
     path: 'screen/:locationId',

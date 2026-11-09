@@ -1,29 +1,30 @@
-import { CurrencyPipe, DecimalPipe, PercentPipe } from '@angular/common';
+import { CurrencyPipe, DecimalPipe } from '@angular/common';
 import { Component } from '@angular/core';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
 import { RouterLink } from '@angular/router';
 import { BarListComponent } from '../../shared/components/bar-list/bar-list.component';
 import { IBarListItem } from '../../shared/components/bar-list/bar-list.interfaces';
-import { PixelFaceComponent } from '../../shared/components/pixel-face/pixel-face.component';
 import { ScreenToolbarComponent } from '../../shared/components/screen-toolbar/screen-toolbar.component';
 import { StatTileComponent } from '../../shared/components/stat-tile/stat-tile.component';
+import { SponsorNavComponent } from './sponsor-nav/sponsor-nav.component';
 import {
-  sponsorAddOns,
-  sponsorAuction,
-  sponsorAuctionContext,
-  sponsorAverageTouchPoints,
+  sponsorBoostBidLimits,
+  sponsorBoostVisitLimits,
   sponsorDailyVisits,
   sponsorFunnel,
-  sponsorIncluded,
   sponsorKpis,
   sponsorName,
   sponsorReasons,
-  sponsorStories,
+  sponsorRequestDefaults,
+  sponsorRequestOptions,
   sponsorTier,
-  sponsorTouchPoints,
   sponsorWeeks,
 } from './sponsor.constants';
+import { ISponsorRequestOption } from './sponsor.interfaces';
 
 @Component({
   selector: 'app-sponsor',
@@ -32,48 +33,84 @@ import {
     CurrencyPipe,
     DecimalPipe,
     MatButtonModule,
+    MatFormFieldModule,
     MatIconModule,
-    PercentPipe,
-    PixelFaceComponent,
+    MatInputModule,
+    ReactiveFormsModule,
     RouterLink,
     ScreenToolbarComponent,
+    SponsorNavComponent,
     StatTileComponent,
   ],
   templateUrl: './sponsor.component.html',
-  styleUrl: './sponsor.component.scss',
+  styleUrls: ['./sponsor-page.scss', './sponsor.component.scss'],
 })
 export class SponsorComponent {
   public readonly name = sponsorName;
   public readonly tier = sponsorTier;
   public readonly kpis = sponsorKpis;
-  public readonly included = sponsorIncluded;
-  public readonly addOns = sponsorAddOns;
-  public readonly auctionContext = sponsorAuctionContext;
-  public readonly touchPoints = sponsorTouchPoints;
-  public readonly averageTouchPoints = sponsorAverageTouchPoints;
   public readonly reasons = sponsorReasons;
-  public readonly stories = sponsorStories;
+  public readonly options = sponsorRequestOptions;
+  public readonly bidLimits = sponsorBoostBidLimits;
+  public readonly visitLimits = sponsorBoostVisitLimits;
 
   public readonly days = sponsorDailyVisits.map((day) => ({ ...day, total: day.included + day.boosted }));
   public readonly dayMax = Math.max(...this.days.map((day) => day.total));
-  public readonly includedTotal = this.days.reduce((sum, day) => sum + day.included, 0);
-  public readonly boostedTotal = this.days.reduce((sum, day) => sum + day.boosted, 0);
 
   public readonly funnelItems: IBarListItem[] = sponsorFunnel.map((step, index) => ({
     label: step.label,
     value: step.value,
-    detail: index === 0 ? '' : `${Math.round((step.value / sponsorFunnel[index - 1].value) * 1000) / 10}% kept`,
+    detail: index === 0 ? '' : `${Math.round((step.value / sponsorFunnel[index - 1].value) * 1000) / 10}%`,
   }));
-
-  public readonly auction = sponsorAuction.map((row) => ({ ...row, rank: Math.round(row.maxBid * row.relevance * 100) / 100 }));
 
   public readonly weeks = sponsorWeeks;
   public readonly weekMax = Math.max(...sponsorWeeks.map((week) => week.deals));
-  public readonly totalDeals = sponsorWeeks.reduce((sum, week) => sum + week.deals, 0);
-  public readonly dealsBy30 = this._dealsThroughWeek(4);
-  public readonly dealsBy60 = this._dealsThroughWeek(9);
 
-  private _dealsThroughWeek(lastWeek: number): number {
-    return sponsorWeeks.filter((week) => week.week <= lastWeek).reduce((sum, week) => sum + week.deals, 0);
+  public readonly requestForm = new FormGroup({
+    boostBid: new FormControl(sponsorRequestDefaults.boostBid, {
+      nonNullable: true,
+      validators: [Validators.required, Validators.min(sponsorBoostBidLimits.min), Validators.max(sponsorBoostBidLimits.max)],
+    }),
+    boostVisits: new FormControl(sponsorRequestDefaults.boostVisits, {
+      nonNullable: true,
+      validators: [Validators.required, Validators.min(sponsorBoostVisitLimits.min), Validators.max(sponsorBoostVisitLimits.max)],
+    }),
+    talkQuest: new FormControl(sponsorRequestDefaults.talkQuest, { nonNullable: true }),
+    campfire: new FormControl(sponsorRequestDefaults.campfire, { nonNullable: true }),
+    recapFeature: new FormControl(sponsorRequestDefaults.recapFeature, { nonNullable: true }),
+  });
+
+  public isSent = false;
+
+  public get boostCost(): number {
+    const { boostBid, boostVisits } = this.requestForm.getRawValue();
+
+    return (boostBid || 0) * (boostVisits || 0);
+  }
+
+  public get total(): number {
+    const value = this.requestForm.getRawValue();
+
+    return this.boostCost + this.options.reduce((sum, option) => sum + value[option.key] * option.unitPrice, 0);
+  }
+
+  public quantity(option: ISponsorRequestOption): number {
+    return this.requestForm.controls[option.key].value;
+  }
+
+  public step(option: ISponsorRequestOption, change: number): void {
+    const control = this.requestForm.controls[option.key];
+
+    control.setValue(Math.min(option.max, Math.max(0, control.value + change)));
+    this.isSent = false;
+  }
+
+  public send(): void {
+    if (this.requestForm.invalid) {
+      this.requestForm.markAllAsTouched();
+      return;
+    }
+
+    this.isSent = true;
   }
 }
