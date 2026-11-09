@@ -1,0 +1,231 @@
+[
+  {
+    "id": "intro-001",
+    "fromId": "att-013",
+    "toId": "att-005",
+    "status": "met",
+    "proposedAt": "2026-11-10T07:30:00-07:00",
+    "slot": {
+      "start": "2026-11-10T11:00:00-07:00",
+      "end": "2026-11-10T11:15:00-07:00"
+    },
+    "meetingPointId": "mp-salt-palace-coffee",
+    "icebreaker": "Start with which talk surprised each of you most today, then swap hallway-track tips.",
+    "arrivals": [
+      {
+        "attendeeId": "att-013",
+        "at": "2026-11-10T11:03:00-07:00"
+      },
+      {
+        "attendeeId": "att-005",
+        "at": "2026-11-10T11:07:00-07:00"
+      }
+    ]
+  },
+  {
+    "id": "intro-002",
+    "fromId": "att-025",
+    "toId": "att-008",
+    "status": "met",
+    "proposedAt": "2026-11-10T07:30:00-07:00",
+    "slot": {
+      "start": "2026-11-10T11:30:00-07:00",
+      "end": "2026-11-10T11:45:00-07:00"
+    },
+    "meetingPointId": "mp-network-nook",
+    "icebreaker": "Each of you describe the one thing you would never let an agent do in production.",
+    "arrivals": [
+      {
+        "attendeeId": "att-025",
+        "at": "2026-11-10T11:31:00-07:00"
+      },
+      {
+        "attendeeId": "att-008",
+        "at": "2026-11-10T11:37:00-07:00"
+      }
+    ]
+  },
+  {
+    "id": "intro-003",
+    "fromId": "att-072",
+    "toId": "att-005",
+    "status": "met",
+    "proposedAt": "2026-11-10T07:58:00-07:00",
+    "slot": {
+      "start": "2026-11-10T09:45:00-07:00",
+      "end": "2026-11-10T10:00:00-07:00"
+    },
+    "meetingPointId": "mp-network-nook",
+    "icebreaker": "Start with which talk surprised each of you most today, then swap hallway-track tips.",
+    "arrivals": [
+      {
+        "attendeeId": "att-072",
+        "at": "2026-11-10T09:48:00-07:00"
+      },
+      {
+        "attendeeId": "att-005",
+        "at": "2026-11-10T10:01:00-07:00"
+      }
+    ]
+  },
+  {
+    "id": "intro-004",
+    "fromId": "att-106",
+    "toId": "att-035",
+    "status": "declined",
+    "proposedAt": "2026-11-10T08:41:00-07:00",
+    "arrivals": []
+  },
+  {
+    "id": "intro-005",
+    "fromId": "att-008",
+    "toId": "att-005",
+    "status": "met",
+    "proposedAt": "2026-11-10T08:47:00-07:00",
+    "slot": {
+      "start": "2026-11-10T14:00:00-07:00",
+      "end": "2026-11-10T14:15:00-07:00"
+    },
+    "meetingPointId": "mp-network-nook",
+    "icebreaker": "Share the most surprising thing a dependency scan ever turned up for each of you.",
+    "arrivals": [
+      {
+        "attendeeId": "att-008",
+        "at": "2026-11-10T14:03:00-07:00"
+      },
+      {
+        "attendeeId": "att-005",
+        "at": "2026-11-10T14:11:00-07:00"
+      }
+    ]
+  },
+  {
+    "id": "intro-006",
+    "fromId": "att-013",
+    "toId": "att-097",
+    "status": "met",
+    "proposedAt": "2026-11-10T09:36:00-07:00",
+    "slot": {
+      "start": "2026-11-10T13:15:00-07:00",
+      "end": "2026-11-10T13:30:00-07:00"
+    },
+    "meetingPointId": "mp-hyatt-l4-foyer",
+    "icebreaker": "Ask what they would put on a first-timer survival list for the week.",
+    "arrivals": [
+      {
+        "attendeeId": "att-013",
+        "at": "2026-11-10T13:17:00-07:00"
+      },
+      {
+        "attendeeId": "att-097",
+        "at": "2026-11-10T13:26:00-07:00"
+      }
+    ]
+  },
+  {
+    "id": "intro-007",
+    "fromId": "att-094",
+    "toId": "att-031",
+    "status": "declined",
+    "proposedAt": "2026-11-10T10:51:00-07:00",
+    "arrivals": []
+  },
+  {
+    "id": "intro-008",
+    "fromId": "att-026",
+    "toId": "att-008",
+    "status": "met",
+    "proposedAt": "2026-11-10T11:23:00-07:00",
+    "slot": {
+      "start": "2026-11-10T14:00:00-07:00",
+      "end": "2026-11-10T14:15:00-07:00"
+    },
+    "meetingPointId": "mp-network-nook",
+    "icebreaker": "Compare how each of your teams structures its GitOps repos and what you would change.",
+    "arrivals": [
+      {
+        "attendeeId": "att-026",
+        "at": "2026-11-10T14:04:00-07:00"
+      },
+      {
+        "attendeeId": "att-008",
+        "at": "2026-11-10T14:13:00-07:00"
+      }
+    ]
+  },
+  {
+    "id": "intro-009",
+    "fromId": "att-117",
+    "toId": "att-097",
+    "status": "met",
+    "proposedAt": "2026-11-10T11:47:00-07:00",
+    "slot": {
+      "start": "2026-11-10T14:30:00-07:00",
+      "end": "2026-11-10T14:45:00-07:00"
+    },
+    "meetingPointId": "mp-salt-palace-coffee",
+    "icebreaker": "Ask them what they wish someone had told them before their very first KubeCon.",
+    "arrivals": [
+      {
+        "attendeeId": "att-117",
+        "at": "2026-11-10T14:31:00-07:00"
+      },
+      {
+        "attendeeId": "att-097",
+        "at": "2026-11-10T14:38:00-07:00"
+      }
+    ]
+  },
+  {
+    "id": "intro-010",
+    "fromId": "att-075",
+    "toId": "att-066",
+    "status": "accepted",
+    "proposedAt": "2026-11-10T12:58:00-07:00",
+    "arrivals": [],
+    "slot": {
+      "start": "2026-11-10T16:45:00-07:00",
+      "end": "2026-11-10T17:00:00-07:00"
+    },
+    "meetingPointId": "mp-network-nook",
+    "icebreaker": "Describe the platform feature each of you is proudest of and the one nobody used."
+  },
+  {
+    "id": "intro-011",
+    "fromId": "att-061",
+    "toId": "att-001",
+    "status": "proposed",
+    "proposedAt": "2026-11-10T13:29:00-07:00",
+    "arrivals": []
+  },
+  {
+    "id": "intro-012",
+    "fromId": "att-088",
+    "toId": "att-032",
+    "status": "accepted",
+    "proposedAt": "2026-11-10T13:34:00-07:00",
+    "arrivals": [],
+    "slot": {
+      "start": "2026-11-10T15:45:00-07:00",
+      "end": "2026-11-10T16:00:00-07:00"
+    },
+    "meetingPointId": "mp-network-nook",
+    "icebreaker": "Each of you pitch the one workload you would move to WebAssembly tomorrow."
+  },
+  {
+    "id": "intro-013",
+    "fromId": "att-017",
+    "toId": "att-009",
+    "status": "proposed",
+    "proposedAt": "2026-11-10T14:09:00-07:00",
+    "arrivals": []
+  },
+  {
+    "id": "intro-014",
+    "fromId": "att-004",
+    "toId": "att-006",
+    "status": "proposed",
+    "proposedAt": "2026-11-10T14:48:00-07:00",
+    "arrivals": []
+  }
+]
