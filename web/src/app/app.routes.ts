@@ -102,14 +102,14 @@ export const routes: Routes = [
   {
     path: 'here',
     title: 'Here · KubeQuest',
-    loadComponent: placeholder,
-    data: { title: 'Here', icon: 'place', message: 'Scan a room’s QR block to see what’s on and who’s around.' },
+    canActivate: [meGuard],
+    loadComponent: () => import('./here/here.component').then((module) => module.HereComponent),
   },
   {
     path: 'people',
     title: 'People · KubeQuest',
-    loadComponent: placeholder,
-    data: { title: 'People', icon: 'group', message: 'Players working on what you’re working on, nearby first.' },
+    canActivate: [meGuard],
+    loadComponent: () => import('./people/people/people.component').then((module) => module.PeopleComponent),
   },
   {
     path: 'quiz/:talkId',
