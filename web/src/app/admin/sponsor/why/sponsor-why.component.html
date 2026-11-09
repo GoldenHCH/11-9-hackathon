@@ -1,0 +1,115 @@
+<section class="app-page sponsor">
+  <app-screen-toolbar [title]="name + ' · ' + tier" subtitle="KubeCon NA 2026 · demo data">
+    <a mat-stroked-button routerLink="/admin">
+      <div class="btn-content">
+        <mat-icon>arrow_back</mat-icon>
+        <span>Organizer</span>
+      </div>
+    </a>
+  </app-screen-toolbar>
+
+  <app-sponsor-nav></app-sponsor-nav>
+
+  <section class="sponsor-panel app-block" aria-labelledby="auction-heading">
+    <h2 id="auction-heading" class="sponsor-heading app-pixel">Quest slots are an auction</h2>
+    <p class="sponsor-lede">Rank = bid × fit. Winner pays just enough to beat the next. Fit comes from attendee goals and notes.</p>
+    <p class="auction-context">{{ auctionContext }}</p>
+    <div class="table-scroll">
+      <table class="auction">
+        <thead>
+          <tr>
+            <th scope="col">Sponsor</th>
+            <th scope="col">Bid</th>
+            <th scope="col">Fit</th>
+            <th scope="col">Rank</th>
+            <th scope="col">Slot</th>
+            <th scope="col">Pays</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (row of auction; track row.sponsor) {
+            <tr [class.auction-you]="row.isYou">
+              <th scope="row">{{ row.sponsor }}</th>
+              <td>{{ row.maxBid | currency }}</td>
+              <td>{{ row.relevance | percent }}</td>
+              <td>{{ row.rank | number: '1.2-2' }}</td>
+              <td>{{ row.slotWon ?? '—' }}</td>
+              <td>{{ row.pricePaid ? (row.pricePaid | currency) : '—' }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="sponsor-grid">
+    <section class="sponsor-panel app-block" aria-labelledby="touch-heading">
+      <h2 id="touch-heading" class="sponsor-heading app-pixel">Touch points per sale</h2>
+      <p class="sponsor-lede">{{ averageTouchPoints }} on average · % of closed deals</p>
+      <ol class="row-list">
+        @for (touch of touchPoints; track touch.label) {
+          <li class="row-item">
+            <mat-icon class="row-icon" aria-hidden="true">{{ touch.icon }}</mat-icon>
+            <span class="row-label">{{ touch.label }}</span>
+            <span class="row-value">{{ touch.share }}%</span>
+          </li>
+        }
+      </ol>
+      <p class="cost-line">
+        <span class="cost-figure app-pixel">$4,465</span>
+        <span>per sale · $138.4k ÷ 31 deals</span>
+      </p>
+    </section>
+
+    <section class="sponsor-panel app-block" aria-labelledby="package-heading">
+      <h2 id="package-heading" class="sponsor-heading app-pixel">Platinum vs add-ons</h2>
+      <ul class="row-list">
+        @for (item of included; track item.label) {
+          <li class="row-item">
+            <mat-icon class="row-icon row-icon--included" aria-hidden="true">check_box</mat-icon>
+            <span class="row-label">{{ item.label }} <span class="row-detail">{{ item.detail }}</span></span>
+            <span class="row-value">Included</span>
+          </li>
+        }
+        @for (item of addOns; track item.label) {
+          <li class="row-item">
+            <mat-icon class="row-icon" aria-hidden="true">add_box</mat-icon>
+            <span class="row-label">{{ item.label }} <span class="row-detail">{{ item.detail }}</span></span>
+            <span class="row-value">{{ item.price }}</span>
+          </li>
+        }
+      </ul>
+    </section>
+  </div>
+
+  <h2 class="stories-title app-pixel">Buyers, in their own words</h2>
+  <div class="story-list">
+    @for (story of stories; track story.faceSeed) {
+      <article class="story app-block">
+        <header class="story-header">
+          <app-pixel-face [seed]="story.faceSeed" [size]="36" [label]="'Face for ' + story.role"></app-pixel-face>
+          <div class="story-who">
+            <p class="story-role">{{ story.role }}</p>
+            <p class="story-outcome">
+              {{ story.dealSize }} · day {{ story.daysToClose }}
+              <span class="story-badge" [class.story-badge--medium]="story.attribution === 'Medium'">{{ story.attribution }}</span>
+            </p>
+          </div>
+        </header>
+        <dl class="story-facts">
+          <dt>Goal</dt>
+          <dd>“{{ story.goal }}”</dd>
+          <dt>On AWS</dt>
+          <dd>“{{ story.noteOnYou }}”</dd>
+          <dt>On {{ story.competitor }}</dt>
+          <dd>“{{ story.noteOnCompetitor }}”</dd>
+        </dl>
+        <ol class="story-path" aria-label="Their path">
+          @for (step of story.path; track $index) {
+            <li class="story-step">{{ step }}</li>
+          }
+        </ol>
+      </article>
+    }
+  </div>
+</section>

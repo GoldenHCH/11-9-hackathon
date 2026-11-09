@@ -55,3 +55,12 @@ export interface ISponsorWeek {
   week: number;
   deals: number;
 }
+
+export interface ISponsorRequestOption {
+  key: 'talkQuest' | 'campfire' | 'recapFeature';
+  label: string;
+  unitLabel: string;
+  unitPrice: number;
+  max: number;
+  icon: string;
+}

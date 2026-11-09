@@ -5,35 +5,41 @@ import {
   ISponsorFunnelStep,
   ISponsorKpi,
   ISponsorPackageItem,
+  ISponsorRequestOption,
   ISponsorStory,
   ISponsorTouchPoint,
   ISponsorWeek,
 } from './sponsor.interfaces';
 
+export const sponsorTabs = [
+  { path: '/admin/sponsor', label: 'Insights', icon: 'insights' },
+  { path: '/admin/sponsor/why', label: 'Why it works', icon: 'lightbulb' },
+] as const;
+
 export const sponsorName = 'AWS';
 export const sponsorTier = 'Platinum';
 
 export const sponsorKpis: ISponsorKpi[] = [
-  { label: 'Booth visits from quests', value: '2,910', detail: '1,020 from boosts', icon: 'flag' },
-  { label: 'Booth notes written', value: '1,760', detail: '60% of visitors', icon: 'edit_note' },
-  { label: 'Asked for follow-up', value: '520', detail: 'opted in, warm', icon: 'mark_email_read' },
-  { label: 'Cost per booth visit', value: '$47.56', detail: '$138.4k total spend', icon: 'payments' },
-  { label: 'Cost per sale', value: '$4,465', detail: '31 closed-won in 90 days', icon: 'sell' },
-  { label: 'Attributed revenue', value: '$1.86M', detail: '13.4× return on spend', icon: 'trending_up' },
+  { label: 'Booth visits', value: '2,910', detail: '1,020 boosted', icon: 'flag' },
+  { label: 'Notes', value: '1,760', detail: '60% of visits', icon: 'edit_note' },
+  { label: 'Follow-ups', value: '520', detail: 'opted in', icon: 'mark_email_read' },
+  { label: 'Cost / visit', value: '$47.56', detail: '$138.4k spend', icon: 'payments' },
+  { label: 'Cost / sale', value: '$4,465', detail: '31 deals, 90 days', icon: 'sell' },
+  { label: 'Revenue', value: '$1.86M', detail: '13.4× ROI', icon: 'trending_up' },
 ];
 
 export const sponsorIncluded: ISponsorPackageItem[] = [
-  { label: 'Quest slots', detail: '6 an hour, matched to attendees whose goals fit you' },
-  { label: 'Booth QR and notes', detail: 'Every visitor’s takeaways land in your lead list' },
-  { label: 'Recap email placement', detail: 'Your booth and next step in every visitor’s recap' },
-  { label: 'One campfire', detail: 'A named meetup spot on the map for all 3 days' },
+  { label: 'Quest slots', detail: '6 an hour, goal-matched' },
+  { label: 'Booth QR and notes', detail: 'Takeaways go to your lead list' },
+  { label: 'Recap placement', detail: 'In every visitor’s recap email' },
+  { label: 'One campfire', detail: 'Meetup spot, all 3 days' },
 ];
 
 export const sponsorAddOns: ISponsorPackageItem[] = [
-  { label: 'Quest boost', detail: 'Bid per booth visit for extra slots at peak hours', price: 'from $3 / visit' },
-  { label: 'Talk follow-up quest', detail: 'Send attendees of your talk to the booth after', price: '$2,500 / talk' },
-  { label: 'Sponsored campfire', detail: 'Host a themed meetup with a matched guest list', price: '$5,000 / day' },
-  { label: 'Recap feature', detail: 'Top slot in the post-event recap email', price: '$7,500' },
+  { label: 'Quest boost', detail: 'Extra slots at peak hours', price: 'from $3 / visit' },
+  { label: 'Talk follow-up quest', detail: 'Talk audience → your booth', price: '$2,500 / talk' },
+  { label: 'Sponsored campfire', detail: 'Themed meetup, matched guests', price: '$5,000 / day' },
+  { label: 'Recap feature', detail: 'Top slot in the recap email', price: '$7,500' },
 ];
 
 export const sponsorDailyVisits: ISponsorDayVisits[] = [
@@ -52,7 +58,7 @@ export const sponsorFunnel: ISponsorFunnelStep[] = [
   { label: 'Closed-won (90 days)', value: 31 },
 ];
 
-export const sponsorAuctionContext = 'Day 3 · 2:00–3:00 pm · attendees whose goal mentions “platform engineering” · 3 quest slots';
+export const sponsorAuctionContext = 'Day 3 · 2–3 pm · goal: platform engineering · 3 slots';
 
 export const sponsorAuction: ISponsorAuctionRow[] = [
   { sponsor: 'AWS', isYou: true, maxBid: 9.0, relevance: 0.92, slotWon: 1, pricePaid: 7.41 },
@@ -62,22 +68,22 @@ export const sponsorAuction: ISponsorAuctionRow[] = [
 ];
 
 export const sponsorTouchPoints: ISponsorTouchPoint[] = [
-  { label: 'Quest sent them to your booth', icon: 'flag', share: 100 },
+  { label: 'Quest to your booth', icon: 'flag', share: 100 },
   { label: 'Wrote a booth note', icon: 'edit_note', share: 94 },
   { label: 'Went to your talk', icon: 'co_present', share: 61 },
-  { label: 'Verified handshake with your staff', icon: 'handshake', share: 55 },
+  { label: 'Handshake with staff', icon: 'handshake', share: 55 },
   { label: 'Opened the recap email', icon: 'mail', share: 87 },
-  { label: 'Booked a call from the recap', icon: 'event_available', share: 48 },
+  { label: 'Booked a call', icon: 'event_available', share: 48 },
 ];
 
 export const sponsorAverageTouchPoints = 6.4;
 
 export const sponsorReasons: IBarListItem[] = [
-  { label: 'Pricing was clear and cheaper for their workload', value: 38 },
-  { label: 'Managed service fit (less to run themselves)', value: 27 },
-  { label: 'Talked to an AWS engineer in person', value: 19 },
-  { label: 'Compliance and data region answered on the spot', value: 10 },
-  { label: 'Already on AWS, wanted to go deeper', value: 6 },
+  { label: 'Clear, lower pricing', value: 38 },
+  { label: 'Managed service fit', value: 27 },
+  { label: 'Met an AWS engineer', value: 19 },
+  { label: 'Compliance answered', value: 10 },
+  { label: 'Already on AWS', value: 6 },
 ];
 
 export const sponsorStories: ISponsorStory[] = [
@@ -137,3 +143,20 @@ export const sponsorWeeks: ISponsorWeek[] = [
   { week: 12, deals: 1 },
   { week: 13, deals: 1 },
 ];
+
+export const sponsorRequestOptions: ISponsorRequestOption[] = [
+  { key: 'talkQuest', label: 'Talk follow-up quest', unitLabel: 'talks', unitPrice: 2500, max: 5, icon: 'co_present' },
+  { key: 'campfire', label: 'Sponsored campfire', unitLabel: 'days', unitPrice: 5000, max: 3, icon: 'local_fire_department' },
+  { key: 'recapFeature', label: 'Recap feature', unitLabel: 'slot', unitPrice: 7500, max: 1, icon: 'mail' },
+];
+
+export const sponsorRequestDefaults = {
+  boostBid: 9,
+  boostVisits: 500,
+  talkQuest: 1,
+  campfire: 0,
+  recapFeature: 0,
+};
+
+export const sponsorBoostVisitLimits = { min: 50, max: 3000 };
+export const sponsorBoostBidLimits = { min: 3, max: 50 };
