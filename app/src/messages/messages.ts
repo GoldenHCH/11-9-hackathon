@@ -29,6 +29,8 @@ const READ_MARKER_KIND = 'read_marker';
 const READ_MARKER_PREFIX = 'read:';
 const CONTROL_CHARACTERS = /[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F​-‏‪-‮⁦-⁩]/g;
 const EXTRA_BLANK_LINES = /\n{3,}/g;
+const RECENT_SENDERS_MAX = 5000;
+const recentSends = new Map<string, number[]>();
 
 interface IConversationStats {
   last?: IStoredMessage;
@@ -77,6 +79,24 @@ function isBlocked(first: IAttendee, second: IAttendee): boolean {
   return (first.blockedIds ?? []).includes(second.id) || (second.blockedIds ?? []).includes(first.id);
 }
 
+function reserveSendSlot(senderId: string, nowMs: number): boolean {
+  const recent = (recentSends.get(senderId) ?? []).filter((sentAt) => nowMs - sentAt < RATE_WINDOW_MS);
+
+  if (recent.length >= gameRules.MESSAGES_PER_MINUTE) {
+    recentSends.set(senderId, recent);
+
+    return false;
+  }
+
+  recentSends.set(senderId, [...recent, nowMs]);
+
+  if (recentSends.size > RECENT_SENDERS_MAX) {
+    recentSends.delete(recentSends.keys().next().value ?? senderId);
+  }
+
+  return true;
+}
+
 async function sentRecently(attendeeId: string, now: Date): Promise<number> {
   const response = await getEsClient().count(
     {
@@ -112,7 +132,7 @@ export async function sendMessage(input: ISendMessageInput): Promise<IMessage> {
 
   const now = new Date();
 
-  if ((await sentRecently(sender.id, now)) >= gameRules.MESSAGES_PER_MINUTE) {
+  if (!reserveSendSlot(sender.id, now.getTime()) || (await sentRecently(sender.id, now)) >= gameRules.MESSAGES_PER_MINUTE) {
     throw new ToolError(429, 'slow_down', 'You are sending messages fast. Take a breath and try again in a minute.');
   }
 
