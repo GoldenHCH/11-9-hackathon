@@ -1,25 +1,34 @@
 <div class="screen">
   <section class="screen-left" aria-label="Join">
-    <h1 class="screen-title kq-pixel">Scan to join KubeQuest</h1>
-    <p class="screen-room">{{ roomName }}</p>
+    <div class="brand">
+      <span class="brand-block" aria-hidden="true"></span>
+      <span class="brand-name kq-pixel">KubeQuest</span>
+    </div>
+    <h1 class="screen-title kq-pixel">Scan to join</h1>
+    <p class="screen-room kq-pixel">{{ roomName }}</p>
 
-    <div class="qr-frame">
+    <div class="qr-frame" [class.is-missing]="isKeyMissing || qrError">
       @if (isKeyMissing) {
         <div class="qr-message" role="alert">
           <mat-icon aria-hidden="true">key_off</mat-icon>
-          <span class="kq-pixel">Screen key missing</span>
+          <span class="qr-message-title kq-pixel">Screen key missing</span>
+          <span class="qr-message-body">This screen needs its display key to show a join code.</span>
+          <ol class="qr-steps">
+            <li>Run <code class="qr-code">npx tsx scripts/print-qr-links.ts</code></li>
+            <li>Open this room's link: <code class="qr-code">/screen/{{ locationId }}?key=…</code></li>
+          </ol>
         </div>
       } @else if (qrDataUrl) {
         <img class="qr" [src]="qrDataUrl" alt="QR code to join KubeQuest in this room" />
       } @else if (qrError) {
         <div class="qr-message" role="alert">
           <mat-icon aria-hidden="true">error</mat-icon>
-          <span>{{ qrError }}</span>
+          <span class="qr-message-title kq-pixel">Code unavailable</span>
+          <span class="qr-message-body">{{ qrError }}</span>
+          <span class="qr-message-body">Retrying in 30 seconds.</span>
         </div>
       } @else {
-        <div class="qr-message" aria-busy="true">
-          <span class="kq-pixel">Loading code…</span>
-        </div>
+        <div class="qr-skeleton" aria-busy="true" aria-label="Loading join code"></div>
       }
     </div>
 
@@ -38,21 +47,35 @@
     }
 
     <div class="board">
-      <h2 class="board-title kq-pixel">Top 10 today</h2>
-      @if (rows.length) {
+      <div class="board-head">
+        <h2 class="board-title kq-pixel">Top 10 today</h2>
+        <span class="board-live kq-pixel"><span class="board-live-dot" aria-hidden="true"></span>Live</span>
+      </div>
+      @if (!isBoardLoaded) {
+        <div class="board-rows" aria-busy="true" aria-label="Loading leaderboard">
+          @for (row of skeletonRows; track row) {
+            <div class="board-skeleton"></div>
+          }
+        </div>
+      } @else if (rows.length) {
         <ol class="board-rows">
           @for (row of rows; track row.player.id) {
-            <li class="board-row" [class.is-top]="row.rank <= 3">
+            <li class="board-row" [class.is-top]="row.rank <= 3" [class.is-first]="row.rank === 1">
               <span class="board-rank kq-pixel">{{ row.rank }}</span>
-              <app-pixel-face [seed]="faceSeed(row)" [size]="32" [label]="row.player.handle + ' face'"></app-pixel-face>
-              <span class="board-handle">{{ row.player.handle }}</span>
-              <span class="board-level">{{ row.player.levelName }}</span>
-              <span class="board-score kq-pixel">{{ row.score }} XP</span>
+              <app-pixel-face [seed]="faceSeed(row)" [size]="40" [label]="row.player.handle + ' face'"></app-pixel-face>
+              <span class="board-name">
+                <span class="board-handle">{{ row.player.handle }}</span>
+                <span class="board-level">{{ row.player.levelName }}</span>
+              </span>
+              <span class="board-score kq-pixel">{{ row.score }}<span class="board-xp">XP</span></span>
             </li>
           }
         </ol>
       } @else {
-        <p class="board-empty">Be the first on the board: scan the code.</p>
+        <div class="board-empty">
+          <span class="board-empty-block" aria-hidden="true"></span>
+          <p class="board-empty-text">Be the first on the board: scan the code.</p>
+        </div>
       }
     </div>
   </section>

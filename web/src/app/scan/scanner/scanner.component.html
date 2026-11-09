@@ -16,14 +16,15 @@
       muted
       playsinline
     ></video>
-    <div class="viewfinder-frame" aria-hidden="true">
+    <div class="viewfinder-frame" [class.is-scanning]="state === 'scanning'" aria-hidden="true">
+      <span class="scan-line"></span>
       <span class="corner corner--tl"></span>
       <span class="corner corner--tr"></span>
       <span class="corner corner--bl"></span>
       <span class="corner corner--br"></span>
     </div>
     @if (state === 'starting') {
-      <p class="viewfinder-status">Starting camera…</p>
+      <p class="viewfinder-status kq-pixel">Starting camera…</p>
     }
   </div>
 
@@ -32,7 +33,7 @@
     @if (isTorchSupported) {
       <div class="scanner-actions">
         <button mat-stroked-button type="button" [attr.aria-pressed]="isTorchOn" (click)="toggleTorch()">
-          <div class="button-content">
+          <div class="btn-content">
             <mat-icon aria-hidden="true">{{ isTorchOn ? 'flashlight_off' : 'flashlight_on' }}</mat-icon>
             <span>{{ isTorchOn ? 'Torch off' : 'Torch on' }}</span>
           </div>
@@ -58,7 +59,7 @@
       }
       <div class="scanner-actions">
         <button mat-flat-button type="button" (click)="start()">
-          <div class="button-content">
+          <div class="btn-content">
             <mat-icon aria-hidden="true">refresh</mat-icon>
             <span>Try again</span>
           </div>
@@ -68,11 +69,12 @@
   }
 
   @if (state === 'done') {
-    <p class="scanner-hint kq-pixel">Opening…</p>
+    <p class="scanner-done kq-block kq-pixel" role="status"><mat-icon aria-hidden="true">check</mat-icon>Code found. Opening…</p>
   } @else {
-    <form class="manual" (ngSubmit)="submitManual()">
+    <form class="manual kq-block" (ngSubmit)="submitManual()">
+      <span class="manual-title kq-pixel">No camera handy?</span>
       <mat-form-field appearance="outline" class="manual-field">
-        <mat-label>Or paste a KubeQuest link</mat-label>
+        <mat-label>Paste a KubeQuest link</mat-label>
         <input matInput name="manualLink" type="url" inputmode="url" autocomplete="off" [(ngModel)]="manualLink" placeholder="https://kubequest.cnh.radarhq.io/r/…" />
       </mat-form-field>
       <button mat-stroked-button type="submit" [disabled]="!manualLink.trim()">Open</button>
