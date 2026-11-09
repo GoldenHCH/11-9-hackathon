@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import { appConfig } from '../config';
+import { buildRecapPdf } from '../recap/recap-pdf';
 import { findTool, listTools, toolRegistry } from '../tools';
 import { verifyScreenDisplayKey } from '../security/tokens';
 import { IClientConfig } from '../types/kubequest.interfaces';
@@ -78,6 +79,19 @@ export function apiRoutes(): Router {
     try {
       const recap = await toolRegistry.recap.execute({ attendeeId: request.params.attendeeId });
       response.type('html').set('Cache-Control', 'no-store').send(recap.emailHtml);
+    } catch (error) {
+      sendToolFailure(response, error);
+    }
+  });
+
+  router.get('/api/recap/:attendeeId.pdf', async (request, response) => {
+    try {
+      const pdf = await buildRecapPdf(request.params.attendeeId);
+      response
+        .type('application/pdf')
+        .set('Cache-Control', 'no-store')
+        .set('Content-Disposition', 'attachment; filename="kubequest-recap.pdf"')
+        .send(Buffer.from(pdf));
     } catch (error) {
       sendToolFailure(response, error);
     }

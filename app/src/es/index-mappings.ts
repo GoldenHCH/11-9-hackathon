@@ -14,6 +14,9 @@ const bool: estypes.MappingProperty = { type: 'boolean' };
 const geoPoint: estypes.MappingProperty = { type: 'geo_point' };
 const opaqueObject: estypes.MappingProperty = { type: 'object', enabled: false };
 const timeWindow: estypes.MappingProperty = { properties: { start: date, end: date } };
+const linksMapping: estypes.MappingProperty = {
+  properties: { linkedin: unindexedKeyword, github: unindexedKeyword, x: unindexedKeyword, bluesky: unindexedKeyword, mastodon: unindexedKeyword, website: unindexedKeyword },
+};
 
 function semanticText(inferenceId: string): estypes.MappingProperty {
   return { type: 'semantic_text', inference_id: inferenceId };
@@ -85,6 +88,7 @@ export function buildIndexMappings(inferenceId: string): Record<IndexName, Prope
       banners: keyword,
       blockedIds: keyword,
       createdAt: date,
+      links: linksMapping,
     },
     [indexNames.LOCATIONS]: {
       id: keyword,
@@ -203,6 +207,12 @@ export function buildIndexMappings(inferenceId: string): Record<IndexName, Prope
       createdAt: date,
       updatedAt: date,
       noteText: semanticText(inferenceId),
+      kind: keyword,
+      talkId: keyword,
+      talkTitle: text,
+      speakers: keyword,
+      note: text,
+      takeaways: text,
     },
     [indexNames.MESSAGES]: {
       id: keyword,
@@ -215,6 +225,11 @@ export function buildIndexMappings(inferenceId: string): Record<IndexName, Prope
       handle: keyword,
       attendeeId: keyword,
       createdAt: date,
+      memberIds: keyword,
+      connectionId: keyword,
+      metAt: date,
+      updatedAt: date,
+      detail: opaqueObject,
     },
   };
 }

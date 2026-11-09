@@ -81,9 +81,11 @@ export interface IStoredHandshake {
 export interface IStoredBoothNote extends IBoothNote {
   attendeeId: string;
   noteText?: string;
+  kind?: 'booth_note';
 }
 
 export interface IStoredMessage {
+  kind?: 'chat';
   id: string;
   meetId: string;
   fromId: string;

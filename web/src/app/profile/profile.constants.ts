@@ -42,6 +42,9 @@ export const settingOptions: readonly ISettingOption[] = [
 export const moreLinks = [
   { path: '/meets', label: 'My meets', icon: 'handshake' },
   { path: '/code', label: 'My handshake code', icon: 'qr_code_2' },
+  { path: '/connections', label: 'People met', icon: 'group' },
+  { path: '/links', label: 'My links', icon: 'link' },
   { path: '/notes', label: 'Booth notes', icon: 'edit_note' },
+  { path: '/notes/talks', label: 'Talk notes', icon: 'sticky_note_2' },
   { path: '/recap', label: 'Recap', icon: 'mail' },
 ] as const;

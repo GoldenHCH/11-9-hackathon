@@ -1,3 +1,5 @@
+import { connectionToolNames } from './connections.constants';
+
 export const materials = ['circuit', 'stone', 'glass', 'crate', 'iron', 'copper', 'lantern', 'wood', 'gold'] as const;
 
 export const tracks = ['ai', 'platform', 'operations', 'data', 'security', 'connectivity', 'inclusion', 'other'] as const;
@@ -188,4 +190,5 @@ export const toolNames = [
   'send_message',
   'list_messages',
   'recap',
+  ...connectionToolNames,
 ] as const;

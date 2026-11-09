@@ -1,0 +1,89 @@
+{
+  "tool": "save_connection_note",
+  "endpoint": "POST /api/tools/save_connection_note",
+  "request": {
+    "attendeeId": "p_<attendeeId>",
+    "connectionId": "conn-e9b2965802616bd7cd20cf00",
+    "talkedAbout": "Tail sampling in the Collector, and tracing Argo CD syncs end to end so a slow rollout shows up as one trace. They export Argo CD and Rollouts events as span events.",
+    "nextSteps": "Try the k8sattributes processor on our platform clusters, then share a Dash0 trace link with them.",
+    "followUpBy": "2026-11-12T22:23:43.472Z"
+  },
+  "status": 200,
+  "response": {
+    "id": "conn-e9b2965802616bd7cd20cf00",
+    "player": {
+      "id": "pl_aeea8bd684c45f90",
+      "handle": "otelotter",
+      "faceSeed": "otelotter",
+      "level": 3,
+      "levelName": "Node",
+      "xp": 255,
+      "banners": [
+        "welcomer"
+      ],
+      "headline": "OpenTelemetry contributor; tracing all the things.",
+      "workingOn": "OpenTelemetry contributor; tracing all the things.",
+      "topics": [
+        "opentelemetry",
+        "observability",
+        "tracing",
+        "collector"
+      ]
+    },
+    "links": [
+      {
+        "network": "github",
+        "label": "@open-telemetry",
+        "url": "https://github.com/open-telemetry"
+      },
+      {
+        "network": "x",
+        "label": "@opentelemetry",
+        "url": "https://x.com/opentelemetry"
+      },
+      {
+        "network": "mastodon",
+        "label": "@otelotter@hachyderm.io",
+        "url": "https://hachyderm.io/@otelotter"
+      },
+      {
+        "network": "website",
+        "label": "opentelemetry.io",
+        "url": "https://opentelemetry.io/"
+      }
+    ],
+    "source": "meet",
+    "where": {
+      "id": "campfire-learning-lounge",
+      "name": "Learning Lounge"
+    },
+    "metAt": "2026-11-09T21:43:38.515Z",
+    "chatPrompt": "Ask @otelotter which OpenTelemetry Collector processors they would never run without.",
+    "sharedTopics": [
+      "observability"
+    ],
+    "note": {
+      "talkedAbout": "Tail sampling in the Collector, and tracing Argo CD syncs end to end so a slow rollout shows up as one trace. They export Argo CD and Rollouts events as span events.",
+      "nextSteps": "Try the k8sattributes processor on our platform clusters, then share a Dash0 trace link with them.",
+      "followUpBy": "2026-11-12T22:23:43.472Z",
+      "updatedAt": "2026-11-09T22:29:15.283Z"
+    }
+  },
+  "variants": {
+    "not_yours": {
+      "request": {
+        "attendeeId": "att-quietgopher",
+        "connectionId": "conn-e9b2965802616bd7cd20cf00",
+        "talkedAbout": "x",
+        "nextSteps": "y"
+      },
+      "status": 404,
+      "response": {
+        "error": {
+          "code": "unknown_connection",
+          "message": "That connection is not yours or no longer exists."
+        }
+      }
+    }
+  }
+}

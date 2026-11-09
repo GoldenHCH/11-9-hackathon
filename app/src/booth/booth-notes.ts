@@ -3,7 +3,9 @@ import { trace } from '@opentelemetry/api';
 import { appConfig } from '../config';
 import { countOutpostsToday, findAttendee, findLocation } from '../checkin/lookups';
 import { esOptions, getEsClient } from '../es/client';
+import { kindIsOrLegacy } from '../es/doc-kind.helper';
 import { esTimeouts, indexNames } from '../es/es.constants';
+import { docKinds } from '../types/connections.constants';
 import { isConflict } from '../meet/meet.store';
 import { logger } from '../observability/logger';
 import { kubequestMetrics } from '../observability/metrics';
@@ -49,6 +51,7 @@ export function publicBoothNote(note: IStoredBoothNote): IBoothNote {
 function emptyNote(attendeeId: string, location: ILocation, at: string): IStoredBoothNote {
   return {
     id: boothNoteIdFor(attendeeId, location.id),
+    kind: docKinds.BOOTH_NOTE,
     attendeeId,
     locationId: location.id,
     boothName: location.name,
@@ -288,7 +291,7 @@ export async function listBoothNotes(attendeeId: string): Promise<IBoothNote[]> 
     {
       index: indexNames.BOOTH_NOTES,
       size: 200,
-      query: { bool: { filter: [{ term: { attendeeId } }] } },
+      query: { bool: { filter: [{ term: { attendeeId } }, kindIsOrLegacy(docKinds.BOOTH_NOTE)] } },
       sort: [{ updatedAt: { order: 'desc' } }],
       _source: { excludes: ['noteText'] },
     },

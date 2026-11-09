@@ -11,6 +11,23 @@
     (retry)="loadRecap()"
   >
     @if (recap; as summary) {
+      <div class="pdf-actions">
+        @if (pdfUrl) {
+          <a mat-flat-button class="pdf-download" [href]="pdfUrl" download="kubequest-recap.pdf">
+            <div class="btn-content">
+              <mat-icon>picture_as_pdf</mat-icon>
+              <span>Download my recap PDF</span>
+            </div>
+          </a>
+        }
+        <a mat-stroked-button routerLink="/connections">
+          <div class="btn-content">
+            <mat-icon>group</mat-icon>
+            <span>People met</span>
+          </div>
+        </a>
+      </div>
+
       <ul class="totals" aria-label="Your conference in numbers">
         <li class="total app-block">
           <span class="total-value app-pixel">{{ summary.totals.xp }}</span>

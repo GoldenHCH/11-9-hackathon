@@ -1,0 +1,97 @@
+<section class="app-page">
+  <app-screen-toolbar
+    [title]="connection ? '@' + connection.player.handle : 'Connection'"
+    subtitle="Someone you met at KubeCon"
+    [showBack]="true"
+  ></app-screen-toolbar>
+
+  <app-state-wrapper [isLoading]="isLoading" [errorMessage]="errorMessage" [skeletonRows]="4" (retry)="loadConnection()">
+    @if (connection; as person) {
+      <div class="layout">
+        <!-- Who they are -->
+        <section class="hero app-block">
+          <app-pixel-face [seed]="person.player.faceSeed" [size]="72" [label]="'Face of @' + person.player.handle"></app-pixel-face>
+          <div class="hero-text">
+            <h2 class="hero-handle app-pixel">&#64;{{ person.player.handle }}</h2>
+            @if (person.player.realName) {
+              <p class="hero-line">{{ person.player.realName }}</p>
+            }
+            @if (person.player.headline) {
+              <p class="hero-line hero-muted">{{ person.player.headline }}</p>
+            }
+            <p class="hero-line hero-muted">Level {{ person.player.level }} · {{ person.player.levelName }} · {{ person.player.xp }} XP</p>
+          </div>
+        </section>
+
+        <!-- Links -->
+        <section class="card app-block" aria-labelledby="links-title">
+          <h3 id="links-title" class="card-title app-pixel">Links</h3>
+          @if (person.links.length) {
+            <app-link-chips [items]="person.links"></app-link-chips>
+          } @else {
+            <p class="muted">&#64;{{ person.player.handle }} hasn’t added any links yet.</p>
+          }
+        </section>
+
+        <!-- Where you met -->
+        <section class="card app-block" aria-labelledby="met-title">
+          <h3 id="met-title" class="card-title app-pixel">Where you met</h3>
+          <p class="met-line">
+            <mat-icon aria-hidden="true">place</mat-icon>
+            <span>{{ person.where?.name ?? 'In person' }} · {{ person.metAt | date: 'EEE MMM d, h:mm a' }}</span>
+          </p>
+          @if (person.chatPrompt) {
+            <p class="met-line">
+              <mat-icon aria-hidden="true">forum</mat-icon>
+              <span>{{ person.chatPrompt }}</span>
+            </p>
+          }
+          @if (person.sharedTopics.length) {
+            <ul class="topics" aria-label="Shared topics">
+              @for (topic of person.sharedTopics; track topic) {
+                <li class="topic">{{ topic }}</li>
+              }
+            </ul>
+          }
+        </section>
+
+        <!-- Private notes -->
+        <form class="card app-block notes" (ngSubmit)="onSave()" aria-labelledby="notes-title">
+          <h3 id="notes-title" class="card-title app-pixel">My notes</h3>
+          <p class="muted notes-privacy">
+            <mat-icon aria-hidden="true">lock</mat-icon>
+            <span>Only you can see these. They go in your recap PDF.</span>
+          </p>
+          <mat-form-field appearance="outline">
+            <mat-label>What we talked about</mat-label>
+            <textarea matInput name="talkedAbout" [(ngModel)]="talkedAbout" rows="4" [maxlength]="noteMaxChars"></textarea>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Next steps</mat-label>
+            <textarea matInput name="nextSteps" [(ngModel)]="nextSteps" rows="3" [maxlength]="noteMaxChars"></textarea>
+            @if (person.note?.followUpBy) {
+              <mat-hint>Follow up by {{ person.note?.followUpBy | date: 'EEE MMM d' }}</mat-hint>
+            }
+          </mat-form-field>
+
+          @if (saveError) {
+            <app-alert-banner [message]="saveError" (dismissed)="saveError = ''"></app-alert-banner>
+          }
+
+          <div class="notes-actions">
+            <button mat-flat-button type="submit" [disabled]="isSaving">
+              @if (isSaving) {
+                <mat-spinner diameter="20"></mat-spinner>
+              } @else {
+                Save notes
+              }
+            </button>
+            @if (savedAt) {
+              <span class="saved" role="status">Saved {{ savedAt | date: 'h:mm a' }}</span>
+            }
+          </div>
+        </form>
+      </div>
+    }
+  </app-state-wrapper>
+</section>

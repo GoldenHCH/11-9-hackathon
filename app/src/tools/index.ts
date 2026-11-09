@@ -1,3 +1,4 @@
+import { connectionToolRegistry } from '../connections/connection-tools';
 import { ToolName } from '../types/kubequest.types';
 import { bossStateTool } from './boss-state.tool';
 import { checkInTool } from './check-in.tool';
@@ -68,6 +69,7 @@ export const toolRegistry = {
   send_message: sendMessageTool,
   list_messages: listMessagesTool,
   recap: recapTool,
+  ...connectionToolRegistry,
 } satisfies { [TName in ToolName]: IRegisteredTool<TName> };
 
 export function findTool(name: string): IRegisteredTool | undefined {
