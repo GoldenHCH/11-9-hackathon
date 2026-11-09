@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Hero } from './sections/Hero';
 import { Plan } from './sections/Plan';
-import { Access, Day, Finale, Hallway, Levels, Loop, Traceable, Tracks } from './sections/Sections';
+import { Access, Day, Finale, Hallway, Levels, Loop, Sponsors, Traceable, Tracks } from './sections/Sections';
 
 const readPlain = () => {
   try {
@@ -29,13 +29,14 @@ export const App = () => {
       </a>
       <Hero />
       <main id="main">
-        <Day />
         <Loop />
-        <Tracks />
         <Plan />
+        <Day />
         <Hallway />
+        <Tracks />
         <Levels />
         <Traceable />
+        <Sponsors />
         <Access plain={plain} onToggle={() => setPlain((p) => !p)} />
       </main>
       <Finale />

@@ -49,11 +49,10 @@ export const Hero = () => {
           <span className="pixel">KubeQuest</span>
         </a>
         <nav className="topnav" aria-label="Sections">
-          <a href="#day">A day</a>
-          <a href="#loop">How it plays</a>
+          <a href="#loop">How it works</a>
           <a href="#plan">Plan your day</a>
           <a href="#hallway">Hallway</a>
-          <a href="#levels">Levels</a>
+          <a href="#built">Built with</a>
         </nav>
         <a className="signin" href="/onboarding">
           Sign in
@@ -69,15 +68,14 @@ export const Hero = () => {
           KubeCon is a game now.
         </h1>
         <p className="hero__lede">
-          Scan a room to check in. Prove you listened with a three-question quiz. Meet the person working on your exact
-          problem at a campfire. Every step earns XP.
+          KubeQuest turns KubeCon into a game: scan rooms, take quests, meet the right people. Every step earns XP.
         </p>
         <div className="hero__ctas">
           <a className="btn" href="/onboarding">
             Start playing
           </a>
-          <a className="btn btn--ghost" href="#day">
-            See a day played
+          <a className="btn btn--ghost" href="/onboarding">
+            Sign in
           </a>
         </div>
       </div>
