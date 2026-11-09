@@ -16,3 +16,14 @@ export const navigationTabs: readonly INavigationTab[] = [
 export const fullScreenRoutePrefixes = ['/screen/', '/onboarding', '/me/'] as const;
 
 export const pendingScanStorageKey = 'kq.pendingScan';
+
+export const roleViews = [
+  { role: 'attendee', label: 'Attendee', icon: 'person', path: '/', description: 'Play the game: quests, booths, people' },
+  { role: 'exhibitor', label: 'Exhibitor', icon: 'storefront', path: '/exhibitor', description: 'Your booth: visitors, QR, quests' },
+  { role: 'organizer', label: 'Organizer', icon: 'insights', path: '/admin', description: 'The whole event: rooms, meets, booths' },
+] as const;
+
+export const staffRoutes = [
+  { path: '/exhibitor', role: 'exhibitor' },
+  { path: '/admin', role: 'organizer' },
+] as const;

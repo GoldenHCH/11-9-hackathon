@@ -7,6 +7,7 @@ import {
   checkInRejections,
   checkInStatuses,
   declineReasons,
+  exhibitorTypes,
   handshakeQuestionSources,
   handshakeRoles,
   handshakeStatuses,
@@ -39,6 +40,8 @@ export type Material = (typeof materials)[number];
 export type Track = (typeof tracks)[number];
 
 export type LocationKind = (typeof locationKinds)[number];
+
+export type ExhibitorType = (typeof exhibitorTypes)[number];
 
 export type SessionType = (typeof sessionTypes)[number];
 

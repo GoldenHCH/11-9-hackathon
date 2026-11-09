@@ -38,6 +38,10 @@ There are no auth headers. The demo sign-in is `sign_in` with a name and an emai
 
 The `attendeeId` is the player's only credential: anyone who has it can act as that player. Treat it like a password, and never show it to anyone but its owner. Every other player in every response (leaderboard rows, `recommend_people`, `search` player results, `whats_around_me.matchesHere`, a meet's `partner`, a quest's `partnerId`, `get_profile` with `targetId`) carries only a **public id** (`pl_` plus 16 hex characters, for example `pl_592a78e076ad8c1f`), the handle and the face. Tools that point at another player (`get_profile` `targetId`, `propose_meet` `partnerId`) take that public id and resolve it on the server. The player's own public id is `profile.publicId` (from `sign_up`, `get_profile`, `update_settings`); the leaderboard `me` row also uses it, so match rows with `isMe`, not by comparing ids. New attendee ids are random (`p_` plus 16 random base64url characters), never derived from the handle. An unknown or stale public id returns `404 unknown_player`.
 
+### Staff and organizer access keys
+
+Booth staff and organizers have no accounts either. Their views are opened with an **access key** in the link: `?k=<key>`. A key is `k.` plus a base64url HMAC-SHA256 of `k:<scope>` with the server's `QR_SECRET`, where the scope is `admin` or `exhibitor:<outpostId>`. A booth's staff link is `https://kube-quest.cnh.radarhq.io/exhibitor/<outpostId>?k=<key>` and the organizer link is `https://kube-quest.cnh.radarhq.io/admin?k=<key>`. `exhibitor_dashboard` accepts that booth's key or the admin key; `admin_overview` only the admin key. Any other key is `403 bad_key`. The UI reads `k` from the URL, keeps it per booth in `localStorage` (`AccessKeyService`) and sends it as `key`. Keys are never written to span attributes or logs, and fixtures show them as `<staff-key>` and `<admin-key>`. `npm run access-links` (with `QR_SECRET` set to the cluster's value) prints the admin link and every booth's staff link. Treat a key like a password: rotating `QR_SECRET` revokes every key and every printed QR at once.
+
 ## Errors
 
 Every failure has the same envelope:
@@ -51,7 +55,7 @@ Every failure has the same envelope:
 | Status | Codes seen | UI behaviour |
 |---|---|---|
 | 400 | `invalid_input`, `invalid_json`, `self_handshake` | A UI bug, or (`self_handshake`) the player scanned their own code. Show the message. |
-| 403 | `bad_signature`, `expired_token`, `missing_token` (check_in, start_handshake), `no_screen`, `bad_screen_key` (screen token), `screen_only` (`POST /api/tools/screen_token`) | On a scan, show "scan the code on the door" with the message. |
+| 403 | `bad_signature`, `expired_token`, `missing_token` (check_in, start_handshake), `no_screen`, `bad_screen_key` (screen token), `screen_only` (`POST /api/tools/screen_token`), `bad_key` (exhibitor_dashboard, admin_overview) | On a scan, show "scan the code on the door" with the message. For `bad_key`, forget the stored key for that view and show the message with a field to paste a staff link. |
 | 404 | `disabled` (demo_scan_token with `DEMO_SIMULATE_SCANS` off), `unknown_attendee`, `unknown_player`, `attendee_not_found`, `unknown_location`, `unknown_talk`, `talk_not_found`, `boss_not_found`, `unknown_meet`, `unknown_quest`, `unknown_outpost`, `unknown_handshake`, `unknown_tool`, `not_found` | For `unknown_attendee`, clear the stored id and go to signup (not for `unknown_player`, which is about the other player). Otherwise show the message. |
 | 409 | `handle_taken`, `meeting_off`, `no_match`, `meet_closed`, `meet_locked`, `quest_not_open`, `quest_not_active`, `quest_done`, `quest_expired`, `too_many_active`, `code_used`, `already_shook_hands`, `already_answered`, `handshake_closed`, `meet_not_accepted`, `conflict` | An expected game state. Show the message and refetch the screen's data. |
 | 429 | `slow_down` (send_message) | Show the message; let the player try again in a few minutes. |
@@ -82,6 +86,9 @@ There are no websockets. Poll, and stop when the tab is hidden (`document.visibi
 | Demo screen leaderboard | `leaderboard` | 15 s | |
 | Notification bell (top bar) | `list_notifications` | 30 s | the tab is hidden or nobody is signed in |
 | Demo screen QR | `GET /api/screen-token/:locationId` | every 8 minutes (tokens live 10) | |
+| Booth page live counts | `get_exhibitor` | 30 s | |
+| Exhibitor dashboard | `exhibitor_dashboard` | 15 s | a `bad_key` |
+| Organizer view | `admin_overview` | 30 s | a `bad_key` |
 
 On a 5xx, double the interval up to 60 s, then reset after a success.
 
@@ -106,7 +113,11 @@ On a 5xx, double the interval up to 60 s, then reset after a success.
 | Notification bell (every screen with the top bar) | `list_notifications`, `mark_notifications_read` |
 | Boss bar | `boss_state` |
 | Demo screen `/screen/:locationId` | `GET /api/screen-token/:locationId` (QR of `scanUrl`), `boss_state` with `locationId`, `leaderboard` |
-| Organizer | `organizer_stats` |
+| Booth directory `/exhibitors` (attendee, Booths tab) | `list_exhibitors` (search box sends `query`; chips send `type`, `tier`, `zone`, `topic`; pass `attendeeId` for "Visited" and topic-first order) |
+| Booth page `/exhibitors/:outpostId` | `get_exhibitor` (pass `attendeeId`), `make_quest` with `targetKind: "outpost"` ("Make this a quest"), `get_profile` with `targetId` for a player here |
+| Exhibitor home `/exhibitor` | Saved booths from `localStorage`, a field to paste a staff link; no tool until a booth is opened |
+| Exhibitor dashboard `/exhibitor/:outpostId?k=` | `exhibitor_dashboard` (draw `scanUrl` as the booth's QR) |
+| Organizer `/admin?k=` (`/organizer` redirects) | `admin_overview` (it embeds `organizer_stats`) |
 
 ### Demo screen `/screen/:locationId`
 
@@ -130,6 +141,8 @@ Enum values used below:
 - Itinerary item `kind`: `talk`, `meet`, `quest`, `gap`
 - Search `kinds`: `session`, `player`, `outpost`, `room`, `campfire`
 - Track: `ai`, `platform`, `operations`, `data`, `security`, `connectivity`, `inclusion`, `other`
+- Exhibitor `type`: `sponsor`, `project`
+- Exhibitor `tier`, in display order: `Diamond`, `Platinum`, `Gold`, `Silver`, `Start-Up`, `End User`, `Media Partner`, `Exhibitor`, `Project`
 - Handshake `status`: `waiting`, `matched`, `mismatched`, `expired`; `role`: `asker`, `answerer`; `questionSource`: `shared_topic`, `booth_note`, `talk`, `working_on`, `fallback`
 
 ### sign_in
@@ -445,6 +458,46 @@ The banners are `observability-nerd`, `connector`, `welcomer`, `explorer`, `scou
 ```json
 {"players":20,"checkInsToday":31,"xpToday":1820,"xpByType":{"check_in":310,"quiz":335,"outpost":220,"handshake":900,"badge":0,"welcome":50,"boss":5},"meets":{"accepted":2,"proposed":4,"met":0},"quests":{"offered":12,"accepted":2,"declined":1},"busiestRooms":[{"location":{"id":"salt-palace-level-1-150-defg","name":"150 DEFG","kind":"room"},"count":1},"…2 more"],"bosses":[],"generatedAt":"2026-11-09T20:20:16.769Z"}
 ```
+
+### list_exhibitors (booth directory)
+
+`{"query"?, "type"?, "tier"?, "zone"?, "topic"?, "attendeeId"?, "limit"? (1-400, default 60), "offset"? (default 0)}`. Every field is optional; `query` is at most 200 characters, `type` is `sponsor` or `project`, `topic` is a track. `{"attendeeId":"p_…","limit":60}` →
+
+```json
+{"exhibitors":[{"id":"outpost-amazon-web-services","name":"Amazon Web Services","exhibitorType":"sponsor","tier":"Diamond","boothNumber":"115","hall":"B","zone":"Astral Peak","topics":["platform","operations","ai"],"categories":["Artificial Intelligence (AI)","Platform Engineering","Observability"],"askAbout":"How EKS Auto Mode handles node upgrades for you","visitorsNow":6,"visitedByMe":true},"…59 more"],"total":320,"facets":{"types":[{"value":"sponsor","count":234},{"value":"project","count":86}],"tiers":[{"value":"Diamond","count":9},"…8 more"],"zones":[{"value":"Cosmic Canyon","count":122},"…5 more"],"topics":[{"value":"platform","count":138},"…7 more"]},"generatedAt":"2026-11-09T21:42:10.512Z"}
+```
+
+With `query` the order is relevance: one RRF query fuses BM25 on `name`, `askAbout`, `categories` and `description` with Jina semantic search on `searchText`, then the filters apply. With `query`, matches come from the top 96 relevance hits, so `total` is at most 96. Without it the order is booths matching the player's topics first (when `attendeeId` is given), then tier, then booth number. `total` counts every match, so page with `offset`. Each facet counts the matches with every other filter applied, so a chip shows how many booths it would leave. `visitorsNow` is distinct players who scanned that booth in the last 20 minutes. `visitedByMe` is only present when `attendeeId` is sent. An unknown `attendeeId` is `404 unknown_attendee`. Variants: `filtered` (`{"type":"sponsor","topic":"operations"}`, 39 booths) and `empty` (no match: `exhibitors` is `[]`, `total` 0, facets empty). Latency: about 0.2 s browsing (the booth list is cached for a minute), 0.4 to 0.8 s with `query`.
+
+### get_exhibitor (booth page)
+
+`{"outpostId":"outpost-dash0","attendeeId":"p_…"}` (`attendeeId` optional) →
+
+```json
+{"exhibitor":{"id":"outpost-dash0","name":"Dash0","exhibitorType":"sponsor","tier":"Platinum","boothNumber":"134","hall":"B","zone":"Starlight Summit","topics":["operations"],"categories":["Observability","Application Development + Developer Experience"],"askAbout":"OpenTelemetry-native observability and tracing a request end to end","visitorsNow":3,"visitedByMe":true,"building":"Salt Palace","level":"Level 1","description":"Dash0 booth in the Solutions Showcase.","mapPosition":{"x":198.8,"y":517}},"live":{"visitorsNow":3,"visitsToday":41,"uniqueVisitorsToday":37},"talks":[{"id":"kc26-wed-otel-tail-sampling","title":"Tail Sampling Without Tears: …","start":"2026-11-11T11:00:00-07:00","end":"2026-11-11T11:30:00-07:00","where":"Salt Palace · Level 2 · 250 AB","speakers":["…"],"track":"operations"},"…1 more"],"playersHere":[{"id":"pl_…","handle":"otelotter","faceSeed":"otelotter","level":4,"levelName":"Cluster","xp":610,"banners":["welcomer","scout"]},"…2 more"],"nearby":[{"id":"outpost-spectro-cloud","name":"Spectro Cloud","tier":"Platinum","boothNumber":"125","visitorsNow":0,"visitedByMe":false},"…3 more"],"me":{"visited":true,"lastVisitAt":"2026-11-09T20:14:33.208Z","questId":"q_5d0c3a9e71b24f86a1c2e0d4","questStatus":"completed"},"expoMapUrl":"https://events.linuxfoundation.org/wp-content/uploads/2026/11/KCNA26-ExpoHallMap_Digital.pdf","generatedAt":"2026-11-09T21:42:10.512Z"}
+```
+
+`talks` (up to 6, by start time) are sessions with a speaker whose company is this exhibitor. `playersHere` (up to 6) are players who scanned this booth in the last 20 minutes and have meeting on and are not hidden from the leaderboard, as public cards; the caller is left out. It is only filled when `attendeeId` is sent and that player has meeting on, and it skips players either side has blocked; otherwise it is `[]`. `nearby` are the 4 closest other booths by `geo_distance`. `me` is only present with `attendeeId`: whether and when the player last scanned this booth, and their booth quest for it if they have one. `mapPosition` is a point on the expo hall PDF (`expoMapUrl`), in the same coordinates as `web/public/venue/schematic.json`; project kiosks also have `schedule`. Errors: `404 unknown_outpost` for a missing id or one that is not a booth, `404 unknown_attendee`. Variants: `project` (the OpenTelemetry kiosk), `not_visited` (an offered booth quest) and `unknown_outpost`. Latency: about 0.3 to 0.6 s.
+
+### exhibitor_dashboard (booth staff)
+
+`{"outpostId":"outpost-dash0","key":"<staff-key>"}` (the booth's key or the admin key) →
+
+```json
+{"exhibitor":{"id":"outpost-dash0","name":"Dash0","tier":"Platinum","boothNumber":"134","visitorsNow":3,"…":"same fields as get_exhibitor"},"scanUrl":"https://kube-quest.cnh.radarhq.io/r/outpost-dash0?t=<signed-token>","publicPageUrl":"https://kube-quest.cnh.radarhq.io/exhibitors/outpost-dash0","visits":{"now":3,"today":41,"uniqueToday":37,"conference":58,"uniqueConference":51,"firstTimersToday":12},"byHour":[{"hour":"2026-11-09T15:00:00.000Z","visits":2},"…7 more"],"visitorTopics":[{"value":"observability","count":14},"…9 more"],"visitorLevels":[{"value":"Deployment","count":19},"…4 more"],"recentVisitors":[{"player":{"id":"pl_…","handle":"otelotter","faceSeed":"otelotter","level":4,"levelName":"Cluster","xp":610,"banners":["welcomer","scout"]},"at":"2026-11-09T21:39:02.000Z","firstTimer":false},"…11 more"],"hereNow":[{"id":"pl_…","handle":"otelotter"},"…2 more"],"quests":{"offered":14,"accepted":9,"completed":6,"not_now":3,"declined":2},"rank":{"position":4,"of":61},"generatedAt":"2026-11-09T21:42:10.512Z"}
+```
+
+Draw `scanUrl` as the booth's check-in QR (the same printed token as the table QR, so a photo of it works all conference). A visit is a booth scan (`outpost` XP event, plus any `check_in` there). `now` is distinct players in the last 20 minutes; `today` starts at midnight in `conferenceTimeZone`; `byHour` buckets today's visits per hour (UTC `hour`, show it in `conferenceTimeZone`). `visitorTopics` and `visitorLevels` are counts over everyone who has visited (top 10). `recentVisitors` (newest first, one per player, up to 20) and `hereNow` only list players with meeting on who are not hidden from the leaderboard; everyone else is in the counts only. `quests` counts booth quests for this booth by status. `rank` is this booth's place by unique visitors today among booths with a visit today, or `null` before its first visit. The key is checked first: a wrong key is `403 bad_key` (`"That link doesn't open this booth's dashboard. Ask the organizers for your booth's staff link."`) even for a missing booth; then `404 unknown_outpost`. Variants: `quiet` (no visits: zeros, empty lists, `rank: null`), `bad_key` and `unknown_outpost`. Latency: about 0.4 to 0.8 s.
+
+### admin_overview (organizer)
+
+`{"key":"<admin-key>"}`, or with `"since":"2026-11-09T00:00:00Z"` →
+
+```json
+{"stats":{"players":20,"checkInsToday":31,"xpToday":1820,"…":"the organizer_stats output"},"exhibitors":{"total":320,"sponsors":234,"projects":86,"visitedToday":75,"visitsToday":760,"uniqueVisitorsToday":212},"byTier":[{"value":"Diamond","exhibitors":9,"visits":185},"…8 more"],"byZone":[{"value":"Cosmic Canyon","exhibitors":122,"visits":232},"…5 more"],"table":[{"exhibitor":{"id":"outpost-amazon-web-services","name":"Amazon Web Services","tier":"Diamond","boothNumber":"115","visitorsNow":6,"…":"an exhibitor card"},"visitsToday":63,"uniqueToday":55,"questsCompleted":9,"staffUrl":"https://kube-quest.cnh.radarhq.io/exhibitor/outpost-amazon-web-services?k=<staff-key>","scanUrl":"https://kube-quest.cnh.radarhq.io/r/outpost-amazon-web-services?t=<signed-token>"},"…318 more"],"generatedAt":"2026-11-09T21:42:10.512Z"}
+```
+
+`stats` is exactly `organizer_stats` with the same `since`. Booth visits are counted since `since`, or since midnight in `conferenceTimeZone`. `byTier` is in tier order; `byZone` is busiest first. `table` has every booth, busiest first (then tier order, then booth number); "quiet booths" are the rows with `visitsToday` 0. `questsCompleted` counts completed booth quests at that booth over the conference. `staffUrl` carries that booth's real staff key, so this view is for organizers only. A wrong key is `403 bad_key` (`"That link doesn't open the organizer view."`). Variant: `bad_key`. The full fixture is 250 KB; poll it every 30 s at most. Latency: about 0.6 to 1.2 s (`organizer_stats` plus three aggregations).
 
 ### Handshake (phone to phone)
 

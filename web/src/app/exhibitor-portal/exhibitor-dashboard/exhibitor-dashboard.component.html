@@ -1,0 +1,139 @@
+<section class="app-page dash">
+  <app-screen-toolbar
+    [title]="dashboard ? dashboard.exhibitor.name : 'Booth dashboard'"
+    [subtitle]="dashboard ? headerDetails : 'For booth staff'"
+  ></app-screen-toolbar>
+
+  <p class="app-visually-hidden" aria-live="polite">{{ liveMessage }}</p>
+
+  @if (showGate) {
+    <app-access-gate
+      heading="This dashboard needs your staff link"
+      message="Each booth has a private staff link from the organizers. Paste it here and this device remembers it."
+      icon="key"
+      fieldLabel="Staff link"
+      hint="It ends in /exhibitor/your-booth?k=…"
+      [errorMessage]="gateMessage"
+      (errorDismissed)="gateMessage = ''"
+      (linkSubmitted)="openLink($event)"
+    ></app-access-gate>
+  } @else {
+    <app-state-wrapper
+      [isLoading]="isLoading && !dashboard"
+      [errorMessage]="dashboard ? '' : errorMessage"
+      [skeletonRows]="6"
+      (retry)="retry()"
+    >
+      @if (dashboard; as data) {
+        @if (errorMessage) {
+          <app-alert-banner
+            [message]="errorMessage + ' Showing the last numbers we had.'"
+            actionLabel="Try again"
+            (action)="retry()"
+            (dismissed)="errorMessage = ''"
+          ></app-alert-banner>
+        }
+
+        <div class="dash-updated">
+          <span>{{ updatedText }} · refreshes every 15 seconds</span>
+          <a class="dash-home-link" routerLink="/exhibitor">My booths</a>
+        </div>
+
+        <div class="dash-top">
+          <section class="qr-card app-block app-qr-print-target" aria-labelledby="qr-heading">
+            <h2 id="qr-heading" class="dash-heading app-pixel">Check-in QR</h2>
+            <app-qr-code
+              [value]="data.scanUrl"
+              [alt]="'Check-in QR code for ' + boothLabel"
+              [size]="280"
+            ></app-qr-code>
+            <p class="qr-label app-pixel">{{ boothLabel }}</p>
+            <p class="qr-instructions">Scan to check in at this booth and earn XP.</p>
+            <div class="qr-actions app-qr-no-print">
+              <button mat-flat-button type="button" (click)="printQr()">
+                <div class="btn-content">
+                  <mat-icon>print</mat-icon>
+                  <span>Print QR</span>
+                </div>
+              </button>
+              <button mat-stroked-button type="button" (click)="copyLink()">
+                <div class="btn-content">
+                  <mat-icon>content_copy</mat-icon>
+                  <span>Copy link</span>
+                </div>
+              </button>
+              <a mat-stroked-button [routerLink]="['/exhibitors', data.exhibitor.id]">
+                <div class="btn-content">
+                  <mat-icon>open_in_new</mat-icon>
+                  <span>Public booth page</span>
+                </div>
+              </a>
+            </div>
+            <p class="qr-url app-qr-no-print">{{ data.scanUrl }}</p>
+          </section>
+
+          <section class="dash-tiles" aria-label="Booth visits" aria-live="polite">
+            <app-stat-tile label="Here now" icon="sensors" [value]="data.visits.now" detail="Last 20 minutes"></app-stat-tile>
+            <app-stat-tile label="Visits today" icon="login" [value]="data.visits.today"></app-stat-tile>
+            <app-stat-tile label="Unique today" icon="person" [value]="data.visits.uniqueToday"></app-stat-tile>
+            <app-stat-tile label="First-timers today" icon="celebration" [value]="data.visits.firstTimersToday"></app-stat-tile>
+            <app-stat-tile
+              label="Conference total"
+              icon="event"
+              [value]="data.visits.conference"
+              [detail]="data.visits.uniqueConference + ' unique'"
+            ></app-stat-tile>
+            <app-stat-tile label="Rank" icon="emoji_events" [value]="rankValue" [detail]="rankDetail"></app-stat-tile>
+          </section>
+        </div>
+
+        <section class="dash-panel app-block" aria-labelledby="hours-heading">
+          <h2 id="hours-heading" class="dash-heading app-pixel">Visits by hour</h2>
+          <app-hour-chart [hours]="data.byHour"></app-hour-chart>
+        </section>
+
+        <div class="dash-grid">
+          <section class="dash-panel app-block" aria-labelledby="topics-heading">
+            <h2 id="topics-heading" class="dash-heading app-pixel">Visitor topics</h2>
+            <app-bar-list [items]="topicItems" label="Visitor topics" unit="visitors" emptyMessage="No topics yet."></app-bar-list>
+          </section>
+          <section class="dash-panel app-block" aria-labelledby="levels-heading">
+            <h2 id="levels-heading" class="dash-heading app-pixel">Visitor levels</h2>
+            <app-bar-list [items]="levelItems" label="Visitor levels" unit="visitors" emptyMessage="No visitors yet."></app-bar-list>
+          </section>
+          <section class="dash-panel app-block" aria-labelledby="quests-heading">
+            <h2 id="quests-heading" class="dash-heading app-pixel">Booth quests</h2>
+            <app-bar-list [items]="questItems" label="Booth quest funnel" unit="players" tone="accent"></app-bar-list>
+          </section>
+        </div>
+
+        <div class="dash-grid dash-grid--two">
+          <section class="dash-panel app-block" aria-labelledby="here-heading">
+            <h2 id="here-heading" class="dash-heading app-pixel">Here now</h2>
+            <app-visitor-list
+              [visitors]="hereNowRows"
+              label="Players here now"
+              emptyMessage="Nobody has checked in during the last 20 minutes."
+            ></app-visitor-list>
+          </section>
+          <section class="dash-panel app-block" aria-labelledby="recent-heading">
+            <h2 id="recent-heading" class="dash-heading app-pixel">Recent visitors</h2>
+            <app-visitor-list
+              [visitors]="recentRows"
+              label="Recent visitors"
+              emptyMessage="No visitors yet. Put the QR where people can see it."
+            ></app-visitor-list>
+          </section>
+        </div>
+
+        <p class="dash-privacy">
+          <mat-icon class="dash-privacy-icon" aria-hidden="true">lock</mat-icon>
+          <span>
+            Staff see public handles, levels and topic totals only. Players’ names, emails and contact details are never
+            shared with booths.
+          </span>
+        </p>
+      }
+    </app-state-wrapper>
+  }
+</section>

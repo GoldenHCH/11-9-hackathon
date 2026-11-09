@@ -1,0 +1,48 @@
+:host {
+  display: block;
+}
+
+.gate {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 600px;
+}
+
+.gate-heading-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gate-icon {
+  flex-shrink: 0;
+  color: var(--app-theme--accent);
+}
+
+.gate-heading {
+  margin: 0;
+  font-size: 18px;
+}
+
+.gate-message {
+  margin: 0;
+  color: var(--app-theme--ink-muted);
+}
+
+.gate-form {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.gate-field {
+  flex: 1 1 260px;
+  min-width: 0;
+}
+
+.gate-submit {
+  margin-top: 8px;
+}

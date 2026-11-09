@@ -1,0 +1,223 @@
+<section class="app-page booth-page">
+  <app-screen-toolbar [title]="exhibitor?.name ?? 'Booth'" [subtitle]="typeLabel" [showBack]="true"></app-screen-toolbar>
+
+  @if (staleLinkMessage) {
+    <app-alert-banner [message]="staleLinkMessage" (dismissed)="staleLinkMessage = ''"></app-alert-banner>
+  }
+
+  @if (notFound) {
+    <div class="not-found app-block">
+      <mat-icon aria-hidden="true">storefront</mat-icon>
+      <p class="not-found-text">We couldn’t find that booth. It may have moved or the link is old.</p>
+      <a mat-flat-button routerLink="/exhibitors">
+        <span class="btn-content">
+          <mat-icon aria-hidden="true">arrow_back</mat-icon>
+          <span>All booths</span>
+        </span>
+      </a>
+    </div>
+  } @else {
+    <app-state-wrapper [isLoading]="isLoading" [errorMessage]="errorMessage" [skeletonRows]="5" (retry)="reload()">
+      @if (page && exhibitor) {
+        <!-- Header -->
+        <div class="hero app-block">
+          <div class="hero-badges">
+            <span class="tier-badge"><span class="app-visually-hidden">Tier: </span>{{ exhibitor.tier }}</span>
+          </div>
+          <p class="hero-booth app-pixel">{{ boothLabel }}</p>
+          @if (locationLine) {
+            <p class="hero-where">
+              <mat-icon aria-hidden="true">place</mat-icon>
+              <span>{{ locationLine }}</span>
+            </p>
+          }
+          @if (exhibitor.schedule) {
+            <p class="hero-where">
+              <mat-icon aria-hidden="true">schedule</mat-icon>
+              <span>Kiosk hours: {{ exhibitor.schedule }}</span>
+            </p>
+          }
+          @if (exhibitor.description) {
+            <p class="hero-description">{{ exhibitor.description }}</p>
+          }
+          @if (exhibitor.topics.length > 0 || exhibitor.categories.length > 0) {
+            <div class="chips">
+              <span class="app-visually-hidden">Topics and categories: </span>
+              @for (topic of exhibitor.topics; track topic) {
+                <span class="chip chip--topic">{{ topicLabel(topic) }}</span>
+              }
+              @for (category of exhibitor.categories; track category) {
+                <span class="chip">{{ category }}</span>
+              }
+            </div>
+          }
+        </div>
+
+        @if (exhibitor.askAbout) {
+          <div class="ask app-block">
+            <h2 class="section-title app-pixel">Ask them about</h2>
+            <p class="ask-text">{{ exhibitor.askAbout }}</p>
+          </div>
+        }
+
+        <!-- Live -->
+        <div class="section">
+          <h2 class="section-title app-pixel">Right now</h2>
+          <dl class="stats" aria-live="polite">
+            <div class="stat app-block">
+              <dt class="stat-label">Here now</dt>
+              <dd class="stat-value app-pixel">{{ page.live.visitorsNow }}</dd>
+            </div>
+            <div class="stat app-block">
+              <dt class="stat-label">Visits today</dt>
+              <dd class="stat-value app-pixel">{{ page.live.visitsToday }}</dd>
+            </div>
+            <div class="stat app-block">
+              <dt class="stat-label">Players today</dt>
+              <dd class="stat-value app-pixel">{{ page.live.uniqueVisitorsToday }}</dd>
+            </div>
+          </dl>
+          <p class="muted">Updates every 30 seconds.</p>
+        </div>
+
+        <!-- Your visit -->
+        <div class="section visit app-block">
+          <h2 class="section-title app-pixel">Your visit</h2>
+          @if (me?.visited) {
+            <p class="visit-line visit-line--done">
+              <mat-icon aria-hidden="true">check_circle</mat-icon>
+              <span>Visited{{ visitTime ? ' at ' + visitTime : '' }}</span>
+            </p>
+          } @else {
+            <p class="visit-line">
+              <mat-icon aria-hidden="true">qr_code_2</mat-icon>
+              <span>Scan the QR block on the booth table to check in: +10 XP</span>
+            </p>
+          }
+          @if (!attendeeId) {
+            <p class="muted"><a routerLink="/signup">Join KubeQuest</a> to track your visits and make quests.</p>
+          }
+
+          @if (madeQuest) {
+            <p class="visit-line visit-line--done" role="status">
+              <mat-icon aria-hidden="true">flag</mat-icon>
+              <span>Quest added: {{ madeQuest.title }}</span>
+            </p>
+            @if (madeQuest.nextStep) {
+              <p class="muted">{{ madeQuest.nextStep }}</p>
+            }
+          } @else if (me?.questId) {
+            <p class="visit-line">
+              <mat-icon aria-hidden="true">flag</mat-icon>
+              <span>
+                Your quest here: {{ questStatusText }}.
+                <a routerLink="/quests">Open quests</a>
+              </span>
+            </p>
+          }
+
+          @if (questError) {
+            <app-alert-banner [message]="questError" (dismissed)="questError = ''"></app-alert-banner>
+          }
+
+          @if (canMakeQuest) {
+            <button mat-flat-button type="button" [disabled]="isMakingQuest" (click)="makeQuest()">
+              @if (isMakingQuest) {
+                <mat-spinner diameter="20" aria-label="Making the quest"></mat-spinner>
+              } @else {
+                <span class="btn-content">
+                  <mat-icon aria-hidden="true">flag</mat-icon>
+                  <span>Make this a quest</span>
+                </span>
+              }
+            </button>
+          }
+        </div>
+
+        <!-- Talks -->
+        <div class="section">
+          <h2 class="section-title app-pixel">Talks from {{ exhibitor.name }}</h2>
+          @if (page.talks.length > 0) {
+            <ul class="list">
+              @for (talk of page.talks; track talk.id) {
+                <li class="talk app-card">
+                  <h3 class="talk-title">{{ talk.title }}</h3>
+                  <p class="talk-meta">
+                    <mat-icon aria-hidden="true">schedule</mat-icon>
+                    <span>{{ talkTime(talk.start) }} · {{ talk.where }}</span>
+                  </p>
+                  @if (talk.speakers.length > 0) {
+                    <p class="talk-meta">
+                      <mat-icon aria-hidden="true">record_voice_over</mat-icon>
+                      <span>{{ talk.speakers.join(', ') }}</span>
+                    </p>
+                  }
+                </li>
+              }
+            </ul>
+          } @else {
+            <p class="empty-line">
+              <mat-icon aria-hidden="true">event_busy</mat-icon>
+              <span>No talks from {{ exhibitor.name }} on the schedule.</span>
+            </p>
+          }
+        </div>
+
+        <!-- Here now -->
+        <div class="section">
+          <h2 class="section-title app-pixel">Here now</h2>
+          <div aria-live="polite">
+            @if (page.playersHere.length > 0) {
+              <ul class="players">
+                @for (player of page.playersHere; track player.id) {
+                  <li class="player app-card">
+                    <app-pixel-face [seed]="player.faceSeed" [label]="'@' + player.handle" [size]="40"></app-pixel-face>
+                    <span class="player-text">
+                      <span class="player-handle">&#64;{{ player.handle }}</span>
+                      <span class="muted">Level {{ player.level }} · {{ player.levelName }}</span>
+                    </span>
+                  </li>
+                }
+              </ul>
+            } @else {
+              <p class="empty-line">
+                <mat-icon aria-hidden="true">person_off</mat-icon>
+                <span>Nobody checked in here in the last 20 minutes.</span>
+              </p>
+            }
+          </div>
+        </div>
+
+        <!-- Where -->
+        <div class="section">
+          <h2 class="section-title app-pixel">Where to find it</h2>
+          @if (miniMap) {
+            <div class="map-frame app-block">
+              <app-expo-mini-map [map]="miniMap" [ariaLabel]="mapAriaLabel"></app-expo-mini-map>
+            </div>
+          }
+          <p class="map-links">
+            <a [href]="page.expoMapUrl" target="_blank" rel="noopener">
+              Official expo map (PDF)<span class="app-visually-hidden"> (opens in a new tab)</span>
+            </a>
+            <a routerLink="/map">Venue map</a>
+          </p>
+        </div>
+
+        <!-- Nearby -->
+        @if (page.nearby.length > 0) {
+          <div class="section">
+            <h2 class="section-title app-pixel">Nearby booths</h2>
+            <ul class="nearby">
+              @for (neighbor of page.nearby; track neighbor.id) {
+                <li class="nearby-item">
+                  <app-booth-card [exhibitor]="neighbor" [compact]="true"></app-booth-card>
+                </li>
+              }
+            </ul>
+          </div>
+        }
+      }
+    </app-state-wrapper>
+  }
+</section>

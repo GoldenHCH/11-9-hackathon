@@ -27,6 +27,10 @@ export const materialCatalog = {
 
 export const locationKinds = ['room', 'outpost', 'theater', 'campfire', 'boss-room'] as const;
 
+export const exhibitorTypes = ['sponsor', 'project'] as const;
+
+export const exhibitorTierOrder = ['Diamond', 'Platinum', 'Gold', 'Silver', 'Start-Up', 'End User', 'Media Partner', 'Exhibitor', 'Project'] as const;
+
 export const sessionTypes = ['keynote', 'breakout', 'lightning', 'tutorial', 'panel', 'other'] as const;
 
 export const xpEventTypes = ['check_in', 'quiz', 'handshake', 'welcome', 'outpost', 'boss', 'badge', 'photo'] as const;
@@ -189,6 +193,10 @@ export const toolNames = [
   'inventory',
   'world',
   'organizer_stats',
+  'list_exhibitors',
+  'get_exhibitor',
+  'exhibitor_dashboard',
+  'admin_overview',
   'handshake_code',
   'start_handshake',
   'handshake_state',

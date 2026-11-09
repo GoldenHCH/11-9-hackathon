@@ -20,6 +20,7 @@
     "lint": "eslint .",
     "index-all": "tsx scripts/index-all.ts",
     "fixtures": "tsx scripts/build-fixtures.ts",
+    "access-links": "tsx scripts/print-access-links.ts",
     "seed:demo": "tsx scripts/seed-demo-login.ts",
     "seed:photos": "tsx scripts/seed-booth-photos.ts",
     "reserve:handles": "tsx scripts/reserve-handles.ts",

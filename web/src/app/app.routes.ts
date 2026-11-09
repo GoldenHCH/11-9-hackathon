@@ -124,11 +124,36 @@ export const routes: Routes = [
     loadComponent: () => import('./quiz/quiz.component').then((module) => module.QuizComponent),
   },
   {
-    path: 'organizer',
-    title: 'Organizer · KubeQuest',
-    loadComponent: placeholder,
-    data: { title: 'Organizer', icon: 'insights', message: 'Room occupancy and the meet funnel.' },
+    path: 'exhibitors',
+    title: 'Booths · KubeQuest',
+    loadComponent: () =>
+      import('./exhibitors/exhibitor-directory/exhibitor-directory.component').then((module) => module.ExhibitorDirectoryComponent),
   },
+  {
+    path: 'exhibitors/:outpostId',
+    title: 'Booth · KubeQuest',
+    loadComponent: () => import('./exhibitors/exhibitor-page/exhibitor-page.component').then((module) => module.ExhibitorPageComponent),
+  },
+  {
+    path: 'exhibitor',
+    title: 'Exhibitor · KubeQuest',
+    loadComponent: () =>
+      import('./exhibitor-portal/exhibitor-home/exhibitor-home.component').then((module) => module.ExhibitorHomeComponent),
+  },
+  {
+    path: 'exhibitor/:outpostId',
+    title: 'Booth dashboard · KubeQuest',
+    loadComponent: () =>
+      import('./exhibitor-portal/exhibitor-dashboard/exhibitor-dashboard.component').then(
+        (module) => module.ExhibitorDashboardComponent,
+      ),
+  },
+  {
+    path: 'admin',
+    title: 'Organizer · KubeQuest',
+    loadComponent: () => import('./admin/admin-dashboard/admin-dashboard.component').then((module) => module.AdminDashboardComponent),
+  },
+  { path: 'organizer', pathMatch: 'full', redirectTo: 'admin' },
   {
     path: 'screen/:locationId',
     title: 'KubeQuest',
