@@ -58,14 +58,14 @@ One PR per section, in this order. Screenshots at 375 px in every PR body.
 ### 6. Board, demo screen, organizer (25 min) — `web/src/app/board/`, `web/src/app/screen/`, `web/src/app/organizer/`
 
 - [ ] Board: top 20 by XP with rank, handle, XP, badge icons with `aria-label`s; your own row pinned at the bottom if outside the top 20. Each row expands (side panel) to the attendee's latest XP events; each event has **Open trace** linking to Dash0 with its `trace_id` (URL shape from `docs/ops.md`)
-- [ ] Demo screen `/screen/:locationId`: fills the projector. A large QR (the `qrcode` package, client-side) of `https://kubequest.cnh.radarhq.io/r/<locationId>?t=<token>` where the token comes from `GET /api/screen-token/:locationId`, refreshed every 8 minutes; under it, the live top 10 polled every 5 s and a ticker of the last 5 XP events ("@quietgopher checked in to the kickoff · +10"). No nav, dark background, high contrast
+- [ ] Demo screen `/screen/:locationId`: fills the projector. A large QR (the `qrcode` package, client-side) of `https://kube-quest.cnh.radarhq.io/r/<locationId>?t=<token>` where the token comes from `GET /api/screen-token/:locationId`, refreshed every 8 minutes; under it, the live top 10 polled every 5 s and a ticker of the last 5 XP events ("@quietgopher checked in to the kickoff · +10"). No nav, dark background, high contrast
 - [ ] Organizer `/organizer`: occupancy per room as horizontal bars (count of attendees whose `lastLocationId` is that room, seen in the last 2 hours) and an intro funnel (proposed → accepted → met counts). Both from one `GET /api/organizer` aggregation endpoint; if Phase 02 hasn't shipped it, render from a fixture and leave the TODO out of the code (track it in Phase 05)
 - [ ] PR: `feat(web): leaderboard with trace links, demo screen, organizer view`
 
 ### 7. Wire to the real tools (15 min, at 15:30 or when Phase 02 is merged)
 
 - [ ] `environment.useFixtures = false` in the production build; keep `true` for `npm run dev` unless `.env` sets `USE_FIXTURES=false`
-- [ ] Walk the loop on two phones against `https://kubequest.cnh.radarhq.io` with the two demo personas; fix shape mismatches in the UI, not the api
+- [ ] Walk the loop on two phones against `https://kube-quest.cnh.radarhq.io` with the two demo personas; fix shape mismatches in the UI, not the api
 - [ ] Dash0 RUM: initialize the browser SDK in `main.ts` with the token from an `/api/config` endpoint (never baked into the bundle); confirm a page view and the `check_in` fetch appear in Dash0 linked to the server trace
 - [ ] PR: `feat(web): real tools and RUM`
 
