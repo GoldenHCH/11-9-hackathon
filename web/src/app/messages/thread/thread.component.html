@@ -9,7 +9,7 @@
         <h1 class="thread-handle app-pixel">&#64;{{ current.partner.handle }}</h1>
         <p class="thread-level">{{ current.partner.levelName }} · {{ current.meetStatus === 'met' ? 'Met' : 'Meet planned' }}</p>
       </div>
-      <a mat-icon-button class="thread-profile" [routerLink]="['/intro', current.meetId]" [attr.aria-label]="'View your meet with @' + current.partner.handle">
+      <a mat-icon-button class="thread-profile" [routerLink]="current.connectionId ? ['/connections', current.connectionId] : ['/intro', current.meetId]" [attr.aria-label]="'View @' + current.partner.handle + (current.connectionId ? ' in your connections' : ' and your meet')">
         <mat-icon>badge</mat-icon>
       </a>
     } @else {

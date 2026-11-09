@@ -1,3 +1,5 @@
+import { connectionToolNames } from './connections.constants';
+
 export const materials = ['circuit', 'stone', 'glass', 'crate', 'iron', 'copper', 'lantern', 'wood', 'gold'] as const;
 
 export const tracks = ['ai', 'platform', 'operations', 'data', 'security', 'connectivity', 'inclusion', 'other'] as const;
@@ -180,6 +182,7 @@ export const toolNames = [
   'search',
   'recommend_talks',
   'recommend_people',
+  'ask_guide',
   'quest_board',
   'respond_quest',
   'make_quest',
@@ -219,6 +222,7 @@ export const toolNames = [
   'get_itinerary',
   'add_to_itinerary',
   'remove_from_itinerary',
+  ...connectionToolNames,
 ] as const;
 
 export const notificationTypes = ['new_quest', 'new_match', 'meet_offer', 'meet_accepted', 'banner'] as const;

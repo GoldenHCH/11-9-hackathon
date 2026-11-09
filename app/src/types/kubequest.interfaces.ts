@@ -1,3 +1,4 @@
+import type { IConnectionToolContracts, IProfileLinks } from './connections.interfaces';
 import {
   AiProvider,
   BannerId,
@@ -141,6 +142,7 @@ export interface IAttendee {
   banners: BannerId[];
   blockedIds: string[];
   createdAt: IsoDateString;
+  links?: IProfileLinks;
   itinerary?: IItineraryEntry[];
 }
 
@@ -468,6 +470,15 @@ export interface ITalkMatch {
   reason: string;
   startsInMinutes: number;
   walkMinutes?: number;
+}
+
+export interface IGuideAnswer {
+  provider: AiProvider;
+  pending: boolean;
+  interest: string;
+  picks: ITalkMatch[];
+  toolCalls: string[];
+  droppedPicks: number;
 }
 
 export interface IPersonMatch {
@@ -1286,7 +1297,7 @@ export interface IItineraryChangeResult {
   maxItems: number;
 }
 
-export interface IToolContracts {
+export interface IToolContracts extends IConnectionToolContracts {
   sign_in: { input: ISignInInput; output: ISignInResult };
   sign_up: { input: ISignUpInput; output: ISignUpResult };
   get_profile: { input: IAttendeeInput; output: IProfile };
@@ -1299,6 +1310,7 @@ export interface IToolContracts {
   search: { input: ISearchInput; output: ISearchResponse };
   recommend_talks: { input: IRecommendTalksInput; output: ITalkMatch[] };
   recommend_people: { input: IRecommendPeopleInput; output: IPersonMatch[] };
+  ask_guide: { input: IAttendeeInput; output: IGuideAnswer };
   quest_board: { input: IAttendeeInput; output: IQuestBoard };
   respond_quest: { input: IRespondQuestInput; output: IRespondQuestResult };
   make_quest: { input: IMakeQuestInput; output: IQuest };

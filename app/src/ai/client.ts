@@ -117,7 +117,7 @@ export function sanitizeForPrompt(value: string | undefined, maxChars: number = 
   return (value ?? '').replace(/[<>]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, maxChars);
 }
 
-async function callInference(inferenceId: string, prompt: string): Promise<string> {
+async function callInference(inferenceId: string, prompt: string, signal: AbortSignal): Promise<string> {
   const response = await getEsClient().inference.completion(
     {
       inference_id: inferenceId,
@@ -126,7 +126,7 @@ async function callInference(inferenceId: string, prompt: string): Promise<strin
 ${prompt}`,
       timeout: `${aiSettings.TIMEOUT_MS / 1000}s`,
     },
-    { requestTimeout: aiSettings.TIMEOUT_MS, maxRetries: 0 },
+    { requestTimeout: aiSettings.TIMEOUT_MS, maxRetries: 0, signal },
   );
 
   return response.completion.map((choice) => choice.result).join('');
@@ -136,16 +136,22 @@ function inferenceAvailable(inferenceId: string): boolean {
   return isElasticConfigured() && Date.now() >= (inferenceBlockedUntil.get(inferenceId) ?? 0);
 }
 
-async function askAgent(prompt: string, span: Span): Promise<IModelAnswer | undefined> {
-  if (!isAgentConfigured() || Date.now() < agentBlockedUntil) {
+async function askAgent(prompt: string, span: Span, signal: AbortSignal): Promise<IModelAnswer | undefined> {
+  if (!isAgentConfigured() || Date.now() < agentBlockedUntil || signal.aborted) {
     return undefined;
   }
 
   try {
     return { text: await converseWithAgent(`${systemPreamble}
 
-${prompt}`), provider: 'agent_builder' };
+${prompt}`, signal), provider: 'agent_builder' };
   } catch (error) {
+    if (signal.aborted) {
+      span.addEvent('ai.agent_aborted');
+
+      return undefined;
+    }
+
     const status = errorStatus(error);
     span.setAttribute('kubequest.ai.agent_error_status', status ?? 0);
 
@@ -159,19 +165,29 @@ ${prompt}`), provider: 'agent_builder' };
   }
 }
 
-async function askInference(prompt: string, span: Span): Promise<IModelAnswer | undefined> {
+async function askInference(prompt: string, span: Span, signal: AbortSignal): Promise<IModelAnswer | undefined> {
   for (const inferenceId of aiSettings.COMPLETION_INFERENCE_IDS) {
+    if (signal.aborted) {
+      return undefined;
+    }
+
     if (!inferenceAvailable(inferenceId)) {
       span.addEvent('ai.inference_skipped', { inference_id: inferenceId });
       continue;
     }
 
     try {
-      const text = await callInference(inferenceId, prompt);
+      const text = await callInference(inferenceId, prompt, signal);
       span.setAttribute('kubequest.ai.inference_id', inferenceId);
 
       return { text, provider: 'inference' };
     } catch (error) {
+      if (signal.aborted) {
+        span.addEvent('ai.inference_aborted', { inference_id: inferenceId });
+
+        return undefined;
+      }
+
       const status = errorStatus(error);
       const reason = errorReason(error);
       span.addEvent('ai.inference_error', { inference_id: inferenceId, status: status ?? 0, reason });
@@ -192,18 +208,33 @@ async function askInference(prompt: string, span: Span): Promise<IModelAnswer | 
   return undefined;
 }
 
-async function askModel(prompt: string, span: Span): Promise<IModelAnswer | undefined> {
-  return (await askAgent(prompt, span)) ?? (await askInference(prompt, span));
+async function askModel(prompt: string, span: Span, signal: AbortSignal): Promise<IModelAnswer | undefined> {
+  return (await askAgent(prompt, span, signal)) ?? (await askInference(prompt, span, signal));
 }
 
-function waitFor(ms: number): Promise<void> {
-  return new Promise((resolve) => setTimeout(resolve, ms));
+function budgetExpired(signal: AbortSignal): Promise<undefined> {
+  return new Promise((resolve) => {
+    if (signal.aborted) {
+      resolve(undefined);
+
+      return;
+    }
+
+    signal.addEventListener('abort', () => resolve(undefined), { once: true });
+  });
 }
 
-async function askUntilValid<T>(purpose: AiPurpose, key: string, prompt: string, validate: IJsonValidator<T>, span: Span): Promise<IAiResult<T> | undefined> {
-  for (let attempt = 1; attempt <= aiSettings.MAX_ATTEMPTS; attempt += 1) {
+async function askUntilValid<T>(
+  purpose: AiPurpose,
+  key: string,
+  prompt: string,
+  validate: IJsonValidator<T>,
+  span: Span,
+  signal: AbortSignal,
+): Promise<IAiResult<T> | undefined> {
+  for (let attempt = 1; attempt <= aiSettings.MAX_ATTEMPTS && !signal.aborted; attempt += 1) {
     span.setAttribute('kubequest.ai.attempts', attempt);
-    const answer = await askModel(prompt, span);
+    const answer = await askModel(prompt, span, signal);
 
     if (!answer) {
       return undefined;
@@ -241,16 +272,14 @@ export async function generateJson<T>(purpose: AiPurpose, prompt: string, valida
           return { value: cached.value, provider: cached.provider, purpose, cacheHit: true };
         }
 
-        const answered = await Promise.race([
-          askUntilValid(purpose, key, prompt, validate, span),
-          waitFor(aiSettings.BUDGET_MS[purpose]).then(() => undefined),
-        ]);
+        const budget = AbortSignal.timeout(aiSettings.BUDGET_MS[purpose]);
+        const answered = await Promise.race([askUntilValid(purpose, key, prompt, validate, span, budget), budgetExpired(budget)]);
 
         if (answered) {
           return answered;
         }
 
-        span.setAttribute('kubequest.ai.budget_ms', aiSettings.BUDGET_MS[purpose]);
+        span.setAttributes({ 'kubequest.ai.budget_ms': aiSettings.BUDGET_MS[purpose], 'kubequest.ai.aborted': budget.aborted });
 
         const value = fallback();
         span.setAttributes({ 'kubequest.ai.provider': 'fallback', 'kubequest.ai.cache_hit': false, 'kubequest.ai.valid': validate(value) });

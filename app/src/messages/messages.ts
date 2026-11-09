@@ -1,12 +1,15 @@
 import { randomUUID } from 'node:crypto';
 import type { estypes } from '@elastic/elasticsearch';
 import { trace } from '@opentelemetry/api';
+import { getConnection, searchConnections } from '../connections/connection.store';
 import { esOptions, getEsClient } from '../es/client';
+import { kindIsOrLegacy } from '../es/doc-kind.helper';
 import { esTimeouts, indexNames } from '../es/es.constants';
 import { toPublicPlayer } from '../exhibitors/visits';
 import { getAttendee, getIntro, searchIntros } from '../meet/meet.store';
 import { kubequestMetrics } from '../observability/metrics';
 import { ToolError } from '../tools/tool-errors';
+import { docKinds } from '../types/connections.constants';
 import { gameRules } from '../types/kubequest.constants';
 import { IStoredMessage, IStoredReadMarker } from '../types/internal.interfaces';
 import {
@@ -21,28 +24,33 @@ import {
   IMessage,
   ISendMessageInput,
 } from '../types/kubequest.interfaces';
+import { MeetStatus } from '../types/kubequest.types';
 
 const RATE_WINDOW_MS = 60_000;
 const LIST_SIZE = 200;
-const CHAT_KIND = 'chat';
+const CONNECTION_PREFIX = 'conn-';
 const READ_MARKER_KIND = 'read_marker';
 const READ_MARKER_PREFIX = 'read:';
-const CONTROL_CHARACTERS = /[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F​-‏‪-‮⁦-⁩]/g;
+const CONTROL_CHARACTERS = /[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F\u200B-\u200F\u202A-\u202E\u2066-\u2069]/g;
 const EXTRA_BLANK_LINES = /\n{3,}/g;
 const RECENT_SENDERS_MAX = 5000;
 const recentSends = new Map<string, number[]>();
+
+interface IThread {
+  id: string;
+  partnerId: string;
+  status: MeetStatus;
+  startedAt: string;
+  connectionId?: string;
+}
 
 interface IConversationStats {
   last?: IStoredMessage;
   unread: number;
 }
 
-function chatKind(): estypes.QueryDslQueryContainer {
-  return { bool: { should: [{ term: { kind: CHAT_KIND } }, { bool: { must_not: [{ exists: { field: 'kind' } }] } }], minimum_should_match: 1 } };
-}
-
 function chatOnly(): estypes.QueryDslQueryContainer[] {
-  return [chatKind(), { exists: { field: 'meetId' } }, { exists: { field: 'fromId' } }];
+  return [kindIsOrLegacy(docKinds.CHAT), { exists: { field: 'meetId' } }, { exists: { field: 'fromId' } }];
 }
 
 function readMarkerId(attendeeId: string, meetId: string): string {
@@ -57,22 +65,35 @@ function viewMessage(message: IStoredMessage, viewerId: string): IMessage {
   return { id: message.id, meetId: message.meetId, fromMe: message.fromId === viewerId, text: message.text, at: message.at };
 }
 
-async function partyMeet(meetId: string, attendeeId: string): Promise<IIntro> {
-  const stored = await getIntro(meetId);
-
-  if (!stored || (stored.intro.fromId !== attendeeId && stored.intro.toId !== attendeeId)) {
-    throw new ToolError(404, 'unknown_meet', 'That meet is not yours or no longer exists.');
-  }
-
-  return stored.intro;
-}
-
-function bothAccepted(intro: IIntro): boolean {
-  return intro.status === 'accepted' || intro.status === 'met';
-}
-
 function partnerOf(intro: IIntro, attendeeId: string): string {
   return intro.fromId === attendeeId ? intro.toId : intro.fromId;
+}
+
+function introThread(intro: IIntro, attendeeId: string): IThread {
+  return { id: intro.id, partnerId: partnerOf(intro, attendeeId), status: intro.status, startedAt: intro.respondedAt ?? intro.proposedAt };
+}
+
+function isOpen(thread: IThread): boolean {
+  return thread.status === 'accepted' || thread.status === 'met';
+}
+
+async function partyThread(meetId: string, attendeeId: string): Promise<IThread> {
+  if (meetId.startsWith(CONNECTION_PREFIX)) {
+    const stored = await getConnection(meetId);
+    const partnerId = stored?.connection.memberIds.find((memberId) => memberId !== attendeeId);
+
+    if (stored && partnerId && stored.connection.memberIds.includes(attendeeId)) {
+      return { id: stored.connection.id, partnerId, status: 'met', startedAt: stored.connection.metAt, connectionId: stored.connection.id };
+    }
+  } else {
+    const stored = await getIntro(meetId);
+
+    if (stored && (stored.intro.fromId === attendeeId || stored.intro.toId === attendeeId)) {
+      return introThread(stored.intro, attendeeId);
+    }
+  }
+
+  throw new ToolError(404, 'unknown_meet', 'That meet is not yours or no longer exists.');
 }
 
 function isBlocked(first: IAttendee, second: IAttendee): boolean {
@@ -112,13 +133,13 @@ async function sentRecently(attendeeId: string, now: Date): Promise<number> {
 }
 
 export async function sendMessage(input: ISendMessageInput): Promise<IMessage> {
-  const intro = await partyMeet(input.meetId, input.attendeeId);
+  const thread = await partyThread(input.meetId, input.attendeeId);
 
-  if (!bothAccepted(intro)) {
+  if (!isOpen(thread)) {
     throw new ToolError(409, 'meet_not_accepted', 'You can message each other once you both accept the meet.');
   }
 
-  const [sender, partner] = await Promise.all([getAttendee(input.attendeeId), getAttendee(partnerOf(intro, input.attendeeId))]);
+  const [sender, partner] = await Promise.all([getAttendee(input.attendeeId), getAttendee(thread.partnerId)]);
 
   if (isBlocked(sender, partner)) {
     throw new ToolError(409, 'no_match', 'Messages are off for this meet.');
@@ -136,21 +157,21 @@ export async function sendMessage(input: ISendMessageInput): Promise<IMessage> {
     throw new ToolError(429, 'slow_down', 'You are sending messages fast. Take a breath and try again in a minute.');
   }
 
-  const message: IStoredMessage = { kind: CHAT_KIND, id: randomUUID(), meetId: intro.id, fromId: sender.id, toId: partner.id, text, at: now.toISOString() };
+  const message: IStoredMessage = { kind: docKinds.CHAT, id: randomUUID(), meetId: thread.id, fromId: sender.id, toId: partner.id, text, at: now.toISOString() };
   await getEsClient().index({ index: indexNames.MESSAGES, id: message.id, document: message, refresh: 'wait_for' }, esOptions(esTimeouts.WRITE_MS));
-  kubequestMetrics().messages.add(1, { 'kubequest.meet.status': intro.status });
+  kubequestMetrics().messages.add(1, { 'kubequest.meet.status': thread.status });
   trace.getActiveSpan()?.setAttributes({ 'kubequest.message.id': message.id, 'kubequest.message.chars': text.length });
 
   return viewMessage(message, sender.id);
 }
 
 export async function listMessages(input: IListMessagesInput): Promise<IMessage[]> {
-  const intro = await partyMeet(input.meetId, input.attendeeId);
+  const thread = await partyThread(input.meetId, input.attendeeId);
   const response = await getEsClient().search<IStoredMessage>(
     {
       index: indexNames.MESSAGES,
       size: LIST_SIZE,
-      query: { bool: { filter: [...chatOnly(), { term: { meetId: intro.id } }, ...(input.since ? [{ range: { at: { gt: input.since } } }] : [])] } },
+      query: { bool: { filter: [...chatOnly(), { term: { meetId: thread.id } }, ...(input.since ? [{ range: { at: { gt: input.since } } }] : [])] } },
       sort: [{ at: { order: input.since ? 'asc' : 'desc' } }],
     },
     { ...esOptions(esTimeouts.SEARCH_MS), ignore: [404] },
@@ -262,16 +283,38 @@ function preview(message: IStoredMessage | undefined, viewerId: string): IConver
   return message ? { text: message.text, fromMe: message.fromId === viewerId, at: message.at } : null;
 }
 
-function newestPerPartner(intros: IIntro[], attendeeId: string): IIntro[] {
-  const byPartner = new Map<string, IIntro>();
+function newestPerPartner(threads: IThread[]): Map<string, IThread> {
+  const byPartner = new Map<string, IThread>();
 
-  for (const intro of intros) {
-    const partnerId = partnerOf(intro, attendeeId);
-    const current = byPartner.get(partnerId);
+  for (const thread of threads) {
+    const current = byPartner.get(thread.partnerId);
 
-    if (!current || Date.parse(intro.proposedAt) > Date.parse(current.proposedAt)) {
-      byPartner.set(partnerId, intro);
+    if (!current || Date.parse(thread.startedAt) > Date.parse(current.startedAt)) {
+      byPartner.set(thread.partnerId, thread);
     }
+  }
+
+  return byPartner;
+}
+
+async function openThreads(attendeeId: string): Promise<IThread[]> {
+  const [intros, connections] = await Promise.all([searchIntros(attendeeId), searchConnections(attendeeId)]);
+  const byPartner = newestPerPartner(intros.map((stored) => introThread(stored.intro, attendeeId)).filter(isOpen));
+
+  for (const connection of connections) {
+    const partnerId = connection.memberIds.find((memberId) => memberId !== attendeeId);
+
+    if (!partnerId) {
+      continue;
+    }
+
+    const existing = byPartner.get(partnerId);
+    byPartner.set(
+      partnerId,
+      existing
+        ? { ...existing, connectionId: connection.id }
+        : { id: connection.id, partnerId, status: 'met', startedAt: connection.metAt, connectionId: connection.id },
+    );
   }
 
   return [...byPartner.values()];
@@ -279,37 +322,35 @@ function newestPerPartner(intros: IIntro[], attendeeId: string): IIntro[] {
 
 export async function listConversations(attendeeId: string): Promise<IListConversationsResult> {
   const viewer = await getAttendee(attendeeId);
-  const intros = newestPerPartner(
-    (await searchIntros(attendeeId)).map((stored) => stored.intro).filter(bothAccepted),
-    attendeeId,
-  );
-  const partners = await loadAttendees(intros.map((intro) => partnerOf(intro, attendeeId)));
-  const open = intros.filter((intro) => {
-    const partner = partners.get(partnerOf(intro, attendeeId));
+  const threads = await openThreads(attendeeId);
+  const partners = await loadAttendees(threads.map((thread) => thread.partnerId));
+  const open = threads.filter((thread) => {
+    const partner = partners.get(thread.partnerId);
 
     return partner !== undefined && !isBlocked(viewer, partner);
   });
-  const meetIds = open.map((intro) => intro.id);
-  const markers = await readMarkers(attendeeId, meetIds);
-  const stats = await conversationStats(attendeeId, meetIds, markers);
-  const conversations: IConversation[] = open.flatMap((intro) => {
-    const partner = partners.get(partnerOf(intro, attendeeId));
+  const threadIds = open.map((thread) => thread.id);
+  const markers = await readMarkers(attendeeId, threadIds);
+  const stats = await conversationStats(attendeeId, threadIds, markers);
+  const conversations: IConversation[] = open.flatMap((thread) => {
+    const partner = partners.get(thread.partnerId);
 
     if (!partner) {
       return [];
     }
 
     const card = toPublicPlayer(partner);
-    const entry = stats.get(intro.id) ?? { unread: 0 };
+    const entry = stats.get(thread.id) ?? { unread: 0 };
     const lastMessage = preview(entry.last, attendeeId);
 
     return [
       {
-        meetId: intro.id,
-        meetStatus: intro.status,
+        meetId: thread.id,
+        ...(thread.connectionId ? { connectionId: thread.connectionId } : {}),
+        meetStatus: thread.status,
         partner: { publicId: card.id, handle: card.handle, faceSeed: card.faceSeed, levelName: card.levelName },
         lastMessage,
-        lastActivityAt: lastMessage?.at ?? intro.respondedAt ?? intro.proposedAt,
+        lastActivityAt: lastMessage?.at ?? thread.startedAt,
         unread: entry.unread,
       },
     ];
@@ -322,14 +363,14 @@ export async function listConversations(attendeeId: string): Promise<IListConver
 }
 
 export async function markConversationRead(input: IMarkConversationReadInput): Promise<IMarkConversationReadResult> {
-  const intro = await partyMeet(input.meetId, input.attendeeId);
+  const thread = await partyThread(input.meetId, input.attendeeId);
   const readAt = new Date().toISOString();
-  const marker: IStoredReadMarker = { kind: READ_MARKER_KIND, attendeeId: input.attendeeId, meetId: intro.id, readAt };
+  const marker: IStoredReadMarker = { kind: READ_MARKER_KIND, attendeeId: input.attendeeId, meetId: thread.id, readAt };
   await getEsClient().index(
-    { index: indexNames.MESSAGES, id: readMarkerId(input.attendeeId, intro.id), document: marker, refresh: 'wait_for' },
+    { index: indexNames.MESSAGES, id: readMarkerId(input.attendeeId, thread.id), document: marker, refresh: 'wait_for' },
     esOptions(esTimeouts.WRITE_MS),
   );
   const { unread } = await listConversations(input.attendeeId);
 
-  return { meetId: intro.id, readAt, unread };
+  return { meetId: thread.id, readAt, unread };
 }

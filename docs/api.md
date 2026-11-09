@@ -23,6 +23,7 @@ JSON in this doc is trimmed: long strings end in `…` and `"…N more"` stands 
 | `GET /h/<token>` | A handshake QR (from `handshake_code`) opens this. With the Angular build it serves the SPA; read the token from the path segment and call `start_handshake`. Without the build it returns a JSON hint. |
 | `GET /api/booth-photos/:photoId.jpg` | The bytes of one booth photo (the `url` in `list_booth_photos`), with its real `Content-Type` and `Cache-Control: public, max-age=3600`. A hidden or deleted photo is `404 unknown_photo`. |
 | `GET /api/recap/:attendeeId/email.html` | The player's recap email (`recap.emailHtml`) as `text/html`. A mock of it is in `docs/mock/recap-email.html`; no email is sent. |
+| `GET /api/recap/:attendeeId.pdf` | The end-of-event recap as a PDF download (`application/pdf`, `Content-Disposition: attachment`). Same auth model as the email route: it takes the private `attendeeId`, so only link it from the player's own recap screen. Pages: a block-art cover (pixel face, handle, level, XP bar, totals, banners), People you met (one card per connection with where you met, the chat prompt, your private notes and clickable link annotations), Talks you attended (your talk notes, takeaways and quiz score), Booths you visited (your booth notes), the itinerary when the attendee has one, and next steps. Headings use the OFL Silkscreen font from `resources/fonts`. Unknown id: `404 unknown_attendee` as JSON. |
 | `POST /api/profile-import` | Multipart form: `attendeeId` plus a `file` field holding a resume or LinkedIn PDF (max 5 MB). Reads the text in memory and returns the same JSON as `import_profile`; the file is never written to disk or Elastic. `413 file_too_large`, `415 not_a_pdf`, `422 unreadable_pdf`, `429 rate_limited`. |
 | `GET /healthz`, `GET /readyz` | Liveness, and readiness that pings Elasticsearch: `{"status":"ok","version":"dev","elasticsearch":"reachable"}`. |
 
@@ -56,7 +57,7 @@ Every failure has the same envelope:
 |---|---|---|
 | 400 | `invalid_input`, `invalid_json`, `self_handshake` | A UI bug, or (`self_handshake`) the player scanned their own code. Show the message. |
 | 403 | `bad_signature`, `expired_token`, `missing_token` (check_in, start_handshake), `no_screen`, `bad_screen_key` (screen token), `screen_only` (`POST /api/tools/screen_token`), `bad_key` (exhibitor_dashboard, admin_overview) | On a scan, show "scan the code on the door" with the message. For `bad_key`, forget the stored key for that view and show the message with a field to paste a staff link. |
-| 404 | `disabled` (demo_scan_token with `DEMO_SIMULATE_SCANS` off), `unknown_attendee`, `unknown_player`, `attendee_not_found`, `unknown_location`, `unknown_talk`, `talk_not_found`, `boss_not_found`, `unknown_meet`, `unknown_quest`, `unknown_outpost`, `unknown_handshake`, `unknown_tool`, `not_found` | For `unknown_attendee`, clear the stored id and go to signup (not for `unknown_player`, which is about the other player). Otherwise show the message. |
+| 404 | `disabled` (demo_scan_token with `DEMO_SIMULATE_SCANS` off), `unknown_attendee`, `unknown_player`, `attendee_not_found`, `unknown_location`, `unknown_talk`, `talk_not_found`, `boss_not_found`, `unknown_meet`, `unknown_quest`, `unknown_outpost`, `unknown_handshake`, `unknown_connection`, `unknown_tool`, `not_found` | For `unknown_attendee`, clear the stored id and go to signup (not for `unknown_player`, which is about the other player). Otherwise show the message. |
 | 409 | `handle_taken`, `meeting_off`, `no_match`, `meet_closed`, `meet_locked`, `quest_not_open`, `quest_not_active`, `quest_done`, `quest_expired`, `too_many_active`, `code_used`, `already_shook_hands`, `already_answered`, `handshake_closed`, `meet_not_accepted`, `conflict` | An expected game state. Show the message and refetch the screen's data. |
 | 429 | `slow_down` (send_message) | Show the message; let the player try again in a few minutes. |
 | 500 | `internal_error` | Show a toast and retry once. |
@@ -101,6 +102,7 @@ On a 5xx, double the interval up to 60 s, then reset after a success.
 | Scan result (`/r/:locationId?t=`) | `check_in` if an id is stored, otherwise signup with the scan attached. Then `quiz_for_talk` when `quizAvailable` is true |
 | Itinerary: Now | `whats_around_me`, `boss_state` (boss rooms), `quiz_for_talk`, `submit_quiz` |
 | Itinerary: Next | `whats_next` |
+| Here: Ask the guide | `ask_guide` (call again after a few seconds while `pending` is `true`) |
 | Itinerary tab `/itinerary` | `list_schedule` (What's on), `get_itinerary` (My plan), `add_to_itinerary`, `remove_from_itinerary`, `make_quest` |
 | Search | `search`, `world` (browse by building, level and room), `make_quest` ("Make this a quest") |
 | Quests | `quest_board`, `respond_quest`, `recommend_people`, `recommend_talks`, `propose_meet` |
@@ -110,7 +112,10 @@ On a 5xx, double the interval up to 60 s, then reset after a success.
 | Handshake | `handshake_code` (show `scanUrl` as a QR), `handshake_state`, `start_handshake` (after scanning `/h/<token>`), `answer_handshake` |
 | Booth note (after an outpost scan, `noteRequired: true`) | `save_booth_note`, `list_booth_notes` |
 | Photo quest card, booth details on the map | `upload_booth_photo`, `list_booth_photos`, `report_booth_photo`, `delete_booth_photo` |
-| Recap | `recap` (or `GET /api/recap/:attendeeId/email.html`) |
+| Recap | `recap` (or `GET /api/recap/:attendeeId/email.html`), "Download my recap PDF" (`GET /api/recap/:attendeeId.pdf`) |
+| People met `/connections`, `/connections/:connectionId` | `list_connections`, `save_connection_note` |
+| My links `/links` | `get_profile` (own `attendee.links`), `update_links` |
+| Talk notes `/notes/talks`, and the embeddable `app-talk-notes-panel [talkId]` | `list_talk_notes`, `save_talk_note` |
 | Profile | `get_profile`, `inventory`, `leaderboard` (3 boards), `update_settings` |
 | Another player's card | `get_profile` with `targetId` |
 | Notification bell (every screen with the top bar) | `list_notifications`, `mark_notifications_read` |
@@ -326,6 +331,10 @@ A `campfire`, `room` or `outpost` result carries `location`, and a `player` resu
 ### recommend_talks
 
 `{"attendeeId":"p_…","limit":3,"withinMinutes":720}` → `[{"talk":ITalk,"location"?:ILocation,"score":n,"reason":"…","startsInMinutes":n,"walkMinutes"?:n}]`. Today it returns `[]`, because no talk starts within 12 hours.
+
+### ask_guide
+
+`{"attendeeId":"p_…"}` → `{"provider":"agent_builder"|"fallback","pending":bool,"interest":"…","picks":[ITalkMatch],"toolCalls":["kubequest.upcoming_talks"],"droppedPicks":n}`. The Elastic Agent Builder agent `kubequest-writer` picks up to 3 talks with its ES|QL tool (Jina semantic match plus Jina rerank). Each pick's `reason` is the agent's one-line why, and every talk id is checked against the index. While the agent is still working (over 10 s), `provider` is `fallback`, `picks` are the reranked `recommend_talks`, and `pending` is `true`. Call again a few seconds later to get the agent's picks (cached for 10 minutes).
 
 ### recommend_people
 
@@ -623,7 +632,7 @@ Only the two players in a meet that both accepted (`accepted` or `met`) can mess
 {"conversations":[{"meetId":"meet-4c2b89f53c32d32090bdc992","meetStatus":"accepted","partner":{"publicId":"pl_b0f34ffaf6282124","handle":"argoalpaca","faceSeed":"argoalpaca","levelName":"Pod"},"lastMessage":{"text":"On my way, green hoodie.","fromMe":false,"at":"2026-11-09T21:20:40.500Z"},"lastActivityAt":"2026-11-09T21:20:40.500Z","unread":1}],"unread":1}
 ```
 
-One row per person the player has an `accepted` or `met` meet with (the newest meet with that person). Messaging stays opt-in: proposed, declined, cancelled and blocked meets never appear. `lastMessage` is `null` before anyone writes. `unread` counts the partner's messages after the player's read marker. `partner` is a public card only: never an attendee id, email or name.
+One row per person the player has an `accepted` or `met` meet with (the newest meet with that person) or a saved connection with (see `list_connections`). A row from a meet carries `connectionId` too when the two are also connected; a handshake-only connection has no meet, so its row's `meetId` is the connection id (`conn-…`, `meetStatus: "met"`), and `send_message`, `list_messages` and `mark_conversation_read` accept that id in `meetId` for its two members only. Messaging stays opt-in: proposed, declined, cancelled and blocked meets never appear. `lastMessage` is `null` before anyone writes. `unread` counts the partner's messages after the player's read marker. `partner` is a public card only: never an attendee id, email or name.
 
 ### mark_conversation_read
 
@@ -632,6 +641,67 @@ One row per person the player has an `accepted` or `met` meet with (the newest m
 ### recap
 
 `{"attendeeId":"p_…"}` → `IRecap`: `player`, `totals` (`xp`, `talks`, `people`, `booths`, `quizCorrect`), `talks` (check-ins with the best quiz score), `people` (one per handshake partner: handle, the question, their answer, shared topics, `githubLogin` only when the two also accepted a meet), `booths` (from notes), a `nextStep` on every person and booth, an overall `nextSteps` list, and `emailSubject` plus `emailHtml` (a self-contained 600 px email). Next steps are rule-based: a follow-up booth becomes "Book a follow-up with Elastic.", a person with a shared topic becomes "Follow up with @otelotter about observability.". The full mock is `fixtures/recap.json`; the rendered email is `docs/mock/recap-email.html` (regenerate with `npx tsx scripts/render-recap-mock.ts`).
+
+### Connections, links and private notes
+
+A **connection** is created when a meet becomes `met` or a handshake completes (`answer_handshake` records it; `list_connections` also backfills any it missed). There is one per pair, stored in the `messages` index as `kind: "connection"` with a deterministic id (`conn-` plus a hash of the two attendee ids). Private notes live next to them as `kind: "connection_note"` (in `messages`) and `kind: "talk_note"` (in `booth_notes`); every query on those indices filters by `kind`, so chat messages, notifications, handle reservations, booth notes, booth photos and these never mix. No response carries another player's `attendeeId`: people are public ids (`pl_…`).
+
+**Who sees links:** the player themselves, and players they are connected with. Everyone else gets `visible: false` and empty links. Notes are only ever returned to their author.
+
+### update_links
+
+`{"attendeeId":"p_…","links":{"linkedin":"linkedin.com/in/john-doe-platform","github":"argoproj","bluesky":"bsky.app/profile/bsky.app","website":"https://kubequest.cnh.radarhq.io"}}` →
+
+```json
+{"links":{"linkedin":"https://www.linkedin.com/in/john-doe-platform","github":"https://github.com/argoproj","bluesky":"https://bsky.app/profile/bsky.app","website":"https://kubequest.cnh.radarhq.io/"},
+ "items":[{"network":"linkedin","label":"in/john-doe-platform","url":"https://www.linkedin.com/in/john-doe-platform"},"…3 more"],
+ "enrichment":[{"network":"github","status":"added","summary":"GitHub @argoproj (Argo Project). …"},{"network":"bluesky","status":"added","summary":"Bluesky @bsky.app (Bluesky). …"}]}
+```
+
+Networks: `linkedin` (`linkedin.com/in/<slug>` or a bare slug), `github` (login or `github.com/<login>`), `x` (`@handle`, `x.com/…` or `twitter.com/…`, stored as x.com), `bluesky` (a handle or `bsky.app/profile/<handle>`), `mastodon` (`@user@host` or `https://host/@user`) and `website` (`https://` only). Only keys you send change; an empty string removes that link. Anything else is `400 invalid_input` with a per-network message (`variants.invalid_link`). When the GitHub or Bluesky link changes, the server reads the public profile (GitHub REST `users/:login` plus top repo languages; Bluesky `app.bsky.actor.getProfile` on `public.api.bsky.app`; 4 s timeout each) and appends a "Public profile:" paragraph to `profileText`, so Jina matching uses it. `status` is `added`, `not_found` or `unavailable`; `enrichment` is `[]` when neither link changed (as in the fixture, captured on a re-save). LinkedIn and X are never fetched.
+
+### get_links
+
+`{"viewerId":"p_…","targetPublicId":"pl_01c88990a33676aa"}` → for the owner or a connection:
+
+```json
+{"publicId":"pl_01c88990a33676aa","handle":"johndoe","isOwner":false,"isConnection":true,"visible":true,"links":{"…":"…"},"items":[{"network":"linkedin","label":"in/john-doe-platform","url":"https://www.linkedin.com/in/john-doe-platform"},"…3 more"]}
+```
+
+For anyone else (`variants.not_connected`): `{"visible":false,"links":{},"items":[],"hiddenReason":"Links are shared only with people you have met through a meet or a handshake.", …}`.
+
+### list_connections
+
+`{"attendeeId":"p_…"}` → newest first:
+
+```json
+[{"id":"conn-e9b2965802616bd7cd20cf00",
+  "player":{"id":"pl_aeea8bd684c45f90","handle":"otelotter","faceSeed":"otelotter","level":3,"levelName":"Node","xp":255,"banners":["welcomer"],"headline":"OpenTelemetry contributor; tracing all the things.","workingOn":"…","topics":["opentelemetry","…"]},
+  "links":[{"network":"github","label":"@open-telemetry","url":"https://github.com/open-telemetry"},"…3 more"],
+  "source":"meet","where":{"id":"campfire-learning-lounge","name":"Learning Lounge"},"metAt":"2026-11-09T21:43:54.000Z",
+  "chatPrompt":"Ask @otelotter which OpenTelemetry Collector processors they would never run without.","sharedTopics":["observability"],
+  "note":{"talkedAbout":"Tail sampling in the Collector, …","nextSteps":"Try the k8sattributes processor …","followUpBy":"2026-11-12T22:23:12.000Z","updatedAt":"…"}},"…1 more"]
+```
+
+`source` is `meet` or `handshake`; `where` is the meet's campfire, or the asker's last scanned place for a handshake without a meet. `realName` appears when the other player entered one. `note` is the caller's own note and is absent until they write one.
+
+### save_connection_note
+
+`{"attendeeId":"p_…","connectionId":"conn-…","talkedAbout":"…","nextSteps":"…","followUpBy":"2026-11-12T22:23:12.000Z"}` (`talkedAbout` and `nextSteps` up to 2000 characters, `followUpBy` optional ISO date) → the connection as in `list_connections`, with the saved `note`. Saving again replaces the note. A connection the caller is not part of returns `404 unknown_connection` (`variants.not_yours`).
+
+### save_talk_note
+
+`{"attendeeId":"p_…","talkId":"kc26-tue-tracing-at-scale","note":"…","takeaways":["…"]}` (`note` up to 2000 characters, up to 10 takeaways of 280) →
+
+```json
+{"id":"tn-a1ce7976235c488945228131","talkId":"kc26-tue-tracing-at-scale","talkTitle":"Tracing at Scale: Running a 16 Billion Spans/Hour Pipeline at Nubank","speakers":["Felipe Araujo (Nubank)","Kaynan Coelho (Nubank)"],"room":"Grand Ballroom ACE","start":"2026-11-10T14:50:00-07:00","note":"Nubank runs 16B spans an hour …","takeaways":["Shard the Collector by trace id before tail sampling","…2 more"],"createdAt":"…","updatedAt":"…"}
+```
+
+One note per player and talk; saving again edits it. Unknown talk: `404 unknown_talk`.
+
+### list_talk_notes
+
+`{"attendeeId":"p_…","talkId":"…"}` (`talkId` optional) → the caller's talk notes, newest first.
 
 ### list_notifications
 

@@ -1,0 +1,63 @@
+{
+  "tool": "get_links",
+  "endpoint": "POST /api/tools/get_links",
+  "request": {
+    "viewerId": "att-helmsmith",
+    "targetPublicId": "pl_01c88990a33676aa"
+  },
+  "status": 200,
+  "response": {
+    "publicId": "pl_01c88990a33676aa",
+    "handle": "johndoe",
+    "isOwner": false,
+    "isConnection": true,
+    "visible": true,
+    "links": {
+      "github": "https://github.com/argoproj",
+      "website": "https://kubequest.cnh.radarhq.io/",
+      "bluesky": "https://bsky.app/profile/bsky.app",
+      "linkedin": "https://www.linkedin.com/in/john-doe-platform"
+    },
+    "items": [
+      {
+        "network": "linkedin",
+        "label": "in/john-doe-platform",
+        "url": "https://www.linkedin.com/in/john-doe-platform"
+      },
+      {
+        "network": "github",
+        "label": "@argoproj",
+        "url": "https://github.com/argoproj"
+      },
+      {
+        "network": "bluesky",
+        "label": "@bsky.app",
+        "url": "https://bsky.app/profile/bsky.app"
+      },
+      {
+        "network": "website",
+        "label": "kubequest.cnh.radarhq.io",
+        "url": "https://kubequest.cnh.radarhq.io/"
+      }
+    ]
+  },
+  "variants": {
+    "not_connected": {
+      "request": {
+        "viewerId": "att-quietgopher",
+        "targetPublicId": "pl_01c88990a33676aa"
+      },
+      "status": 200,
+      "response": {
+        "publicId": "pl_01c88990a33676aa",
+        "handle": "johndoe",
+        "isOwner": false,
+        "isConnection": false,
+        "visible": false,
+        "links": {},
+        "items": [],
+        "hiddenReason": "Links are shared only with people you have met through a meet or a handshake."
+      }
+    }
+  }
+}

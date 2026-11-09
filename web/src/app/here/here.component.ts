@@ -5,8 +5,8 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Router, RouterLink } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { filter, forkJoin, fromEvent, interval, merge } from 'rxjs';
-import { IItineraryItem, IMeet, IPersonMatch, IRespondMeetResult, IWhatsAroundMe, IWhatsNext } from '../core/api.types';
+import { filter, forkJoin, fromEvent, interval, merge, timer } from 'rxjs';
+import { IGuideAnswer, IItineraryItem, IMeet, IPersonMatch, IRespondMeetResult, IWhatsAroundMe, IWhatsNext } from '../core/api.types';
 import { ApiErrorHelper } from '../core/helpers/api-error.helper';
 import { MeService } from '../core/services/me.service';
 import { ToolsService } from '../core/services/tools.service';
@@ -15,7 +15,7 @@ import { PersonCardComponent } from '../people/person-card/person-card.component
 import { AlertBannerComponent } from '../shared/components/alert-banner/alert-banner.component';
 import { ScreenToolbarComponent } from '../shared/components/screen-toolbar/screen-toolbar.component';
 import { StateWrapperComponent } from '../shared/components/state-wrapper/state-wrapper.component';
-import { herePeopleLimit, herePollMs, minuteMs } from './here.constants';
+import { guideMaxRetries, guideRetryMs, herePeopleLimit, herePollMs, minuteMs } from './here.constants';
 
 @Component({
   selector: 'app-here',
@@ -46,6 +46,9 @@ export class HereComponent implements OnInit {
   public isLoading = true;
   public errorMessage = '';
   public actionError = '';
+  public guide: IGuideAnswer | null = null;
+  public isAsking = false;
+  public guideError = '';
 
   public get startsInMinutes(): number {
     return this.nextTalk ? Math.max(0, Math.round((new Date(this.nextTalk.start).getTime() - Date.now()) / minuteMs)) : 0;
@@ -136,6 +139,34 @@ export class HereComponent implements OnInit {
           console.error('Could not accept the meet', error);
           this.busyIds.delete(partnerId);
           this.actionError = ApiErrorHelper.message(error);
+        },
+      });
+  }
+
+  public askGuide(attempt = 0): void {
+    this.isAsking = true;
+    this.guideError = '';
+
+    this._toolsService
+      .call<IGuideAnswer>('ask_guide', { attendeeId: this._meService.attendeeId }, { background: attempt > 0 })
+      .pipe(takeUntilDestroyed(this._destroyRef))
+      .subscribe({
+        next: (answer) => {
+          this.guide = answer;
+
+          if (answer.pending && attempt < guideMaxRetries) {
+            timer(guideRetryMs)
+              .pipe(takeUntilDestroyed(this._destroyRef))
+              .subscribe(() => this.askGuide(attempt + 1));
+            return;
+          }
+
+          this.isAsking = false;
+        },
+        error: (error: unknown) => {
+          console.error('Could not ask the guide', error);
+          this.guideError = ApiErrorHelper.message(error);
+          this.isAsking = false;
         },
       });
   }
