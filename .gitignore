@@ -36,3 +36,11 @@ yarn-error.log*
 
 # OS
 .DS_Store
+
+# cnh-starter: never commit these, the repo is public
+*kubeconfig*
+.env.*
+!.env.example
+*.pem
+*.key
+node_modules/
