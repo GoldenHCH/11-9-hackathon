@@ -1,13 +1,13 @@
 # How we used the sponsor tools
 
-KubeQuest is built on four sponsor tools. For each one, this file says what we used, why, how it helped, and what is still missing. It is honest on purpose: the "not yet" lines are the to-do list before the 5:15 submission.
+KubeQuest is built on four sponsor tools. For each one, this file says what we used, why, how it helped, and what is still missing. It is honest on purpose: the "not yet" lines are what is still open. Status as of the 5:15 submission.
 
 | Tool | Role in KubeQuest | Status |
 |------|-------------------|--------|
-| **Elastic** (Serverless) | The only datastore and the search/matching engine | Live. AI quizzes written through Agent Builder |
-| **Dash0** | Traces, metrics and logs for every XP point | Live. The cluster collector exports to Dash0 |
+| **Elastic** (Serverless) | The only datastore and the search/matching engine | Live. Quizzes by Agent Builder `kubequest-writer`; Workflow `kubequest-banners` created and ran green |
+| **Dash0** | Traces, metrics and logs for every XP point | Live. Collector exports to Dash0; SLO "KubeQuest API availability" created with Agent0 |
 | **Radar** | Our Kubernetes cluster, GitOps deploys, secrets, health | Live. Checks and an AI investigation still to do |
-| **Gitar** (Sonar) | AI review on every PR, with project rules | Live. Its PR #5 findings still need fixing |
+| **Gitar** (Sonar) | AI review on every PR, with project rules | Live. Its PR #3 and PR #5 findings are fixed (PR #15) |
 
 ---
 
@@ -27,9 +27,10 @@ KubeQuest is built on four sponsor tools. For each one, this file says what we u
 
 **Agent Builder as the model layer.** Direct Elastic Inference chat calls return 403 on this project, but Agent Builder reaches Claude Sonnet. We created a `kubequest-writer` agent (no tools, small prompts). It wrote validated 3-question quizzes for all 25 talks, which are stored on each talk so the demo never waits on a model.
 
+**Elastic Workflow `kubequest-banners`** ([`resources/workflows/banners.yaml`](../resources/workflows/banners.yaml)) is created in Kibana and an execution completed green (PR #15, after fixing the badge date to epoch millis). It uses the same deterministic badge ids as `awardXp`, so the app and the Workflow can run side by side.
+
 **Not yet**
 - **Live AI text** (meet opening lines, profile topics) needs the Kibana `agentBuilder` privilege on the app's API key. Until it has it, those use deterministic fallbacks. Details: [`ops-ai.md`](ops-ai.md).
-- **The banner Workflow** is written (`resources/workflows/banners.yaml`) but our key can't create it (`workflowsManagement:create`). Banners are computed in the app for now. Details: [`ops-xp.md`](ops-xp.md).
 
 ---
 
@@ -49,8 +50,10 @@ KubeQuest is built on four sponsor tools. For each one, this file says what we u
 
 **Status:** live. The Dash0 token, endpoint and dataset are in `app-credentials`. The collector restarted cleanly, and spans from the cluster (HTTP, Elasticsearch, `tool.*`) show in Dash0's trace explorer.
 
+**SLO:** "KubeQuest API availability", created in Dash0 with Agent0.
+
 **Not yet**
-- **Real-user monitoring** in the browser (UI work), a Dash0 dashboard and SLO (check-in p95 < 500 ms), and using Agent0 or the Dash0 MCP to find and fix something real.
+- **Real-user monitoring** in the browser and a Dash0 dashboard.
 
 ---
 
@@ -99,8 +102,9 @@ Step-by-step history: [`radar-log.md`](radar-log.md).
   - **Bug:** the boss defeat bonus can pay twice when `boss_state` polls run concurrently.
   - **Rule break:** `claimQuiz` writes to `xp_events` outside `awardXp`, against our own rule 2.
 
+  All three are fixed in **PR #15**: screen tokens now need a per-location display key (constant-time compare) and `screen_token` is blocked on the public tools router; the boss bonus is written once with a deterministic id, create-only; `claimQuiz` goes through `award.ts`.
+
 **Not yet**
-- **The PR #5 findings above are not fixed yet.** PR #5 was merged so the build could deploy. They are the next PR, and fixing them through Gitar's suggestions makes a good demo exhibit.
 - **CI failure diagnosis and auto-apply.** The first image build after the merge failed (`npm ci`: lockfile missing the web workspace) and was fixed by hand in PR #7. Next time, let Gitar diagnose it.
 - **A ruleset on `main` that requires a PR.** It needs a bypass for GitHub Actions, or the deploy commit can't land.
 
