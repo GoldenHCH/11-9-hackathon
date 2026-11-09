@@ -1,0 +1,63 @@
+<div class="picker-backdrop" (click)="pendingLocationId ? null : closed.emit()" aria-hidden="true"></div>
+<section class="picker" role="dialog" aria-modal="true" aria-labelledby="demo-scan-title">
+  <header class="picker-header">
+    <div class="picker-heading">
+      <span class="picker-badge">Demo</span>
+      <h2 id="demo-scan-title" class="picker-title">Simulate a scan</h2>
+      <p class="picker-subtitle">Check in as if you scanned this place’s printed QR code.</p>
+    </div>
+    <button mat-icon-button type="button" aria-label="Close" [disabled]="!!pendingLocationId" (click)="closed.emit()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </header>
+
+  <mat-form-field appearance="outline" class="picker-search">
+    <mat-label>Search rooms, booths and campfires</mat-label>
+    <mat-icon matPrefix aria-hidden="true">search</mat-icon>
+    <input #searchInput matInput type="search" [(ngModel)]="query" autocomplete="off" />
+  </mat-form-field>
+
+  @if (errorMessage) {
+    <p class="picker-error" role="alert">{{ errorMessage }}</p>
+  }
+
+  <div class="picker-body">
+    @if (isLoading) {
+      <div class="picker-loading"><mat-spinner diameter="28"></mat-spinner></div>
+    } @else {
+      @for (group of groups; track group.id) {
+        <section class="picker-group" [attr.aria-labelledby]="'demo-scan-group-' + group.id">
+          <h3 class="picker-group-title" [id]="'demo-scan-group-' + group.id">
+            <mat-icon aria-hidden="true">{{ group.icon }}</mat-icon>
+            <span>{{ group.label }} ({{ group.locations.length }})</span>
+          </h3>
+          <ul class="picker-list">
+            @for (location of group.locations; track location.id) {
+              <li>
+                <button
+                  type="button"
+                  class="picker-option"
+                  [disabled]="!!pendingLocationId"
+                  [attr.data-location-id]="location.id"
+                  (click)="picked.emit(location)"
+                >
+                  <span class="picker-option-text">
+                    <span class="picker-option-name">{{ location.name }}</span>
+                    <span class="picker-option-detail">{{ detail(location) }}</span>
+                  </span>
+                  @if (pendingLocationId === location.id) {
+                    <mat-spinner diameter="20"></mat-spinner>
+                  } @else {
+                    <mat-icon class="picker-option-icon" aria-hidden="true">qr_code_scanner</mat-icon>
+                  }
+                </button>
+              </li>
+            }
+          </ul>
+        </section>
+      } @empty {
+        <p class="picker-empty">No place matches “{{ query }}”.</p>
+      }
+    }
+  </div>
+</section>

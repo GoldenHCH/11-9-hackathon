@@ -235,6 +235,26 @@ body.app-accessible {
   color: var(--kq-text) !important;
 }
 
+.mat-mdc-unelevated-button:disabled,
+.mat-mdc-unelevated-button.mat-mdc-button-disabled,
+.mat-mdc-outlined-button:disabled,
+.mat-mdc-outlined-button.mat-mdc-button-disabled,
+.mat-mdc-raised-button:disabled,
+.mat-mdc-raised-button.mat-mdc-button-disabled {
+  background: var(--kq-surface-2) !important;
+  color: var(--kq-muted) !important;
+  border-style: dashed !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+  cursor: not-allowed;
+
+  .mdc-button__label,
+  .mat-icon {
+    color: var(--kq-muted) !important;
+    opacity: 1 !important;
+  }
+}
+
 .mat-mdc-unelevated-button:not(:disabled):active,
 .mat-mdc-outlined-button:not(:disabled):active {
   transform: translate(2px, 2px);

@@ -366,28 +366,17 @@
               "shortLabel": "↔"
             },
             {
-              "id": "sp-l1-155-df",
-              "name": "155 D–F",
+              "id": "sp-l1-155",
+              "name": "155 A–F",
               "kind": "void",
               "shape": {
                 "x": 874,
                 "y": 428,
                 "width": 92,
-                "height": 48
+                "height": 116
               },
-              "description": "Grey on the official map: not an event room."
-            },
-            {
-              "id": "sp-l1-155-ac",
-              "name": "155 A–C",
-              "kind": "void",
-              "shape": {
-                "x": 874,
-                "y": 499,
-                "width": 92,
-                "height": 45
-              },
-              "description": "Grey on the official map: not an event room."
+              "shortLabel": "155",
+              "description": "Rooms 155 D–F (north row) and 155 A–C (south row), off the Hall 1 secondary entrance. Grey on the official map: not event space."
             },
             {
               "id": "sp-l1-lower-concourse",
@@ -677,7 +666,7 @@
               "shortLabel": "Cosmic Canyon",
               "zone": "Cosmic Canyon",
               "fill": "#f4b6d2",
-              "description": "Start-up booths 330–375, the Game Zone, meal pick-up and seating.",
+              "description": "Start-up booths 330–375 (plus Aiven, CVS Health and Cloud Native Studios), the Game Zone, meal pick-up and seating.",
               "scheduleRooms": [
                 "Salt Palace | Level 1 | Halls A-C, Halls 1-5"
               ]
@@ -781,7 +770,7 @@
               "shortLabel": "Alpine Overlook",
               "zone": "Alpine Overlook",
               "fill": "#9fc9a8",
-              "description": "Gold and Platinum booths 153–191, the Workshop Zone, the Demo Theater and the Network Nook."
+              "description": "Gold and Platinum booths 153–191, a coffee bar, the Workshop Zone, the Demo Theater and the Network Nook."
             },
             {
               "id": "sp-x-starlight-summit",
@@ -866,7 +855,7 @@
               "shortLabel": "Astral Peak",
               "zone": "Astral Peak",
               "fill": "#a9b4d8",
-              "description": "Hall A and part of Hall B: Diamond and Platinum booths, next to the Showcase Main Entrance."
+              "description": "Hall A and part of Hall B: Diamond and Platinum booths, the Dirty Soda Bar and the Sponsorship + Membership Sales Lounge, next to the Showcase Main Entrance."
             },
             {
               "id": "sp-x-project-pavilion",
@@ -1567,27 +1556,35 @@
               "name": "254",
               "kind": "breakout",
               "shape": {
-                "x": 442,
-                "y": 692,
-                "width": 148,
+                "x": 444,
+                "y": 690,
+                "width": 146,
                 "height": 158
               },
               "points": [
                 {
-                  "x": 498,
-                  "y": 692
+                  "x": 532,
+                  "y": 690
                 },
                 {
                   "x": 590,
-                  "y": 764
+                  "y": 746
+                },
+                {
+                  "x": 554,
+                  "y": 770
                 },
                 {
                   "x": 522,
-                  "y": 850
+                  "y": 810
                 },
                 {
-                  "x": 442,
-                  "y": 780
+                  "x": 506,
+                  "y": 848
+                },
+                {
+                  "x": 444,
+                  "y": 788
                 }
               ],
               "scheduleRooms": [
@@ -4159,8 +4156,8 @@
       }
     },
     {
-      "id": "palo-alto-networks-181",
-      "name": "Palo Alto Networks",
+      "id": "chronosphere-a-palo-alto-networks-company-181",
+      "name": "Chronosphere, a Palo Alto Networks Company",
       "kind": "sponsor",
       "tier": "Gold",
       "booth": "181",
@@ -5625,28 +5622,6 @@
       "position": {
         "x": 640,
         "y": 538.2
-      },
-      "footprint": {
-        "size": 9,
-        "rotated": false
-      }
-    },
-    {
-      "id": "livekit-254",
-      "name": "LiveKit",
-      "kind": "sponsor",
-      "tier": "Silver",
-      "booth": "254",
-      "areaId": "sp-x-honeycomb-hub",
-      "zone": "Honeycomb Hub",
-      "hall": "Hall 2",
-      "categories": [
-        "Application Development + Developer Experience"
-      ],
-      "levelId": "sp-expo",
-      "position": {
-        "x": 665.8,
-        "y": 549.6
       },
       "footprint": {
         "size": 9,
@@ -7576,28 +7551,6 @@
       }
     },
     {
-      "id": "ascend-362",
-      "name": "Ascend",
-      "kind": "sponsor",
-      "tier": "Start-Up",
-      "booth": "362",
-      "areaId": "sp-x-cosmic-canyon",
-      "zone": "Cosmic Canyon",
-      "hall": "Halls 4–5",
-      "categories": [
-        "Artificial Intelligence (AI)"
-      ],
-      "levelId": "sp-expo",
-      "position": {
-        "x": 567.2,
-        "y": 241.4
-      },
-      "footprint": {
-        "size": 6.8,
-        "rotated": false
-      }
-    },
-    {
       "id": "testkube-363",
       "name": "Testkube",
       "kind": "sponsor",
@@ -7873,6 +7826,68 @@
       "position": {
         "x": 567.2,
         "y": 165
+      },
+      "footprint": {
+        "size": 6.8,
+        "rotated": false
+      }
+    },
+    {
+      "id": "northflank-261",
+      "name": "Northflank",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "261",
+      "areaId": "sp-x-amber-hive",
+      "zone": "Amber Hive",
+      "hall": "Hall 3",
+      "categories": [
+        "Artificial Intelligence (AI)"
+      ],
+      "levelId": "sp-expo",
+      "position": {
+        "x": 570.6,
+        "y": 499.2
+      },
+      "footprint": {
+        "size": 9,
+        "rotated": false
+      }
+    },
+    {
+      "id": "loophole-labs-254",
+      "name": "Loophole Labs",
+      "kind": "sponsor",
+      "tier": "Silver",
+      "booth": "254",
+      "areaId": "sp-x-honeycomb-hub",
+      "zone": "Honeycomb Hub",
+      "hall": "Hall 2",
+      "categories": [],
+      "levelId": "sp-expo",
+      "position": {
+        "x": 665.8,
+        "y": 549.6
+      },
+      "footprint": {
+        "size": 9,
+        "rotated": false
+      }
+    },
+    {
+      "id": "codevisionary-362",
+      "name": "CodeVisionary",
+      "kind": "sponsor",
+      "tier": "Start-Up",
+      "booth": "362",
+      "areaId": "sp-x-cosmic-canyon",
+      "zone": "Cosmic Canyon",
+      "hall": "Halls 4–5",
+      "categories": [],
+      "levelId": "sp-expo",
+      "position": {
+        "x": 567.2,
+        "y": 241.4
       },
       "footprint": {
         "size": 6.8,

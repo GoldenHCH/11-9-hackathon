@@ -1,0 +1,58 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.home-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.home-heading {
+  margin: 0;
+  font-size: 16px;
+}
+
+.booth-link {
+  display: block;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--app-theme--ink);
+  margin-bottom: 4px;
+  overflow-wrap: anywhere;
+}
+
+.explain-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.explain-item {
+  display: flex;
+  gap: 12px;
+  padding: 14px;
+  box-shadow: var(--app-theme--shadow-small);
+}
+
+.explain-title {
+  margin: 0 0 4px;
+  font-weight: 700;
+}
+
+.explain-text {
+  margin: 0;
+  color: var(--app-theme--ink-muted);
+  font-size: 14px;
+}
+
+.privacy-note {
+  margin: 0;
+  font-size: 14px;
+  color: var(--app-theme--ink-muted);
+}

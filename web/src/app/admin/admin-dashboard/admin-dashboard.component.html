@@ -1,0 +1,135 @@
+<section class="app-page admin">
+  <app-screen-toolbar title="Organizer" subtitle="KubeCon NA 2026 · the whole event, live">
+    @if (overview) {
+      <button mat-stroked-button type="button" (click)="forgetKey()">
+        <div class="btn-content">
+          <mat-icon>logout</mat-icon>
+          <span>Forget link</span>
+        </div>
+      </button>
+    }
+  </app-screen-toolbar>
+
+  @if (showGate) {
+    <app-access-gate
+      heading="Organizers only"
+      message="This view needs the organizer link. Paste it here and this device remembers it."
+      icon="admin_panel_settings"
+      fieldLabel="Organizer link"
+      hint="It ends in /admin?k=…"
+      [errorMessage]="gateMessage"
+      (errorDismissed)="gateMessage = ''"
+      (linkSubmitted)="openLink($event)"
+    ></app-access-gate>
+  } @else {
+    <app-state-wrapper
+      [isLoading]="isLoading && !overview"
+      [errorMessage]="overview ? '' : errorMessage"
+      [skeletonRows]="6"
+      (retry)="retry()"
+    >
+      @if (overview) {
+        @if (errorMessage) {
+          <app-alert-banner
+            [message]="errorMessage + ' Showing the last numbers we had.'"
+            actionLabel="Try again"
+            (action)="retry()"
+            (dismissed)="errorMessage = ''"
+          ></app-alert-banner>
+        }
+
+        <p class="admin-updated">{{ updatedText }} · refreshes every 30 seconds</p>
+
+        <section class="admin-tiles" aria-label="Event totals" aria-live="polite">
+          @for (kpi of kpis; track kpi.label) {
+            <app-stat-tile [label]="kpi.label" [value]="kpi.value" [detail]="kpi.detail" [icon]="kpi.icon"></app-stat-tile>
+          }
+        </section>
+
+        <div class="admin-grid">
+          <section class="admin-panel app-block" aria-labelledby="xp-heading">
+            <h2 id="xp-heading" class="admin-heading app-pixel">XP by type</h2>
+            <app-bar-list [items]="xpItems" label="XP by type" unit="XP"></app-bar-list>
+          </section>
+          <section class="admin-panel app-block" aria-labelledby="meet-heading">
+            <h2 id="meet-heading" class="admin-heading app-pixel">Meet funnel</h2>
+            <app-bar-list [items]="meetItems" label="Meet funnel" tone="accent"></app-bar-list>
+          </section>
+          <section class="admin-panel app-block" aria-labelledby="quest-heading">
+            <h2 id="quest-heading" class="admin-heading app-pixel">Quest funnel</h2>
+            <app-bar-list [items]="questItems" label="Quest funnel" tone="accent"></app-bar-list>
+          </section>
+        </div>
+
+        <div class="admin-grid admin-grid--two">
+          <section class="admin-panel app-block" aria-labelledby="rooms-heading">
+            <h2 id="rooms-heading" class="admin-heading app-pixel">Busiest rooms</h2>
+            <app-bar-list [items]="roomItems" label="Busiest rooms" unit="here" emptyMessage="No check-ins yet."></app-bar-list>
+          </section>
+          <section class="admin-panel app-block" aria-labelledby="bosses-heading">
+            <h2 id="bosses-heading" class="admin-heading app-pixel">Live bosses</h2>
+            @if (bosses.length === 0) {
+              <p class="admin-empty">No boss rooms are live right now.</p>
+            } @else {
+              <ul class="boss-list">
+                @for (boss of bosses; track boss.id) {
+                  <li class="boss">
+                    <div class="boss-text">
+                      <span class="boss-title">{{ boss.title }}</span>
+                      <span class="boss-meta">{{ boss.status }} · {{ boss.participants }} players</span>
+                    </div>
+                    <div class="boss-bar" aria-hidden="true">
+                      <div class="boss-fill" [style.width.%]="boss.percent"></div>
+                    </div>
+                    <span class="boss-health">{{ boss.health }} / {{ boss.maxHealth }} health</span>
+                  </li>
+                }
+              </ul>
+            }
+          </section>
+        </div>
+
+        <h2 class="admin-section-title app-pixel">Booths</h2>
+
+        <div class="admin-grid admin-grid--two">
+          <section class="admin-panel app-block" aria-labelledby="tier-heading">
+            <h3 id="tier-heading" class="admin-heading app-pixel">Visits by tier</h3>
+            <app-bar-list [items]="tierItems" label="Booth visits by tier" unit="visits"></app-bar-list>
+          </section>
+          <section class="admin-panel app-block" aria-labelledby="zone-heading">
+            <h3 id="zone-heading" class="admin-heading app-pixel">Visits by zone</h3>
+            <app-bar-list [items]="zoneItems" label="Booth visits by zone" unit="visits"></app-bar-list>
+          </section>
+          <section class="admin-panel app-block" aria-labelledby="top-heading">
+            <h3 id="top-heading" class="admin-heading app-pixel">Top 10 booths today</h3>
+            <app-bar-list [items]="topBooths" label="Top booths today" unit="visits" emptyMessage="No booth visits yet today."></app-bar-list>
+          </section>
+          <section class="admin-panel app-block" aria-labelledby="quiet-heading">
+            <h3 id="quiet-heading" class="admin-heading app-pixel">Quiet booths</h3>
+            <p class="admin-note">Diamond, Platinum and Gold booths with no visits today.</p>
+            @if (quietBooths.length === 0) {
+              <p class="admin-empty">Every top-tier booth has had visitors today.</p>
+            } @else {
+              <ul class="quiet-list">
+                @for (booth of quietBooths; track booth.id) {
+                  <li class="quiet-item">
+                    <a class="quiet-link" [routerLink]="['/exhibitors', booth.id]">{{ booth.name }}</a>
+                    <span class="quiet-detail">{{ booth.detail }}</span>
+                  </li>
+                }
+              </ul>
+              @if (quietBoothsHidden > 0) {
+                <p class="admin-note">and {{ quietBoothsHidden }} more. Filter the booth table by tier to see them all.</p>
+              }
+            }
+          </section>
+        </div>
+
+        <section class="admin-panel app-block" aria-labelledby="table-heading">
+          <h3 id="table-heading" class="admin-heading app-pixel">Every booth</h3>
+          <app-booth-table [rows]="tableRows"></app-booth-table>
+        </section>
+      }
+    </app-state-wrapper>
+  }
+</section>

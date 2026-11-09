@@ -120,15 +120,39 @@ function embedInBackground(note: IStoredBoothNote): void {
     .catch((error: unknown) => logger.warn({ err: error, noteId: note.id }, 'booth note embedding skipped'));
 }
 
+async function markScanned(noteId: string, scannedAt: string): Promise<void> {
+  try {
+    await getEsClient().update(
+      { index: indexNames.BOOTH_NOTES, id: noteId, doc: { lastScanAt: scannedAt }, refresh: true },
+      esOptions(esTimeouts.WRITE_MS),
+    );
+  } catch (error) {
+    logger.warn({ err: error, noteId }, 'booth scan time not recorded');
+  }
+}
+
+export async function lastBoothScanAt(attendeeId: string, locationId: string): Promise<string | undefined> {
+  const response = await getEsClient().get<IStoredBoothNote>(
+    { index: indexNames.BOOTH_NOTES, id: boothNoteIdFor(attendeeId, locationId), _source_includes: ['lastScanAt'] },
+    { ...esOptions(esTimeouts.DEFAULT_MS), ignore: [404] },
+  );
+
+  return response.found ? response._source?.lastScanAt : undefined;
+}
+
 export async function openBoothNote(attendeeId: string, location: ILocation): Promise<{ note: IBoothNote; created: boolean }> {
   const noteId = boothNoteIdFor(attendeeId, location.id);
   const existing = await getNote(noteId);
 
+  const scannedAt = new Date().toISOString();
+
   if (existing) {
+    await markScanned(noteId, scannedAt);
+
     return { note: publicBoothNote(existing.note), created: false };
   }
 
-  const note = emptyNote(attendeeId, location, new Date().toISOString());
+  const note: IStoredBoothNote = { ...emptyNote(attendeeId, location, scannedAt), lastScanAt: scannedAt };
 
   try {
     await writeNote(note);
@@ -291,7 +315,7 @@ export async function listBoothNotes(attendeeId: string): Promise<IBoothNote[]> 
     {
       index: indexNames.BOOTH_NOTES,
       size: 200,
-      query: { bool: { filter: [{ term: { attendeeId } }, kindIsOrLegacy(docKinds.BOOTH_NOTE)] } },
+      query: { bool: { filter: [{ term: { attendeeId } }, kindIsOrLegacy(docKinds.BOOTH_NOTE)], must_not: [{ term: { kind: 'photo' } }] } },
       sort: [{ updatedAt: { order: 'desc' } }],
       _source: { excludes: ['noteText'] },
     },

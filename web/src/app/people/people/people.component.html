@@ -1,0 +1,63 @@
+<section class="app-page">
+  <app-screen-toolbar title="People" subtitle="Players working on what you’re working on"></app-screen-toolbar>
+
+  <div class="people-filter">
+    <mat-slide-toggle [checked]="hereOnly" [disabled]="isLoading" (change)="onHereOnlyChange($event)">Here now only</mat-slide-toggle>
+  </div>
+
+  @if (actionError) {
+    <app-alert-banner [message]="actionError" (dismissed)="actionError = ''"></app-alert-banner>
+  }
+
+  @if (incoming.length) {
+    <article class="offer kq-block" aria-live="polite">
+      <mat-icon class="offer-icon" aria-hidden="true">waving_hand</mat-icon>
+      <div class="offer-text">
+        <h2 class="offer-title kq-pixel">Someone nearby wants to meet you</h2>
+        <p class="offer-body">
+          Say yes and you’ll both see who it is, a campfire and a time.
+          @if (incoming.length > 1) {
+            <span>{{ incoming.length - 1 }} more waiting after this one.</span>
+          }
+        </p>
+      </div>
+      <div class="offer-actions">
+        <button mat-stroked-button type="button" [disabled]="busyIds.has(incoming[0].partner.id)" (click)="respond(incoming[0], 'decline')">
+          Not now
+        </button>
+        <button mat-flat-button type="button" [disabled]="busyIds.has(incoming[0].partner.id)" (click)="respond(incoming[0], 'accept')">
+          @if (busyIds.has(incoming[0].partner.id)) {
+            <mat-spinner diameter="20"></mat-spinner>
+          } @else {
+            Accept
+          }
+        </button>
+      </div>
+    </article>
+  }
+
+  <app-state-wrapper
+    [isLoading]="isLoading"
+    [errorMessage]="errorMessage"
+    [isEmpty]="!matches.length"
+    emptyIcon="group"
+    [emptyMessage]="emptyMessage"
+    [emptyActionLabel]="meetingOn ? '' : 'Open profile'"
+    (emptyAction)="goToProfile()"
+    (retry)="load()"
+  >
+    <ul class="people-list">
+      @for (match of matches; track match.player.id) {
+        <li>
+          <app-person-card
+            [match]="match"
+            [meet]="meetsByPartner.get(match.player.id)"
+            [isBusy]="busyIds.has(match.player.id)"
+            (propose)="propose($event)"
+            (accept)="respond($event, 'accept')"
+          ></app-person-card>
+        </li>
+      }
+    </ul>
+  </app-state-wrapper>
+</section>

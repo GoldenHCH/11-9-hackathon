@@ -1,0 +1,569 @@
+{
+  "tool": "list_schedule",
+  "endpoint": "POST /api/tools/list_schedule",
+  "request": {
+    "attendeeId": "p_zqxtrvalqA7IoBqp",
+    "day": "2026-11-10"
+  },
+  "status": 200,
+  "response": {
+    "day": "2026-11-10",
+    "days": [
+      "2026-11-09",
+      "2026-11-10",
+      "2026-11-11",
+      "2026-11-12"
+    ],
+    "now": "2026-11-09T22:22:00.093Z",
+    "from": "2026-11-10T07:00:00.000Z",
+    "to": "2026-11-11T07:00:00.000Z",
+    "total": 25,
+    "buildings": [
+      "Hyatt Regency",
+      "Salt Palace"
+    ],
+    "slots": [
+      {
+        "start": "2026-11-10T16:00:00.000Z",
+        "end": "2026-11-10T16:30:00.000Z",
+        "sessions": [
+          {
+            "id": "kc26-tue-keynote-welcome",
+            "title": "Welcome + Opening Remarks",
+            "speakers": [
+              "Jonathan Bryce",
+              "Chris Aniszczyk",
+              "Robert Nishihara",
+              "Rita Zhang",
+              "Kevin Cochrane",
+              "Bassam Tabbara"
+            ],
+            "sessionType": "keynote",
+            "track": "other",
+            "material": "wood",
+            "start": "2026-11-10T09:00:00-07:00",
+            "end": "2026-11-10T09:31:00-07:00",
+            "locationId": "salt-palace-level-1-hall-de",
+            "building": "Salt Palace",
+            "level": "Level 1",
+            "room": "Hall DE",
+            "isBoss": true,
+            "checkedInCount": 0,
+            "inItinerary": false
+          }
+        ]
+      },
+      {
+        "start": "2026-11-10T16:30:00.000Z",
+        "end": "2026-11-10T17:00:00.000Z",
+        "sessions": [
+          {
+            "id": "kc26-tue-keynote-agent-substrate",
+            "title": "Agent Substrate: Open Layers for Agentic Systems",
+            "speakers": [
+              "Jaana Dogan",
+              "Dmitry Berkovich",
+              "Tim Hockin",
+              "Eitan Yarmush",
+              "Luiz Scheidegger"
+            ],
+            "sessionType": "keynote",
+            "track": "ai",
+            "material": "circuit",
+            "start": "2026-11-10T09:33:00-07:00",
+            "end": "2026-11-10T09:40:00-07:00",
+            "locationId": "salt-palace-level-1-hall-de",
+            "building": "Salt Palace",
+            "level": "Level 1",
+            "room": "Hall DE",
+            "isBoss": true,
+            "checkedInCount": 0,
+            "inItinerary": false
+          }
+        ]
+      },
+      {
+        "start": "2026-11-10T17:00:00.000Z",
+        "end": "2026-11-10T17:30:00.000Z",
+        "sessions": [
+          {
+            "id": "kc26-tue-keynote-openrl",
+            "title": "Pods in the Wild: Reinforcement Learning on Kubernetes with OpenRL",
+            "speakers": [
+              "Sunil Arora",
+              "Ravin Kumar"
+            ],
+            "sessionType": "keynote",
+            "track": "ai",
+            "material": "circuit",
+            "start": "2026-11-10T10:05:00-07:00",
+            "end": "2026-11-10T10:13:00-07:00",
+            "locationId": "salt-palace-level-1-hall-de",
+            "building": "Salt Palace",
+            "level": "Level 1",
+            "room": "Hall DE",
+            "isBoss": true,
+            "checkedInCount": 0,
+            "inItinerary": false
+          },
+          {
+            "id": "kc26-tue-keynote-identity-crisis",
+            "title": "The Identity Crisis: Who is the AI Agent in Your Cluster?",
+            "speakers": [
+              "Abdel Sghiouar"
+            ],
+            "sessionType": "keynote",
+            "track": "security",
+            "material": "iron",
+            "start": "2026-11-10T10:29:00-07:00",
+            "end": "2026-11-10T10:39:00-07:00",
+            "locationId": "salt-palace-level-1-hall-de",
+            "building": "Salt Palace",
+            "level": "Level 1",
+            "room": "Hall DE",
+            "isBoss": true,
+            "checkedInCount": 0,
+            "inItinerary": false
+          }
+        ]
+      },
+      {
+        "start": "2026-11-10T17:30:00.000Z",
+        "end": "2026-11-10T18:00:00.000Z",
+        "sessions": [
+          {
+            "id": "kc26-tue-keynote-physical-ai",
+            "title": "From Pod to Actuator: Physical AI and the Future of Kubernetes",
+            "speakers": [
+              "Abhilash Somasamudramath"
+            ],
+            "sessionType": "keynote",
+            "track": "ai",
+            "material": "circuit",
+            "start": "2026-11-10T10:41:00-07:00",
+            "end": "2026-11-10T10:46:00-07:00",
+            "locationId": "salt-palace-level-1-hall-de",
+            "building": "Salt Palace",
+            "level": "Level 1",
+            "room": "Hall DE",
+            "isBoss": true,
+            "checkedInCount": 0,
+            "inItinerary": false
+          }
+        ]
+      },
+      {
+        "start": "2026-11-10T18:30:00.000Z",
+        "end": "2026-11-10T19:00:00.000Z",
+        "sessions": [
+          {
+            "id": "kc26-tue-data-platform-panel",
+            "title": "Why We Bet the Data Platform on Kubernetes",
+            "speakers": [
+              "Vara Bonthu",
+              "Ying Xiong",
+              "Rainie Li",
+              "Damon Cortesi",
+              "Padma Aradhyula"
+            ],
+            "sessionType": "panel",
+            "track": "data",
+            "material": "crate",
+            "start": "2026-11-10T11:30:00-07:00",
+            "end": "2026-11-10T12:00:00-07:00",
+            "locationId": "salt-palace-level-1-151",
+            "building": "Salt Palace",
+            "level": "Level 1",
+            "room": "151",
+            "isBoss": false,
+            "checkedInCount": 0,
+            "inItinerary": false
+          },
+          {
+            "id": "kc26-tue-agent-needs-a-platform",
+            "title": "Your Agent Needs a Platform: Cloud Native Infrastructure for Multi-Agent AI Systems",
+            "speakers": [
+              "Soham Ghadge"
+            ],
+            "sessionType": "breakout",
+            "track": "ai",
+            "material": "circuit",
+            "start": "2026-11-10T11:30:00-07:00",
+            "end": "2026-11-10T12:00:00-07:00",
+            "locationId": "salt-palace-level-2-255-bc",
+            "building": "Salt Palace",
+            "level": "Level 2",
+            "room": "255 BC",
+            "isBoss": false,
+            "checkedInCount": 0,
+            "inItinerary": true
+          },
+          {
+            "id": "kc26-tue-gateway-high-and-dry",
+            "title": "Will Your Gateway Leave You High and Dry?",
+            "speakers": [
+              "John Howard",
+              "Mitch Connors"
+            ],
+            "sessionType": "breakout",
+            "track": "connectivity",
+            "material": "copper",
+            "start": "2026-11-10T11:30:00-07:00",
+            "end": "2026-11-10T12:00:00-07:00",
+            "locationId": "salt-palace-level-2-255-ef",
+            "building": "Salt Palace",
+            "level": "Level 2",
+            "room": "255 EF",
+            "isBoss": false,
+            "checkedInCount": 0,
+            "inItinerary": false
+          },
+          {
+            "id": "kc26-tue-saturated-by-design",
+            "title": "Saturated by Design: Maximizing Cluster Allocation in On-Premises Kubernetes",
+            "speakers": [
+              "Dakota Sullivan",
+              "Isaac Wilson"
+            ],
+            "sessionType": "breakout",
+            "track": "operations",
+            "material": "glass",
+            "start": "2026-11-10T11:30:00-07:00",
+            "end": "2026-11-10T12:00:00-07:00",
+            "locationId": "salt-palace-level-1-grand-ballroom-ace",
+            "building": "Salt Palace",
+            "level": "Level 1",
+            "room": "Grand Ballroom ACE",
+            "isBoss": false,
+            "checkedInCount": 0,
+            "inItinerary": false
+          },
+          {
+            "id": "kc26-tue-student-soc",
+            "title": "Securing Rural Colorado with Open Source: Student-Led SOC on Kubernetes",
+            "speakers": [
+              "Maciej Wal"
+            ],
+            "sessionType": "breakout",
+            "track": "other",
+            "material": "wood",
+            "start": "2026-11-10T11:30:00-07:00",
+            "end": "2026-11-10T12:00:00-07:00",
+            "locationId": "salt-palace-level-1-grand-ballroom-bdf",
+            "building": "Salt Palace",
+            "level": "Level 1",
+            "room": "Grand Ballroom BDF",
+            "isBoss": false,
+            "checkedInCount": 0,
+            "inItinerary": false
+          },
+          {
+            "id": "kc26-tue-already-have-a-platform",
+            "title": "So You Want to Build a Platform? You Probably Already Have One",
+            "speakers": [
+              "Juho Syrjänen"
+            ],
+            "sessionType": "breakout",
+            "track": "platform",
+            "material": "stone",
+            "start": "2026-11-10T11:30:00-07:00",
+            "end": "2026-11-10T12:00:00-07:00",
+            "locationId": "salt-palace-level-1-grand-ballroom-gi",
+            "building": "Salt Palace",
+            "level": "Level 1",
+            "room": "Grand Ballroom GI",
+            "isBoss": false,
+            "checkedInCount": 0,
+            "inItinerary": false
+          },
+          {
+            "id": "kc26-tue-ask-your-platform",
+            "title": "Ask Your Platform: Putting AI to Work Where the Questions Live",
+            "speakers": [
+              "Anton Alexander",
+              "Scott Adams"
+            ],
+            "sessionType": "breakout",
+            "track": "ai",
+            "material": "circuit",
+            "start": "2026-11-10T11:30:00-07:00",
+            "end": "2026-11-10T12:00:00-07:00",
+            "locationId": "salt-palace-level-1-grand-ballroom-h",
+            "building": "Salt Palace",
+            "level": "Level 1",
+            "room": "Grand Ballroom H",
+            "isBoss": false,
+            "checkedInCount": 0,
+            "inItinerary": false
+          },
+          {
+            "id": "kc26-tue-autoscaling-reality-check",
+            "title": "Autoscaling Reality Check: The Hands-On HTTP Optimization Challenge",
+            "speakers": [
+              "David Pech"
+            ],
+            "sessionType": "tutorial",
+            "track": "operations",
+            "material": "glass",
+            "start": "2026-11-10T11:30:00-07:00",
+            "end": "2026-11-10T12:50:00-07:00",
+            "locationId": "hyatt-regency-level-4-regency-ballroom-a",
+            "building": "Hyatt Regency",
+            "level": "Level 4",
+            "room": "Regency Ballroom A",
+            "isBoss": false,
+            "checkedInCount": 0,
+            "inItinerary": false
+          },
+          {
+            "id": "kc26-tue-portable-gpu-config",
+            "title": "One Recipe, Five Clouds, One Query: Portable GPU Configuration",
+            "speakers": [
+              "Christopher Haar",
+              "Yuan Chen"
+            ],
+            "sessionType": "breakout",
+            "track": "platform",
+            "material": "stone",
+            "start": "2026-11-10T11:30:00-07:00",
+            "end": "2026-11-10T12:00:00-07:00",
+            "locationId": "hyatt-regency-level-2-salt-lake-ballroom-c",
+            "building": "Hyatt Regency",
+            "level": "Level 2",
+            "room": "Salt Lake Ballroom C",
+            "isBoss": false,
+            "checkedInCount": 0,
+            "inItinerary": false
+          },
+          {
+            "id": "kc26-tue-vulnerability-tsunami",
+            "title": "Mythos vs Maintainers: Drowning in the Vulnerability Tsunami",
+            "speakers": [
+              "Fabian Kammel",
+              "John Kjell"
+            ],
+            "sessionType": "breakout",
+            "track": "security",
+            "material": "iron",
+            "start": "2026-11-10T11:30:00-07:00",
+            "end": "2026-11-10T12:00:00-07:00",
+            "locationId": "hyatt-regency-level-2-salt-lake-ballroom-de",
+            "building": "Hyatt Regency",
+            "level": "Level 2",
+            "room": "Salt Lake Ballroom DE",
+            "isBoss": false,
+            "checkedInCount": 0,
+            "inItinerary": false
+          }
+        ]
+      },
+      {
+        "start": "2026-11-10T19:00:00.000Z",
+        "end": "2026-11-10T19:30:00.000Z",
+        "sessions": [
+          {
+            "id": "kc26-tue-signed-sealed-denied",
+            "title": "Signed, Sealed, Denied: Attestation-Driven Admission with Kyverno + CEL",
+            "speakers": [
+              "Chad Swenson",
+              "Sagar Kundral"
+            ],
+            "sessionType": "breakout",
+            "track": "security",
+            "material": "iron",
+            "start": "2026-11-10T12:20:00-07:00",
+            "end": "2026-11-10T12:50:00-07:00",
+            "locationId": "salt-palace-level-1-151",
+            "building": "Salt Palace",
+            "level": "Level 1",
+            "room": "151",
+            "isBoss": false,
+            "checkedInCount": 0,
+            "inItinerary": false
+          },
+          {
+            "id": "kc26-tue-kserve-production-llms",
+            "title": "Beyond Model Serving: Running Production LLMs on Kubernetes with KServe",
+            "speakers": [
+              "Johnu George",
+              "Jooho Lee"
+            ],
+            "sessionType": "breakout",
+            "track": "ai",
+            "material": "circuit",
+            "start": "2026-11-10T12:20:00-07:00",
+            "end": "2026-11-10T12:50:00-07:00",
+            "locationId": "salt-palace-level-2-250-a-c",
+            "building": "Salt Palace",
+            "level": "Level 2",
+            "room": "250 A-C",
+            "isBoss": false,
+            "checkedInCount": 0,
+            "inItinerary": false
+          },
+          {
+            "id": "kc26-tue-air-gapped-nodes",
+            "title": "No Network? No Problem: Kubernetes Nodes in Air-Gapped VPCs",
+            "speakers": [
+              "Shachar Tal"
+            ],
+            "sessionType": "breakout",
+            "track": "connectivity",
+            "material": "copper",
+            "start": "2026-11-10T12:20:00-07:00",
+            "end": "2026-11-10T12:50:00-07:00",
+            "locationId": "salt-palace-level-2-255-ef",
+            "building": "Salt Palace",
+            "level": "Level 2",
+            "room": "255 EF",
+            "isBoss": false,
+            "checkedInCount": 0,
+            "inItinerary": false
+          },
+          {
+            "id": "kc26-tue-surviving-the-churn",
+            "title": "Surviving the Churn: Read Replicas and Controllers for Busy Clusters",
+            "speakers": [
+              "Ryan Brewster"
+            ],
+            "sessionType": "breakout",
+            "track": "operations",
+            "material": "glass",
+            "start": "2026-11-10T12:20:00-07:00",
+            "end": "2026-11-10T12:50:00-07:00",
+            "locationId": "salt-palace-level-1-grand-ballroom-ace",
+            "building": "Salt Palace",
+            "level": "Level 1",
+            "room": "Grand Ballroom ACE",
+            "isBoss": false,
+            "checkedInCount": 0,
+            "inItinerary": false
+          },
+          {
+            "id": "kc26-tue-testing-cncf-stack",
+            "title": "When Infrastructure Breaks in Production: Testing the Full CNCF Stack",
+            "speakers": [
+              "Priya Namasivayam"
+            ],
+            "sessionType": "breakout",
+            "track": "platform",
+            "material": "stone",
+            "start": "2026-11-10T12:20:00-07:00",
+            "end": "2026-11-10T12:50:00-07:00",
+            "locationId": "salt-palace-level-1-grand-ballroom-gi",
+            "building": "Salt Palace",
+            "level": "Level 1",
+            "room": "Grand Ballroom GI",
+            "isBoss": false,
+            "checkedInCount": 0,
+            "inItinerary": false
+          },
+          {
+            "id": "kc26-tue-cache-aware-inference",
+            "title": "What the Docs Don't Tell You: A Telecom's Year Operating Cache-Aware LLM Inference",
+            "speakers": [
+              "YoungJoon Jeong",
+              "Seol Heo"
+            ],
+            "sessionType": "breakout",
+            "track": "ai",
+            "material": "circuit",
+            "start": "2026-11-10T12:20:00-07:00",
+            "end": "2026-11-10T12:50:00-07:00",
+            "locationId": "salt-palace-level-1-grand-ballroom-h",
+            "building": "Salt Palace",
+            "level": "Level 1",
+            "room": "Grand Ballroom H",
+            "isBoss": false,
+            "checkedInCount": 0,
+            "inItinerary": false
+          },
+          {
+            "id": "kc26-tue-intent-driven-idps",
+            "title": "Platform Engineering after the AI Hype: Why IDPs Must Become Intent-Driven",
+            "speakers": [
+              "Daniel Bryant"
+            ],
+            "sessionType": "breakout",
+            "track": "platform",
+            "material": "stone",
+            "start": "2026-11-10T12:20:00-07:00",
+            "end": "2026-11-10T12:50:00-07:00",
+            "locationId": "hyatt-regency-level-2-salt-lake-ballroom-c",
+            "building": "Hyatt Regency",
+            "level": "Level 2",
+            "room": "Salt Lake Ballroom C",
+            "isBoss": false,
+            "checkedInCount": 0,
+            "inItinerary": false
+          }
+        ]
+      },
+      {
+        "start": "2026-11-10T21:30:00.000Z",
+        "end": "2026-11-10T22:00:00.000Z",
+        "sessions": [
+          {
+            "id": "kc26-tue-operator-confused-deputy",
+            "title": "The Operator Calls Are Coming from Inside the Namespace",
+            "speakers": [
+              "Justin O'Leary"
+            ],
+            "sessionType": "breakout",
+            "track": "security",
+            "material": "iron",
+            "start": "2026-11-10T14:50:00-07:00",
+            "end": "2026-11-10T15:20:00-07:00",
+            "locationId": "salt-palace-level-1-151",
+            "building": "Salt Palace",
+            "level": "Level 1",
+            "room": "151",
+            "isBoss": false,
+            "checkedInCount": 0,
+            "inItinerary": false
+          },
+          {
+            "id": "kc26-tue-tracing-at-scale",
+            "title": "Tracing at Scale: Running a 16 Billion Spans/Hour Pipeline at Nubank",
+            "speakers": [
+              "Felipe Araujo",
+              "Kaynan Coelho"
+            ],
+            "sessionType": "breakout",
+            "track": "operations",
+            "material": "glass",
+            "start": "2026-11-10T14:50:00-07:00",
+            "end": "2026-11-10T15:20:00-07:00",
+            "locationId": "salt-palace-level-1-grand-ballroom-ace",
+            "building": "Salt Palace",
+            "level": "Level 1",
+            "room": "Grand Ballroom ACE",
+            "isBoss": false,
+            "checkedInCount": 0,
+            "inItinerary": true
+          },
+          {
+            "id": "kc26-tue-feeding-the-gpu",
+            "title": "Feeding the GPU: Streaming Data into Training, Lakehouse, and Serving",
+            "speakers": [
+              "Dheeraj Kapur",
+              "Deepak Choudhary"
+            ],
+            "sessionType": "breakout",
+            "track": "data",
+            "material": "crate",
+            "start": "2026-11-10T14:50:00-07:00",
+            "end": "2026-11-10T15:20:00-07:00",
+            "locationId": "hyatt-regency-level-4-regency-ballroom-cd",
+            "building": "Hyatt Regency",
+            "level": "Level 4",
+            "room": "Regency Ballroom CD",
+            "isBoss": false,
+            "checkedInCount": 0,
+            "inItinerary": false
+          }
+        ]
+      }
+    ]
+  }
+}

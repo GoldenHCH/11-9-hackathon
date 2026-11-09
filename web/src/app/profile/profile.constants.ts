@@ -40,6 +40,7 @@ export const settingOptions: readonly ISettingOption[] = [
 ];
 
 export const moreLinks = [
+  { path: '/board', label: 'Leaderboard', icon: 'emoji_events' },
   { path: '/meets', label: 'My meets', icon: 'handshake' },
   { path: '/code', label: 'My handshake code', icon: 'qr_code_2' },
   { path: '/connections', label: 'People met', icon: 'group' },

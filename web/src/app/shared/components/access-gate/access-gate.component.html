@@ -1,0 +1,26 @@
+<section class="gate app-block" aria-labelledby="gate-heading">
+  <div class="gate-heading-row">
+    <mat-icon class="gate-icon" aria-hidden="true">{{ icon }}</mat-icon>
+    <h2 id="gate-heading" class="gate-heading app-pixel">{{ heading }}</h2>
+  </div>
+  <p class="gate-message">{{ message }}</p>
+  @if (errorMessage) {
+    <app-alert-banner [message]="errorMessage" (dismissed)="errorDismissed.emit()"></app-alert-banner>
+  }
+  <form class="gate-form" (ngSubmit)="submit()">
+    <mat-form-field appearance="outline" class="gate-field">
+      <mat-label>{{ fieldLabel }}</mat-label>
+      <input matInput name="link" autocomplete="off" spellcheck="false" [(ngModel)]="link" />
+      @if (hint) {
+        <mat-hint>{{ hint }}</mat-hint>
+      }
+    </mat-form-field>
+    <button mat-flat-button type="submit" class="gate-submit" [disabled]="!link.trim()">
+      <div class="btn-content">
+        <mat-icon>key</mat-icon>
+        <span>Open</span>
+      </div>
+    </button>
+  </form>
+  <ng-content></ng-content>
+</section>

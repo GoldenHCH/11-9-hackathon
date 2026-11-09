@@ -1,7 +1,12 @@
-import { Router } from 'express';
+import express, { Request, Router } from 'express';
 import { appConfig } from '../config';
 import { buildRecapPdf } from '../recap/recap-pdf';
+import { pdfToText } from '../profile/pdf-text';
+import { importLimits } from '../profile/profile.constants';
+import { ToolError } from '../tools/tool-errors';
 import { findTool, listTools, toolRegistry } from '../tools';
+import { withToolSpan } from '../observability/tracing';
+import { boothPhotoImage, isBoothPhotoId } from '../photos/booth-photos';
 import { verifyScreenDisplayKey } from '../security/tokens';
 import { IClientConfig } from '../types/kubequest.interfaces';
 import { sendError, sendToolFailure } from './errors';
@@ -14,6 +19,28 @@ function screenKeyFrom(query: unknown, header: string | undefined): string {
   return fromQuery !== '' ? fromQuery : (header ?? '');
 }
 
+async function readUpload(request: Request): Promise<{ attendeeId: string; bytes: Uint8Array }> {
+  const contentType = request.get('content-type') ?? '';
+
+  if (!contentType.startsWith('multipart/form-data') || !Buffer.isBuffer(request.body)) {
+    throw new ToolError(400, 'invalid_input', 'Send the PDF as multipart/form-data with a "file" field and your attendeeId.');
+  }
+
+  const form = await new globalThis.Request('http://upload.local/', { method: 'POST', headers: { 'content-type': contentType }, body: request.body }).formData();
+  const attendeeId = form.get('attendeeId');
+  const file = form.get('file');
+
+  if (typeof attendeeId !== 'string' || attendeeId.trim() === '' || file === null || typeof file === 'string') {
+    throw new ToolError(400, 'invalid_input', 'Send the PDF in a "file" field and your attendeeId.');
+  }
+
+  if (file.type !== '' && file.type !== 'application/pdf') {
+    throw new ToolError(415, 'not_a_pdf', 'That file is not a PDF. Upload a PDF, or paste the text instead.');
+  }
+
+  return { attendeeId: attendeeId.trim(), bytes: new Uint8Array(await file.arrayBuffer()) };
+}
+
 function clientConfig(): IClientConfig {
   const { rumEndpoint, rumAuthToken, traceUrlTemplate } = appConfig.telemetry;
 
@@ -21,6 +48,7 @@ function clientConfig(): IClientConfig {
     appVersion: appConfig.appVersion,
     publicBaseUrl: appConfig.publicBaseUrl,
     conferenceTimeZone: appConfig.conferenceTimeZone,
+    demoSimulateScans: appConfig.demoSimulateScans,
     ...(traceUrlTemplate ? { traceUrlTemplate } : {}),
     ...(rumEndpoint && rumAuthToken ? { rum: { endpoint: rumEndpoint, authToken: rumAuthToken } } : {}),
   };
@@ -59,6 +87,16 @@ export function apiRoutes(): Router {
     }
   });
 
+  router.post('/api/profile-import', express.raw({ type: 'multipart/form-data', limit: importLimits.MAX_PDF_BYTES + 64 * 1024 }), async (request, response) => {
+    try {
+      const { attendeeId, bytes } = await readUpload(request);
+      const text = await pdfToText(bytes);
+      response.set('Cache-Control', 'no-store').json(await toolRegistry.import_profile.execute({ attendeeId, text }));
+    } catch (error) {
+      sendToolFailure(response, error);
+    }
+  });
+
   router.get('/api/screen-token/:locationId', async (request, response) => {
     try {
       const key = screenKeyFrom(request.query['key'], request.get('x-screen-key'));
@@ -92,6 +130,30 @@ export function apiRoutes(): Router {
         .set('Cache-Control', 'no-store')
         .set('Content-Disposition', 'attachment; filename="kubequest-recap.pdf"')
         .send(Buffer.from(pdf));
+    } catch (error) {
+      sendToolFailure(response, error);
+    }
+  });
+
+  router.get('/api/booth-photos/:file', async (request, response) => {
+    const photoId = request.params.file.replace(/\.jpg$/, '');
+
+    if (!isBoothPhotoId(photoId)) {
+      sendError(response, 404, 'unknown_photo', 'That photo is gone.');
+
+      return;
+    }
+
+    try {
+      const image = await withToolSpan('booth_photo_image', { 'kubequest.booth_photo.id': photoId }, () => boothPhotoImage(photoId));
+
+      if (!image) {
+        sendError(response, 404, 'unknown_photo', 'That photo is gone.');
+
+        return;
+      }
+
+      response.type(image.mimeType).set('Cache-Control', 'public, max-age=3600').set('ETag', `"${photoId}"`).send(image.body);
     } catch (error) {
       sendToolFailure(response, error);
     }

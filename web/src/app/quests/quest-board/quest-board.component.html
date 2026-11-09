@@ -83,6 +83,9 @@
 
     <div class="board-toolbar">
       <h1 class="board-title kq-pixel">Quests</h1>
+      <a mat-stroked-button class="trophy" routerLink="/board" aria-label="Leaderboard">
+        <mat-icon class="trophy-icon">emoji_events</mat-icon>
+      </a>
       <button
         mat-stroked-button
         class="refresh"
@@ -109,6 +112,13 @@
         [locationId]="boss.locationId"
         (unavailable)="onBossUnavailable(boss.key)"
       ></app-boss-card>
+    }
+
+    @if (photoMessage) {
+      <p class="board-photo-added" role="status">
+        <mat-icon aria-hidden="true">photo_camera</mat-icon>
+        <span>{{ photoMessage }}</span>
+      </p>
     }
 
     @if (actionError) {
@@ -193,6 +203,7 @@
                 mode="active"
                 [isBusy]="busyQuestIds.has(quest.id)"
                 (respond)="onRespond($event)"
+                (photoAdded)="onPhotoAdded($event)"
               ></app-quest-card>
             }
           </div>

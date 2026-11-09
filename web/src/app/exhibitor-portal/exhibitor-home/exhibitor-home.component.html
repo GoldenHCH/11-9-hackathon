@@ -1,0 +1,84 @@
+<section class="app-page home">
+  <app-screen-toolbar title="Your booth" subtitle="For booth staff at the Solutions Showcase and Project Pavilion">
+    @if (hasAdminKey) {
+      <a mat-stroked-button routerLink="/admin">
+        <div class="btn-content">
+          <mat-icon>insights</mat-icon>
+          <span>Organizer view</span>
+        </div>
+      </a>
+    }
+  </app-screen-toolbar>
+
+  <p class="app-visually-hidden" aria-live="polite">{{ liveMessage }}</p>
+
+  @if (savedBooths.length > 0) {
+    <section class="home-section" aria-labelledby="saved-heading">
+      <h2 id="saved-heading" class="home-heading app-pixel">Booths on this device</h2>
+      <div class="app-card-grid">
+        @for (booth of savedBooths; track booth.outpostId) {
+          <mat-card class="app-card" appearance="outlined">
+            <mat-card-content>
+              <div class="app-card-header">
+                <div class="app-card-icon">
+                  <mat-icon aria-hidden="true">storefront</mat-icon>
+                </div>
+                <div class="app-card-content">
+                  <a class="booth-link" [routerLink]="['/exhibitor', booth.outpostId]">{{ booth.name }}</a>
+                  <p>Open the dashboard and check-in QR</p>
+                </div>
+                <button
+                  mat-icon-button
+                  type="button"
+                  [attr.aria-label]="'Forget ' + booth.name + ' on this device'"
+                  (click)="forget(booth)"
+                >
+                  <mat-icon>delete_outline</mat-icon>
+                </button>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        }
+      </div>
+    </section>
+  }
+
+  <app-access-gate
+    heading="Paste your staff link"
+    message="Your organizer sent each booth a private staff link. Paste it here once and this device remembers it."
+    icon="key"
+    fieldLabel="Staff link"
+    hint="It looks like https://kube-quest.cnh.radarhq.io/exhibitor/your-booth?k=…"
+    [errorMessage]="linkError"
+    (errorDismissed)="linkError = ''"
+    (linkSubmitted)="openLink($event)"
+  ></app-access-gate>
+
+  <section class="home-section" aria-labelledby="explain-heading">
+    <h2 id="explain-heading" class="home-heading app-pixel">What staff get</h2>
+    <ul class="explain-list">
+      <li class="explain-item app-block">
+        <mat-icon aria-hidden="true">groups</mat-icon>
+        <div>
+          <p class="explain-title">Live visitors</p>
+          <p class="explain-text">Who is at your booth now, visits by hour, first-timers and your rank among booths today.</p>
+        </div>
+      </li>
+      <li class="explain-item app-block">
+        <mat-icon aria-hidden="true">qr_code_2</mat-icon>
+        <div>
+          <p class="explain-title">A QR to print</p>
+          <p class="explain-text">Players scan it to check in at your booth and earn XP. Print it or show it on a screen.</p>
+        </div>
+      </li>
+      <li class="explain-item app-block">
+        <mat-icon aria-hidden="true">flag</mat-icon>
+        <div>
+          <p class="explain-title">Booth quests</p>
+          <p class="explain-text">How many players were sent your way by a quest, and how many completed it.</p>
+        </div>
+      </li>
+    </ul>
+    <p class="privacy-note">You see public handles and topic totals only. Never emails, names or contact details.</p>
+  </section>
+</section>

@@ -1,5 +1,5 @@
 import { IBoothNote } from './kubequest.interfaces';
-import { AiProvider, AiPurpose, BannerId, CheckInRejection, HandshakeQuestionSource, HandshakeStatus, IsoDateString, Material, XpEventType } from './kubequest.types';
+import { AiProvider, AiPurpose, BannerId, CheckInRejection, HandshakeQuestionSource, HandshakeStatus, IsoDateString, Material, NotificationType, XpEventType } from './kubequest.types';
 
 export interface IAwardXpInput {
   attendeeId: string;
@@ -82,6 +82,28 @@ export interface IStoredBoothNote extends IBoothNote {
   attendeeId: string;
   noteText?: string;
   kind?: 'booth_note';
+  lastScanAt?: IsoDateString;
+}
+
+export interface IStoredBoothPhoto {
+  id: string;
+  kind: 'photo';
+  attendeeId: string;
+  publicId: string;
+  handle: string;
+  faceSeed: string;
+  locationId: string;
+  boothName: string;
+  image: string;
+  mimeType: string;
+  width: number;
+  height: number;
+  bytes: number;
+  caption?: string;
+  createdAt: IsoDateString;
+  reports: number;
+  reportedBy: string[];
+  hidden: boolean;
 }
 
 export interface IStoredMessage {
@@ -92,4 +114,24 @@ export interface IStoredMessage {
   toId: string;
   text: string;
   at: IsoDateString;
+}
+
+export interface IStoredNotification {
+  kind: 'notification';
+  attendeeId: string;
+  type: NotificationType;
+  title: string;
+  body: string;
+  link: string;
+  dedupeKey: string;
+  createdAt: IsoDateString;
+  readAt: IsoDateString | null;
+}
+
+export interface INotificationDraft {
+  type: NotificationType;
+  title: string;
+  body: string;
+  link: string;
+  dedupeKey: string;
 }

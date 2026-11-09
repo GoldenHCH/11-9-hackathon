@@ -1,0 +1,22 @@
+@if (rows.length === 0) {
+  <p class="bar-list-empty">{{ emptyMessage }}</p>
+} @else {
+  <ul class="bar-list" [attr.aria-label]="label || null">
+    @for (row of rows; track $index) {
+      <li class="bar-list-row">
+        <div class="bar-list-text">
+          <span class="bar-list-label">{{ row.label }}</span>
+          <span class="bar-list-value">
+            {{ row.value }}{{ unit ? ' ' + unit : '' }}
+            @if (row.detail) {
+              <span class="bar-list-detail">· {{ row.detail }}</span>
+            }
+          </span>
+        </div>
+        <div class="bar-list-track" aria-hidden="true">
+          <div class="bar-list-fill" [class.bar-list-fill--accent]="tone === 'accent'" [style.width.%]="row.percent"></div>
+        </div>
+      </li>
+    }
+  </ul>
+}

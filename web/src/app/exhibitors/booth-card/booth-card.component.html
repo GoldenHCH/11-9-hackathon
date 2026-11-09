@@ -1,0 +1,37 @@
+<a class="booth-card app-card app-card--clickable" [routerLink]="['/exhibitors', exhibitor.id]">
+  <div class="booth-card-top">
+    <h3 class="booth-card-name">{{ exhibitor.name }}</h3>
+    <span class="tier-badge"><span class="app-visually-hidden">Tier: </span>{{ exhibitor.tier }}</span>
+  </div>
+
+  <div class="booth-card-line">
+    <mat-icon aria-hidden="true">{{ exhibitor.exhibitorType === 'project' ? 'hub' : 'storefront' }}</mat-icon>
+    <span>{{ boothLabel }}@if (whereLine) {<span> · {{ whereLine }}</span>}</span>
+  </div>
+
+  @if (!compact && topics.length > 0) {
+    <div class="topic-list">
+      <span class="app-visually-hidden">Topics: </span>
+      @for (topic of topics; track topic) {
+        <span class="topic-chip">{{ topicLabel(topic) }}</span>
+      }
+    </div>
+  }
+
+  @if (exhibitor.visitorsNow > 0 || exhibitor.visitedByMe) {
+    <div class="booth-card-status">
+      @if (exhibitor.visitorsNow > 0) {
+        <span class="status status--live">
+          <mat-icon aria-hidden="true">groups</mat-icon>
+          <span>{{ exhibitor.visitorsNow }} here now</span>
+        </span>
+      }
+      @if (exhibitor.visitedByMe) {
+        <span class="status status--visited">
+          <mat-icon aria-hidden="true">check_circle</mat-icon>
+          <span>Visited</span>
+        </span>
+      }
+    </div>
+  }
+</a>

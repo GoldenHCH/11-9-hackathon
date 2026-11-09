@@ -6,11 +6,13 @@ import {
   CheckInRejection,
   CheckInStatus,
   DeclineReason,
+  ExhibitorType,
   HandshakeQuestionSource,
   HandshakeRole,
   HandshakeStatus,
   IsoDateString,
   ItineraryItemKind,
+  NotificationType,
   LeaderboardBoard,
   LeaderboardPeriod,
   LocationKind,
@@ -57,6 +59,16 @@ export interface ILocation {
   askAbout?: string;
   topics?: string[];
   hasScreen?: boolean;
+  exhibitorType?: ExhibitorType;
+  categories?: string[];
+  hall?: string;
+  mapPosition?: IMapPoint;
+  schedule?: string;
+}
+
+export interface IMapPoint {
+  x: number;
+  y: number;
 }
 
 export interface ISpeaker {
@@ -113,6 +125,10 @@ export interface IAttendee {
   spotMe?: string;
   workingOn: string;
   headline?: string;
+  skills?: string[];
+  offers?: string[];
+  asks?: string[];
+  summary?: string;
   profileText: string;
   profile: IPlayerProfile;
   settings: IPlayerSettings;
@@ -127,6 +143,7 @@ export interface IAttendee {
   blockedIds: string[];
   createdAt: IsoDateString;
   links?: IProfileLinks;
+  itinerary?: IItineraryEntry[];
 }
 
 export interface IPublicPlayer {
@@ -535,6 +552,11 @@ export interface IScreenToken {
   scanUrl: string;
 }
 
+export interface IDemoScanToken {
+  locationId: string;
+  path: string;
+}
+
 export interface IRespondQuestResult {
   quest: IQuest;
   board: IQuestBoard;
@@ -559,6 +581,153 @@ export interface IOrganizerStats {
   quests: Partial<Record<QuestStatus, number>>;
   busiestRooms: IRoomCount[];
   bosses: IBossState[];
+  generatedAt: IsoDateString;
+}
+
+export interface IFacetCount {
+  value: string;
+  count: number;
+}
+
+export interface IExhibitorCard {
+  id: string;
+  name: string;
+  exhibitorType: ExhibitorType;
+  tier: string;
+  boothNumber: string;
+  hall?: string;
+  zone?: string;
+  topics: Track[];
+  categories: string[];
+  askAbout?: string;
+  visitorsNow: number;
+  visitedByMe?: boolean;
+}
+
+export interface IExhibitorDetail extends IExhibitorCard {
+  building: string;
+  level: string;
+  description?: string;
+  schedule?: string;
+  mapPosition?: IMapPoint;
+}
+
+export interface IExhibitorDirectory {
+  exhibitors: IExhibitorCard[];
+  total: number;
+  facets: {
+    types: IFacetCount[];
+    tiers: IFacetCount[];
+    zones: IFacetCount[];
+    topics: IFacetCount[];
+  };
+  generatedAt: IsoDateString;
+}
+
+export interface IExhibitorTalk {
+  id: string;
+  title: string;
+  start: IsoDateString;
+  end: IsoDateString;
+  where: string;
+  speakers: string[];
+  track: Track;
+}
+
+export interface IExhibitorLive {
+  visitorsNow: number;
+  visitsToday: number;
+  uniqueVisitorsToday: number;
+}
+
+export interface IExhibitorMe {
+  visited: boolean;
+  lastVisitAt?: IsoDateString;
+  questId?: string;
+  questStatus?: QuestStatus;
+}
+
+export interface IExhibitorPage {
+  exhibitor: IExhibitorDetail;
+  live: IExhibitorLive;
+  talks: IExhibitorTalk[];
+  playersHere: IPublicPlayer[];
+  nearby: IExhibitorCard[];
+  me?: IExhibitorMe;
+  expoMapUrl: string;
+  generatedAt: IsoDateString;
+}
+
+export interface IHourCount {
+  hour: IsoDateString;
+  visits: number;
+}
+
+export interface IExhibitorVisitor {
+  player: IPublicPlayer;
+  at: IsoDateString;
+  firstTimer: boolean;
+}
+
+export interface IExhibitorVisits {
+  now: number;
+  today: number;
+  uniqueToday: number;
+  conference: number;
+  uniqueConference: number;
+  firstTimersToday: number;
+}
+
+export interface IExhibitorRank {
+  position: number;
+  of: number;
+}
+
+export interface IExhibitorDashboard {
+  exhibitor: IExhibitorDetail;
+  scanUrl: string;
+  publicPageUrl: string;
+  visits: IExhibitorVisits;
+  byHour: IHourCount[];
+  visitorTopics: IFacetCount[];
+  visitorLevels: IFacetCount[];
+  recentVisitors: IExhibitorVisitor[];
+  hereNow: IPublicPlayer[];
+  quests: Partial<Record<QuestStatus, number>>;
+  rank: IExhibitorRank | null;
+  generatedAt: IsoDateString;
+}
+
+export interface IExhibitorStatRow {
+  exhibitor: IExhibitorCard;
+  visitsToday: number;
+  uniqueToday: number;
+  questsCompleted: number;
+  staffUrl: string;
+  scanUrl: string;
+}
+
+export interface IExhibitorGroupStat {
+  value: string;
+  exhibitors: number;
+  visits: number;
+}
+
+export interface IAdminExhibitorTotals {
+  total: number;
+  sponsors: number;
+  projects: number;
+  visitedToday: number;
+  visitsToday: number;
+  uniqueVisitorsToday: number;
+}
+
+export interface IAdminOverview {
+  stats: IOrganizerStats;
+  exhibitors: IAdminExhibitorTotals;
+  byTier: IExhibitorGroupStat[];
+  byZone: IExhibitorGroupStat[];
+  table: IExhibitorStatRow[];
   generatedAt: IsoDateString;
 }
 
@@ -593,6 +762,29 @@ export interface ISignUpInput {
   noWalking?: boolean;
   scanLocationId?: string;
   scanToken?: string;
+  headline?: string;
+  skills?: string[];
+  offers?: string[];
+  asks?: string[];
+  summary?: string;
+}
+
+export interface IImportProfileInput {
+  attendeeId: string;
+  text?: string;
+}
+
+export interface IImportedProfile {
+  headline: string;
+  role: string;
+  seniority: string;
+  skills: string[];
+  topics: string[];
+  workingOn: string;
+  offers: string[];
+  asks: string[];
+  summary: string;
+  provider: AiProvider;
 }
 
 export interface IUpdateSettingsInput {
@@ -693,6 +885,32 @@ export interface IOrganizerStatsInput {
   since?: IsoDateString;
 }
 
+export interface IListExhibitorsInput {
+  query?: string;
+  type?: ExhibitorType;
+  tier?: string;
+  zone?: string;
+  topic?: Track;
+  attendeeId?: string;
+  limit?: number;
+  offset?: number;
+}
+
+export interface IGetExhibitorInput {
+  outpostId: string;
+  attendeeId?: string;
+}
+
+export interface IExhibitorDashboardInput {
+  outpostId: string;
+  key: string;
+}
+
+export interface IAdminOverviewInput {
+  key: string;
+  since?: IsoDateString;
+}
+
 export interface IHandshakeCode {
   playerId: string;
   token: string;
@@ -770,6 +988,70 @@ export interface ISaveBoothNoteResult {
   newBanners: IBannerProgress[];
 }
 
+export interface IBoothPhotoUploader {
+  publicId: string;
+  handle: string;
+  faceSeed: string;
+}
+
+export interface IBoothPhoto {
+  id: string;
+  locationId: string;
+  boothName: string;
+  url: string;
+  width: number;
+  height: number;
+  caption?: string;
+  uploader: IBoothPhotoUploader;
+  createdAt: IsoDateString;
+  mine?: boolean;
+}
+
+export interface IUploadBoothPhotoInput {
+  attendeeId: string;
+  locationId: string;
+  image: string;
+  caption?: string;
+}
+
+export interface IUploadBoothPhotoResult {
+  photo: IBoothPhoto;
+  xp: number;
+  questCompleted: boolean;
+  message: string;
+  levelUp?: ILevelProgress;
+  newBanners: IBannerProgress[];
+}
+
+export interface IListBoothPhotosInput {
+  locationId: string;
+  attendeeId?: string;
+  limit?: number;
+}
+
+export interface IBoothPhotoList {
+  locationId: string;
+  photos: IBoothPhoto[];
+  count: number;
+}
+
+export interface IBoothPhotoActionInput {
+  attendeeId: string;
+  photoId: string;
+}
+
+export interface IReportBoothPhotoResult {
+  photoId: string;
+  reports: number;
+  hidden: boolean;
+  message: string;
+}
+
+export interface IDeleteBoothPhotoResult {
+  photoId: string;
+  deleted: boolean;
+}
+
 export interface IMessage {
   id: string;
   meetId: string;
@@ -782,6 +1064,37 @@ export interface ISendMessageInput {
   attendeeId: string;
   meetId: string;
   text: string;
+}
+
+export interface INotification {
+  id: string;
+  type: NotificationType;
+  title: string;
+  body: string;
+  link: string;
+  createdAt: IsoDateString;
+  readAt: IsoDateString | null;
+}
+
+export interface IListNotificationsInput {
+  attendeeId: string;
+  limit?: number;
+}
+
+export interface IListNotificationsResult {
+  items: INotification[];
+  unread: number;
+}
+
+export interface IMarkNotificationsReadInput {
+  attendeeId: string;
+  ids?: string[];
+  all?: boolean;
+}
+
+export interface IMarkNotificationsReadResult {
+  marked: number;
+  unread: number;
 }
 
 export interface IListMessagesInput {
@@ -841,6 +1154,101 @@ export interface IRecap {
   emailHtml: string;
 }
 
+export interface IItineraryEntry {
+  talkId: string;
+  addedAt: IsoDateString;
+}
+
+export interface IScheduleSession {
+  id: string;
+  title: string;
+  speakers: string[];
+  sessionType: SessionType;
+  track: Track;
+  material: Material;
+  start: IsoDateString;
+  end: IsoDateString;
+  locationId: string;
+  building: string;
+  level: string;
+  room: string;
+  isBoss: boolean;
+  checkedInCount: number;
+  inItinerary?: boolean;
+}
+
+export interface IScheduleSlot {
+  start: IsoDateString;
+  end: IsoDateString;
+  sessions: IScheduleSession[];
+}
+
+export interface IListScheduleInput {
+  attendeeId?: string;
+  day?: string;
+  from?: IsoDateString;
+  to?: IsoDateString;
+  track?: Track;
+  building?: string;
+  query?: string;
+}
+
+export interface ISchedule {
+  day: string;
+  days: string[];
+  now: IsoDateString;
+  from: IsoDateString;
+  to: IsoDateString;
+  total: number;
+  buildings: string[];
+  slots: IScheduleSlot[];
+}
+
+export interface IGetItineraryInput {
+  attendeeId: string;
+  day?: string;
+}
+
+export interface IItineraryChangeInput {
+  attendeeId: string;
+  talkId: string;
+}
+
+export interface IPlanItem {
+  id: string;
+  kind: ItineraryItemKind;
+  title: string;
+  start: IsoDateString;
+  end?: IsoDateString;
+  place?: IQuestPlace;
+  walkMinutes?: number;
+  walkFrom?: string;
+  gapMinutes?: number;
+  conflictsWith: string[];
+  talkId?: string;
+  questId?: string;
+  meetId?: string;
+  session?: IScheduleSession;
+  quizAvailable?: boolean;
+  isNow?: boolean;
+}
+
+export interface IItinerary {
+  now: IsoDateString;
+  day?: string;
+  plannedCount: number;
+  maxItems: number;
+  conflictCount: number;
+  items: IPlanItem[];
+}
+
+export interface IItineraryChangeResult {
+  talkId: string;
+  inItinerary: boolean;
+  plannedCount: number;
+  maxItems: number;
+}
+
 export interface IToolContracts extends IConnectionToolContracts {
   sign_in: { input: ISignInInput; output: ISignInResult };
   sign_up: { input: ISignUpInput; output: ISignUpResult };
@@ -848,6 +1256,7 @@ export interface IToolContracts extends IConnectionToolContracts {
   update_settings: { input: IUpdateSettingsInput; output: IProfile };
   check_in: { input: ICheckInInput; output: ICheckInResult };
   screen_token: { input: IScreenTokenInput; output: IScreenToken };
+  demo_scan_token: { input: IScreenTokenInput; output: IDemoScanToken };
   whats_around_me: { input: IAttendeeInput; output: IWhatsAroundMe };
   whats_next: { input: IAttendeeInput; output: IWhatsNext };
   search: { input: ISearchInput; output: ISearchResponse };
@@ -866,15 +1275,30 @@ export interface IToolContracts extends IConnectionToolContracts {
   inventory: { input: IAttendeeInput; output: IInventory };
   world: { input: IWorldInput; output: IWorld };
   organizer_stats: { input: IOrganizerStatsInput; output: IOrganizerStats };
+  list_exhibitors: { input: IListExhibitorsInput; output: IExhibitorDirectory };
+  get_exhibitor: { input: IGetExhibitorInput; output: IExhibitorPage };
+  exhibitor_dashboard: { input: IExhibitorDashboardInput; output: IExhibitorDashboard };
+  admin_overview: { input: IAdminOverviewInput; output: IAdminOverview };
   handshake_code: { input: IAttendeeInput; output: IHandshakeCode };
   start_handshake: { input: IStartHandshakeInput; output: IHandshake };
   handshake_state: { input: IHandshakeStateInput; output: IHandshakeStateResult };
   answer_handshake: { input: IAnswerHandshakeInput; output: IHandshake };
   save_booth_note: { input: ISaveBoothNoteInput; output: ISaveBoothNoteResult };
   list_booth_notes: { input: IAttendeeInput; output: IBoothNote[] };
+  upload_booth_photo: { input: IUploadBoothPhotoInput; output: IUploadBoothPhotoResult };
+  list_booth_photos: { input: IListBoothPhotosInput; output: IBoothPhotoList };
+  report_booth_photo: { input: IBoothPhotoActionInput; output: IReportBoothPhotoResult };
+  delete_booth_photo: { input: IBoothPhotoActionInput; output: IDeleteBoothPhotoResult };
   send_message: { input: ISendMessageInput; output: IMessage };
   list_messages: { input: IListMessagesInput; output: IMessage[] };
   recap: { input: IAttendeeInput; output: IRecap };
+  import_profile: { input: IImportProfileInput; output: IImportedProfile };
+  list_notifications: { input: IListNotificationsInput; output: IListNotificationsResult };
+  mark_notifications_read: { input: IMarkNotificationsReadInput; output: IMarkNotificationsReadResult };
+  list_schedule: { input: IListScheduleInput; output: ISchedule };
+  get_itinerary: { input: IGetItineraryInput; output: IItinerary };
+  add_to_itinerary: { input: IItineraryChangeInput; output: IItineraryChangeResult };
+  remove_from_itinerary: { input: IItineraryChangeInput; output: IItineraryChangeResult };
 }
 
 export interface IToolInfo {
@@ -896,6 +1320,7 @@ export interface IClientConfig {
   appVersion: string;
   publicBaseUrl: string;
   conferenceTimeZone: string;
+  demoSimulateScans: boolean;
   traceUrlTemplate?: string;
   rum?: {
     endpoint: string;

@@ -24,6 +24,12 @@ export const routes: Routes = [
       import('./quests/quest-board/quest-board.component').then((module) => module.QuestBoardComponent),
   },
   {
+    path: 'itinerary',
+    title: 'Itinerary · KubeQuest',
+    canActivate: [meGuard],
+    loadComponent: () => import('./itinerary/itinerary.component').then((module) => module.ItineraryComponent),
+  },
+  {
     path: 'scan',
     title: 'Scan · KubeQuest',
     loadComponent: () => import('./scan/scanner/scanner.component').then((module) => module.ScannerComponent),
@@ -129,32 +135,56 @@ export const routes: Routes = [
   {
     path: 'here',
     title: 'Here · KubeQuest',
-    loadComponent: placeholder,
-    data: { title: 'Here', icon: 'place', message: 'Scan a room’s QR block to see what’s on and who’s around.' },
+    canActivate: [meGuard],
+    loadComponent: () => import('./here/here.component').then((module) => module.HereComponent),
   },
   {
     path: 'people',
     title: 'People · KubeQuest',
-    loadComponent: placeholder,
-    data: { title: 'People', icon: 'group', message: 'Players working on what you’re working on, nearby first.' },
+    canActivate: [meGuard],
+    loadComponent: () => import('./people/people/people.component').then((module) => module.PeopleComponent),
   },
   {
     path: 'quiz/:talkId',
     title: 'Quiz · KubeQuest',
-    loadComponent: placeholder,
-    data: { title: 'Quiz', icon: 'quiz', message: 'Three questions, plain text, no timer.' },
+    canActivate: [meGuard],
+    loadComponent: () => import('./quiz/quiz.component').then((module) => module.QuizComponent),
   },
   {
-    path: 'organizer',
-    title: 'Organizer · KubeQuest',
-    loadComponent: placeholder,
-    data: { title: 'Organizer', icon: 'insights', message: 'Room occupancy and the meet funnel.' },
+    path: 'exhibitors',
+    title: 'Booths · KubeQuest',
+    loadComponent: () =>
+      import('./exhibitors/exhibitor-directory/exhibitor-directory.component').then((module) => module.ExhibitorDirectoryComponent),
   },
+  {
+    path: 'exhibitors/:outpostId',
+    title: 'Booth · KubeQuest',
+    loadComponent: () => import('./exhibitors/exhibitor-page/exhibitor-page.component').then((module) => module.ExhibitorPageComponent),
+  },
+  {
+    path: 'exhibitor',
+    title: 'Exhibitor · KubeQuest',
+    loadComponent: () =>
+      import('./exhibitor-portal/exhibitor-home/exhibitor-home.component').then((module) => module.ExhibitorHomeComponent),
+  },
+  {
+    path: 'exhibitor/:outpostId',
+    title: 'Booth dashboard · KubeQuest',
+    loadComponent: () =>
+      import('./exhibitor-portal/exhibitor-dashboard/exhibitor-dashboard.component').then(
+        (module) => module.ExhibitorDashboardComponent,
+      ),
+  },
+  {
+    path: 'admin',
+    title: 'Organizer · KubeQuest',
+    loadComponent: () => import('./admin/admin-dashboard/admin-dashboard.component').then((module) => module.AdminDashboardComponent),
+  },
+  { path: 'organizer', pathMatch: 'full', redirectTo: 'admin' },
   {
     path: 'screen/:locationId',
     title: 'KubeQuest',
-    loadComponent: placeholder,
-    data: { title: 'Demo screen', icon: 'qr_code_2', message: 'Live QR and top 10.' },
+    loadComponent: () => import('./screen/screen.component').then((module) => module.ScreenComponent),
   },
   { path: '**', redirectTo: '' },
 ];

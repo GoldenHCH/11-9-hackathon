@@ -1,0 +1,141 @@
+<app-screen-toolbar title="Quiz" [subtitle]="quiz?.isBoss ? 'Boss fight · 5 questions' : '3 questions · no timer'" [showBack]="true"></app-screen-toolbar>
+
+<div class="quiz kq-page">
+  <app-state-wrapper [isLoading]="isLoading" [errorMessage]="errorMessage" [skeletonRows]="4" (retry)="retry()">
+    @if (quiz) {
+      <header class="talk kq-block">
+        <div class="talk-tags">
+          @if (quiz.isBoss) {
+            <span class="tag tag--boss kq-pixel">Boss talk</span>
+          }
+          @if (talk) {
+            <span class="tag kq-pixel">
+              <span [class]="'kq-swatch kq-swatch--' + talk.material" aria-hidden="true"></span>
+              {{ trackLabel }} · {{ talk.material }}
+            </span>
+          }
+        </div>
+        <h1 class="talk-title">{{ quiz.talkTitle }}</h1>
+        <p class="talk-source kq-muted">
+          Questions from the talk's {{ quiz.source === 'transcript' ? 'transcript' : 'abstract' }}.
+        </p>
+        @if (quiz.source === 'transcript') {
+          <button
+            mat-stroked-button
+            type="button"
+            class="source-toggle"
+            [attr.aria-expanded]="isSourceOpen"
+            aria-controls="talk-source"
+            (click)="toggleSource()"
+          >
+            <div class="btn-content">
+              <mat-icon>{{ isSourceOpen ? 'expand_less' : 'menu_book' }}</mat-icon>
+              <span>Read the part of the talk this came from</span>
+            </div>
+          </button>
+          @if (isSourceOpen) {
+            <div class="source-text" id="talk-source">
+              @if (talk?.abstract) {
+                <p class="source-paragraph">{{ talk?.abstract }}</p>
+              } @else {
+                <p class="source-paragraph kq-muted">The talk text isn't available right now.</p>
+              }
+            </div>
+          }
+        }
+      </header>
+
+      @if (result) {
+        <section class="score kq-block" aria-live="polite">
+          <span class="score-big kq-pixel">{{ result.correct }}/{{ result.total }} correct</span>
+          @if (result.alreadySubmitted) {
+            <span class="score-xp kq-muted">You already took this quiz. Here's your result.</span>
+          } @else {
+            <span class="score-xp score-xp--gain kq-pixel">+{{ result.xpAwarded }} XP</span>
+          }
+        </section>
+      }
+
+      @if (quiz.isBoss) {
+        @if (result && bossNotice) {
+          <p class="boss-notice kq-block" role="status">
+            <mat-icon aria-hidden="true">info</mat-icon>
+            <span>{{ bossNotice }}</span>
+          </p>
+        }
+        <app-boss-bar class="boss" [talkId]="quiz.talkId" [initialState]="result?.boss ?? null" [pollMs]="bossPollMs"></app-boss-bar>
+      }
+
+      @if (result) {
+        <ol class="questions">
+          @for (question of questions; track question.id; let i = $index) {
+            <li class="question kq-block" [class.is-right]="question.result?.correct" [class.is-wrong]="question.result && !question.result.correct">
+              <div class="result-head">
+                <span class="question-number kq-pixel">Q{{ i + 1 }}</span>
+                @if (question.result?.correct) {
+                  <span class="verdict verdict--right kq-pixel"><mat-icon aria-hidden="true">check</mat-icon>Right</span>
+                } @else {
+                  <span class="verdict verdict--wrong kq-pixel"><mat-icon aria-hidden="true">close</mat-icon>Wrong</span>
+                }
+              </div>
+              <p class="question-prompt">{{ question.prompt }}</p>
+              @if (question.result) {
+                @if (!question.result.correct && question.choices[question.result.chosenIndex] !== undefined) {
+                  <p class="answer answer--chosen">Your answer: {{ question.choices[question.result.chosenIndex] }}</p>
+                }
+                <p class="answer answer--correct">Correct answer: {{ question.choices[question.result.correctIndex] }}</p>
+                @if (question.result.explanation) {
+                  <p class="explanation kq-muted">{{ question.result.explanation }}</p>
+                }
+              }
+            </li>
+          }
+        </ol>
+
+        <div class="actions">
+          <a mat-flat-button routerLink="/quests">
+            <div class="btn-content">
+              <mat-icon>flag</mat-icon>
+              <span>Back to quests</span>
+            </div>
+          </a>
+        </div>
+      } @else {
+        <form class="questions" (ngSubmit)="submit()">
+          @for (question of quiz.questions; track question.id; let i = $index) {
+            <fieldset class="question kq-block">
+              <legend class="question-legend">
+                <span class="question-number kq-pixel">Q{{ i + 1 }}</span>
+                <span class="question-prompt">{{ question.prompt }}</span>
+              </legend>
+              <mat-radio-group
+                class="choices"
+                [name]="question.id"
+                [(ngModel)]="answers[i]"
+                [attr.aria-label]="question.prompt"
+              >
+                @for (choice of question.choices; track $index; let c = $index) {
+                  <mat-radio-button class="choice" [value]="c">{{ choice }}</mat-radio-button>
+                }
+              </mat-radio-group>
+            </fieldset>
+          }
+
+          @if (submitError) {
+            <p class="submit-error" role="alert">{{ submitError }}</p>
+          }
+
+          <div class="actions">
+            <span class="progress kq-muted">{{ answeredCount }} of {{ quiz.questions.length }} answered</span>
+            <button mat-flat-button type="submit" [disabled]="!canSubmit">
+              <div class="btn-content">
+                <mat-icon>{{ quiz.isBoss ? 'bolt' : 'send' }}</mat-icon>
+                <span>{{ isSubmitting ? 'Grading…' : quiz.isBoss ? 'Attack: submit answers' : 'Submit answers' }}</span>
+              </div>
+            </button>
+          </div>
+        </form>
+      }
+    }
+  </app-state-wrapper>
+</div>

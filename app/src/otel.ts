@@ -21,6 +21,8 @@ import {
 
 const metricExportIntervalMs = 15000;
 
+const redactedServerQueryParams = ['sig', 'Signature', 'AWSAccessKeyId', 'X-Goog-Signature', 'k', 't'];
+
 function buildResourceAttributes(): Attributes {
   const attributes: Attributes = {
     [ATTR_SERVICE_NAME]: appConfig.serviceName,
@@ -67,6 +69,7 @@ export const telemetrySdk = new NodeSDK({
       '@opentelemetry/instrumentation-pino': { disableLogCorrelation: true, disableLogSending: !exportEnabled },
       '@opentelemetry/instrumentation-http': {
         ignoreIncomingRequestHook: (request) => request.url === '/healthz' || request.url === '/readyz',
+        redactedQueryParamsServer: redactedServerQueryParams,
       },
     }),
   ],

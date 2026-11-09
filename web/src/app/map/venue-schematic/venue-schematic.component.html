@@ -3,16 +3,36 @@
     <button type="button" class="zoom-button" aria-label="Zoom out" [disabled]="!canZoomOut" (click)="zoomOut()">
       <mat-icon aria-hidden="true">remove</mat-icon>
     </button>
-    <span class="zoom-level" aria-live="polite">{{ zoom }}x</span>
+    <span class="zoom-level" aria-live="polite">{{ zoomLabel }}</span>
     <button type="button" class="zoom-button" aria-label="Zoom in" [disabled]="!canZoomIn" (click)="zoomIn()">
       <mat-icon aria-hidden="true">add</mat-icon>
     </button>
+    <button type="button" class="zoom-button" aria-label="Reset zoom" [disabled]="!canZoomOut" (click)="resetView()">
+      <mat-icon aria-hidden="true">fit_screen</mat-icon>
+    </button>
   </div>
 
-  <div class="schematic-scroller" [class.schematic-scroller--zoomed]="zoom > 1" tabindex="0" [attr.aria-label]="'Scrollable map of ' + level.title">
+  <div
+    #viewport
+    class="schematic-viewport"
+    [class.schematic-viewport--dragging]="isDragging"
+    [class.schematic-viewport--zoomed]="canZoomOut"
+    [style.aspect-ratio]="aspectRatio"
+    tabindex="0"
+    role="application"
+    aria-roledescription="map"
+    [attr.aria-label]="'Map of ' + level.title + '. Drag or use arrow keys to pan, plus and minus to zoom, 0 to reset.'"
+    (wheel)="onWheel($event)"
+    (pointerdown)="onPointerDown($event)"
+    (pointermove)="onPointerMove($event)"
+    (pointerup)="onPointerUp($event)"
+    (pointercancel)="onPointerUp($event)"
+    (dblclick)="onDoubleClick($event)"
+    (keydown)="onKeydown($event)"
+  >
+    <div class="schematic-stage" [style.transform]="stageTransform">
     <svg
       class="schematic"
-      [style.width.%]="zoom * 100"
       [attr.viewBox]="viewBox"
       preserveAspectRatio="xMidYMid meet"
       role="group"
@@ -107,6 +127,15 @@
         <g class="booths" aria-hidden="true">
           @for (booth of booths; track booth.id) {
             @let rect = boothRect(booth);
+            @if (booth.id === highlightedVendorId) {
+              <circle
+                class="booth-pulse"
+                [attr.cx]="booth.position?.x"
+                [attr.cy]="booth.position?.y"
+                [attr.r]="rect.width"
+                [attr.stroke-width]="unit * 2.5"
+              ></circle>
+            }
             <g class="booth-group" [attr.transform]="boothTransform(booth)" (click)="onBoothClick($event, booth)">
               <rect
                 class="booth"
@@ -185,5 +214,6 @@
         }
       }
     </svg>
+    </div>
   </div>
 </div>

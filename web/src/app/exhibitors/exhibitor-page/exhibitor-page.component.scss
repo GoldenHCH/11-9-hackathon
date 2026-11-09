@@ -1,0 +1,192 @@
+.booth-page {
+  max-width: 760px;
+}
+
+.hero,
+.ask,
+.visit,
+.not-found {
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.hero-badges,
+.chips,
+.map-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tier-badge {
+  padding: 2px 8px;
+  border: 2px solid var(--app-theme--border);
+  background: var(--app-theme--surface);
+  font-family: var(--app-theme--pixel-font);
+  font-size: 14px;
+}
+
+.hero-booth {
+  margin: 12px 0 8px;
+  font-size: 24px;
+}
+
+.hero-where,
+.visit-line,
+.talk-meta,
+.empty-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 0 0 8px;
+
+  mat-icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+  }
+}
+
+.hero-description,
+.ask-text {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+.chip {
+  padding: 2px 8px;
+  border: 1px solid var(--app-theme--border-soft);
+  font-size: 14px;
+}
+
+.chip--topic {
+  background: var(--app-theme--tertiary-bg);
+}
+
+.ask {
+  border-color: var(--app-theme--accent);
+  background: var(--app-theme--accent-bg);
+}
+
+.section {
+  margin-bottom: 24px;
+}
+
+.section-title {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0 0 8px;
+}
+
+.stat {
+  padding: 12px;
+  margin: 0;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: var(--app-theme--ink-muted);
+}
+
+.stat-value {
+  margin: 4px 0 0;
+  font-size: 28px;
+}
+
+.muted {
+  margin: 0 0 8px;
+  color: var(--app-theme--ink-muted);
+}
+
+.visit-line--done mat-icon {
+  color: var(--app-theme--tertiary);
+}
+
+.list,
+.players,
+.nearby {
+  display: grid;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.players,
+.nearby {
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+.talk,
+.player {
+  padding: 12px 16px;
+}
+
+.talk-title {
+  margin: 0 0 8px;
+  font-size: 17px;
+}
+
+.talk-meta {
+  color: var(--app-theme--ink-muted);
+}
+
+.player {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.player-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.player-handle {
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.empty-line {
+  color: var(--app-theme--ink-muted);
+}
+
+.map-frame {
+  padding: 8px;
+  margin-bottom: 12px;
+}
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.not-found-text {
+  margin: 0;
+}
+
+@media (max-width: 599.98px) {
+  .stats {
+    gap: 8px;
+  }
+
+  .stat-value {
+    font-size: 22px;
+  }
+
+  .players,
+  .nearby {
+    grid-template-columns: 1fr;
+  }
+}

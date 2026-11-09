@@ -15,6 +15,7 @@ async function acceptedExpiry(quest: IQuest, now: Date, talk?: ITalk): Promise<s
       return addMinutes(new Date(talk?.end ?? quest.when?.end ?? now.toISOString()), gameRules.BOSS_GRACE_MINUTES).toISOString();
     case 'quiz':
     case 'outpost':
+    case 'photo':
       return endOfConferenceDay(now).toISOString();
     case 'chat':
       return addMinutes(now, gameRules.MEET_OFFER_MINUTES + gameRules.MEET_SCAN_WINDOW_MINUTES).toISOString();

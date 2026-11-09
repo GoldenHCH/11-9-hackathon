@@ -1,0 +1,12 @@
+<div class="stat-tile app-block">
+  <div class="stat-tile-label">
+    @if (icon) {
+      <mat-icon class="stat-tile-icon" aria-hidden="true">{{ icon }}</mat-icon>
+    }
+    <span>{{ label }}</span>
+  </div>
+  <p class="stat-tile-value app-pixel">{{ value }}</p>
+  @if (detail) {
+    <p class="stat-tile-detail">{{ detail }}</p>
+  }
+</div>

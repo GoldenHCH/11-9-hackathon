@@ -1,0 +1,119 @@
+.person {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px;
+}
+
+.person--compact {
+  gap: 8px;
+  padding: 12px;
+}
+
+.person-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.person-name {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.person-handle {
+  font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.person-level {
+  font-size: 13px;
+  color: var(--kq-muted);
+}
+
+.person-tag {
+  font-family: var(--kq-font-pixel);
+  font-size: 11px;
+  padding: 3px 6px;
+  border: 2px solid var(--kq-border);
+  white-space: nowrap;
+}
+
+.person-tag--first {
+  background: var(--kq-accent);
+  color: var(--kq-accent-ink);
+}
+
+.person-tag--welcomer {
+  background: var(--kq-primary);
+  color: var(--kq-primary-ink);
+}
+
+.person-headline {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.person-chips {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.person-chip {
+  font-size: 12px;
+  padding: 2px 8px;
+  background: var(--kq-surface-2);
+  border: 1px solid var(--kq-border-soft);
+}
+
+.person-where {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--kq-muted);
+}
+
+.person-where-icon {
+  width: 18px;
+  height: 18px;
+  font-size: 18px;
+}
+
+.person-why {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 13px;
+  line-height: 1.4;
+  padding-left: 8px;
+  border-left: 3px solid var(--kq-accent);
+}
+
+.person-why-label {
+  font-family: var(--kq-font-pixel);
+  font-size: 11px;
+  color: var(--kq-accent);
+}
+
+.person-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.person-closed {
+  font-size: 13px;
+  color: var(--kq-muted);
+}
