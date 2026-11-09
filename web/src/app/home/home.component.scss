@@ -1,0 +1,151 @@
+@use 'breakpoints' as bp;
+
+.status-section {
+  max-width: 600px;
+}
+
+.status-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.status-title {
+  margin: 0;
+  font: var(--mat-sys-title-medium);
+  font-weight: 600;
+}
+
+.status-subtitle {
+  margin: 24px 0 12px;
+  font: var(--mat-sys-title-small);
+  font-weight: 600;
+}
+
+.status-loading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  color: var(--app-theme--text-secondary, #4b5565);
+}
+
+.status-loading-icon {
+  animation: status-spin 1.2s linear infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
+.status-error {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 12px;
+  padding: 4px 12px 4px 8px;
+  border-radius: 999px;
+  font-weight: 500;
+
+  &--ok {
+    background: var(--app-theme--tertiary-bg, #e8f5e9);
+    color: var(--app-theme--tertiary, #166534);
+  }
+
+  &--warn {
+    background: var(--app-theme--accent-bg, #fff7ed);
+    color: var(--app-theme--accent, #b45309);
+  }
+
+  &--error {
+    background: var(--app-theme--error-bg, #ffebee);
+    color: var(--app-theme--error-dark, #ba1a1a);
+  }
+}
+
+.status-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.status-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 0;
+  border-top: 1px solid var(--app-theme--border, #d5dbe7);
+
+  @include bp.above-mobile {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+}
+
+.status-term {
+  color: var(--app-theme--text-secondary, #4b5565);
+}
+
+.status-detail {
+  margin: 0;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+
+  .status-badge {
+    margin: 0;
+  }
+}
+
+.count-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include bp.above-mobile {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.count-tile {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px;
+  border: 1px solid var(--app-theme--border, #d5dbe7);
+  border-radius: 8px;
+  background: var(--app-theme--surface, #f6f8fc);
+}
+
+.count-value {
+  font: var(--mat-sys-headline-small);
+  font-weight: 700;
+}
+
+.count-label {
+  color: var(--app-theme--text-secondary, #4b5565);
+}
+
+.btn-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@keyframes status-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

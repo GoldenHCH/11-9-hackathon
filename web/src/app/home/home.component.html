@@ -1,0 +1,82 @@
+<div class="app-page-header">
+  <div class="app-page-header-left">
+    <h1 class="app-page-title">Welcome to KubeQuest</h1>
+    <p class="app-page-subtitle">Points for showing up, listening and meeting people.</p>
+  </div>
+</div>
+
+<section class="status-section" aria-labelledby="status-heading">
+  <mat-card class="app-card" appearance="outlined">
+    <mat-card-content>
+      <div class="status-header">
+        <h2 id="status-heading" class="status-title">API status</h2>
+      </div>
+
+      @if (healthState$ | async; as state) {
+        <div class="status-body" aria-live="polite" [attr.aria-busy]="state.phase === 'loading'">
+          @switch (state.phase) {
+            @case ('loading') {
+              <p class="status-loading" role="status">
+                <mat-icon class="status-loading-icon">sync</mat-icon>
+                <span>Checking the API…</span>
+              </p>
+            }
+            @case ('error') {
+              <div class="status-error">
+                <app-alert-banner [message]="state.errorMessage ?? ''"></app-alert-banner>
+                <button mat-stroked-button type="button" class="status-retry" (click)="onRetry()">
+                  <div class="btn-content">
+                    <mat-icon>refresh</mat-icon>
+                    <span>Try again</span>
+                  </div>
+                </button>
+              </div>
+            }
+            @case ('ready') {
+              @if (state.health; as health) {
+                @if (state.overallBadge; as overallBadge) {
+                  <p class="status-badge status-badge--{{ overallBadge.tone }}">
+                    <mat-icon>{{ overallBadge.icon }}</mat-icon>
+                    <span>{{ overallBadge.label }}</span>
+                  </p>
+                }
+
+                <dl class="status-list">
+                  <div class="status-row">
+                    <dt class="status-term">Version</dt>
+                    <dd class="status-detail">{{ health.version }}</dd>
+                  </div>
+                  <div class="status-row">
+                    <dt class="status-term">Elasticsearch</dt>
+                    <dd class="status-detail">
+                      @if (state.elasticsearchBadge; as elasticsearchBadge) {
+                        <span class="status-badge status-badge--{{ elasticsearchBadge.tone }}">
+                          <mat-icon>{{ elasticsearchBadge.icon }}</mat-icon>
+                          <span>{{ elasticsearchBadge.label }}</span>
+                        </span>
+                      }
+                    </dd>
+                  </div>
+                  <div class="status-row">
+                    <dt class="status-term">Inference model</dt>
+                    <dd class="status-detail">{{ health.elasticsearch.inferenceId || 'n/a' }}</dd>
+                  </div>
+                </dl>
+
+                <h3 class="status-subtitle">Indexed documents</h3>
+                <ul class="count-grid">
+                  @for (item of state.countItems; track item.key) {
+                    <li class="count-tile">
+                      <span class="count-value">{{ item.value }}</span>
+                      <span class="count-label">{{ item.label }}</span>
+                    </li>
+                  }
+                </ul>
+              }
+            }
+          }
+        </div>
+      }
+    </mat-card-content>
+  </mat-card>
+</section>
