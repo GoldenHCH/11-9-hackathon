@@ -1,7 +1,7 @@
-import { esOptions, getEsClient } from '../es/client';
-import { esTimeouts, indexNames } from '../es/es.constants';
-import { inventoryTool } from '../tools/inventory.tool';
-import { awardXpDetailed } from './award';
+import { esOptions, getEsClient } from '../app/src/es/client';
+import { esTimeouts, indexNames } from '../app/src/es/es.constants';
+import { inventoryTool } from '../app/src/tools/inventory.tool';
+import { awardXpDetailed } from '../app/src/xp/award';
 
 async function main(): Promise<void> {
   const attendeeId = `xp-smoke-${Date.now()}`;
