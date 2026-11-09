@@ -6,7 +6,7 @@ export const aiSettings = {
     .map((id) => id.trim())
     .filter((id) => id !== ''),
   TIMEOUT_MS: 15000,
-  BUDGET_MS: { quiz: 13000, icebreaker: 9000, chat_prompt: 9000, match_reason: 6000, profile_topics: 4000, quest_reason: 6000, handshake_question: 1500, profile_import: 10000 } satisfies Record<AiPurpose, number>,
+  BUDGET_MS: { quiz: 13000, icebreaker: 9000, chat_prompt: 9000, match_reason: 6000, profile_topics: 4000, quest_reason: 6000, handshake_question: 1500, profile_import: 10000, search_answer: 8000 } satisfies Record<AiPurpose, number>,
   MAX_ATTEMPTS: 2,
   CACHE_TTL_MS: 30 * 60 * 1000,
   CACHE_MAX_ENTRIES: 500,

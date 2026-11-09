@@ -1,4 +1,5 @@
 import type { IConnectionToolContracts, IProfileLinks } from './connections.interfaces';
+import type { ISearchToolContracts } from '../search/search.interfaces';
 import type { IAttendeeIntent, IIntentInput } from './intent.interfaces';
 import {
   AiProvider,
@@ -1344,7 +1345,7 @@ export interface IItineraryChangeResult {
   maxItems: number;
 }
 
-export interface IToolContracts extends IConnectionToolContracts {
+export interface IToolContracts extends IConnectionToolContracts, ISearchToolContracts {
   sign_in: { input: ISignInInput; output: ISignInResult };
   sign_up: { input: ISignUpInput; output: ISignUpResult };
   get_profile: { input: IAttendeeInput; output: IProfile };
