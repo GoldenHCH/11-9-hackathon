@@ -9,7 +9,8 @@ import { buildProfileText, createAttendee, getAttendee, patchAttendee } from './
 import { faceSeedFor } from './face';
 import { importGithubProfile } from './github';
 import { claimHandle, releaseHandle, releaseQuietly } from './handles';
-import { defaultSettings } from './profile.constants';
+import { defaultSettings, importLimits } from './profile.constants';
+import { scrubPersonalData } from './profile-import';
 import { buildOwnProfile, personalLinkFor, withdrawOpenMeets } from './profile';
 import { hasCompletedProfile, newAttendeeId } from './sign-in';
 import { normalizeTopics, starterMaterialFor, suggestTopics } from './topics';
@@ -40,6 +41,27 @@ interface IProfileDraft {
   avatarUrl?: string;
   headline?: string;
   languages: string[];
+  imported: IImportedFields;
+}
+
+interface IImportedFields {
+  skills?: string[];
+  offers?: string[];
+  asks?: string[];
+  summary?: string;
+}
+
+function cleanImported(input: ISignUpInput): IImportedFields {
+  const list = (values: string[] | undefined, max: number, maxChars: number) =>
+    values === undefined ? undefined : Array.from(new Set(values.map((value) => scrubPersonalData(value).replace(/\s+/g, ' ').slice(0, maxChars)).filter((value) => value !== ''))).slice(0, max);
+  const summary = input.summary === undefined ? undefined : scrubPersonalData(input.summary).replace(/\s+/g, ' ').slice(0, importLimits.SUMMARY_MAX_CHARS);
+
+  return {
+    skills: list(input.skills, importLimits.MAX_SKILLS, 40),
+    offers: list(input.offers, importLimits.MAX_LIST, 120),
+    asks: list(input.asks, importLimits.MAX_LIST, 120),
+    summary,
+  };
 }
 
 async function draftProfile(input: ISignUpInput, handle: string, fallbackRealName?: string): Promise<IProfileDraft> {
@@ -56,9 +78,14 @@ async function draftProfile(input: ISignUpInput, handle: string, fallbackRealNam
     realName: input.realName ?? github?.name ?? fallbackRealName,
     githubLogin: github?.login ?? input.githubLogin,
     avatarUrl: github?.avatarUrl,
-    headline: github?.bio,
+    headline: input.headline ? scrubPersonalData(input.headline).replace(/\s+/g, ' ').slice(0, importLimits.HEADLINE_MAX_CHARS) : github?.bio,
     languages,
+    imported: cleanImported(input),
   };
+}
+
+function definedOnly(fields: IImportedFields): IImportedFields {
+  return Object.fromEntries(Object.entries(fields).filter(([, value]) => value !== undefined));
 }
 
 function profileFields(input: ISignUpInput, draft: IProfileDraft, baseSettings: IPlayerSettings): Partial<IAttendee> {
@@ -72,6 +99,7 @@ function profileFields(input: ISignUpInput, draft: IProfileDraft, baseSettings: 
     spotMe: input.meetingOn ? input.spotMe : undefined,
     workingOn: input.workingOn,
     headline: draft.headline,
+    ...definedOnly(draft.imported),
     profileText: buildProfileText({
       handle: draft.handle,
       workingOn: input.workingOn,
@@ -80,6 +108,7 @@ function profileFields(input: ISignUpInput, draft: IProfileDraft, baseSettings: 
       welcomer: draft.welcomer,
       languages: draft.languages,
       bio: draft.headline,
+      ...draft.imported,
     }),
     profile: { topics: draft.topics, firstTimer: draft.firstTimer, welcomer: draft.welcomer },
     settings: {

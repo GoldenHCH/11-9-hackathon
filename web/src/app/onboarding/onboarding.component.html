@@ -32,7 +32,17 @@
         <ng-container [formGroup]="signInForm">
           <mat-form-field appearance="outline" class="full-width">
             <mat-label>Name</mat-label>
-            <input matInput formControlName="name" autocomplete="name" maxlength="80" />
+            <input
+              matInput
+              formControlName="name"
+              name="kq-name"
+              autocomplete="name"
+              maxlength="80"
+              data-1p-ignore
+              data-lpignore="true"
+              data-bwignore="true"
+              data-form-type="other"
+            />
             @if (signInForm.controls.name.hasError('required')) {
               <mat-error>Enter your name</mat-error>
             }
@@ -68,19 +78,111 @@
         </div>
       }
 
+      @case ('import') {
+        <h1 class="step-title kq-pixel">Speed up matching</h1>
+        <p class="step-text">Bring your resume or LinkedIn profile and we suggest your skills and topics. You check everything before it's saved.</p>
+
+        @switch (importMode) {
+          @case ('choose') {
+            <div class="import-options">
+              <label class="import-option">
+                <input class="kq-visually-hidden" type="file" accept="application/pdf,.pdf" (change)="onFileSelected($event)" />
+                <mat-icon aria-hidden="true">upload_file</mat-icon>
+                <span class="import-option-title kq-pixel">Upload a PDF</span>
+                <span class="import-option-text">Resume or LinkedIn PDF, up to 5 MB. On LinkedIn: your profile → More → Save to PDF</span>
+              </label>
+              <button type="button" class="import-option" (click)="chooseImport('paste')">
+                <mat-icon aria-hidden="true">content_paste</mat-icon>
+                <span class="import-option-title kq-pixel">Paste text</span>
+                <span class="import-option-text">Your LinkedIn About and Experience, or a few lines about your work.</span>
+              </button>
+            </div>
+          }
+          @case ('paste') {
+            <ng-container [formGroup]="importForm">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Resume or profile text</mat-label>
+                <textarea matInput formControlName="text" rows="8" maxlength="20000"></textarea>
+                <mat-hint>Emails, phone numbers and links are removed before we read it.</mat-hint>
+              </mat-form-field>
+            </ng-container>
+            <div class="import-actions">
+              <button mat-stroked-button type="button" (click)="chooseImport('choose')">Cancel</button>
+              <button mat-flat-button type="button" (click)="importText()">Read my profile</button>
+            </div>
+          }
+          @case ('loading') {
+            <div class="import-loading" role="status" aria-live="polite">
+              <mat-spinner diameter="32" aria-hidden="true"></mat-spinner>
+              <span>Reading your profile…</span>
+            </div>
+          }
+          @case ('review') {
+            @if (isRefiningImport) {
+              <p class="import-note" role="status">Polishing your suggestions…</p>
+            }
+            <ng-container [formGroup]="importForm">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Headline</mat-label>
+                <input matInput formControlName="headline" maxlength="80" autocomplete="off" />
+              </mat-form-field>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Summary for matching</mat-label>
+                <textarea matInput formControlName="summary" rows="4" maxlength="600"></textarea>
+                <mat-hint>Only people-matching uses it. Other players never see it.</mat-hint>
+              </mat-form-field>
+            </ng-container>
+
+            @for (key of importListKeys; track key) {
+              @if (importLists[key].length > 0) {
+                <div class="import-list">
+                  <span class="import-list-label">{{ importListLabels[key] }}</span>
+                  <div class="topics">
+                    @for (item of importLists[key]; track item) {
+                      <span class="topic-chip topic-chip--removable">
+                        <span>{{ item }}</span>
+                        <button type="button" class="chip-remove" [attr.aria-label]="'Remove ' + item" (click)="removeImportItem(key, item)">
+                          <mat-icon aria-hidden="true">close</mat-icon>
+                        </button>
+                      </span>
+                    }
+                  </div>
+                </div>
+              }
+            }
+
+            @if (selectedTopics.length > 0) {
+              <p class="import-note">Topics picked: {{ selectedTopics.join(', ') }}. You can change them in a moment.</p>
+            }
+
+            <button mat-stroked-button type="button" class="import-discard" (click)="discardImport()">Start over</button>
+          }
+        }
+
+        <p class="import-consent">
+          <mat-icon aria-hidden="true">lock</mat-icon>
+          <span>We keep only the summary you confirm, never the file.</span>
+        </p>
+      }
+
       @case ('handle') {
         <h1 class="step-title kq-pixel">Pick a handle</h1>
         <p class="step-text">It's your name in the game. Your pixel face is made from it.</p>
 
         <div class="handle-row">
-          <app-block-face [handle]="form.controls.handle.valid ? handle : ''" [size]="64" label="Your pixel face preview"></app-block-face>
+          <app-block-face [handle]="faceHandle" [size]="64" label="Your pixel face preview"></app-block-face>
           <mat-form-field appearance="outline" class="handle-field">
             <mat-label>Handle</mat-label>
             <span matTextPrefix>&#64;</span>
             <input
               matInput
               formControlName="handle"
-              autocomplete="username"
+              name="kq-handle"
+              autocomplete="nickname"
+              data-1p-ignore
+              data-lpignore="true"
+              data-bwignore="true"
+              data-form-type="other"
               autocapitalize="none"
               spellcheck="false"
               maxlength="20"
@@ -161,7 +263,44 @@
               {{ topic }}
             </button>
           }
+          @for (topic of customTopics; track topic) {
+            <span class="topic-chip topic-chip--removable" aria-pressed="true">
+              <span>{{ topic }}</span>
+              <button type="button" class="chip-remove" [attr.aria-label]="'Remove ' + topic" (click)="removeTopic(topic)">
+                <mat-icon aria-hidden="true">close</mat-icon>
+              </button>
+            </span>
+          }
+          @if (!isAddingTopic) {
+            <button type="button" class="topic-chip topic-chip--add" (click)="openCustomTopic()">+ Add your own</button>
+          }
         </div>
+
+        @if (isAddingTopic) {
+          <div class="custom-topic">
+            <label class="kq-visually-hidden" for="kq-custom-topic">Your own topic</label>
+            <input
+              #customTopicInput
+              id="kq-custom-topic"
+              class="custom-topic-input"
+              type="text"
+              name="kq-custom-topic"
+              autocomplete="off"
+              maxlength="40"
+              placeholder="e.g. Kueue"
+              data-1p-ignore
+              data-lpignore="true"
+              data-bwignore="true"
+              data-form-type="other"
+              aria-describedby="kq-custom-topic-hint"
+              [formControl]="customTopicControl"
+              (keydown)="onCustomTopicKeydown($event)"
+            />
+            <button mat-flat-button type="button" [disabled]="isTopicLimitReached" (click)="addCustomTopic()">Add</button>
+            <button mat-stroked-button type="button" (click)="cancelCustomTopic()">Cancel</button>
+          </div>
+          <p id="kq-custom-topic-hint" class="custom-topic-hint" aria-live="polite">{{ isTopicLimitReached ? 'Remove one to add another' : customTopicHint }}</p>
+        }
       }
 
       @case ('meeting') {
@@ -265,8 +404,13 @@
             }
           </button>
         } @else {
-          <button mat-flat-button type="submit" class="action-primary" [disabled]="step === 'handle' && !isHandleValid">
-            {{ step === 'topics' && selectedTopics.length === 0 ? 'Skip' : 'Next' }}
+          <button
+            mat-flat-button
+            type="submit"
+            class="action-primary"
+            [disabled]="(step === 'handle' && !isHandleValid) || (step === 'import' && importMode === 'loading')"
+          >
+            {{ primaryLabel }}
           </button>
         }
       }

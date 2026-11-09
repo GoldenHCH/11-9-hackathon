@@ -1,5 +1,5 @@
 import { HttpErrorResponse } from '@angular/common/http';
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -15,8 +15,20 @@ import { BlockFaceComponent } from '../profile/face/block-face.component';
 import { CopyLinkComponent } from '../profile/copy-link/copy-link.component';
 import { AccessibilityService } from '../profile/services/accessibility.service';
 import { AlertBannerComponent } from '../shared/components/alert-banner/alert-banner.component';
-import { demoAccount, handlePattern, maxTopics, onboardingSteps, topicOptions } from './onboarding.constants';
-import { ISignInInput, ISignInResult, ISignUpInput, ISignUpResult, OnboardingStep } from './onboarding.types';
+import {
+  customTopicLimits,
+  demoAccount,
+  handlePattern,
+  importListLabels,
+  importRefineDelayMs,
+  maxPdfBytes,
+  maxTopics,
+  minImportTextChars,
+  onboardingSteps,
+  placeholderFaceHandle,
+  topicOptions,
+} from './onboarding.constants';
+import { IImportedProfile, ImportListKey, ImportMode, ISignInInput, ISignInResult, ISignUpInput, ISignUpResult, OnboardingStep } from './onboarding.types';
 import { PendingScanHelper } from './pending-scan.helper';
 
 @Component({
@@ -42,10 +54,14 @@ export class OnboardingComponent implements OnInit {
   private readonly _router = inject(Router);
   private readonly _route = inject(ActivatedRoute);
 
+  @ViewChild('customTopicInput') private _customTopicInput?: ElementRef<HTMLInputElement>;
+
   public readonly steps = onboardingSteps;
   public readonly topicOptions = topicOptions;
   public readonly maxTopics = maxTopics;
   public readonly demoAccount = demoAccount;
+  public readonly importListKeys: readonly ImportListKey[] = ['skills', 'offers', 'asks'];
+  public readonly importListLabels = importListLabels;
 
   public readonly signInForm = new FormGroup({
     name: new FormControl('', { nonNullable: true, validators: [Validators.required, Validators.maxLength(80)] }),
@@ -57,6 +73,14 @@ export class OnboardingComponent implements OnInit {
     workingOn: new FormControl('', { nonNullable: true, validators: [Validators.maxLength(500)] }),
     spotMe: new FormControl('', { nonNullable: true, validators: [Validators.maxLength(140)] }),
   });
+
+  public readonly importForm = new FormGroup({
+    text: new FormControl('', { nonNullable: true, validators: [Validators.maxLength(20000)] }),
+    headline: new FormControl('', { nonNullable: true, validators: [Validators.maxLength(80)] }),
+    summary: new FormControl('', { nonNullable: true, validators: [Validators.maxLength(600)] }),
+  });
+
+  public readonly customTopicControl = new FormControl('', { nonNullable: true });
 
   public step: OnboardingStep = 'signin';
   public signedInId = '';
@@ -70,6 +94,12 @@ export class OnboardingComponent implements OnInit {
   public errorMessage = '';
   public handleTakenMessage = '';
   public result: ISignUpResult | null = null;
+  public importMode: ImportMode = 'choose';
+  public imported: IImportedProfile | null = null;
+  public importLists: Record<ImportListKey, string[]> = { skills: [], offers: [], asks: [] };
+  public isAddingTopic = false;
+  public customTopicHint = '';
+  public isRefiningImport = false;
 
   public get stepIndex(): number {
     return this.steps.indexOf(this.step);
@@ -84,7 +114,35 @@ export class OnboardingComponent implements OnInit {
   }
 
   public get isBusy(): boolean {
-    return this.isSubmitting || this.isSigningIn;
+    return this.isSubmitting || this.isSigningIn || this.importMode === 'loading';
+  }
+
+  public get faceHandle(): string {
+    const handle = this.handle.trim();
+
+    return handle !== '' ? handle : this.signedInHandle || placeholderFaceHandle;
+  }
+
+  public get customTopics(): string[] {
+    const presets = new Set(this.topicOptions.map((topic) => topic.toLowerCase()));
+
+    return this.selectedTopics.filter((topic) => !presets.has(topic.toLowerCase()));
+  }
+
+  public get isTopicLimitReached(): boolean {
+    return this.selectedTopics.length >= this.maxTopics;
+  }
+
+  public get primaryLabel(): string {
+    if (this.step === 'import') {
+      return this.importMode === 'review' ? 'Looks good' : 'Skip';
+    }
+
+    if (this.step === 'topics' && this.selectedTopics.length === 0) {
+      return 'Skip';
+    }
+
+    return this.step === 'handle' ? 'Continue' : 'Next';
   }
 
   public ngOnInit(): void {
@@ -134,7 +192,7 @@ export class OnboardingComponent implements OnInit {
       this.signedInId = attendee.id;
       this.signedInHandle = attendee.handle;
       this.form.controls.handle.setValue(attendee.handle);
-      this.goTo('handle');
+      this.goTo('import');
     } catch (error) {
       this.errorMessage = ApiErrorHelper.message(error);
     } finally {
@@ -150,6 +208,19 @@ export class OnboardingComponent implements OnInit {
   public next(): void {
     if (this.step === 'signin') {
       void this.signIn();
+      return;
+    }
+
+    if (this.step === 'import') {
+      if (this.importMode === 'loading') {
+        return;
+      }
+
+      if (this.importMode !== 'review') {
+        this.discardImport();
+      }
+
+      this.goTo('handle');
       return;
     }
 
@@ -190,18 +261,141 @@ export class OnboardingComponent implements OnInit {
   }
 
   public isTopicSelected(topic: string): boolean {
-    return this.selectedTopics.includes(topic);
+    return this.selectedTopics.some((selected) => selected.toLowerCase() === topic.toLowerCase());
   }
 
   public toggleTopic(topic: string): void {
     if (this.isTopicSelected(topic)) {
-      this.selectedTopics = this.selectedTopics.filter((selected) => selected !== topic);
+      this.removeTopic(topic);
       return;
     }
 
-    if (this.selectedTopics.length < this.maxTopics) {
+    if (!this.isTopicLimitReached) {
       this.selectedTopics = [...this.selectedTopics, topic];
     }
+
+    this._syncCustomTopicControl();
+  }
+
+  public removeTopic(topic: string): void {
+    this.selectedTopics = this.selectedTopics.filter((selected) => selected.toLowerCase() !== topic.toLowerCase());
+    this.customTopicHint = '';
+    this._syncCustomTopicControl();
+  }
+
+  public openCustomTopic(): void {
+    this.isAddingTopic = true;
+    this.customTopicHint = '';
+    this._focusCustomTopic();
+  }
+
+  public cancelCustomTopic(): void {
+    this.isAddingTopic = false;
+    this.customTopicHint = '';
+    this.customTopicControl.setValue('');
+  }
+
+  public onCustomTopicKeydown(event: KeyboardEvent): void {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      this.addCustomTopic();
+      return;
+    }
+
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      event.stopPropagation();
+      this.cancelCustomTopic();
+    }
+  }
+
+  public addCustomTopic(): void {
+    if (this.isTopicLimitReached) {
+      return;
+    }
+
+    const raw = this.customTopicControl.value.replace(/\s+/g, ' ').trim();
+    const cleaned = raw.replace(/[^\p{L}\p{N} +#./-]/gu, '').replace(/\s+/g, ' ').trim();
+
+    if (/@|:\/\/|^www\./i.test(raw) || /\.(com|io|dev|org|net|me|ai|co|app)(\/|$)/i.test(cleaned)) {
+      this.customTopicHint = 'Topics cannot be links or emails';
+      this._focusCustomTopic();
+      return;
+    }
+
+    if (cleaned.length < customTopicLimits.min || cleaned.length > customTopicLimits.max) {
+      this.customTopicHint = `Use ${customTopicLimits.min} to ${customTopicLimits.max} letters, numbers or + # . / -`;
+      this._focusCustomTopic();
+      return;
+    }
+
+    const label = this.topicOptions.find((topic) => topic.toLowerCase() === cleaned.toLowerCase()) ?? cleaned;
+    const duplicate = this.isTopicSelected(label);
+
+    if (!duplicate) {
+      this.selectedTopics = [...this.selectedTopics, label];
+    }
+
+    this.customTopicHint = duplicate ? 'Already picked' : '';
+    this.customTopicControl.setValue('');
+    this._focusCustomTopic();
+  }
+
+  public chooseImport(mode: ImportMode): void {
+    this.errorMessage = '';
+    this.importMode = mode;
+  }
+
+  public async onFileSelected(event: Event): Promise<void> {
+    const target = event.target as HTMLInputElement;
+    const file = target.files?.[0];
+    target.value = '';
+
+    if (!file) {
+      return;
+    }
+
+    if (file.type !== 'application/pdf' && !file.name.toLowerCase().endsWith('.pdf')) {
+      this.errorMessage = 'That file is not a PDF. Upload a PDF, or paste the text instead.';
+      return;
+    }
+
+    if (file.size > maxPdfBytes) {
+      this.errorMessage = 'That PDF is over 5 MB. Try a shorter export, or paste the text instead.';
+      return;
+    }
+
+    await this._runImport(() => {
+      const form = new FormData();
+      form.append('attendeeId', this.signedInId);
+      form.append('file', file, 'profile.pdf');
+
+      return firstValueFrom(this._toolsService.upload<IImportedProfile>('profile-import', form));
+    });
+  }
+
+  public async importText(): Promise<void> {
+    const text = this.importForm.controls.text.value.trim();
+
+    if (text.length < minImportTextChars) {
+      this.errorMessage = 'Paste a few lines about your work so we have something to read.';
+      return;
+    }
+
+    await this._runImport(() =>
+      firstValueFrom(this._toolsService.call<IImportedProfile>('import_profile', { attendeeId: this.signedInId, text }, { background: true })),
+    );
+  }
+
+  public removeImportItem(key: ImportListKey, item: string): void {
+    this.importLists = { ...this.importLists, [key]: this.importLists[key].filter((value) => value !== item) };
+  }
+
+  public discardImport(): void {
+    this.imported = null;
+    this.importLists = { skills: [], offers: [], asks: [] };
+    this.importForm.reset();
+    this.importMode = 'choose';
   }
 
   public async submit(): Promise<void> {
@@ -260,7 +454,94 @@ export class OnboardingComponent implements OnInit {
       input.accessibleMode = true;
     }
 
+    if (this.imported) {
+      const { headline, summary } = this.importForm.getRawValue();
+
+      if (headline.trim()) {
+        input.headline = headline.trim();
+      }
+
+      if (summary.trim()) {
+        input.summary = summary.trim();
+      }
+
+      input.skills = this.importLists.skills;
+      input.offers = this.importLists.offers;
+      input.asks = this.importLists.asks;
+    }
+
     return input;
+  }
+
+  private async _runImport(request: () => Promise<IImportedProfile>): Promise<void> {
+    const previousMode = this.importMode;
+    const previousWorkingOn = this.form.controls.workingOn.value;
+    const previousTopics = [...this.selectedTopics];
+    this.errorMessage = '';
+    this.importMode = 'loading';
+
+    try {
+      const imported = await request();
+      this._applyImport(imported, previousWorkingOn, previousTopics);
+      this.importMode = 'review';
+
+      if (imported.provider === 'fallback') {
+        void this._refineImport(request, imported, previousWorkingOn, previousTopics);
+      }
+    } catch (error) {
+      this.errorMessage = ApiErrorHelper.message(error);
+      this.importMode = previousMode;
+    }
+  }
+
+  private async _refineImport(request: () => Promise<IImportedProfile>, first: IImportedProfile, previousWorkingOn: string, previousTopics: string[]): Promise<void> {
+    this.isRefiningImport = true;
+    const listsBefore = this.importLists;
+
+    try {
+      await new Promise((resolve) => setTimeout(resolve, importRefineDelayMs));
+      const refined = await request();
+      const untouched = this.imported === first && this.importLists === listsBefore && this.importForm.pristine && this.step === 'import' && this.importMode === 'review';
+
+      if (refined.provider !== 'fallback' && untouched) {
+        this._applyImport(refined, previousWorkingOn, previousTopics);
+      }
+    } catch {
+      return;
+    } finally {
+      this.isRefiningImport = false;
+    }
+  }
+
+  private _applyImport(imported: IImportedProfile, previousWorkingOn: string, previousTopics: string[]): void {
+    this.imported = imported;
+    this.importLists = { skills: [...imported.skills], offers: [...imported.offers], asks: [...imported.asks] };
+    this.importForm.reset({ text: '', headline: imported.headline, summary: imported.summary });
+    this.form.controls.workingOn.setValue(previousWorkingOn.trim() ? previousWorkingOn : imported.workingOn);
+
+    const merged = [...previousTopics];
+
+    for (const topic of imported.topics) {
+      if (merged.length < this.maxTopics && !merged.some((selected) => selected.toLowerCase() === topic.toLowerCase())) {
+        merged.push(topic);
+      }
+    }
+
+    this.selectedTopics = merged;
+    this._syncCustomTopicControl();
+  }
+
+  private _focusCustomTopic(): void {
+    this._syncCustomTopicControl();
+    setTimeout(() => this._customTopicInput?.nativeElement.focus());
+  }
+
+  private _syncCustomTopicControl(): void {
+    if (this.isTopicLimitReached && this.customTopicControl.enabled) {
+      this.customTopicControl.disable();
+    } else if (!this.isTopicLimitReached && this.customTopicControl.disabled) {
+      this.customTopicControl.enable();
+    }
   }
 
   private _handleError(error: unknown): void {

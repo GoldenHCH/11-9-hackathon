@@ -112,6 +112,10 @@ export interface IAttendee {
   spotMe?: string;
   workingOn: string;
   headline?: string;
+  skills?: string[];
+  offers?: string[];
+  asks?: string[];
+  summary?: string;
   profileText: string;
   profile: IPlayerProfile;
   settings: IPlayerSettings;
@@ -591,6 +595,29 @@ export interface ISignUpInput {
   noWalking?: boolean;
   scanLocationId?: string;
   scanToken?: string;
+  headline?: string;
+  skills?: string[];
+  offers?: string[];
+  asks?: string[];
+  summary?: string;
+}
+
+export interface IImportProfileInput {
+  attendeeId: string;
+  text?: string;
+}
+
+export interface IImportedProfile {
+  headline: string;
+  role: string;
+  seniority: string;
+  skills: string[];
+  topics: string[];
+  workingOn: string;
+  offers: string[];
+  asks: string[];
+  summary: string;
+  provider: AiProvider;
 }
 
 export interface IUpdateSettingsInput {
@@ -873,6 +900,7 @@ export interface IToolContracts {
   send_message: { input: ISendMessageInput; output: IMessage };
   list_messages: { input: IListMessagesInput; output: IMessage[] };
   recap: { input: IAttendeeInput; output: IRecap };
+  import_profile: { input: IImportProfileInput; output: IImportedProfile };
 }
 
 export interface IToolInfo {

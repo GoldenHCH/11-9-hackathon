@@ -54,6 +54,10 @@ export function buildProfileText(input: {
   welcomer: boolean;
   languages?: string[];
   bio?: string;
+  summary?: string;
+  skills?: string[];
+  offers?: string[];
+  asks?: string[];
 }): string {
   const parts = [
     `${input.handle} is ${input.firstTimer ? 'at their first KubeCon' : 'a returning KubeCon attendee'}.`,
@@ -61,6 +65,10 @@ export function buildProfileText(input: {
     input.topics.length > 0 ? `Interested in ${input.topics.join(', ')}.` : '',
     input.languages && input.languages.length > 0 ? `Writes ${input.languages.join(', ')}.` : '',
     input.bio ? `About: ${input.bio}.` : '',
+    input.summary ? input.summary : '',
+    input.skills && input.skills.length > 0 ? `Skills: ${input.skills.join(', ')}.` : '',
+    input.offers && input.offers.length > 0 ? `Can help with: ${input.offers.join('; ')}.` : '',
+    input.asks && input.asks.length > 0 ? `Looking for: ${input.asks.join('; ')}.` : '',
     input.welcomer ? 'Happy to welcome a first-timer.' : '',
   ];
 

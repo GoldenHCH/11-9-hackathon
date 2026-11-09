@@ -1,6 +1,6 @@
 import { OnboardingStep } from './onboarding.types';
 
-export const onboardingSteps: readonly OnboardingStep[] = ['signin', 'handle', 'about', 'topics', 'meeting'];
+export const onboardingSteps: readonly OnboardingStep[] = ['signin', 'import', 'handle', 'about', 'topics', 'meeting'];
 
 export const maxTopics = 5;
 
@@ -22,3 +22,15 @@ export const topicOptions: readonly string[] = [
   'Kubernetes core',
   'WebAssembly',
 ];
+
+export const maxPdfBytes = 5 * 1024 * 1024;
+
+export const customTopicLimits = { min: 2, max: 30 } as const;
+
+export const placeholderFaceHandle = 'kubequest';
+
+export const minImportTextChars = 40;
+
+export const importListLabels = { skills: 'Skills', offers: 'I can help with', asks: 'I am looking for' } as const;
+
+export const importRefineDelayMs = 5000;

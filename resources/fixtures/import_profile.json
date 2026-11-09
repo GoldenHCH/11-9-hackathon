@@ -1,0 +1,47 @@
+{
+  "tool": "import_profile",
+  "endpoint": "POST /api/tools/import_profile",
+  "request": {
+    "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+    "text": "Senior Platform Engineer. Builds internal developer platforms on Kubernetes with Argo CD and Backstage. Runs GitOps pipelines with Helm and Kustomize for 200 services. Set up OpenTelemetry tracing and Prometheus metrics across clusters. Wants to learn about Kueue batch scheduling and GPU inference with vLLM. Happy to mentor first-time contributors to CNCF projects."
+  },
+  "status": 200,
+  "response": {
+    "headline": "Platform Engineer scaling GitOps for 200+ services",
+    "role": "Senior Platform Engineer",
+    "seniority": "senior",
+    "skills": ["Kubernetes", "GitOps", "Argo CD", "Backstage", "Helm", "Kustomize", "OpenTelemetry", "Prometheus"],
+    "topics": ["Platform engineering", "GitOps", "Observability"],
+    "workingOn": "Building internal developer platforms on Kubernetes with Argo CD and Backstage for 200 services",
+    "offers": ["GitOps at scale", "Backstage platform setup", "Mentoring first-time CNCF contributors"],
+    "asks": ["Kueue batch scheduling patterns", "GPU inference with vLLM"],
+    "summary": "Senior platform engineer leading internal developer platforms on Kubernetes. Runs GitOps for 200 services with Argo CD, Helm and Kustomize, and set up OpenTelemetry and Prometheus across clusters. Exploring Kueue batch scheduling and GPU inference.",
+    "provider": "agent_builder"
+  },
+  "variants": {
+    "fallback": {
+      "status": 200,
+      "response": {
+        "headline": "",
+        "role": "",
+        "seniority": "",
+        "skills": ["inference", "vllm", "gpu", "internal developer", "backstage", "gitops", "argo", "helm", "kustomize", "opentelemetry", "tracing", "prometheus"],
+        "topics": ["GitOps", "Observability", "AI inference", "Platform engineering", "Community and inclusion"],
+        "workingOn": "Senior Platform Engineer.",
+        "offers": [],
+        "asks": [],
+        "summary": "Senior Platform Engineer. Builds internal developer platforms on Kubernetes with Argo CD and Backstage.",
+        "provider": "fallback"
+      }
+    },
+    "rate_limited": {
+      "status": 429,
+      "response": {
+        "error": {
+          "code": "rate_limited",
+          "message": "You have imported a profile a few times already. Try again in an hour, or fill it in by hand."
+        }
+      }
+    }
+  }
+}
