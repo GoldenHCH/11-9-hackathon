@@ -1,5 +1,6 @@
 export type {
   IBoothNote,
+  IGuideAnswer,
   ICheckInResult,
   IClientConfig,
   IDemoScanToken,
@@ -28,3 +29,12 @@ export type {
   IWorld,
 } from '../../../../app/src/types/kubequest.interfaces';
 export type { MeetResponse, NotificationType, ToolName } from '../../../../app/src/types/kubequest.types';
+export type {
+  IConnection,
+  ILinkItem,
+  ILinksView,
+  IProfileLinks,
+  ITalkNote,
+  IUpdateLinksResult,
+} from '../../../../app/src/types/connections.interfaces';
+export type { LinkNetwork } from '../../../../app/src/types/connections.types';

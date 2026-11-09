@@ -1,0 +1,58 @@
+.chips {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: stretch;
+  min-height: 44px;
+  border: 2px solid var(--app-theme--border);
+  background: var(--app-theme--paper);
+  color: var(--app-theme--ink);
+  box-shadow: var(--app-theme--shadow-small);
+  text-decoration: none;
+  max-width: 100%;
+
+  &:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: var(--app-theme--shadow);
+  }
+}
+
+.chip-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  padding: 0 6px;
+  color: #fff;
+  font-size: 12px;
+  border-right: 2px solid var(--app-theme--border);
+}
+
+.chip-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2px 10px;
+  min-width: 0;
+}
+
+.chip-network {
+  font-size: 11px;
+  color: var(--app-theme--ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.chip-label {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
