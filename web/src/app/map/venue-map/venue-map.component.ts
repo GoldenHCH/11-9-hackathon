@@ -10,6 +10,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ILocation } from '../../core/api.types';
 import { ApiErrorHelper } from '../../core/helpers/api-error.helper';
+import { BoothPhotosComponent } from '../../photos/booth-photos/booth-photos.component';
 import { ScreenToolbarComponent } from '../../shared/components/screen-toolbar/screen-toolbar.component';
 import { StateWrapperComponent } from '../../shared/components/state-wrapper/state-wrapper.component';
 import { DemoScanPickerComponent } from '../demo-scan-picker/demo-scan-picker.component';
@@ -34,6 +35,7 @@ const maxVendorResults = 40;
     MatIconModule,
     MatInputModule,
     MatProgressSpinnerModule,
+    BoothPhotosComponent,
     DemoScanPickerComponent,
     ScreenToolbarComponent,
     StateWrapperComponent,
@@ -71,16 +73,17 @@ export class VenueMapComponent implements OnInit {
 
   public ngOnInit(): void {
     this.loadSchematic();
+    this.loadDemoLocations();
     this._demoScanService
       .isEnabled()
       .pipe(takeUntilDestroyed(this._destroyRef))
       .subscribe((enabled) => {
         this.demoScansEnabled = enabled;
-
-        if (enabled) {
-          this.loadDemoLocations();
-        }
       });
+  }
+
+  public get highlightedVendorPhotoLocationId(): string | null {
+    return this.highlightedVendorDemoLocations[0]?.id ?? null;
   }
 
   public get selectedAreaDemoLocations(): ILocation[] {

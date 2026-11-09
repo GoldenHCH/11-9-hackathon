@@ -4,6 +4,8 @@ import { RouterLink } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { PhotoCaptureComponent } from '../../photos/photo-capture/photo-capture.component';
+import { IUploadBoothPhotoResult } from '../../photos/photos.types';
 import { IQuestTypeMeta, declineReasonOptions, materialColors, questTypeMeta } from '../quests.constants';
 import { DeclineReason, IQuest, QuestResponse } from '../quests.types';
 
@@ -17,7 +19,7 @@ export interface IQuestResponseEvent {
 
 @Component({
   selector: 'app-quest-card',
-  imports: [DatePipe, RouterLink, MatButtonModule, MatIconModule, MatProgressSpinnerModule],
+  imports: [DatePipe, RouterLink, MatButtonModule, MatIconModule, MatProgressSpinnerModule, PhotoCaptureComponent],
   templateUrl: './quest-card.component.html',
   styleUrl: './quest-card.component.scss',
 })
@@ -27,6 +29,7 @@ export class QuestCardComponent {
   @Input() public isBusy = false;
   @Input() public canAccept = true;
   @Output() public readonly respond = new EventEmitter<IQuestResponseEvent>();
+  @Output() public readonly photoAdded = new EventEmitter<IUploadBoothPhotoResult>();
 
   public readonly declineReasons = declineReasonOptions;
   public isChoosingReason = false;
@@ -51,6 +54,10 @@ export class QuestCardComponent {
 
   public get quizTalkId(): string | null {
     return this.quest.type === 'quiz' && this.quest.talkId ? this.quest.talkId : null;
+  }
+
+  public get photoLocationId(): string | null {
+    return this.quest.type === 'photo' && this.quest.locationId ? this.quest.locationId : null;
   }
 
   public get headingId(): string {

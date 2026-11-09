@@ -801,6 +801,70 @@ export interface ISaveBoothNoteResult {
   newBanners: IBannerProgress[];
 }
 
+export interface IBoothPhotoUploader {
+  publicId: string;
+  handle: string;
+  faceSeed: string;
+}
+
+export interface IBoothPhoto {
+  id: string;
+  locationId: string;
+  boothName: string;
+  url: string;
+  width: number;
+  height: number;
+  caption?: string;
+  uploader: IBoothPhotoUploader;
+  createdAt: IsoDateString;
+  mine?: boolean;
+}
+
+export interface IUploadBoothPhotoInput {
+  attendeeId: string;
+  locationId: string;
+  image: string;
+  caption?: string;
+}
+
+export interface IUploadBoothPhotoResult {
+  photo: IBoothPhoto;
+  xp: number;
+  questCompleted: boolean;
+  message: string;
+  levelUp?: ILevelProgress;
+  newBanners: IBannerProgress[];
+}
+
+export interface IListBoothPhotosInput {
+  locationId: string;
+  attendeeId?: string;
+  limit?: number;
+}
+
+export interface IBoothPhotoList {
+  locationId: string;
+  photos: IBoothPhoto[];
+  count: number;
+}
+
+export interface IBoothPhotoActionInput {
+  attendeeId: string;
+  photoId: string;
+}
+
+export interface IReportBoothPhotoResult {
+  photoId: string;
+  reports: number;
+  hidden: boolean;
+  message: string;
+}
+
+export interface IDeleteBoothPhotoResult {
+  photoId: string;
+  deleted: boolean;
+}
+
 export interface IMessage {
   id: string;
   meetId: string;
@@ -935,6 +999,10 @@ export interface IToolContracts {
   answer_handshake: { input: IAnswerHandshakeInput; output: IHandshake };
   save_booth_note: { input: ISaveBoothNoteInput; output: ISaveBoothNoteResult };
   list_booth_notes: { input: IAttendeeInput; output: IBoothNote[] };
+  upload_booth_photo: { input: IUploadBoothPhotoInput; output: IUploadBoothPhotoResult };
+  list_booth_photos: { input: IListBoothPhotosInput; output: IBoothPhotoList };
+  report_booth_photo: { input: IBoothPhotoActionInput; output: IReportBoothPhotoResult };
+  delete_booth_photo: { input: IBoothPhotoActionInput; output: IDeleteBoothPhotoResult };
   send_message: { input: ISendMessageInput; output: IMessage };
   list_messages: { input: IListMessagesInput; output: IMessage[] };
   recap: { input: IAttendeeInput; output: IRecap };

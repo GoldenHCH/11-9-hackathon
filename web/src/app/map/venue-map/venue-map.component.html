@@ -154,6 +154,9 @@
                   <p class="details-note" role="alert">{{ demoScanError }}</p>
                 }
               }
+              @if (highlightedVendorPhotoLocationId; as photoLocationId) {
+                <app-booth-photos [locationId]="photoLocationId"></app-booth-photos>
+              }
             </article>
           }
           @if (selectedArea) {

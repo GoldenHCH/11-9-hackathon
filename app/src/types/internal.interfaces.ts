@@ -81,6 +81,28 @@ export interface IStoredHandshake {
 export interface IStoredBoothNote extends IBoothNote {
   attendeeId: string;
   noteText?: string;
+  lastScanAt?: IsoDateString;
+}
+
+export interface IStoredBoothPhoto {
+  id: string;
+  kind: 'photo';
+  attendeeId: string;
+  publicId: string;
+  handle: string;
+  faceSeed: string;
+  locationId: string;
+  boothName: string;
+  image: string;
+  mimeType: string;
+  width: number;
+  height: number;
+  bytes: number;
+  caption?: string;
+  createdAt: IsoDateString;
+  reports: number;
+  reportedBy: string[];
+  hidden: boolean;
 }
 
 export interface IStoredMessage {

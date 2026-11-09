@@ -1,0 +1,15 @@
+{
+  "tool": "report_booth_photo",
+  "endpoint": "POST /api/tools/report_booth_photo",
+  "request": {
+    "attendeeId": "p_Ljp4ZfHC-VPDFwqx",
+    "photoId": "bp-75fdc11b1ccb464ab9e15173"
+  },
+  "status": 200,
+  "response": {
+    "photoId": "bp-75fdc11b1ccb464ab9e15173",
+    "reports": 1,
+    "hidden": false,
+    "message": "Thanks. We noted your report."
+  }
+}

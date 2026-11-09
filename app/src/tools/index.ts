@@ -36,6 +36,10 @@ import { saveBoothNoteTool } from './save-booth-note.tool';
 import { sendMessageTool } from './send-message.tool';
 import { startHandshakeTool } from './start-handshake.tool';
 import { importProfileTool } from './import-profile.tool';
+import { deleteBoothPhotoTool } from './delete-booth-photo.tool';
+import { listBoothPhotosTool } from './list-booth-photos.tool';
+import { reportBoothPhotoTool } from './report-booth-photo.tool';
+import { uploadBoothPhotoTool } from './upload-booth-photo.tool';
 import { IRegisteredTool } from './define-tool';
 
 export const toolRegistry = {
@@ -70,6 +74,10 @@ export const toolRegistry = {
   answer_handshake: answerHandshakeTool,
   save_booth_note: saveBoothNoteTool,
   list_booth_notes: listBoothNotesTool,
+  upload_booth_photo: uploadBoothPhotoTool,
+  list_booth_photos: listBoothPhotosTool,
+  report_booth_photo: reportBoothPhotoTool,
+  delete_booth_photo: deleteBoothPhotoTool,
   send_message: sendMessageTool,
   list_messages: listMessagesTool,
   recap: recapTool,

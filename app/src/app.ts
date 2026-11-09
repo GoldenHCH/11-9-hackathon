@@ -50,6 +50,7 @@ export function createApp(): Express {
   app.disable('x-powered-by');
   app.set('trust proxy', true);
   app.use(requestLogger);
+  app.use('/api/tools/upload_booth_photo', express.json({ limit: '600kb' }));
   app.use(express.json({ limit: '100kb' }));
   app.use(malformedBodyHandler);
   app.use(healthRoutes());
