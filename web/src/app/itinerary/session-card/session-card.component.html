@@ -90,5 +90,20 @@
         </div>
       }
     </button>
+
+    @if (session.locationId) {
+      <a
+        mat-stroked-button
+        class="session-map"
+        routerLink="/map"
+        [queryParams]="{ focus: session.locationId }"
+        [attr.aria-label]="'Show on map: ' + session.room"
+      >
+        <div class="btn-content">
+          <mat-icon aria-hidden="true">map</mat-icon>
+          <span>Show on map</span>
+        </div>
+      </a>
+    }
   </div>
 </article>

@@ -1,23 +1,37 @@
+:host {
+  display: block;
+}
+
+:host .app-page {
+  max-width: 720px;
+}
+
 .here {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  max-width: 640px;
+  gap: 24px;
 }
 
 .room {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  padding: 16px;
+  gap: 8px;
+  padding: 24px 16px;
+  background: var(--kq-surface-2);
   border-color: var(--kq-primary);
+  box-shadow: 4px 4px 0 #000000, inset 0 -8px 0 rgba(108, 194, 74, 0.2);
 }
 
 .room-label,
 .slot-label {
-  font-size: 11px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
   color: var(--kq-muted);
   text-transform: uppercase;
+}
+
+.room-label {
+  color: var(--kq-primary);
 }
 
 .room-name {
@@ -33,11 +47,15 @@
 }
 
 .room-count {
-  margin: 4px 0 0;
-  display: flex;
+  display: inline-flex;
+  align-self: flex-start;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
+  margin: 8px 0 0;
+  padding: 4px 8px;
   font-weight: 600;
+  background: var(--kq-surface);
+  border: 2px solid var(--kq-border);
 }
 
 .room-count-icon {
@@ -48,17 +66,24 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 6px;
-  padding: 14px;
+  gap: 8px;
+  padding: 16px;
 }
 
 .slot--next {
   border-color: var(--kq-accent);
+  box-shadow: 4px 4px 0 #000000, inset 4px 0 0 var(--kq-accent);
+}
+
+.slot-label {
+  .slot--next & {
+    color: var(--kq-accent);
+  }
 }
 
 .slot-title {
   margin: 0;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.35;
 }
 
@@ -69,29 +94,39 @@
 }
 
 .slot-actions {
-  margin-top: 6px;
+  align-self: stretch;
+  margin-top: 8px;
 }
 
 .material-chip {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
+  padding: 4px 8px;
   font-size: 12px;
-  padding: 3px 8px;
   background: var(--kq-surface-2);
-  border: 1px solid var(--kq-border-soft);
+  border: 2px solid var(--kq-border);
   text-transform: capitalize;
+
+  .kq-swatch {
+    width: 8px;
+    height: 8px;
+    border-width: 1px;
+    box-shadow: none;
+  }
 }
 
 .people-here {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 16px;
 }
 
 .people-here-title {
-  margin: 8px 0 0;
-  font-size: 15px;
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .people-here-list {
@@ -100,7 +135,13 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
+}
+
+@media (max-width: 599.98px) {
+  .slot-actions .mat-mdc-unelevated-button {
+    width: 100%;
+  }
 }
 
 .guide {

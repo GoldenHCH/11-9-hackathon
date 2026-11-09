@@ -72,6 +72,8 @@ export class VenueSchematicComponent implements OnChanges, AfterViewInit, OnDest
   @Input() public highlightedAreaIds: string[] = [];
   @Input() public booths: IVendor[] = [];
   @Input() public highlightedVendorId: string | null = null;
+  @Input() public areaTags: Record<string, string> = {};
+  @Input() public liveAreaIds: string[] = [];
   @Output() public readonly areaSelected = new EventEmitter<IVenueArea>();
   @Output() public readonly boothSelected = new EventEmitter<IVendor>();
 
@@ -395,6 +397,22 @@ export class VenueSchematicComponent implements OnChanges, AfterViewInit, OnDest
 
   public isSelected(area: IVenueArea): boolean {
     return area.id === this.selectedAreaId;
+  }
+
+  public isLive(area: IVenueArea): boolean {
+    return this.liveAreaIds.includes(area.id);
+  }
+
+  public tagFor(area: IVenueArea): string {
+    return this.areaTags[area.id] ?? '';
+  }
+
+  public tagSize(label: IAreaLabel): number {
+    return Math.max(this.unit * 6, label.fontSize * 0.62);
+  }
+
+  public tagY(label: IAreaLabel): number {
+    return label.y + (label.lines.length / 2) * label.fontSize * lineHeightRatio + this.tagSize(label) * 0.9;
   }
 
   public isHighlighted(area: IVenueArea): boolean {

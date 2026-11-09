@@ -10,11 +10,17 @@ import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ILocation } from '../../core/api.types';
 import { ApiErrorHelper } from '../../core/helpers/api-error.helper';
+import { MeService } from '../../core/services/me.service';
+import { ToolsService } from '../../core/services/tools.service';
+import { ISchedule, IScheduleSession } from '../../itinerary/itinerary.types';
 import { BoothPhotosComponent } from '../../photos/booth-photos/booth-photos.component';
 import { ScreenToolbarComponent } from '../../shared/components/screen-toolbar/screen-toolbar.component';
 import { StateWrapperComponent } from '../../shared/components/state-wrapper/state-wrapper.component';
 import { DemoScanPickerComponent } from '../demo-scan-picker/demo-scan-picker.component';
 import { DemoScanHelper } from '../demo-scan.helper';
+import { NowNextBarComponent } from '../now-next-bar/now-next-bar.component';
+import { RoomSessionCardComponent } from '../room-session-card/room-session-card.component';
+import { IRoomSessions, RoomSessionsHelper } from '../room-sessions.helper';
 import { DemoScanService } from '../services/demo-scan.service';
 import { VenueService } from '../services/venue.service';
 import { VenueSchematicComponent } from '../venue-schematic/venue-schematic.component';
@@ -37,6 +43,8 @@ const maxVendorResults = 40;
     MatProgressSpinnerModule,
     BoothPhotosComponent,
     DemoScanPickerComponent,
+    NowNextBarComponent,
+    RoomSessionCardComponent,
     ScreenToolbarComponent,
     StateWrapperComponent,
     VenueSchematicComponent,
@@ -49,6 +57,10 @@ export class VenueMapComponent implements OnInit {
   private readonly _destroyRef = inject(DestroyRef);
   private readonly _route = inject(ActivatedRoute);
   private readonly _demoScanService = inject(DemoScanService);
+  private readonly _toolsService = inject(ToolsService);
+  private readonly _meService = inject(MeService);
+  private _schedule: ISchedule | null = null;
+  private _focusApplied = false;
 
   @ViewChild('mapTop') private readonly _mapTop?: ElementRef<HTMLElement>;
   @ViewChild(VenueSchematicComponent) private readonly _schematic?: VenueSchematicComponent;
@@ -70,10 +82,21 @@ export class VenueMapComponent implements OnInit {
   public isLoadingDemoLocations = false;
   public pendingDemoLocationId: string | null = null;
   public demoScanError = '';
+  public readonly noTags: Record<string, string> = {};
+  public readonly noAreaIds: string[] = [];
+  public showNowNext = false;
+  public roomSessions = new Map<string, IRoomSessions>();
+  public nowNextTags: Record<string, string> = {};
+  public liveAreaIds: string[] = [];
+  public liveSessions: IScheduleSession[] = [];
+  public scheduleDay = '';
+  public isScheduleLoading = false;
+  public scheduleError = '';
 
   public ngOnInit(): void {
     this.loadSchematic();
     this.loadDemoLocations();
+    this.loadRoomSchedule();
     this._demoScanService
       .isEnabled()
       .pipe(takeUntilDestroyed(this._destroyRef))
@@ -141,6 +164,7 @@ export class VenueMapComponent implements OnInit {
         next: (locations) => {
           this.demoLocations = locations;
           this.isLoadingDemoLocations = false;
+          this.applyFocus();
         },
         error: (error: unknown) => {
           console.error('Game locations failed to load', error);
@@ -163,6 +187,8 @@ export class VenueMapComponent implements OnInit {
           this.selectBuilding(schematic.buildings[0]?.id ?? '');
           this.openRequestedLevel(schematic);
           this.isLoading = false;
+          this.indexRoomSessions();
+          this.applyFocus();
         },
         error: (error: unknown) => {
           console.error('Venue schematic failed to load', error);
@@ -170,6 +196,116 @@ export class VenueMapComponent implements OnInit {
           this.isLoading = false;
         },
       });
+  }
+
+  public get selectedAreaSessions(): IRoomSessions | null {
+    return this.selectedAreaId ? (this.roomSessions.get(this.selectedAreaId) ?? null) : null;
+  }
+
+  public toggleNowNext(): void {
+    this.showNowNext = !this.showNowNext;
+
+    if (this.showNowNext && !this._schedule && !this.isScheduleLoading) {
+      this.loadRoomSchedule();
+    }
+  }
+
+  public loadRoomSchedule(): void {
+    this.isScheduleLoading = true;
+    this.scheduleError = '';
+    const attendeeId = this._meService.attendeeId;
+    this._toolsService
+      .call<ISchedule>('list_schedule', attendeeId ? { attendeeId } : {}, { background: true })
+      .pipe(takeUntilDestroyed(this._destroyRef))
+      .subscribe({
+        next: (schedule) => {
+          this._schedule = schedule;
+          this.scheduleDay = schedule.day;
+          this.isScheduleLoading = false;
+          this.indexRoomSessions();
+          this.applyFocus();
+        },
+        error: (error: unknown) => {
+          console.error('list_schedule failed', error);
+          this.scheduleError = ApiErrorHelper.message(error);
+          this.isScheduleLoading = false;
+        },
+      });
+  }
+
+  private indexRoomSessions(): void {
+    if (!this.schematic || !this._schedule) {
+      return;
+    }
+
+    this.roomSessions = RoomSessionsHelper.byArea(this.schematic, this._schedule);
+    const tags: Record<string, string> = {};
+    const live: string[] = [];
+
+    for (const [areaId, entry] of this.roomSessions) {
+      tags[areaId] = RoomSessionsHelper.tag(entry);
+
+      if (entry.now) {
+        live.push(areaId);
+      }
+    }
+
+    this.nowNextTags = tags;
+    this.liveAreaIds = live;
+    this.liveSessions = RoomSessionsHelper.liveSessions(this._schedule).slice(0, 4);
+  }
+
+  private applyFocus(): void {
+    const focusId = this._route.snapshot.queryParamMap.get('focus');
+
+    if (this._focusApplied || !focusId || !this.schematic) {
+      return;
+    }
+
+    const session = this._schedule?.slots.flatMap((slot) => slot.sessions).find((candidate) => candidate.locationId === focusId);
+    const location =
+      this.demoLocations.find((candidate) => candidate.id === focusId) ?? (session ? RoomSessionsHelper.locationFromSession(session) : null);
+
+    if (!location) {
+      return;
+    }
+
+    if (location.kind === 'outpost') {
+      const vendor = this.schematic.vendors.find((candidate) => DemoScanHelper.forVendor(candidate, [location]).length > 0);
+
+      if (vendor) {
+        this._focusApplied = true;
+        this.showVendorOnMap(vendor);
+
+        return;
+      }
+    }
+
+    if (this.focusLocation(location)) {
+      this._focusApplied = true;
+    }
+  }
+
+  public focusSession(session: IScheduleSession): void {
+    this.focusLocation(this.demoLocations.find((candidate) => candidate.id === session.locationId) ?? RoomSessionsHelper.locationFromSession(session));
+  }
+
+  private focusLocation(location: ILocation): boolean {
+    const focus = this.schematic ? RoomSessionsHelper.findFocus(this.schematic, location) : null;
+
+    if (!focus) {
+      return false;
+    }
+
+    this.viewMode = 'map';
+    this.goToLevel(focus.buildingId, focus.levelId);
+
+    if (focus.areaId) {
+      this.selectedAreaId = focus.areaId;
+      setTimeout(() => this._schematic?.focusArea(focus.areaId), 60);
+    }
+
+    return true;
   }
 
   public get selectedBuilding(): IVenueBuilding | null {

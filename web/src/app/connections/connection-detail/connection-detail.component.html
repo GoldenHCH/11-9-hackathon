@@ -8,7 +8,6 @@
   <app-state-wrapper [isLoading]="isLoading" [errorMessage]="errorMessage" [skeletonRows]="4" (retry)="loadConnection()">
     @if (connection; as person) {
       <div class="layout">
-        <!-- Who they are -->
         <section class="hero app-block">
           <app-pixel-face [seed]="person.player.faceSeed" [size]="72" [label]="'Face of @' + person.player.handle"></app-pixel-face>
           <div class="hero-text">
@@ -23,7 +22,6 @@
           </div>
         </section>
 
-        <!-- Links -->
         <section class="card app-block" aria-labelledby="links-title">
           <h3 id="links-title" class="card-title app-pixel">Links</h3>
           @if (person.links.length) {
@@ -33,7 +31,6 @@
           }
         </section>
 
-        <!-- Where you met -->
         <section class="card app-block" aria-labelledby="met-title">
           <h3 id="met-title" class="card-title app-pixel">Where you met</h3>
           <p class="met-line">
@@ -55,7 +52,6 @@
           }
         </section>
 
-        <!-- Private notes -->
         <form class="card app-block notes" (ngSubmit)="onSave()" aria-labelledby="notes-title">
           <h3 id="notes-title" class="card-title app-pixel">My notes</h3>
           <p class="muted notes-privacy">

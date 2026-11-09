@@ -5,10 +5,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSlideToggleChange, MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { Router, RouterLink } from '@angular/router';
 import { firstValueFrom, forkJoin } from 'rxjs';
+import { environment } from '../../environments/environment';
 import { ApiErrorHelper } from '../core/helpers/api-error.helper';
 import { MeService } from '../core/services/me.service';
 import { ToolsService } from '../core/services/tools.service';
 import { AlertBannerComponent } from '../shared/components/alert-banner/alert-banner.component';
+import { ScreenToolbarComponent } from '../shared/components/screen-toolbar/screen-toolbar.component';
 import { StateWrapperComponent } from '../shared/components/state-wrapper/state-wrapper.component';
 import { CopyLinkComponent } from './copy-link/copy-link.component';
 import { BlockFaceComponent } from './face/block-face.component';
@@ -24,6 +26,7 @@ import { AccessibilityService } from './services/accessibility.service';
     MatIconModule,
     MatSlideToggleModule,
     AlertBannerComponent,
+    ScreenToolbarComponent,
     StateWrapperComponent,
     BlockFaceComponent,
     CopyLinkComponent,
@@ -57,6 +60,12 @@ export class ProfileComponent implements OnInit {
     const level = this.profile?.level;
 
     return level?.nextLevelXp ? Math.max(0, level.nextLevelXp - level.xp) : 0;
+  }
+
+  public get pdfUrl(): string {
+    const attendeeId = this._meService.attendeeId;
+
+    return attendeeId ? `${environment.apiBaseUrl}/recap/${encodeURIComponent(attendeeId)}.pdf` : '';
   }
 
   public get hasBlocks(): boolean {

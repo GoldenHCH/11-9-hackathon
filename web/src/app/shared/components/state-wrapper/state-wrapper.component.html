@@ -1,22 +1,30 @@
 @if (errorMessage) {
   <app-alert-banner
     [message]="errorMessage"
-    actionLabel="Try again"
+    actionLabel="Retry"
     [dismissible]="false"
     (action)="retry.emit()"
   ></app-alert-banner>
 } @else if (isLoading) {
   <div class="skeleton" aria-busy="true" aria-label="Loading">
     @for (row of skeletonRowIndexes; track row) {
-      <div class="skeleton-row"></div>
+      <div class="skeleton-row kq-skeleton kq-skeleton--block">
+        <span class="skeleton-cube"></span>
+        <span class="skeleton-lines">
+          <span class="skeleton-line"></span>
+          <span class="skeleton-line skeleton-line--short"></span>
+        </span>
+      </div>
     }
   </div>
 } @else if (isEmpty) {
-  <div class="empty app-block">
-    <mat-icon aria-hidden="true">{{ emptyIcon }}</mat-icon>
+  <div class="empty kq-block">
+    <span class="empty-icon" aria-hidden="true">
+      <mat-icon>{{ emptyIcon }}</mat-icon>
+    </span>
     <p class="empty-message">{{ emptyMessage }}</p>
     @if (emptyActionLabel) {
-      <button mat-flat-button type="button" (click)="emptyAction.emit()">{{ emptyActionLabel }}</button>
+      <button type="button" class="kq-btn kq-btn--primary" (click)="emptyAction.emit()">{{ emptyActionLabel }}</button>
     }
   </div>
 } @else {

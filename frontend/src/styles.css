@@ -73,9 +73,8 @@ body.plain .section__title {
 }
 
 :focus-visible {
-  outline: 3px solid var(--xp);
-  outline-offset: 3px;
-  box-shadow: 0 0 0 6px var(--ink);
+  outline: 2px solid var(--xp);
+  outline-offset: 2px;
 }
 
 .skip {
@@ -110,7 +109,7 @@ body.plain .section__title {
   text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
-  transition: transform 60ms steps(2), box-shadow 60ms steps(2);
+  transition: transform 120ms ease, box-shadow 120ms ease, background-color 120ms ease;
 }
 
 .btn:hover {
@@ -119,8 +118,8 @@ body.plain .section__title {
 }
 
 .btn:active {
-  transform: translate(4px, 4px);
-  box-shadow: 0 0 0 var(--ink);
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--ink);
 }
 
 .btn--ghost {
@@ -128,7 +127,7 @@ body.plain .section__title {
 }
 
 .btn--small {
-  min-height: 40px;
+  min-height: 44px;
   padding: 6px 16px;
   font-size: 0.875rem;
 }
@@ -183,6 +182,9 @@ body.plain .section__title {
 }
 
 .signin {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   text-decoration: none;
   color: var(--salt-2);
   font-size: var(--step--1);
@@ -393,6 +395,7 @@ body.plain .section__title {
   font: 700 var(--step--1) var(--font-body);
   color: var(--salt);
   background: transparent;
+  min-height: 44px;
   border: 2px solid var(--salt-2);
   cursor: pointer;
 }
@@ -485,4 +488,18 @@ body.plain .section__title {
 
 .hero-frame .hud-card {
   width: 400px;
+}
+
+@media (max-width: 480px) {
+  .topbar {
+    gap: 16px;
+  }
+
+  .topbar .btn--small {
+    display: none;
+  }
+
+  .hero__ctas .btn {
+    flex: 1 1 140px;
+  }
 }

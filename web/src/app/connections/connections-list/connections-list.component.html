@@ -1,4 +1,4 @@
-<section class="app-page">
+<section class="app-page page">
   <app-screen-toolbar title="People met" subtitle="Everyone you shook hands or met up with">
     <a mat-stroked-button routerLink="/links">
       <div class="btn-content">
@@ -13,16 +13,19 @@
     [errorMessage]="errorMessage"
     [isEmpty]="!connections.length"
     emptyIcon="group_add"
-    emptyMessage="Nobody yet. Show your handshake code to someone at a campfire and they’ll appear here with their links."
+    emptyMessage="Nobody yet. Show your handshake code to someone and they’ll appear here with their links."
     emptyActionLabel="Show my code"
     (emptyAction)="openCode()"
     (retry)="loadConnections()"
   >
+    <p class="count kq-pixel">{{ connections.length }} {{ connections.length === 1 ? 'person' : 'people' }}</p>
     <ul class="list">
       @for (connection of connections; track connection.id) {
         <li>
-          <a class="person app-card app-card--clickable" [routerLink]="['/connections', connection.id]">
-            <app-pixel-face [seed]="connection.player.faceSeed" [size]="48" [label]="'Face of @' + connection.player.handle"></app-pixel-face>
+          <a class="person kq-block" [routerLink]="['/connections', connection.id]">
+            <span class="person-face">
+              <app-pixel-face [seed]="connection.player.faceSeed" [size]="56" [label]="'Face of @' + connection.player.handle"></app-pixel-face>
+            </span>
             <div class="person-text">
               <p class="person-handle">&#64;{{ connection.player.handle }}</p>
               @if (connection.player.realName || connection.player.headline) {
@@ -30,20 +33,24 @@
               }
               <p class="person-line person-muted">
                 <mat-icon class="inline-icon" aria-hidden="true">place</mat-icon>
-                {{ connection.where?.name ?? 'In person' }} · {{ connection.metAt | date: 'EEE h:mm a' }}
+                <span>{{ connection.where?.name ?? 'In person' }} · {{ connection.metAt | date: 'EEE h:mm a' }}</span>
               </p>
               <div class="person-tags">
                 @if (connection.links.length) {
-                  <span class="tag">{{ connection.links.length }} {{ connection.links.length === 1 ? 'link' : 'links' }}</span>
+                  <span class="link-icons" role="img" [attr.aria-label]="connection.links.length + (connection.links.length === 1 ? ' link' : ' links')">
+                    @for (link of connection.links; track link.network) {
+                      <span class="link-icon kq-pixel" [style.background]="color(link.network)" [attr.title]="networkLabel(link.network)">{{ glyph(link.network) }}</span>
+                    }
+                  </span>
                 }
                 @if (connection.note) {
-                  <span class="tag tag--note">Notes</span>
+                  <span class="tag"><span class="tag-swatch tag-swatch--done" aria-hidden="true"></span>Notes</span>
                 } @else {
-                  <span class="tag tag--todo">Add notes</span>
+                  <span class="tag tag--todo"><span class="tag-swatch tag-swatch--todo" aria-hidden="true"></span>Add notes</span>
                 }
               </div>
             </div>
-            <mat-icon class="app-card-arrow" aria-hidden="true">chevron_right</mat-icon>
+            <mat-icon class="person-arrow" aria-hidden="true">chevron_right</mat-icon>
           </a>
         </li>
       }

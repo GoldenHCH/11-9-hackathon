@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: 8px;
   padding: 16px;
+  border-left: 8px solid var(--kq-lantern);
 }
 
 .panel-header {
@@ -12,23 +13,41 @@
   gap: 8px;
 }
 
+.panel-header {
+  margin-bottom: 8px;
+}
+
 .panel-title {
   margin: 0;
   font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .panel-privacy {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  font-size: 13px;
-  color: var(--app-theme--ink-muted);
+  min-height: 24px;
+  padding: 0 8px;
+  font-size: 12px;
+  color: var(--kq-muted);
+  border: 2px solid var(--kq-border-soft);
+
+  mat-icon {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+  }
 }
 
 .takeaways-label {
-  margin: 8px 0 0;
-  font-weight: 600;
-  font-size: 14px;
+  margin: 16px 0 0;
+  font-family: var(--kq-font-pixel);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--kq-muted);
 }
 
 .takeaway-row {
@@ -49,7 +68,7 @@
 .actions {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
   margin-top: 8px;
 }
 

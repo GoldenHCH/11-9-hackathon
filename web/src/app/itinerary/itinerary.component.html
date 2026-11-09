@@ -266,6 +266,20 @@
                         </div>
                       </a>
                     }
+                    @if (item.place?.locationId) {
+                      <a
+                        mat-stroked-button
+                        class="plan-action"
+                        routerLink="/map"
+                        [queryParams]="{ focus: item.place!.locationId }"
+                        [attr.aria-label]="'Show on map: ' + (item.place?.name ?? item.title)"
+                      >
+                        <div class="btn-content">
+                          <mat-icon aria-hidden="true">map</mat-icon>
+                          <span>Show on map</span>
+                        </div>
+                      </a>
+                    }
                   </div>
                 </li>
               }

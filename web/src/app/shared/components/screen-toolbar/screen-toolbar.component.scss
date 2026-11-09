@@ -1,20 +1,42 @@
+:host {
+  display: block;
+}
+
 .toolbar {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 16px;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--kq-border-soft);
+}
+
+.toolbar-back {
+  flex-shrink: 0;
+  width: 44px;
+  padding: 0;
 }
 
 .toolbar-text {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 4px;
   min-width: 0;
+}
+
+.app-page-subtitle {
+  font-size: 14px;
+  line-height: 1.4;
 }
 
 .toolbar-actions {
   display: flex;
   align-items: center;
   gap: 8px;
+  flex-shrink: 0;
+
+  &:empty {
+    display: none;
+  }
 }
