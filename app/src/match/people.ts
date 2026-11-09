@@ -5,7 +5,8 @@ import { rerankRetriever, searchWithFallbacks } from '../es/rerank';
 import { gameRules } from '../types/kubequest.constants';
 import { IAttendee, IIntro, IPersonMatch } from '../types/kubequest.interfaces';
 import { worldNow } from '../world/clock';
-import { attendeeSourceExcludes, getAttendee, hitSources, profileQueryText, sharedTopics, toMatchPlayer } from './match-data';
+import { exploringQueryText, exploringRerankText, exploringRetrieverQuery, intentBoosts, intentReason, intentWindow, lightLimitQuery, matchSourceExcludes, playersMatchedToday } from './intent-match';
+import { getAttendee, hitSources, profileQueryText, sharedTopics, toMatchPlayer } from './match-data';
 
 export interface IRecommendPeopleOptions {
   hereOnly?: boolean;
@@ -46,7 +47,8 @@ async function excludedPartnerIds(attendeeId: string, nowMs: number): Promise<Se
   return new Set(hitSources(response.hits.hits).map((intro) => (intro.fromId === attendeeId ? intro.toId : intro.fromId)));
 }
 
-function peopleFilter(me: IAttendee, excludeIds: string[], hereOnly: boolean): estypes.QueryDslQueryContainer {
+function peopleFilter(me: IAttendee, excludeIds: string[], hereOnly: boolean, matchedToday: string[]): estypes.QueryDslQueryContainer {
+  const lightLimit = lightLimitQuery(matchedToday);
   const filter: estypes.QueryDslQueryContainer[] = [{ term: { visible: true } }, { term: { 'settings.meetingOn': true } }];
 
   if (hereOnly && me.lastLocationId) {
@@ -57,7 +59,7 @@ function peopleFilter(me: IAttendee, excludeIds: string[], hereOnly: boolean): e
   return {
     bool: {
       filter,
-      must_not: [{ ids: { values: excludeIds } }, { term: { blockedIds: me.id } }],
+      must_not: [{ ids: { values: excludeIds } }, { term: { blockedIds: me.id } }, ...(lightLimit ? [lightLimit] : [])],
     },
   };
 }
@@ -66,6 +68,7 @@ function boostQuery(me: IAttendee, queryText: string, filter: estypes.QueryDslQu
   const topics = me.profile?.topics ?? [];
   const should: estypes.QueryDslQueryContainer[] = [
     { range: { lastSeenAt: { gte: new Date(nowMs - recentlySeenMinutes * 60000).toISOString(), boost: 1.5 } } },
+    ...intentBoosts(me),
   ];
 
   if (queryText !== '') {
@@ -98,12 +101,13 @@ async function hybridPeople(
   nowMs: number,
 ): Promise<estypes.SearchHit<IAttendee>[]> {
   const client = getEsClient();
-  const queryText = profileQueryText(me);
+  const queryText = [exploringQueryText(me), profileQueryText(me)].filter((part) => part).join(' ').slice(0, 2000);
   const keyword = boostQuery(me, queryText, filter, nowMs);
+  const exploring = exploringRetrieverQuery(me, filter);
 
   if (queryText === '') {
     const response = await client.search<IAttendee>(
-      { index: indexNames.ATTENDEES, size, query: keyword, _source_excludes: attendeeSourceExcludes },
+      { index: indexNames.ATTENDEES, size, query: keyword, _source_excludes: matchSourceExcludes },
       esOptions(esTimeouts.SEARCH_MS),
     );
 
@@ -115,6 +119,7 @@ async function hybridPeople(
       retrievers: [
         { standard: { query: { bool: { filter: [filter], must: [{ semantic: { field: 'profileText', query: queryText } }] } } } },
         { standard: { query: keyword } },
+        ...(exploring ? [{ standard: { query: exploring } }] : []),
       ],
       rank_window_size: Math.max(50, size),
       rank_constant: 20,
@@ -122,7 +127,7 @@ async function hybridPeople(
   };
   const byRetriever = async (retriever: estypes.RetrieverContainer): Promise<estypes.SearchHit<IAttendee>[]> => {
     const response = await client.search<IAttendee>(
-      { index: indexNames.ATTENDEES, size, _source_excludes: attendeeSourceExcludes, retriever },
+      { index: indexNames.ATTENDEES, size, _source_excludes: matchSourceExcludes, retriever },
       esOptions(esTimeouts.SEARCH_MS),
     );
 
@@ -130,14 +135,14 @@ async function hybridPeople(
   };
   const keywordOnly = async (): Promise<estypes.SearchHit<IAttendee>[]> => {
     const response = await client.search<IAttendee>(
-      { index: indexNames.ATTENDEES, size, query: keyword, _source_excludes: attendeeSourceExcludes },
+      { index: indexNames.ATTENDEES, size, query: keyword, _source_excludes: matchSourceExcludes },
       esOptions(esTimeouts.SEARCH_MS),
     );
 
     return response.hits.hits;
   };
   const { result } = await searchWithFallbacks('people', [
-    { mode: 'reranked', run: () => byRetriever(rerankRetriever(hybrid, 'profileText', queryText, size)) },
+    { mode: 'reranked', run: () => byRetriever(rerankRetriever(hybrid, 'profileText', exploringRerankText(me) ?? queryText, size)) },
     { mode: 'hybrid', run: () => byRetriever(hybrid) },
     { mode: 'lexical', run: keywordOnly },
   ]);
@@ -147,6 +152,11 @@ async function hybridPeople(
 
 function reasonFor(me: IAttendee, them: IAttendee, shared: string[], sameRoom: boolean): string {
   const parts: string[] = [];
+  const intent = intentReason(me, them);
+
+  if (intent) {
+    parts.push(intent);
+  }
 
   if (me.profile?.firstTimer && them.profile?.welcomer) {
     parts.push('Happy to welcome a first-timer');
@@ -177,11 +187,10 @@ export async function recommendPeopleFor(attendeeId: string, opts: IRecommendPeo
     return [];
   }
 
-  const partners = await excludedPartnerIds(attendeeId, nowMs);
+  const [partners, matchedToday] = await Promise.all([excludedPartnerIds(attendeeId, nowMs), playersMatchedToday(startOfTodayIso(nowMs))]);
   const excludeIds = [...new Set([attendeeId, ...(me.blockedIds ?? []), ...partners])];
-  const hits = await hybridPeople(me, peopleFilter(me, excludeIds, hereOnly), limit, nowMs);
-
-  return hits.flatMap((hit) => {
+  const hits = await hybridPeople(me, peopleFilter(me, excludeIds, hereOnly, matchedToday), intentWindow(me, limit), nowMs);
+  const matches = hits.flatMap((hit) => {
     if (!hit._source) {
       return [];
     }
@@ -189,7 +198,10 @@ export async function recommendPeopleFor(attendeeId: string, opts: IRecommendPeo
     const them: IAttendee = { ...hit._source, id: hit._id ?? hit._source.id };
     const shared = sharedTopics(me.profile?.topics ?? [], them.profile?.topics ?? []);
     const sameRoom = me.lastLocationId !== undefined && them.lastLocationId === me.lastLocationId;
+    const match: IPersonMatch = { player: toMatchPlayer(them), score: hit._score ?? 0, sharedTopics: shared, reason: reasonFor(me, them, shared, sameRoom), sameRoom };
 
-    return [{ player: toMatchPlayer(them), score: hit._score ?? 0, sharedTopics: shared, reason: reasonFor(me, them, shared, sameRoom), sameRoom }];
+    return [{ match, fits: intentReason(me, them) !== undefined }];
   });
+
+  return [...matches.filter((entry) => entry.fits), ...matches.filter((entry) => !entry.fits)].slice(0, limit).map((entry) => entry.match);
 }

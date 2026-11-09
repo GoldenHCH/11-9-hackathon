@@ -36,7 +36,15 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T13:00:00.000Z"
+    "createdAt": "2026-11-09T13:00:00.000Z",
+    "intent": {
+      "goals": [
+        "sent",
+        "booth"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-podwrangler",
@@ -77,7 +85,14 @@
       "welcomer"
     ],
     "blockedIds": [],
-    "createdAt": "2026-11-09T12:53:00.000Z"
+    "createdAt": "2026-11-09T12:53:00.000Z",
+    "intent": {
+      "goals": [
+        "exploring"
+      ],
+      "exploringField": "WebAssembly",
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-ebpfennec",
@@ -115,7 +130,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T12:46:00.000Z"
+    "createdAt": "2026-11-09T12:46:00.000Z",
+    "intent": {
+      "goals": [
+        "job_seeking"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-helmsmith",
@@ -153,7 +175,15 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T12:39:00.000Z"
+    "createdAt": "2026-11-09T12:39:00.000Z",
+    "intent": {
+      "goals": [
+        "job_seeking",
+        "community"
+      ],
+      "exploringField": null,
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-otelotter",
@@ -193,7 +223,15 @@
       "welcomer"
     ],
     "blockedIds": [],
-    "createdAt": "2026-11-09T12:32:00.000Z"
+    "createdAt": "2026-11-09T12:32:00.000Z",
+    "intent": {
+      "goals": [
+        "community",
+        "booth"
+      ],
+      "exploringField": null,
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-meshmarmot",
@@ -231,7 +269,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T12:25:00.000Z"
+    "createdAt": "2026-11-09T12:25:00.000Z",
+    "intent": {
+      "goals": [
+        "talks"
+      ],
+      "exploringField": null,
+      "socialLevel": "light"
+    }
   },
   {
     "id": "att-policypuffin",
@@ -269,7 +314,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T12:18:00.000Z"
+    "createdAt": "2026-11-09T12:18:00.000Z",
+    "intent": {
+      "goals": [
+        "exploring"
+      ],
+      "exploringField": "Kubernetes core",
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-kedakestrel",
@@ -307,7 +359,15 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T12:11:00.000Z"
+    "createdAt": "2026-11-09T12:11:00.000Z",
+    "intent": {
+      "goals": [
+        "deep_dive",
+        "community"
+      ],
+      "exploringField": null,
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-wasmwalrus",
@@ -345,7 +405,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T12:04:00.000Z"
+    "createdAt": "2026-11-09T12:04:00.000Z",
+    "intent": {
+      "goals": [
+        "deep_dive"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-crdcrane",
@@ -385,7 +452,14 @@
       "welcomer"
     ],
     "blockedIds": [],
-    "createdAt": "2026-11-09T11:57:00.000Z"
+    "createdAt": "2026-11-09T11:57:00.000Z",
+    "intent": {
+      "goals": [
+        "job_seeking"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-datadugong",
@@ -423,7 +497,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T11:50:00.000Z"
+    "createdAt": "2026-11-09T11:50:00.000Z",
+    "intent": {
+      "goals": [
+        "job_seeking"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-agentaxolotl",
@@ -461,7 +542,15 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T11:43:00.000Z"
+    "createdAt": "2026-11-09T11:43:00.000Z",
+    "intent": {
+      "goals": [
+        "deep_dive",
+        "exploring"
+      ],
+      "exploringField": "Community and inclusion",
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-fluxfalcon",
@@ -499,7 +588,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T11:36:00.000Z"
+    "createdAt": "2026-11-09T11:36:00.000Z",
+    "intent": {
+      "goals": [
+        "exploring"
+      ],
+      "exploringField": "WebAssembly",
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-chaoschinchilla",
@@ -537,7 +633,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T11:29:00.000Z"
+    "createdAt": "2026-11-09T11:29:00.000Z",
+    "intent": {
+      "goals": [
+        "exploring"
+      ],
+      "exploringField": "Networking",
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-quotaquokka",
@@ -575,7 +678,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T11:22:00.000Z"
+    "createdAt": "2026-11-09T11:22:00.000Z",
+    "intent": {
+      "goals": [
+        "deep_dive"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-sigstoresloth",
@@ -615,7 +725,14 @@
       "welcomer"
     ],
     "blockedIds": [],
-    "createdAt": "2026-11-09T11:15:00.000Z"
+    "createdAt": "2026-11-09T11:15:00.000Z",
+    "intent": {
+      "goals": [
+        "community"
+      ],
+      "exploringField": null,
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-ingressibis",
@@ -653,7 +770,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T11:08:00.000Z"
+    "createdAt": "2026-11-09T11:08:00.000Z",
+    "intent": {
+      "goals": [
+        "exploring"
+      ],
+      "exploringField": "GitOps",
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-backstagebeaver",
@@ -691,7 +815,14 @@
     "level": 2,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T12:49:00.000Z"
+    "createdAt": "2026-11-09T12:49:00.000Z",
+    "intent": {
+      "goals": [
+        "hiring"
+      ],
+      "exploringField": null,
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-goroutinegecko",
@@ -729,7 +860,14 @@
     "level": 2,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T13:43:00.000Z"
+    "createdAt": "2026-11-09T13:43:00.000Z",
+    "intent": {
+      "goals": [
+        "community"
+      ],
+      "exploringField": null,
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-crossplanecrab",
@@ -769,7 +907,14 @@
       "connector"
     ],
     "blockedIds": [],
-    "createdAt": "2026-11-09T12:40:00.000Z"
+    "createdAt": "2026-11-09T12:40:00.000Z",
+    "intent": {
+      "goals": [
+        "job_seeking"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-kueuekoala",
@@ -809,7 +954,14 @@
       "connector"
     ],
     "blockedIds": [],
-    "createdAt": "2026-11-09T13:26:00.000Z"
+    "createdAt": "2026-11-09T13:26:00.000Z",
+    "intent": {
+      "goals": [
+        "sent"
+      ],
+      "exploringField": null,
+      "socialLevel": "light"
+    }
   },
   {
     "id": "att-tensortapir",
@@ -847,7 +999,15 @@
     "level": 2,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T11:02:00.000Z"
+    "createdAt": "2026-11-09T11:02:00.000Z",
+    "intent": {
+      "goals": [
+        "hiring",
+        "community"
+      ],
+      "exploringField": null,
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-draslynx",
@@ -885,7 +1045,14 @@
     "level": 2,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T14:59:00.000Z"
+    "createdAt": "2026-11-09T14:59:00.000Z",
+    "intent": {
+      "goals": [
+        "community"
+      ],
+      "exploringField": null,
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-inferenceibex",
@@ -922,7 +1089,14 @@
     "level": 2,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T13:02:00.000Z"
+    "createdAt": "2026-11-09T13:02:00.000Z",
+    "intent": {
+      "goals": [
+        "exploring"
+      ],
+      "exploringField": "Networking",
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-ragraccoon",
@@ -959,7 +1133,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T14:02:00.000Z"
+    "createdAt": "2026-11-09T14:02:00.000Z",
+    "intent": {
+      "goals": [
+        "community"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-modelmeshmoose",
@@ -999,7 +1180,14 @@
       "connector"
     ],
     "blockedIds": [],
-    "createdAt": "2026-11-09T13:21:00.000Z"
+    "createdAt": "2026-11-09T13:21:00.000Z",
+    "intent": {
+      "goals": [
+        "hiring"
+      ],
+      "exploringField": null,
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-rayrhino",
@@ -1036,7 +1224,14 @@
     "level": 2,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T11:53:00.000Z"
+    "createdAt": "2026-11-09T11:53:00.000Z",
+    "intent": {
+      "goals": [
+        "exploring"
+      ],
+      "exploringField": "Security",
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-falcofox",
@@ -1075,7 +1270,14 @@
       "welcomer"
     ],
     "blockedIds": [],
-    "createdAt": "2026-11-09T11:10:00.000Z"
+    "createdAt": "2026-11-09T11:10:00.000Z",
+    "intent": {
+      "goals": [
+        "exploring"
+      ],
+      "exploringField": "Kubernetes core",
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-tetragontoucan",
@@ -1112,7 +1314,15 @@
     "level": 2,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T12:40:00.000Z"
+    "createdAt": "2026-11-09T12:40:00.000Z",
+    "intent": {
+      "goals": [
+        "community",
+        "booth"
+      ],
+      "exploringField": null,
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-rbacraven",
@@ -1149,7 +1359,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T12:31:00.000Z"
+    "createdAt": "2026-11-09T12:31:00.000Z",
+    "intent": {
+      "goals": [
+        "sent"
+      ],
+      "exploringField": null,
+      "socialLevel": "light"
+    }
   },
   {
     "id": "att-spiffeseal",
@@ -1186,7 +1403,14 @@
     "level": 2,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T13:29:00.000Z"
+    "createdAt": "2026-11-09T13:29:00.000Z",
+    "intent": {
+      "goals": [
+        "exploring"
+      ],
+      "exploringField": "Platform engineering",
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-kyvernokiwi",
@@ -1223,7 +1447,14 @@
     "level": 3,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T12:51:00.000Z"
+    "createdAt": "2026-11-09T12:51:00.000Z",
+    "intent": {
+      "goals": [
+        "talks"
+      ],
+      "exploringField": null,
+      "socialLevel": "light"
+    }
   },
   {
     "id": "att-prometheuspanda",
@@ -1263,7 +1494,15 @@
       "connector"
     ],
     "blockedIds": [],
-    "createdAt": "2026-11-09T13:02:00.000Z"
+    "createdAt": "2026-11-09T13:02:00.000Z",
+    "intent": {
+      "goals": [
+        "deep_dive",
+        "community"
+      ],
+      "exploringField": null,
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-lokilemur",
@@ -1300,7 +1539,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T14:01:00.000Z"
+    "createdAt": "2026-11-09T14:01:00.000Z",
+    "intent": {
+      "goals": [
+        "deep_dive"
+      ],
+      "exploringField": null,
+      "socialLevel": "light"
+    }
   },
   {
     "id": "att-jaegerjackal",
@@ -1337,7 +1583,14 @@
     "level": 2,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T11:18:00.000Z"
+    "createdAt": "2026-11-09T11:18:00.000Z",
+    "intent": {
+      "goals": [
+        "booth"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-profilingpelican",
@@ -1374,7 +1627,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T13:38:00.000Z"
+    "createdAt": "2026-11-09T13:38:00.000Z",
+    "intent": {
+      "goals": [
+        "booth"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-slosalamander",
@@ -1414,7 +1674,16 @@
       "connector"
     ],
     "blockedIds": [],
-    "createdAt": "2026-11-09T13:40:00.000Z"
+    "createdAt": "2026-11-09T13:40:00.000Z",
+    "intent": {
+      "goals": [
+        "hiring",
+        "deep_dive",
+        "community"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-argoalpaca",
@@ -1454,7 +1723,15 @@
       "connector"
     ],
     "blockedIds": [],
-    "createdAt": "2026-11-09T14:32:00.000Z"
+    "createdAt": "2026-11-09T14:32:00.000Z",
+    "intent": {
+      "goals": [
+        "booth",
+        "community"
+      ],
+      "exploringField": null,
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-rolloutrabbit",
@@ -1491,7 +1768,15 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T14:49:00.000Z"
+    "createdAt": "2026-11-09T14:49:00.000Z",
+    "intent": {
+      "goals": [
+        "exploring",
+        "job_seeking"
+      ],
+      "exploringField": "Agents",
+      "socialLevel": "light"
+    }
   },
   {
     "id": "att-kustomizekudu",
@@ -1528,7 +1813,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T11:24:00.000Z"
+    "createdAt": "2026-11-09T11:24:00.000Z",
+    "intent": {
+      "goals": [
+        "deep_dive"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-linkerdlark",
@@ -1568,7 +1860,14 @@
       "connector"
     ],
     "blockedIds": [],
-    "createdAt": "2026-11-09T13:53:00.000Z"
+    "createdAt": "2026-11-09T13:53:00.000Z",
+    "intent": {
+      "goals": [
+        "deep_dive"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-envoyemu",
@@ -1605,7 +1904,15 @@
     "level": 2,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T11:41:00.000Z"
+    "createdAt": "2026-11-09T11:41:00.000Z",
+    "intent": {
+      "goals": [
+        "deep_dive",
+        "hiring"
+      ],
+      "exploringField": null,
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-ciliumcicada",
@@ -1642,7 +1949,14 @@
     "level": 2,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T11:57:00.000Z"
+    "createdAt": "2026-11-09T11:57:00.000Z",
+    "intent": {
+      "goals": [
+        "hiring"
+      ],
+      "exploringField": null,
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-cephchameleon",
@@ -1679,7 +1993,15 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T14:39:00.000Z"
+    "createdAt": "2026-11-09T14:39:00.000Z",
+    "intent": {
+      "goals": [
+        "exploring",
+        "sent"
+      ],
+      "exploringField": "Performance and cost",
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-vitessvole",
@@ -1718,7 +2040,15 @@
       "welcomer"
     ],
     "blockedIds": [],
-    "createdAt": "2026-11-09T12:35:00.000Z"
+    "createdAt": "2026-11-09T12:35:00.000Z",
+    "intent": {
+      "goals": [
+        "talks",
+        "community"
+      ],
+      "exploringField": null,
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-etcdeagle",
@@ -1757,7 +2087,15 @@
       "welcomer"
     ],
     "blockedIds": [],
-    "createdAt": "2026-11-09T13:32:00.000Z"
+    "createdAt": "2026-11-09T13:32:00.000Z",
+    "intent": {
+      "goals": [
+        "deep_dive",
+        "community"
+      ],
+      "exploringField": null,
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-velerovulture",
@@ -1794,7 +2132,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T11:34:00.000Z"
+    "createdAt": "2026-11-09T11:34:00.000Z",
+    "intent": {
+      "goals": [
+        "exploring"
+      ],
+      "exploringField": "Performance and cost",
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-kafkakingfisher",
@@ -1831,7 +2176,14 @@
     "level": 2,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T12:33:00.000Z"
+    "createdAt": "2026-11-09T12:33:00.000Z",
+    "intent": {
+      "goals": [
+        "job_seeking"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-spotsparrow",
@@ -1868,7 +2220,14 @@
     "level": 2,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T11:58:00.000Z"
+    "createdAt": "2026-11-09T11:58:00.000Z",
+    "intent": {
+      "goals": [
+        "community"
+      ],
+      "exploringField": null,
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-karpenterkangaroo",
@@ -1908,7 +2267,16 @@
       "connector"
     ],
     "blockedIds": [],
-    "createdAt": "2026-11-09T12:04:00.000Z"
+    "createdAt": "2026-11-09T12:04:00.000Z",
+    "intent": {
+      "goals": [
+        "deep_dive",
+        "job_seeking",
+        "community"
+      ],
+      "exploringField": null,
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-carboncapybara",
@@ -1945,7 +2313,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T12:50:00.000Z"
+    "createdAt": "2026-11-09T12:50:00.000Z",
+    "intent": {
+      "goals": [
+        "exploring"
+      ],
+      "exploringField": "Kubernetes core",
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-edgeelk",
@@ -1982,7 +2357,15 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T12:34:00.000Z"
+    "createdAt": "2026-11-09T12:34:00.000Z",
+    "intent": {
+      "goals": [
+        "talks",
+        "booth"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-kubeedgeorca",
@@ -2019,7 +2402,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T14:11:00.000Z"
+    "createdAt": "2026-11-09T14:11:00.000Z",
+    "intent": {
+      "goals": [
+        "talks"
+      ],
+      "exploringField": null,
+      "socialLevel": "light"
+    }
   },
   {
     "id": "att-spinsquirrel",
@@ -2059,7 +2449,14 @@
       "connector"
     ],
     "blockedIds": [],
-    "createdAt": "2026-11-09T11:19:00.000Z"
+    "createdAt": "2026-11-09T11:19:00.000Z",
+    "intent": {
+      "goals": [
+        "talks"
+      ],
+      "exploringField": null,
+      "socialLevel": "light"
+    }
   },
   {
     "id": "att-wasmwombat",
@@ -2096,7 +2493,15 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T13:46:00.000Z"
+    "createdAt": "2026-11-09T13:46:00.000Z",
+    "intent": {
+      "goals": [
+        "talks",
+        "exploring"
+      ],
+      "exploringField": "WebAssembly",
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-a11yanteater",
@@ -2135,7 +2540,14 @@
       "welcomer"
     ],
     "blockedIds": [],
-    "createdAt": "2026-11-09T13:20:00.000Z"
+    "createdAt": "2026-11-09T13:20:00.000Z",
+    "intent": {
+      "goals": [
+        "community"
+      ],
+      "exploringField": null,
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-docsdolphin",
@@ -2175,7 +2587,14 @@
       "connector"
     ],
     "blockedIds": [],
-    "createdAt": "2026-11-09T13:05:00.000Z"
+    "createdAt": "2026-11-09T13:05:00.000Z",
+    "intent": {
+      "goals": [
+        "deep_dive"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-capicormorant",
@@ -2214,7 +2633,15 @@
       "welcomer"
     ],
     "blockedIds": [],
-    "createdAt": "2026-11-09T14:29:00.000Z"
+    "createdAt": "2026-11-09T14:29:00.000Z",
+    "intent": {
+      "goals": [
+        "deep_dive",
+        "community"
+      ],
+      "exploringField": null,
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-vclustervixen",
@@ -2251,7 +2678,15 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T12:28:00.000Z"
+    "createdAt": "2026-11-09T12:28:00.000Z",
+    "intent": {
+      "goals": [
+        "talks",
+        "exploring"
+      ],
+      "exploringField": "Security",
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-sreseahorse",
@@ -2288,7 +2723,14 @@
     "level": 3,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T11:31:00.000Z"
+    "createdAt": "2026-11-09T11:31:00.000Z",
+    "intent": {
+      "goals": [
+        "exploring"
+      ],
+      "exploringField": "WebAssembly",
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-helmheron",
@@ -2327,7 +2769,15 @@
       "welcomer"
     ],
     "blockedIds": [],
-    "createdAt": "2026-11-09T11:10:00.000Z"
+    "createdAt": "2026-11-09T11:10:00.000Z",
+    "intent": {
+      "goals": [
+        "community",
+        "deep_dive"
+      ],
+      "exploringField": null,
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-harborhedgehog",
@@ -2364,7 +2814,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T11:29:00.000Z"
+    "createdAt": "2026-11-09T11:29:00.000Z",
+    "intent": {
+      "goals": [
+        "exploring"
+      ],
+      "exploringField": "Kubernetes core",
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-booth-gitopsgibbon",
@@ -2405,7 +2862,15 @@
       "scout"
     ],
     "blockedIds": [],
-    "createdAt": "2026-11-09T13:14:00.000Z"
+    "createdAt": "2026-11-09T13:14:00.000Z",
+    "intent": {
+      "goals": [
+        "deep_dive",
+        "job_seeking"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-booth-gitopsosprey",
@@ -2442,7 +2907,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T07:33:00.000Z"
+    "createdAt": "2026-11-09T07:33:00.000Z",
+    "intent": {
+      "goals": [
+        "job_seeking"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-booth-tracealpaca",
@@ -2481,7 +2953,15 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T06:26:00.000Z"
+    "createdAt": "2026-11-09T06:26:00.000Z",
+    "intent": {
+      "goals": [
+        "job_seeking",
+        "hiring"
+      ],
+      "exploringField": null,
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-booth-llmvole",
@@ -2518,7 +2998,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T13:48:00.000Z"
+    "createdAt": "2026-11-09T13:48:00.000Z",
+    "intent": {
+      "goals": [
+        "deep_dive"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-booth-spiffegibbon",
@@ -2557,7 +3044,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T03:34:00.000Z"
+    "createdAt": "2026-11-09T03:34:00.000Z",
+    "intent": {
+      "goals": [
+        "job_seeking"
+      ],
+      "exploringField": null,
+      "socialLevel": "light"
+    }
   },
   {
     "id": "att-booth-sbomkoala",
@@ -2594,7 +3088,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T10:07:00.000Z"
+    "createdAt": "2026-11-09T10:07:00.000Z",
+    "intent": {
+      "goals": [
+        "deep_dive"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-booth-sidecarseal",
@@ -2631,7 +3132,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T04:05:00.000Z"
+    "createdAt": "2026-11-09T04:05:00.000Z",
+    "intent": {
+      "goals": [
+        "community"
+      ],
+      "exploringField": null,
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-booth-gitopsalpaca",
@@ -2668,7 +3176,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T06:48:00.000Z"
+    "createdAt": "2026-11-09T06:48:00.000Z",
+    "intent": {
+      "goals": [
+        "talks"
+      ],
+      "exploringField": null,
+      "socialLevel": "light"
+    }
   },
   {
     "id": "att-booth-etcdimpala",
@@ -2707,7 +3222,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T11:17:00.000Z"
+    "createdAt": "2026-11-09T11:17:00.000Z",
+    "intent": {
+      "goals": [
+        "community"
+      ],
+      "exploringField": null,
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-booth-rookibex",
@@ -2744,7 +3266,15 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T03:38:00.000Z"
+    "createdAt": "2026-11-09T03:38:00.000Z",
+    "intent": {
+      "goals": [
+        "exploring",
+        "booth"
+      ],
+      "exploringField": "Kubernetes core",
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-booth-vitesshedgehog",
@@ -2783,7 +3313,15 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T05:50:00.000Z"
+    "createdAt": "2026-11-09T05:50:00.000Z",
+    "intent": {
+      "goals": [
+        "sent",
+        "exploring"
+      ],
+      "exploringField": "Networking",
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-booth-linkerdegret",
@@ -2820,7 +3358,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T09:10:00.000Z"
+    "createdAt": "2026-11-09T09:10:00.000Z",
+    "intent": {
+      "goals": [
+        "sent"
+      ],
+      "exploringField": null,
+      "socialLevel": "light"
+    }
   },
   {
     "id": "att-booth-sidecarmanatee",
@@ -2857,7 +3402,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T09:17:00.000Z"
+    "createdAt": "2026-11-09T09:17:00.000Z",
+    "intent": {
+      "goals": [
+        "exploring"
+      ],
+      "exploringField": "GitOps",
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-booth-jaegerorca",
@@ -2894,7 +3446,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T13:16:00.000Z"
+    "createdAt": "2026-11-09T13:16:00.000Z",
+    "intent": {
+      "goals": [
+        "hiring"
+      ],
+      "exploringField": null,
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-booth-kservemarten",
@@ -2933,7 +3492,14 @@
       "scout"
     ],
     "blockedIds": [],
-    "createdAt": "2026-11-09T04:34:00.000Z"
+    "createdAt": "2026-11-09T04:34:00.000Z",
+    "intent": {
+      "goals": [
+        "deep_dive"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-booth-kservebadger",
@@ -2970,7 +3536,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T06:45:00.000Z"
+    "createdAt": "2026-11-09T06:45:00.000Z",
+    "intent": {
+      "goals": [
+        "exploring"
+      ],
+      "exploringField": "Security",
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-booth-grpcpelican",
@@ -3007,7 +3580,15 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T11:06:00.000Z"
+    "createdAt": "2026-11-09T11:06:00.000Z",
+    "intent": {
+      "goals": [
+        "sent",
+        "community"
+      ],
+      "exploringField": null,
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-booth-gpucheetah",
@@ -3046,7 +3627,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T12:05:00.000Z"
+    "createdAt": "2026-11-09T12:05:00.000Z",
+    "intent": {
+      "goals": [
+        "talks"
+      ],
+      "exploringField": null,
+      "socialLevel": "light"
+    }
   },
   {
     "id": "att-booth-vectorvole",
@@ -3083,7 +3671,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T05:26:00.000Z"
+    "createdAt": "2026-11-09T05:26:00.000Z",
+    "intent": {
+      "goals": [
+        "deep_dive"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-booth-helmpenguin",
@@ -3120,7 +3715,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T10:05:00.000Z"
+    "createdAt": "2026-11-09T10:05:00.000Z",
+    "intent": {
+      "goals": [
+        "hiring"
+      ],
+      "exploringField": null,
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-booth-ebpfbadger",
@@ -3157,7 +3759,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T07:22:00.000Z"
+    "createdAt": "2026-11-09T07:22:00.000Z",
+    "intent": {
+      "goals": [
+        "deep_dive"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-booth-llmgecko",
@@ -3196,7 +3805,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T10:20:00.000Z"
+    "createdAt": "2026-11-09T10:20:00.000Z",
+    "intent": {
+      "goals": [
+        "community"
+      ],
+      "exploringField": null,
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-booth-kedapanda",
@@ -3233,7 +3849,15 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T05:34:00.000Z"
+    "createdAt": "2026-11-09T05:34:00.000Z",
+    "intent": {
+      "goals": [
+        "job_seeking",
+        "community"
+      ],
+      "exploringField": null,
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-booth-jaegeryak",
@@ -3270,7 +3894,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T11:47:00.000Z"
+    "createdAt": "2026-11-09T11:47:00.000Z",
+    "intent": {
+      "goals": [
+        "talks"
+      ],
+      "exploringField": null,
+      "socialLevel": "light"
+    }
   },
   {
     "id": "att-booth-istioibex",
@@ -3309,7 +3940,15 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T10:55:00.000Z"
+    "createdAt": "2026-11-09T10:55:00.000Z",
+    "intent": {
+      "goals": [
+        "hiring",
+        "community"
+      ],
+      "exploringField": null,
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-booth-tracekoala",
@@ -3348,7 +3987,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T05:16:00.000Z"
+    "createdAt": "2026-11-09T05:16:00.000Z",
+    "intent": {
+      "goals": [
+        "talks"
+      ],
+      "exploringField": null,
+      "socialLevel": "light"
+    }
   },
   {
     "id": "att-booth-yamljackal",
@@ -3385,7 +4031,15 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T10:30:00.000Z"
+    "createdAt": "2026-11-09T10:30:00.000Z",
+    "intent": {
+      "goals": [
+        "community",
+        "deep_dive"
+      ],
+      "exploringField": null,
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-booth-spiffetapir",
@@ -3424,7 +4078,15 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T13:57:00.000Z"
+    "createdAt": "2026-11-09T13:57:00.000Z",
+    "intent": {
+      "goals": [
+        "deep_dive",
+        "sent"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-booth-argokiwi",
@@ -3463,7 +4125,14 @@
       "scout"
     ],
     "blockedIds": [],
-    "createdAt": "2026-11-09T07:47:00.000Z"
+    "createdAt": "2026-11-09T07:47:00.000Z",
+    "intent": {
+      "goals": [
+        "exploring"
+      ],
+      "exploringField": "Security",
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-booth-kedallama",
@@ -3500,7 +4169,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T12:00:00.000Z"
+    "createdAt": "2026-11-09T12:00:00.000Z",
+    "intent": {
+      "goals": [
+        "hiring"
+      ],
+      "exploringField": null,
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-booth-envoygecko",
@@ -3537,7 +4213,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T04:34:00.000Z"
+    "createdAt": "2026-11-09T04:34:00.000Z",
+    "intent": {
+      "goals": [
+        "deep_dive"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-booth-rookkiwi",
@@ -3576,7 +4259,15 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T03:16:00.000Z"
+    "createdAt": "2026-11-09T03:16:00.000Z",
+    "intent": {
+      "goals": [
+        "exploring",
+        "job_seeking"
+      ],
+      "exploringField": "Agents",
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-booth-otelgecko",
@@ -3615,7 +4306,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T11:53:00.000Z"
+    "createdAt": "2026-11-09T11:53:00.000Z",
+    "intent": {
+      "goals": [
+        "exploring"
+      ],
+      "exploringField": "Community and inclusion",
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-booth-kedaseal",
@@ -3656,7 +4354,14 @@
       "scout"
     ],
     "blockedIds": [],
-    "createdAt": "2026-11-09T03:40:00.000Z"
+    "createdAt": "2026-11-09T03:40:00.000Z",
+    "intent": {
+      "goals": [
+        "deep_dive"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-booth-vitesstoucan",
@@ -3693,7 +4398,15 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T06:20:00.000Z"
+    "createdAt": "2026-11-09T06:20:00.000Z",
+    "intent": {
+      "goals": [
+        "exploring",
+        "deep_dive"
+      ],
+      "exploringField": "Community and inclusion",
+      "socialLevel": "light"
+    }
   },
   {
     "id": "att-booth-cronkoala",
@@ -3732,7 +4445,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T12:05:00.000Z"
+    "createdAt": "2026-11-09T12:05:00.000Z",
+    "intent": {
+      "goals": [
+        "sent"
+      ],
+      "exploringField": null,
+      "socialLevel": "light"
+    }
   },
   {
     "id": "att-booth-linkerdraven",
@@ -3769,7 +4489,15 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T12:59:00.000Z"
+    "createdAt": "2026-11-09T12:59:00.000Z",
+    "intent": {
+      "goals": [
+        "deep_dive",
+        "talks"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-booth-helmraccoon",
@@ -3808,7 +4536,14 @@
       "scout"
     ],
     "blockedIds": [],
-    "createdAt": "2026-11-09T10:54:00.000Z"
+    "createdAt": "2026-11-09T10:54:00.000Z",
+    "intent": {
+      "goals": [
+        "deep_dive"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-booth-istioorca",
@@ -3845,7 +4580,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T05:29:00.000Z"
+    "createdAt": "2026-11-09T05:29:00.000Z",
+    "intent": {
+      "goals": [
+        "deep_dive"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-booth-chartocelot",
@@ -3884,7 +4626,15 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T04:52:00.000Z"
+    "createdAt": "2026-11-09T04:52:00.000Z",
+    "intent": {
+      "goals": [
+        "deep_dive",
+        "exploring"
+      ],
+      "exploringField": "Kubernetes core",
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-booth-chartquail",
@@ -3923,7 +4673,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T10:14:00.000Z"
+    "createdAt": "2026-11-09T10:14:00.000Z",
+    "intent": {
+      "goals": [
+        "booth"
+      ],
+      "exploringField": null,
+      "socialLevel": "light"
+    }
   },
   {
     "id": "att-booth-istioseal",
@@ -3962,7 +4719,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T04:39:00.000Z"
+    "createdAt": "2026-11-09T04:39:00.000Z",
+    "intent": {
+      "goals": [
+        "talks"
+      ],
+      "exploringField": null,
+      "socialLevel": "light"
+    }
   },
   {
     "id": "att-booth-kubeshrew",
@@ -4003,7 +4767,14 @@
       "scout"
     ],
     "blockedIds": [],
-    "createdAt": "2026-11-09T03:24:00.000Z"
+    "createdAt": "2026-11-09T03:24:00.000Z",
+    "intent": {
+      "goals": [
+        "deep_dive"
+      ],
+      "exploringField": null,
+      "socialLevel": "light"
+    }
   },
   {
     "id": "att-booth-argopelican",
@@ -4040,7 +4811,15 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T08:23:00.000Z"
+    "createdAt": "2026-11-09T08:23:00.000Z",
+    "intent": {
+      "goals": [
+        "deep_dive",
+        "exploring"
+      ],
+      "exploringField": "Security",
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-booth-vitessorca",
@@ -4081,7 +4860,14 @@
       "scout"
     ],
     "blockedIds": [],
-    "createdAt": "2026-11-09T13:26:00.000Z"
+    "createdAt": "2026-11-09T13:26:00.000Z",
+    "intent": {
+      "goals": [
+        "deep_dive"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-booth-fluxpanda",
@@ -4120,7 +4906,15 @@
       "scout"
     ],
     "blockedIds": [],
-    "createdAt": "2026-11-09T06:50:00.000Z"
+    "createdAt": "2026-11-09T06:50:00.000Z",
+    "intent": {
+      "goals": [
+        "booth",
+        "deep_dive"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-booth-vectoryak",
@@ -4159,7 +4953,14 @@
       "scout"
     ],
     "blockedIds": [],
-    "createdAt": "2026-11-09T09:15:00.000Z"
+    "createdAt": "2026-11-09T09:15:00.000Z",
+    "intent": {
+      "goals": [
+        "hiring"
+      ],
+      "exploringField": null,
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-booth-etcdcaribou",
@@ -4198,7 +4999,15 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T04:10:00.000Z"
+    "createdAt": "2026-11-09T04:10:00.000Z",
+    "intent": {
+      "goals": [
+        "community",
+        "exploring"
+      ],
+      "exploringField": "Security",
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-booth-tektonpanda",
@@ -4239,7 +5048,15 @@
       "scout"
     ],
     "blockedIds": [],
-    "createdAt": "2026-11-09T11:51:00.000Z"
+    "createdAt": "2026-11-09T11:51:00.000Z",
+    "intent": {
+      "goals": [
+        "community",
+        "deep_dive"
+      ],
+      "exploringField": null,
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-booth-ciliumkoala",
@@ -4278,7 +5095,15 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T11:33:00.000Z"
+    "createdAt": "2026-11-09T11:33:00.000Z",
+    "intent": {
+      "goals": [
+        "exploring",
+        "deep_dive"
+      ],
+      "exploringField": "Kubernetes core",
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-booth-argoimpala",
@@ -4317,7 +5142,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T13:19:00.000Z"
+    "createdAt": "2026-11-09T13:19:00.000Z",
+    "intent": {
+      "goals": [
+        "exploring"
+      ],
+      "exploringField": "Community and inclusion",
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-booth-grpcorca",
@@ -4356,7 +5188,15 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T12:11:00.000Z"
+    "createdAt": "2026-11-09T12:11:00.000Z",
+    "intent": {
+      "goals": [
+        "exploring",
+        "sent"
+      ],
+      "exploringField": "Performance and cost",
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-booth-podgibbon",
@@ -4393,7 +5233,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T04:25:00.000Z"
+    "createdAt": "2026-11-09T04:25:00.000Z",
+    "intent": {
+      "goals": [
+        "job_seeking"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-booth-etcdgibbon",
@@ -4432,7 +5279,15 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T08:48:00.000Z"
+    "createdAt": "2026-11-09T08:48:00.000Z",
+    "intent": {
+      "goals": [
+        "hiring",
+        "exploring"
+      ],
+      "exploringField": "Performance and cost",
+      "socialLevel": "light"
+    }
   },
   {
     "id": "att-booth-argoshrew",
@@ -4469,7 +5324,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T12:27:00.000Z"
+    "createdAt": "2026-11-09T12:27:00.000Z",
+    "intent": {
+      "goals": [
+        "community"
+      ],
+      "exploringField": null,
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-booth-spiffepanda",
@@ -4508,7 +5370,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T04:22:00.000Z"
+    "createdAt": "2026-11-09T04:22:00.000Z",
+    "intent": {
+      "goals": [
+        "deep_dive"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-booth-nodeosprey",
@@ -4547,7 +5416,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T11:32:00.000Z"
+    "createdAt": "2026-11-09T11:32:00.000Z",
+    "intent": {
+      "goals": [
+        "sent"
+      ],
+      "exploringField": null,
+      "socialLevel": "light"
+    }
   },
   {
     "id": "att-booth-yamlraccoon",
@@ -4584,7 +5460,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T10:55:00.000Z"
+    "createdAt": "2026-11-09T10:55:00.000Z",
+    "intent": {
+      "goals": [
+        "community"
+      ],
+      "exploringField": null,
+      "socialLevel": "light"
+    }
   },
   {
     "id": "att-booth-ciliumjackal",
@@ -4623,7 +5506,15 @@
       "scout"
     ],
     "blockedIds": [],
-    "createdAt": "2026-11-09T03:26:00.000Z"
+    "createdAt": "2026-11-09T03:26:00.000Z",
+    "intent": {
+      "goals": [
+        "hiring",
+        "booth"
+      ],
+      "exploringField": null,
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-booth-argovole",
@@ -4662,7 +5553,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T08:18:00.000Z"
+    "createdAt": "2026-11-09T08:18:00.000Z",
+    "intent": {
+      "goals": [
+        "booth"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-booth-fluxraccoon",
@@ -4701,7 +5599,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T05:36:00.000Z"
+    "createdAt": "2026-11-09T05:36:00.000Z",
+    "intent": {
+      "goals": [
+        "community"
+      ],
+      "exploringField": null,
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-booth-spiffeshrew",
@@ -4738,7 +5643,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T04:56:00.000Z"
+    "createdAt": "2026-11-09T04:56:00.000Z",
+    "intent": {
+      "goals": [
+        "deep_dive"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-booth-vectorzebra",
@@ -4775,7 +5687,15 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T08:33:00.000Z"
+    "createdAt": "2026-11-09T08:33:00.000Z",
+    "intent": {
+      "goals": [
+        "exploring",
+        "job_seeking"
+      ],
+      "exploringField": "GitOps",
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-booth-nodeibex",
@@ -4814,7 +5734,15 @@
       "scout"
     ],
     "blockedIds": [],
-    "createdAt": "2026-11-09T07:16:00.000Z"
+    "createdAt": "2026-11-09T07:16:00.000Z",
+    "intent": {
+      "goals": [
+        "sent",
+        "community"
+      ],
+      "exploringField": null,
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-booth-vectorlemur",
@@ -4851,7 +5779,16 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T04:55:00.000Z"
+    "createdAt": "2026-11-09T04:55:00.000Z",
+    "intent": {
+      "goals": [
+        "deep_dive",
+        "job_seeking",
+        "community"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-booth-podferret",
@@ -4890,7 +5827,14 @@
       "scout"
     ],
     "blockedIds": [],
-    "createdAt": "2026-11-09T07:34:00.000Z"
+    "createdAt": "2026-11-09T07:34:00.000Z",
+    "intent": {
+      "goals": [
+        "exploring"
+      ],
+      "exploringField": "Security",
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-booth-yamlmagpie",
@@ -4929,7 +5873,14 @@
       "scout"
     ],
     "blockedIds": [],
-    "createdAt": "2026-11-09T13:44:00.000Z"
+    "createdAt": "2026-11-09T13:44:00.000Z",
+    "intent": {
+      "goals": [
+        "booth"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-booth-ciliumvole",
@@ -4968,7 +5919,15 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T10:22:00.000Z"
+    "createdAt": "2026-11-09T10:22:00.000Z",
+    "intent": {
+      "goals": [
+        "community",
+        "exploring"
+      ],
+      "exploringField": "Observability",
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-booth-grpcibex",
@@ -5007,7 +5966,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T10:30:00.000Z"
+    "createdAt": "2026-11-09T10:30:00.000Z",
+    "intent": {
+      "goals": [
+        "talks"
+      ],
+      "exploringField": null,
+      "socialLevel": "light"
+    }
   },
   {
     "id": "att-booth-spiffeibex",
@@ -5044,7 +6010,15 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T05:18:00.000Z"
+    "createdAt": "2026-11-09T05:18:00.000Z",
+    "intent": {
+      "goals": [
+        "exploring",
+        "community"
+      ],
+      "exploringField": "Kubernetes core",
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-booth-chartmoose",
@@ -5083,7 +6057,14 @@
       "scout"
     ],
     "blockedIds": [],
-    "createdAt": "2026-11-09T05:38:00.000Z"
+    "createdAt": "2026-11-09T05:38:00.000Z",
+    "intent": {
+      "goals": [
+        "deep_dive"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-booth-ebpfbeaver",
@@ -5122,7 +6103,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T03:14:00.000Z"
+    "createdAt": "2026-11-09T03:14:00.000Z",
+    "intent": {
+      "goals": [
+        "deep_dive"
+      ],
+      "exploringField": null,
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-booth-rookbadger",
@@ -5159,7 +6147,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T05:50:00.000Z"
+    "createdAt": "2026-11-09T05:50:00.000Z",
+    "intent": {
+      "goals": [
+        "exploring"
+      ],
+      "exploringField": "WebAssembly",
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-booth-certferret",
@@ -5198,7 +6193,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T13:07:00.000Z"
+    "createdAt": "2026-11-09T13:07:00.000Z",
+    "intent": {
+      "goals": [
+        "exploring"
+      ],
+      "exploringField": "Community and inclusion",
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-booth-metriccoyote",
@@ -5235,7 +6237,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T12:58:00.000Z"
+    "createdAt": "2026-11-09T12:58:00.000Z",
+    "intent": {
+      "goals": [
+        "deep_dive"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-booth-cronpanda",
@@ -5272,7 +6281,14 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T11:05:00.000Z"
+    "createdAt": "2026-11-09T11:05:00.000Z",
+    "intent": {
+      "goals": [
+        "hiring"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   },
   {
     "id": "att-booth-tektonosprey",
@@ -5309,7 +6325,15 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T04:02:00.000Z"
+    "createdAt": "2026-11-09T04:02:00.000Z",
+    "intent": {
+      "goals": [
+        "deep_dive",
+        "community"
+      ],
+      "exploringField": null,
+      "socialLevel": "light"
+    }
   },
   {
     "id": "att-booth-ebpfmoose",
@@ -5348,7 +6372,14 @@
       "scout"
     ],
     "blockedIds": [],
-    "createdAt": "2026-11-09T05:59:00.000Z"
+    "createdAt": "2026-11-09T05:59:00.000Z",
+    "intent": {
+      "goals": [
+        "talks"
+      ],
+      "exploringField": null,
+      "socialLevel": "light"
+    }
   },
   {
     "id": "att-booth-certraccoon",
@@ -5385,7 +6416,15 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T11:22:00.000Z"
+    "createdAt": "2026-11-09T11:22:00.000Z",
+    "intent": {
+      "goals": [
+        "hiring",
+        "talks"
+      ],
+      "exploringField": null,
+      "socialLevel": "lots"
+    }
   },
   {
     "id": "att-booth-gpukiwi",
@@ -5422,6 +6461,13 @@
     "level": 1,
     "banners": [],
     "blockedIds": [],
-    "createdAt": "2026-11-09T03:59:00.000Z"
+    "createdAt": "2026-11-09T03:59:00.000Z",
+    "intent": {
+      "goals": [
+        "booth"
+      ],
+      "exploringField": null,
+      "socialLevel": "some"
+    }
   }
 ]

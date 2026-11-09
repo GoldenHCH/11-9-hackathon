@@ -27,7 +27,8 @@
       {
         "network": "github",
         "label": "@argoproj",
-        "url": "https://github.com/argoproj"
+        "url": "https://github.com/argoproj",
+        "verified": true
       },
       {
         "network": "bluesky",
@@ -39,7 +40,8 @@
         "label": "kubequest.cnh.radarhq.io",
         "url": "https://kubequest.cnh.radarhq.io/"
       }
-    ]
+    ],
+    "githubVerified": true
   },
   "variants": {
     "not_connected": {

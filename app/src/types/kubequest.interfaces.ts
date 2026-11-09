@@ -1,4 +1,5 @@
 import type { IConnectionToolContracts, IProfileLinks } from './connections.interfaces';
+import type { IAttendeeIntent, IIntentInput } from './intent.interfaces';
 import {
   AiProvider,
   BannerId,
@@ -145,6 +146,9 @@ export interface IAttendee {
   createdAt: IsoDateString;
   links?: IProfileLinks;
   itinerary?: IItineraryEntry[];
+  intent?: IAttendeeIntent;
+  seniority?: string;
+  githubVerified?: boolean;
 }
 
 export interface IPublicPlayer {
@@ -816,6 +820,8 @@ export interface ISignUpInput {
   offers?: string[];
   asks?: string[];
   summary?: string;
+  seniority?: string;
+  intent?: IIntentInput;
 }
 
 export interface IImportProfileInput {
@@ -844,6 +850,7 @@ export interface IUpdateSettingsInput {
   spotMe?: string;
   realName?: string;
   visible?: boolean;
+  intent?: IIntentInput;
 }
 
 export interface ICheckInInput {
@@ -1413,6 +1420,7 @@ export interface IClientConfig {
   publicBaseUrl: string;
   conferenceTimeZone: string;
   demoSimulateScans: boolean;
+  githubVerifyEnabled?: boolean;
   traceUrlTemplate?: string;
   rum?: {
     endpoint: string;

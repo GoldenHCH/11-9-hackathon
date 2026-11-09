@@ -8,6 +8,7 @@ import { awardXp } from '../xp/award';
 import { buildProfileText, createAttendee, getAttendee, patchAttendee } from './attendees';
 import { faceSeedFor } from './face';
 import { importGithubProfile } from './github';
+import { normalizeIntent } from './intent';
 import { claimHandle, releaseHandle, releaseQuietly } from './handles';
 import { defaultSettings, importLimits } from './profile.constants';
 import { scrubPersonalData } from './profile-import';
@@ -88,8 +89,23 @@ function definedOnly(fields: IImportedFields): IImportedFields {
   return Object.fromEntries(Object.entries(fields).filter(([, value]) => value !== undefined));
 }
 
+function intentFields(input: ISignUpInput): Partial<IAttendee> {
+  const fields: Partial<IAttendee> = {};
+
+  if (input.intent) {
+    fields.intent = normalizeIntent(input.intent);
+  }
+
+  if (input.seniority) {
+    fields.seniority = input.seniority.trim().toLowerCase().slice(0, 30);
+  }
+
+  return fields;
+}
+
 function profileFields(input: ISignUpInput, draft: IProfileDraft, baseSettings: IPlayerSettings): Partial<IAttendee> {
   return {
+    ...intentFields(input),
     handle: draft.handle,
     faceSeed: faceSeedFor(draft.handle),
     realName: draft.realName,

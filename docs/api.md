@@ -16,7 +16,7 @@ JSON in this doc is trimmed: long strings end in `…` and `"…N more"` stands 
 
 | Route | Use |
 |---|---|
-| `GET /api/config` | Boot data: `{ appVersion, publicBaseUrl, conferenceTimeZone, demoSimulateScans, traceUrlTemplate?, rum? }`. Call once at start. `demoSimulateScans` is `true` only when the server runs with `DEMO_SIMULATE_SCANS=true`; the map shows its "Demo: simulate scan" button only then. |
+| `GET /api/config` | Boot data: `{ appVersion, publicBaseUrl, conferenceTimeZone, demoSimulateScans, githubVerifyEnabled, traceUrlTemplate?, rum? }`. `githubVerifyEnabled` shows or hides the "Verify with GitHub" button. Call once at start. `demoSimulateScans` is `true` only when the server runs with `DEMO_SIMULATE_SCANS=true`; the map shows its "Demo: simulate scan" button only then. |
 | `GET /api/tools` | Every tool with `name`, `description`, `awardsXp` and its JSON Schema `inputSchema`. |
 | `GET /api/screen-token/:locationId?key=<displayKey>` | The only way to run `screen_token`. Needs the location's display key as `?key=` or the `x-screen-key` header; without it, `403 bad_screen_key`. Used by the demo screen. |
 | `GET /r/:locationId?t=<token>` | Printed and on-screen QR codes open this. With the Angular build it serves the SPA (the scan-result route); without it, it returns the JSON in `fixtures/scan_route.json`. |
@@ -25,6 +25,8 @@ JSON in this doc is trimmed: long strings end in `…` and `"…N more"` stands 
 | `GET /api/recap/:attendeeId/email.html` | The player's recap email (`recap.emailHtml`) as `text/html`. A mock of it is in `docs/mock/recap-email.html`; no email is sent. |
 | `GET /api/recap/:attendeeId.pdf` | The end-of-event recap as a PDF download (`application/pdf`, `Content-Disposition: attachment`). Same auth model as the email route: it takes the private `attendeeId`, so only link it from the player's own recap screen. Pages: a block-art cover (pixel face, handle, level, XP bar, totals, banners), People you met (one card per connection with where you met, the chat prompt, your private notes and clickable link annotations), Talks you attended (your talk notes, takeaways and quiz score), Booths you visited (your booth notes), the itinerary when the attendee has one, and next steps. Headings use the OFL Silkscreen font from `resources/fonts`. Unknown id: `404 unknown_attendee` as JSON. |
 | `POST /api/profile-import` | Multipart form: `attendeeId` plus a `file` field holding a resume or LinkedIn PDF (max 5 MB). Reads the text in memory and returns the same JSON as `import_profile`; the file is never written to disk or Elastic. `413 file_too_large`, `415 not_a_pdf`, `422 unreadable_pdf`, `429 rate_limited`. |
+| `GET /auth/github/start?attendeeId=p_…` | Only when `GET /api/config` has `githubVerifyEnabled: true` (env `GITHUB_OAUTH_CLIENT_ID` and `GITHUB_OAUTH_CLIENT_SECRET` set). Navigate the browser here (not XHR). Sets a 10-minute HttpOnly `kq_gh_state` nonce cookie and redirects to GitHub with a signed state (attendeeId, expiry, nonce, HMAC). Off: redirects to `/profile?github=off`. |
+| `GET /auth/github/callback?code=&state=` | GitHub sends the player back here. The state signature, expiry and cookie nonce must all match (CSRF), the code is exchanged server-side, and the GitHub login from `GET api.github.com/user` becomes `links.github` with `githubVerified: true`. Redirects to `/profile?github=verified`, `failed` or `cancelled`. Saving a different GitHub link with `update_links` clears `githubVerified`. |
 | `GET /healthz`, `GET /readyz` | Liveness, and readiness that pings Elasticsearch: `{"status":"ok","version":"dev","elasticsearch":"reachable"}`. |
 
 `/api/config` from this server:
@@ -175,7 +177,13 @@ Errors: `400 invalid_input` for a missing name or a malformed email (`"email: In
 
 ### sign_up (awards XP)
 
-Required: `handle` (3 to 20 chars, `^[a-z0-9_.-]+$`, unless `attendeeId` is sent), `workingOn`, `firstKubeCon`, `meetingOn`. Optional: `attendeeId`, `happyToWelcome`, `topics` (up to 5), `spotMe`, `githubLogin`, `realName`, `accessibleMode`, `noWalking`, `scanLocationId`, `scanToken`, and from a confirmed `import_profile`: `headline` (≤120), `skills` (≤20), `offers` (≤8), `asks` (≤8), `summary` (≤1200). Emails, phones and links are stripped from those again on save.
+Required: `handle` (3 to 20 chars, `^[a-z0-9_.-]+$`, unless `attendeeId` is sent), `workingOn`, `firstKubeCon`, `meetingOn`. Optional: `attendeeId`, `happyToWelcome`, `topics` (up to 5), `spotMe`, `githubLogin`, `realName`, `accessibleMode`, `noWalking`, `scanLocationId`, `scanToken`, and from a confirmed `import_profile`: `headline` (≤120), `skills` (≤20), `offers` (≤8), `asks` (≤8), `summary` (≤1200), `seniority` (≤30). Emails, phones and links are stripped from those again on save. Also optional: `intent` (see below).
+
+`intent` is the "Why are you here today?" step: `{"goals":["exploring","hiring"],"exploringField":"AI inference","socialLevel":"lots"}`. `goals` (one or more) are `exploring` (Exploring a new field), `deep_dive` (Going deep on a technology I use), `hiring`, `job_seeking` (Looking for a new role), `booth` (Representing my company at a booth), `community` (Meeting the community / giving back), `talks` (Mostly here for the talks) and `sent` (My company sent me). `exploringField` is kept only with `exploring` and is cleaned like a topic (a preset label, or lowercased free text). `socialLevel` is `light` (Keep it light), `some` (Some intros) or `lots` (Introduce me to everyone); when omitted it defaults from the goals: any of `hiring`, `exploring`, `community` means `lots`, only `sent` and/or `talks` means `light`, anything else `some`. It is stored as `attendee.intent` (`exploringField` is `null` when unset), returned only in the player's own profile, and change it later with `update_settings`.
+
+What `intent` changes:
+- Quest mix (`quest_board`): `light` gives at most 1 meet (`chat`) quest a day, never in the first 2 offers, and none once the player has met someone today; `some` keeps the default mix; `lots` (and booth reps at `some`) lets up to 2 of 3 offers be meets. `talks` favours `attend` and `quiz` quests; `booth` caps `outpost` quests at 1 and favours meets; `hiring` and `job_seeking` favour meets.
+- Matching (`recommend_people`, chat quests): with `exploringField`, experienced players (`welcomer`, or not first-timers) whose topics, skills, `workingOn` or headline match the field rank first, with a reason like `@podwrangler works on AI inference every day; you're exploring it`. `hiring` boosts players whose goals include `job_seeking` (and the reverse), weighted by shared skills, topics and `seniority`, only when the other player chose that goal. A player with `socialLevel: light` is matched into at most one meet a day: once anyone proposed a meet with them today, they leave everyone else's recommendations.
 
 `topics` may be presets or the player's own (for example `"Kueue"`). Each is trimmed and whitespace-collapsed; a preset matched case-insensitively is stored with its preset label, anything else is stripped to letters, digits, spaces and `- + . # /`, must be 2 to 30 characters, is dropped if it looks like an email or URL, and is stored lowercased (`"kueue"`). Duplicates are dropped; at most 5.
 
@@ -225,7 +233,7 @@ After a confirmed meet (`variants.get_profile_partner`), `workingOn` and `topics
 {"attendeeId":"p_Ljp4ZfHC-VPDFwqx","settings":{"accessibleMode":false,"noWalking":false},"topics":["ai","gpu","autoscaling","platform"]}
 ```
 
-`settings` keys: `meetingOn`, `accessibleMode`, `noWalking`, `locationOn`, `language`, `hideFromLeaderboard`. You can also send `topics`, `workingOn`, `spotMe`, `realName` and `visible`. It returns the full own profile, like `get_profile`. Turning `meetingOn` off withdraws every open meet.
+`settings` keys: `meetingOn`, `accessibleMode`, `noWalking`, `locationOn`, `language`, `hideFromLeaderboard`. You can also send `topics`, `workingOn`, `spotMe`, `realName`, `visible` and `intent` (the same shape as in `sign_up`; it replaces the stored intent, for example `{"attendeeId":"p_…","intent":{"goals":["exploring"],"exploringField":"AI inference","socialLevel":"some"}}`). It returns the full own profile, like `get_profile`. Turning `meetingOn` off withdraws every open meet.
 
 ### check_in (awards XP)
 
@@ -681,6 +689,8 @@ Networks: `linkedin` (`linkedin.com/in/<slug>` or a bare slug), `github` (login 
 ```json
 {"publicId":"pl_01c88990a33676aa","handle":"johndoe","isOwner":false,"isConnection":true,"visible":true,"links":{"…":"…"},"items":[{"network":"linkedin","label":"in/john-doe-platform","url":"https://www.linkedin.com/in/john-doe-platform"},"…3 more"]}
 ```
+
+`githubVerified` is `true` when the GitHub link was confirmed through `/auth/github/callback`; the GitHub entry in `items` (here and in `list_connections`) then carries `"verified":true`, which the cards show as a small check.
 
 For anyone else (`variants.not_connected`): `{"visible":false,"links":{},"items":[],"hiddenReason":"Links are shared only with people you have met through a meet or a handshake.", …}`.
 

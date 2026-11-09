@@ -1,5 +1,6 @@
 import { IAttendee, IProfile, IUpdateSettingsInput } from '../types/kubequest.interfaces';
 import { buildProfileText, getAttendee, patchAttendee } from './attendees';
+import { normalizeIntent } from './intent';
 import { buildOwnProfile, withdrawOpenMeets } from './profile';
 import { normalizeTopics } from './topics';
 
@@ -21,6 +22,10 @@ export async function updateSettings(input: IUpdateSettingsInput): Promise<IProf
 
   if (input.visible !== undefined) {
     patch.visible = input.visible;
+  }
+
+  if (input.intent !== undefined) {
+    patch.intent = normalizeIntent(input.intent);
   }
 
   if (input.topics !== undefined || input.workingOn !== undefined) {

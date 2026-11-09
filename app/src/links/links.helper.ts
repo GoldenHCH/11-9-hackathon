@@ -231,15 +231,16 @@ function labelFor(network: LinkNetwork, url: string): string {
   }
 }
 
-export function linkItems(links: IProfileLinks | undefined): ILinkItem[] {
+export function linkItems(links: IProfileLinks | undefined, githubVerified = false): ILinkItem[] {
   if (!links) {
     return [];
   }
 
   return linkNetworks.flatMap((network) => {
     const url = links[network];
+    const verified = network === 'github' && githubVerified ? { verified: true } : {};
 
-    return url ? [{ network, label: labelFor(network, url), url }] : [];
+    return url ? [{ network, label: labelFor(network, url), url, ...verified }] : [];
   });
 }
 

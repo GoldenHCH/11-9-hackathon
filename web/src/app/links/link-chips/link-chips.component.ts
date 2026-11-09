@@ -1,9 +1,11 @@
 import { Component, Input } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
 import { ILinkItem, LinkNetwork } from '../../core/api.types';
 import { linkNetworkColors, linkNetworkOptions } from '../links.constants';
 
 @Component({
   selector: 'app-link-chips',
+  imports: [MatIconModule],
   templateUrl: './link-chips.component.html',
   styleUrl: './link-chips.component.scss',
 })

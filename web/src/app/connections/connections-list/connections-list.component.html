@@ -43,6 +43,9 @@
                     }
                   </span>
                 }
+                @if (hasVerifiedGithub(connection.links)) {
+                  <span class="tag">GitHub verified</span>
+                }
                 @if (connection.note) {
                   <span class="tag"><span class="tag-swatch tag-swatch--done" aria-hidden="true"></span>Notes</span>
                 } @else {

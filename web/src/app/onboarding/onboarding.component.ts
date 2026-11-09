@@ -1,4 +1,4 @@
-import { HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Component, ElementRef, OnInit, ViewChild, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -8,12 +8,18 @@ import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ActivatedRoute, Router } from '@angular/router';
 import { firstValueFrom } from 'rxjs';
+import { environment } from '../../environments/environment';
+import { IClientConfig, IUpdateLinksResult, LinkNetwork } from '../core/api.types';
 import { ApiErrorHelper } from '../core/helpers/api-error.helper';
 import { MeService } from '../core/services/me.service';
 import { ToolsService } from '../core/services/tools.service';
 import { BlockFaceComponent } from '../profile/face/block-face.component';
 import { CopyLinkComponent } from '../profile/copy-link/copy-link.component';
 import { AccessibilityService } from '../profile/services/accessibility.service';
+import { IntentPickerComponent } from '../intent/intent-picker/intent-picker.component';
+import { IntentHelper } from '../intent/intent.helper';
+import { IIntentInput } from '../intent/intent.types';
+import { linkNetworkOptions } from '../links/links.constants';
 import { AlertBannerComponent } from '../shared/components/alert-banner/alert-banner.component';
 import {
   customTopicLimits,
@@ -43,6 +49,7 @@ import { PendingScanHelper } from './pending-scan.helper';
     AlertBannerComponent,
     BlockFaceComponent,
     CopyLinkComponent,
+    IntentPickerComponent,
   ],
   templateUrl: './onboarding.component.html',
   styleUrl: './onboarding.component.scss',
@@ -53,6 +60,7 @@ export class OnboardingComponent implements OnInit {
   private readonly _accessibilityService = inject(AccessibilityService);
   private readonly _router = inject(Router);
   private readonly _route = inject(ActivatedRoute);
+  private readonly _http = inject(HttpClient);
 
   @ViewChild('customTopicInput') private _customTopicInput?: ElementRef<HTMLInputElement>;
 
@@ -62,6 +70,7 @@ export class OnboardingComponent implements OnInit {
   public readonly demoAccount = demoAccount;
   public readonly importListKeys: readonly ImportListKey[] = ['skills', 'offers', 'asks'];
   public readonly importListLabels = importListLabels;
+  public readonly linkOptions = linkNetworkOptions;
 
   public readonly signInForm = new FormGroup({
     name: new FormControl('', { nonNullable: true, validators: [Validators.required, Validators.maxLength(80)] }),
@@ -78,6 +87,15 @@ export class OnboardingComponent implements OnInit {
     text: new FormControl('', { nonNullable: true, validators: [Validators.maxLength(20000)] }),
     headline: new FormControl('', { nonNullable: true, validators: [Validators.maxLength(80)] }),
     summary: new FormControl('', { nonNullable: true, validators: [Validators.maxLength(600)] }),
+  });
+
+  public readonly linksForm = new FormGroup({
+    linkedin: new FormControl('', { nonNullable: true, validators: [Validators.maxLength(200)] }),
+    github: new FormControl('', { nonNullable: true, validators: [Validators.maxLength(200)] }),
+    x: new FormControl('', { nonNullable: true, validators: [Validators.maxLength(200)] }),
+    bluesky: new FormControl('', { nonNullable: true, validators: [Validators.maxLength(200)] }),
+    mastodon: new FormControl('', { nonNullable: true, validators: [Validators.maxLength(200)] }),
+    website: new FormControl('', { nonNullable: true, validators: [Validators.maxLength(200)] }),
   });
 
   public readonly customTopicControl = new FormControl('', { nonNullable: true });
@@ -100,6 +118,10 @@ export class OnboardingComponent implements OnInit {
   public isAddingTopic = false;
   public customTopicHint = '';
   public isRefiningImport = false;
+  public intent: IIntentInput = { goals: [] };
+  public socialChosen = false;
+  public isSavingLinks = false;
+  public githubVerifyEnabled = false;
 
   public get stepIndex(): number {
     return this.steps.indexOf(this.step);
@@ -114,7 +136,7 @@ export class OnboardingComponent implements OnInit {
   }
 
   public get isBusy(): boolean {
-    return this.isSubmitting || this.isSigningIn || this.importMode === 'loading';
+    return this.isSubmitting || this.isSigningIn || this.isSavingLinks || this.importMode === 'loading';
   }
 
   public get faceHandle(): string {
@@ -138,6 +160,14 @@ export class OnboardingComponent implements OnInit {
       return this.importMode === 'review' ? 'Looks good' : 'Skip';
     }
 
+    if (this.step === 'goals' && this.intent.goals.length === 0) {
+      return 'Skip';
+    }
+
+    if (this.step === 'links') {
+      return this._hasLinks() ? 'Save links' : 'Skip';
+    }
+
     if (this.step === 'topics' && this.selectedTopics.length === 0) {
       return 'Skip';
     }
@@ -148,7 +178,10 @@ export class OnboardingComponent implements OnInit {
   public ngOnInit(): void {
     if (this._meService.attendeeId) {
       void this._router.navigateByUrl(PendingScanHelper.take(this._nextParam()) ?? '/quests', { replaceUrl: true });
+      return;
     }
+
+    this._loadConfig();
   }
 
   public onHandleInput(): void {
@@ -220,7 +253,17 @@ export class OnboardingComponent implements OnInit {
         this.discardImport();
       }
 
+      this.goTo('goals');
+      return;
+    }
+
+    if (this.step === 'goals') {
       this.goTo('handle');
+      return;
+    }
+
+    if (this.step === 'links') {
+      void this.saveLinks();
       return;
     }
 
@@ -412,12 +455,59 @@ export class OnboardingComponent implements OnInit {
       );
       this._meService.setAttendeeId(result.profile.attendee.id);
       this.result = result;
-      this.step = 'done';
+      this.step = 'links';
     } catch (error) {
       this._handleError(error);
     } finally {
       this.isSubmitting = false;
     }
+  }
+
+  public onIntentChange(value: IIntentInput): void {
+    this.intent = value;
+  }
+
+  public async saveLinks(): Promise<void> {
+    if (this.isSavingLinks) {
+      return;
+    }
+
+    if (!this._hasLinks()) {
+      this.goTo('done');
+      return;
+    }
+
+    this.isSavingLinks = true;
+    this.errorMessage = '';
+
+    try {
+      await firstValueFrom(
+        this._toolsService.call<IUpdateLinksResult>('update_links', { attendeeId: this._meService.attendeeId, links: this._linkValues() }, { background: true }),
+      );
+      this.goTo('done');
+    } catch (error) {
+      this.errorMessage = ApiErrorHelper.message(error);
+    } finally {
+      this.isSavingLinks = false;
+    }
+  }
+
+  public async verifyGithub(): Promise<void> {
+    const attendeeId = this._meService.attendeeId;
+
+    if (!attendeeId) {
+      return;
+    }
+
+    if (this._hasLinks()) {
+      await this.saveLinks();
+
+      if (this.errorMessage) {
+        return;
+      }
+    }
+
+    window.location.assign(`/auth/github/start?attendeeId=${encodeURIComponent(attendeeId)}`);
   }
 
   public continue(): void {
@@ -454,7 +544,15 @@ export class OnboardingComponent implements OnInit {
       input.accessibleMode = true;
     }
 
+    if (this.intent.goals.length > 0) {
+      input.intent = IntentHelper.forSaving(this.intent);
+    }
+
     if (this.imported) {
+      if (this.imported.seniority) {
+        input.seniority = this.imported.seniority;
+      }
+
       const { headline, summary } = this.importForm.getRawValue();
 
       if (headline.trim()) {
@@ -529,6 +627,27 @@ export class OnboardingComponent implements OnInit {
 
     this.selectedTopics = merged;
     this._syncCustomTopicControl();
+  }
+
+  private _linkValues(): Partial<Record<LinkNetwork, string>> {
+    const values = this.linksForm.getRawValue();
+
+    return Object.fromEntries(Object.entries(values).flatMap(([network, value]) => (value.trim() ? [[network, value.trim()]] : [])));
+  }
+
+  private _hasLinks(): boolean {
+    return Object.keys(this._linkValues()).length > 0;
+  }
+
+  private _loadConfig(): void {
+    if (environment.useFixtures) {
+      return;
+    }
+
+    this._http.get<IClientConfig>(`${environment.apiBaseUrl}/config`).subscribe({
+      next: (config) => (this.githubVerifyEnabled = config.githubVerifyEnabled === true),
+      error: () => (this.githubVerifyEnabled = false),
+    });
   }
 
   private _focusCustomTopic(): void {
