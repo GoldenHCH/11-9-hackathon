@@ -44,3 +44,7 @@ yarn-error.log*
 *.pem
 *.key
 node_modules/
+
+# Angular web app
+/web/dist/
+/web/.angular/

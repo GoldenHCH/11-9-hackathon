@@ -1,0 +1,35 @@
+.skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skeleton-row {
+  height: 56px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--app-theme--border-soft) 0 8px,
+    #e3ddcd 8px 16px
+  );
+  opacity: 0.6;
+  animation: pulse 1.2s steps(2) infinite;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 32px 16px;
+  text-align: center;
+}
+
+.empty-message {
+  margin: 0;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.3;
+  }
+}

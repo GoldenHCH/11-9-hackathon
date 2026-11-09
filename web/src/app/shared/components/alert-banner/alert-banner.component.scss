@@ -1,0 +1,15 @@
+.alert {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 8px 8px 16px;
+  background: var(--app-theme--error-bg);
+  color: var(--app-theme--error-dark);
+  border: 2px solid var(--app-theme--error-dark);
+  margin-bottom: 16px;
+}
+
+.alert-message {
+  flex: 1;
+  margin: 0;
+}

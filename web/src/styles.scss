@@ -1,0 +1,201 @@
+@use '@angular/material' as mat;
+
+html {
+  height: 100%;
+  @include mat.theme(
+    (
+      color: (
+        primary: mat.$green-palette,
+        tertiary: mat.$orange-palette,
+      ),
+      typography: 'Inter, Roboto, sans-serif',
+      density: 0,
+    )
+  );
+  @include mat.button-overrides(
+    (
+      filled-container-shape: 0,
+      outlined-container-shape: 0,
+      text-container-shape: 0,
+    )
+  );
+  @include mat.card-overrides(
+    (
+      outlined-container-shape: 0,
+    )
+  );
+  @include mat.chips-overrides(
+    (
+      container-shape-radius: 0,
+    )
+  );
+}
+
+:root {
+  --app-theme--primary: #2f6b2b;
+  --app-theme--primary-light: #5fa04e;
+  --app-theme--tertiary: #2f8f3a;
+  --app-theme--tertiary-bg: #e7f4e4;
+  --app-theme--accent: #c96a12;
+  --app-theme--accent-bg: #fff1e0;
+  --app-theme--error: #c62828;
+  --app-theme--error-dark: #a61b1b;
+  --app-theme--error-bg: #fdecea;
+  --app-theme--surface: #f6f3ea;
+  --app-theme--paper: #ffffff;
+  --app-theme--border: #2b2b2b;
+  --app-theme--border-soft: #cfc8b6;
+  --app-theme--ink: #1f1f1f;
+  --app-theme--ink-muted: #55534d;
+  --app-theme--shadow: 4px 4px 0 #2b2b2b;
+  --app-theme--shadow-small: 2px 2px 0 #2b2b2b;
+  --app-theme--focus: #1565c0;
+  --app-theme--pixel-font: 'Silkscreen', 'Courier New', monospace;
+  --app-theme--body-font: 'Inter', Roboto, sans-serif;
+  --app-theme--grid: 8px;
+}
+
+body {
+  color-scheme: light;
+  background-color: var(--app-theme--surface);
+  color: var(--app-theme--ink);
+  font-family: var(--app-theme--body-font);
+  font-size: 16px;
+  margin: 0;
+  height: 100%;
+}
+
+body.app-accessible {
+  --app-theme--pixel-font: var(--app-theme--body-font);
+}
+
+:focus-visible {
+  outline: 3px solid var(--app-theme--focus);
+  outline-offset: 2px;
+}
+
+.app-pixel {
+  font-family: var(--app-theme--pixel-font);
+  letter-spacing: 0.02em;
+}
+
+.app-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.btn-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.app-page {
+  padding: 16px;
+  max-width: 960px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.app-block {
+  background: var(--app-theme--paper);
+  border: 2px solid var(--app-theme--border);
+  box-shadow: var(--app-theme--shadow);
+}
+
+.app-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.app-page-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.app-page-title {
+  font-family: var(--app-theme--pixel-font);
+  font-weight: 600;
+  font-size: 22px;
+  margin: 0;
+}
+
+.app-page-subtitle {
+  color: var(--app-theme--ink-muted);
+  margin: 0;
+}
+
+.app-card-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 600px;
+}
+
+.app-card {
+  background: var(--app-theme--paper);
+  border: 2px solid var(--app-theme--border);
+  border-radius: 0;
+  box-shadow: var(--app-theme--shadow-small);
+}
+
+.app-card--clickable {
+  cursor: pointer;
+  transition: transform 80ms ease, box-shadow 80ms ease;
+
+  &:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: var(--app-theme--shadow);
+  }
+}
+
+.app-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.app-card-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--app-theme--primary);
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.app-card-content {
+  flex: 1;
+
+  h4 {
+    margin: 0 0 4px;
+  }
+
+  p {
+    margin: 0;
+    color: var(--app-theme--ink-muted);
+  }
+}
+
+.app-card-arrow {
+  color: var(--app-theme--ink-muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
