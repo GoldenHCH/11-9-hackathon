@@ -1,0 +1,36 @@
+{
+  "talkId": "talk-1247848",
+  "questions": [
+    {
+      "q": "Which track is the talk \"N Clusters, One kubectl: Multi-Cluster That Just Works\" part of?",
+      "choices": [
+        "Observability",
+        "Platform",
+        "Security",
+        "Other"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Which of these words comes up in the description of \"N Clusters, One kubectl: Multi-Cluster That Just Works\"?",
+      "choices": [
+        "actual",
+        "university",
+        "cluster",
+        "tribal"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Where is \"N Clusters, One kubectl: Multi-Cluster That Just Works\" being held?",
+      "choices": [
+        "Regency Ballroom A",
+        "Salt Lake Ballroom C",
+        "Regency Ballroom B",
+        "Hackathon Floor"
+      ],
+      "answer": 1
+    }
+  ],
+  "source": "abstract"
+}

@@ -1,0 +1,134 @@
+[
+  {
+    "session": {
+      "id": "talk-1247848",
+      "title": "N Clusters, One kubectl: Multi-Cluster That Just Works",
+      "abstract": "Multi-cluster Kubernetes solves a real platform problem. It also breaks every developer workflow that used to work. Adopt mulit-cluster frameworks for fleet resilience, and overnight kubectl stops behaving: kubectl get pods sees one cluster, kubectl scale gets reverted because the hub template is the source of truth, and finding a single pod takes a four-command discovery dance. We built a thin…",
+      "speakers": [
+        "Anne Lau",
+        "Scott Brimhall"
+      ],
+      "start": "2026-11-10T15:40:00-07:00",
+      "end": "2026-11-10T16:10:00-07:00",
+      "venue": "Hyatt Regency",
+      "level": 2,
+      "track": "platform",
+      "locationId": "hyatt-regency-salt-lake-ballroom-c",
+      "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1247848",
+      "hasTranscript": false
+    },
+    "score": 6.5,
+    "reasons": [
+      "Matches your interest in kubernetes-upgrades",
+      "Matches your interest in platform-engineering",
+      "Matches your interest in developer-experience"
+    ],
+    "startsInMinutes": 25,
+    "walkMinutes": 13
+  },
+  {
+    "session": {
+      "id": "talk-1250559",
+      "title": "GitOps Meltdown: How a Commit Triggered a Cascading Delete of 39 Clusters in Production",
+      "abstract": "GitOps assumes cluster state converges to Git.But, what happens when the desired state is wrong? This session examines a real incident where a routine Flux reconciliation turned a small git change into a cascading prune across a Kubernetes management platform managing 39 workload clusters. A missing Kustomization triggered inventory deletion, causing Flux controller to delete itself during…",
+      "speakers": [
+        "Deepak Goel"
+      ],
+      "start": "2026-11-10T17:30:00-07:00",
+      "end": "2026-11-10T18:00:00-07:00",
+      "venue": "Salt Palace",
+      "level": 2,
+      "track": "platform",
+      "locationId": "salt-palace-255-bc",
+      "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1250559",
+      "hasTranscript": false
+    },
+    "score": 6.5,
+    "reasons": [
+      "Matches your interest in kubernetes-upgrades",
+      "Matches your interest in platform-engineering",
+      "Matches your interest in gitops"
+    ],
+    "startsInMinutes": 135,
+    "walkMinutes": 1
+  },
+  {
+    "session": {
+      "id": "talk-1250974",
+      "title": "When the Clock Lies: How an 8-Minute Time Skew Locked Kubernetes cluster for a day",
+      "abstract": "A pod stuck in CreateContainerError for more than 19 hours. containerd rejecting kubelet's create calls repeatedly. But on checking the node, the containers were running fine. So what was kubelet still trying to recreate? The trigger was a hypervisor reboot. But something subtler was at play; service account tokens were being issued in the future, container name reservations were piling up, and…",
+      "speakers": [
+        "Akhil Mohan"
+      ],
+      "start": "2026-11-10T16:40:00-07:00",
+      "end": "2026-11-10T17:10:00-07:00",
+      "venue": "Hyatt Regency",
+      "level": 2,
+      "track": "platform",
+      "locationId": "hyatt-regency-regency-ballroom-cd",
+      "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1250974",
+      "hasTranscript": false
+    },
+    "score": 4,
+    "reasons": [
+      "Matches your interest in kubernetes-upgrades",
+      "Matches your interest in platform-engineering",
+      "Matches your interest in multi-cluster"
+    ],
+    "startsInMinutes": 85,
+    "walkMinutes": 13
+  },
+  {
+    "session": {
+      "id": "talk-1247526",
+      "title": "Kubernetes Anonymous: Confessions of Kubernetes Cargo Cultists",
+      "abstract": "We've been knee-deep in Kubernetes since the early days: maintaining Helm, building Krustlet, provisioning internal clusters with Cluster API, containerizing applications, the whole shebang. Eventually, we swore it off and worked on Wasm because we were tired of watching people hammer everything to fit into a Kubernetes-shaped hole. Now we find ourselves back in it again after learning that both…",
+      "speakers": [
+        "Taylor Thomas",
+        "Brooks Townsend"
+      ],
+      "start": "2026-11-10T15:40:00-07:00",
+      "end": "2026-11-10T16:10:00-07:00",
+      "venue": "Salt Palace",
+      "level": 2,
+      "track": "platform",
+      "locationId": "salt-palace-grand-ballroom-bdf",
+      "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1247526",
+      "hasTranscript": false
+    },
+    "score": 3.5,
+    "reasons": [
+      "Matches your interest in kubernetes-upgrades",
+      "Matches your interest in platform-engineering",
+      "Matches your interest in multi-cluster"
+    ],
+    "startsInMinutes": 25,
+    "walkMinutes": 1
+  },
+  {
+    "session": {
+      "id": "talk-1360829",
+      "title": "We Have GitOps at Home: How Meta Went from Terraform on Cron to GitOps for AI Infra",
+      "abstract": "At Meta, ~15 engineers run ~100 Kubernetes clusters for AI research & inference. Terraform exceeds expectations at its job: setting up infra for those clusters. The problem is its side gig: deploying the k8s apps. Even a one-line Helm values change can take a working day in our monolithic Terraform pipeline, where one stuck app can block dozens of others. In the new model, Terraform didn't get…",
+      "speakers": [
+        "Phong Nguyen",
+        "Shaun Hopper"
+      ],
+      "start": "2026-11-11T10:11:00-07:00",
+      "end": "2026-11-11T10:16:00-07:00",
+      "venue": "Salt Palace",
+      "level": 2,
+      "track": "ai",
+      "locationId": "salt-palace-hall-de",
+      "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1360829",
+      "hasTranscript": false
+    },
+    "score": 3.5,
+    "reasons": [
+      "Matches your interest in kubernetes-upgrades",
+      "Matches your interest in gitops"
+    ],
+    "startsInMinutes": 1136,
+    "walkMinutes": 1
+  }
+]

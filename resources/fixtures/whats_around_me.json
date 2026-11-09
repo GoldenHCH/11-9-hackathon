@@ -1,0 +1,164 @@
+{
+  "location": {
+    "id": "salt-palace-151",
+    "name": "Room 151",
+    "kind": "room",
+    "venue": "Salt Palace",
+    "floor": "Level 1",
+    "geo": {
+      "lat": 40.76718,
+      "lon": -111.895831
+    }
+  },
+  "sessionsNowHere": [
+    {
+      "id": "talk-1247376",
+      "title": "The Operator Calls Are Coming from Inside the Namespace",
+      "abstract": "You locked down RBAC. You scoped your namespaces. You followed least privilege. But the attacker who just became your GCP Org admin? They never left their namespace. The call came from inside the cluster—through your own operator. I discovered confused deputy vulnerabilities (CWE-441) across Config Connector, ACK, ASO, and Crossplane. The pattern is universal: operators trust user-controlled CRD…",
+      "speakers": [
+        "Justin O’Leary"
+      ],
+      "start": "2026-11-10T14:50:00-07:00",
+      "end": "2026-11-10T15:20:00-07:00",
+      "venue": "Salt Palace",
+      "level": 2,
+      "track": "platform",
+      "locationId": "salt-palace-151",
+      "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1247376",
+      "hasTranscript": false
+    }
+  ],
+  "sessionsNextHere": [
+    {
+      "id": "talk-1244963",
+      "title": "Triaging 4,700 Alerts/Month at $0.33 Each: Verkada's MCP Agent on Nine Production Clusters",
+      "abstract": "Over the last three months Verkada's incident-triage agent handled about 4,700 production alerts a month across nine Kubernetes clusters at $0.33 per investigation, with an 87.5% prompt-cache-read ratio and a 139-second median time-to-summary. The control plane runs in-cluster on every shard. No AI-for-SRE SaaS is in the path; inference is managed Claude Opus 5, state lives on managed KV. Three…",
+      "speakers": [
+        "Rohan Sood",
+        "Adrian Ng"
+      ],
+      "start": "2026-11-10T15:40:00-07:00",
+      "end": "2026-11-10T16:10:00-07:00",
+      "venue": "Salt Palace",
+      "level": 2,
+      "track": "ai",
+      "locationId": "salt-palace-151",
+      "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1244963",
+      "hasTranscript": false
+    },
+    {
+      "id": "talk-1246066",
+      "title": "AI-DDoS: How AI-Generated Contributions Are Breaching OSS Communities, and What We Can Do about It",
+      "abstract": "OSS communities are sounding the alarm that AI-generated contributions are flooding their projects. Much like a DDoS attack overwhelms a server with excessive requests until it goes offline, this flood can overwhelm maintainers and push projects to shut their doors. We call it AI-DDoS. Some projects are already responding defensively: closing bug bounties, moving to invitation-only models, or…",
+      "speakers": [
+        "Zixuan Feng"
+      ],
+      "start": "2026-11-10T16:40:00-07:00",
+      "end": "2026-11-10T17:10:00-07:00",
+      "venue": "Salt Palace",
+      "level": 2,
+      "track": "ai",
+      "locationId": "salt-palace-151",
+      "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1246066",
+      "hasTranscript": false
+    }
+  ],
+  "peopleHere": [
+    {
+      "attendee": {
+        "id": "att-demo-frontend",
+        "handle": "diego-alvarez-ui",
+        "name": "Diego Alvarez",
+        "headline": "Frontend developer at an online retailer",
+        "firstTimer": true,
+        "welcomer": false,
+        "xp": 20,
+        "badges": []
+      },
+      "score": 7.5,
+      "reasons": [
+        "Both into kubernetes-upgrades",
+        "Both into platform-engineering",
+        "Both into gitops",
+        "First time here, a good person to welcome",
+        "In the same room right now"
+      ],
+      "sharedTopics": [
+        "kubernetes-upgrades",
+        "platform-engineering",
+        "gitops",
+        "developer-experience"
+      ],
+      "isHere": true,
+      "locationId": "salt-palace-151",
+      "distanceMeters": 0
+    },
+    {
+      "attendee": {
+        "id": "att-051",
+        "handle": "hannah-b-infra",
+        "name": "Hannah Barrow",
+        "headline": "Junior performance engineer at a managed Kubernetes provider",
+        "firstTimer": true,
+        "welcomer": false,
+        "xp": 10,
+        "badges": []
+      },
+      "score": 4.5,
+      "reasons": [
+        "Both into multi-cluster",
+        "First time here, a good person to welcome",
+        "In the same room right now"
+      ],
+      "sharedTopics": [
+        "multi-cluster"
+      ],
+      "isHere": true,
+      "locationId": "salt-palace-151",
+      "distanceMeters": 0
+    },
+    {
+      "attendee": {
+        "id": "att-114",
+        "handle": "infra-katarzyna82",
+        "name": "Katarzyna Dvorak",
+        "headline": "Staff DevOps engineer at a climate-tech startup",
+        "firstTimer": false,
+        "welcomer": false,
+        "xp": 65,
+        "badges": []
+      },
+      "score": 2.5,
+      "reasons": [
+        "Both into gitops",
+        "In the same room right now"
+      ],
+      "sharedTopics": [
+        "gitops"
+      ],
+      "isHere": true,
+      "locationId": "salt-palace-151",
+      "distanceMeters": 0
+    },
+    {
+      "attendee": {
+        "id": "att-089",
+        "handle": "folake-m-k8s",
+        "name": "Folake Mensah",
+        "headline": "Principal FinOps engineer at an e-commerce marketplace",
+        "firstTimer": false,
+        "welcomer": false,
+        "xp": 15,
+        "badges": []
+      },
+      "score": 1.5,
+      "reasons": [
+        "In the same room right now"
+      ],
+      "sharedTopics": [],
+      "isHere": true,
+      "locationId": "salt-palace-151",
+      "distanceMeters": 0
+    }
+  ]
+}
