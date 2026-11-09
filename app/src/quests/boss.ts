@@ -5,7 +5,7 @@ import { esTimeouts, indexNames } from '../es/es.constants';
 import { logger } from '../observability/logger';
 import { tracer } from '../observability/tracing';
 import { isToolError, NotImplementedError, ToolError } from '../tools/tool-errors';
-import { awardXp } from '../xp/award';
+import { awardXp, awardXpOnce } from '../xp/award';
 import { gameRules, xpRewards } from '../types/kubequest.constants';
 import { IBossState, IQuizQuestion, IQuizQuestionWithAnswer, IStoredQuiz, ITalk } from '../types/kubequest.interfaces';
 import { IAwardXpInput } from '../types/internal.interfaces';
@@ -320,8 +320,12 @@ async function bossQuestions(talk: IBossTalkDoc): Promise<IQuizQuestion[]> {
   }
 }
 
-async function safeAward(award: IAwardXpInput): Promise<boolean> {
+async function safeAward(award: IAwardXpInput, onceKey?: string): Promise<boolean> {
   try {
+    if (onceKey !== undefined) {
+      return await awardXpOnce(award, onceKey);
+    }
+
     await awardXp(award);
 
     return true;
@@ -340,6 +344,7 @@ async function awardBonusOnce(talk: ITalk, tally: IBossTally): Promise<number> {
   const alreadyPaid = new Set(tally.bonusIds);
   const owed = tally.participantIds.filter((attendeeId) => !alreadyPaid.has(attendeeId));
   let awardedXp = 0;
+  let paidCount = 0;
 
   for (const attendeeId of owed) {
     const paid = await safeAward({
@@ -350,12 +355,13 @@ async function awardBonusOnce(talk: ITalk, tally: IBossTally): Promise<number> {
       talkId: talk.id,
       locationId: talk.locationId,
       questId: bonusQuestId(talk.id),
-    });
+    }, `${attendeeId}:boss_bonus:${talk.id}`);
     awardedXp += paid ? xpRewards.BOSS_DEFEATED_BONUS : 0;
+    paidCount += paid ? 1 : 0;
   }
 
-  if (owed.length > 0) {
-    logger.info({ talkId: talk.id, winners: owed.length }, 'boss defeated, bonus awarded');
+  if (paidCount > 0) {
+    logger.info({ talkId: talk.id, winners: paidCount }, 'boss defeated, bonus awarded');
   }
 
   return awardedXp;

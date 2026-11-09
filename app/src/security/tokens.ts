@@ -80,6 +80,14 @@ export function verifyLocationToken(locationId: string, token: string, now: Date
   return { valid: false, reason: 'bad_signature' };
 }
 
+export function signScreenDisplayKey(locationId: string): string {
+  return sign(`screen:${locationId}`);
+}
+
+export function verifyScreenDisplayKey(locationId: string, key: string): boolean {
+  return sameSignature(signScreenDisplayKey(locationId), key.trim());
+}
+
 export function buildScanUrl(locationId: string, token: string): string {
   const url = new URL(`/r/${encodeURIComponent(locationId)}`, appConfig.publicBaseUrl);
   url.searchParams.set('t', token);
