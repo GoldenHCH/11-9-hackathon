@@ -125,6 +125,7 @@ export interface IAttendee {
   banners: BannerId[];
   blockedIds: string[];
   createdAt: IsoDateString;
+  itinerary?: IItineraryEntry[];
 }
 
 export interface IPublicPlayer {
@@ -839,6 +840,101 @@ export interface IRecap {
   emailHtml: string;
 }
 
+export interface IItineraryEntry {
+  talkId: string;
+  addedAt: IsoDateString;
+}
+
+export interface IScheduleSession {
+  id: string;
+  title: string;
+  speakers: string[];
+  sessionType: SessionType;
+  track: Track;
+  material: Material;
+  start: IsoDateString;
+  end: IsoDateString;
+  locationId: string;
+  building: string;
+  level: string;
+  room: string;
+  isBoss: boolean;
+  checkedInCount: number;
+  inItinerary?: boolean;
+}
+
+export interface IScheduleSlot {
+  start: IsoDateString;
+  end: IsoDateString;
+  sessions: IScheduleSession[];
+}
+
+export interface IListScheduleInput {
+  attendeeId?: string;
+  day?: string;
+  from?: IsoDateString;
+  to?: IsoDateString;
+  track?: Track;
+  building?: string;
+  query?: string;
+}
+
+export interface ISchedule {
+  day: string;
+  days: string[];
+  now: IsoDateString;
+  from: IsoDateString;
+  to: IsoDateString;
+  total: number;
+  buildings: string[];
+  slots: IScheduleSlot[];
+}
+
+export interface IGetItineraryInput {
+  attendeeId: string;
+  day?: string;
+}
+
+export interface IItineraryChangeInput {
+  attendeeId: string;
+  talkId: string;
+}
+
+export interface IPlanItem {
+  id: string;
+  kind: ItineraryItemKind;
+  title: string;
+  start: IsoDateString;
+  end?: IsoDateString;
+  place?: IQuestPlace;
+  walkMinutes?: number;
+  walkFrom?: string;
+  gapMinutes?: number;
+  conflictsWith: string[];
+  talkId?: string;
+  questId?: string;
+  meetId?: string;
+  session?: IScheduleSession;
+  quizAvailable?: boolean;
+  isNow?: boolean;
+}
+
+export interface IItinerary {
+  now: IsoDateString;
+  day?: string;
+  plannedCount: number;
+  maxItems: number;
+  conflictCount: number;
+  items: IPlanItem[];
+}
+
+export interface IItineraryChangeResult {
+  talkId: string;
+  inItinerary: boolean;
+  plannedCount: number;
+  maxItems: number;
+}
+
 export interface IToolContracts {
   sign_in: { input: ISignInInput; output: ISignInResult };
   sign_up: { input: ISignUpInput; output: ISignUpResult };
@@ -873,6 +969,10 @@ export interface IToolContracts {
   send_message: { input: ISendMessageInput; output: IMessage };
   list_messages: { input: IListMessagesInput; output: IMessage[] };
   recap: { input: IAttendeeInput; output: IRecap };
+  list_schedule: { input: IListScheduleInput; output: ISchedule };
+  get_itinerary: { input: IGetItineraryInput; output: IItinerary };
+  add_to_itinerary: { input: IItineraryChangeInput; output: IItineraryChangeResult };
+  remove_from_itinerary: { input: IItineraryChangeInput; output: IItineraryChangeResult };
 }
 
 export interface IToolInfo {

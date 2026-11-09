@@ -188,4 +188,8 @@ export const toolNames = [
   'send_message',
   'list_messages',
   'recap',
+  'list_schedule',
+  'get_itinerary',
+  'add_to_itinerary',
+  'remove_from_itinerary',
 ] as const;

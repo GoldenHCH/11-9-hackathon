@@ -90,6 +90,7 @@ On a 5xx, double the interval up to 60 s, then reset after a success.
 | Scan result (`/r/:locationId?t=`) | `check_in` if an id is stored, otherwise signup with the scan attached. Then `quiz_for_talk` when `quizAvailable` is true |
 | Itinerary: Now | `whats_around_me`, `boss_state` (boss rooms), `quiz_for_talk`, `submit_quiz` |
 | Itinerary: Next | `whats_next` |
+| Itinerary tab `/itinerary` | `list_schedule` (What's on), `get_itinerary` (My plan), `add_to_itinerary`, `remove_from_itinerary`, `make_quest` |
 | Search | `search`, `world` (browse by building, level and room), `make_quest` ("Make this a quest") |
 | Quests | `quest_board`, `respond_quest`, `recommend_people`, `recommend_talks`, `propose_meet` |
 | Meet screen | `list_meets` (one item), `respond_meet`, `send_message`, `list_messages` (once the meet is `accepted` or `met`) |
@@ -244,6 +245,22 @@ A location without a screen returns `403 {"error":{"code":"no_screen","message":
 `{"attendeeId":"p_…"}` → `{"now"?: IItineraryItem, "items": IItineraryItem[]}`. Each item has `{kind, title, start, end?, place?: {locationId, name, kind, building, level}, walkMinutes?, talkId?, questId?, meetId?}`.
 
 It looks 3 hours ahead, and every KubeCon talk is on Nov 10, so today it returns `{"items":[]}`. Run the server with `DEMO_NOW=2026-11-10T09:00:00-07:00` to see a full itinerary.
+
+### list_schedule (Itinerary: What's on)
+
+`{"attendeeId"?:"p_…","day"?:"2026-11-10","from"?:iso,"to"?:iso,"track"?:"platform","building"?:"Hyatt Regency","query"?:"gpu"}` → `{"day","days":["2026-11-09",…,"2026-11-12"],"now","from","to","total","buildings":[…],"slots":[{"start","end","sessions":[IScheduleSession]}]}`.
+
+Every field is optional. `day` defaults to today (conference time zone) when today is a conference day, else Tuesday 2026-11-10. `from`/`to` narrow the window (the Now filter sends now → now + 90 min); a session is included when it overlaps the window. `query` matches title, abstract, room and speakers. Slots are 30 minutes, keyed by the session start rounded down. Each session is `{id, title, speakers, sessionType, track, material, start, end, locationId, building, level, room, isBoss, checkedInCount, inItinerary?}`; `checkedInCount` is distinct players who checked in to that talk, and `inItinerary` is only present when `attendeeId` is given. Fixture: `resources/fixtures/list_schedule.json`.
+
+### get_itinerary (Itinerary: My plan)
+
+`{"attendeeId":"p_…","day"?:"2026-11-10"}` → `{"now","day"?,"plannedCount","maxItems":40,"conflictCount","items":[IPlanItem]}`.
+
+Items are in time order: planned sessions (`kind: "talk"`, with `session`), accepted meets that have a slot (`meet`), accepted quests that have a time and aren't already a planned session (`quest`), and free gaps of 30 min or more between them (`gap`, with `gapMinutes`). Each item: `{id, kind, title, start, end?, place?, walkMinutes?, walkFrom?, gapMinutes?, conflictsWith: [itemId], talkId?, questId?, meetId?, session?, quizAvailable?, isNow?}`. `walkMinutes` is from the previous item on the same day (same walk table as everywhere else). Overlapping items list each other in `conflictsWith`. `quizAvailable` is true once the session has started (open `/quiz/:talkId`). The plan is stored as `itinerary: [{talkId, addedAt}]` on the attendee doc and never appears in other players' views.
+
+### add_to_itinerary / remove_from_itinerary
+
+`{"attendeeId":"p_…","talkId":"kc26-tue-tracing-at-scale"}` → `{"talkId","inItinerary":true|false,"plannedCount","maxItems":40}`. Both are idempotent (atomic painless script on the attendee doc). Adding an unknown talk is `404 talk_not_found`; adding a 41st is `409 itinerary_full`.
 
 ### search
 

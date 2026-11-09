@@ -9,7 +9,7 @@ import { recommendTalksFor } from './talks';
 const nextWindowMinutes = 180;
 const nowCardLeadMinutes = 15;
 
-async function acceptedQuests(attendeeId: string): Promise<IQuest[]> {
+export async function acceptedQuests(attendeeId: string): Promise<IQuest[]> {
   const response = await getEsClient().search<IQuest>(
     {
       index: indexNames.QUESTS,
@@ -22,7 +22,7 @@ async function acceptedQuests(attendeeId: string): Promise<IQuest[]> {
   return hitSources(response.hits.hits);
 }
 
-async function acceptedMeets(attendeeId: string, nowIso: string): Promise<IIntro[]> {
+export async function acceptedMeets(attendeeId: string, nowIso: string): Promise<IIntro[]> {
   const response = await getEsClient().search<IIntro>(
     {
       index: indexNames.INTROS,
@@ -43,7 +43,7 @@ async function acceptedMeets(attendeeId: string, nowIso: string): Promise<IIntro
   return hitSources(response.hits.hits);
 }
 
-async function handlesFor(ids: string[]): Promise<Map<string, string>> {
+export async function handlesFor(ids: string[]): Promise<Map<string, string>> {
   const handles = new Map<string, string>();
 
   if (ids.length === 0) {

@@ -32,6 +32,10 @@ import { recapTool } from './recap.tool';
 import { saveBoothNoteTool } from './save-booth-note.tool';
 import { sendMessageTool } from './send-message.tool';
 import { startHandshakeTool } from './start-handshake.tool';
+import { addToItineraryTool } from './add-to-itinerary.tool';
+import { getItineraryTool } from './get-itinerary.tool';
+import { listScheduleTool } from './list-schedule.tool';
+import { removeFromItineraryTool } from './remove-from-itinerary.tool';
 import { IRegisteredTool } from './define-tool';
 
 export const toolRegistry = {
@@ -68,6 +72,10 @@ export const toolRegistry = {
   send_message: sendMessageTool,
   list_messages: listMessagesTool,
   recap: recapTool,
+  list_schedule: listScheduleTool,
+  get_itinerary: getItineraryTool,
+  add_to_itinerary: addToItineraryTool,
+  remove_from_itinerary: removeFromItineraryTool,
 } satisfies { [TName in ToolName]: IRegisteredTool<TName> };
 
 export function findTool(name: string): IRegisteredTool | undefined {
