@@ -50,3 +50,4 @@ node_modules/
 /web/dist/
 /web/.angular/
 *.tsbuildinfo
+/app/public/
