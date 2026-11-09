@@ -1,8 +1,8 @@
 # Phase 00 + 04 — Platform: cnh-starter, Argo CD, OTel Collector, Gitar, Radar
 
-> **Status (14:10 MST):** Phase 00 is done. Most of Phase 04 landed in PR 5: collector, Node SDK, JSON logs with trace ids, all four `kubequest.*` metrics, Gitar review instructions and rules, and `app-credentials` loaded through `envFrom` (verified live in `knowledge-graph/platform-status.md`). Still open, with no owner while Collin is on the UI:
-> 1. **Dash0 keys** (`DASH0_AUTH_TOKEN`, `DASH0_ENDPOINT`) are not in `app-credentials`, so the collector's `otlp/dash0` exporter sends nothing and no trace has been seen in Dash0. Steps: `docs/ops.md`, "Adding the Dash0 keys". This blocks the Dash0 track and the "open trace" step of the demo.
-> 2. **Browser RUM** in the Angular app (Phase 03 section 8 reads `rum` from `/api/config`) and the **Dash0 MCP** in Claude Code.
+> **Status (14:10 MST):** Phase 00 is done. Most of Phase 04 landed in PR 5: collector, Node SDK, JSON logs with trace ids, all four `kubequest.*` metrics, Gitar review instructions and rules, and `app-credentials` loaded through `envFrom` (verified live in `knowledge-graph/platform-status.md`). Still open. **Collin owns items 1 and 2** (Dash0 keys, the first trace and browser RUM), plus the Dash0 dashboard + SLO in `phase-05-widen.md`; items 3 to 5 have no owner. Checked at 14:10: the live `/api/config` (`ae5e756`) returns no `traceUrlTemplate` and no `rum`. The Secret and Dash0 itself were not re-checked.
+> 1. **Dash0 keys** (`DASH0_AUTH_TOKEN`, `DASH0_ENDPOINT`) are not in `app-credentials`, so the collector's `otlp/dash0` exporter sends nothing and no trace has been seen in Dash0. Steps: `docs/ops.md`, "Adding the Dash0 keys". This blocks the Dash0 track and the "open trace" step of the demo. **Owner: Collin.**
+> 2. **Browser RUM** in the Angular app (Phase 03 section 8 reads `rum` from `/api/config`) and the **Dash0 MCP** in Claude Code. **Owner: Collin.**
 > 3. **Gitar auto-apply is off** for the repo; the Sonar rubric asks for auto-apply evidence. `.gitar/config/apply.md` already limits what it may apply.
 > 4. **`main` is not protected** (`gh api repos/GoldenHCH/11-9-hackathon/branches/main` → `protected: false`).
 > 5. `app-credentials` has no `OPENAI_API_KEY` or `GITHUB_TOKEN` yet (needed by Phase 02's model fallback and GitHub-grounded profiles).
