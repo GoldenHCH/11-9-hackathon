@@ -47,3 +47,4 @@ resources/qr-links.local.txt
 /web/.angular/
 *.tsbuildinfo
 /scripts/dist/
+# Angular web app

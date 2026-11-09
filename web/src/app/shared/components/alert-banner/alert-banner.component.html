@@ -1,11 +1,11 @@
-<div class="alert-banner" role="alert">
-  <mat-icon class="alert-banner-icon">error_outline</mat-icon>
-  <p class="alert-banner-message">
-    <span class="alert-banner-label">Error:</span>
-    {{ message }}
-  </p>
+<div class="alert" role="alert">
+  <mat-icon aria-hidden="true">error_outline</mat-icon>
+  <p class="alert-message">{{ message }}</p>
+  @if (actionLabel) {
+    <button mat-stroked-button type="button" (click)="action.emit()">{{ actionLabel }}</button>
+  }
   @if (dismissible) {
-    <button mat-icon-button type="button" class="alert-banner-dismiss" aria-label="Dismiss error" (click)="onDismiss()">
+    <button mat-icon-button type="button" aria-label="Dismiss message" (click)="dismissed.emit()">
       <mat-icon>close</mat-icon>
     </button>
   }

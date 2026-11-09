@@ -1,0 +1,16 @@
+<header class="toolbar">
+  @if (showBack) {
+    <button mat-icon-button type="button" aria-label="Go back" (click)="goBack()">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+  }
+  <div class="toolbar-text">
+    <h1 class="app-page-title">{{ title }}</h1>
+    @if (subtitle) {
+      <p class="app-page-subtitle">{{ subtitle }}</p>
+    }
+  </div>
+  <div class="toolbar-actions">
+    <ng-content></ng-content>
+  </div>
+</header>

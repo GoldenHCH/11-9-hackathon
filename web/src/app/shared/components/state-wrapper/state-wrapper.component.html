@@ -1,0 +1,24 @@
+@if (errorMessage) {
+  <app-alert-banner
+    [message]="errorMessage"
+    actionLabel="Try again"
+    [dismissible]="false"
+    (action)="retry.emit()"
+  ></app-alert-banner>
+} @else if (isLoading) {
+  <div class="skeleton" aria-busy="true" aria-label="Loading">
+    @for (row of skeletonRowIndexes; track row) {
+      <div class="skeleton-row"></div>
+    }
+  </div>
+} @else if (isEmpty) {
+  <div class="empty app-block">
+    <mat-icon aria-hidden="true">{{ emptyIcon }}</mat-icon>
+    <p class="empty-message">{{ emptyMessage }}</p>
+    @if (emptyActionLabel) {
+      <button mat-flat-button type="button" (click)="emptyAction.emit()">{{ emptyActionLabel }}</button>
+    }
+  </div>
+} @else {
+  <ng-content></ng-content>
+}

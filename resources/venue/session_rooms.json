@@ -1,0 +1,224 @@
+[
+ {
+  "id": 82947,
+  "name": "Salt Palace | Level 1 | Hall DE",
+  "sort": 0,
+  "sessionCount": 35
+ },
+ {
+  "id": 92180,
+  "name": "Hyatt Regency | Level 4 | Regency Ballroom B",
+  "sort": 1,
+  "sessionCount": 8
+ },
+ {
+  "id": 82948,
+  "name": "Salt Palace | Level 1 | Grand Ballroom ACE",
+  "sort": 2,
+  "sessionCount": 18
+ },
+ {
+  "id": 82949,
+  "name": "Salt Palace | Level 1 | Grand Ballroom BDF",
+  "sort": 3,
+  "sessionCount": 18
+ },
+ {
+  "id": 82950,
+  "name": "Salt Palace | Level 1 | Grand Ballroom H",
+  "sort": 4,
+  "sessionCount": 19
+ },
+ {
+  "id": 82951,
+  "name": "Salt Palace | Level 1 | Grand Ballroom GI",
+  "sort": 5,
+  "sessionCount": 17
+ },
+ {
+  "id": 82952,
+  "name": "Salt Palace | Level 1 | 151 ",
+  "sort": 6,
+  "sessionCount": 18
+ },
+ {
+  "id": 82953,
+  "name": "Salt Palace | Level 2 | 255 BC",
+  "sort": 7,
+  "sessionCount": 18
+ },
+ {
+  "id": 82954,
+  "name": "Salt Palace | Level 2 | 255 EF",
+  "sort": 8,
+  "sessionCount": 17
+ },
+ {
+  "id": 82955,
+  "name": "Hyatt Regency | Level 2 | Salt Lake Ballroom C",
+  "sort": 9,
+  "sessionCount": 17
+ },
+ {
+  "id": 82956,
+  "name": "Hyatt Regency | Level 2 | Salt Lake Ballroom DE",
+  "sort": 10,
+  "sessionCount": 16
+ },
+ {
+  "id": 82957,
+  "name": "Hyatt Regency | Level 4 | Regency Ballroom B-D",
+  "sort": 11,
+  "sessionCount": 51
+ },
+ {
+  "id": 92181,
+  "name": "Hyatt Regency | Level 4 | Regency Ballroom CD",
+  "sort": 12,
+  "sessionCount": 23
+ },
+ {
+  "id": 82958,
+  "name": "Hyatt Regency | Level 4 | Regency Ballroom A",
+  "sort": 13,
+  "sessionCount": 9
+ },
+ {
+  "id": 87421,
+  "name": "Salt Palace | Level 2 | 250 A-C",
+  "sort": 14,
+  "sessionCount": 19
+ },
+ {
+  "id": 87422,
+  "name": "Salt Palace | Level 2 | 250 D-F",
+  "sort": 15,
+  "sessionCount": 17
+ },
+ {
+  "id": 87423,
+  "name": "Salt Palace | Level 2 | 251 A-C",
+  "sort": 16,
+  "sessionCount": 17
+ },
+ {
+  "id": 87424,
+  "name": "Salt Palace | Level 2 | 251 D-F",
+  "sort": 17,
+  "sessionCount": 17
+ },
+ {
+  "id": 87425,
+  "name": "Salt Palace | Level 2 | 254",
+  "sort": 18,
+  "sessionCount": 18
+ },
+ {
+  "id": 87426,
+  "name": "Salt Palace | Level 2 | 255 A",
+  "sort": 19,
+  "sessionCount": 9
+ },
+ {
+  "id": 87427,
+  "name": "Salt Palace | Level 2 | 255 D",
+  "sort": 20,
+  "sessionCount": 8
+ },
+ {
+  "id": 87451,
+  "name": "Salt Palace | Level 1 | Halls A-C, Halls 1-5",
+  "sort": 21,
+  "sessionCount": 31
+ },
+ {
+  "id": 90363,
+  "name": "Salt Palace | Level 1 | Solutions Showcase | Halls 5 | Cosmic Canyon Zone | Cloud Native Theater",
+  "sort": 22,
+  "sessionCount": 53
+ },
+ {
+  "id": 87503,
+  "name": "Room TBD",
+  "sort": 23,
+  "sessionCount": 0
+ },
+ {
+  "id": 87690,
+  "name": "Salt Palace | 200 South Entrance (South)",
+  "sort": 24,
+  "sessionCount": 5
+ },
+ {
+  "id": 87691,
+  "name": "Salt Palace | Level 2 | East Registration",
+  "sort": 25,
+  "sessionCount": 5
+ },
+ {
+  "id": 88637,
+  "name": "Hyatt Regency | Level 5 | Capitol Reef",
+  "sort": 26,
+  "sessionCount": 2
+ },
+ {
+  "id": 88756,
+  "name": "Off-Site Location",
+  "sort": 27,
+  "sessionCount": 14
+ },
+ {
+  "id": 90387,
+  "name": "Salt Palace | Level 1 | Grand Ballroom J",
+  "sort": 28,
+  "sessionCount": 15
+ },
+ {
+  "id": 90682,
+  "name": "Salt Palace | Level 1 | Solutions Showcase | Hall 5 | Cosmic Canyon Zone | Project Pavilion",
+  "sort": 29,
+  "sessionCount": 26
+ },
+ {
+  "id": 90804,
+  "name": "Salt Palace | Level 2 | Upper Mezzanine",
+  "sort": 30,
+  "sessionCount": 1
+ },
+ {
+  "id": 91537,
+  "name": "Salt Palace | Level 1 | Solutions Showcase | Hall 1 | Alpine Overlook Zone | Demo Theater",
+  "sort": 31,
+  "sessionCount": 39
+ },
+ {
+  "id": 92005,
+  "name": "Hyatt Regency Lobby",
+  "sort": 32,
+  "sessionCount": 1
+ },
+ {
+  "id": 92006,
+  "name": "Hyatt Regency | Level 3 | Park City",
+  "sort": 33,
+  "sessionCount": 1
+ },
+ {
+  "id": 92007,
+  "name": "Salt Palace | Level 1 | North Grand Ballroom Foyer",
+  "sort": 34,
+  "sessionCount": 1
+ },
+ {
+  "id": 92016,
+  "name": "Salt Palace | Level 1 | Solutions Showcase | Hall 1 | Alpine Overlook Zone | Network Nook",
+  "sort": 35,
+  "sessionCount": 5
+ },
+ {
+  "id": 92096,
+  "name": "Salt Palace | Level 1 | Solutions Showcase | Hall B | Starlight Summit Zone",
+  "sort": 36,
+  "sessionCount": 12
+ }
+]

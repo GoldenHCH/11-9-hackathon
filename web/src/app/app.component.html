@@ -1,19 +1,37 @@
-<a class="skip-link" href="#main" (click)="skipToContent($event)">Skip to content</a>
+<a class="skip-link" href="#main">Skip to content</a>
 
-<header class="app-header">
-  <mat-toolbar class="app-toolbar">
-    <a class="app-brand" routerLink="/" aria-label="KubeQuest home">
-      <mat-icon class="app-brand-icon">explore</mat-icon>
-      <span class="app-brand-name">KubeQuest</span>
+@if (isLoading$ | async) {
+  <mat-progress-bar class="loading-bar" mode="indeterminate" aria-label="Loading"></mat-progress-bar>
+}
+
+@if ((isFullScreen$ | async) === false) {
+  <header class="brand-bar">
+    <a class="brand" routerLink="/map" aria-label="KubeQuest home">
+      <span class="brand-cube" aria-hidden="true"></span>
+      <span class="brand-name app-pixel">KubeQuest</span>
     </a>
-  </mat-toolbar>
-  <div class="app-loading-bar">
-    @if (isLoading$ | async) {
-      <mat-progress-bar mode="indeterminate" aria-label="Loading"></mat-progress-bar>
-    }
-  </div>
-</header>
+    <a class="brand-me" routerLink="/signup" aria-label="Your profile">
+      <mat-icon>account_circle</mat-icon>
+    </a>
+  </header>
+}
 
-<main id="main" class="app-main" tabindex="-1" #mainContent>
-  <router-outlet />
+<main id="main" class="main" tabindex="-1">
+  <router-outlet></router-outlet>
 </main>
+
+@if ((isFullScreen$ | async) === false) {
+  <nav class="bottom-nav" aria-label="Main">
+    @for (tab of tabs; track tab.path) {
+      <a
+        class="bottom-nav-tab"
+        [routerLink]="tab.path"
+        routerLinkActive="bottom-nav-tab--active"
+        ariaCurrentWhenActive="page"
+      >
+        <mat-icon aria-hidden="true">{{ tab.icon }}</mat-icon>
+        <span class="bottom-nav-label">{{ tab.label }}</span>
+      </a>
+    }
+  </nav>
+}

@@ -1,83 +1,136 @@
 @use '@angular/material' as mat;
-@use 'breakpoints' as bp;
-
-:root {
-  --app-theme--primary: #1e40af;
-  --app-theme--tertiary: #166534;
-  --app-theme--tertiary-bg: #e8f5e9;
-  --app-theme--accent: #b45309;
-  --app-theme--accent-bg: #fff7ed;
-  --app-theme--error: #d32f2f;
-  --app-theme--error-dark: #ba1a1a;
-  --app-theme--error-bg: #ffebee;
-  --app-theme--surface: #f6f8fc;
-  --app-theme--border: #d5dbe7;
-  --app-theme--text: #1b1f2a;
-  --app-theme--text-secondary: #4b5565;
-  --app-theme--focus-ring: #1e40af;
-}
 
 html {
   height: 100%;
   @include mat.theme(
     (
       color: (
-        primary: mat.$blue-palette,
-        tertiary: mat.$green-palette,
+        primary: mat.$green-palette,
+        tertiary: mat.$orange-palette,
       ),
-      typography: Roboto,
+      typography: 'Inter, Roboto, sans-serif',
       density: 0,
+    )
+  );
+  @include mat.button-overrides(
+    (
+      filled-container-shape: 0,
+      outlined-container-shape: 0,
+      text-container-shape: 0,
+    )
+  );
+  @include mat.card-overrides(
+    (
+      outlined-container-shape: 0,
+    )
+  );
+  @include mat.chips-overrides(
+    (
+      container-shape-radius: 0,
     )
   );
 }
 
-html {
-  --mat-sys-primary: var(--app-theme--primary);
-  --mat-sys-on-primary: #fff;
+:root {
+  --app-theme--primary: #2f6b2b;
+  --app-theme--primary-light: #5fa04e;
+  --app-theme--tertiary: #2f8f3a;
+  --app-theme--tertiary-bg: #e7f4e4;
+  --app-theme--accent: #c96a12;
+  --app-theme--accent-bg: #fff1e0;
+  --app-theme--error: #c62828;
+  --app-theme--error-dark: #a61b1b;
+  --app-theme--error-bg: #fdecea;
+  --app-theme--surface: #f6f3ea;
+  --app-theme--paper: #ffffff;
+  --app-theme--border: #2b2b2b;
+  --app-theme--border-soft: #cfc8b6;
+  --app-theme--ink: #1f1f1f;
+  --app-theme--ink-muted: #55534d;
+  --app-theme--shadow: 4px 4px 0 #2b2b2b;
+  --app-theme--shadow-small: 2px 2px 0 #2b2b2b;
+  --app-theme--focus: #1565c0;
+  --app-theme--pixel-font: 'Silkscreen', 'Courier New', monospace;
+  --app-theme--body-font: 'Inter', Roboto, sans-serif;
+  --app-theme--grid: 8px;
 }
 
 body {
-  height: 100%;
-  margin: 0;
-  background-color: var(--app-theme--surface);
-  color: var(--app-theme--text);
   color-scheme: light;
-  font: var(--mat-sys-body-large);
+  background-color: var(--app-theme--surface);
+  color: var(--app-theme--ink);
+  font-family: var(--app-theme--body-font);
+  font-size: 16px;
+  margin: 0;
+  height: 100%;
 }
 
-a:focus-visible,
-[tabindex]:focus-visible {
-  outline: 3px solid var(--app-theme--focus-ring);
+body.app-accessible {
+  --app-theme--pixel-font: var(--app-theme--body-font);
+}
+
+:focus-visible {
+  outline: 3px solid var(--app-theme--focus);
   outline-offset: 2px;
-  border-radius: 4px;
 }
 
-.app-card {
-  --mat-card-outlined-container-shape: 12px;
-  --mat-card-outlined-container-color: #fff;
-  --mat-card-outlined-outline-color: var(--app-theme--border);
+.app-pixel {
+  font-family: var(--app-theme--pixel-font);
+  letter-spacing: 0.02em;
+}
 
-  &--clickable {
-    cursor: pointer;
-    transition:
-      border-color 150ms ease,
-      box-shadow 150ms ease,
-      transform 150ms ease;
+.app-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
 
-    &:hover {
-      --mat-card-outlined-outline-color: var(--app-theme--primary);
-      box-shadow: 0 4px 12px rgb(27 31 42 / 12%);
-      transform: translateY(-2px);
-    }
+.btn-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 
-    @media (prefers-reduced-motion: reduce) {
-      transition: none;
+.app-page {
+  padding: 16px;
+  max-width: 960px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
 
-      &:hover {
-        transform: none;
-      }
-    }
-  }
+.app-block {
+  background: var(--app-theme--paper);
+  border: 2px solid var(--app-theme--border);
+  box-shadow: var(--app-theme--shadow);
+}
+
+.app-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.app-page-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.app-page-title {
+  font-family: var(--app-theme--pixel-font);
+  font-weight: 600;
+  font-size: 22px;
+  margin: 0;
+}
+
+.app-page-subtitle {
+  color: var(--app-theme--ink-muted);
+  margin: 0;
 }
 
 .app-card-grid {
@@ -87,80 +140,62 @@ a:focus-visible,
   max-width: 600px;
 }
 
+.app-card {
+  background: var(--app-theme--paper);
+  border: 2px solid var(--app-theme--border);
+  border-radius: 0;
+  box-shadow: var(--app-theme--shadow-small);
+}
+
+.app-card--clickable {
+  cursor: pointer;
+  transition: transform 80ms ease, box-shadow 80ms ease;
+
+  &:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: var(--app-theme--shadow);
+  }
+}
+
 .app-card-header {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
 }
 
 .app-card-icon {
-  display: flex;
-  flex-shrink: 0;
-  align-items: center;
-  justify-content: center;
   width: 48px;
   height: 48px;
-  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: var(--app-theme--primary);
   color: #fff;
+  flex-shrink: 0;
 }
 
 .app-card-content {
   flex: 1;
-  min-width: 0;
 
   h4 {
-    margin: 0;
-    font: var(--mat-sys-title-medium);
-    font-weight: 600;
+    margin: 0 0 4px;
   }
 
   p {
-    margin: 4px 0 0;
-    color: var(--app-theme--text-secondary);
+    margin: 0;
+    color: var(--app-theme--ink-muted);
   }
 }
 
 .app-card-arrow {
-  flex-shrink: 0;
-  width: 24px;
-  height: 24px;
-  color: var(--app-theme--text-secondary);
+  color: var(--app-theme--ink-muted);
 }
 
-.app-page-header {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 12px 16px;
-  margin-bottom: 24px;
-}
-
-.app-page-header-left {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-}
-
-.app-page-title {
-  margin: 0;
-  font: var(--mat-sys-headline-medium);
-  font-weight: 600;
-
-  @include bp.mobile {
-    font: var(--mat-sys-headline-small);
-    font-weight: 600;
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
   }
-}
-
-.app-page-subtitle {
-  margin: 4px 0 0;
-  color: var(--app-theme--text-secondary);
-}
-
-.app-page-action {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
 }

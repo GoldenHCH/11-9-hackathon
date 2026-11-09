@@ -1,0 +1,127 @@
+<div class="schematic-scroller" [class.schematic-scroller--fit]="hasBooths" tabindex="0" [attr.aria-label]="'Scrollable map of ' + level.label">
+  <svg
+    class="schematic"
+    [attr.viewBox]="viewBox"
+    preserveAspectRatio="xMidYMid meet"
+    role="group"
+    [attr.aria-label]="'Schematic of ' + buildingName + ', ' + level.label + '. Not to scale.'"
+  >
+    <defs>
+      <pattern id="kq-pattern-stone" width="16" height="16" patternUnits="userSpaceOnUse">
+        <path d="M0 8 H16 M8 0 V8 M0 16 H16 M4 8 V16" stroke="#00000022" stroke-width="1.5" fill="none" />
+      </pattern>
+      <pattern id="kq-pattern-crate" width="20" height="20" patternUnits="userSpaceOnUse">
+        <path d="M0 0 L20 20 M20 0 L0 20" stroke="#00000026" stroke-width="1.5" />
+      </pattern>
+      <pattern id="kq-pattern-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+        <rect x="4" y="4" width="3" height="3" fill="#00000030" />
+      </pattern>
+      <pattern id="kq-pattern-circuit" width="24" height="24" patternUnits="userSpaceOnUse">
+        <path d="M0 12 H8 V4 H16 M16 20 H24 M12 24 V16" stroke="#00000030" stroke-width="2" fill="none" />
+      </pattern>
+      <pattern id="kq-pattern-stripes" width="12" height="12" patternUnits="userSpaceOnUse">
+        <path d="M0 12 L12 0" stroke="#00000030" stroke-width="3" />
+      </pattern>
+      <pattern id="kq-pattern-flame" width="16" height="16" patternUnits="userSpaceOnUse">
+        <rect x="6" y="6" width="4" height="4" fill="#00000035" />
+        <rect x="2" y="2" width="2" height="2" fill="#00000025" />
+      </pattern>
+    </defs>
+
+    <rect class="floor" x="0" y="0" [attr.width]="level.width" [attr.height]="level.height"></rect>
+
+    @for (area of orderedAreas; track area.id) {
+      <g
+        class="area"
+        [class.area--selected]="isSelected(area)"
+        [class.area--highlighted]="isHighlighted(area)"
+        [class.area--inferred]="area.inferred"
+        role="button"
+        tabindex="0"
+        [attr.aria-label]="ariaLabelFor(area)"
+        [attr.aria-pressed]="isSelected(area)"
+        (click)="areaSelected.emit(area)"
+        (keydown)="onAreaKeydown($event, area)"
+      >
+        <title>{{ area.name }} · {{ kindDisplay[area.kind].label }}</title>
+        <rect
+          class="area-fill"
+          [attr.x]="area.shape.x"
+          [attr.y]="area.shape.y"
+          [attr.width]="area.shape.width"
+          [attr.height]="area.shape.height"
+          [attr.fill]="kindDisplay[area.kind].fill"
+        ></rect>
+        @if (kindDisplay[area.kind].pattern !== 'none') {
+          <rect
+            class="area-pattern"
+            [attr.x]="area.shape.x"
+            [attr.y]="area.shape.y"
+            [attr.width]="area.shape.width"
+            [attr.height]="area.shape.height"
+            [attr.fill]="'url(#kq-pattern-' + kindDisplay[area.kind].pattern + ')'"
+          ></rect>
+        }
+        <rect
+          class="area-outline"
+          [attr.x]="area.shape.x"
+          [attr.y]="area.shape.y"
+          [attr.width]="area.shape.width"
+          [attr.height]="area.shape.height"
+        ></rect>
+        <text
+          class="area-label"
+          [attr.x]="area.shape.x + area.shape.width / 2"
+          [attr.y]="labelY(area)"
+          [attr.font-size]="labelFontSize(area)"
+          text-anchor="middle"
+          dominant-baseline="central"
+          aria-hidden="true"
+        >
+          {{ labelFor(area) }}
+        </text>
+      </g>
+    }
+
+    @if (hasBooths) {
+      <g class="booths" aria-hidden="true">
+        @for (booth of booths; track booth.id) {
+          @let rect = boothRect(booth);
+          <rect
+            class="booth"
+            [class.booth--highlighted]="booth.id === highlightedVendorId"
+            [attr.x]="rect.x"
+            [attr.y]="rect.y"
+            [attr.width]="rect.width"
+            [attr.height]="rect.height"
+            [attr.fill]="booth.id === highlightedVendorId ? null : tierFill[booth.tier]"
+            (click)="onBoothClick($event, booth)"
+          >
+            <title>{{ booth.booth }} · {{ booth.name }} ({{ booth.tier }})</title>
+          </rect>
+        }
+      </g>
+
+      @if (highlightedBooth; as booth) {
+        @let callout = calloutRect(booth);
+        <g class="callout" aria-hidden="true">
+          <rect
+            class="callout-box"
+            [attr.x]="callout.x"
+            [attr.y]="callout.y"
+            [attr.width]="callout.width"
+            [attr.height]="callout.height"
+          ></rect>
+          <text
+            class="callout-text"
+            [attr.x]="callout.x + 8"
+            [attr.y]="callout.y + callout.height / 2"
+            dominant-baseline="central"
+          >
+            {{ calloutText(booth) }}
+          </text>
+        </g>
+      }
+    }
+  </svg>
+</div>
