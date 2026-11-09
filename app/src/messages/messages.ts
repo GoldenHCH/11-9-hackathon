@@ -1,7 +1,9 @@
 import { randomUUID } from 'node:crypto';
 import { trace } from '@opentelemetry/api';
 import { esOptions, getEsClient } from '../es/client';
+import { kindIsOrLegacy } from '../es/doc-kind.helper';
 import { esTimeouts, indexNames } from '../es/es.constants';
+import { docKinds } from '../types/connections.constants';
 import { getAttendee, getIntro } from '../meet/meet.store';
 import { kubequestMetrics } from '../observability/metrics';
 import { ToolError } from '../tools/tool-errors';
@@ -35,7 +37,7 @@ async function sentRecently(attendeeId: string, now: Date): Promise<number> {
     {
       index: indexNames.MESSAGES,
       query: {
-        bool: { filter: [{ term: { fromId: attendeeId } }, { range: { at: { gte: new Date(now.getTime() - RATE_WINDOW_MS).toISOString() } } }] },
+        bool: { filter: [{ term: { fromId: attendeeId } }, kindIsOrLegacy(docKinds.CHAT), { range: { at: { gte: new Date(now.getTime() - RATE_WINDOW_MS).toISOString() } } }] },
       },
     },
     { ...esOptions(esTimeouts.SEARCH_MS), ignore: [404] },
@@ -70,7 +72,7 @@ export async function sendMessage(input: ISendMessageInput): Promise<IMessage> {
     throw new ToolError(429, 'slow_down', 'You are sending messages fast. Take a breath and try again in a few minutes.');
   }
 
-  const message: IStoredMessage = { id: randomUUID(), meetId: intro.id, fromId: sender.id, toId: partner.id, text, at: now.toISOString() };
+  const message: IStoredMessage = { kind: docKinds.CHAT, id: randomUUID(), meetId: intro.id, fromId: sender.id, toId: partner.id, text, at: now.toISOString() };
   await getEsClient().index({ index: indexNames.MESSAGES, id: message.id, document: message, refresh: 'wait_for' }, esOptions(esTimeouts.WRITE_MS));
   kubequestMetrics().messages.add(1, { 'kubequest.meet.status': intro.status });
   trace.getActiveSpan()?.setAttributes({ 'kubequest.message.id': message.id, 'kubequest.message.chars': text.length });
@@ -84,7 +86,7 @@ export async function listMessages(input: IListMessagesInput): Promise<IMessage[
     {
       index: indexNames.MESSAGES,
       size: LIST_SIZE,
-      query: { bool: { filter: [{ term: { meetId: intro.id } }, ...(input.since ? [{ range: { at: { gt: input.since } } }] : [])] } },
+      query: { bool: { filter: [{ term: { meetId: intro.id } }, kindIsOrLegacy(docKinds.CHAT), ...(input.since ? [{ range: { at: { gt: input.since } } }] : [])] } },
       sort: [{ at: { order: 'asc' } }],
     },
     { ...esOptions(esTimeouts.SEARCH_MS), ignore: [404] },

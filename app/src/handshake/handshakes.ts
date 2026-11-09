@@ -1,4 +1,5 @@
 import { trace } from '@opentelemetry/api';
+import { recordConnectionFromHandshake } from '../connections/connections';
 import { getEsClient, esOptions } from '../es/client';
 import { esTimeouts, indexNames } from '../es/es.constants';
 import { completeMeetByHandshake } from '../meet/arrivals';
@@ -404,6 +405,7 @@ async function linkMeet(handshake: IStoredHandshake): Promise<IStoredHandshake> 
 
 async function finishMatch(handshake: IStoredHandshake): Promise<IStoredHandshake> {
   const linked = await linkMeet(handshake);
+  await recordConnectionFromHandshake(linked);
   await awardMatch(linked);
   kubequestMetrics().handshakes.add(1, { 'kubequest.handshake.question_source': linked.questionSource, 'kubequest.meet.first_timer_pair': linked.firstTimerPair });
 

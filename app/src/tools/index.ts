@@ -1,3 +1,4 @@
+import { connectionToolRegistry } from '../connections/connection-tools';
 import { ToolName } from '../types/kubequest.types';
 import { adminOverviewTool } from './admin-overview.tool';
 import { bossStateTool } from './boss-state.tool';
@@ -93,6 +94,7 @@ export const toolRegistry = {
   send_message: sendMessageTool,
   list_messages: listMessagesTool,
   recap: recapTool,
+  ...connectionToolRegistry,
   import_profile: importProfileTool,
   list_notifications: listNotificationsTool,
   mark_notifications_read: markNotificationsReadTool,

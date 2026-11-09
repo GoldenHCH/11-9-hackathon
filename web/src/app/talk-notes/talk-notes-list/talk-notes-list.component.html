@@ -1,0 +1,61 @@
+<section class="app-page">
+  <app-screen-toolbar title="Talk notes" subtitle="Your private notes from every session">
+    <a mat-stroked-button routerLink="/recap">
+      <div class="btn-content">
+        <mat-icon>picture_as_pdf</mat-icon>
+        <span>Recap</span>
+      </div>
+    </a>
+  </app-screen-toolbar>
+
+  <app-state-wrapper
+    [isLoading]="isLoading"
+    [errorMessage]="errorMessage"
+    [isEmpty]="!notes.length"
+    emptyIcon="sticky_note_2"
+    emptyMessage="No talk notes yet. Open a talk after you check in and jot down what stuck with you."
+    (retry)="loadNotes()"
+  >
+    <ul class="list">
+      @for (note of notes; track note.id) {
+        <li class="note app-card">
+          <h2 class="note-title">{{ note.talkTitle }}</h2>
+          <p class="note-meta">
+            @if (note.room) {
+              {{ note.room }} ·
+            }
+            @if (note.start) {
+              {{ note.start | date: 'EEE h:mm a' }} ·
+            }
+            Updated {{ note.updatedAt | date: 'EEE h:mm a' }}
+          </p>
+          @if (note.speakers.length) {
+            <p class="note-meta">{{ note.speakers.join(', ') }}</p>
+          }
+
+          @if (editingTalkId === note.talkId) {
+            <app-talk-notes-panel [talkId]="note.talkId" [note]="note" (saved)="onSaved($event)"></app-talk-notes-panel>
+            <button mat-button type="button" (click)="editingTalkId = null">Cancel</button>
+          } @else {
+            @if (note.note) {
+              <p class="note-text">{{ note.note }}</p>
+            }
+            @if (note.takeaways.length) {
+              <ul class="takeaways">
+                @for (takeaway of note.takeaways; track $index) {
+                  <li class="takeaway">{{ takeaway }}</li>
+                }
+              </ul>
+            }
+            <button mat-stroked-button type="button" (click)="editingTalkId = note.talkId">
+              <div class="btn-content">
+                <mat-icon>edit</mat-icon>
+                <span>Edit</span>
+              </div>
+            </button>
+          }
+        </li>
+      }
+    </ul>
+  </app-state-wrapper>
+</section>

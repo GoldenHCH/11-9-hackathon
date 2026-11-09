@@ -1,0 +1,62 @@
+{
+  "tool": "update_links",
+  "endpoint": "POST /api/tools/update_links",
+  "request": {
+    "attendeeId": "p_<attendeeId>",
+    "links": {
+      "linkedin": "linkedin.com/in/john-doe-platform",
+      "github": "argoproj",
+      "bluesky": "bsky.app/profile/bsky.app",
+      "website": "https://kubequest.cnh.radarhq.io"
+    }
+  },
+  "status": 200,
+  "response": {
+    "links": {
+      "github": "https://github.com/argoproj",
+      "website": "https://kubequest.cnh.radarhq.io/",
+      "bluesky": "https://bsky.app/profile/bsky.app",
+      "linkedin": "https://www.linkedin.com/in/john-doe-platform"
+    },
+    "items": [
+      {
+        "network": "linkedin",
+        "label": "in/john-doe-platform",
+        "url": "https://www.linkedin.com/in/john-doe-platform"
+      },
+      {
+        "network": "github",
+        "label": "@argoproj",
+        "url": "https://github.com/argoproj"
+      },
+      {
+        "network": "bluesky",
+        "label": "@bsky.app",
+        "url": "https://bsky.app/profile/bsky.app"
+      },
+      {
+        "network": "website",
+        "label": "kubequest.cnh.radarhq.io",
+        "url": "https://kubequest.cnh.radarhq.io/"
+      }
+    ],
+    "enrichment": []
+  },
+  "variants": {
+    "invalid_link": {
+      "request": {
+        "attendeeId": "p_<attendeeId>",
+        "links": {
+          "linkedin": "https://example.com/in/john"
+        }
+      },
+      "status": 400,
+      "response": {
+        "error": {
+          "code": "invalid_input",
+          "message": "That LinkedIn link doesn't look right. Try linkedin.com/in/your-name."
+        }
+      }
+    }
+  }
+}
